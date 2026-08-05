@@ -40,7 +40,7 @@ export default function WeddingCateringSection() {
 
           {/* Description */}
           <p className="text-gray-600 text-[16px] md:text-[18px] leading-relaxed max-w-[450px] mb-8 font-medium">
-            Your wedding is a once-in-a-lifetime event. Elevate your catering service to the next level with Grillado's certified halal dishes, prepared with fresh ingredients and the best Portuguese chicken in Canada.
+            Your wedding is a once-in-a-lifetime event. Elevate your catering service to the next level with Grillado&apos;s certified halal dishes, prepared with fresh ingredients and the best Portuguese chicken in Canada.
           </p>
 
           {/* Button */}

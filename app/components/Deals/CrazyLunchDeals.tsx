@@ -62,7 +62,7 @@ export default function CrazyLunchDeals() {
             Crazy Lunch Deals
           </h2>
           <p className="text-gray-800 text-lg md:text-xl lg:text-2xl font-semibold max-w-2xl">
-            Discover this week's incredible treats
+            Discover this week&apos;s incredible treats
           </p>
         </motion.div>
 

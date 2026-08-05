@@ -38,7 +38,7 @@ export default function DeliveryPickupSection() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-white font-['Outfit',sans-serif] leading-tight tracking-wide mb-6"
           >
-            At Grillado's, we offer <br className="hidden sm:block" /> 10 minutes of delivery <br className="hidden sm:block" /> and pickup.
+            At Grillado&apos;s, we offer <br className="hidden sm:block" /> 10 minutes of delivery <br className="hidden sm:block" /> and pickup.
           </motion.h2>
 
           {/* Contact Banner */}

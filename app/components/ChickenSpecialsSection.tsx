@@ -34,7 +34,7 @@ const ChickenSpecialsSection = () => {
 
             {/* Centered Heading */}
             <h2 className="text-xl md:text-2xl font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase tracking-wide mb-6">
-              GRILLADO'S CHICKEN SPECIALS
+              GRILLADO&apos;S CHICKEN SPECIALS
             </h2>
 
             {/* Centered Black Divider */}
