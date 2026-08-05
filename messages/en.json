@@ -1,0 +1,152 @@
+{
+  "Header": {
+    "menu": "Menu",
+    "locations": "Locations",
+    "orderOnline": "ONLINE ORDER",
+    "deals": "Deals",
+    "services": "Services",
+    "cateringServices": "Catering Services",
+    "pages": "Pages",
+    "franchising": "Franchising",
+    "gallery": "Gallery",
+    "blogs": "Blogs",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "orderNow": "ORDER NOW"
+  },
+  "Hero": {
+    "welcome": "Welcome to Grillado's",
+    "subtitle": "House of Steaks & Ribs, Where the Art of Grilling Meets Excellence.",
+    "orderNow": "Order Now",
+    "viewMenu": "View Menu"
+  },
+  "NewDishes": {
+    "heading": "The New Grillados Dishes",
+    "description": "Experience the ultimate taste of our freshly crafted menu. From sizzling steaks to mouth-watering ribs, every bite is a testament to the art of grilling meeting excellence. Discover our newest additions and elevate your dining experience today!",
+    "orderNow": "Order Now",
+    "learnMore": "Learn More"
+  },
+  "ChickenSpecials": {
+    "heading": "GRILLADO'S CHICKEN SPECIALS",
+    "description": "Experience the ultimate taste of our freshly crafted menu. From sizzling steaks to mouth-watering ribs, every bite is a testament to the art of grilling meeting excellence. Discover our newest additions and elevate your dining experience today!",
+    "orderNow": "Order Now",
+    "learnMore": "Learn More"
+  },
+  "BeefLambSpecials": {
+    "heading": "GRILLADO'S BEEF & LAMB SPECIALS",
+    "description": "Grillado's Beef & Lamb Specials offer a mouthwatering selection of tender, perfectly seasoned cuts, expertly grilled to perfection. From juicy steaks to succulent lamb chops, each dish is crafted with high-quality ingredients and bold flavors, ensuring a memorable dining experience for meat lovers.",
+    "orderNow": "Order Now",
+    "learnMore": "Learn More"
+  },
+  "Sandwiches": {
+    "heading": "GRILLADO'S SANDWICHES / PITAS / WRAPS",
+    "description": "Grillado's Sandwiches, Pitas, and Wraps offer a delicious variety of freshly grilled meats wrapped in warm, soft bread or pitas. Packed with fresh veggies and signature sauces, each option delivers a perfect balance of bold flavors and satisfying textures for a quick, mouthwatering meal.",
+    "orderNow": "Order Now",
+    "learnMore": "Learn More"
+  },
+  "Platters": {
+    "heading": "GRILLADO'S PLATTERS",
+    "description": "Grillado's Platters offer a generous, satisfying feast featuring a perfect combination of expertly grilled meats, vibrant sides, and savory sauces. Whether you're craving tender chicken, succulent beef, or hearty lamb, each platter is crafted to deliver bold, unforgettable flavors in every bite, perfect for sharing or indulging yourself.",
+    "orderNow": "Order Now",
+    "learnMore": "Learn More"
+  },
+  "Appetizers": {
+    "heading": "APPETIZERS",
+    "description": "Grillado's appetizers are flavorful, grilled bites that showcase a variety of ingredients, often skewered for easy enjoyment. These appetizers typically feature marinated vegetables, meats, or seafood, cooked to perfection over an open flame, enhancing their natural flavors with a smoky char.",
+    "orderNow": "Order Now",
+    "learnMore": "Learn More"
+  },
+  "CateringPartners": {
+    "heading": "Grillado's Catering Partners",
+    "subtitle": "Catering By Grillados Customized Food Catering At Its Best"
+  },
+  "Reviews": {
+    "heading": "Reviews",
+    "subtitle": "What Our customers Says About us",
+    "basedOn": "Based on 1,779 reviews",
+    "ratingOnly": "This user only left a rating."
+  },
+  "Newsletter": {
+    "headingStart": "Our Latest News",
+    "headingHighlight": "Blogs",
+    "description": "Be the first to know about Grillado's news and events: subscribe to our newsletter and stay connected!"
+  },
+  "Blogs": {
+    "readMore": "Read More",
+    "blog1": {
+      "date": "July 14, 2025",
+      "title": "Grillado's BBQ Mix Platter – Organic Chicken, Ribs & Sides for $159.99",
+      "description": "The Mix Platter gives you hearty food packed with bold flavours. Enjoy organic chicken, tender ribs, delicious sides, and unforgettable moments with every bite."
+    },
+    "blog2": {
+      "date": "July 10, 2025",
+      "title": "Veggie Nachos – Mississauga's Ultimate Vegetarian Appetizer at Grillado's",
+      "description": "A delicious vegetarian appetizer packed with fresh ingredients and bold flavours. One of Mississauga's favourite choices for a satisfying and tasty meal."
+    },
+    "blog3": {
+      "date": "August 27, 2025",
+      "title": "Grilled Corn – Sweet, Smoky & Juicy Perfection for Just $5.99",
+      "description": "Enjoy the perfect balance of sweet, smoky, and juicy flavours. Every bite of our perfectly grilled corn delivers a delicious and satisfying experience."
+    },
+    "blog4": {
+      "date": "August 11, 2025",
+      "title": "Creamy Coleslaw – A Cool, Crunchy Classic for Just $5.99",
+      "description": "Our favourite classic side dish made with fresh cabbage and carrots tossed in a rich, creamy, and tangy dressing for the perfect refreshing bite."
+    },
+    "blog5": {
+      "date": "July 21, 2025",
+      "title": "Peri Fries Recipe – Crispy, Spicy Snack You'll Crave Every Time",
+      "description": "Spice up your regular fries with our delicious Peri Fries. Crispy, flavourful, and perfectly seasoned to satisfy every craving."
+    },
+    "blog6": {
+      "date": "July 17, 2025",
+      "title": "Masala Fries Recipe – Crispy, Spicy Street-Style Snack You'll Love",
+      "description": "Enjoy warm, crispy Masala Fries bursting with bold spices and rich flavours. A perfect street-style snack you'll want again and again."
+    }
+  },
+  "Footer": {
+    "menuHeading": "Menu",
+    "orderOnline": "Order Online",
+    "franchising": "Franchising",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "locationsHeading": "Locations",
+    "cambridge": "Cambridge",
+    "laval": "Laval",
+    "milton": "Milton",
+    "mississauga": "Mississauga",
+    "termsAndConditions": "Terms and Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "copyright": "© 2025 GRILLADO'S GRILLED BEEF BACK RIBS & CHICKEN. ALL RIGHTS RESERVED",
+    "orderNow": "ORDER NOW"
+  },
+  "SpecialtyDrinks": {
+    "heading": "GRILLADO'S",
+    "subheading": "SPECIALTY DRINKS",
+    "items": {
+      "lycheeDelight": "Lychee Delight",
+      "pinaColada": "Pina Colada",
+      "tangyMangoBlitz": "Tangy Mango Blitz",
+      "oreoMilkshake": "Oreo Milkshake",
+      "strawberryMilkshake": "Strawberry Milkshake",
+      "bananaMilkshake": "Banana Milkshake",
+      "mangoMilkshake": "Mango Milkshake",
+      "vanillaMilkshake": "Vanilla Milkshake",
+      "ferreroRocherMilkshake": "Ferrero Rocher Milkshake",
+      "water": "Water",
+      "canPop": "Can pop",
+      "snapple": "Snapple",
+      "jarriitos": "Jarriitos",
+      "karakChai": "Karak Chai"
+    }
+  },
+  "Desserts": {
+    "heading": "Dessert",
+    "items": {
+      "ferreroRocherCake": "Ferrero Rocher Cake",
+      "oreoCake": "Oreo Cake",
+      "natas": "Natas",
+      "iceCream1Scoop": "Ice Cream 1 Scoop"
+    }
+  }
+}

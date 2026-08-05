@@ -1,0 +1,152 @@
+{
+  "Header": {
+    "menu": "Menu",
+    "locations": "Emplacements",
+    "orderOnline": "COMMANDE EN LIGNE",
+    "deals": "Offres",
+    "services": "Services",
+    "cateringServices": "Services traiteur",
+    "pages": "Pages",
+    "franchising": "Franchisage",
+    "gallery": "Galerie",
+    "blogs": "Blogs",
+    "aboutUs": "À propos de nous",
+    "contactUs": "Nous contacter",
+    "orderNow": "COMMANDER"
+  },
+  "Hero": {
+    "welcome": "Bienvenue chez Grillado's",
+    "subtitle": "Maison de steaks et côtes levées, où l'art de la grillade rencontre l'excellence.",
+    "orderNow": "Commander",
+    "viewMenu": "Voir le menu"
+  },
+  "NewDishes": {
+    "heading": "Les Nouveaux Plats Grillados",
+    "description": "Découvrez le goût ultime de notre menu fraîchement préparé. Des steaks grésillants aux côtes levées appétissantes, chaque bouchée est un témoignage de l'art de la grillade rencontrant l'excellence. Découvrez nos nouveautés et élevez votre expérience culinaire dès aujourd'hui !",
+    "orderNow": "Commander",
+    "learnMore": "En savoir plus"
+  },
+  "ChickenSpecials": {
+    "heading": "SPÉCIALITÉS DE POULET GRILLADO'S",
+    "description": "Découvrez le goût ultime de notre menu fraîchement préparé. Des steaks grésillants aux côtes levées appétissantes, chaque bouchée est un témoignage de l'art de la grillade rencontrant l'excellence. Découvrez nos nouveautés et élevez votre expérience culinaire dès aujourd'hui !",
+    "orderNow": "Commander",
+    "learnMore": "En savoir plus"
+  },
+  "BeefLambSpecials": {
+    "heading": "SPÉCIALITÉS DE BOEUF ET AGNEAU GRILLADO'S",
+    "description": "Les spécialités de bœuf et d'agneau de Grillado's offrent une sélection appétissante de coupes tendres et parfaitement assaisonnées, habilement grillées à la perfection. Des steaks juteux aux succulentes côtelettes d'agneau, chaque plat est préparé avec des ingrédients de haute qualité et des saveurs audacieuses, garantissant une expérience culinaire mémorable pour les amateurs de viande.",
+    "orderNow": "Commander",
+    "learnMore": "En savoir plus"
+  },
+  "Sandwiches": {
+    "heading": "SANDWICHES / PITAS / WRAPS GRILLADO'S",
+    "description": "Les Sandwiches, Pitas et Wraps de Grillado's offrent une délicieuse variété de viandes fraîchement grillées enveloppées dans du pain chaud et moelleux. Remplie de légumes frais et de sauces signatures, chaque option offre un équilibre parfait entre saveurs audacieuses et textures satisfaisantes pour un repas rapide et appétissant.",
+    "orderNow": "Commander",
+    "learnMore": "En savoir plus"
+  },
+  "Platters": {
+    "heading": "PLATEAUX GRILLADO'S",
+    "description": "Les Plateaux Grillado's offrent un festin généreux et satisfaisant avec une combinaison parfaite de viandes savamment grillées, d'accompagnements vibrants et de sauces savoureuses. Que vous ayez envie de poulet tendre, de bœuf succulent ou d'agneau copieux, chaque plateau est conçu pour offrir des saveurs audacieuses et inoubliables à chaque bouchée.",
+    "orderNow": "Commander",
+    "learnMore": "En savoir plus"
+  },
+  "Appetizers": {
+    "heading": "ENTRÉES",
+    "description": "Les entrées de Grillado's sont des bouchées grillées et savoureuses qui mettent en valeur une variété d'ingrédients, souvent en brochettes pour un plaisir facile. Ces entrées comprennent généralement des légumes marinés, des viandes ou des fruits de mer, cuits à la perfection sur une flamme nue, rehaussant leurs saveurs naturelles avec une saveur fumée.",
+    "orderNow": "Commander",
+    "learnMore": "En savoir plus"
+  },
+  "CateringPartners": {
+    "heading": "Partenaires Traiteur Grillado's",
+    "subtitle": "Service Traiteur Par Grillados - La Restauration Sur Mesure À Son Meilleur"
+  },
+  "Reviews": {
+    "heading": "Avis",
+    "subtitle": "Ce que nos clients disent de nous",
+    "basedOn": "Basé sur 1 779 avis",
+    "ratingOnly": "Cet utilisateur n'a laissé qu'une note."
+  },
+  "Newsletter": {
+    "headingStart": "Nos dernières nouveautés",
+    "headingHighlight": "Blogs",
+    "description": "Soyez les premiers informés des actualités et événements de Grillado’s : abonnez-vous à notre newsletter et restez connectés !"
+  },
+  "Blogs": {
+    "readMore": "Lire la suite",
+    "blog1": {
+      "date": "14 Juillet 2025",
+      "title": "Plateau Mixte BBQ Grillado's – Poulet Bio, Côtes Levées & Accompagnements pour 159,99$",
+      "description": "Le Plateau Mixte vous offre un repas copieux aux saveurs audacieuses. Profitez du poulet biologique, des côtes levées tendres, de délicieux accompagnements et de moments inoubliables à chaque bouchée."
+    },
+    "blog2": {
+      "date": "10 Juillet 2025",
+      "title": "Nachos Végétariens – L'ultime Entrée Végétarienne de Mississauga chez Grillado's",
+      "description": "Une délicieuse entrée végétarienne remplie d'ingrédients frais et de saveurs audacieuses. L'un des choix préférés de Mississauga pour un repas savoureux et satisfaisant."
+    },
+    "blog3": {
+      "date": "27 Août 2025",
+      "title": "Maïs Grillé – Une Perfection Douce, Fumée & Juteuse pour seulement 5,99$",
+      "description": "Appréciez l'équilibre parfait des saveurs douces, fumées et juteuses. Chaque bouchée de notre maïs parfaitement grillé offre une expérience délicieuse et satisfaisante."
+    },
+    "blog4": {
+      "date": "11 Août 2025",
+      "title": "Salade de Chou Crémeuse – Un Classique Frais et Croquant pour seulement 5,99$",
+      "description": "Notre plat d'accompagnement classique préféré à base de chou et de carottes fraîches, mélangés dans une vinaigrette riche, crémeuse et acidulée pour une bouchée rafraîchissante parfaite."
+    },
+    "blog5": {
+      "date": "21 Juillet 2025",
+      "title": "Recette de Frites Peri – Une Collation Croustillante et Épicée dont Vous Raffolerez Toujours",
+      "description": "Épicez vos frites habituelles avec nos délicieuses frites Peri. Croustillantes, savoureuses et parfaitement assaisonnées pour satisfaire toutes les envies."
+    },
+    "blog6": {
+      "date": "17 Juillet 2025",
+      "title": "Recette de Frites Masala – Une Collation Croustillante et Épicée de Style Street Food que Vous Aimerez",
+      "description": "Dégustez des frites Masala chaudes et croustillantes débordant d'épices audacieuses et de saveurs riches. Une collation parfaite de style street food que vous voudrez encore et encore."
+    }
+  },
+  "Footer": {
+    "menuHeading": "Menu",
+    "orderOnline": "Commande en Ligne",
+    "franchising": "Franchisage",
+    "aboutUs": "À propos de nous",
+    "contact": "Contact",
+    "locationsHeading": "Emplacements",
+    "cambridge": "Cambridge",
+    "laval": "Laval",
+    "milton": "Milton",
+    "mississauga": "Mississauga",
+    "termsAndConditions": "Termes et Conditions",
+    "privacyPolicy": "Politique de Confidentialité",
+    "copyright": "© 2025 GRILLADO'S GRILLED BEEF BACK RIBS & CHICKEN. TOUS DROITS RÉSERVÉS",
+    "orderNow": "COMMANDER"
+  },
+  "SpecialtyDrinks": {
+    "heading": "GRILLADO'S",
+    "subheading": "BOISSONS SPÉCIALES",
+    "items": {
+      "lycheeDelight": "Délice Litchi",
+      "pinaColada": "Pina Colada",
+      "tangyMangoBlitz": "Tangy Mango Blitz",
+      "oreoMilkshake": "Milkshake Oreo",
+      "strawberryMilkshake": "Milkshake Fraise",
+      "bananaMilkshake": "Milkshake Banane",
+      "mangoMilkshake": "Milkshake Mangue",
+      "vanillaMilkshake": "Milkshake Vanille",
+      "ferreroRocherMilkshake": "Milkshake Ferrero Rocher",
+      "water": "Eau",
+      "canPop": "Canette",
+      "snapple": "Snapple",
+      "jarriitos": "Jarriitos",
+      "karakChai": "Karak Chai"
+    }
+  },
+  "Desserts": {
+    "heading": "Dessert",
+    "items": {
+      "ferreroRocherCake": "Gâteau Ferrero Rocher",
+      "oreoCake": "Gâteau Oreo",
+      "natas": "Natas",
+      "iceCream1Scoop": "Glace (1 Boule)"
+    }
+  }
+}
