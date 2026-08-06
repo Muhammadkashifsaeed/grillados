@@ -113,7 +113,7 @@ export default function CrazyLunchDeals() {
                       $
                     </span>
                     <span className="text-[#fbbc04] text-3xl md:text-4xl font-extrabold tracking-tight">
-                      {deal.price.replace('$ ', '').replace('$', '')}
+                      {deal.price ? deal.price.replace('$ ', '').replace('$', '') : ''}
                     </span>
                   </div>
                 )}
