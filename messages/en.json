@@ -1,4 +1,7 @@
 {
+  "NewDishesSection": {
+    "heading": "Grillado's New Dishes"
+  },
   "Header": {
     "menu": "Menu",
     "locations": "Locations",
@@ -58,7 +61,89 @@
   },
   "CateringPartners": {
     "heading": "Grillado's Catering Partners",
-    "subtitle": "Catering By Grillados Customized Food Catering At Its Best"
+    "subtitle": "Catering By Grillados Customized Food Catering At Its Best",
+    "madeWithLove": "Made with Love",
+    "description": "Whether it's for a small family gathering or a celebration, Grillado Catering wants you to fully enjoy your day with your loved ones and leave the cooking to us. At Grillado Catering, we're here to serve you!"
+  },
+  "CateringOffers": {
+    "offer1": "Offer 1",
+    "title1": "$219.99 Tray for 10 people",
+    "desc1": "4 whole chickens, 2 small side platters of your choice,\n10 Portuguese breads or garlic breads",
+    "offer2": "Offer 2",
+    "title2": "$549.99 Tray for 25 people",
+    "desc2": "8 whole chickens, 25 chicken wings,\n3 large platters of side dishes of your choice",
+    "orderNow": "ORDER NOW"
+  },
+  "CateringIntroduction": {
+    "titleColored": "Grillado Catering",
+    "titleBlack": "Customized food.\nCatering at its best.",
+    "p1": "Grillados caters to a wide range of events, including weddings of all sizes, styles, and themes, as well as birthdays, anniversary parties, and family gatherings. Whether it's a corporate event or a community activity, we offer delicious and visually stunning dishes, tailored to your preferences, to elevate your event and create lasting memories.",
+    "p2": "At Grillado, you are our priority. We listen carefully to understand your objectives, leveraging our decades of experience and commitment to exceeding your expectations to ensure the success of your event in every aspect.",
+    "p3": "Customized menus: Our team works closely with you to develop a menu that reflects your tastes and dietary needs. Whether it's a wedding, a corporate event, or an intimate gathering, we create dishes that will delight every guest.",
+    "p4": "We pride ourselves on using only the highest quality, organic, and locally sourced ingredients. Our commitment to freshness and sustainability ensures that every bite is both delicious and nutritious.",
+    "p5": "At Grillado, our mission is to elevate your catering experience with personalized, high-quality cuisine that leaves a lasting impression. We are committed to exceeding your expectations and transforming your special occasion into a true culinary masterpiece."
+  },
+  "CustomizedOptions": {
+    "heading": "Customized Options",
+    "feature1": "All items can be individually packed or served on catering trays.",
+    "feature2": "Serving stands and food warming equipment are available.",
+    "feature3": "Add extra bottles of sauce for an additional charge.",
+    "feature4": "Catering service available both in restaurant and off-site.",
+    "orderNow": "ORDER NOW",
+    "learnMore": "LEARN MORE",
+    "ourMenu": "OUR MENU"
+  },
+  "CateringReviews": {
+    "heading": "Reviews",
+    "loadMore": "Load More",
+    "r1_rating": "5 ★★★★★",
+    "r1_date": "Jan 18, 2026",
+    "r1_review": "Harprith provided amazing services . Great food",
+    "r1_name": "Ali Z",
+    "r1_initials": "AZ",
+    "r2_rating": "5 ★★★★★",
+    "r2_date": "Jan 18, 2026",
+    "r2_review": "Amazing",
+    "r2_name": "RAB I",
+    "r2_initials": "RI",
+    "r3_rating": "5 ★★★★★",
+    "r3_date": "Jan 16, 2026",
+    "r3_review": "",
+    "r3_name": "Anès Grine",
+    "r3_initials": "AG",
+    "r4_rating": "5 ★★★★★",
+    "r4_date": "Jan 16, 2026",
+    "r4_review": "Good",
+    "r4_name": "Naz H",
+    "r4_initials": "NH",
+    "r5_rating": "5 ★★★★★",
+    "r5_date": "Jan 15, 2026",
+    "r5_review": "",
+    "r5_name": "Rushi Jagada",
+    "r5_initials": "RJ",
+    "r6_rating": "5 ★★★★★",
+    "r6_date": "Jan 14, 2026",
+    "r6_review": "",
+    "r6_name": "Usama Ismail",
+    "r6_initials": "UI",
+    "r7_rating": "5 ★★★★★",
+    "r7_date": "Jan 14, 2026",
+    "r7_review": "",
+    "r7_name": "Mohamed Nagy",
+    "r7_initials": "MN",
+    "r8_rating": "5 ★★★★★",
+    "r8_date": "Jan 14, 2026",
+    "r8_review": "",
+    "r8_name": "M S",
+    "r8_initials": "MS"
+  },
+  "BookEventCTA": {
+    "smallTitle": "Book today",
+    "mainTitle": "CHECK YOUR DATE",
+    "p1": "At Grillado, we believe that healthy food is essential for good health.",
+    "p2": "Our wellness-focused menu is designed to fit your health-conscious lifestyle.",
+    "p3": "Grillado chicken is grilled to perfection, making it the smartest choice for a balanced life.",
+    "button": "Book your event today"
   },
   "Reviews": {
     "heading": "Reviews",
@@ -117,7 +202,7 @@
     "mississauga": "Mississauga",
     "termsAndConditions": "Terms and Conditions",
     "privacyPolicy": "Privacy Policy",
-    "copyright": "© 2025 GRILLADO'S GRILLED BEEF BACK RIBS & CHICKEN. ALL RIGHTS RESERVED",
+    "copyright": "© 2026 GRILLADO'S GRILLED BEEF BACK RIBS & CHICKEN. ALL RIGHTS RESERVED",
     "orderNow": "ORDER NOW"
   },
   "SpecialtyDrinks": {
@@ -148,5 +233,10 @@
       "natas": "Natas",
       "iceCream1Scoop": "Ice Cream 1 Scoop"
     }
+  },
+  "CateringHero": {
+    "heading": "Catering Services",
+    "description": "Freshly prepared catering for corporate events, private parties, weddings, birthdays, and special occasions. Delicious meals made with quality ingredients and delivered with exceptional service.",
+    "orderNow": "Order Now"
   }
 }

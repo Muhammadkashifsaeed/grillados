@@ -77,8 +77,10 @@ const ReviewsSection = () => {
         setItemsPerView(1); // Mobile
       } else if (window.innerWidth < 1024) {
         setItemsPerView(2); // Tablet
+      } else if (window.innerWidth < 1536) {
+        setItemsPerView(3); // Standard Laptop (e.g., 1280px to 1440px)
       } else {
-        setItemsPerView(3); // Desktop
+        setItemsPerView(5); // Large Desktop (e.g., 1536px+)
       }
     };
     
@@ -111,12 +113,11 @@ const ReviewsSection = () => {
   }, [nextSlide, isHovered]);
 
   return (
-    <section className="w-full py-8 md:py-10 bg-white overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full py-6 md:py-8 bg-white overflow-hidden">
+      <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16">
         
-        {/* Section Heading */}
         <div className="text-center mb-8 md:mb-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase tracking-wide mb-4">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide mb-4">
             {t('heading')}
           </h2>
           <p className="text-gray-500 text-sm md:text-base tracking-widest uppercase">
@@ -127,7 +128,7 @@ const ReviewsSection = () => {
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center lg:items-stretch">
           
           {/* Left Side: Fixed Google Rating Summary */}
-          <div className="w-full lg:w-1/4 xl:w-1/5 flex-shrink-0 flex flex-col justify-center items-center lg:items-start text-center lg:text-left bg-white p-8 rounded-2xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-gray-100">
+          <div className="w-full lg:w-1/4 xl:w-1/5 shrink-0 flex flex-col justify-center items-center lg:items-start text-center lg:text-left bg-white p-8 rounded-2xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-gray-100">
             <div className="flex items-center gap-2 mb-4">
               <span className="font-bold text-2xl text-gray-800">Google</span>
             </div>
@@ -173,11 +174,12 @@ const ReviewsSection = () => {
                 {reviews.map((review, idx) => (
                   <div 
                     key={idx} 
-                    className="flex-shrink-0 px-3 flex justify-center w-full md:w-1/2 lg:w-1/3"
+                    className="shrink-0 px-2 md:px-3 flex justify-center"
+                    style={{ width: `${100 / itemsPerView}%` }}
                   >
                     
                     {/* Google Review Card - Matches Google Widget exactly */}
-                    <div className="bg-white rounded-[16px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 p-6 w-full relative border border-gray-100 flex flex-col h-full min-h-[220px]">
+                    <div className="bg-transparent border border-gray-200 rounded-2xl hover:border-[#fbbc04] hover:shadow-lg hover:-translate-y-2 transition-all duration-300 p-4 sm:p-6 w-full relative flex flex-col h-full min-h-55">
                       
                       {/* Google Icon Top Right */}
                       <div className="absolute top-6 right-6 w-6 h-6 opacity-90">
@@ -193,31 +195,31 @@ const ReviewsSection = () => {
                         
                         {/* Avatar - Exact 48px by 48px */}
                         {review.image ? (
-                          <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                          <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0">
                             <Image src={review.image} alt={review.name} fill className="object-cover" />
                           </div>
                         ) : (
-                          <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-medium text-xl flex-shrink-0 ${getInitialColor(review.name)}`}>
+                          <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-medium text-xl shrink-0 ${getInitialColor(review.name)}`}>
                             {review.name.charAt(0).toUpperCase()}
                           </div>
                         )}
                         
                         {/* Name & Time */}
                         <div className="flex flex-col justify-center">
-                          <h3 className="font-semibold text-gray-900 text-[15px] leading-tight mb-0.5">{review.name}</h3>
-                          <span className="text-gray-500 text-[13px] leading-tight">{review.time}</span>
+                          <h3 className="font-semibold text-gray-900 text- leading-tight mb-0.5">{review.name}</h3>
+                          <span className="text-gray-500 text- leading-tight">{review.time}</span>
                         </div>
                       </div>
 
                       {/* Stars */}
-                      <div className="flex gap-[2px] mb-3">
+                      <div className="flex gap-0.5 mb-3">
                         {[...Array(review.rating)].map((_, i) => (
                           <Star key={i} className="w-4 h-4 fill-[#fbbc04] text-[#fbbc04]" />
                         ))}
                       </div>
 
                       {/* Review Text */}
-                      <p className="text-gray-900 text-[14px] leading-[1.4] flex-1">
+                      <p className="text-gray-900 text- leading-[] flex-1">
                         {review.text === "This user only left a rating." ? t('ratingOnly') : review.text}
                       </p>
 

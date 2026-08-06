@@ -26,7 +26,7 @@ const dealLocations = [
 
 export default function OrderPage() {
   return (
-    <main className="flex flex-col flex-1 min-h-screen bg-gray-50 relative pt-[100px] pb-16 overflow-hidden">
+    <main className="flex flex-col flex-1 min-h-screen bg-gray-50 relative pt-25 pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         
         {/* Top Section */}
@@ -46,7 +46,7 @@ export default function OrderPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-            className="w-full max-w-[600px] bg-[#d72323] rounded-2xl p-6 md:p-8 shadow-xl"
+            className="w-full max-w-150 bg-[#d72323] rounded-2xl p-6 md:p-8 shadow-xl"
           >
             <h2 className="text-white text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif]">
               Enter your address to find the closest location
@@ -87,7 +87,7 @@ export default function OrderPage() {
               <h3 className="text-2xl md:text-3xl font-extrabold text-[#0a0a0a] font-['Outfit',sans-serif] uppercase mb-2 pr-12">
                 {loc.name}
               </h3>
-              <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed max-w-[85%] mb-8">
+              <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed maxw-[-85%] mb-8">
                 {loc.address}
               </p>
 
@@ -109,7 +109,7 @@ export default function OrderPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative w-full h-[350px] md:h-[500px] lg:h-[650px] rounded-3xl overflow-hidden shadow-2xl"
+          className="relative w-full h-87.5 md:h-125 lg:h-162.5 rounded-3xl overflow-hidden shadow-2xl"
         >
           <Image
             src="/images/map_125206.jpg"

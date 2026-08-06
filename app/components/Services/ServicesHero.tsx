@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function ServicesHero() {
   return (
-    <section className="relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-87.5 sm:h-100 md:h-112.5 lg:h-125 flex items-center justify-center overflow-hidden">
       
       {/* Background Image with Cinematic Zoom and Float */}
       <motion.div 
@@ -30,10 +30,10 @@ export default function ServicesHero() {
       </motion.div>
 
       {/* Dark Overlay with subtle premium gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70 z-10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/50 to-black/70 z-10 pointer-events-none"></div>
 
       {/* Skewed Banner Content */}
-      <div className="relative z-20 w-full px-4 sm:px-8 max-w-[1200px] mx-auto flex items-center justify-center">
+      <div className="relative z-20 w-full w-full px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-center">
         
         <motion.div
           initial={{ opacity: 0, scale: 0.8, y: 30 }}
@@ -57,10 +57,10 @@ export default function ServicesHero() {
             className="relative px-6 py-4 sm:px-10 sm:py-6 md:px-16 md:py-8 flex items-center justify-center"
           >
             <h1 className="text-white font-extrabold font-['Outfit',sans-serif] text-center uppercase tracking-wide
-                           text-[22px] leading-tight
+                           text- leading-tight
                            sm:text-3xl
                            md:text-4xl 
-                           lg:text-[44px]
+                           lg:text-
                            drop-shadow-lg"
             >
               We cater for your<br className="sm:hidden" /> special occasions

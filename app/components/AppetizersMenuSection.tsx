@@ -18,7 +18,7 @@ const menuItems = [
 
 export const AppetizersMenuSection = () => {
   return (
-    <section className="relative w-full py-12 md:py-20 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-hidden">
       {/* 
         Background with subtle food outline pattern. 
         Update the URL if you have a specific pattern image.
@@ -34,7 +34,7 @@ export const AppetizersMenuSection = () => {
       ></div>
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           
           {/* Left Column: Menu Items */}
@@ -46,10 +46,10 @@ export const AppetizersMenuSection = () => {
             className="w-full lg:w-1/2 flex flex-col"
           >
             <div className="mb-10">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-orange-500 font-['Outfit',sans-serif] uppercase tracking-wide">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide">
                 APPETIZERS
               </h2>
-              <div className="w-full h-1.5 bg-orange-500 mt-3"></div>
+              <div className="w-full h-1.5 bg-[#fbbc04] mt-3"></div>
             </div>
 
             <div className="flex flex-col gap-4 md:gap-5 w-full">
@@ -60,7 +60,7 @@ export const AppetizersMenuSection = () => {
                       {item.name}
                     </span>
                     <div
-                      className="flex-grow mb-1"
+                      className="grow mb-1"
                       style={{
                         borderBottom: '2px dotted rgba(255,255,255,0.5)',
                         minWidth: '20px'
@@ -71,7 +71,7 @@ export const AppetizersMenuSection = () => {
                     </span>
                   </div>
                   {item.note && (
-                    <p className="text-red-400 text-[10px] md:text-[11px] font-semibold uppercase mt-0.5 tracking-widest">
+                    <p className="text-red-400 text- md:text- font-semibold uppercase mt-0.5 tracking-widest">
                       {item.note}
                     </p>
                   )}
@@ -86,13 +86,14 @@ export const AppetizersMenuSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-center justify-end relative min-h-[400px] md:min-h-[500px] lg:min-h-[580px]"
+            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 mx-auto lg:mt-0"
           >
             <Image 
               src="/images/onpen.png"
               alt="Open Appetizers"
-              fill
-              className="object-contain object-right drop-shadow-2xl scale-110 md:scale-100"
+              width={1000}
+              height={750}
+              className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 lg:scale-125"
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />

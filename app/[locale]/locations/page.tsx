@@ -42,7 +42,7 @@ const locations = [
 
 export default function LocationsPage() {
   return (
-    <main className="flex flex-col flex-1 min-h-screen bg-[#0a0a0a] relative overflow-hidden pt-[120px] pb-12">
+    <main className="flex flex-col flex-1 min-h-screen bg-[#0a0a0a] relative overflow-hidden pt-30 pb-12">
       {/* Background Texture */}
       <div 
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"

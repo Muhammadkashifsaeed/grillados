@@ -10,9 +10,9 @@ export default function WeddingCateringSection() {
   const locale = useLocale();
   
   return (
-    <section className="relative w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
+    <section className="relative w-full overflow-hidden bg-white">
       
-      <div className="relative z-10 max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 items-stretch">
         
         {/* Left Column: Content */}
         <motion.div
@@ -20,15 +20,15 @@ export default function WeddingCateringSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-center justify-center text-center order-2 md:order-1"
+          className="flex flex-col items-center justify-center text-center order-2 md:order-1 px-6 md:px-12 lg:px-20 xl:px-24 py-12 md:py-16"
         >
           {/* Heading */}
-          <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase leading-tight tracking-wide mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text- font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase leading-tight tracking-wide mb-4">
             Wedding catering service
           </h2>
           
           {/* Divider */}
-          <div className="w-[150px] mb-6 flex justify-center">
+          <div className="w-37.5 mb-6 flex justify-center">
              <Image 
                src="/images/catering.png" 
                alt="Divider" 
@@ -39,13 +39,13 @@ export default function WeddingCateringSection() {
           </div>
 
           {/* Description */}
-          <p className="text-gray-600 text-[16px] md:text-[18px] leading-relaxed max-w-[450px] mb-8 font-medium">
+          <p className="text-gray-600 text- md:text- leading-relaxed max-w-112.5 mb-8 font-medium">
             Your wedding is a once-in-a-lifetime event. Elevate your catering service to the next level with Grillado&apos;s certified halal dishes, prepared with fresh ingredients and the best Portuguese chicken in Canada.
           </p>
 
           {/* Button */}
           <Link href={`/${locale}/contact`}>
-            <button className="px-10 py-3 sm:py-4 bg-[#d72323] hover:bg-[#b01c1c] active:scale-95 text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide">
+            <button className="px-10 py-3 sm:py-4 bg-[#fbbc04] hover:bg-[#d72323] active:scale-95 text-black hover:text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide">
               Contact us
             </button>
           </Link>
@@ -57,7 +57,7 @@ export default function WeddingCateringSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] rounded-[24px] overflow-hidden shadow-2xl order-1 md:order-2"
+          className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] overflow-hidden shadow-2xl order-1 md:order-2"
         >
           <Image
             src="/images/servededd.png"

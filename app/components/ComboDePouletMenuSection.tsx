@@ -16,7 +16,7 @@ const menuItems = [
 
 export const ComboDePouletMenuSection = () => {
   return (
-    <section className="relative w-full py-12 md:py-20 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-hidden">
       {/* Background with subtle food outline pattern */}
       <div 
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -29,7 +29,7 @@ export const ComboDePouletMenuSection = () => {
       ></div>
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-stretch justify-between gap-12 lg:gap-4 xl:gap-8">
           
           {/* Left Column: Menu Items */}
@@ -38,13 +38,13 @@ export const ComboDePouletMenuSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-[48%] flex flex-col justify-center lg:pr-6 xl:pr-10"
+            className="w-full lg:w-1/2 flex flex-col justify-center lg:pr-6 xl:pr-10"
           >
             <div className="mb-8 lg:mb-10">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-orange-500 font-['Outfit',sans-serif] uppercase tracking-wide leading-snug">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-snug">
                 COMBO DE POULET GRILLÉ GRILLADO’S
               </h2>
-              <div className="w-full h-1.5 bg-orange-500 mt-4"></div>
+              <div className="w-full h-1.5 bg-[#fbbc04] mt-4"></div>
             </div>
 
             <div className="flex flex-col gap-5 md:gap-6 w-full">
@@ -55,7 +55,7 @@ export const ComboDePouletMenuSection = () => {
                       {item.name}
                     </span>
                     <div
-                      className="flex-grow mb-1"
+                      className="grow mb-1"
                       style={{
                         borderBottom: '2px dotted rgba(255,255,255,0.5)',
                         minWidth: '20px'
@@ -66,7 +66,7 @@ export const ComboDePouletMenuSection = () => {
                     </span>
                   </div>
                   {item.note && (
-                    <p className="text-red-600 text-[10px] md:text-xs font-bold uppercase mt-1 tracking-widest leading-relaxed">
+                    <p className="text-red-600 text- md:text-xs font-bold uppercase mt-1 tracking-widest leading-relaxed">
                       {item.note}
                     </p>
                   )}
@@ -75,7 +75,7 @@ export const ComboDePouletMenuSection = () => {
 
               {/* Bottom Note */}
               <div className="mt-8 md:mt-10 w-full pt-4 border-t border-white/10">
-                 <p className="text-orange-500 text-sm md:text-base font-bold uppercase tracking-widest">
+                 <p className="text-[#fbbc04] text-sm md:text-base font-bold uppercase tracking-widest">
                    Ajoutez un 2ᵉ accompagnement pour 4,99
                  </p>
               </div>
@@ -88,21 +88,22 @@ export const ComboDePouletMenuSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-[50%] flex items-stretch justify-end relative min-h-[400px] md:min-h-[500px] lg:min-h-[600px]"
+            className="w-full lg:w-1/2 flex items-stretch justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] py-8 lg:py-12"
           >
-            <div className="relative w-full h-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">
-              <Image 
+            <div className="relative w-full h-full aspect-[4/3] lg:min-h-[500px]">
+            <Image 
                 src="/images/chcken.png"
                 alt="Combo de Poulet Grillé"
-                fill
-                className="object-contain object-right scale-110 md:scale-125 drop-shadow-2xl"
+                width={1000}
+              height={750}
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right scale-100 lg:scale-110 md:scale-125 drop-shadow-2xl"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
               {/* Fade on the left edge (desktop) */}
-              <div className="absolute inset-y-0 left-0 w-24 md:w-32 lg:w-48 bg-gradient-to-r from-[#0a0a0a] to-transparent pointer-events-none hidden lg:block"></div>
+              <div className="absolute inset-y-0 left-0 w-24 md:w-32 lg:w-48 bg-linear-to-r from-[#0a0a0a] to-transparent pointer-events-none hidden lg:block"></div>
               {/* Top fade for mobile */}
-              <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0a] to-transparent pointer-events-none lg:hidden"></div>
+              <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#0a0a0a] to-transparent pointer-events-none lg:hidden"></div>
             </div>
           </motion.div>
 

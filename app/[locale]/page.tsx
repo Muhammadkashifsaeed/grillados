@@ -1,4 +1,5 @@
 import HeroSection from '../components/HeroSection';
+import NewDishesSection from '../components/NewDishesSection';
 import NewDishes from '../components/NewDishes';
 import AppetizersSection from '../components/AppetizersSection';
 import ChickenSpecialsSection from '../components/ChickenSpecialsSection';
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <main className="flex flex-col flex-1 min-h-screen bg-white overflow-hidden">
       <HeroSection />
+      <NewDishesSection />
       <NewDishes />
       <AppetizersSection />
       <ChickenSpecialsSection />

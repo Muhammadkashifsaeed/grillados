@@ -26,7 +26,7 @@ export const SpecialtyDrinksMenuSection = () => {
   const t = useTranslations('SpecialtyDrinks');
 
   return (
-    <section className="relative w-full py-12 md:py-20 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-hidden">
       {/* Background with subtle food outline pattern */}
       <div 
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -39,7 +39,7 @@ export const SpecialtyDrinksMenuSection = () => {
       ></div>
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
         
         <style>{`
           @media (min-width: 1024px) {
@@ -57,15 +57,15 @@ export const SpecialtyDrinksMenuSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-[45%] flex flex-col justify-center"
+            className="w-full lg:w-1/2 flex flex-col justify-center"
           >
             <div className="mb-8 lg:mb-10 flex flex-col items-start">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-orange-500 font-['Outfit',sans-serif] uppercase tracking-wide leading-tight inline-block">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight inline-block">
                 {t('heading')}<br />
                 {t('subheading')}
               </h2>
               {/* Divider matched to heading width using w-full max-w limit to not stretch fully */}
-              <div className="w-full max-w-[200px] md:max-w-[250px] lg:max-w-[320px] h-1.5 bg-orange-500 mt-4"></div>
+              <div className="w-full max-w-50 md:max-w-62.5 lg:max-w-80 h-1.5 bg-[#fbbc04] mt-4"></div>
             </div>
 
             <div className="flex flex-col gap-3 md:gap-4 w-full">
@@ -76,7 +76,7 @@ export const SpecialtyDrinksMenuSection = () => {
                       {t(`items.${item.translationKey}`)}
                     </span>
                     <div
-                      className="flex-grow mb-1"
+                      className="grow mb-1"
                       style={{
                         borderBottom: '2px dotted rgba(255,255,255,0.5)',
                         minWidth: '20px'
@@ -97,14 +97,15 @@ export const SpecialtyDrinksMenuSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-[50%] flex items-stretch justify-end relative min-h-[500px] md:min-h-[700px]"
+            className="w-full lg:w-1/2 flex items-stretch justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] py-8 lg:py-12"
           >
-            <div className="relative w-full h-full min-h-[500px] md:min-h-[700px]">
-              <Image 
+            <div className="relative w-full h-full aspect-[4/3] lg:min-h-[500px]">
+            <Image 
                 src="/images/d-1.png"
                 alt="Specialty Drinks"
-                fill
-                className="object-contain object-right scale-110 drop-shadow-2xl"
+                width={1000}
+              height={750}
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right scale-100 lg:scale-110 drop-shadow-2xl"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

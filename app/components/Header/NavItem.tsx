@@ -16,13 +16,13 @@ export const NavItem: React.FC<NavItemProps> = ({ href, icon, label, dropdown })
   return (
     <Link
       href={href}
-      className={`flex items-center gap-1 lg:gap-1.5 transition-all duration-300 font-bold text-[9px] md:text-[10px] lg:text-[11px] xl:text-xs 2xl:text-sm tracking-wide uppercase whitespace-nowrap px-1.5 md:px-2 py-1 rounded-md ${
+      className={`flex items-center gap-1 lg:gap-1.5 transition-all duration-300 font-bold text- md:text- lg:text- xl:text-xs 2xl:text-sm tracking-wide uppercase whitespace-nowrap px-1.5 md:px-2 py-1 rounded-md ${
         isActive ? 'text-[#f7b41c] bg-white/5' : 'text-white hover:text-[#f7b41c] hover:bg-white/5'
       }`}
     >
       {icon && <span className="flex items-center justify-center opacity-90">{icon}</span>}
       <span>{label}</span>
-      {dropdown && <span className="ml-0.5 text-[10px] opacity-70">▼</span>}
+      {dropdown && <span className="ml-0.5 text- opacity-70">▼</span>}
     </Link>
   );
 };

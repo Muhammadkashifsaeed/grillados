@@ -10,9 +10,9 @@ export default function GiftCardsSection() {
   const locale = useLocale();
   
   return (
-    <section className="relative w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
+    <section className="relative w-full overflow-hidden bg-white">
       
-      <div className="relative z-10 max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 items-stretch">
         
         {/* Left Column: Image */}
         <motion.div
@@ -20,7 +20,7 @@ export default function GiftCardsSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-[24px] overflow-hidden shadow-2xl"
+          className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] overflow-hidden shadow-2xl"
         >
           <Image
             src="/images/propses.png"
@@ -32,7 +32,7 @@ export default function GiftCardsSection() {
         </motion.div>
 
         {/* Right Column: Top Image + Content */}
-        <div className="flex flex-col items-center justify-center w-full h-full">
+        <div className="flex flex-col items-center justify-center w-full h-full px-6 md:px-12 lg:px-20 xl:px-24 py-12 md:py-16">
           
           {/* Top Image: simply.png (Smaller) */}
           <motion.div
@@ -40,7 +40,7 @@ export default function GiftCardsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="relative w-[100px] h-[100px] md:w-[130px] md:h-[130px] overflow-hidden mb-6"
+            className="relative w-25 h-25 md:w-32.5 md:h-32.5 overflow-hidden mb-6"
           >
             <Image
               src="/images/simply.png"
@@ -60,18 +60,18 @@ export default function GiftCardsSection() {
             className="flex flex-col items-center justify-center text-center"
           >
             {/* Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase leading-tight tracking-wide mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text- font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase leading-tight tracking-wide mb-6">
               Gift Cards
             </h2>
 
             {/* Description */}
-            <p className="text-gray-600 text-[16px] md:text-[18px] leading-relaxed mb-8 font-medium max-w-[450px]">
+            <p className="text-gray-600 text- md:text- leading-relaxed mb-8 font-medium max-w-112.5">
               Give the gift of good food to your loved ones. Grillado offers a range of gift cards for all occasions: simply choose one and treat your loved ones to the best Portuguese chicken in Canada.
             </p>
 
             {/* Button */}
             <Link href={`/${locale}/contact`}>
-              <button className="px-10 py-3 sm:py-4 bg-[#d72323] hover:bg-[#b01c1c] active:scale-95 text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide">
+              <button className="px-10 py-3 sm:py-4 bg-[#fbbc04] hover:bg-[#d72323] active:scale-95 text-black hover:text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide">
                 Contact us
               </button>
             </Link>

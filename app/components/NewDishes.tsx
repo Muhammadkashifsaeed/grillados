@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Flame, ArrowRight, Info } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
@@ -8,13 +9,13 @@ const NewDishes = () => {
   const t = useTranslations('NewDishes');
 
   return (
-    <section className="w-full py-8 md:py-10 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white overflow-hidden">
+      <div className="w-full">
         
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+        <div className="flex flex-col lg:flex-row items-center">
           
           {/* Left Column: YouTube Video */}
-          <div className="w-full lg:w-1/2 relative overflow-hidden shadow-xl aspect-video flex-shrink-0 bg-zinc-900">
+          <div className="w-full lg:w-1/2 relative overflow-hidden aspect-video shrink-0 bg-zinc-900">
             {/* 16:9 Aspect Ratio container prevents black bars, full 100% width/height shows everything clearly */}
             <div className="absolute inset-0 w-full h-full pointer-events-none">
               <iframe
@@ -28,11 +29,11 @@ const NewDishes = () => {
           </div>
 
           {/* Right Column: Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-center text-center">
+          <div className="w-full lg:w-1/2 flex flex-col items-center text-center px-6 md:px-12 lg:px-16 xl:px-24 py-8 md:py-12">
             
-            {/* Large Red Icon (Filled completely) */}
-            <div className="text-red-600 mb-4">
-              <Flame className="w-16 h-16 md:w-20 md:h-20" strokeWidth={1} fill="currentColor" />
+            {/* Custom SVG Icon */}
+            <div className="mb-4 flex justify-center">
+              <Image src="/images/test-1.svg" alt="Grillados Icon" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 object-contain" />
             </div>
             
             {/* Heading */}

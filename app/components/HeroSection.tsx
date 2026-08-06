@@ -10,7 +10,7 @@ const HeroSection = () => {
   const t = useTranslations('Hero');
 
   return (
-    <section className="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-zinc-950 py-8 md:py-10">
+    <section className="relative w-full h-[85vh] min-h-150 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
       
       {/* Background Image with Cinematic Zoom and floating */}
       <motion.div 
@@ -34,7 +34,7 @@ const HeroSection = () => {
       </motion.div>
 
       {/* Dark Overlay with subtle gradient for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80 z-10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/60 to-black/80 z-10 pointer-events-none"></div>
 
       {/* Center Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto">

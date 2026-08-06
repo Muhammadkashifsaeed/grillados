@@ -14,8 +14,8 @@ const CateringPartnersSection = () => {
   const marqueeSponsors = [...sponsors, ...sponsors];
 
   return (
-    <section className="w-full py-8 md:py-10 bg-white border-t border-gray-200 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 flex flex-col items-center text-center">
+    <section className="w-full py-6 md:py-8 bg-white border-t border-gray-200 overflow-hidden">
+      <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16 mb-8 flex flex-col items-center text-center">
 
         {/* Centered Heading */}
         <h2 className="text-2xl md:text-3xl font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase tracking-wide mb-3">
@@ -35,7 +35,7 @@ const CateringPartnersSection = () => {
           {marqueeSponsors.map((src, idx) => (
             <div
               key={idx}
-              className="relative h-20 w-40 md:h-28 md:w-56 flex-shrink-0 transition-all duration-500 ease-out hover:scale-125 cursor-pointer hover:drop-shadow-2xl z-10 hover:z-20"
+              className="relative h-20 w-40 md:h-28 md:w-56 shrink-0 transition-all duration-500 ease-out hover:scale-125 cursor-pointer hover:drop-shadow-2xl z-10 hover:z-20"
             >
               <Image
                 src={src}

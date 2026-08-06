@@ -73,7 +73,7 @@ export const Footer = () => {
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 pt-20 pb-12 lg:px-8 flex flex-col items-center">
+        <div className="relative z-10 max-w-350 mx-auto px-6 pt-20 pb-12 lg:px-8 flex flex-col items-center">
           
           {/* Top Row: 4 Columns */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
@@ -81,11 +81,11 @@ export const Footer = () => {
             {/* Column 1 */}
             <div className="flex flex-col items-start gap-6">
               <Image
-                src="/images/logo.png"
+                src="/images/saman.png"
                 alt="Grillado's Logo"
                 width={200}
                 height={70}
-                className="w-48 h-auto"
+                className="w-56 scale-110 transform-gpu origin-left"
               />
               <div className="flex items-center gap-3 mt-4">
                 <Link href="#" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
@@ -99,9 +99,6 @@ export const Footer = () => {
                 </Link>
                 <Link href="#" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
                   <YoutubeIcon />
-                </Link>
-                <Link href="#" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                  <YelpIcon />
                 </Link>
               </div>
             </div>
@@ -158,7 +155,7 @@ export const Footer = () => {
       <div className="hidden lg:flex fixed top-1/2 right-0 -translate-y-1/2 z-50">
         <Link 
           href="/order"
-          className="bg-[#f7b41c] hover:bg-[#e0a218] text-black font-bold py-6 px-3 rounded-l-xl shadow-lg transition-all duration-300 flex flex-col items-center gap-4"
+          className="bg-[#f7b41c] hover:bg-[#d72323] hover:text-white text-black font-bold py-6 px-3 rounded-l-xl shadow-lg transition-all duration-300 flex flex-col items-center gap-4 cursor-pointer"
         >
           <UtensilsCrossed className="w-6 h-6" />
           <span className="writing-vertical-rl text-lg tracking-widest whitespace-nowrap rotate-180" style={{ writingMode: 'vertical-rl' }}>

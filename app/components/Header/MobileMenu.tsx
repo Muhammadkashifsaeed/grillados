@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu, X, Utensils, MapPin, ReceiptText, Tag, Users, Truck, FileText, ShoppingBag } from "lucide-react";
+import { Menu, X, Utensils, MapPin, Tag, Users, Truck, FileText, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
@@ -49,17 +49,17 @@ export const MobileMenu = () => {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-[80vw] sm:w-[350px] bg-[#1b140f] border-l border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[80vw] sm:w-87.5 bg-[#1b140f] border-l border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } flex flex-col`}
       >
         <div className="flex justify-between items-center p-5 border-b border-white/10">
           <Image
-            src="/images/logo.png"
+            src="/images/saman.png"
             alt="Grillado's Logo"
             width={120}
             height={40}
-            className="w-auto h-8"
+            className="w-auto h-10 scale-110 ml-2"
           />
           <button
             onClick={toggleMenu}

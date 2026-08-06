@@ -15,7 +15,7 @@ const sauceLevels = [
     name: 'AVERAGE',
     description: 'A balanced sauce, slightly spicy with a touch of warmth.',
     image: '/images/Fiery1.png',
-    colorClass: 'text-orange-500',
+    colorClass: 'text-[#fbbc04]',
   },
   {
     name: 'Strong',
@@ -33,7 +33,7 @@ const sauceLevels = [
 
 export const GarnishedRiceSauceMenuSection = () => {
   return (
-    <section className="relative w-full py-12 md:py-20 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-hidden">
       {/* Background with subtle food outline pattern */}
       <div 
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -46,7 +46,7 @@ export const GarnishedRiceSauceMenuSection = () => {
       ></div>
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
         
         <div className="flex flex-col lg:flex-row items-stretch justify-between gap-12 lg:gap-4 xl:gap-8">
           
@@ -56,13 +56,13 @@ export const GarnishedRiceSauceMenuSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-[48%] flex flex-col justify-center lg:pr-6 xl:pr-10"
+            className="w-full lg:w-1/2 flex flex-col justify-center lg:pr-6 xl:pr-10"
           >
             <div className="mb-8 lg:mb-10">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-orange-500 font-['Outfit',sans-serif] uppercase tracking-wide leading-snug">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-snug">
                 GARNISHED RICE
               </h2>
-              <div className="w-full h-1.5 bg-orange-500 mt-4"></div>
+              <div className="w-full h-1.5 bg-[#fbbc04] mt-4"></div>
             </div>
 
             <div className="mb-10 w-full">
@@ -76,7 +76,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                     transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
                     className="flex flex-row items-center w-full gap-6 md:gap-8 lg:gap-10"
                   >
-                    <div className="relative w-28 h-28 md:w-36 md:h-36 lg:w-48 lg:h-48 flex-shrink-0">
+                    <div className="relative w-28 h-28 md:w-36 md:h-36 lg:w-48 lg:h-48 shrink-0">
                       <Image 
                         src={item.image}
                         alt={item.name}
@@ -104,27 +104,29 @@ export const GarnishedRiceSauceMenuSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-[50%] flex flex-col items-end justify-start gap-8"
+            className="w-full lg:w-1/2 flex flex-col items-end justify-start gap-8"
           >
             {/* Top Large Peri Image */}
-            <div className="relative w-full min-h-[450px] md:min-h-[550px] lg:min-h-[650px]">
-              <Image 
+            <div className="relative w-full py-8 lg:py-12">
+            <Image 
                 src="/images/zasty.png"
                 alt="Zesty Food"
-                fill
-                className="object-contain object-right drop-shadow-2xl scale-110"
+                width={1000}
+              height={750}
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right drop-shadow-2xl scale-100 lg:scale-110"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
             </div>
 
             {/* Bottom Saucess Image */}
-            <div className="relative w-full min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
-              <Image 
+            <div className="relative w-full py-8 lg:py-12">
+            <Image 
                 src="/images/saucess.png"
                 alt="Saucess"
-                fill
-                className="object-contain object-right drop-shadow-2xl scale-110"
+                width={1000}
+              height={750}
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right drop-shadow-2xl scale-100 lg:scale-110"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

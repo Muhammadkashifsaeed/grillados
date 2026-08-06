@@ -4,32 +4,30 @@
 import React from 'react';
 import Image from 'next/image';
 import { Flame, ArrowRight, Info } from 'lucide-react';
-import page from '../[locale]/page'
 
 const ChickenSpecialsSection = () => {
   return (
-    <section className="w-full py-4 md:py-8 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+    <section className="w-full bg-white overflow-hidden">
+      <div className="w-full">
+        
+        <div className="flex flex-col lg:flex-row items-stretch">
 
           {/* Left Column: Image */}
-          <div className="w-full lg:w-1/2 overflow-hidden shadow-xl flex items-center justify-center bg-zinc-50">
+          <div className="w-full lg:w-1/2 relative min-h-[300px] lg:min-h-full bg-zinc-50 flex items-center justify-center">
             <Image
               src="/images/dishes.webp"
               alt="Grillado's Chicken Specials"
-              width={1000}
-              height={1000}
-              className="w-full h-auto object-contain"
+              fill
+              className="object-cover"
             />
           </div>
 
           {/* Right Column: Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-center text-center">
+          <div className="w-full lg:w-1/2 flex flex-col items-center text-center px-6 md:px-12 lg:px-16 xl:px-24 py-8 md:py-12">
 
-            {/* Small Red Restaurant Icon Centered */}
-            <div className="text-red-600 mb-4">
-              <Flame className="w-16 h-16 md:w-20 md:h-20" strokeWidth={1} fill="currentColor" />
+            {/* Custom SVG Icon */}
+            <div className="mb-4 flex justify-center">
+              <Image src="/images/test-1.svg" alt="Grillados Icon" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 object-contain" />
             </div>
 
             {/* Centered Heading */}

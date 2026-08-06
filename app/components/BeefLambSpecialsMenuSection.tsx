@@ -39,7 +39,7 @@ const menuItems = [
 
 export const BeefLambSpecialsMenuSection = () => {
   return (
-    <section className="relative w-full py-12 md:py-20 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-hidden">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -52,7 +52,7 @@ export const BeefLambSpecialsMenuSection = () => {
       />
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10 md:gap-14">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-10 md:gap-14">
 
         {/* ZONE 1: Order.png + Order1.png side by side in ONE container — fade UP */}
         <motion.div
@@ -60,27 +60,27 @@ export const BeefLambSpecialsMenuSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          className="w-full flex flex-col md:flex-row items-center justify-center pt-4 pb-4"
+          className="w-full flex flex-row items-center justify-center py-8 lg:py-12"
         >
           {/* Order.png — left */}
-          <div className="relative w-full md:w-[55%] h-[350px] md:h-[500px] lg:h-[700px] z-10 transition-transform duration-500 hover:scale-105">
+          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-10 transition-transform duration-500 hover:scale-105">
             <Image
               src="/images/Order.png"
-              alt="Beef and Lamb Specials - Dish 1"
+              alt="Order.png"
               fill
-              className="object-contain object-bottom md:object-right-bottom scale-110 drop-shadow-2xl"
+              className="object-contain object-bottom md:object-bottom-right scale-110 drop-shadow-2xl"
               sizes="(max-width: 768px) 100vw, 60vw"
               priority
             />
           </div>
 
           {/* Order1.png — right */}
-          <div className="relative w-full md:w-[55%] h-[350px] md:h-[500px] lg:h-[700px] z-0 -mt-[60px] md:mt-0 md:-ml-[12%] transition-transform duration-500 hover:scale-105">
+          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-0 ml-[-14%] lg:ml-[-15%] transition-transform duration-500 hover:scale-105">
             <Image
               src="/images/Order1.png"
-              alt="Beef and Lamb Specials - Dish 2"
+              alt="Order1.png"
               fill
-              className="object-contain object-top md:object-left-bottom scale-110 drop-shadow-2xl"
+              className="object-contain object-top md:object-bottom-left scale-110 drop-shadow-2xl"
               sizes="(max-width: 768px) 100vw, 60vw"
             />
           </div>
@@ -99,12 +99,12 @@ export const BeefLambSpecialsMenuSection = () => {
           >
             <div className="mb-10">
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-orange-500 uppercase tracking-wide"
+                className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] uppercase tracking-wide"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 GRILLADO&apos;S<br />BEEF AND LAMB SPECIALS
               </h2>
-              <div className="w-full h-1.5 bg-orange-500 mt-3" />
+              <div className="w-full h-1.5 bg-[#fbbc04] mt-3" />
             </div>
 
             <div className="flex flex-col gap-5 md:gap-6 w-full">
@@ -116,7 +116,7 @@ export const BeefLambSpecialsMenuSection = () => {
                       {item.name}
                     </span>
                     <div
-                      className="flex-grow mb-1"
+                      className="grow mb-1"
                       style={{
                         borderBottom: '2px dotted rgba(255,255,255,0.5)',
                         minWidth: '20px',
@@ -129,7 +129,7 @@ export const BeefLambSpecialsMenuSection = () => {
 
                   {/* Note — red, uppercase, small */}
                   {item.note && (
-                    <p className="text-red-400 text-[10px] md:text-[11px] font-semibold uppercase mt-0.5 tracking-widest">
+                    <p className="text-red-400 text- md:text- font-semibold uppercase mt-0.5 tracking-widest">
                       {item.note}
                     </p>
                   )}
@@ -152,13 +152,14 @@ export const BeefLambSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex items-center justify-end relative min-h-[450px] md:min-h-[500px] lg:min-h-[600px]"
+            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 lg:mt-0"
           >
             <Image
               src="/images/component.png"
               alt="Grillado Beef and Lamb"
-              fill
-              className="object-contain object-right drop-shadow-2xl scale-110 md:scale-100"
+              width={1000}
+              height={750}
+              className="w-full h-auto object-contain rounded-xl lg:rounded-none object-contain object-center drop-shadow-2xl scale-105 md:scale-110"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </motion.div>

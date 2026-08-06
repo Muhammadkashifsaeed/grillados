@@ -12,7 +12,7 @@ import DessertMenuSection from '../../components/DessertMenuSection';
 
 export default function MenuPage() {
   return (
-    <main className="flex flex-col flex-1 min-h-screen bg-[#0a0a0a] overflow-hidden pt-[80px]">
+    <main className="flex flex-col flex-1 min-h-screen bg-[#0a0a0a] overflow-hidden pt-20">
       <AppetizersMenuSection />
       <ChickenSpecialsMenuSection />
       <BeefLambSpecialsMenuSection />

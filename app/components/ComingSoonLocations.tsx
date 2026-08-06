@@ -35,7 +35,7 @@ const comingSoonData = [
 
 export default function ComingSoonLocations() {
   return (
-    <section className="relative w-full py-16 md:py-24 z-10">
+    <section className="relative w-full py-10 md:py-16 z-10">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Main Heading */}
@@ -49,7 +49,7 @@ export default function ComingSoonLocations() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide text-center">
             Lieux à venir
           </h2>
-          <div className="w-[100px] h-[3px] bg-orange-500 mt-5"></div>
+          <div className="w-25 h-[3px] bg-orange-500 mt-5"></div>
         </motion.div>
 
         {/* Content Container */}
@@ -75,7 +75,7 @@ export default function ComingSoonLocations() {
                     <span className="text-white text-xl md:text-2xl font-bold mb-3 font-['Outfit',sans-serif]">
                       {loc}
                     </span>
-                    <div className="w-full h-[2px] bg-orange-500"></div>
+                    <div className="w-full h-0.5 bg-orange-500"></div>
                   </div>
                 ))}
               </div>

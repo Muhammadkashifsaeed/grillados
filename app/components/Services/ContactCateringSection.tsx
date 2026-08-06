@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Search, ChevronDown, Calendar } from 'lucide-react';
+import { Search, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const countryList = [
@@ -58,12 +58,12 @@ export default function ContactCateringSection() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-  const inputClass = "w-full h-[52px] md:h-[56px] px-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#f7b41c] transition-all duration-300 placeholder:text-gray-400 font-medium";
+  const inputClass = "w-full h-13 md:h-14 px-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#f7b41c] transition-all duration-300 placeholder:text-gray-400 font-medium";
   const labelClass = "block text-sm font-semibold text-gray-200 mb-2";
   const sectionTitleClass = "text-2xl font-bold text-white font-['Outfit',sans-serif] mb-6 tracking-wide border-b border-gray-600/50 pb-2";
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-start pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-start">
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -84,7 +84,7 @@ export default function ContactCateringSection() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl md:text-5xl lg:text-[56px] font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide mb-10 text-center drop-shadow-lg"
+          className="text-4xl md:text-5xl lg:text- font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide mb-10 text-center drop-shadow-lg"
         >
           Contact Us
         </motion.h1>
@@ -94,7 +94,7 @@ export default function ContactCateringSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="w-full max-w-[1300px] bg-black/40 backdrop-blur-md rounded-[24px] shadow-2xl p-6 md:p-10 lg:p-12 border border-white/10"
+          className="w-full max-w-325 bg-black/40 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-10 lg:p-12 border border-white/10"
         >
           <form className="flex flex-col gap-12" onSubmit={handleSubmit}>
             
@@ -111,7 +111,7 @@ export default function ContactCateringSection() {
                   </div>
                   <div>
                     <label className={labelClass}>Phone Number*</label>
-                    <div className="flex h-[52px] md:h-[56px] rounded-xl bg-white border border-transparent focus-within:ring-2 focus-within:ring-[#f7b41c] transition-all duration-300">
+                    <div className="flex h-13 md:h-14 rounded-xl bg-white border border-transparent focus-within:ring-2 focus-within:ring-[#f7b41c] transition-all duration-300">
                       {/* Functional Custom Country Code Selector with Real Flags */}
                       <div className="relative flex items-center bg-gray-100 border-r border-gray-200 hover:bg-gray-200 transition-colors rounded-l-xl" ref={dropdownRef}>
                         <div 
@@ -199,7 +199,7 @@ export default function ContactCateringSection() {
                 <label className={labelClass}>Delivery Notes</label>
                 <textarea 
                   placeholder="Write delivery instructions..." 
-                  className="w-full h-[180px] p-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#f7b41c] transition-all duration-300 placeholder:text-gray-400 font-medium resize-none"
+                  className="w-full h-45 p-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#f7b41c] transition-all duration-300 placeholder:text-gray-400 font-medium resize-none"
                 ></textarea>
               </div>
             </section>
@@ -277,7 +277,7 @@ export default function ContactCateringSection() {
               <button 
                 type="submit" 
                 disabled={isSubmitting || isSuccess}
-                className={`w-full h-[60px] text-white font-extrabold text-xl rounded-xl shadow-lg uppercase tracking-widest font-['Outfit',sans-serif] transition-all duration-300 flex items-center justify-center ${
+                className={`w-full h-15 text-white font-extrabold text-xl rounded-xl shadow-lg uppercase tracking-widest font-['Outfit',sans-serif] transition-all duration-300 flex items-center justify-center ${
                   isSuccess 
                     ? 'bg-green-500 hover:bg-green-600 shadow-green-500/30' 
                     : isSubmitting

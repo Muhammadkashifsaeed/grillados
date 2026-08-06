@@ -31,7 +31,7 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section className="relative w-full min-h-[800px] flex items-center justify-center py-20 px-4 overflow-hidden">
+    <section className="relative w-full min-h-200 flex items-center justify-center py-10 px-4 overflow-hidden">
       
       {/* Background Texture identical to Menu/Deals background */}
       <div 
@@ -52,7 +52,7 @@ export default function NewsletterSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 w-full max-w-[700px] bg-white rounded-[24px] shadow-2xl p-8 md:p-14 lg:p-16 flex flex-col items-center mx-auto"
+        className="relative z-10 w-full max-w-175 bg-white rounded-3xl shadow-2xl p-8 md:p-14 lg:p-16 flex flex-col items-center mx-auto"
       >
         
         {/* Heading */}
@@ -61,7 +61,7 @@ export default function NewsletterSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-2xl md:text-3xl lg:text-[32px] font-extrabold text-gray-900 font-['Outfit',sans-serif] text-center leading-[1.3] tracking-tight mb-6 max-w-2xl"
+          className="text-2xl md:text-3xl lg:text- font-extrabold text-gray-900 font-['Outfit',sans-serif] text-center leading-[] tracking-tight mb-6 max-w-2xl"
         >
           Restez au courant de tous nos <span className="text-[#f7b41c]">Grillado’s</span> Actualités,<br className="hidden md:block" />
           abonnez-vous à notre newsletter
@@ -73,7 +73,7 @@ export default function NewsletterSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-gray-600 text-[15px] md:text-[17px] font-medium text-center leading-relaxed mb-10 max-w-xl"
+          className="text-gray-600 text- md:text- font-medium text-center leading-relaxed mb-10 max-w-xl"
         >
           Soyez les premiers informés des nouvelles et événements de Grillado,<br className="hidden md:block" />
           abonnez-vous à notre newsletter et restez connectés!
@@ -85,7 +85,7 @@ export default function NewsletterSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
           viewport={{ once: true }}
-          className="w-full max-w-[90%]"
+          className="w-full maxw-[-90%]"
         >
           {isSubmitted ? (
             <div className="flex flex-col items-center justify-center py-8 bg-green-50 rounded-2xl border border-green-200">
@@ -105,7 +105,7 @@ export default function NewsletterSection() {
                   placeholder="First Name*"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="w-full h-12 md:h-[50px] px-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f7b41c] focus:border-transparent transition-all"
+                  className="w-full h-12 md:h-12.5 px-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f7b41c] focus:border-transparent transition-all"
                 />
               </div>
 
@@ -119,7 +119,7 @@ export default function NewsletterSection() {
                   placeholder="Email*"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full h-12 md:h-[50px] pl-14 pr-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f7b41c] focus:border-transparent transition-all"
+                  className="w-full h-12 md:h-12.5 pl-14 pr-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f7b41c] focus:border-transparent transition-all"
                 />
               </div>
 
@@ -131,7 +131,7 @@ export default function NewsletterSection() {
               {/* Subscribe Button */}
               <button
                 type="submit"
-                className="w-full h-12 md:h-[50px] mt-2 bg-[#d72323] hover:bg-[#b01c1c] active:scale-[0.98] text-white font-bold text-[15px] md:text-base uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+                className="w-full h-12 md:h-12.5 mt-2 bg-[#d72323] hover:bg-[#b01c1c] active:scale-[0.98] text-white font-bold text- md:text-base uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300"
               >
                 Subscribe
               </button>

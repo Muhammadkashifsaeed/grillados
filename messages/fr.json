@@ -1,4 +1,7 @@
 {
+  "NewDishesSection": {
+    "heading": "Les nouveaux plats de Grillado's"
+  },
   "Header": {
     "menu": "Menu",
     "locations": "Emplacements",
@@ -58,7 +61,89 @@
   },
   "CateringPartners": {
     "heading": "Partenaires Traiteur Grillado's",
-    "subtitle": "Service Traiteur Par Grillados - La Restauration Sur Mesure À Son Meilleur"
+    "subtitle": "Service Traiteur Par Grillados - La Restauration Sur Mesure À Son Meilleur",
+    "madeWithLove": "Fait avec Amour",
+    "description": "Que ce soit pour une petite réunion de famille ou une célébration, le service traiteur Grillado souhaite que vous profitiez pleinement de votre journée avec vos proches et nous laisse le soin de cuisiner. Chez le service traiteur Grillado, nous sommes là pour vous servir !"
+  },
+  "CateringOffers": {
+    "offer1": "Offre 1",
+    "title1": "Plateau à 219,99 $ pour 10 personnes",
+    "desc1": "4 poulets entiers, 2 petits plateaux d'accompagnements au choix,\n10 pains portugais ou pains à l'ail",
+    "offer2": "Offre 2",
+    "title2": "Plateau à 549,99 $ pour 25 personnes",
+    "desc2": "8 poulets entiers, 25 ailes de poulet,\n3 grands plateaux d'accompagnements au choix",
+    "orderNow": "COMMANDER"
+  },
+  "CateringIntroduction": {
+    "titleColored": "Service Traiteur Grillado",
+    "titleBlack": "Nourriture sur mesure.\nLe meilleur du service traiteur.",
+    "p1": "Grillados organise un large éventail d'événements, y compris des mariages de toutes tailles, styles et thèmes, ainsi que des anniversaires, des fêtes et des réunions de famille. Qu'il s'agisse d'un événement d'entreprise ou d'une activité communautaire, nous offrons des plats délicieux et visuellement époustouflants, adaptés à vos préférences, pour élever votre événement et créer des souvenirs durables.",
+    "p2": "Chez Grillado, vous êtes notre priorité. Nous écoutons attentivement pour comprendre vos objectifs, en tirant parti de nos décennies d'expérience et de notre engagement à dépasser vos attentes pour assurer le succès de votre événement sous tous ses aspects.",
+    "p3": "Menus personnalisés : Notre équipe travaille en étroite collaboration avec vous pour élaborer un menu qui reflète vos goûts et vos besoins alimentaires. Qu'il s'agisse d'un mariage, d'un événement d'entreprise ou d'une réunion intime, nous créons des plats qui raviront chaque invité.",
+    "p4": "Nous sommes fiers d'utiliser uniquement des ingrédients de la plus haute qualité, biologiques et d'origine locale. Notre engagement envers la fraîcheur et la durabilité garantit que chaque bouchée est à la fois délicieuse et nutritive.",
+    "p5": "Chez Grillado, notre mission est d'élever votre expérience de traiteur avec une cuisine personnalisée de haute qualité qui laisse une impression durable. Nous nous engageons à dépasser vos attentes et à transformer votre occasion spéciale en un véritable chef-d'œuvre culinaire."
+  },
+  "CustomizedOptions": {
+    "heading": "Options personnalisées",
+    "feature1": "Tous les articles peuvent être emballés individuellement ou servis dans des plateaux.",
+    "feature2": "Des présentoirs et du matériel de chauffage sont disponibles.",
+    "feature3": "Ajoutez des bouteilles supplémentaires de sauce moyennant un coût additionnel.",
+    "feature4": "Service traiteur disponible au restaurant et hors site.",
+    "orderNow": "COMMANDER",
+    "learnMore": "EN SAVOIR PLUS",
+    "ourMenu": "NOTRE MENU"
+  },
+  "CateringReviews": {
+    "heading": "Avis",
+    "loadMore": "Voir Plus",
+    "r1_rating": "5 ★★★★★",
+    "r1_date": "18 Jan 2026",
+    "r1_review": "Harprith a fourni des services incroyables. Excellente nourriture",
+    "r1_name": "Ali Z",
+    "r1_initials": "AZ",
+    "r2_rating": "5 ★★★★★",
+    "r2_date": "18 Jan 2026",
+    "r2_review": "Incroyable",
+    "r2_name": "RAB I",
+    "r2_initials": "RI",
+    "r3_rating": "5 ★★★★★",
+    "r3_date": "16 Jan 2026",
+    "r3_review": "",
+    "r3_name": "Anès Grine",
+    "r3_initials": "AG",
+    "r4_rating": "5 ★★★★★",
+    "r4_date": "16 Jan 2026",
+    "r4_review": "Bien",
+    "r4_name": "Naz H",
+    "r4_initials": "NH",
+    "r5_rating": "5 ★★★★★",
+    "r5_date": "15 Jan 2026",
+    "r5_review": "",
+    "r5_name": "Rushi Jagada",
+    "r5_initials": "RJ",
+    "r6_rating": "5 ★★★★★",
+    "r6_date": "14 Jan 2026",
+    "r6_review": "",
+    "r6_name": "Usama Ismail",
+    "r6_initials": "UI",
+    "r7_rating": "5 ★★★★★",
+    "r7_date": "14 Jan 2026",
+    "r7_review": "",
+    "r7_name": "Mohamed Nagy",
+    "r7_initials": "MN",
+    "r8_rating": "5 ★★★★★",
+    "r8_date": "14 Jan 2026",
+    "r8_review": "",
+    "r8_name": "M S",
+    "r8_initials": "MS"
+  },
+  "BookEventCTA": {
+    "smallTitle": "Réservez aujourd'hui",
+    "mainTitle": "VÉRIFIEZ VOTRE DATE",
+    "p1": "Chez Grillado, nous croyons qu'une alimentation saine est essentielle à une bonne santé.",
+    "p2": "Notre menu axé sur le bien-être est conçu pour s'adapter à votre mode de vie soucieux de votre santé.",
+    "p3": "Le poulet Grillado est grillé à la perfection, ce qui en fait le choix le plus judicieux pour une vie équilibrée.",
+    "button": "Réservez votre événement"
   },
   "Reviews": {
     "heading": "Avis",
@@ -117,7 +202,7 @@
     "mississauga": "Mississauga",
     "termsAndConditions": "Termes et Conditions",
     "privacyPolicy": "Politique de Confidentialité",
-    "copyright": "© 2025 GRILLADO'S GRILLED BEEF BACK RIBS & CHICKEN. TOUS DROITS RÉSERVÉS",
+    "copyright": "© 2026 GRILLADO'S GRILLED BEEF BACK RIBS & CHICKEN. TOUS DROITS RÉSERVÉS",
     "orderNow": "COMMANDER"
   },
   "SpecialtyDrinks": {
@@ -148,5 +233,10 @@
       "natas": "Natas",
       "iceCream1Scoop": "Glace (1 Boule)"
     }
+  },
+  "CateringHero": {
+    "heading": "Services de Traiteur",
+    "description": "Service traiteur préparé avec des ingrédients frais pour les événements d'entreprise, les fêtes privées, les mariages, les anniversaires et toutes les occasions spéciales.",
+    "orderNow": "Commander Maintenant"
   }
 }

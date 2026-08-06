@@ -58,8 +58,8 @@ const BlogsSection = () => {
   }, [nextSlide, isHovered]);
 
   return (
-    <section className="w-full py-8 md:py-10 bg-zinc-50 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full py-6 md:py-8 bg-zinc-50 overflow-hidden">
+      <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16">
         
         {/* Navigation & Container */}
         <div 
@@ -82,17 +82,17 @@ const BlogsSection = () => {
                   <div className="bg-white shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden h-full flex flex-col border border-gray-100 group">
                     
                     {/* Blog Image */}
-                    <div className="relative w-full h-48 sm:h-56 bg-zinc-200 overflow-hidden">
+                    <div className="relative w-full h-48 sm:h-56 bg-white overflow-hidden border-b border-gray-100">
                       <Image 
                         src={blog.image} 
                         alt={t(`${blog.tKey}.title`)} 
                         fill 
-                        className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" 
+                        className="object-contain p-2 transition-transform duration-700 ease-in-out group-hover:scale-110" 
                       />
                     </div>
                     
                     {/* Content */}
-                    <div className="p-6 flex flex-col flex-grow">
+                    <div className="p-6 flex flex-col grow">
                       
                       {/* Date */}
                       <div className="flex items-center text-black text-sm font-semibold mb-3 tracking-wider uppercase">
@@ -106,7 +106,7 @@ const BlogsSection = () => {
                       </h3>
                       
                       {/* Description */}
-                      <p className="text-black mb-6 flex-grow leading-relaxed">
+                      <p className="text-black mb-6 grow leading-relaxed">
                         {t(`${blog.tKey}.description`)}
                       </p>
                       
