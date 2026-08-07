@@ -49,7 +49,7 @@ export default function FranchisingHero() {
             initial={{ opacity: 0, rotate: -10 }}
             animate={{ opacity: 1, rotate: -2 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="absolute inset-0 bg-[#f7b41c] -skew-x-6 md:-skew-x-12 rounded-xl sm:rounded-2xl shadow-2xl transform origin-center z-[-1]"
+            className="absolute inset-0 bg-[#DAAF18] -skew-x-6 md:-skew-x-12 rounded-xl sm:rounded-2xl shadow-2xl transform origin-center z-[-1]"
           ></motion.div>
           
           {/* Text Content (unskewed/unrotated visually against the container) */}

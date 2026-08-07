@@ -33,7 +33,7 @@ export const MobileMenu = () => {
     <div className="lg:hidden flex items-center">
       <button
         onClick={toggleMenu}
-        className="text-white hover:text-yellow-400 transition-colors"
+        className="text-white hover:text-[#DAAF18] transition-colors"
         aria-label="Open Menu"
       >
         <Menu className="w-8 h-8" />
@@ -63,7 +63,7 @@ export const MobileMenu = () => {
           />
           <button
             onClick={toggleMenu}
-            className="text-white hover:text-yellow-400 transition-colors"
+            className="text-white hover:text-[#DAAF18] transition-colors"
             aria-label="Close Menu"
           >
             <X className="w-8 h-8" />
@@ -92,7 +92,7 @@ export const MobileMenu = () => {
         <div className="p-5 border-t border-white/10">
           <Link
             href="/order"
-            className="flex items-center justify-center w-full bg-[#f7b41c] hover:bg-[#e0a218] text-black font-bold py-4 rounded-xl transition-all duration-300"
+            className="flex items-center justify-center w-full bg-[#DAAF18] hover:bg-[#b89214] text-black font-bold py-4 rounded-xl transition-all duration-300"
             onClick={toggleMenu}
           >
             {t('orderNow')}

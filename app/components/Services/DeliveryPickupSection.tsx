@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function DeliveryPickupSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-linear-to-r from-[#f08519] to-[#f7b41c]">
+    <section className="relative w-full overflow-hidden bg-linear-to-r from-[#f08519] to-[#DAAF18]">
       
       <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 items-stretch">
         

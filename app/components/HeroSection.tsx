@@ -45,7 +45,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
             animate={{ opacity: 1, scale: 1.05, rotate: -2 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="absolute inset-0 bg-yellow-400 rounded-3xl z-[-1] shadow-2xl"
+            className="absolute inset-0 bg-[#DAAF18] rounded-3xl z-[-1] shadow-2xl"
           ></motion.div>
           
           <motion.h1 

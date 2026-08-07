@@ -20,7 +20,7 @@ export default function FranchisingSponsors() {
         {/* Heading */}
         <h2 className="text-3xl md:text-5xl font-extrabold text-center uppercase tracking-wide mb-4 text-black drop-shadow-sm">
           {t('sponsorsHeadingMain')}
-          <span className="text-[#f7b41c]">{t('sponsorsHeadingYellow')}</span>
+          <span className="text-[#DAAF18]">{t('sponsorsHeadingYellow')}</span>
         </h2>
         
         {/* Red Divider */}

@@ -15,7 +15,7 @@ export default function FranchisingContent() {
         <h2 className="text-3xl md:text-5xl font-extrabold text-center uppercase tracking-wide mb-2 text-black drop-shadow-sm">
           {t('whatWeDo')}
         </h2>
-        <h3 className="text-2xl md:text-4xl font-extrabold text-center uppercase tracking-wide mb-4 text-[#f7b41c] drop-shadow-sm">
+        <h3 className="text-2xl md:text-4xl font-extrabold text-center uppercase tracking-wide mb-4 text-[#DAAF18] drop-shadow-sm">
           {t('whatWeDoSub')}
         </h3>
         
@@ -49,11 +49,11 @@ export default function FranchisingContent() {
           <div className="w-full lg:w-1/2 flex flex-col gap-6 text-gray-800 text-lg md:text-xl leading-relaxed">
             <p>
               {t('p1_1')}
-              <span className="text-[#f7b41c] font-bold">{t('p1_highlight')}</span>
+              <span className="text-[#DAAF18] font-bold">{t('p1_highlight')}</span>
             </p>
             <p>
               {t('p2_1')}
-              <span className="text-[#f7b41c] font-bold">{t('p2_highlight')}</span>
+              <span className="text-[#DAAF18] font-bold">{t('p2_highlight')}</span>
             </p>
             <p>
               {t('p3')}

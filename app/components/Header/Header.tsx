@@ -53,12 +53,12 @@ export const Header = () => {
                 <NavItem href="/pages" icon={<FileText className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('pages')} dropdown />
               </div>
 
-              <div className="absolute left-1/2 -translate-x-1/2 top-12.5 flex flex-col w-48 bg-[#1b140f] border border-[#f7b41c]/30 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
-                <Link href="/franchising" className="px-5 py-3 text-white hover:bg-[#f7b41c] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('franchising')}</Link>
-                <Link href="/gallery" className="px-5 py-3 text-white hover:bg-[#f7b41c] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('gallery')}</Link>
-                <Link href="/blogs" className="px-5 py-3 text-white hover:bg-[#f7b41c] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('blogs')}</Link>
-                <Link href="/about-us" className="px-5 py-3 text-white hover:bg-[#f7b41c] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('aboutUs')}</Link>
-                <Link href="/contact-us" className="px-5 py-3 text-white hover:bg-[#f7b41c] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('contactUs')}</Link>
+              <div className="absolute left-1/2 -translate-x-1/2 top-12.5 flex flex-col w-48 bg-[#1b140f] border border-[#DAAF18]/30 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
+                <Link href="/franchising" className="px-5 py-3 text-white hover:bg-[#DAAF18] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('franchising')}</Link>
+                <Link href="/gallery" className="px-5 py-3 text-white hover:bg-[#DAAF18] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('gallery')}</Link>
+                <Link href="/blogs" className="px-5 py-3 text-white hover:bg-[#DAAF18] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('blogs')}</Link>
+                <Link href="/about-us" className="px-5 py-3 text-white hover:bg-[#DAAF18] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('aboutUs')}</Link>
+                <Link href="/contact-us" className="px-5 py-3 text-white hover:bg-[#DAAF18] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('contactUs')}</Link>
               </div>
             </div>
 

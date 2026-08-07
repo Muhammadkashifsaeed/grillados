@@ -13,7 +13,7 @@ export default function FranchisingJoinTeam() {
     <div className="flex flex-col gap-2 mb-10">
       <h3 className="text-xl md:text-2xl font-bold font-['Outfit',sans-serif]">
         <span className="text-black">{t(`step${num}_num`)} </span>
-        <span className="text-[#f7b41c]">{t(`step${num}_title`)}</span>
+        <span className="text-[#DAAF18]">{t(`step${num}_title`)}</span>
       </h3>
       <p className="text-gray-500 text-base md:text-lg leading-relaxed">
         {t(`step${num}_desc`)}

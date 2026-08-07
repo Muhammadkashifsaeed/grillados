@@ -107,10 +107,10 @@ export const Footer = () => {
             <div className="flex flex-col gap-6">
               <h3 className="text-xl font-bold tracking-wider uppercase">{t('menuHeading')}</h3>
               <ul className="flex flex-col gap-4">
-                <li><Link href="/order" className="hover:text-yellow-400 transition-colors duration-300">{t('orderOnline')}</Link></li>
-                <li><Link href="/franchising" className="hover:text-yellow-400 transition-colors duration-300">{t('franchising')}</Link></li>
-                <li><Link href="/about" className="hover:text-yellow-400 transition-colors duration-300">{t('aboutUs')}</Link></li>
-                <li><Link href="/contact" className="hover:text-yellow-400 transition-colors duration-300">{t('contact')}</Link></li>
+                <li><Link href="/order" className="hover:text-[#DAAF18] transition-colors duration-300">{t('orderOnline')}</Link></li>
+                <li><Link href="/franchising" className="hover:text-[#DAAF18] transition-colors duration-300">{t('franchising')}</Link></li>
+                <li><Link href="/about" className="hover:text-[#DAAF18] transition-colors duration-300">{t('aboutUs')}</Link></li>
+                <li><Link href="/contact" className="hover:text-[#DAAF18] transition-colors duration-300">{t('contact')}</Link></li>
               </ul>
             </div>
 
@@ -118,10 +118,10 @@ export const Footer = () => {
             <div className="flex flex-col gap-6">
               <h3 className="text-xl font-bold tracking-wider uppercase">{t('locationsHeading')}</h3>
               <ul className="flex flex-col gap-4">
-                <li><Link href="/locations/cambridge" className="hover:text-yellow-400 transition-colors duration-300">{t('cambridge')}</Link></li>
-                <li><Link href="/locations/laval" className="hover:text-yellow-400 transition-colors duration-300">{t('laval')}</Link></li>
-                <li><Link href="/locations/milton" className="hover:text-yellow-400 transition-colors duration-300">{t('milton')}</Link></li>
-                <li><Link href="/locations/mississauga" className="hover:text-yellow-400 transition-colors duration-300">{t('mississauga')}</Link></li>
+                <li><Link href="/locations/cambridge" className="hover:text-[#DAAF18] transition-colors duration-300">{t('cambridge')}</Link></li>
+                <li><Link href="/locations/laval" className="hover:text-[#DAAF18] transition-colors duration-300">{t('laval')}</Link></li>
+                <li><Link href="/locations/milton" className="hover:text-[#DAAF18] transition-colors duration-300">{t('milton')}</Link></li>
+                <li><Link href="/locations/mississauga" className="hover:text-[#DAAF18] transition-colors duration-300">{t('mississauga')}</Link></li>
               </ul>
             </div>
 
@@ -135,8 +135,8 @@ export const Footer = () => {
                 className="w-24 h-auto"
               />
               <ul className="flex flex-col gap-4 mt-2">
-                <li><Link href="/terms" className="hover:text-yellow-400 transition-colors duration-300 text-sm">{t('termsAndConditions')}</Link></li>
-                <li><Link href="/privacy" className="hover:text-yellow-400 transition-colors duration-300 text-sm">{t('privacyPolicy')}</Link></li>
+                <li><Link href="/terms" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm">{t('termsAndConditions')}</Link></li>
+                <li><Link href="/privacy" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm">{t('privacyPolicy')}</Link></li>
               </ul>
             </div>
           </div>
@@ -155,7 +155,7 @@ export const Footer = () => {
       <div className="hidden lg:flex fixed top-1/2 right-0 -translate-y-1/2 z-50">
         <Link 
           href="/order"
-          className="bg-[#f7b41c] hover:bg-[#d72323] hover:text-white text-black font-bold py-6 px-3 rounded-l-xl shadow-lg transition-all duration-300 flex flex-col items-center gap-4 cursor-pointer"
+          className="bg-[#DAAF18] hover:bg-[#d72323] hover:text-white text-black font-bold py-6 px-3 rounded-l-xl shadow-lg transition-all duration-300 flex flex-col items-center gap-4 cursor-pointer"
         >
           <UtensilsCrossed className="w-6 h-6" />
           <span className="writing-vertical-rl text-lg tracking-widest whitespace-nowrap rotate-180" style={{ writingMode: 'vertical-rl' }}>

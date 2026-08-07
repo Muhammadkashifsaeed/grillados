@@ -63,7 +63,7 @@ export default function NewsletterSection() {
           viewport={{ once: true }}
           className="text-2xl md:text-3xl lg:text- font-extrabold text-gray-900 font-['Outfit',sans-serif] text-center leading-[] tracking-tight mb-6 max-w-2xl"
         >
-          Restez au courant de tous nos <span className="text-[#f7b41c]">Grillado’s</span> Actualités,<br className="hidden md:block" />
+          Restez au courant de tous nos <span className="text-[#DAAF18]">Grillado’s</span> Actualités,<br className="hidden md:block" />
           abonnez-vous à notre newsletter
         </motion.h2>
 
@@ -105,7 +105,7 @@ export default function NewsletterSection() {
                   placeholder="First Name*"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="w-full h-12 md:h-12.5 px-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f7b41c] focus:border-transparent transition-all"
+                  className="w-full h-12 md:h-12.5 px-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DAAF18] focus:border-transparent transition-all"
                 />
               </div>
 
@@ -119,7 +119,7 @@ export default function NewsletterSection() {
                   placeholder="Email*"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full h-12 md:h-12.5 pl-14 pr-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f7b41c] focus:border-transparent transition-all"
+                  className="w-full h-12 md:h-12.5 pl-14 pr-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DAAF18] focus:border-transparent transition-all"
                 />
               </div>
 

@@ -58,7 +58,7 @@ export default function ContactCateringSection() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-  const inputClass = "w-full h-13 md:h-14 px-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#f7b41c] transition-all duration-300 placeholder:text-gray-400 font-medium";
+  const inputClass = "w-full h-13 md:h-14 px-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#DAAF18] transition-all duration-300 placeholder:text-gray-400 font-medium";
   const labelClass = "block text-sm font-semibold text-gray-200 mb-2";
   const sectionTitleClass = "text-2xl font-bold text-white font-['Outfit',sans-serif] mb-6 tracking-wide border-b border-gray-600/50 pb-2";
 
@@ -111,7 +111,7 @@ export default function ContactCateringSection() {
                   </div>
                   <div>
                     <label className={labelClass}>Phone Number*</label>
-                    <div className="flex h-13 md:h-14 rounded-xl bg-white border border-transparent focus-within:ring-2 focus-within:ring-[#f7b41c] transition-all duration-300">
+                    <div className="flex h-13 md:h-14 rounded-xl bg-white border border-transparent focus-within:ring-2 focus-within:ring-[#DAAF18] transition-all duration-300">
                       {/* Functional Custom Country Code Selector with Real Flags */}
                       <div className="relative flex items-center bg-gray-100 border-r border-gray-200 hover:bg-gray-200 transition-colors rounded-l-xl" ref={dropdownRef}>
                         <div 
@@ -199,7 +199,7 @@ export default function ContactCateringSection() {
                 <label className={labelClass}>Delivery Notes</label>
                 <textarea 
                   placeholder="Write delivery instructions..." 
-                  className="w-full h-45 p-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#f7b41c] transition-all duration-300 placeholder:text-gray-400 font-medium resize-none"
+                  className="w-full h-45 p-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#DAAF18] transition-all duration-300 placeholder:text-gray-400 font-medium resize-none"
                 ></textarea>
               </div>
             </section>
@@ -263,7 +263,7 @@ export default function ContactCateringSection() {
               {/* SMS Consent */}
               <label className="flex items-start gap-4 cursor-pointer mb-8 max-w-4xl group">
                 <div className="relative flex items-center mt-1">
-                  <input type="checkbox" className="peer w-6 h-6 rounded-md border-gray-300 text-[#f7b41c] focus:ring-[#f7b41c] cursor-pointer appearance-none bg-white checked:bg-[#f7b41c] checked:border-transparent transition-all duration-200" />
+                  <input type="checkbox" className="peer w-6 h-6 rounded-md border-gray-300 text-[#DAAF18] focus:ring-[#DAAF18] cursor-pointer appearance-none bg-white checked:bg-[#DAAF18] checked:border-transparent transition-all duration-200" />
                   <svg className="absolute w-4 h-4 text-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0 peer-checked:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
@@ -282,7 +282,7 @@ export default function ContactCateringSection() {
                     ? 'bg-green-500 hover:bg-green-600 shadow-green-500/30' 
                     : isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-[#f7b41c] hover:bg-[#e0a217] hover:shadow-xl hover:-translate-y-1 active:scale-[0.98]'
+                    : 'bg-[#DAAF18] hover:bg-[#e0a217] hover:shadow-xl hover:-translate-y-1 active:scale-[0.98]'
                 }`}
               >
                 {isSubmitting ? (
