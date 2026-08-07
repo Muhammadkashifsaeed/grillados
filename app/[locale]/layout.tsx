@@ -37,8 +37,9 @@ export default async function RootLayout({
     <html
       lang={locale}
       className={`${inter.variable} h-full antialiased font-sans`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-white">
+      <body className="min-h-full flex flex-col bg-white" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1">{children}</main>
