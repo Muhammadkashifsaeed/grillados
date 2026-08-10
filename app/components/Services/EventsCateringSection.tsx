@@ -39,7 +39,7 @@ export default function EventsCateringSection() {
           </h2>
 
           {/* Description */}
-          <p className="text-gray-600 text- md:text- leading-relaxed max-w-112.5 mb-8 font-medium">
+          <p className="text-gray-600 text-xs md:text-sm leading-relaxed max-w-112.5 mb-8 font-medium">
             When a big event is on the horizon, focus on what matters most and let us take care of the food. With a variety of dishes and impeccable preparation, Grillado is ready to make your event unforgettable.
           </p>
 

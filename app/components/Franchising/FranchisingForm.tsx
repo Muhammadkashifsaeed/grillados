@@ -120,7 +120,7 @@ export default function FranchisingForm() {
   const labelClass = "block text-sm font-semibold text-gray-200 mb-2";
   const sectionTitleClass = "text-2xl font-bold text-white font-['Outfit',sans-serif] mb-6 tracking-wide border-b border-gray-600/50 pb-2";
 
-  const RadioGroup = ({ name, question }: { name: string, question: string }) => (
+  const renderRadioGroup = (name: string, question: string) => (
     <div className="flex flex-col gap-2">
       <label className={labelClass}>{question}</label>
       <div className="flex items-center gap-6">
@@ -337,10 +337,10 @@ export default function FranchisingForm() {
                 </div>
 
                 <div className="flex flex-col gap-6 md:gap-8">
-                  <RadioGroup name="q1" question={t('q1')} />
-                  <RadioGroup name="q2" question={t('q2')} />
-                  <RadioGroup name="q3" question={t('q3')} />
-                  <RadioGroup name="q4" question={t('q4')} />
+                  {renderRadioGroup("q1", t('q1'))}
+                  {renderRadioGroup("q2", t('q2'))}
+                  {renderRadioGroup("q3", t('q3'))}
+                  {renderRadioGroup("q4", t('q4'))}
                 </div>
               </div>
             </section>

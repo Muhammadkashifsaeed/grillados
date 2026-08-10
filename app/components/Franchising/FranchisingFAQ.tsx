@@ -14,8 +14,8 @@ export default function FranchisingFAQ() {
   };
 
   const faqList = Array.from({ length: 14 }, (_, i) => ({
-    question: t(`q${i + 1}` as any),
-    answer: t(`a${i + 1}` as any)
+    question: t(`q${i + 1}` as Parameters<typeof t>[0]),
+    answer: t(`a${i + 1}` as Parameters<typeof t>[0])
   }));
 
   return (

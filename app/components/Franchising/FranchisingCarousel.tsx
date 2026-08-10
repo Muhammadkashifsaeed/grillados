@@ -23,15 +23,12 @@ export default function FranchisingCarousel() {
               x: ["0%", "-50%"]
             }}
             transition={{
-              duration: 25,
+              duration: 90,
               ease: "linear",
               repeat: Infinity,
             }}
             style={{ 
               width: "max-content",
-              // We ensure 6 images fit roughly in the viewport width
-              // Since it's responsive, we use a fixed width for each image
-              // to guarantee they look good.
             }}
           >
             {duplicatedImages.map((src, index) => (

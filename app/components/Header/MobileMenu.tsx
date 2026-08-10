@@ -77,7 +77,28 @@ export const MobileMenu = () => {
           <NavItem href="/deals" icon={<Tag className="w-5 h-5" />} label={t('deals')} />
           <NavItem href="/services" icon={<Users className="w-5 h-5" />} label={t('services')} />
           <NavItem href="/catering" icon={<Truck className="w-5 h-5" />} label={t('cateringServices')} />
-          <NavItem href="/pages" icon={<FileText className="w-5 h-5" />} label={t('pages')} dropdown />
+          
+          <div className="flex flex-col">
+            <button 
+              onClick={() => {
+                const el = document.getElementById('mobile-pages-dropdown');
+                if (el) el.classList.toggle('hidden');
+              }}
+              className="flex items-center justify-between w-full text-white hover:text-[#DAAF18] transition-colors py-2"
+            >
+              <div className="flex items-center gap-1.5 font-bold text-sm tracking-wide uppercase">
+                <FileText className="w-5 h-5 opacity-90" />
+                <span>{t('pages')}</span>
+              </div>
+              <span className="text-xs opacity-70">▼</span>
+            </button>
+            <div id="mobile-pages-dropdown" className="hidden flex-col pl-6 mt-2 gap-3 border-l border-white/10 ml-2">
+              <Link href="/about-us" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#DAAF18] transition-colors">About Us</Link>
+              <Link href="/gallery" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#DAAF18] transition-colors">Gallery</Link>
+              <Link href="/blogs" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#DAAF18] transition-colors">Blogs</Link>
+              <Link href="/franchising" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#DAAF18] transition-colors">Franchising</Link>
+            </div>
+          </div>
           
           <div className="flex gap-4 items-center mt-2 pl-2">
             <button onClick={() => switchLanguage('en')} className={`flex items-center gap-2 transition-opacity ${locale === 'en' ? 'scale-110 drop-shadow-[0_0_4px_rgba(247,180,28,0.8)]' : 'opacity-60 hover:opacity-100 hover:scale-110'}`}>

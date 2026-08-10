@@ -65,7 +65,7 @@ export default function GiftCardsSection() {
             </h2>
 
             {/* Description */}
-            <p className="text-gray-600 text- md:text- leading-relaxed mb-8 font-medium max-w-112.5">
+            <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-8 font-medium max-w-112.5">
               Give the gift of good food to your loved ones. Grillado offers a range of gift cards for all occasions: simply choose one and treat your loved ones to the best Portuguese chicken in Canada.
             </p>
 

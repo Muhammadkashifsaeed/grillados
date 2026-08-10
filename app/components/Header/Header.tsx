@@ -93,7 +93,7 @@ export const Header = () => {
           >
             <ShoppingBag className="w-4 h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
             <div className="flex flex-col text-left leading-[]">
-              <span className="text- md:text- xl:text-xs">{t('orderOnline')}</span>
+              <span className="text-xs md:text-sm xl:text-xs">{t('orderOnline')}</span>
             </div>
           </Link>
 

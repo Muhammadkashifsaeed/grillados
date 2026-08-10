@@ -16,7 +16,7 @@ export const DessertMenuSection = () => {
   const t = useTranslations('Desserts');
 
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
       {/* Background with subtle food outline pattern */}
       <div 
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -40,12 +40,13 @@ export const DessertMenuSection = () => {
         `}</style>
         
         {/* ROW 1: e-1 and f-1 Images */}
+        {/* Desktop Layout */}
         <motion.div 
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="w-full flex flex-row items-center justify-center py-8 lg:py-12"
+          className="w-full hidden md:flex flex-row items-center justify-center py-8 lg:py-12"
         >
           {/* e-1.png — left */}
           <div className="relative w-[55%] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] z-10 transition-transform duration-500 hover:scale-105">
@@ -70,18 +71,36 @@ export const DessertMenuSection = () => {
           </div>
         </motion.div>
 
+        {/* Mobile Layout */}
+        <div className="w-full flex md:hidden flex-col items-center justify-center gap-6 py-6 px-2">
+          <Image
+            src="/images/mobile15.jpg"
+            alt="mobile15.jpg"
+            width={1000}
+            height={750}
+            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+          />
+          <Image
+            src="/images/mobile16.jpg"
+            alt="mobile16.jpg"
+            width={1000}
+            height={750}
+            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+          />
+        </div>
+
         {/* ROW 2: Dessert Menu + a-1 Image */}
         <div className="flex flex-col lg:flex-row items-stretch justify-between gap-12 lg:gap-8 xl:gap-12">
           {/* Left Column: Menu Items */}
           <motion.div 
-            initial={{ opacity: 0, x: -150 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col justify-center"
+            className="w-full lg:w-1/2 flex flex-col justify-center pr-12 sm:pr-16 md:pr-0"
           >
             <div className="mb-8 lg:mb-10 flex flex-col items-start">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight inline-block">
+              <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight block">
                 {t('heading')}
               </h2>
               {/* Divider matched to heading width using w-full max-w limit to not stretch fully */}
@@ -91,15 +110,15 @@ export const DessertMenuSection = () => {
             <div className="flex flex-col gap-3 md:gap-4 w-full">
               {menuItems.map((item, index) => (
                 <div key={index} className="flex flex-col w-full">
-                  <div className="flex items-end w-full gap-2 sm:gap-3">
-                    <span className="text-white text-base md:text-lg font-normal whitespace-nowrap">
+                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-normal whitespace-normal">
                       {t(`items.${item.translationKey}`)}
                     </span>
                     <div
                       className="grow mb-1"
                       style={{
                         borderBottom: '2px dotted rgba(255,255,255,0.5)',
-                        minWidth: '20px'
+                        minWidth: '4px'
                       }}
                     ></div>
                     <span className="text-white text-base md:text-lg font-bold whitespace-nowrap">
@@ -113,19 +132,30 @@ export const DessertMenuSection = () => {
 
           {/* Right Column: a-1 Image */}
           <motion.div 
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 lg:mb-24"
           >
             <div className="relative w-full h-full lg:min-h-[500px]">
+            {/* Desktop Image */}
             <Image 
                 src="/images/a-1.png"
                 alt="Dessert"
                 width={1000}
-              height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right scale-100 lg:scale-110 drop-shadow-2xl"
+                height={750}
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right scale-100 lg:scale-110 drop-shadow-2xl hidden md:block"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            {/* Mobile Image */}
+            <Image 
+                src="/images/mobile17.jpg"
+                alt="Dessert Mobile"
+                width={1000}
+                height={750}
+                className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
@@ -134,12 +164,13 @@ export const DessertMenuSection = () => {
         </div>
 
         {/* ROW 3: b-1 and c-1 Images */}
+        {/* Desktop Layout */}
         <motion.div 
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="w-full flex flex-row items-center justify-center py-8 lg:py-12"
+          className="w-full hidden md:flex flex-row items-center justify-center py-8 lg:py-12"
         >
           {/* b-1.png — left */}
           <div className="relative w-[55%] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] z-10 transition-transform duration-500 hover:scale-105">
@@ -163,6 +194,24 @@ export const DessertMenuSection = () => {
             />
           </div>
         </motion.div>
+
+        {/* Mobile Layout */}
+        <div className="w-full flex md:hidden flex-col items-center justify-center gap-6 py-6 px-2">
+          <Image
+            src="/images/mobile18.jpg"
+            alt="mobile18.jpg"
+            width={1000}
+            height={750}
+            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+          />
+          <Image
+            src="/images/mobile19.jpg"
+            alt="mobile19.jpg"
+            width={1000}
+            height={750}
+            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+          />
+        </div>
         
       </div>
     </section>

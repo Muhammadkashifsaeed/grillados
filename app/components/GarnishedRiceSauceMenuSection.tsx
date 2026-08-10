@@ -33,7 +33,7 @@ const sauceLevels = [
 
 export const GarnishedRiceSauceMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
       {/* Background with subtle food outline pattern */}
       <div 
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -52,11 +52,11 @@ export const GarnishedRiceSauceMenuSection = () => {
           
           {/* Left Column: Menu Items */}
           <motion.div 
-            initial={{ opacity: 0, x: -150 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col justify-center lg:pr-6 xl:pr-10"
+            className="w-full lg:w-1/2 flex flex-col justify-center pr-12 sm:pr-16 md:pr-0 lg:pr-6 xl:pr-10"
           >
             <div className="mb-8 lg:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-snug">
@@ -108,12 +108,23 @@ export const GarnishedRiceSauceMenuSection = () => {
           >
             {/* Top Large Peri Image */}
             <div className="relative w-full py-8 lg:py-12">
-            <Image 
+              {/* Desktop Image */}
+              <Image 
                 src="/images/zasty.png"
                 alt="Zesty Food"
                 width={1000}
-              height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right drop-shadow-2xl scale-100 lg:scale-110"
+                height={750}
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right drop-shadow-2xl scale-100 lg:scale-110 hidden md:block"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+              {/* Mobile Image */}
+              <Image 
+                src="/images/mobile13.jpg"
+                alt="Zesty Food Mobile"
+                width={1000}
+                height={750}
+                className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

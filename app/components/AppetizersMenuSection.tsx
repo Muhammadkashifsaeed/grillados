@@ -18,7 +18,7 @@ const menuItems = [
 
 export const AppetizersMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
       {/* 
         Background with subtle food outline pattern. 
         Update the URL if you have a specific pattern image.
@@ -39,14 +39,14 @@ export const AppetizersMenuSection = () => {
           
           {/* Left Column: Menu Items */}
           <motion.div 
-            initial={{ opacity: 0, x: -150 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col"
+            className="w-full lg:w-1/2 flex flex-col pr-12 sm:pr-16 md:pr-0"
           >
             <div className="mb-10">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide">
+              <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide">
                 APPETIZERS
               </h2>
               <div className="w-full h-1.5 bg-[#fbbc04] mt-3"></div>
@@ -55,23 +55,23 @@ export const AppetizersMenuSection = () => {
             <div className="flex flex-col gap-4 md:gap-5 w-full">
               {menuItems.map((item, index) => (
                 <div key={index} className="flex flex-col w-full">
-                  <div className="flex items-end w-full gap-2 sm:gap-3">
-                    <span className="text-white text-sm md:text-base font-normal whitespace-nowrap">
+                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
+                    <span className="text-white text-xs sm:text-sm md:text-base font-normal whitespace-normal shrink">
                       {item.name}
                     </span>
                     <div
                       className="grow mb-1"
                       style={{
                         borderBottom: '2px dotted rgba(255,255,255,0.5)',
-                        minWidth: '20px'
+                        minWidth: '4px'
                       }}
                     ></div>
-                    <span className="text-white text-sm md:text-base font-semibold whitespace-nowrap">
+                    <span className="text-white text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
                       {item.price}
                     </span>
                   </div>
                   {item.note && (
-                    <p className="text-red-400 text- md:text- font-semibold uppercase mt-0.5 tracking-widest">
+                    <p className="text-red-400 text-xs md:text-sm font-semibold uppercase mt-0.5 tracking-widest">
                       {item.note}
                     </p>
                   )}
@@ -82,18 +82,29 @@ export const AppetizersMenuSection = () => {
 
           {/* Right Column: Image */}
           <motion.div 
-            initial={{ opacity: 0, x: 150 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 mx-auto lg:mt-0"
           >
+            {/* Desktop Image */}
             <Image 
               src="/images/onpen.png"
               alt="Open Appetizers"
               width={1000}
               height={750}
-              className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 lg:scale-125"
+              className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 lg:scale-125 hidden md:block"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
+            />
+            {/* Mobile Image */}
+            <Image 
+              src="/images/mobile1.jpg"
+              alt="Mobile Appetizers"
+              width={1000}
+              height={750}
+              className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />

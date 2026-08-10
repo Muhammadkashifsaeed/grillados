@@ -34,7 +34,7 @@ const menuItems = [
 
 export const PlateauxMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -50,12 +50,13 @@ export const PlateauxMenuSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col lg:flex-col gap-6 md:gap-10 lg:gap-14">
 
         {/* ZONE 1: Both images in ONE container — fade UP */}
+        {/* Desktop Layout */}
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          className="w-full flex flex-row items-center justify-center py-8 lg:py-12 order-2 lg:order-1"
+          className="w-full hidden md:flex flex-row items-center justify-center py-8 lg:py-12 order-2 lg:order-1"
         >
           {/* previous1.png — left */}
           <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-10 transition-transform duration-500 hover:scale-105">
@@ -81,20 +82,38 @@ export const PlateauxMenuSection = () => {
           </div>
         </motion.div>
 
+        {/* Mobile Layout */}
+        <div className="w-full flex md:hidden flex-col items-center justify-center gap-6 py-6 px-2 order-2">
+          <Image
+            src="/images/mobile8.jpg"
+            alt="Grillado Plateaux - Dish 1 Mobile"
+            width={1000}
+            height={750}
+            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+          />
+          <Image
+            src="/images/mobile9.jpg"
+            alt="Grillado Plateaux - Dish 2 Mobile"
+            width={1000}
+            height={750}
+            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+          />
+        </div>
+
         {/* ZONE 2: Bottom row */}
         <div className="contents lg:flex lg:flex-row items-start justify-between gap-8 lg:gap-12">
 
           {/* LEFT: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
-            initial={{ opacity: 0, x: -150 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, ease: 'easeOut' }}
             className="w-full lg:w-1/2 flex flex-col order-3 lg:order-none mt-8 lg:mt-0"
           >
             <div className="mb-10">
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] uppercase tracking-wide"
+                className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] uppercase tracking-wide"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 GRILLADO&apos;S<br />PLATEAUX
@@ -106,25 +125,25 @@ export const PlateauxMenuSection = () => {
               {menuItems.map((item, index) => (
                 <div key={index} className="flex flex-col w-full">
                   {/* Name + dotted leader + price */}
-                  <div className="flex items-end w-full gap-2 sm:gap-3">
-                    <span className="text-white text-sm md:text-base font-normal whitespace-nowrap">
+                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
+                    <span className="text-white text-xs sm:text-sm md:text-base font-normal whitespace-normal shrink">
                       {item.name}
                     </span>
                     <div
                       className="grow mb-1"
                       style={{
                         borderBottom: '2px dotted rgba(255,255,255,0.5)',
-                        minWidth: '20px',
+                        minWidth: '4px',
                       }}
                     />
-                    <span className="text-white text-sm md:text-base font-semibold whitespace-nowrap">
+                    <span className="text-white text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
                       {item.price}
                     </span>
                   </div>
 
                   {/* Note — bright red, uppercase */}
                   {item.note && (
-                    <p className="text-red-400 text- md:text- font-semibold uppercase mt-0.5 tracking-widest leading-relaxed">
+                    <p className="text-red-400 text-xs md:text-sm font-semibold uppercase mt-0.5 tracking-widest leading-relaxed">
                       {item.note}
                     </p>
                   )}
@@ -143,18 +162,28 @@ export const PlateauxMenuSection = () => {
 
           {/* RIGHT: Fade-in from right — reserved for visual balance */}
           <motion.div
-            initial={{ opacity: 0, x: 150 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, ease: 'easeOut' }}
             className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 mx-auto lg:mt-0 order-1 lg:order-none lg:mb-0"
           >
+            {/* Desktop Image */}
             <Image
               src="/images/component.png"
               alt="Grillado Plateaux Featured"
               width={1000}
               height={750}
-              className="w-full h-auto object-contain object-center lg:object-right drop-shadow-2xl rounded-2xl lg:rounded-none scale-100 lg:scale-110"
+              className="w-full h-auto object-contain object-center lg:object-right drop-shadow-2xl rounded-2xl lg:rounded-none scale-100 lg:scale-110 hidden md:block"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            {/* Mobile Image */}
+            <Image
+              src="/images/mobile7.jpg"
+              alt="Grillado Plateaux Featured Mobile"
+              width={1000}
+              height={750}
+              className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </motion.div>

@@ -16,7 +16,7 @@ const menuItems = [
 
 export const ComboDePouletMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
       {/* Background with subtle food outline pattern */}
       <div 
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -34,11 +34,11 @@ export const ComboDePouletMenuSection = () => {
           
           {/* Left Column: Menu Items */}
           <motion.div 
-            initial={{ opacity: 0, x: -150 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col justify-center lg:pr-6 xl:pr-10"
+            className="w-full lg:w-1/2 flex flex-col justify-center pr-12 sm:pr-16 md:pr-0 lg:pr-6 xl:pr-10"
           >
             <div className="mb-8 lg:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-snug">
@@ -50,23 +50,23 @@ export const ComboDePouletMenuSection = () => {
             <div className="flex flex-col gap-5 md:gap-6 w-full">
               {menuItems.map((item, index) => (
                 <div key={index} className="flex flex-col w-full">
-                  <div className="flex items-end w-full gap-2 sm:gap-3">
-                    <span className="text-white text-sm md:text-base font-normal whitespace-nowrap">
+                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
+                    <span className="text-white text-xs sm:text-sm md:text-base font-normal whitespace-normal shrink">
                       {item.name}
                     </span>
                     <div
                       className="grow mb-1"
                       style={{
                         borderBottom: '2px dotted rgba(255,255,255,0.5)',
-                        minWidth: '20px'
+                        minWidth: '4px'
                       }}
                     ></div>
-                    <span className="text-white text-sm md:text-base font-semibold whitespace-nowrap">
+                    <span className="text-white text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
                       {item.price}
                     </span>
                   </div>
                   {item.note && (
-                    <p className="text-red-600 text- md:text-xs font-bold uppercase mt-1 tracking-widest leading-relaxed">
+                    <p className="text-red-600 text-xs md:text-xs font-bold uppercase mt-1 tracking-widest leading-relaxed">
                       {item.note}
                     </p>
                   )}
@@ -91,12 +91,23 @@ export const ComboDePouletMenuSection = () => {
             className="w-full lg:w-1/2 flex items-stretch justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] py-8 lg:py-12"
           >
             <div className="relative w-full h-full aspect-[4/3] lg:min-h-[500px]">
-            <Image 
+              {/* Desktop Image */}
+              <Image 
                 src="/images/chcken.png"
                 alt="Combo de Poulet Grillé"
                 width={1000}
-              height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right scale-100 lg:scale-110 md:scale-125 drop-shadow-2xl"
+                height={750}
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right scale-100 lg:scale-110 md:scale-125 drop-shadow-2xl hidden md:block"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+              {/* Mobile Image */}
+              <Image 
+                src="/images/mobile11.jpg"
+                alt="Combo de Poulet Grillé Mobile"
+                width={1000}
+                height={750}
+                className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

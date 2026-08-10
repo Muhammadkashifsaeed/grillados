@@ -73,7 +73,7 @@ export default function NewsletterSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-gray-600 text- md:text- font-medium text-center leading-relaxed mb-10 max-w-xl"
+          className="text-gray-600 text-xs md:text-sm font-medium text-center leading-relaxed mb-10 max-w-xl"
         >
           Soyez les premiers informés des nouvelles et événements de Grillado,<br className="hidden md:block" />
           abonnez-vous à notre newsletter et restez connectés!
@@ -131,7 +131,7 @@ export default function NewsletterSection() {
               {/* Subscribe Button */}
               <button
                 type="submit"
-                className="w-full h-12 md:h-12.5 mt-2 bg-[#d72323] hover:bg-[#b01c1c] active:scale-[0.98] text-white font-bold text- md:text-base uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+                className="w-full h-12 md:h-12.5 mt-2 bg-[#d72323] hover:bg-[#b01c1c] active:scale-[0.98] text-white font-bold text-xs md:text-smbase uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300"
               >
                 Subscribe
               </button>
