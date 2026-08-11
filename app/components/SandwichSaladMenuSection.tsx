@@ -8,7 +8,7 @@ export const SandwichSaladMenuSection = () => {
   return (
     <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
       {/* Background with subtle food outline pattern */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
         style={{
           backgroundImage: "url('/images/footer-doodle.png')",
@@ -21,9 +21,9 @@ export const SandwichSaladMenuSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-stretch justify-between gap-12 lg:gap-4 xl:gap-8">
-          
+
           {/* Left Column: Menu Items */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -96,18 +96,18 @@ export const SandwichSaladMenuSection = () => {
 
               {/* Additional Options */}
               <div className="mt-8 flex flex-col w-full pt-4 border-t border-white/10">
-                 <p className="text-white text-sm md:text-base font-bold uppercase tracking-wider mb-1">
-                   Salads LARGE 9.99 - ADD
-                 </p>
-                 <p className="text-[#fbbc04] text-lg md:text-xl font-bold font-['Outfit',sans-serif]">
-                   GRILLED CHICKEN 5.99
-                 </p>
+                <p className="text-white text-sm md:text-base font-bold uppercase tracking-wider mb-1">
+                  Salads LARGE 9.99 - ADD
+                </p>
+                <p className="text-[#fbbc04] text-lg md:text-xl font-bold font-['Outfit',sans-serif]">
+                  GRILLED CHICKEN 5.99
+                </p>
               </div>
             </div>
           </motion.div>
 
           {/* Right Column: Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -116,17 +116,17 @@ export const SandwichSaladMenuSection = () => {
           >
             <div className="relative w-full h-full aspect-[4/3] lg:min-h-[500px]">
               {/* Desktop Image */}
-              <Image 
+              <Image
                 src="/images/poulet.png"
                 alt="Poulet"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right scale-100 lg:scale-100 lg:scale-110 drop-shadow-2xl hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 lg:scale-100 drop-shadow-2xl hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
               {/* Mobile Image */}
-              <Image 
+              <Image
                 src="/images/mobile12.jpg"
                 alt="Poulet Mobile"
                 width={1000}

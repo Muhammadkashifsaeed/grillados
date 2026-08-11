@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 import LocationCard from '../../components/LocationCard';
 import ComingSoonLocations from '../../components/ComingSoonLocations';
 
@@ -41,6 +42,12 @@ const locations = [
 ];
 
 export default function LocationsPage() {
+  const t = useTranslations('LocationsPage');
+  const locale = useLocale();
+
+  // Show Ontario locations first in English, Quebec locations first in French
+  const displayLocations = locale === 'en' ? [...locations].reverse() : locations;
+
   return (
     <main className="flex flex-col flex-1 min-h-screen bg-[#0a0a0a] relative overflow-hidden pt-30 pb-12">
       {/* Background Texture */}
@@ -60,14 +67,14 @@ export default function LocationsPage() {
         {/* Header Section */}
         <div className="mb-16 md:mb-24 flex flex-col items-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide text-center">
-            Lieux disponibles
+            {t('availableLocations')}
           </h1>
           <div className="w-24 h-1.5 bg-orange-500 mx-auto mt-6"></div>
         </div>
 
         {/* Locations Grid */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-12">
-          {locations.map((loc, index) => (
+          {displayLocations.map((loc, index) => (
             <LocationCard
               key={loc.name}
               name={loc.name}

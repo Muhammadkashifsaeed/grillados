@@ -18,7 +18,7 @@ export const ComboDePouletMenuSection = () => {
   return (
     <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
       {/* Background with subtle food outline pattern */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
         style={{
           backgroundImage: "url('/images/footer-doodle.png')",
@@ -31,9 +31,9 @@ export const ComboDePouletMenuSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-stretch justify-between gap-12 lg:gap-4 xl:gap-8">
-          
+
           {/* Left Column: Menu Items */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -75,15 +75,15 @@ export const ComboDePouletMenuSection = () => {
 
               {/* Bottom Note */}
               <div className="mt-8 md:mt-10 w-full pt-4 border-t border-white/10">
-                 <p className="text-[#fbbc04] text-sm md:text-base font-bold uppercase tracking-widest">
-                   Ajoutez un 2ᵉ accompagnement pour 4,99
-                 </p>
+                <p className="text-[#fbbc04] text-sm md:text-base font-bold uppercase tracking-widest">
+                  Ajoutez un 2ᵉ accompagnement pour 4,99
+                </p>
               </div>
             </div>
           </motion.div>
 
           {/* Right Column: Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -92,17 +92,17 @@ export const ComboDePouletMenuSection = () => {
           >
             <div className="relative w-full h-full aspect-[4/3] lg:min-h-[500px]">
               {/* Desktop Image */}
-              <Image 
+              <Image
                 src="/images/chcken.png"
                 alt="Combo de Poulet Grillé"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right scale-100 lg:scale-110 md:scale-125 drop-shadow-2xl hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 lg:scale-100 drop-shadow-2xl hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
               {/* Mobile Image */}
-              <Image 
+              <Image
                 src="/images/mobile11.jpg"
                 alt="Combo de Poulet Grillé Mobile"
                 width={1000}

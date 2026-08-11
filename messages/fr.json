@@ -345,5 +345,46 @@
     "a13": "Nous franchisons actuellement au Canada, et sommes ouverts à l'expansion avec des détaillants expérimentés aux États-Unis et à l'international.",
     "q14": "Où puis-je acheter de l'équipement et des fournitures ?",
     "a14": "Tous les équipements et fournitures sont achetés auprès de fournisseurs de confiance et approuvés par le franchiseur."
+  },
+  "GarnishedRice": {
+    "heading": "RIZ GARNI",
+    "items": {
+      "chicken": "Poulet",
+      "chickenDesc": "RIZ, POULET PERI, OIGNON ROUGE, POIVRONS ROUGES, MAÏS DOUX, LAITUE, JALAPENOS, SAUCE PERI MAISON ET SAUCE À L'AIL MAISON.",
+      "vegetarianSpecial": "Spécial Végétarien",
+      "vegetarianSpecialDesc": "RIZ, GALETTE VÉGÉTARIENNE, OIGNON ROUGE, POIVRONS ROUGES, MAÏS DOUX, LAITUE, JALAPENOS, SAUCE PERI MAISON, SAUCE À L'AIL MAISON",
+      "houseSpecial": "Spécial Maison",
+      "houseSpecialDesc": "RIZ, BŒUF HACHÉ, OIGNON ROUGE, POIVRONS, MAÏS DOUX, LAITUE, TOMATE, JALAPENOS, CORNICHONS, SAUCE PERI ET SAUCE À L'AIL MAISON"
+    },
+    "sauces": {
+      "lemonHerbs": "Citron & Herbes",
+      "lemonHerbsDesc": "Un mélange acidulé avec une touche rafraîchissante d'agrumes.",
+      "average": "MOYEN",
+      "averageDesc": "Une sauce équilibrée, légèrement épicée avec une touche de chaleur.",
+      "strong": "Fort",
+      "strongDesc": "Ardent, audacieux et rempli d'une chaleur acidulée – le rêve d'un amateur d'épices !",
+      "barbecue": "Barbecue",
+      "barbecueDesc": "Une sauce riche, fumée et légèrement sucrée avec une saveur classique de barbecue."
+    }
+  },
+  "LocationsPage": {
+    "availableLocations": "Lieux disponibles",
+    "comingSoonLocations": "Lieux à venir",
+    "ontario": "ONTARIO",
+    "alberta": "ALBERTA",
+    "britishColumbia": "COLOMBIE-BRITANNIQUE"
+  },
+  "DealsNewsletter": {
+    "headingStart": "Restez au courant de tous nos ",
+    "headingHighlight": "Grillado’s",
+    "headingEnd": " Actualités,",
+    "headingEnd2": "abonnez-vous à notre newsletter",
+    "descriptionLine1": "Soyez les premiers informés des nouvelles et événements de Grillado,",
+    "descriptionLine2": "abonnez-vous à notre newsletter et restez connectés!",
+    "firstNamePlaceholder": "Prénom*",
+    "emailPlaceholder": "Courriel*",
+    "subscribeBtn": "S'abonner",
+    "successTitle": "Merci de vous être abonné!",
+    "successDesc": "Vous recevrez bientôt nos mises à jour."
   }
 }

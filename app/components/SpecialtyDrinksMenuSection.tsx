@@ -28,7 +28,7 @@ export const SpecialtyDrinksMenuSection = () => {
   return (
     <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
       {/* Background with subtle food outline pattern */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
         style={{
           backgroundImage: "url('/images/footer-doodle.png')",
@@ -40,7 +40,7 @@ export const SpecialtyDrinksMenuSection = () => {
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-        
+
         <style>{`
           @media (min-width: 1024px) {
             .clip-slant-left-fade {
@@ -48,11 +48,11 @@ export const SpecialtyDrinksMenuSection = () => {
             }
           }
         `}</style>
-        
+
         <div className="flex flex-col lg:flex-row items-stretch justify-between gap-12 lg:gap-8 xl:gap-12">
-          
+
           {/* Left Column: Menu Items */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -92,7 +92,7 @@ export const SpecialtyDrinksMenuSection = () => {
           </motion.div>
 
           {/* Right Column: Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -101,17 +101,17 @@ export const SpecialtyDrinksMenuSection = () => {
           >
             <div className="relative w-full h-full aspect-[4/3] lg:min-h-[500px]">
               {/* Desktop Image */}
-              <Image 
+              <Image
                 src="/images/d-1.png"
                 alt="Specialty Drinks"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right scale-100 lg:scale-110 drop-shadow-2xl hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 lg:scale-100 drop-shadow-2xl hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
               {/* Mobile Image */}
-              <Image 
+              <Image
                 src="/images/mobile14.jpg"
                 alt="Specialty Drinks Mobile"
                 width={1000}

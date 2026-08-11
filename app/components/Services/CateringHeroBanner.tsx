@@ -38,7 +38,7 @@ const CateringHeroBanner = () => {
           className="mb-[30px]"
         >
           <div className="bg-red-600 rounded-lg py-3 px-6 md:px-8 inline-block shadow-lg">
-            <h1 className="text-white font-extrabold tracking-tight text-[34px] sm:text-[40px] md:text-[50px] lg:text-[60px] xl:text-[72px] leading-none">
+            <h1 className="text-white font-extrabold tracking-tight text-[28px] sm:text-[34px] md:text-[42px] lg:text-[52px] xl:text-[60px] leading-none">
               {t('heading')}
             </h1>
           </div>

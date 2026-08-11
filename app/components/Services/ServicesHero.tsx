@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function ServicesHero() {
   return (
-    <section className="relative w-full h-87.5 sm:h-100 md:h-112.5 lg:h-125 flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[85vh] min-h-150 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
       
       {/* Background Image with Cinematic Zoom and Float */}
       <motion.div 
@@ -29,45 +29,23 @@ export default function ServicesHero() {
         />
       </motion.div>
 
-      {/* Dark Overlay with subtle premium gradient */}
-      <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/50 to-black/70 z-10 pointer-events-none"></div>
+      {/* Dark Overlay with subtle gradient for depth */}
+      <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/60 to-black/80 z-10 pointer-events-none"></div>
 
-      {/* Skewed Banner Content */}
-      <div className="relative z-20 w-full w-full px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-center">
+      {/* Center Content */}
+      <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto">
         
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, y: 30 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="relative"
-        >
-          {/* Yellow skewed background container */}
-          <motion.div 
-            initial={{ opacity: 0, rotate: -10 }}
-            animate={{ opacity: 1, rotate: -2 }}
+        {/* Yellow rounded badge behind heading */}
+        <div className="relative inline-block max-w-[90vw]">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="absolute inset-0 bg-[#DAAF18] -skew-x-6 md:-skew-x-12 rounded-xl sm:rounded-2xl shadow-2xl transform origin-center z-[-1]"
-          ></motion.div>
-          
-          {/* Text Content (unskewed/unrotated visually against the container) */}
-          <motion.div 
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-            className="relative px-6 py-4 sm:px-10 sm:py-6 md:px-16 md:py-8 flex items-center justify-center"
+            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-tight py-3 px-6 rounded-xl bg-[#DAAF18] shadow-2xl relative z-10 font-['Outfit',sans-serif] uppercase leading-tight whitespace-nowrap"
           >
-            <h1 className="text-white font-extrabold font-['Outfit',sans-serif] text-center uppercase tracking-wide
-                           text- leading-tight
-                           sm:text-3xl
-                           md:text-4xl 
-                           lg:text-
-                           drop-shadow-lg"
-            >
-              We cater for your<br className="sm:hidden" /> special occasions
-            </h1>
-          </motion.div>
-
-        </motion.div>
+            We cater for your special occasions
+          </motion.h1>
+        </div>
 
       </div>
       

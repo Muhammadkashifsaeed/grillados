@@ -19,7 +19,7 @@ export const AccompagnementsMenuSection = () => {
   return (
     <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
       {/* Background with subtle food outline pattern */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
         style={{
           backgroundImage: "url('/images/footer-doodle.png')",
@@ -32,9 +32,9 @@ export const AccompagnementsMenuSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-4 xl:gap-8">
-          
+
           {/* Left Column: Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -43,7 +43,7 @@ export const AccompagnementsMenuSection = () => {
           >
             <div className="relative w-full h-full lg:min-h-[500px]">
               {/* Desktop Image */}
-              <Image 
+              <Image
                 src="/images/Frities.png"
                 alt="Frites Accompagnements"
                 width={1000}
@@ -53,7 +53,7 @@ export const AccompagnementsMenuSection = () => {
                 priority
               />
               {/* Mobile Image */}
-              <Image 
+              <Image
                 src="/images/mobile10.jpg"
                 alt="Frites Accompagnements Mobile"
                 width={1000}
@@ -70,7 +70,7 @@ export const AccompagnementsMenuSection = () => {
           </motion.div>
 
           {/* Right Column: Menu Items */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -107,12 +107,12 @@ export const AccompagnementsMenuSection = () => {
 
               {/* SEASONAL */}
               <div className="mt-6 md:mt-8 flex flex-col w-full">
-                 <h3 className="text-red-600 text-sm md:text-base font-bold uppercase tracking-widest mb-1.5 md:mb-2">
-                   SEASONAL
-                 </h3>
-                 <p className="text-[#fbbc04] text-xl md:text-2xl font-bold font-['Outfit',sans-serif]">
-                   Sides Large 8.99 & Sharable 12.99
-                 </p>
+                <h3 className="text-red-600 text-sm md:text-base font-bold uppercase tracking-widest mb-1.5 md:mb-2">
+                  SEASONAL
+                </h3>
+                <p className="text-[#fbbc04] text-xl md:text-2xl font-bold font-['Outfit',sans-serif]">
+                  Sides Large 8.99 & Sharable 12.99
+                </p>
               </div>
             </div>
           </motion.div>

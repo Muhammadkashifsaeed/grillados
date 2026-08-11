@@ -37,12 +37,12 @@ const SandwichesSection = () => {
             
             {/* Buttons: Match previous sections (Yellow default, Red on hover) */}
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
-              <button className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-red-600 text-zinc-900 hover:text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
+              <button className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
                 <span>{t('orderNow')}</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </button>
               
-              <button className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-red-600 text-zinc-900 hover:text-white border-transparent px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
+              <button className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white border-transparent px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
                 <Info className="w-5 h-5" />
                 <span>{t('learnMore')}</span>
               </button>

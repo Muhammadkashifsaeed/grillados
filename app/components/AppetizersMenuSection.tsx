@@ -23,7 +23,7 @@ export const AppetizersMenuSection = () => {
         Background with subtle food outline pattern. 
         Update the URL if you have a specific pattern image.
       */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
         style={{
           backgroundImage: "url('/images/footer-doodle.png')",
@@ -36,9 +36,9 @@ export const AppetizersMenuSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-          
+
           {/* Left Column: Menu Items */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -81,25 +81,25 @@ export const AppetizersMenuSection = () => {
           </motion.div>
 
           {/* Right Column: Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 mx-auto lg:mt-0"
+            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 mx-auto lg:mt-0 pr-14 md:pr-0 lg:pr-8"
           >
             {/* Desktop Image */}
-            <Image 
+            <Image
               src="/images/onpen.png"
               alt="Open Appetizers"
               width={1000}
               height={750}
-              className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 lg:scale-125 hidden md:block"
+              className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 lg:scale-110 hidden md:block"
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />
             {/* Mobile Image */}
-            <Image 
+            <Image
               src="/images/mobile1.jpg"
               alt="Mobile Appetizers"
               width={1000}

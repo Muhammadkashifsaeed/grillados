@@ -2,8 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { MenuSection } from './Menu/MenuSection';
+import { MenuTwoColumn } from './Menu/MenuTwoColumn';
+import { MenuHeading } from './Menu/MenuHeading';
+import { MenuItem } from './Menu/MenuItem';
+import { MenuDualImage } from './Menu/MenuDualImage';
 
 const menuItems = [
   { translationKey: 'ferreroRocherCake', price: '7.99' },
@@ -16,205 +20,62 @@ export const DessertMenuSection = () => {
   const t = useTranslations('Desserts');
 
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
-      {/* Background with subtle food outline pattern */}
-      <div 
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/footer-doodle.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
+    <MenuSection id="desserts">
+      {/* ROW 1: e-1 and f-1 Images */}
+      <MenuDualImage 
+        leftImageSrc="/images/e-1.png"
+        rightImageSrc="/images/f-1.png"
+      />
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-12 lg:gap-16">
-        
-        <style>{`
-          @media (min-width: 1024px) {
-            .clip-slant-left-fade {
-              clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
-            }
-          }
-        `}</style>
-        
-        {/* ROW 1: e-1 and f-1 Images */}
-        {/* Desktop Layout */}
-        <motion.div 
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="w-full hidden md:flex flex-row items-center justify-center py-8 lg:py-12"
-        >
-          {/* e-1.png — left */}
-          <div className="relative w-[55%] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] z-10 transition-transform duration-500 hover:scale-105">
-            <Image
-              src="/images/e-1.png"
-              alt="e-1.png"
-              fill
-              className="object-contain object-bottom md:object-bottom-right scale-110 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
-              priority
-            />
-          </div>
-          {/* f-1.png — right */}
-          <div className="relative w-[55%] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] z-0 ml-[-14%] lg:ml-[-15%] transition-transform duration-500 hover:scale-105">
-            <Image
-              src="/images/f-1.png"
-              alt="f-1.png"
-              fill
-              className="object-contain object-top md:object-bottom-left scale-110 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
-            />
-          </div>
-        </motion.div>
-
-        {/* Mobile Layout */}
-        <div className="w-full flex md:hidden flex-col items-center justify-center gap-6 py-6 px-2">
-          <Image
-            src="/images/mobile15.jpg"
-            alt="mobile15.jpg"
-            width={1000}
-            height={750}
-            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-          />
-          <Image
-            src="/images/mobile16.jpg"
-            alt="mobile16.jpg"
-            width={1000}
-            height={750}
-            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-          />
-        </div>
-
-        {/* ROW 2: Dessert Menu + a-1 Image */}
-        <div className="flex flex-col lg:flex-row items-stretch justify-between gap-12 lg:gap-8 xl:gap-12">
-          {/* Left Column: Menu Items */}
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col justify-center pr-12 sm:pr-16 md:pr-0"
-          >
-            <div className="mb-8 lg:mb-10 flex flex-col items-start">
-              <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight block">
-                {t('heading')}
-              </h2>
-              {/* Divider matched to heading width using w-full max-w limit to not stretch fully */}
-              <div className="w-full max-w-37.5 md:max-w-50 lg:max-w-62.5 h-1.5 bg-[#fbbc04] mt-4"></div>
-            </div>
-
+      {/* ROW 2: Dessert Menu + a-1 Image */}
+      <MenuTwoColumn
+        leftContent={
+          <>
+            <MenuHeading title={t('heading')} />
             <div className="flex flex-col gap-3 md:gap-4 w-full">
               {menuItems.map((item, index) => (
-                <div key={index} className="flex flex-col w-full">
-                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-sm sm:text-base md:text-lg font-normal whitespace-normal">
-                      {t(`items.${item.translationKey}`)}
-                    </span>
-                    <div
-                      className="grow mb-1"
-                      style={{
-                        borderBottom: '2px dotted rgba(255,255,255,0.5)',
-                        minWidth: '4px'
-                      }}
-                    ></div>
-                    <span className="text-white text-base md:text-lg font-bold whitespace-nowrap">
-                      {item.price}
-                    </span>
-                  </div>
-                </div>
+                <MenuItem 
+                  key={index} 
+                  name={t(`items.${item.translationKey}`)} 
+                  price={item.price} 
+                  isLast={index === menuItems.length - 1} 
+                />
               ))}
             </div>
-          </motion.div>
-
-          {/* Right Column: a-1 Image */}
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 lg:mb-24"
-          >
-            <div className="relative w-full h-full lg:min-h-[500px]">
+          </>
+        }
+        rightContent={
+          <div className="relative w-full h-full lg:min-h-[500px] flex items-center justify-center lg:mb-24">
             {/* Desktop Image */}
             <Image 
-                src="/images/a-1.png"
-                alt="Dessert"
-                width={1000}
-                height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right scale-100 lg:scale-110 drop-shadow-2xl hidden md:block"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
+              src="/images/a-1.png"
+              alt="Dessert"
+              width={1000}
+              height={750}
+              className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 lg:scale-100 drop-shadow-2xl hidden md:block"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
+            />
             {/* Mobile Image */}
             <Image 
-                src="/images/mobile17.jpg"
-                alt="Dessert Mobile"
-                width={1000}
-                height={750}
-                className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
-            </div>
-          </motion.div>
-        </div>
-
-        {/* ROW 3: b-1 and c-1 Images */}
-        {/* Desktop Layout */}
-        <motion.div 
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="w-full hidden md:flex flex-row items-center justify-center py-8 lg:py-12"
-        >
-          {/* b-1.png — left */}
-          <div className="relative w-[55%] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] z-10 transition-transform duration-500 hover:scale-105">
-            <Image
-              src="/images/b-1.png"
-              alt="b-1.png"
-              fill
-              className="object-contain object-bottom md:object-bottom-right scale-110 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
+              src="/images/mobile17.jpg"
+              alt="Dessert Mobile"
+              width={1000}
+              height={750}
+              className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />
           </div>
-          {/* c-1.png — right */}
-          <div className="relative w-[55%] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] z-0 ml-[-14%] lg:ml-[-15%] transition-transform duration-500 hover:scale-105">
-            <Image
-              src="/images/c-1.png"
-              alt="c-1.png"
-              fill
-              className="object-contain object-top md:object-bottom-left scale-110 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
-            />
-          </div>
-        </motion.div>
+        }
+      />
 
-        {/* Mobile Layout */}
-        <div className="w-full flex md:hidden flex-col items-center justify-center gap-6 py-6 px-2">
-          <Image
-            src="/images/mobile18.jpg"
-            alt="mobile18.jpg"
-            width={1000}
-            height={750}
-            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-          />
-          <Image
-            src="/images/mobile19.jpg"
-            alt="mobile19.jpg"
-            width={1000}
-            height={750}
-            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-          />
-        </div>
-        
-      </div>
-    </section>
+      {/* ROW 3: b-1 and c-1 Images */}
+      <MenuDualImage 
+        leftImageSrc="/images/b-1.png"
+        rightImageSrc="/images/c-1.png"
+      />
+    </MenuSection>
   );
 };
 

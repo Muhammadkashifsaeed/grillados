@@ -42,17 +42,18 @@ const HeroSection = () => {
         {/* Yellow rounded badge behind heading */}
         <div className="mb-8 relative inline-block">
           <motion.div 
-            initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-            animate={{ opacity: 1, scale: 1.05, rotate: -2 }}
+            initial={{ opacity: 0, scale: 0.8, rotate: 2 }}
+            animate={{ opacity: 1, scale: 1, rotate: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="absolute inset-0 bg-[#DAAF18] rounded-3xl z-[-1] shadow-2xl"
+            className="absolute inset-0 bg-[#DAAF18] rounded-xl z-[-1] shadow-2xl"
+            style={{ transformOrigin: 'center' }}
           ></motion.div>
           
           <motion.h1 
             initial={{ opacity: 0, y: 30, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-zinc-900 tracking-tight py-2 px-4 sm:px-6 relative z-10 font-['Outfit',sans-serif] whitespace-nowrap"
+            className="text-lg sm:text-2xl md:text-3xl lg:text-5xl font-extrabold text-white tracking-tight py-3 px-4 sm:px-5 relative z-10 font-['Outfit',sans-serif] whitespace-nowrap"
           >
             {t('welcome')}
           </motion.h1>
@@ -75,9 +76,9 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto"
         >
           <motion.button 
-            whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(220,38,38,0.5)" }}
+            whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center justify-center gap-2 bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 hover:bg-red-700 shadow-lg"
+            className="group flex items-center justify-center gap-2 bg-[#E04B51] text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 hover:bg-[#c73f45] shadow-lg"
           >
             <span>{t('orderNow')}</span>
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />

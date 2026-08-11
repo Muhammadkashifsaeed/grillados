@@ -30,10 +30,10 @@ export default function MenuPage() {
       <SpecialtyDrinksMenuSection />
       <DessertMenuSection />
 
-      {/* Floating Vertical Order Now Button for Mobile */}
+      {/* Floating Vertical Order Now Button */}
       <Link 
         href="/order"
-        className="fixed right-0 top-1/2 -translate-y-1/2 z-50 md:hidden flex flex-col items-center justify-center bg-linear-to-b from-[#fbbc04] to-[#d69f00] text-black font-extrabold uppercase py-5 px-1.5 rounded-l-xl shadow-[-4px_0_15px_rgba(251,188,4,0.3)] transition-transform active:scale-95 border-l-2 border-y-2 border-[#fff5cc]/30"
+        className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center justify-center bg-linear-to-b from-[#fbbc04] to-[#d69f00] text-black font-extrabold uppercase py-5 px-1.5 rounded-l-xl shadow-[-4px_0_15px_rgba(251,188,4,0.3)] transition-transform hover:-translate-x-1 active:scale-95 border-l-2 border-y-2 border-[#fff5cc]/30"
       >
         <ShoppingBag className="w-5 h-5 mb-3 drop-shadow-md" />
         <span 

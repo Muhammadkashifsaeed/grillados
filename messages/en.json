@@ -345,5 +345,46 @@
     "a13": "We are currently franchising in Canada, and are open to expansion with experienced retailers in the USA and Internationally.",
     "q14": "Where Do I Buy Equipment And Supplies?",
     "a14": "All equipment and supplies are purchased from the franchisor’s trusted and approved vendors."
+  },
+  "GarnishedRice": {
+    "heading": "GARNISHED RICE",
+    "items": {
+      "chicken": "Chicken",
+      "chickenDesc": "RICE, PERI CHICKEN, RED ONION, RED PEPPERS, SWEETCORN, LETTUCE, JALAPENOS, HOMEMADE PERISAUCE AND HOMEMADE GARLIC SAUCE.",
+      "vegetarianSpecial": "Vegetarian Special",
+      "vegetarianSpecialDesc": "RICE, VEGGIE PATTY, RED ONION, RED PEPPERS, SWEETCORN, LETTUCE, JALAPENOS, HOMEMADE PERI SAUCE, HOMEMADE GARLIC SAUCE",
+      "houseSpecial": "House Special",
+      "houseSpecialDesc": "RICE, SMASHED BEEF, RED ONION, PEPPERS, SWEETCORN, LETTUCE, TOMATO, JALAPENOS, GHERKING, PERI SAUCE AND HOMEMADE GRILIC SAUCE"
+    },
+    "sauces": {
+      "lemonHerbs": "Lemon & Herbs",
+      "lemonHerbsDesc": "A tangy and tangy blend with a refreshing citrus touch.",
+      "average": "AVERAGE",
+      "averageDesc": "A balanced sauce, slightly spicy with a touch of warmth.",
+      "strong": "Strong",
+      "strongDesc": "Fiery, bold and filled with tangy warmth – a spice lover's dream!",
+      "barbecue": "Barbecue",
+      "barbecueDesc": "A rich, smoky and slightly sweet sauce with a classic barbecue flavor."
+    }
+  },
+  "LocationsPage": {
+    "availableLocations": "Available Locations",
+    "comingSoonLocations": "Upcoming Locations",
+    "ontario": "ONTARIO",
+    "alberta": "ALBERTA",
+    "britishColumbia": "BRITISH COLUMBIA"
+  },
+  "DealsNewsletter": {
+    "headingStart": "Stay on top of all our ",
+    "headingHighlight": "Grillado’s",
+    "headingEnd": " News,",
+    "headingEnd2": "Subscribe to our newsletter",
+    "descriptionLine1": "Be the first to know about Grillado’s news and events,",
+    "descriptionLine2": "subscribe to our newsletter and stay connected!",
+    "firstNamePlaceholder": "First Name*",
+    "emailPlaceholder": "Email*",
+    "subscribeBtn": "Subscribe",
+    "successTitle": "Thank you for subscribing!",
+    "successDesc": "You will receive our updates soon."
   }
 }

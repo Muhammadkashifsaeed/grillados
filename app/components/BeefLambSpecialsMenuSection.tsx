@@ -61,27 +61,27 @@ export const BeefLambSpecialsMenuSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          className="w-full hidden md:flex flex-row items-center justify-center py-8 lg:py-12"
+          className="w-full hidden md:flex flex-row items-center justify-center pt-0 pb-8 lg:pb-12 pr-12 md:pr-20 lg:pr-[80px]"
         >
           {/* Order.png — left */}
-          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-10 transition-transform duration-500 hover:scale-105">
+          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-10">
             <Image
               src="/images/Order.png"
               alt="Order.png"
               fill
-              className="object-contain object-bottom md:object-bottom-right scale-110 drop-shadow-2xl"
+              className="object-contain object-bottom md:object-bottom-right scale-115 drop-shadow-2xl"
               sizes="(max-width: 768px) 100vw, 60vw"
               priority
             />
           </div>
 
           {/* Order1.png — right */}
-          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-0 ml-[-14%] lg:ml-[-15%] transition-transform duration-500 hover:scale-105">
+          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-0 ml-[-14%] lg:ml-[-15%]">
             <Image
               src="/images/Order1.png"
               alt="Order1.png"
               fill
-              className="object-contain object-top md:object-bottom-left scale-110 drop-shadow-2xl"
+              className="object-contain object-top md:object-bottom-left scale-115 drop-shadow-2xl"
               sizes="(max-width: 768px) 100vw, 60vw"
             />
           </div>
@@ -171,7 +171,7 @@ export const BeefLambSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 lg:mt-0"
+            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 lg:mt-0 pr-12 md:pr-16 lg:pr-[80px]"
           >
             {/* Desktop Image */}
             <Image
@@ -194,6 +194,38 @@ export const BeefLambSpecialsMenuSection = () => {
           </motion.div>
 
         </div>
+
+        {/* ZONE 3: Centered previous1.png and previous2.png images */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          className="w-full flex flex-row items-center justify-center pb-8 lg:pb-12 pr-12 md:pr-20 lg:pr-[80px]"
+        >
+          {/* previous1.png — left */}
+          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-10">
+            <Image
+              src="/images/previous1.png"
+              alt="Previous 1"
+              fill
+              className="object-contain object-bottom md:object-bottom-right scale-115 drop-shadow-2xl"
+              sizes="(max-width: 768px) 100vw, 60vw"
+            />
+          </div>
+
+          {/* previous2.png — right */}
+          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-0 ml-[-14%] lg:ml-[-15%]">
+            <Image
+              src="/images/previous2.png"
+              alt="Previous 2"
+              fill
+              className="object-contain object-top md:object-bottom-left scale-115 drop-shadow-2xl"
+              sizes="(max-width: 768px) 100vw, 60vw"
+            />
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

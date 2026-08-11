@@ -3,8 +3,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function NewsletterSection() {
+  const t = useTranslations('DealsNewsletter');
   const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -63,8 +65,8 @@ export default function NewsletterSection() {
           viewport={{ once: true }}
           className="text-2xl md:text-3xl lg:text- font-extrabold text-gray-900 font-['Outfit',sans-serif] text-center leading-[] tracking-tight mb-6 max-w-2xl"
         >
-          Restez au courant de tous nos <span className="text-[#DAAF18]">Grillado’s</span> Actualités,<br className="hidden md:block" />
-          abonnez-vous à notre newsletter
+          {t('headingStart')} <span className="text-[#DAAF18]">{t('headingHighlight')}</span>{t('headingEnd')}<br className="hidden md:block" />
+          {t('headingEnd2')}
         </motion.h2>
 
         {/* Description */}
@@ -75,8 +77,8 @@ export default function NewsletterSection() {
           viewport={{ once: true }}
           className="text-gray-600 text-xs md:text-sm font-medium text-center leading-relaxed mb-10 max-w-xl"
         >
-          Soyez les premiers informés des nouvelles et événements de Grillado,<br className="hidden md:block" />
-          abonnez-vous à notre newsletter et restez connectés!
+          {t('descriptionLine1')}<br className="hidden md:block" />
+          {t('descriptionLine2')}
         </motion.p>
 
         {/* Form Container */}
@@ -92,8 +94,8 @@ export default function NewsletterSection() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
                 <Mail className="w-8 h-8 text-green-600" />
               </div>
-              <p className="text-xl font-bold text-green-800 font-['Outfit']">Thank you for subscribing!</p>
-              <p className="text-green-600 mt-2">You will receive our updates soon.</p>
+              <p className="text-xl font-bold text-green-800 font-['Outfit']">{t('successTitle')}</p>
+              <p className="text-green-600 mt-2">{t('successDesc')}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5 w-full">
@@ -102,7 +104,7 @@ export default function NewsletterSection() {
               <div className="w-full">
                 <input
                   type="text"
-                  placeholder="First Name*"
+                  placeholder={t('firstNamePlaceholder')}
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                   className="w-full h-12 md:h-12.5 px-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DAAF18] focus:border-transparent transition-all"
@@ -116,7 +118,7 @@ export default function NewsletterSection() {
                 </div>
                 <input
                   type="email"
-                  placeholder="Email*"
+                  placeholder={t('emailPlaceholder')}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full h-12 md:h-12.5 pl-14 pr-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DAAF18] focus:border-transparent transition-all"
@@ -131,9 +133,9 @@ export default function NewsletterSection() {
               {/* Subscribe Button */}
               <button
                 type="submit"
-                className="w-full h-12 md:h-12.5 mt-2 bg-[#d72323] hover:bg-[#b01c1c] active:scale-[0.98] text-white font-bold text-xs md:text-smbase uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+                className="w-full h-12 md:h-12.5 mt-2 bg-[#E02A2B] hover:bg-[#c82222] active:scale-[0.98] text-white font-bold text-xs md:text-smbase uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300"
               >
-                Subscribe
+                {t('subscribeBtn')}
               </button>
 
             </form>

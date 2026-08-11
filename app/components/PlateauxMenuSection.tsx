@@ -49,56 +49,6 @@ export const PlateauxMenuSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col lg:flex-col gap-6 md:gap-10 lg:gap-14">
 
-        {/* ZONE 1: Both images in ONE container — fade UP */}
-        {/* Desktop Layout */}
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          className="w-full hidden md:flex flex-row items-center justify-center py-8 lg:py-12 order-2 lg:order-1"
-        >
-          {/* previous1.png — left */}
-          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-10 transition-transform duration-500 hover:scale-105">
-            <Image
-              src="/images/previous1.png"
-              alt="Grillado Plateaux - Dish 1"
-              fill
-              className="object-contain object-bottom md:object-bottom-right scale-110 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
-              priority
-            />
-          </div>
-
-          {/* previous2.png — right */}
-          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-0 ml-[-14%] lg:ml-[-15%] transition-transform duration-500 hover:scale-105">
-            <Image
-              src="/images/previous2.png"
-              alt="Grillado Plateaux - Dish 2"
-              fill
-              className="object-contain object-top md:object-bottom-left scale-110 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
-            />
-          </div>
-        </motion.div>
-
-        {/* Mobile Layout */}
-        <div className="w-full flex md:hidden flex-col items-center justify-center gap-6 py-6 px-2 order-2">
-          <Image
-            src="/images/mobile8.jpg"
-            alt="Grillado Plateaux - Dish 1 Mobile"
-            width={1000}
-            height={750}
-            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-          />
-          <Image
-            src="/images/mobile9.jpg"
-            alt="Grillado Plateaux - Dish 2 Mobile"
-            width={1000}
-            height={750}
-            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-          />
-        </div>
 
         {/* ZONE 2: Bottom row */}
         <div className="contents lg:flex lg:flex-row items-start justify-between gap-8 lg:gap-12">
@@ -166,11 +116,11 @@ export const PlateauxMenuSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 mx-auto lg:mt-0 order-1 lg:order-none lg:mb-0"
+            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 mx-auto lg:mt-0 order-1 lg:order-none lg:mb-0 pr-12 md:pr-16 lg:pr-[80px]"
           >
             {/* Desktop Image */}
             <Image
-              src="/images/component.png"
+              src="/images/10-871x1024-1.png"
               alt="Grillado Plateaux Featured"
               width={1000}
               height={750}

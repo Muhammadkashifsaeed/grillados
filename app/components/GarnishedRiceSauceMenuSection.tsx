@@ -3,69 +3,82 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-
-const sauceLevels = [
-  {
-    name: 'Lemon & Herbs',
-    description: 'A tangy and tangy blend with a refreshing citrus touch.',
-    image: '/images/Fiery.png',
-    colorClass: 'text-green-500',
-  },
-  {
-    name: 'AVERAGE',
-    description: 'A balanced sauce, slightly spicy with a touch of warmth.',
-    image: '/images/Fiery1.png',
-    colorClass: 'text-[#fbbc04]',
-  },
-  {
-    name: 'Strong',
-    description: "Fiery, bold and filled with tangy warmth – a spice lover's dream!",
-    image: '/images/Fiery2.png',
-    colorClass: 'text-red-500',
-  },
-  {
-    name: 'Barbecue',
-    description: 'A rich, smoky and slightly sweet sauce with a classic barbecue flavor.',
-    image: '/images/Fiery3.png',
-    colorClass: 'text-[#b91c1c]', // Dark Red
-  },
-];
+import { useTranslations } from 'next-intl';
+import { MenuSection } from './Menu/MenuSection';
+import { MenuTwoColumn } from './Menu/MenuTwoColumn';
+import { MenuHeading } from './Menu/MenuHeading';
+import { MenuItem } from './Menu/MenuItem';
 
 export const GarnishedRiceSauceMenuSection = () => {
-  return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
-      {/* Background with subtle food outline pattern */}
-      <div 
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/footer-doodle.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
+  const t = useTranslations('GarnishedRice');
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-        
-        <div className="flex flex-col lg:flex-row items-stretch justify-between gap-12 lg:gap-4 xl:gap-8">
-          
-          {/* Left Column: Menu Items */}
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col justify-center pr-12 sm:pr-16 md:pr-0 lg:pr-6 xl:pr-10"
-          >
-            <div className="mb-8 lg:mb-10">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-snug">
-                GARNISHED RICE
-              </h2>
-              <div className="w-full h-1.5 bg-[#fbbc04] mt-4"></div>
+  const loadedRiceItems = [
+    {
+      name: t('items.chicken'),
+      price: '19.99',
+      description: t('items.chickenDesc')
+    },
+    {
+      name: t('items.vegetarianSpecial'),
+      price: '18.99',
+      description: t('items.vegetarianSpecialDesc')
+    },
+    {
+      name: t('items.houseSpecial'),
+      price: '21.99',
+      description: t('items.houseSpecialDesc')
+    }
+  ];
+
+  const sauceLevels = [
+    {
+      name: t('sauces.lemonHerbs'),
+      description: t('sauces.lemonHerbsDesc'),
+      image: '/images/Fiery.png',
+      colorClass: 'text-green-500',
+    },
+    {
+      name: t('sauces.average'),
+      description: t('sauces.averageDesc'),
+      image: '/images/Fiery1.png',
+      colorClass: 'text-[#fbbc04]',
+    },
+    {
+      name: t('sauces.strong'),
+      description: t('sauces.strongDesc'),
+      image: '/images/Fiery2.png',
+      colorClass: 'text-red-500',
+    },
+    {
+      name: t('sauces.barbecue'),
+      description: t('sauces.barbecueDesc'),
+      image: '/images/Fiery3.png',
+      colorClass: 'text-[#b91c1c]',
+    },
+  ];
+
+  return (
+    <MenuSection id="garnished-rice">
+      <MenuTwoColumn
+        leftContent={
+          <>
+            <MenuHeading title={t('heading')} />
+            
+            <div className="flex flex-col w-full mb-12">
+              <div className="flex flex-col gap-4 md:gap-5 w-full">
+                {loadedRiceItems.map((item, index) => (
+                  <MenuItem 
+                    key={index} 
+                    name={item.name} 
+                    price={item.price}
+                    note={item.description}
+                    isLast={index === loadedRiceItems.length - 1} 
+                  />
+                ))}
+              </div>
             </div>
 
-            <div className="mb-10 w-full">
+            <div className="mb-10 w-full pt-8 border-t border-white/10">
               <div className="flex flex-col gap-10 md:gap-12 lg:gap-14 w-full">
                 {sauceLevels.map((item, index) => (
                   <motion.div 
@@ -96,25 +109,19 @@ export const GarnishedRiceSauceMenuSection = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
-
-          {/* Right Column: Images */}
-          <motion.div 
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col items-end justify-start gap-8"
-          >
+          </>
+        }
+        rightContent={
+          <div className="w-full flex flex-col items-center justify-start gap-8">
             {/* Top Large Peri Image */}
-            <div className="relative w-full py-8 lg:py-12">
+            <div className="relative w-full py-4 lg:py-8 flex justify-center">
               {/* Desktop Image */}
               <Image 
                 src="/images/zasty.png"
                 alt="Zesty Food"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right drop-shadow-2xl scale-100 lg:scale-110 hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 lg:scale-100 drop-shadow-2xl hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
@@ -131,21 +138,20 @@ export const GarnishedRiceSauceMenuSection = () => {
             </div>
 
             {/* Bottom Saucess Image */}
-            <div className="relative w-full py-8 lg:py-12">
-            <Image 
+            <div className="relative w-full py-4 lg:py-8 flex justify-center">
+              <Image 
                 src="/images/saucess.png"
                 alt="Saucess"
                 width={1000}
-              height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center lg:object-right drop-shadow-2xl scale-100 lg:scale-110"
+                height={750}
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 lg:scale-100 drop-shadow-2xl"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-          </motion.div>
-
-        </div>
-      </div>
-    </section>
+          </div>
+        }
+      />
+    </MenuSection>
   );
 };
 

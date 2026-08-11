@@ -2,38 +2,41 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const comingSoonData = [
-  {
-    province: 'ONTARIO',
-    locations: [
-      'Oshawa',
-      'Ottawa',
-      'Niagara Falls',
-      'Markham',
-      'Vaughan',
-      'Toronto Downtown'
-    ]
-  },
-  {
-    province: 'ALBERTA',
-    locations: [
-      'Edmonton',
-      'Calgary'
-    ]
-  },
-  {
-    province: 'COLOMBIE-BRITANNIQUE',
-    locations: [
-      'Vancouver',
-      'Surrey',
-      'Richmond',
-      'Victoria'
-    ]
-  }
-];
+import { useTranslations } from 'next-intl';
 
 export default function ComingSoonLocations() {
+  const t = useTranslations('LocationsPage');
+
+  const comingSoonData = [
+    {
+      province: t('ontario'),
+      locations: [
+        'Oshawa',
+        'Ottawa',
+        'Niagara Falls',
+        'Markham',
+        'Vaughan',
+        'Toronto Downtown'
+      ]
+    },
+    {
+      province: t('alberta'),
+      locations: [
+        'Edmonton',
+        'Calgary'
+      ]
+    },
+    {
+      province: t('britishColumbia'),
+      locations: [
+        'Vancouver',
+        'Surrey',
+        'Richmond',
+        'Victoria'
+      ]
+    }
+  ];
+
   return (
     <section className="relative w-full py-10 md:py-16 z-10">
       <div className="max-w-7xl mx-auto px-6">
@@ -47,7 +50,7 @@ export default function ComingSoonLocations() {
           className="flex flex-col items-center mb-16 md:mb-24"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide text-center">
-            Lieux à venir
+            {t('comingSoonLocations')}
           </h2>
           <div className="w-25 h-[3px] bg-orange-500 mt-5"></div>
         </motion.div>
