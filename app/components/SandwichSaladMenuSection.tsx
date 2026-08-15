@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export const SandwichSaladMenuSection = () => {
   return (
-    <section className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
+    <section id="sandwiches" className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
       {/* Background with subtle food outline pattern */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"

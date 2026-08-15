@@ -19,7 +19,7 @@ const menuItems = [
 
 export const AppetizersMenuSection = () => {
   return (
-    <section className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
+    <section id="appetizers" className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
       {/* 
         Background with subtle food outline pattern. 
         Update the URL if you have a specific pattern image.
