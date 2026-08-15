@@ -17,7 +17,7 @@ const menuItems = [
 
 export const AccompagnementsMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] ">
+    <section className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
       {/* Background with subtle food outline pattern */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -39,7 +39,7 @@ export const AccompagnementsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-center justify-start relative lg:min-h-[500px] pt-8 pb-0 lg:py-12 md:mb-16 lg:mb-0"
+            className="w-full lg:w-1/2 flex items-center justify-center relative lg:min-h-[500px] pt-8 lg:pt-0 md:mb-16 lg:mb-0""
           >
             <div className="relative w-full h-full lg:min-h-[500px]">
               {/* Desktop Image */}
@@ -58,7 +58,7 @@ export const AccompagnementsMenuSection = () => {
                 alt="Frites Accompagnements Mobile"
                 width={1000}
                 height={750}
-                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden mt-6"
+                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-8 mb-4"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
@@ -73,10 +73,10 @@ export const AccompagnementsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col justify-center pr-12 sm:pr-16 md:pr-0 lg:pl-6 xl:pl-10"
+            className="w-full lg:w-1/2 flex flex-col justify-center"
           >
             <div className="mb-8 lg:mb-10">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
                 ACCOMPAGNEMENTS
               </h2>
               <div className="w-full h-1.5 bg-[#fbbc04] mt-3"></div>
@@ -86,7 +86,7 @@ export const AccompagnementsMenuSection = () => {
               {menuItems.map((item, index) => (
                 <div key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-xs sm:text-sm md:text-base font-normal whitespace-normal shrink">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-normal">
                       {item.name}
                     </span>
                     <div
@@ -96,7 +96,7 @@ export const AccompagnementsMenuSection = () => {
                         minWidth: '4px'
                       }}
                     ></div>
-                    <span className="text-white text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">
                       {item.price}
                     </span>
                   </div>

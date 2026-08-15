@@ -31,7 +31,7 @@ export const DessertMenuSection = () => {
 
       <div className="flex flex-col gap-2 md:gap-12 w-full">
         {/* Custom Mobile Diagonal Split for mobile15 & 16 */}
-        <div className="w-[95%] max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-4 mb-0">
+        <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-8 mb-4">
           {/* Left Image */}
           <div 
             className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
@@ -96,7 +96,7 @@ export const DessertMenuSection = () => {
                 alt="Dessert Mobile"
                 width={1000}
                 height={750}
-                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden mt-6"
+                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-8 mb-4"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
@@ -114,7 +114,7 @@ export const DessertMenuSection = () => {
       </div>
 
       {/* Custom Mobile Diagonal Split for mobile18 & 19 */}
-      <div className="w-[95%] max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-8 mb-4">
+      <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-8 mb-4">
         {/* Left Image */}
         <div 
           className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"

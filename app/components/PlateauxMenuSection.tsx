@@ -34,7 +34,7 @@ const menuItems = [
 
 export const PlateauxMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] ">
+    <section className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -59,7 +59,7 @@ export const PlateauxMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex flex-col order-3 lg:order-none mt-0"
+            className="w-full lg:w-1/2 flex flex-col justify-center order-3 lg:order-none mt-0""
           >
             <div className="mb-10">
               <h2
@@ -76,7 +76,7 @@ export const PlateauxMenuSection = () => {
                 <div key={index} className="flex flex-col w-full">
                   {/* Name + dotted leader + price */}
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-xs sm:text-sm md:text-base font-normal whitespace-normal shrink">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-normal">
                       {item.name}
                     </span>
                     <div
@@ -86,7 +86,7 @@ export const PlateauxMenuSection = () => {
                         minWidth: '4px',
                       }}
                     />
-                    <span className="text-white text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">
                       {item.price}
                     </span>
                   </div>

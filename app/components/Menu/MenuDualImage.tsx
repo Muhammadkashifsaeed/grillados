@@ -22,7 +22,7 @@ export const MenuDualImage = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`w-full flex flex-col md:flex-row items-center justify-center pr-12 md:pr-16 lg:pr-[80px] ${(mobileLeftImageSrc || mobileRightImageSrc) ? 'py-4 lg:py-8' : 'py-0 lg:py-8'}`}
+        className={`w-full flex flex-col md:flex-row items-center justify-center ${(mobileLeftImageSrc || mobileRightImageSrc) ? 'py-4 lg:py-8' : 'py-0 lg:py-8'}`}
       >
         {/* Desktop Left Image */}
         <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-10 hidden md:block">

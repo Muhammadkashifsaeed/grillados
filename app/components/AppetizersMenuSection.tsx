@@ -19,7 +19,7 @@ const menuItems = [
 
 export const AppetizersMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] ">
+    <section className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
       {/* 
         Background with subtle food outline pattern. 
         Update the URL if you have a specific pattern image.
@@ -36,7 +36,7 @@ export const AppetizersMenuSection = () => {
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 w-full">
 
           {/* Left Column: Menu Items */}
           <motion.div
@@ -44,10 +44,10 @@ export const AppetizersMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col pr-12 sm:pr-16 md:pr-0"
+            className="w-full lg:w-1/2 flex flex-col justify-center"
           >
             <div className="mb-10">
-              <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
                 APPETIZERS
               </h2>
               <div className="w-full h-1.5 bg-[#fbbc04] mt-3"></div>
@@ -57,7 +57,7 @@ export const AppetizersMenuSection = () => {
               {menuItems.map((item, index) => (
                 <div key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-xs sm:text-sm md:text-base font-normal whitespace-normal shrink">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-normal">
                       {item.name}
                     </span>
                     <div
@@ -67,7 +67,7 @@ export const AppetizersMenuSection = () => {
                         minWidth: '4px'
                       }}
                     ></div>
-                    <span className="text-white text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">
                       {item.price}
                     </span>
                   </div>
@@ -100,7 +100,7 @@ export const AppetizersMenuSection = () => {
               priority
             />
             {/* Mobile Layout */}
-            <div className="w-[95%] max-w-[500px] mx-auto flex md:hidden flex-col gap-6 mt-8 mb-0">
+            <div className="w-full max-w-[500px] mx-auto flex md:hidden flex-col gap-4 mt-8 mb-4">
               {/* Top Image: Mobile 1 */}
               <div className="relative w-full aspect-[4/3] drop-shadow-2xl">
                 <Image

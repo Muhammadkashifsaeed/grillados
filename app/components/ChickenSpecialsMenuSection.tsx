@@ -56,7 +56,7 @@ const menuItems = [
 
 export const ChickenSpecialsMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] overflow-x-hidden">
+    <section className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -83,7 +83,7 @@ export const ChickenSpecialsMenuSection = () => {
 
 
         {/* ZONE 2: Bottom row — Left: menu content | Right: set.png */}
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 w-full">
 
           {/* Left: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
@@ -91,10 +91,10 @@ export const ChickenSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex flex-col pr-12 sm:pr-16 md:pr-0"
+            className="w-full lg:w-1/2 flex flex-col justify-center"
           >
             <div className="mb-10">
-              <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] uppercase tracking-wide" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
                 GRILLADO&apos;S<br />CHICKEN SPECIALS
               </h2>
               <div className="w-full h-1.5 bg-[#fbbc04] mt-3" />
@@ -104,14 +104,14 @@ export const ChickenSpecialsMenuSection = () => {
               {menuItems.map((item, index) => (
                 <div key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-xs sm:text-sm md:text-base font-normal whitespace-normal shrink">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-normal">
                       {item.name}
                     </span>
                     <div
                       className="grow mb-1"
                       style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}
                     />
-                    <span className="text-white text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">
                       {item.price}
                     </span>
                   </div>
@@ -159,7 +159,7 @@ export const ChickenSpecialsMenuSection = () => {
               alt="Grillado Chicken Set Mobile"
               width={1000}
               height={750}
-              className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden mt-6"
+              className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-8 mb-4"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </motion.div>

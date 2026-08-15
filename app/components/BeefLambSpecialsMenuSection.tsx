@@ -40,7 +40,7 @@ const menuItems = [
 
 export const BeefLambSpecialsMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] overflow-x-hidden">
+    <section className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -63,7 +63,7 @@ export const BeefLambSpecialsMenuSection = () => {
         </div>
 
         {/* Custom Mobile Diagonal Split for mobile5 & 6 */}
-        <div className="w-[95%] max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-4 mb-2">
+        <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-8 mb-4">
           {/* Left Image */}
           <div 
             className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
@@ -96,7 +96,7 @@ export const BeefLambSpecialsMenuSection = () => {
 
 
         {/* ZONE 2: Bottom row */}
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 w-full">
 
           {/* LEFT: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
@@ -104,7 +104,7 @@ export const BeefLambSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex flex-col pr-12 sm:pr-16 md:pr-0"
+            className="w-full lg:w-1/2 flex flex-col justify-center"
           >
             <div className="mb-10">
               <h2
@@ -121,7 +121,7 @@ export const BeefLambSpecialsMenuSection = () => {
                 <div key={index} className="flex flex-col w-full">
                   {/* Name + dotted leader + price */}
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-xs sm:text-sm md:text-base font-normal whitespace-normal shrink">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-normal">
                       {item.name}
                     </span>
                     <div
@@ -131,7 +131,7 @@ export const BeefLambSpecialsMenuSection = () => {
                         minWidth: '4px',
                       }}
                     />
-                    <span className="text-white text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">
                       {item.price}
                     </span>
                   </div>
@@ -173,7 +173,7 @@ export const BeefLambSpecialsMenuSection = () => {
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             {/* Mobile Layout for 7, 8, 9 */}
-            <div className="w-[95%] max-w-[500px] mx-auto flex md:hidden flex-col gap-6 mt-8 mb-0">
+            <div className="w-full max-w-[500px] mx-auto flex md:hidden flex-col gap-4 mt-8 mb-4">
               {/* Top Image: Mobile 7 */}
               <div className="w-full drop-shadow-2xl">
                 <Image
