@@ -33,9 +33,9 @@ const MenuVoucherCTA = () => {
           {/* Right Action Area */}
           <div className="w-full xl:w-[40%] flex flex-row items-center justify-center xl:justify-end relative z-10 mt-6 xl:mt-0 gap-3 sm:gap-6">
              
-             <button className="w-full max-w-[240px] sm:max-w-[280px] xl:max-w-[320px] bg-black text-white hover:bg-red-600 font-extrabold text-sm sm:text-base md:text-lg py-3 sm:py-4 px-4 sm:px-6 rounded-xl shadow-xl hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(220,38,38,0.4)] transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 active:scale-95 group border-2 border-black/10 shrink-0">
-                <span className="text-xl sm:text-2xl group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300">🎟</span>
-                <span className="tracking-wide uppercase text-center leading-tight">Get your Voucher Now</span>
+             <button className="w-auto flex-1 max-w-[280px] sm:max-w-[320px] xl:max-w-[360px] bg-black text-white hover:bg-red-600 font-extrabold text-xs sm:text-sm md:text-base py-3 sm:py-4 px-3 sm:px-6 rounded-xl shadow-xl hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(220,38,38,0.4)] transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 active:scale-95 group border-2 border-black/10 shrink-0">
+                <span className="text-lg sm:text-2xl group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300">🎟</span>
+                <span className="tracking-wide uppercase text-center whitespace-nowrap">Get your Voucher Now</span>
              </button>
 
              {/* Decorative Arrow (Outside Button, Pointing Left, Straight) */}
