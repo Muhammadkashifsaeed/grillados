@@ -44,11 +44,9 @@ export default function WeddingCateringSection() {
           </p>
 
           {/* Button */}
-          <Link href={`/${locale}/contact`}>
-            <button className="px-10 py-3 sm:py-4 bg-[#fbbc04] hover:bg-[#d72323] active:scale-95 text-black hover:text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide">
-              Contact us
-            </button>
-          </Link>
+          <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="px-10 py-3 sm:py-4 bg-[#fbbc04] hover:bg-[#d72323] active:scale-95 text-black hover:text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide">
+            Contact us
+          </button>
         </motion.div>
 
         {/* Right Column: Image */}

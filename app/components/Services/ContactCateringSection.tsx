@@ -63,7 +63,7 @@ export default function ContactCateringSection() {
   const sectionTitleClass = "text-2xl font-bold text-white font-['Outfit',sans-serif] mb-6 tracking-wide border-b border-gray-600/50 pb-2";
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-start">
+    <section id="contact" className="relative w-full min-h-screen flex flex-col items-center justify-start">
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
