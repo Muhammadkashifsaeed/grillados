@@ -143,11 +143,11 @@ export const AppetizersMenuSection = () => {
                   />
                 </div>
               </div>
-            </div>
-            
-            {/* CTA Voucher placed directly below mobile2 & mobile3 images in mobile view */}
-            <div className="block md:hidden w-full mt-4">
-              <MenuVoucherCTA />
+              
+              {/* CTA Voucher placed directly below mobile2 & mobile3 images in mobile view */}
+              <div className="w-full mt-2">
+                <MenuVoucherCTA />
+              </div>
             </div>
           </motion.div>
 
