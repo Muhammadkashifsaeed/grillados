@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import MenuVoucherCTA from './MenuVoucherCTA';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -119,7 +120,8 @@ export const ComboDePouletMenuSection = () => {
           </motion.div>
 
         </div>
-      </div>
+                <MenuVoucherCTA />
+</div>
     </section>
   );
 };

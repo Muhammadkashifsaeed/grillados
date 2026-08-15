@@ -1,12 +1,14 @@
 'use client';
 
 import React from 'react';
+import VoucherModal from './VoucherModal';
 import Image from 'next/image';
 import { Flame, ArrowRight, Info } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 
 const PlattersSection = () => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
   const t = useTranslations('Platters');
 
   return (
@@ -48,21 +50,22 @@ const PlattersSection = () => {
             
             {/* Buttons: Match previous sections (Yellow default, Red on hover) */}
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
-              <Link href="/order" className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
+              <button onClick={() => setIsModalOpen(true)} className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
                 <span>{t('orderNow')}</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </button>
               
-              <Link href="/menu#platters" className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white border-transparent px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
+              <button onClick={() => setIsModalOpen(true)} className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white border-transparent px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
                 <Info className="w-5 h-5" />
                 <span>Learn More</span>
-              </Link>
+              </button>
             </div>
             
           </div>
           
         </div>
-      </div>
+            <VoucherModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+</div>
     </section>
   );
 };
