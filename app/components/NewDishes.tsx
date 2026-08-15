@@ -1,14 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import VoucherModal from './VoucherModal';
 import Image from 'next/image';
 import { Flame, ArrowRight, Info, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 
 const NewDishes = () => {
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
   const t = useTranslations('NewDishes');
   const [currentVideo, setCurrentVideo] = useState(0);
 
@@ -98,22 +96,21 @@ const NewDishes = () => {
             
             {/* Buttons: Yellow default, Red on hover */}
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
-              <button onClick={() => setIsModalOpen(true)} className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
+              <Link href="/order" className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
                 <span>{t('orderNow')}</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </button>
+              </Link>
               
-              <button onClick={() => setIsModalOpen(true)} className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white border-transparent px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
+              <Link href="/menu" className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white border-transparent px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
                 <Info className="w-5 h-5" />
                 <span>{t('learnMore')}</span>
-              </button>
+              </Link>
             </div>
             
           </div>
           
         </div>
-            <VoucherModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-</div>
+      </div>
     </section>
   );
 };

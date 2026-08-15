@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import MenuVoucherCTA from './MenuVoucherCTA';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { MenuSection } from './Menu/MenuSection';
