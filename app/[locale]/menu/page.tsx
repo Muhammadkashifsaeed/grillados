@@ -47,6 +47,7 @@ export default function MenuPage() {
       <DessertMenuSection />
 
 
+
       </div>
     </main>
   );

@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import MenuVoucherCTA from './MenuVoucherCTA';
 
 const menuItems = [
   { name: 'Portuguese Bun', price: '3.99', note: 'SERVED WITH BUTTER' },
@@ -142,6 +143,11 @@ export const AppetizersMenuSection = () => {
                   />
                 </div>
               </div>
+            </div>
+            
+            {/* CTA Voucher placed directly below mobile2 & mobile3 images in mobile view */}
+            <div className="block md:hidden w-full mt-4">
+              <MenuVoucherCTA />
             </div>
           </motion.div>
 

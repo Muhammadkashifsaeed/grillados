@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import { Link } from '@/i18n/routing';
 
 const CateringHeroBanner = () => {
   const t = useTranslations('CateringHero');
@@ -60,12 +61,13 @@ const CateringHeroBanner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         >
-          <button 
+          <Link 
+            href="/order"
             aria-label={t('orderNow')}
-            className="bg-[#F4C430] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-md h-[52px] px-[32px] flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer"
+            className="bg-[#F4C430] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-md h-[52px] px-[32px] flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer inline-flex"
           >
             {t('orderNow')}
-          </button>
+          </Link>
         </motion.div>
 
       </div>

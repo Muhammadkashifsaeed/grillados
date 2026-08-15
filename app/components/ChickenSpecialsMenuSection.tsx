@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { MenuDualImage } from './Menu/MenuDualImage';
+import MenuVoucherCTA from './MenuVoucherCTA';
 
 const menuItems = [
   {
@@ -75,8 +76,9 @@ export const ChickenSpecialsMenuSection = () => {
             leftImageSrc="/images/lockfiles1.png"
             rightImageSrc="/images/lockfiles2.png"
           />
+          {/* CTA Voucher placed directly below lockfiles1 & lockfiles2 images in desktop view */}
+          <MenuVoucherCTA />
         </div>
-
 
 
 

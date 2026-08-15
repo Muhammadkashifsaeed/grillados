@@ -5,9 +5,11 @@ import { ArrowRight, Menu, ChevronDown } from 'lucide-react';
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import { useRouter } from '@/i18n/routing';
 
 const HeroSection = () => {
   const t = useTranslations('Hero');
+  const router = useRouter();
 
   return (
     <section className="relative w-full h-[85vh] min-h-150 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
@@ -78,6 +80,7 @@ const HeroSection = () => {
           <motion.button 
             whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => router.push('/order')}
             className="group flex items-center justify-center gap-2 bg-[#E04B51] text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 hover:bg-[#c73f45] shadow-lg"
           >
             <span>{t('orderNow')}</span>
@@ -87,6 +90,7 @@ const HeroSection = () => {
           <motion.button 
             whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(255,255,255,0.2)" }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => router.push('/order')}
             className="group flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-lg"
           >
             <Menu className="w-6 h-6" />

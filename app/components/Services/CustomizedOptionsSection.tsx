@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import { Link } from '@/i18n/routing';
 
 const CustomizedOptionsSection = () => {
   const t = useTranslations('CustomizedOptions');
@@ -81,9 +82,9 @@ const CustomizedOptionsSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             {/* Button 1 */}
-            <button className="h-[52px] px-8 bg-[#fbbc04] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md w-full md:w-auto">
+            <Link href="/order" className="h-[52px] px-8 bg-[#fbbc04] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md w-full md:w-auto inline-flex items-center justify-center">
               {t('orderNow')}
-            </button>
+            </Link>
             
             {/* Button 2 */}
             <button className="h-[52px] px-8 bg-[#fbbc04] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md w-full md:w-auto">

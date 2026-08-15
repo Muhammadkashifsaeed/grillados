@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import { Link } from '@/i18n/routing';
 
 export interface CateringOfferProps {
   headingKey: string;
@@ -62,12 +63,13 @@ const CateringOfferCard: React.FC<CateringOfferProps> = ({
         </p>
 
         {/* Button */}
-        <button 
+        <Link 
+          href="/order"
           aria-label={t('orderNow')}
-          className="bg-[#fbbc04] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-lg px-8 py-4 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-md flex items-center justify-center uppercase tracking-wider text-sm md:text-base cursor-pointer"
+          className="bg-[#fbbc04] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-lg px-8 py-4 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-md flex items-center justify-center uppercase tracking-wider text-sm md:text-base cursor-pointer inline-flex max-w-[fit-content]"
         >
           {t('orderNow')}
-        </button>
+        </Link>
       </div>
 
       {/* Right Image - 45% Width on Desktop */}

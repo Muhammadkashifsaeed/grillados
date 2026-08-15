@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Link } from "@/i18n/routing";
+import { Link, useRouter } from "@/i18n/routing";
 
 const deals = [
   {
@@ -46,6 +46,7 @@ const deals = [
 ];
 
 export default function CrazyLunchDeals() {
+  const router = useRouter();
   return (
     <section className="relative w-full bg-gray-50 py-10 md:py-16 z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,12 +101,12 @@ export default function CrazyLunchDeals() {
                     <p className="text-gray-600 text-sm md:text-base font-medium mb-4 leading-relaxed">
                       {deal.description}
                     </p>
-                    <Link
-                      href="/contact-us"
-                      className="inline-block bg-[#fbbc04] hover:bg-[#e5aa03] text-black font-bold text-sm md:text-base uppercase tracking-wider px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
+                    <button
+                      onClick={() => router.push('/contact-us')}
+                      className="inline-block bg-[#fbbc04] hover:bg-[#e5aa03] text-black font-bold text-sm md:text-base uppercase tracking-wider px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
                     >
                       Contact Us
-                    </Link>
+                    </button>
                   </div>
                 ) : (
                   <div className="mt-2 flex items-baseline">
