@@ -56,7 +56,7 @@ const menuItems = [
 
 export const ChickenSpecialsMenuSection = () => {
   return (
-    <section className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
+    <section id="chicken-specials" className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
