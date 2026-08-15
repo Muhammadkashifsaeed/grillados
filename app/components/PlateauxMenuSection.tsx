@@ -59,7 +59,7 @@ export const PlateauxMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex flex-col justify-center order-3 lg:order-none mt-0""
+            className="w-full lg:w-1/2 flex flex-col justify-center order-3 lg:order-none mt-0"
           >
             <div className="mb-10">
               <h2

@@ -39,7 +39,7 @@ export const AccompagnementsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-center justify-center relative lg:min-h-[500px] pt-8 lg:pt-0 md:mb-16 lg:mb-0""
+            className="w-full lg:w-1/2 flex items-center justify-center relative lg:min-h-[500px] pt-8 lg:pt-0 md:mb-16 lg:mb-0"
           >
             <div className="relative w-full h-full lg:min-h-[500px]">
               {/* Desktop Image */}
