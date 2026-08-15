@@ -99,26 +99,29 @@ export const Footer = () => {
               </div>
             </div>
 
-            {/* Column 2 */}
-            <div className="flex flex-col gap-6">
-              <h3 className="text-xl font-bold tracking-wider uppercase">{t('menuHeading')}</h3>
-              <ul className="flex flex-col gap-4">
-                <li><Link href="/order" className="hover:text-[#DAAF18] transition-colors duration-300">{t('orderOnline')}</Link></li>
-                <li><Link href="/franchising" className="hover:text-[#DAAF18] transition-colors duration-300">{t('franchising')}</Link></li>
-                <li><Link href="/about" className="hover:text-[#DAAF18] transition-colors duration-300">{t('aboutUs')}</Link></li>
-                <li><Link href="/contact" className="hover:text-[#DAAF18] transition-colors duration-300">{t('contact')}</Link></li>
-              </ul>
-            </div>
+            {/* Columns 2 & 3 Wrapper for Mobile Side-by-Side */}
+            <div className="w-full grid grid-cols-2 gap-8 lg:gap-8 lg:col-span-2">
+              {/* Column 2 */}
+              <div className="flex flex-col gap-6">
+                <h3 className="text-lg sm:text-xl font-bold tracking-wider uppercase">{t('menuHeading')}</h3>
+                <ul className="flex flex-col gap-4">
+                  <li><Link href="/order" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('orderOnline')}</Link></li>
+                  <li><Link href="/franchising" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('franchising')}</Link></li>
+                  <li><Link href="/about" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('aboutUs')}</Link></li>
+                  <li><Link href="/contact" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('contact')}</Link></li>
+                </ul>
+              </div>
 
-            {/* Column 3 */}
-            <div className="flex flex-col gap-6">
-              <h3 className="text-xl font-bold tracking-wider uppercase">{t('locationsHeading')}</h3>
-              <ul className="flex flex-col gap-4">
-                <li><Link href="/locations/cambridge" className="hover:text-[#DAAF18] transition-colors duration-300">{t('cambridge')}</Link></li>
-                <li><Link href="/locations/laval" className="hover:text-[#DAAF18] transition-colors duration-300">{t('laval')}</Link></li>
-                <li><Link href="/locations/milton" className="hover:text-[#DAAF18] transition-colors duration-300">{t('milton')}</Link></li>
-                <li><Link href="/locations/mississauga" className="hover:text-[#DAAF18] transition-colors duration-300">{t('mississauga')}</Link></li>
-              </ul>
+              {/* Column 3 */}
+              <div className="flex flex-col gap-6">
+                <h3 className="text-lg sm:text-xl font-bold tracking-wider uppercase">{t('locationsHeading')}</h3>
+                <ul className="flex flex-col gap-4">
+                  <li><Link href="/locations/cambridge" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('cambridge')}</Link></li>
+                  <li><Link href="/locations/laval" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('laval')}</Link></li>
+                  <li><Link href="/locations/milton" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('milton')}</Link></li>
+                  <li><Link href="/locations/mississauga" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('mississauga')}</Link></li>
+                </ul>
+              </div>
             </div>
 
             {/* Column 4 */}
