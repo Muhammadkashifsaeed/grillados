@@ -39,7 +39,7 @@ export default function FranchisingCarousel() {
                 <Image
                   src={src}
                   alt={`Location ${index + 1}`}
-                  fill
+                  fill sizes="100vw"
                   className="object-cover"
                 />
               </div>

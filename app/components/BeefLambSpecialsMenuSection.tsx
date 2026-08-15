@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { MenuDualImage } from './Menu/MenuDualImage';
 
 const menuItems = [
   {
@@ -39,7 +40,7 @@ const menuItems = [
 
 export const BeefLambSpecialsMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] overflow-x-hidden">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -54,56 +55,45 @@ export const BeefLambSpecialsMenuSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-10 md:gap-14">
 
-        {/* ZONE 1: Order.png + Order1.png side by side in ONE container — fade UP */}
-        {/* Desktop Layout */}
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          className="w-full hidden md:flex flex-row items-center justify-center pt-0 pb-8 lg:pb-12 pr-12 md:pr-20 lg:pr-[80px]"
-        >
-          {/* Order.png — left */}
-          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-10">
-            <Image
-              src="/images/Order.png"
-              alt="Order.png"
-              fill
-              className="object-contain object-bottom md:object-bottom-right scale-115 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
-              priority
-            />
-          </div>
-
-          {/* Order1.png — right */}
-          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-0 ml-[-14%] lg:ml-[-15%]">
-            <Image
-              src="/images/Order1.png"
-              alt="Order1.png"
-              fill
-              className="object-contain object-top md:object-bottom-left scale-115 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
-            />
-          </div>
-        </motion.div>
-
-        {/* Mobile Layout */}
-        <div className="w-full flex md:hidden flex-col items-center justify-center gap-6 py-6 px-2">
-          <Image
-            src="/images/mobile5.jpg"
-            alt="mobile5.jpg"
-            width={1000}
-            height={750}
-            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-          />
-          <Image
-            src="/images/mobile6.jpg"
-            alt="mobile6.jpg"
-            width={1000}
-            height={750}
-            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+        <div className="hidden md:block">
+          <MenuDualImage 
+            leftImageSrc="/images/Order.png"
+            rightImageSrc="/images/Order1.png"
           />
         </div>
+
+        {/* Custom Mobile Diagonal Split for mobile5 & 6 */}
+        <div className="w-[95%] max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-4 mb-2">
+          {/* Left Image */}
+          <div 
+            className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
+            style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
+          >
+            <Image
+              src="/images/mobile5.jpg"
+              alt="Beef and Lamb Detail Left"
+              fill
+              className="object-cover scale-[1.15] origin-center"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+
+          {/* Right Image */}
+          <div 
+            className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
+            style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
+          >
+            <Image
+              src="/images/mobile6.jpg"
+              alt="Beef and Lamb Detail Right"
+              fill
+              className="object-cover scale-[1.15] origin-center"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+
+
 
         {/* ZONE 2: Bottom row */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12">
@@ -171,7 +161,7 @@ export const BeefLambSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 lg:mt-0 pr-12 md:pr-16 lg:pr-[80px]"
+            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] pt-8 pb-0 lg:py-12 lg:mt-0 pr-12 md:pr-16 lg:pr-[80px]"
           >
             {/* Desktop Image */}
             <Image
@@ -182,49 +172,63 @@ export const BeefLambSpecialsMenuSection = () => {
               className="w-full h-auto object-contain rounded-xl lg:rounded-none object-center drop-shadow-2xl scale-105 md:scale-110 hidden md:block"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            {/* Mobile Image */}
-            <Image
-              src="/images/mobile7.jpg"
-              alt="Grillado Beef and Lamb Mobile"
-              width={1000}
-              height={750}
-              className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+            {/* Mobile Layout for 7, 8, 9 */}
+            <div className="w-[95%] max-w-[500px] mx-auto flex md:hidden flex-col gap-6 mt-8 mb-0">
+              {/* Top Image: Mobile 7 */}
+              <div className="w-full drop-shadow-2xl">
+                <Image
+                  src="/images/mobile7.jpg"
+                  alt="Beef and Lamb Featured"
+                  width={1000}
+                  height={750}
+                  className="w-full h-auto object-contain rounded-xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              
+              {/* Bottom Images: Mobile 8 & 9 with VIP diagonal split */}
+              <div className="relative w-full aspect-[4/3] drop-shadow-2xl">
+                {/* Left Image (8) */}
+                <div 
+                  className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
+                  style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
+                >
+                  <Image
+                    src="/images/mobile8.jpg"
+                    alt="Detail Left"
+                    fill
+                    className="object-cover scale-[1.15] origin-center"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+
+                {/* Right Image (9) */}
+                <div 
+                  className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
+                  style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
+                >
+                  <Image
+                    src="/images/mobile9.jpg"
+                    alt="Detail Right"
+                    fill
+                    className="object-cover scale-[1.15] origin-center"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+            </div>
           </motion.div>
 
         </div>
 
         {/* ZONE 3: Centered previous1.png and previous2.png images */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          className="w-full flex flex-row items-center justify-center pb-8 lg:pb-12 pr-12 md:pr-20 lg:pr-[80px]"
-        >
-          {/* previous1.png — left */}
-          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-10">
-            <Image
-              src="/images/previous1.png"
-              alt="Previous 1"
-              fill
-              className="object-contain object-bottom md:object-bottom-right scale-115 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
-            />
-          </div>
-
-          {/* previous2.png — right */}
-          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-0 ml-[-14%] lg:ml-[-15%]">
-            <Image
-              src="/images/previous2.png"
-              alt="Previous 2"
-              fill
-              className="object-contain object-top md:object-bottom-left scale-115 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
-            />
-          </div>
-        </motion.div>
+        <div className="hidden md:block">
+          <MenuDualImage 
+            leftImageSrc="/images/previous1.png"
+            rightImageSrc="/images/previous2.png"
+          />
+        </div>
 
       </div>
     </section>

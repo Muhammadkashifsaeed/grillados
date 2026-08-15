@@ -8,7 +8,7 @@ const AboutUsMissionVision = () => {
         
         {/* Left Side: Mission */}
         <div className="flex flex-col items-center text-center border-2 border-gray-200 rounded-xl p-6 sm:p-10 shadow-sm bg-white hover:shadow-md transition-shadow">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-black font-['Outfit',sans-serif] uppercase mb-4">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-black font-['Outfit',sans-serif] uppercase mb-4">
             Our Mission
           </h2>
           {/* Yellow Divider */}
@@ -24,7 +24,7 @@ const AboutUsMissionVision = () => {
 
         {/* Right Side: Vision */}
         <div className="flex flex-col items-center text-center border-2 border-gray-200 rounded-xl p-6 sm:p-10 shadow-sm bg-white hover:shadow-md transition-shadow">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-black font-['Outfit',sans-serif] uppercase mb-4">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-black font-['Outfit',sans-serif] uppercase mb-4">
             Our Vision
           </h2>
           {/* Yellow Divider */}
@@ -36,7 +36,7 @@ const AboutUsMissionVision = () => {
                 <Image 
                   src="/images/bullseye.png" 
                   alt="Bullseye" 
-                  fill 
+                  fill sizes="100vw" 
                   className="object-contain"
                 />
               </div>
@@ -49,7 +49,7 @@ const AboutUsMissionVision = () => {
                 <Image 
                   src="/images/bullseye.png" 
                   alt="Bullseye" 
-                  fill 
+                  fill sizes="100vw" 
                   className="object-contain"
                 />
               </div>
@@ -62,7 +62,7 @@ const AboutUsMissionVision = () => {
                 <Image 
                   src="/images/bullseye.png" 
                   alt="Bullseye" 
-                  fill 
+                  fill sizes="100vw" 
                   className="object-contain"
                 />
               </div>

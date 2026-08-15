@@ -38,7 +38,7 @@ const CateringOfferCard: React.FC<CateringOfferProps> = ({
           <Image 
             src="/images/whole.png"
             alt="Grillado's Logo"
-            fill
+            fill sizes="100vw"
             className="object-contain object-left"
           />
         </div>

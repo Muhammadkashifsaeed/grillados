@@ -12,38 +12,66 @@ interface MenuDualImageProps {
 export const MenuDualImage = ({ 
   leftImageSrc, 
   rightImageSrc,
+  mobileLeftImageSrc,
+  mobileRightImageSrc,
 }: MenuDualImageProps) => {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 80 }}
+        initial={{ opacity: 0, y: -80 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 1, ease: 'easeOut' }}
-        className="w-full flex flex-row items-center justify-center py-4 lg:py-8 pr-12 md:pr-16 lg:pr-[80px]"
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className={`w-full flex flex-col md:flex-row items-center justify-center pr-12 md:pr-16 lg:pr-[80px] ${(mobileLeftImageSrc || mobileRightImageSrc) ? 'py-4 lg:py-8' : 'py-0 lg:py-8'}`}
       >
-        {/* Left Image */}
-        <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-10">
+        {/* Desktop Left Image */}
+        <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-10 hidden md:block">
           <Image
             src={leftImageSrc}
             alt="Menu Item Left"
             fill
-            className="object-contain object-bottom md:object-bottom-right scale-115 drop-shadow-2xl"
             sizes="(max-width: 768px) 100vw, 60vw"
+            className="object-contain object-bottom md:object-bottom-right scale-115 drop-shadow-2xl"
             priority
           />
         </div>
 
-        {/* Right Image */}
-        <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-0 ml-[-15%]">
+        {/* Desktop Right Image */}
+        <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-0 ml-[-15%] hidden md:block">
           <Image
             src={rightImageSrc}
             alt="Menu Item Right"
             fill
-            className="object-contain object-top md:object-bottom-left scale-115 drop-shadow-2xl"
             sizes="(max-width: 768px) 100vw, 60vw"
+            className="object-contain object-top md:object-bottom-left scale-115 drop-shadow-2xl"
           />
         </div>
+
+        {/* Mobile Dual Images */}
+        {(mobileLeftImageSrc || mobileRightImageSrc) && (
+          <div className="w-full max-w-[500px] mx-auto flex flex-row md:hidden items-center justify-center mt-6 rounded-xl overflow-hidden drop-shadow-xl bg-black">
+            {mobileLeftImageSrc && (
+              <Image
+                src={mobileLeftImageSrc}
+                alt="Mobile Menu Left"
+                width={1000}
+                height={750}
+                sizes="(max-width: 1024px) 50vw, 50vw"
+                className="w-1/2 h-auto object-cover block m-0 p-0 scale-[1.15] origin-right"
+              />
+            )}
+            {mobileRightImageSrc && (
+              <Image
+                src={mobileRightImageSrc}
+                alt="Mobile Menu Right"
+                width={1000}
+                height={750}
+                sizes="(max-width: 1024px) 50vw, 50vw"
+                className="w-1/2 h-auto object-cover block m-0 p-0 scale-[1.15] origin-left"
+              />
+            )}
+          </div>
+        )}
       </motion.div>
     </>
   );

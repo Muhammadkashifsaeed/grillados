@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { Utensils, MapPin, Tag, Users, Truck, FileText, ShoppingBag } from "lucide-react";
@@ -31,6 +31,7 @@ export const Header = () => {
               src="/images/saman.png"
               alt="Grillado's Logo"
               fill
+              sizes="100vw"
               className="object-contain object-left scale-110"
               priority
             />
@@ -70,7 +71,7 @@ export const Header = () => {
                 className={`transition-all duration-300 w-5 h-3 xl:w-6 xl:h-3.5 relative ${locale === 'en' ? 'scale-110 drop-shadow-[0_0_4px_rgba(247,180,28,0.8)]' : 'opacity-60 hover:opacity-100 hover:scale-110'}`}
                 title="English"
               >
-                <Image src="/images/eng.png" alt="English" fill className="object-contain" />
+                <Image src="/images/eng.png" alt="English" fill sizes="10vw" className="object-contain" />
               </button>
               <button
                 type="button"
@@ -78,7 +79,7 @@ export const Header = () => {
                 className={`transition-all duration-300 w-5 h-3 xl:w-6 xl:h-3.5 relative ${locale === 'fr' ? 'scale-110 drop-shadow-[0_0_4px_rgba(247,180,28,0.8)]' : 'opacity-60 hover:opacity-100 hover:scale-110'}`}
                 title="Français"
               >
-                <Image src="/images/fre.png" alt="French" fill className="object-contain" />
+                <Image src="/images/fre.png" alt="French" fill sizes="10vw" className="object-contain" />
               </button>
             </div>
           </nav>
@@ -89,11 +90,11 @@ export const Header = () => {
           
           <Link
             href="/order"
-            className="h-full inline-flex items-center justify-center gap-1 xl:gap-1.5 bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white font-extrabold px-2 lg:px-2.5 xl:px-3 rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50"
+            className="h-8 md:h-10 lg:h-full inline-flex items-center justify-center gap-1 xl:gap-1.5 bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white font-extrabold px-2 sm:px-3 lg:px-2.5 xl:px-3 rounded-lg xl:rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50"
           >
-            <ShoppingBag className="w-4 h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
-            <div className="flex flex-col text-left leading-[]">
-              <span className="text-xs md:text-sm xl:text-xs">{t('orderOnline')}</span>
+            <ShoppingBag className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
+            <div className="flex flex-col text-left">
+              <span className="text-[10px] sm:text-xs md:text-sm xl:text-xs whitespace-nowrap">{t('orderOnline')}</span>
             </div>
           </Link>
 

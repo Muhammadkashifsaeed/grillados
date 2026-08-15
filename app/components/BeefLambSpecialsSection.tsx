@@ -55,7 +55,7 @@ const BeefLambSpecialsSection = () => {
             <Image 
               src="/images/grilled.webp" 
               alt="Grillado's Beef & Lamb Specials" 
-              fill
+              fill sizes="100vw"
               className="object-cover" 
             />
           </div>

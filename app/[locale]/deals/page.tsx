@@ -32,15 +32,14 @@ export default function DealsPage() {
         
         {/* Background Texture */}
         <div 
-          className="absolute inset-0 z-0 opacity-40 pointer-events-none"
+          className="absolute inset-0 z-0 pointer-events-none"
           style={{
-            backgroundImage: "url('/images/footer-doodle.png')",
+            backgroundImage: "url('/images/Black-Background.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'repeat'
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
         <div className="relative z-10 w-full flex flex-col items-center group">
           

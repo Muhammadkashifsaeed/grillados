@@ -10,7 +10,7 @@ const AboutUsVoted = () => {
         <Image 
           src="/images/was.png" 
           alt="Was Decoration" 
-          fill 
+          fill sizes="100vw" 
           className="object-contain object-left"
         />
       </div>

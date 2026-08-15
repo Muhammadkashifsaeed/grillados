@@ -78,6 +78,19 @@ export const GarnishedRiceSauceMenuSection = () => {
               </div>
             </div>
 
+            {/* Mobile Image (mobile13) moved above Fiery section */}
+            <div className="w-full flex md:hidden justify-center mb-8">
+              <Image 
+                src="/images/mobile13.jpg"
+                alt="Zesty Food Mobile"
+                width={1000}
+                height={750}
+                className="w-full max-w-[500px] h-auto object-contain rounded-xl drop-shadow-xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </div>
+
             <div className="mb-10 w-full pt-8 border-t border-white/10">
               <div className="flex flex-col gap-10 md:gap-12 lg:gap-14 w-full">
                 {sauceLevels.map((item, index) => (
@@ -87,18 +100,18 @@ export const GarnishedRiceSauceMenuSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
-                    className="flex flex-row items-center w-full gap-6 md:gap-8 lg:gap-10"
+                    className="flex flex-col md:flex-row items-center w-full gap-4 md:gap-8 lg:gap-10"
                   >
-                    <div className="relative w-28 h-28 md:w-36 md:h-36 lg:w-48 lg:h-48 shrink-0">
+                    <div className="relative w-36 h-36 md:w-36 md:h-36 lg:w-48 lg:h-48 shrink-0">
                       <Image 
                         src={item.image}
                         alt={item.name}
-                        fill
+                        fill sizes="100vw"
                         className="object-contain"
                       />
                     </div>
-                    <div className="flex flex-col flex-1">
-                      <h4 className={`text-2xl md:text-3xl lg:text-4xl font-extrabold font-['Outfit',sans-serif] uppercase tracking-wide mb-1 ${item.colorClass}`}>
+                    <div className="flex flex-col flex-1 items-center text-center md:items-start md:text-left mt-2 md:mt-0">
+                      <h4 className={`text-2xl md:text-3xl lg:text-4xl font-extrabold font-['Outfit',sans-serif] uppercase tracking-wide mb-2 md:mb-1 ${item.colorClass}`}>
                         {item.name}
                       </h4>
                       <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed">
@@ -122,16 +135,6 @@ export const GarnishedRiceSauceMenuSection = () => {
                 width={1000}
                 height={750}
                 className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 lg:scale-100 drop-shadow-2xl hidden md:block"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
-              {/* Mobile Image */}
-              <Image 
-                src="/images/mobile13.jpg"
-                alt="Zesty Food Mobile"
-                width={1000}
-                height={750}
-                className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

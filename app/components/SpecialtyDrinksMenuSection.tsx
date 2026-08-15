@@ -26,7 +26,7 @@ export const SpecialtyDrinksMenuSection = () => {
   const t = useTranslations('SpecialtyDrinks');
 
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] ">
       {/* Background with subtle food outline pattern */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -53,10 +53,10 @@ export const SpecialtyDrinksMenuSection = () => {
 
           {/* Left Column: Menu Items */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="w-full lg:w-1/2 flex flex-col justify-center pr-12 sm:pr-16 md:pr-0"
           >
             <div className="mb-8 lg:mb-10 flex flex-col items-start">
@@ -93,11 +93,11 @@ export const SpecialtyDrinksMenuSection = () => {
 
           {/* Right Column: Image */}
           <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-stretch justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] py-8 lg:py-12"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="w-full lg:w-1/2 flex items-stretch justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] pt-8 pb-0 lg:py-12"
           >
             <div className="relative w-full h-full aspect-[4/3] lg:min-h-[500px]">
               {/* Desktop Image */}
@@ -116,7 +116,7 @@ export const SpecialtyDrinksMenuSection = () => {
                 alt="Specialty Drinks Mobile"
                 width={1000}
                 height={750}
-                className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden mt-6"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

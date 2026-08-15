@@ -9,22 +9,22 @@ const AboutUsStory = () => {
         {/* Left Side: Images Composition */}
         <div className="relative w-full h-[350px] sm:h-[450px] md:h-[550px] flex items-center justify-center">
           
-          {/* First Image (Slightly higher / left) */}
-          <div className="absolute top-[5%] left-[5%] w-[42%] h-[65%] sm:h-[70%] rounded-2xl overflow-hidden shadow-2xl z-10 border-[6px] border-white transform transition-transform duration-500 hover:scale-[1.02]">
+          {/* First Image (Top Left) */}
+          <div className="absolute top-[3%] left-0 w-[48%] h-[70%] sm:h-[75%] md:h-[80%] rounded-2xl overflow-hidden shadow-2xl z-10 border-[6px] border-white">
             <Image 
               src="/images/famous1.png" 
               alt="Grillados Famous 1" 
-              fill 
+              fill sizes="100vw" 
               className="object-cover"
             />
           </div>
 
-          {/* Second Image (Slightly lower / right) */}
-          <div className="absolute bottom-[25%] right-[5%] w-[48%] h-[60%] sm:h-[65%] rounded-2xl overflow-hidden shadow-2xl z-20 border-[6px] border-white transform transition-transform duration-500 hover:scale-[1.02]">
+          {/* Second Image (Bottom Right) */}
+          <div className="absolute bottom-[3%] right-0 w-[48%] h-[70%] sm:h-[75%] md:h-[80%] rounded-2xl overflow-hidden shadow-2xl z-20 border-[6px] border-white">
             <Image 
               src="/images/famous2.png" 
               alt="Grillados Famous 2" 
-              fill 
+              fill sizes="100vw" 
               className="object-cover"
             />
           </div>
@@ -34,9 +34,9 @@ const AboutUsStory = () => {
         {/* Right Side: Content */}
         <div className="flex flex-col justify-center">
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black font-['Outfit',sans-serif] leading-tight mb-8 uppercase tracking-wide">
-            it all started <br />
-            <span className="text-[#DAAF18] drop-shadow-sm">with a craving...</span>
+          <h2 className="font-extrabold text-black font-['Outfit',sans-serif] leading-tight mb-8 uppercase tracking-wide">
+            <span className="block text-xl sm:text-2xl md:text-3xl mb-1">it all started</span>
+            <span className="block text-[#DAAF18] text-2xl sm:text-3xl md:text-4xl drop-shadow-sm">with a craving...</span>
           </h2>
 
           <div className="space-y-6 mb-10">
@@ -50,20 +50,20 @@ const AboutUsStory = () => {
           </div>
 
           {/* Bottom Right Images */}
-          <div className="flex flex-wrap gap-5">
-            <div className="relative w-40 h-28 sm:w-56 sm:h-36 rounded-xl overflow-hidden shadow-lg border-2 border-white transform transition-all hover:scale-105 hover:shadow-xl">
+          <div className="flex flex-wrap gap-5 items-center">
+            <div className="relative w-40 h-28 sm:w-56 sm:h-36 rounded-xl overflow-hidden shadow-lg border-2 border-white">
               <Image 
                 src="/images/keep1.jpg" 
                 alt="Grillados Keep 1" 
-                fill 
+                fill sizes="100vw" 
                 className="object-cover"
               />
             </div>
-            <div className="relative w-40 h-28 sm:w-56 sm:h-36 rounded-xl overflow-hidden shadow-lg border-2 border-white transform transition-all hover:scale-105 hover:shadow-xl">
+            <div className="relative w-40 h-28 sm:w-56 sm:h-36 rounded-xl overflow-hidden shadow-lg border-2 border-white">
               <Image 
                 src="/images/keep2.jpg" 
                 alt="Grillados Keep 2" 
-                fill 
+                fill sizes="100vw" 
                 className="object-cover"
               />
             </div>

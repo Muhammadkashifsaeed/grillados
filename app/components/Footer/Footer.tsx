@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { UtensilsCrossed } from "lucide-react";
 // Since lucide doesn't have TikTok and Yelp directly, using generic placeholders or available equivalents.
@@ -60,15 +60,11 @@ export const Footer = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/footer_colorful_bg.png"
+            src="/images/Picture-background.png"
             alt="Colorful Fast Food Background"
             fill
-            className="object-cover object-center opacity-70"
-          />
-          {/* Overlay */}
-          <div
-            className="absolute inset-0"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.75)" }}
+            sizes="100vw"
+            className="object-cover object-center"
           />
         </div>
 
@@ -85,7 +81,7 @@ export const Footer = () => {
                 alt="Grillado's Logo"
                 width={200}
                 height={70}
-                className="w-56 scale-110 transform-gpu origin-left"
+                className="w-56 h-auto scale-110 transform-gpu origin-left"
               />
               <div className="flex items-center gap-3 mt-4">
                 <Link href="#" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">

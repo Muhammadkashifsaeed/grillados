@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from "@/i18n/routing";
 
 const articles = [
   {
@@ -362,7 +362,7 @@ export const ExploreArticles = () => {
                   <Image 
                     src={article.image} 
                     alt={article.heading} 
-                    fill 
+                    fill sizes="100vw" 
                     className="object-cover" 
                   />
                 </div>

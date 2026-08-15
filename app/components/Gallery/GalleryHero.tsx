@@ -14,7 +14,7 @@ export default function GalleryHero() {
       <Image
         src="/images/amaizing.png"
         alt="Gallery Hero"
-        fill
+        fill sizes="100vw"
         className="object-cover"
         priority
       />

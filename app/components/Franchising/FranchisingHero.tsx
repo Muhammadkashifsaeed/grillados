@@ -9,31 +9,31 @@ export default function FranchisingHero() {
   const t = useTranslations('FranchisingPage');
 
   return (
-    <section className="relative w-full h-87.5 sm:h-100 md:h-112.5 lg:h-125 flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
       
       {/* Background Image with Cinematic Zoom and Float */}
       <motion.div 
         className="absolute inset-0 z-0"
         initial={{ scale: 1.1 }}
-        animate={{ scale: 1, y: [0, -10, 0] }}
+        animate={{ scale: 1, y: [0, -5, 0] }}
         transition={{ 
           scale: { duration: 1.5, ease: "easeOut" },
           y: { duration: 6, ease: "easeInOut", repeat: Infinity }
         }}
       >
         <Image
-          src="/images/hero-bg-new.png"
+          src="/images/video-1080p-11-2.png"
           alt="Restaurant Services Background"
           fill
           priority
           quality={100}
-          className="object-cover"
+          className="object-cover object-center"
           sizes="100vw"
         />
       </motion.div>
 
-      {/* Dark Overlay with subtle premium gradient */}
-      <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/50 to-black/70 z-10 pointer-events-none"></div>
+      {/* Dark Overlay with subtle premium gradient - Very light for maximum image visibility */}
+      <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none"></div>
 
       {/* Skewed Banner Content */}
       <div className="relative z-20 w-full w-full px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-center">
@@ -57,10 +57,10 @@ export default function FranchisingHero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-            className="relative px-6 py-4 sm:px-10 sm:py-6 md:px-16 md:py-8 flex items-center justify-center"
+            className="relative px-4 py-3 sm:px-8 sm:py-5 md:px-12 md:py-6 flex items-center justify-center"
           >
             <h1 className="text-white font-extrabold font-['Outfit',sans-serif] text-center uppercase tracking-wide
-                           text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+                           text-2xl sm:text-3xl md:text-4xl lg:text-5xl
                            drop-shadow-lg"
             >
               {t('heroHeading')}

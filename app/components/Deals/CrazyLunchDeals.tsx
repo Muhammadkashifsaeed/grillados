@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from "@/i18n/routing";
 
 const deals = [
   {
@@ -58,10 +58,10 @@ export default function CrazyLunchDeals() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center text-center mb-16 md:mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#DAAF18] font-['Outfit',sans-serif] uppercase tracking-wide mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#DAAF18] font-['Outfit',sans-serif] uppercase tracking-wide mb-4">
             Crazy Lunch Deals
           </h2>
-          <p className="text-gray-800 text-lg md:text-xl lg:text-2xl font-semibold max-w-2xl">
+          <p className="text-gray-800 text-base md:text-lg lg:text-xl font-semibold max-w-2xl">
             Discover this week&apos;s incredible treats
           </p>
         </motion.div>

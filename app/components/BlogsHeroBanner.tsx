@@ -11,7 +11,7 @@ const BlogsHeroBanner = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/images/Canada15.jpeg" 
+          src="/images/WhatsApp-Image.jpeg" 
           alt="Blogs Background" 
           fill 
           priority
@@ -21,8 +21,8 @@ const BlogsHeroBanner = () => {
         />
       </div>
 
-      {/* Dark Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none"></div>
+      {/* Dark Overlay for better text readability (lightened for visibility) */}
+      <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none"></div>
 
       {/* Center Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center max-w-4xl mx-auto w-full px-4">

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from "@/i18n/routing";
 import { Calendar, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
@@ -86,7 +86,7 @@ const BlogsSection = () => {
                       <Image 
                         src={blog.image} 
                         alt={t(`${blog.tKey}.title`)} 
-                        fill 
+                        fill sizes="100vw" 
                         className="object-contain p-2 transition-transform duration-700 ease-in-out group-hover:scale-110" 
                       />
                     </div>

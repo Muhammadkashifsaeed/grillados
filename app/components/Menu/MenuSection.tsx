@@ -14,7 +14,7 @@ export const MenuSection = ({
   bgOpacity = "opacity-40"
 }: MenuSectionProps) => {
   return (
-    <section id={id} className="relative w-full py-12 lg:py-16 bg-[#0a0a0a] overflow-x-hidden">
+    <section id={id} className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] ">
       {/* Background Texture */}
       <div 
         className={`absolute inset-0 z-0 ${bgOpacity} pointer-events-none`}

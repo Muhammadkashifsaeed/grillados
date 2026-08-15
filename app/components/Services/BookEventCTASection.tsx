@@ -14,7 +14,7 @@ const BookEventCTASection = () => {
       {/* Background Image - Reused from Hero */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/images/catering_hero_bg.png" 
+          src="/images/vecteezy_ai-generated-banque.jpg" 
           alt="Grillado Catering Book Event" 
           fill 
           priority

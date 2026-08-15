@@ -55,7 +55,7 @@ const SandwichesSection = () => {
             <Image 
               src="/images/zesty.jpg" 
               alt="Grillado's Sandwiches" 
-              fill
+              fill sizes="100vw"
               className="object-cover" 
             />
           </div>

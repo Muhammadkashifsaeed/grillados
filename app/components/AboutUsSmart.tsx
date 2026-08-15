@@ -9,7 +9,7 @@ const AboutUsSmart = () => {
         {/* Left Side: Content */}
         <div className="flex flex-col justify-center order-2 lg:order-1">
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black font-['Outfit',sans-serif] leading-tight mb-6 uppercase tracking-wide">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black font-['Outfit',sans-serif] leading-tight mb-6 uppercase tracking-wide">
             Being <br />
             <span className="text-[#FACC15] drop-shadow-sm">Smart!</span>
           </h2>
@@ -25,7 +25,7 @@ const AboutUsSmart = () => {
           <Image 
             src="/images/making.jpg" 
             alt="Making Grillados" 
-            fill 
+            fill sizes="100vw" 
             className="object-cover"
           />
         </div>

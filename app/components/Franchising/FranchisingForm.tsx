@@ -158,7 +158,7 @@ export default function FranchisingForm() {
         <Image
           src="/images/hero-bg-new.png"
           alt="Contact Background"
-          fill
+          fill sizes="100vw"
           className="object-cover"
           priority
         />

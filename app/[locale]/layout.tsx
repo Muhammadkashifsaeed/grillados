@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
+import { MobileOrderButton } from "../components/MobileOrderButton";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -42,6 +43,7 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col bg-white" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Header />
+          <MobileOrderButton />
           <main className="flex-1">{children}</main>
           <Footer />
         </NextIntlClientProvider>

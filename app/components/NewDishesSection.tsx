@@ -78,7 +78,7 @@ const NewDishesSection = () => {
                   <Image 
                     src={image.src} 
                     alt={image.alt} 
-                    fill 
+                    fill sizes="100vw" 
                     className="object-cover"
                   />
                 </div>

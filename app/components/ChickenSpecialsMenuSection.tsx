@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { MenuDualImage } from './Menu/MenuDualImage';
 
 const menuItems = [
   {
@@ -54,7 +55,7 @@ const menuItems = [
 
 export const ChickenSpecialsMenuSection = () => {
   return (
-    <section className="relative w-full pt-0 pb-0 bg-[#0a0a0a] overflow-x-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] overflow-x-hidden">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -69,57 +70,12 @@ export const ChickenSpecialsMenuSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-10 md:gap-14">
 
-        {/* ZONE 1: Both images with diagonal split — fade UP */}
-        {/* Desktop Layout */}
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          className="w-full hidden md:flex flex-row items-center justify-center pt-0 pb-8 lg:pb-12 pr-12 md:pr-20 lg:pr-[80px]"
-        >
-          {/* lockfiles1 — left */}
-          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-10">
-            <Image
-              src="/images/lockfiles1.png"
-              alt="lockfiles1.png"
-              fill
-              className="object-contain object-bottom md:object-bottom-right scale-115 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
-              priority
-            />
-          </div>
-
-          {/* lockfiles2 — right */}
-          <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-125 xl:h-150 z-0 ml-[-14%] lg:ml-[-15%]">
-            <Image
-              src="/images/lockfiles2.png"
-              alt="lockfiles2.png"
-              fill
-              className="object-contain object-top md:object-bottom-left scale-115 drop-shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 60vw"
-            />
-          </div>
-        </motion.div>
-
-        {/* Mobile Layout */}
-        <div className="w-full flex md:hidden flex-col items-center justify-center gap-6 pb-6 pt-0 px-2 pr-16">
-          <Image
-            src="/images/mobile2.jpg"
-            alt="mobile2.jpg"
-            width={1000}
-            height={750}
-            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-          />
-          <Image
-            src="/images/mobile3.jpg"
-            alt="mobile3.jpg"
-            width={1000}
-            height={750}
-            className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+        <div className="hidden md:block">
+          <MenuDualImage 
+            leftImageSrc="/images/lockfiles1.png"
+            rightImageSrc="/images/lockfiles2.png"
           />
         </div>
-
 
 
 
@@ -184,7 +140,7 @@ export const ChickenSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 lg:mt-0 pr-12 md:pr-16 lg:pr-[80px]"
+            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] pt-8 pb-0 lg:py-12 lg:mt-0 pr-12 md:pr-16 lg:pr-[80px]"
           >
             {/* Desktop Image */}
             <Image
@@ -201,7 +157,7 @@ export const ChickenSpecialsMenuSection = () => {
               alt="Grillado Chicken Set Mobile"
               width={1000}
               height={750}
-              className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+              className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden mt-6"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </motion.div>

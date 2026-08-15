@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function ServicesHero() {
   return (
-    <section className="relative w-full h-[85vh] min-h-150 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
+    <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
       
       {/* Background Image with Cinematic Zoom and Float */}
       <motion.div 
@@ -19,7 +19,7 @@ export default function ServicesHero() {
         }}
       >
         <Image
-          src="/images/hero-bg-new.png"
+          src="/images/catering-wedding.jpg"
           alt="Restaurant Services Background"
           fill
           priority
@@ -41,9 +41,9 @@ export default function ServicesHero() {
             initial={{ opacity: 0, y: 30, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-tight py-3 px-6 rounded-xl bg-[#DAAF18] shadow-2xl relative z-10 font-['Outfit',sans-serif] uppercase leading-tight whitespace-nowrap"
+            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-tight py-3 px-6 rounded-xl bg-[#DAAF18] shadow-2xl relative z-10 font-['Outfit',sans-serif] uppercase leading-tight text-center whitespace-normal md:whitespace-nowrap"
           >
-            We cater for your special occasions
+            We cater for your<br className="block md:hidden" /> special occasions
           </motion.h1>
         </div>
 

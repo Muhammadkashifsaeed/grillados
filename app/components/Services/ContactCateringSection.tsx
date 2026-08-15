@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from "@/i18n/routing";
 import { Search, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -69,7 +69,7 @@ export default function ContactCateringSection() {
         <Image
           src="/images/hero-bg-new.png"
           alt="Contact Background"
-          fill
+          fill sizes="100vw"
           className="object-cover"
           priority
         />

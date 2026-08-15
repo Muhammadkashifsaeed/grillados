@@ -34,7 +34,7 @@ const menuItems = [
 
 export const PlateauxMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] ">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -55,11 +55,11 @@ export const PlateauxMenuSection = () => {
 
           {/* LEFT: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex flex-col order-3 lg:order-none mt-8 lg:mt-0"
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="w-full lg:w-1/2 flex flex-col order-3 lg:order-none mt-0"
           >
             <div className="mb-10">
               <h2
@@ -115,8 +115,8 @@ export const PlateauxMenuSection = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 mx-auto lg:mt-0 order-1 lg:order-none lg:mb-0 pr-12 md:pr-16 lg:pr-[80px]"
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="w-full lg:w-1/2 hidden lg:flex items-center justify-center lg:justify-end relative lg:min-h-[500px] pt-8 pb-0 lg:py-12 mx-auto lg:mt-0 lg:mb-0 pr-12 md:pr-16 lg:pr-[80px]"
           >
             {/* Desktop Image */}
             <Image
@@ -124,18 +124,10 @@ export const PlateauxMenuSection = () => {
               alt="Grillado Plateaux Featured"
               width={1000}
               height={750}
-              className="w-full h-auto object-contain object-center lg:object-right drop-shadow-2xl rounded-2xl lg:rounded-none scale-100 lg:scale-110 hidden md:block"
+              className="w-full h-auto object-contain object-center lg:object-right drop-shadow-2xl rounded-2xl lg:rounded-none scale-100 lg:scale-100 hidden md:block"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            {/* Mobile Image */}
-            <Image
-              src="/images/mobile7.jpg"
-              alt="Grillado Plateaux Featured Mobile"
-              width={1000}
-              height={750}
-              className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+
           </motion.div>
 
         </div>

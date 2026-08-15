@@ -31,7 +31,7 @@ export default function FranchisingContent() {
               <Image 
                 src="/images/Nos1.png" 
                 alt="Grillados Franchise Example 1" 
-                fill 
+                fill sizes="100vw" 
                 className="object-cover" 
               />
             </div>
@@ -39,7 +39,7 @@ export default function FranchisingContent() {
               <Image 
                 src="/images/Nos2.jpg" 
                 alt="Grillados Franchise Example 2" 
-                fill 
+                fill sizes="100vw" 
                 className="object-cover" 
               />
             </div>

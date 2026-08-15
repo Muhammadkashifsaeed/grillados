@@ -39,7 +39,7 @@ export default function FranchisingSponsors() {
               <Image
                 src={src}
                 alt={`Franchising Partner ${idx + 1}`}
-                fill
+                fill sizes="100vw"
                 className="object-contain"
               />
             </div>

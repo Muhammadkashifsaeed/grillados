@@ -18,7 +18,7 @@ const menuItems = [
 
 export const AppetizersMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] ">
       {/* 
         Background with subtle food outline pattern. 
         Update the URL if you have a specific pattern image.
@@ -39,10 +39,10 @@ export const AppetizersMenuSection = () => {
 
           {/* Left Column: Menu Items */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="w-full lg:w-1/2 flex flex-col pr-12 sm:pr-16 md:pr-0"
           >
             <div className="mb-10">
@@ -82,11 +82,11 @@ export const AppetizersMenuSection = () => {
 
           {/* Right Column: Image */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] py-8 lg:py-12 mx-auto lg:mt-0 pr-14 md:pr-0 lg:pr-8"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] pt-8 pb-0 lg:py-12 mx-auto lg:mt-0 pr-14 md:pr-0 lg:pr-8"
           >
             {/* Desktop Image */}
             <Image
@@ -94,20 +94,55 @@ export const AppetizersMenuSection = () => {
               alt="Open Appetizers"
               width={1000}
               height={750}
-              className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 lg:scale-110 hidden md:block"
+              className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 lg:scale-100 hidden md:block"
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />
-            {/* Mobile Image */}
-            <Image
-              src="/images/mobile1.jpg"
-              alt="Mobile Appetizers"
-              width={1000}
-              height={750}
-              className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
+            {/* Mobile Layout */}
+            <div className="w-[95%] max-w-[500px] mx-auto flex md:hidden flex-col gap-6 mt-8 mb-0">
+              {/* Top Image: Mobile 1 */}
+              <div className="relative w-full aspect-[4/3] drop-shadow-2xl">
+                <Image
+                  src="/images/mobile1.jpg"
+                  alt="Appetizers Featured"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              
+              {/* Bottom Images: Mobile 2 & 3 with exact diagonal split */}
+              <div className="relative w-full aspect-[4/3] drop-shadow-2xl">
+                {/* Left Image (Nachos) */}
+                <div 
+                  className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
+                  style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
+                >
+                  <Image
+                    src="/images/mobile2.jpg"
+                    alt="Appetizers Detail Left"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+
+                {/* Right Image (Wings) */}
+                <div 
+                  className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
+                  style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
+                >
+                  <Image
+                    src="/images/mobile3.jpg"
+                    alt="Appetizers Detail Right"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+            </div>
           </motion.div>
 
         </div>

@@ -19,7 +19,7 @@ const PlattersSection = () => {
             <Image 
               src="/images/meats.webp" 
               alt="Grillado's Platters" 
-              fill
+              fill sizes="100vw"
               className="object-cover" 
             />
           </div>

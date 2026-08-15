@@ -55,7 +55,7 @@ const AppetizersSection = () => {
             <Image
               src="/images/smentes.webp"
               alt="Grillado's Appetizers"
-              fill
+              fill sizes="100vw"
               className="object-cover"
             />
           </div>

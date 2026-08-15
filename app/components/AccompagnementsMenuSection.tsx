@@ -17,7 +17,7 @@ const menuItems = [
 
 export const AccompagnementsMenuSection = () => {
   return (
-    <section className="relative w-full pt-5 lg:pt-12 pb-0 bg-[#0a0a0a] overflow-x-hidden">
+    <section className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] ">
       {/* Background with subtle food outline pattern */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -31,15 +31,15 @@ export const AccompagnementsMenuSection = () => {
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-4 xl:gap-8">
+        <div className="flex flex-col-reverse lg:flex-row items-stretch justify-between gap-8 lg:gap-4 xl:gap-8">
 
           {/* Left Column: Image */}
           <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-center justify-start relative lg:min-h-[500px] py-8 lg:py-12 md:mb-16 lg:mb-0"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="w-full lg:w-1/2 flex items-center justify-start relative lg:min-h-[500px] pt-8 pb-0 lg:py-12 md:mb-16 lg:mb-0"
           >
             <div className="relative w-full h-full lg:min-h-[500px]">
               {/* Desktop Image */}
@@ -48,7 +48,7 @@ export const AccompagnementsMenuSection = () => {
                 alt="Frites Accompagnements"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-left scale-100 lg:scale-110 drop-shadow-2xl hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-left scale-100 lg:scale-100 drop-shadow-2xl hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
@@ -58,23 +58,21 @@ export const AccompagnementsMenuSection = () => {
                 alt="Frites Accompagnements Mobile"
                 width={1000}
                 height={750}
-                className="w-[85%] max-w-[300px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden"
+                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-xl block md:hidden mt-6"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
               {/* Fade on the right edge (desktop) */}
               <div className="absolute inset-y-0 right-0 w-24 md:w-32 lg:w-48 bg-linear-to-l from-[#0a0a0a] to-transparent pointer-events-none hidden lg:block"></div>
-              {/* Bottom fade for mobile */}
-              <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[#0a0a0a] to-transparent pointer-events-none lg:hidden"></div>
             </div>
           </motion.div>
 
           {/* Right Column: Menu Items */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="w-full lg:w-1/2 flex flex-col justify-center pr-12 sm:pr-16 md:pr-0 lg:pl-6 xl:pl-10"
           >
             <div className="mb-8 lg:mb-10">

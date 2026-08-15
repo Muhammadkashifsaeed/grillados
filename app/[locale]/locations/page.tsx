@@ -49,24 +49,38 @@ export default function LocationsPage() {
   const displayLocations = locale === 'en' ? [...locations].reverse() : locations;
 
   return (
-    <main className="flex flex-col flex-1 min-h-screen bg-[#0a0a0a] relative overflow-hidden pt-30 pb-12">
-      {/* Background Texture */}
+    <main className="flex flex-col flex-1 min-h-screen bg-[#0a0a0a] relative overflow-hidden pb-12">
+      {/* Background Texture for the rest of the page */}
       <div 
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
+        className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          backgroundImage: "url('/images/footer-doodle.png')",
+          backgroundImage: "url('/images/Black-Background.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'repeat'
         }}
       ></div>
-      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
+
+      {/* Hero Section */}
+      <div className="relative w-full h-[40vh] min-h-[300px] md:h-[50vh] mb-12 flex items-center justify-center z-10">
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/Picture-back-ground.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        ></div>
+        {/* Optional overlay if needed, currently transparent */}
+        {/* <div className="absolute inset-0 bg-black/30 z-0"></div> */}
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-24">
         
         {/* Header Section */}
         <div className="mb-16 md:mb-24 flex flex-col items-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide text-center">
             {t('availableLocations')}
           </h1>
           <div className="w-24 h-1.5 bg-orange-500 mx-auto mt-6"></div>
