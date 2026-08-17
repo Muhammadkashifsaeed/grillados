@@ -36,7 +36,7 @@ const AboutUsStory = () => {
           
           <h2 className="font-extrabold text-black font-['Outfit',sans-serif] leading-tight mb-8 uppercase tracking-wide">
             <span className="block text-xl sm:text-2xl md:text-3xl mb-1">it all started</span>
-            <span className="block text-[#DAAF18] text-2xl sm:text-3xl md:text-4xl drop-shadow-sm">with a craving...</span>
+            <span className="block text-[#FACC15] text-2xl sm:text-3xl md:text-4xl drop-shadow-sm">with a craving...</span>
           </h2>
 
           <div className="space-y-6 mb-10">

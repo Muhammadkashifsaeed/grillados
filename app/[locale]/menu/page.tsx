@@ -34,7 +34,7 @@ export default function MenuPage() {
       <div className="fixed inset-0 bg-black/90 z-0"></div>
 
       {/* Content wrapper */}
-      <div className="relative z-10 flex flex-col w-full">
+      <div className="relative z-10 flex flex-col w-full gap-[2px] bg-black">
       <AppetizersMenuSection />
       <ChickenSpecialsMenuSection />
       <BeefLambSpecialsMenuSection />
@@ -45,9 +45,6 @@ export default function MenuPage() {
       <GarnishedRiceSauceMenuSection />
       <SpecialtyDrinksMenuSection />
       <DessertMenuSection />
-
-
-
       </div>
     </main>
   );

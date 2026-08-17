@@ -26,7 +26,7 @@ export const SpecialtyDrinksMenuSection = () => {
   const t = useTranslations('SpecialtyDrinks');
 
   return (
-    <section className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
+    <section className="relative w-full py-10 lg:pt-8 lg:pb-32 bg-[#0a0a0a]">
       {/* Background with subtle food outline pattern */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -49,23 +49,23 @@ export const SpecialtyDrinksMenuSection = () => {
           }
         `}</style>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 w-full">
+        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-10 lg:gap-8 w-full lg:pr-[80px]">
 
           {/* Left Column: Menu Items */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col justify-center"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full lg:w-1/2 flex flex-col justify-start"
           >
             <div className="mb-8 lg:mb-10 flex flex-col items-start">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
                 {t('heading')}<br />
                 {t('subheading')}
               </h2>
               {/* Divider matched to heading width using w-full max-w limit to not stretch fully */}
-              <div className="w-full max-w-50 md:max-w-62.5 lg:max-w-80 h-1.5 bg-[#fbbc04] mt-4"></div>
+              <div className="w-full max-w-50 md:max-w-62.5 lg:max-w-80 h-1.5 bg-[#FAAE40] mt-4"></div>
             </div>
 
             <div className="flex flex-col gap-3 md:gap-4 w-full">
@@ -96,8 +96,8 @@ export const SpecialtyDrinksMenuSection = () => {
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-stretch justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] pt-8 pb-0 lg:py-12"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] pt-8 lg:pt-0 pb-0 lg:pb-32 pr-12 md:pr-16 lg:pr-0"
           >
             <div className="relative w-full h-full aspect-[4/3] lg:min-h-[500px]">
               {/* Desktop Image */}
@@ -106,7 +106,7 @@ export const SpecialtyDrinksMenuSection = () => {
                 alt="Specialty Drinks"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 lg:scale-100 drop-shadow-2xl hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-top scale-95 lg:scale-[1.15] origin-top drop-shadow-2xl hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

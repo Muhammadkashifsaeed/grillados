@@ -16,6 +16,26 @@ export default function GalleryContent() {
   // Lightbox State
   const [index, setIndex] = useState(-1);
 
+  // Videos State
+  const [visibleVideos, setVisibleVideos] = useState(6);
+
+  const featuredVideo = "IkFFzzz7Sec";
+  const gridVideos = [
+    "IkFFzzz7Sec",
+    "tPk2299h7AU",
+    "-EbmPDiUtIQ",
+    "PSIW3mBCrb0",
+    "8xszHqRq_8E",
+    "XjuvDiLlbDE",
+    "J0bQraF2Bhk",
+    "W2r3PI_MyPw",
+    "1kWV8Z1EQII"
+  ];
+
+  const handleLoadMore = () => {
+    setVisibleVideos(prev => Math.min(prev + 3, gridVideos.length));
+  };
+
   // Generate array of 37 images: cable1.png to cable37.png
   const images = Array.from({ length: 37 }, (_, i) => ({
     src: `/images/cable${i + 1}.png`,
@@ -89,14 +109,76 @@ export default function GalleryContent() {
 
         {/* Videos Tab Content */}
         {activeTab === 'videos' && (
-          <div className="w-full flex flex-col items-center justify-center py-20 text-center">
-            <div className="w-24 h-24 mb-6 text-gray-300">
-              <svg fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
-              </svg>
+          <div className="w-full flex flex-col items-center">
+            {/* Featured Video */}
+            <a 
+              href={`https://www.youtube.com/watch?v=${featuredVideo}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative w-full aspect-video mb-12 overflow-hidden shadow-2xl cursor-pointer block"
+            >
+              <img
+                src={`https://img.youtube.com/vi/${featuredVideo}/hqdefault.jpg`}
+                alt="Featured Video"
+                className="absolute top-0 left-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-20 h-14 bg-black/70 rounded-xl flex items-center justify-center shadow-lg">
+                  <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+
+            {/* Grid Videos */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-12">
+              {gridVideos.slice(0, visibleVideos).map((vid, idx) => (
+                <a 
+                  key={idx} 
+                  href={`https://www.youtube.com/watch?v=${vid}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full aspect-video overflow-hidden shadow-lg cursor-pointer block"
+                >
+                  <img
+                    src={`https://img.youtube.com/vi/${vid}/hqdefault.jpg`}
+                    alt={`Video ${idx + 1}`}
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-11 bg-black/70 rounded-lg flex items-center justify-center shadow-lg">
+                      <svg className="w-6 h-6 text-white fill-current ml-1" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              ))}
             </div>
-            <h3 className="text-3xl font-bold text-gray-800 mb-2">{t('btnVideos')}</h3>
-            <p className="text-gray-500 text-lg">{t('videosComingSoon')}</p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full">
+              {visibleVideos < gridVideos.length && (
+                <button 
+                  onClick={handleLoadMore}
+                  className="px-8 py-3 rounded-full font-bold text-lg bg-black text-white hover:bg-gray-800 transition-all duration-300 shadow-md"
+                >
+                  Load More
+                </button>
+              )}
+              <a 
+                href="https://www.youtube.com/channel/UCwa_w9BuVndNvHcZ9vUb5sA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 rounded-full font-bold text-lg bg-blue-600 text-white hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-600/30 flex items-center gap-2"
+              >
+                <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                </svg>
+                Subscribe
+              </a>
+            </div>
           </div>
         )}
       </div>

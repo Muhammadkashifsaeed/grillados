@@ -16,6 +16,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Grillado's",
   description: "Premium Restaurant",
+  icons: {
+    icon: "/images/13332603_transparent.png",
+  },
 };
 
 export default async function RootLayout({

@@ -8,11 +8,11 @@ export const MenuHeading = ({ title }: MenuHeadingProps) => {
   return (
     <div className="mb-8 lg:mb-10 flex flex-col items-start w-full">
       <h2 
-        className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight"
+        className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight"
       >
         {title}
       </h2>
-      <div className="w-full max-w-40 md:max-w-48 lg:max-w-64 h-1.5 bg-[#fbbc04] mt-3 md:mt-4" />
+      <div className="w-full max-w-40 md:max-w-48 lg:max-w-64 h-1.5 bg-[#FAAE40] mt-3 md:mt-4" />
     </div>
   );
 };

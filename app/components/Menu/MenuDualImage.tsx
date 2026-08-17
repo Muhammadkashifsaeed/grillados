@@ -9,8 +9,8 @@ interface MenuDualImageProps {
   mobileRightImageSrc?: string;
 }
 
-export const MenuDualImage = ({ 
-  leftImageSrc, 
+export const MenuDualImage = ({
+  leftImageSrc,
   rightImageSrc,
   mobileLeftImageSrc,
   mobileRightImageSrc,
@@ -21,8 +21,8 @@ export const MenuDualImage = ({
         initial={{ opacity: 0, y: -80 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`w-full flex flex-col md:flex-row items-center justify-center ${(mobileLeftImageSrc || mobileRightImageSrc) ? 'py-4 lg:py-8' : 'py-0 lg:py-8'}`}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className={`w-full flex flex-col md:flex-row items-center justify-end lg:pr-[80px] ${(mobileLeftImageSrc || mobileRightImageSrc) ? 'py-4 lg:pt-0 lg:pb-32' : 'py-0 lg:pt-0 lg:pb-32'}`}
       >
         {/* Desktop Left Image */}
         <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-10 hidden md:block">
@@ -31,7 +31,7 @@ export const MenuDualImage = ({
             alt="Menu Item Left"
             fill
             sizes="(max-width: 768px) 100vw, 60vw"
-            className="object-contain object-bottom md:object-bottom-right scale-115 drop-shadow-2xl"
+            className="object-contain object-bottom md:object-bottom-right scale-[1.15] drop-shadow-2xl"
             priority
           />
         </div>
@@ -43,7 +43,7 @@ export const MenuDualImage = ({
             alt="Menu Item Right"
             fill
             sizes="(max-width: 768px) 100vw, 60vw"
-            className="object-contain object-top md:object-bottom-left scale-115 drop-shadow-2xl"
+            className="object-contain object-top md:object-bottom-left scale-[1.15] drop-shadow-2xl"
           />
         </div>
 

@@ -12,15 +12,16 @@ export default function GalleryHero() {
     <section className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/amaizing.png"
+        src="/images/Picture-background.png"
         alt="Gallery Hero"
         fill sizes="100vw"
         className="object-cover"
+        quality={100}
+        unoptimized={true}
         priority
       />
-      
-      {/* Dark Overlay for text visibility */}
-      <div className="absolute inset-0 bg-black/60" />
+
+      {/* No overlay to keep dishes clear */}
 
       {/* Content */}
       <div className="relative z-10 text-center px-4">

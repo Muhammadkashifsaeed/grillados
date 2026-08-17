@@ -12,7 +12,7 @@ const HeroSection = () => {
   const router = useRouter();
 
   return (
-    <section className="relative w-full h-[85vh] min-h-150 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
+    <section className="relative w-full h-[85vh] min-h-150 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8 lg:mt-[5px] xl:mt-2 2xl:mt-3">
       
       {/* Background Image with Cinematic Zoom and floating */}
       <motion.div 

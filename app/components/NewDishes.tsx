@@ -8,22 +8,7 @@ import { Link } from '@/i18n/routing';
 
 const NewDishes = () => {
   const t = useTranslations('NewDishes');
-  const [currentVideo, setCurrentVideo] = useState(0);
-
-  // Array of video IDs for the carousel
-  const videoIds = [
-    "QpcvfWCcBVY", // Original video
-    "M7lc1UVf-VE", // Placeholder food video 1
-    "tgbNymZ7vqY"  // Placeholder food video 2
-  ];
-
-  const nextVideo = () => {
-    setCurrentVideo((prev) => (prev === videoIds.length - 1 ? 0 : prev + 1));
-  };
-
-  const prevVideo = () => {
-    setCurrentVideo((prev) => (prev === 0 ? videoIds.length - 1 : prev - 1));
-  };
+  const videoId = "QpcvfWCcBVY"; // Original video
 
   return (
     <section className="w-full bg-white overflow-hidden">
@@ -31,45 +16,17 @@ const NewDishes = () => {
         
         <div className="flex flex-col lg:flex-row items-center">
           
-          {/* Left Column: YouTube Video Carousel */}
-          <div className="w-full lg:w-1/2 relative overflow-hidden aspect-video shrink-0 bg-zinc-900 group self-end">
+          {/* Left Column: YouTube Video */}
+          <div className="w-full lg:w-1/2 relative overflow-hidden aspect-video shrink-0 bg-zinc-900 self-end">
             {/* 16:9 Aspect Ratio container prevents black bars, full 100% width/height shows everything clearly */}
             <div className="absolute inset-0 w-full h-full pointer-events-none">
               <iframe
-                key={videoIds[currentVideo]}
-                src={`https://www.youtube.com/embed/${videoIds[currentVideo]}?autoplay=1&mute=1&loop=1&controls=0&playlist=${videoIds[currentVideo]}&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3`}
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&controls=0&playlist=${videoId}&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3`}
                 title="Grillados New Dishes"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 className="w-full h-full"
                 style={{ border: 'none' }}
               ></iframe>
-            </div>
-
-            {/* Carousel Navigation Buttons Overlay */}
-            <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <button 
-                onClick={prevVideo}
-                className="w-10 h-10 md:w-12 md:h-12 bg-black/50 hover:bg-[#E04B51] rounded-full flex items-center justify-center text-white backdrop-blur-sm transition-colors shadow-lg z-10"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button 
-                onClick={nextVideo}
-                className="w-10 h-10 md:w-12 md:h-12 bg-black/50 hover:bg-[#E04B51] rounded-full flex items-center justify-center text-white backdrop-blur-sm transition-colors shadow-lg z-10"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-            
-            {/* Dots Indicator */}
-            <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
-              {videoIds.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentVideo(idx)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentVideo === idx ? 'bg-[#E04B51] w-8' : 'bg-white/50 hover:bg-white'}`}
-                />
-              ))}
             </div>
           </div>
 

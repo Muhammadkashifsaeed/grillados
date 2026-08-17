@@ -30,8 +30,17 @@ const AboutUsCertified = () => {
   ];
 
   return (
-    <section className="bg-white pt-16 md:pt-24 pb-4 md:pb-8 px-4 sm:px-6 lg:px-8 w-full">
+    <section className="bg-white pt-4 md:pt-8 pb-4 md:pb-8 px-4 sm:px-6 lg:px-8 w-full">
       <div className="max-w-7xl mx-auto">
+        
+        {/* Centered Heading */}
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black font-['Outfit',sans-serif] uppercase tracking-wide leading-tight">
+            Being <br />
+            <span className="text-[#FACC15] drop-shadow-sm">Healthy!</span>
+          </h2>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 text-center">
           
           {cards.map((card) => (

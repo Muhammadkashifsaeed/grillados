@@ -41,7 +41,7 @@ export const GarnishedRiceSauceMenuSection = () => {
       name: t('sauces.average'),
       description: t('sauces.averageDesc'),
       image: '/images/Fiery1.png',
-      colorClass: 'text-[#fbbc04]',
+      colorClass: 'text-[#FAAE40]',
     },
     {
       name: t('sauces.strong'),
@@ -99,7 +99,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
+                    transition={{ duration: 0.8, delay: index * 0.15, ease: "easeOut" }}
                     className="flex flex-col md:flex-row items-center w-full gap-4 md:gap-8 lg:gap-10"
                   >
                     <div className="relative w-36 h-36 md:w-36 md:h-36 lg:w-48 lg:h-48 shrink-0">
@@ -127,14 +127,14 @@ export const GarnishedRiceSauceMenuSection = () => {
         rightContent={
           <div className="w-full flex flex-col items-center justify-start gap-8">
             {/* Top Large Peri Image */}
-            <div className="relative w-full py-4 lg:py-8 flex justify-center">
+            <div className="relative w-full py-4 lg:pt-8 lg:pb-32 flex justify-center">
               {/* Desktop Image */}
               <Image 
                 src="/images/zasty.png"
                 alt="Zesty Food"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 lg:scale-100 drop-shadow-2xl hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-top scale-95 lg:scale-[1.15] origin-top drop-shadow-2xl hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

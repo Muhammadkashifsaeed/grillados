@@ -34,7 +34,7 @@ const menuItems = [
 
 export const PlateauxMenuSection = () => {
   return (
-    <section id="platters" className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
+    <section id="plateaux" className="relative w-full py-10 lg:py-8 bg-[#0a0a0a]">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -51,24 +51,24 @@ export const PlateauxMenuSection = () => {
 
 
         {/* ZONE 2: Bottom row */}
-        <div className="contents lg:flex lg:flex-row items-start justify-between gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-10 lg:gap-8 w-full lg:pr-[80px]">
 
           {/* LEFT: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex flex-col justify-center order-3 lg:order-none mt-0"
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="w-full lg:w-1/2 flex flex-col justify-start order-3 lg:order-none mt-0"
           >
             <div className="mb-10">
               <h2
-                className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] uppercase tracking-wide"
+                className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] uppercase tracking-wide"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 GRILLADO&apos;S<br />PLATEAUX
               </h2>
-              <div className="w-full h-1.5 bg-[#fbbc04] mt-3" />
+              <div className="w-full h-1.5 bg-[#FAAE40] mt-3" />
             </div>
 
             <div className="flex flex-col gap-5 md:gap-6 w-full">
@@ -112,11 +112,11 @@ export const PlateauxMenuSection = () => {
 
           {/* RIGHT: Fade-in from right — reserved for visual balance */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 hidden lg:flex items-center justify-center lg:justify-end relative lg:min-h-[500px] pt-8 pb-0 lg:py-12 mx-auto lg:mt-0 lg:mb-0 pr-12 md:pr-16 lg:pr-[80px]"
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="w-full lg:w-1/2 hidden lg:flex items-start justify-center lg:justify-end relative lg:min-h-[500px] pt-8 lg:pt-0 pb-0 lg:pb-32 mx-auto lg:mt-0 lg:mb-0 pr-12 md:pr-16 lg:pr-0"
           >
             {/* Desktop Image */}
             <Image
@@ -124,7 +124,7 @@ export const PlateauxMenuSection = () => {
               alt="Grillado Plateaux Featured"
               width={1000}
               height={750}
-              className="w-full h-auto object-contain object-center lg:object-right drop-shadow-2xl rounded-2xl lg:rounded-none scale-100 lg:scale-100 hidden md:block"
+              className="w-full h-auto object-contain object-top lg:object-right-top drop-shadow-2xl rounded-2xl lg:rounded-none scale-100 lg:scale-[1.15] origin-top hidden md:block"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
 

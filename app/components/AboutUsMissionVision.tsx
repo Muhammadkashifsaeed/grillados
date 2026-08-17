@@ -12,7 +12,7 @@ const AboutUsMissionVision = () => {
             Our Mission
           </h2>
           {/* Yellow Divider */}
-          <div className="w-16 h-1 bg-[#DAAF18] mb-8"></div>
+          <div className="w-16 h-1 bg-[#FACC15] mb-8"></div>
           
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium mb-6">
             Our goal is to become the world’s leading brand in fast-paced, casual dining, by combining great quality and a healthy choice for food-lovers globally.
@@ -28,7 +28,7 @@ const AboutUsMissionVision = () => {
             Our Vision
           </h2>
           {/* Yellow Divider */}
-          <div className="w-16 h-1 bg-[#DAAF18] mb-8"></div>
+          <div className="w-16 h-1 bg-[#FACC15] mb-8"></div>
           
           <ul className="flex flex-col space-y-6">
             <li className="flex items-start gap-4">

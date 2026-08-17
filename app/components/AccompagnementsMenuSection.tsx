@@ -17,7 +17,7 @@ const menuItems = [
 
 export const AccompagnementsMenuSection = () => {
   return (
-    <section className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
+    <section id="accompagnements" className="relative w-full py-10 lg:py-8 bg-[#0a0a0a]">
       {/* Background with subtle food outline pattern */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -38,7 +38,7 @@ export const AccompagnementsMenuSection = () => {
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="w-full lg:w-1/2 flex items-center justify-center relative lg:min-h-[500px] pt-8 lg:pt-0 md:mb-16 lg:mb-0"
           >
             <div className="relative w-full h-full lg:min-h-[500px]">
@@ -72,14 +72,14 @@ export const AccompagnementsMenuSection = () => {
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="w-full lg:w-1/2 flex flex-col justify-center"
           >
             <div className="mb-8 lg:mb-10">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
                 ACCOMPAGNEMENTS
               </h2>
-              <div className="w-full h-1.5 bg-[#fbbc04] mt-3"></div>
+              <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
             </div>
 
             <div className="flex flex-col gap-4 md:gap-5 w-full">
@@ -108,7 +108,7 @@ export const AccompagnementsMenuSection = () => {
                 <h3 className="text-red-600 text-sm md:text-base font-bold uppercase tracking-widest mb-1.5 md:mb-2">
                   SEASONAL
                 </h3>
-                <p className="text-[#fbbc04] text-xl md:text-2xl font-bold font-['Outfit',sans-serif]">
+                <p className="text-[#FAAE40] text-xl md:text-2xl font-bold font-['Outfit',sans-serif]">
                   Sides Large 8.99 & Sharable 12.99
                 </p>
               </div>

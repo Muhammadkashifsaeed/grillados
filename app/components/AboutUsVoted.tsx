@@ -16,13 +16,13 @@ const AboutUsVoted = () => {
       </div>
 
       {/* Center Box */}
-      <div className="relative z-10 w-full max-w-4xl bg-[#808080] border-4 border-[#DAAF18] rounded-xl shadow-xl p-6 sm:p-10 text-center flex flex-col items-center justify-center mx-12 sm:mx-24">
+      <div className="relative z-10 w-full max-w-4xl bg-[#808080] border-4 border-[#FACC15] rounded-xl shadow-xl p-6 sm:p-10 text-center flex flex-col items-center justify-center mx-12 sm:mx-24">
         
-        <p className="text-white text-sm sm:text-lg font-medium mb-3 leading-relaxed">
-          <span className="text-[#DAAF18]">Grillado’s™</span> was launched in Montreal back in 2015 and was voted the
+        <p className="text-white text-base sm:text-xl md:text-2xl font-bold font-['Outfit',sans-serif] leading-relaxed mb-4">
+          <span className="text-[#FACC15]">Grillado’s™</span> was launched in Montreal back in 2015 and was voted the
         </p>
 
-        <h2 className="text-[#DAAF18] text-lg sm:text-2xl md:text-3xl font-extrabold uppercase tracking-wide font-['Outfit',sans-serif] mb-3 drop-shadow-md whitespace-nowrap">
+        <h2 className="text-[#FACC15] text-lg sm:text-2xl md:text-3xl font-extrabold uppercase tracking-wide font-['Outfit',sans-serif] mb-3 drop-shadow-md whitespace-nowrap">
           "Hottest New Restaurant in Montreal"
         </h2>
 

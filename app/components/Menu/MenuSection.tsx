@@ -11,10 +11,11 @@ export const MenuSection = ({
   children, 
   id,
   bgTexture = "/images/footer-doodle.png",
-  bgOpacity = "opacity-40"
+  bgOpacity = "opacity-40",
+  className = ""
 }: MenuSectionProps) => {
   return (
-    <section id={id} className="relative w-full pt-5 lg:pt-12 pb-4 lg:pb-16 bg-[#0a0a0a] ">
+    <section id={id} className={`relative w-full py-10 lg:py-8 bg-[#0a0a0a] ${className}`}>
       {/* Background Texture */}
       <div 
         className={`absolute inset-0 z-0 ${bgOpacity} pointer-events-none`}

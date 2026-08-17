@@ -45,7 +45,7 @@ const NewDishesSection = () => {
   };
 
   return (
-    <section className="w-full pt-8 md:pt-16 pb-0 bg-white overflow-hidden">
+    <section className="w-full pt-8 md:pt-16 pb-4 md:pb-8 bg-white overflow-hidden">
       <div className="w-full px-6 md:px-10 lg:px-16 mx-auto">
         
         {/* Heading */}
@@ -72,14 +72,16 @@ const NewDishesSection = () => {
               {images.map((image, idx) => (
                 <div 
                   key={idx} 
-                  className="shrink-0 relative h-[250px] md:h-[300px] lg:h-[320px]"
+                  className="shrink-0 relative flex items-center justify-center"
                   style={{ width: `${100 / itemsPerView}%` }}
                 >
                   <Image 
                     src={image.src} 
                     alt={image.alt} 
-                    fill sizes="100vw" 
-                    className="object-cover"
+                    width={1200}
+                    height={800}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               ))}

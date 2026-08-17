@@ -19,7 +19,7 @@ const menuItems = [
 
 export const AppetizersMenuSection = () => {
   return (
-    <section id="appetizers" className="relative w-full py-10 lg:py-16 bg-[#0a0a0a]">
+    <section id="appetizers" className="relative w-full py-10 lg:py-8 bg-[#0a0a0a]">
       {/* 
         Background with subtle food outline pattern. 
         Update the URL if you have a specific pattern image.
@@ -36,21 +36,21 @@ export const AppetizersMenuSection = () => {
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 w-full">
+        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-10 lg:gap-8 w-full lg:pr-[80px]">
 
           {/* Left Column: Menu Items */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col justify-center"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full lg:w-1/2 flex flex-col justify-start"
           >
             <div className="mb-10">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
                 APPETIZERS
               </h2>
-              <div className="w-full h-1.5 bg-[#fbbc04] mt-3"></div>
+              <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
             </div>
 
             <div className="flex flex-col gap-4 md:gap-5 w-full">
@@ -86,8 +86,8 @@ export const AppetizersMenuSection = () => {
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative lg:min-h-[500px] pt-8 pb-0 lg:py-12 mx-auto lg:mt-0 pr-14 md:pr-0 lg:pr-8"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end relative lg:min-h-[500px] pt-8 lg:pt-0 pb-0 lg:pb-32 mx-auto lg:mt-0 pr-12 md:pr-16 lg:pr-0"
           >
             {/* Desktop Image */}
             <Image
@@ -95,7 +95,7 @@ export const AppetizersMenuSection = () => {
               alt="Open Appetizers"
               width={1000}
               height={750}
-              className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 lg:scale-100 hidden md:block"
+              className="w-full h-auto object-contain object-top drop-shadow-2xl rounded-xl lg:rounded-none scale-100 lg:scale-[1.15] origin-top hidden md:block"
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />

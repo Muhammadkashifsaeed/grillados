@@ -79,7 +79,7 @@ const BlogsSection = () => {
                   className="px-4"
                   style={{ minWidth: `${100 / itemsPerView}%` }}
                 >
-                  <div className="bg-white shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden h-full flex flex-col border border-gray-100 group">
+                  <div className="bg-white shadow-md overflow-hidden h-full flex flex-col border border-gray-100">
                     
                     {/* Blog Image */}
                     <div className="relative w-full h-48 sm:h-56 bg-white overflow-hidden border-b border-gray-100">
@@ -87,7 +87,7 @@ const BlogsSection = () => {
                         src={blog.image} 
                         alt={t(`${blog.tKey}.title`)} 
                         fill sizes="100vw" 
-                        className="object-contain p-2 transition-transform duration-700 ease-in-out group-hover:scale-110" 
+                        className="object-contain p-2 rounded-xl" 
                       />
                     </div>
                     
