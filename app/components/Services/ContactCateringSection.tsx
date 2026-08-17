@@ -86,7 +86,7 @@ export default function ContactCateringSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-4xl md:text-5xl lg:text- font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide mb-10 text-center drop-shadow-lg"
         >
-          Contact Us
+          Get in touch
         </motion.h1>
 
         {/* Glassmorphism Form Container */}
@@ -147,6 +147,7 @@ export default function ContactCateringSection() {
                       <input 
                         type="tel" 
                         placeholder="Phone Number" 
+                        required
                         className="flex-1 h-full px-4 text-gray-900 focus:outline-none placeholder:text-gray-400 font-medium rounded-r-xl" 
                       />
                     </div>
@@ -161,7 +162,7 @@ export default function ContactCateringSection() {
                   </div>
                   <div>
                     <label className={labelClass}>Email Address*</label>
-                    <input type="email" placeholder="Email Address" className={inputClass} />
+                    <input type="email" placeholder="Email Address" required className={inputClass} />
                   </div>
                 </div>
                 
@@ -176,14 +177,14 @@ export default function ContactCateringSection() {
                 {/* Left */}
                 <div>
                   <label className={labelClass}>Number of Guests*</label>
-                  <input type="text" placeholder="10 to 10,000" className={inputClass} />
+                  <input type="text" placeholder="10 to 10,000" required className={inputClass} />
                 </div>
 
                 {/* Right */}
                 <div>
                   <label className={labelClass}>Delivery Date*</label>
                   <div className="relative">
-                    <input type="date" className={`${inputClass} text-gray-400 appearance-none`} />
+                    <input type="date" required className={`${inputClass} text-gray-400 appearance-none`} />
                     {/* Custom Calendar Icon Overlay to match design if native isn't enough, but native date picker works */}
                   </div>
                 </div>
@@ -192,7 +193,7 @@ export default function ContactCateringSection() {
               {/* Full Width */}
               <div className="mb-6">
                 <label className={labelClass}>Delivery Time*</label>
-                <input type="time" placeholder="16:00" className={inputClass} />
+                <input type="time" placeholder="16:00" required className={inputClass} />
               </div>
 
               <div>
@@ -223,27 +224,27 @@ export default function ContactCateringSection() {
                 {/* Full Width Address */}
                 <div>
                   <label className={labelClass}>Address*</label>
-                  <input type="text" placeholder="Address" className={inputClass} />
+                  <input type="text" placeholder="Address" required className={inputClass} />
                 </div>
 
                 {/* City & Postal Code */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   <div>
                     <label className={labelClass}>City*</label>
-                    <input type="text" placeholder="City" className={inputClass} />
+                    <input type="text" placeholder="City" required className={inputClass} />
                   </div>
                   <div>
                     <label className={labelClass}>Postal Code*</label>
-                    <input type="text" placeholder="Postal Code" className={inputClass} />
+                    <input type="text" placeholder="Postal Code" required className={inputClass} />
                   </div>
                 </div>
 
                 {/* Nearby Landmark Select */}
                 <div>
-                  <label className={labelClass}>Nearby Landmark*</label>
+                  <label className={labelClass}>Nearby Location on popup*</label>
                   <div className="relative">
-                    <select defaultValue="" className={`${inputClass} appearance-none cursor-pointer text-gray-500`}>
-                      <option value="" disabled>Select Nearby Landmark</option>
+                    <select defaultValue="" required className={`${inputClass} appearance-none cursor-pointer text-gray-500`}>
+                      <option value="" disabled>Select Nearby Location</option>
                       <option value="laval">LAVAL</option>
                       <option value="milton">MILTON</option>
                       <option value="cambridge">CAMBRIDGE</option>
@@ -269,7 +270,7 @@ export default function ContactCateringSection() {
                   </svg>
                 </div>
                 <span className="text-gray-300 text-sm leading-relaxed select-none group-hover:text-white transition-colors duration-200">
-                  I agree to receive SMS notifications, alerts, and occasional marketing messages. Message frequency may vary. Standard messaging rates may apply. Reply STOP to unsubscribe or HELP for assistance.
+                  I consent to receive SMS notifications, alerts, and occasional marketing messages. Message frequency varies; standard rates apply. Text HELP for support or STOP to unsubscribe.
                 </span>
               </label>
 
@@ -302,9 +303,9 @@ export default function ContactCateringSection() {
 
               {/* Legal Links */}
               <div className="mt-6 flex items-center gap-2 text-sm text-blue-400 font-medium">
-                <Link href="#" className="hover:text-blue-300 hover:underline transition-colors">Privacy Policy</Link>
+                <Link href="/privacy" className="hover:text-blue-300 hover:underline transition-colors">Privacy Policy</Link>
                 <span className="text-gray-500">|</span>
-                <Link href="#" className="hover:text-blue-300 hover:underline transition-colors">Terms & Conditions</Link>
+                <Link href="/terms" className="hover:text-blue-300 hover:underline transition-colors">Terms & Conditions</Link>
               </div>
 
             </div>

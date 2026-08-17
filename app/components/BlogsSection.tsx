@@ -79,15 +79,17 @@ const BlogsSection = () => {
                   className="px-4"
                   style={{ minWidth: `${100 / itemsPerView}%` }}
                 >
-                  <div className="bg-white shadow-md overflow-hidden h-full flex flex-col border border-gray-100">
+                  <div className="bg-white shadow-md overflow-hidden h-full flex flex-col border border-gray-100 rounded-2xl">
                     
                     {/* Blog Image */}
-                    <div className="relative w-full h-48 sm:h-56 bg-white overflow-hidden border-b border-gray-100">
+                    <div className="w-full bg-white overflow-hidden border-b border-gray-100">
                       <Image 
                         src={blog.image} 
                         alt={t(`${blog.tKey}.title`)} 
-                        fill sizes="100vw" 
-                        className="object-contain p-2 rounded-xl" 
+                        width={600}
+                        height={400}
+                        sizes="100vw" 
+                        className="w-full h-auto object-contain" 
                       />
                     </div>
                     

@@ -23,3 +23,12 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
+
+@keyframes color-blink {
+  0%, 100% { color: white; }
+  50% { color: black; }
+}
+
+.animate-text-blink {
+  animation: color-blink 1.5s infinite;
+}

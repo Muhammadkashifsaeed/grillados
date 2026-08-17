@@ -39,7 +39,7 @@ export const Header = () => {
         </Link>
 
         {/* Center: Navigation & Language Switcher (Desktop Only) */}
-        <div className="hidden lg:flex flex-1 items-center justify-center min-w-0">
+        <div className="hidden lg:flex flex-1 items-center justify-center min-w-0 relative z-10">
           <nav className="flex items-center gap-0.5 xl:gap-2 bg-white/5 px-1.5 xl:px-3 py-1.5 rounded-2xl backdrop-blur-sm border border-white/5 flex-nowrap">
             <NavItem href="/menu" icon={<Utensils className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('menu')} />
             <NavItem href="/locations" icon={<MapPin className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('locations')} />
@@ -49,7 +49,7 @@ export const Header = () => {
             <NavItem href="/catering" icon={<Truck className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('cateringServices')} />
 
             {/* Pages Dropdown */}
-            <div className="relative group flex items-center h-full cursor-pointer py-1 pl-1 pr-2">
+            <div className="relative group flex items-center h-full cursor-pointer py-1 pl-1 pr-1 xl:pr-2">
               <div className="pointer-events-none">
                 <NavItem href="/pages" icon={<FileText className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('pages')} dropdown />
               </div>
@@ -64,7 +64,7 @@ export const Header = () => {
             </div>
 
             {/* Language Switcher - Grouped with Nav */}
-            <div className="flex items-center gap-1 xl:gap-2 pl-2 xl:pl-4 ml-1 xl:ml-2 border-l border-white/20">
+            <div className="flex items-center gap-0.5 xl:gap-1 pl-1.5 xl:pl-2 border-l border-white/20 mr-1 xl:mr-2">
               <button
                 type="button"
                 onClick={() => switchLanguage('en')}
@@ -86,11 +86,11 @@ export const Header = () => {
         </div>
 
         {/* Right Side: Order Online Button & Mobile Menu */}
-        <div className="flex items-center gap-2 xl:gap-4 h-full py-2 shrink-0 ml-2">
+        <div className="flex items-center gap-2 xl:gap-4 h-full py-2 shrink-0 ml-2 relative z-20">
           
           <Link
             href="/order"
-            className="h-8 md:h-10 lg:h-full inline-flex items-center justify-center gap-1 xl:gap-1.5 bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white font-extrabold px-2 sm:px-3 lg:px-2.5 xl:px-3 rounded-lg xl:rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50"
+            className="h-8 md:h-10 lg:h-full inline-flex items-center justify-center gap-1 xl:gap-1.5 bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white font-extrabold px-2 sm:px-3 lg:px-2.5 xl:px-3 rounded-lg xl:rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink"
           >
             <ShoppingBag className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
             <div className="flex flex-col text-left">

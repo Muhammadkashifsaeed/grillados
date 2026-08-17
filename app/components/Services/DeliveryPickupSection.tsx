@@ -7,12 +7,12 @@ import { motion } from 'framer-motion';
 export default function DeliveryPickupSection() {
   return (
     <section className="relative w-full overflow-hidden bg-linear-to-r from-[#f08519] to-[#DAAF18]">
-      
+
       <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 items-stretch">
-        
+
         {/* Left Column: Content */}
         <div className="flex flex-col items-center justify-center text-center px-6 md:px-12 lg:px-20 xl:px-24 py-12 md:py-16">
-          
+
           {/* Top Icon: Vector.png */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -57,40 +57,22 @@ export default function DeliveryPickupSection() {
           {/* Delivery Partner Logos */}
           <div className="flex flex-col items-center gap-4">
             {/* Top Row: Rectangle1 and Rectangle2 */}
-            <div className="flex flex-row gap-4">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-                className="bg-white rounded-2xl w-35 h-15 md:w-40 md:h-17.5 relative shadow-md hover:scale-105 transition-transform duration-300 overflow-hidden px-4"
-              >
-                <Image src="/images/Rectangle1.png" alt="Delivery Partner 1" fill className="object-contain p-2" sizes="160px" />
-              </motion.div>
+            <div className="flex flex-row gap-8 md:gap-10">
+              <div className="bg-transparent w-35 h-15 md:w-40 md:h-17.5 relative px-4">
+                <Image src="/images/Rectangle1.png" alt="Delivery Partner 1" fill className="object-contain scale-[1.15] mix-blend-multiply" sizes="160px" />
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-                className="bg-white rounded-2xl w-35 h-15 md:w-40 md:h-17.5 relative shadow-md hover:scale-105 transition-transform duration-300 overflow-hidden px-4"
-              >
-                <Image src="/images/Rectangle2.png" alt="Delivery Partner 2" fill className="object-contain p-2" sizes="160px" />
-              </motion.div>
+              <div className="bg-transparent w-35 h-15 md:w-40 md:h-17.5 relative px-4">
+                <Image src="/images/Rectangle2.png" alt="Delivery Partner 2" fill className="object-contain scale-[1.15] mix-blend-multiply" sizes="160px" />
+              </div>
             </div>
-            
+
             {/* Bottom Row: Rectangle3 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-              className="bg-white rounded-2xl w-35 h-15 md:w-40 md:h-17.5 relative shadow-md hover:scale-105 transition-transform duration-300 overflow-hidden px-4"
-            >
-              <Image src="/images/Rectangle3.png" alt="Delivery Partner 3" fill className="object-contain p-2" sizes="160px" />
-            </motion.div>
+            <div className="bg-transparent w-35 h-15 md:w-40 md:h-17.5 relative px-4 mt-4">
+              <Image src="/images/Rectangle3.png" alt="Delivery Partner 3" fill className="object-contain scale-[1.15] mix-blend-multiply" sizes="160px" />
+            </div>
           </div>
-          
+
         </div>
 
         {/* Right Column: Hero Image */}

@@ -91,21 +91,21 @@ export const Footer = () => {
                 className="w-56 h-auto scale-110 transform-gpu origin-left"
               />
               <div className="flex items-center gap-3 mt-4">
-                <Link href="https://www.facebook.com/Grillados?mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                <a href="https://www.facebook.com/Grillados?mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
                   <FacebookIcon />
-                </Link>
-                <Link href="https://www.tiktok.com/@grilladoscanada?_t=8fuUZP3nFIc&_r=1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                </a>
+                <a href="https://www.tiktok.com/@grilladoscanada?_t=8fuUZP3nFIc&_r=1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
                   <TikTokIcon />
-                </Link>
-                <Link href="https://www.instagram.com/grilladoscanada?igshid=NGVhN2U2NjQ0Yg%3D%3D" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                </a>
+                <a href="https://www.instagram.com/grilladoscanada?igshid=NGVhN2U2NjQ0Yg%3D%3D" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
                   <InstagramIcon />
-                </Link>
-                <Link href="https://www.youtube.com/channel/UCwa_w9BuVndNvHcZ9vUb5sA" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                </a>
+                <a href="https://www.youtube.com/channel/UCwa_w9BuVndNvHcZ9vUb5sA" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
                   <YoutubeIcon />
-                </Link>
-                <Link href="#" title="Bio Links" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                </a>
+                <a href="https://lnk.bio/grillados" target="_blank" rel="noopener noreferrer" title="Bio Links" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
                   <LinktreeIcon />
-                </Link>
+                </a>
               </div>
             </div>
 

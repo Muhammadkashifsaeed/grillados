@@ -63,7 +63,8 @@
     "heading": "Grillado's Catering Partners",
     "subtitle": "Catering By Grillados Customized Food Catering At Its Best",
     "madeWithLove": "Made with Love",
-    "description": "Whether it's for a small family gathering or a celebration, Grillado Catering wants you to fully enjoy your day with your loved ones and leave the cooking to us. At Grillado Catering, we're here to serve you!"
+    "smallHeading": "Leave the Grill to Us — You Focus on the Memories",
+    "description": "From intimate family dinners to holiday feasts, Grillados brings the flavour\nstraight to your door. Tell us what you need — we do custom\norders because every celebration deserves something special.\n\nServing Cambridge · Laval · Milton · Mississauga    Groups of 10 and above\nFresh grilled, never frozen    Call your nearest location to book"
   },
   "CateringOffers": {
     "offer1": "Offer 1",
@@ -75,8 +76,8 @@
     "orderNow": "ORDER NOW"
   },
   "CateringIntroduction": {
-    "titleColored": "Grillado Catering",
-    "titleBlack": "Customized food.\nCatering at its best.",
+    "titleColored": "Catering By Grillados",
+    "titleBlack": "Customized Food\nCatering At Its Best",
     "p1": "Grillados caters to a wide range of events, including weddings of all sizes, styles, and themes, as well as birthdays, anniversary parties, and family gatherings. Whether it's a corporate event or a community activity, we offer delicious and visually stunning dishes, tailored to your preferences, to elevate your event and create lasting memories.",
     "p2": "At Grillado, you are our priority. We listen carefully to understand your objectives, leveraging our decades of experience and commitment to exceeding your expectations to ensure the success of your event in every aspect.",
     "p3": "Customized menus: Our team works closely with you to develop a menu that reflects your tastes and dietary needs. Whether it's a wedding, a corporate event, or an intimate gathering, we create dishes that will delight every guest.",
@@ -236,7 +237,7 @@
   },
   "CateringHero": {
     "heading": "Catering Services",
-    "description": "Freshly prepared catering for corporate events, private parties, weddings, birthdays, and special occasions. Delicious meals made with quality ingredients and delivered with exceptional service.",
+    "description": "At Grillado’s, we believe healthy food is vital for good health.\nOur health-conscious menu is designed to cater to your health-conscious lifestyle.",
     "orderNow": "Order Now"
   },
   "FranchisingPage": {

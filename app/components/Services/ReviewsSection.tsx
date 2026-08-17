@@ -1,78 +1,85 @@
 "use client";
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 import ReviewCard from './ReviewCard';
 
+const reviewsData = [
+  { avatarSrc: "/images/Ali Z.png",        name: "Ali Z",            date: "7 months ago", review: "Harprith provided amazing services. Great food" },
+  { avatarSrc: "/images/Naz H.png",        name: "Naz H",            date: "7 months ago", review: "GOOd" },
+  { avatarSrc: "/images/yttyts.png",       name: "Usama Ismail",     date: "7 months ago", review: "The user only left a rating." },
+  { avatarSrc: "/images/Mohamed Nagy.png", name: "Mohamed Nagy",     date: "7 months ago", review: "This user only left a rating." },
+  { avatarSrc: "/images/mansnsjd.png",     name: "Jeremias Almazan", date: "7 months ago", review: "Great Customer Service and food was so delicious and cooked with perfection! Highly recommend" },
+  { avatarSrc: "/images/mnsnds.png",       name: "Ashmit Samyal",    date: "7 months ago", review: "The user only left a rating." },
+  { avatarSrc: "/images/Aarif Amin.png",   name: "Aarif Amin",       date: "months ago",   review: "This user only left a rating." },
+];
+
+// Duplicate for seamless infinite loop
+const allCards = [...reviewsData, ...reviewsData];
+
 const ReviewsSection = () => {
-  const t = useTranslations('CateringReviews');
-
-  const reviewKeys = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8'];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-  };
-
   return (
-    <section className="w-full bg-[#FDF8F1] overflow-hidden">
-      <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col items-center">
-        
-        {/* Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col items-center w-full"
-        >
-          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[#F5A623] font-['Outfit',sans-serif] text-center leading-tight">
-            {t('heading')}
+    <section className="w-full bg-[#FDF8F1] py-14 overflow-hidden">
+      <div className="w-full max-w-[1400px] mx-auto px-6 md:px-10">
+
+        {/* Centered Reviews Heading */}
+        <div className="flex flex-col items-center mb-10">
+          <h2 className="text-[42px] md:text-[52px] font-bold text-[#F5A623] font-['Outfit',sans-serif] leading-tight">
+            Reviews
           </h2>
-          <div className="w-[160px] h-[4px] bg-black rounded-full mt-3 mb-[60px]"></div>
-        </motion.div>
+          <div className="w-[110px] h-[3px] bg-black rounded-full mt-2"></div>
+        </div>
 
-        {/* Grid */}
-        <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {reviewKeys.map((key) => (
-            <motion.div key={key} variants={itemVariants} className="h-full">
-              <ReviewCard
-                rating={t(`${key}_rating`)}
-                date={t(`${key}_date`)}
-                review={t(`${key}_review`)}
-                name={t(`${key}_name`)}
-                initials={t(`${key}_initials`)}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
+        {/* Row: GOOD panel + auto-scroll carousel */}
+        <div className="flex items-center gap-6">
 
-        {/* Load More Button */}
-        <motion.button
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 text-black font-bold text-lg bg-transparent hover:text-[#d72323] transition-colors duration-300 outline-none cursor-pointer"
-        >
-          {t('loadMore')}
-        </motion.button>
+          {/* Left: GOOD block */}
+          <div className="flex flex-col items-start shrink-0 w-[170px]">
+            <h3 className="text-4xl font-extrabold text-gray-900 mb-1 tracking-tight font-['Outfit',sans-serif]">GOOD</h3>
+            <div className="flex gap-0.5 mb-1">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-5 h-5 text-[#F5A623] fill-current" viewBox="0 0 24 24">
+                  <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
+                </svg>
+              ))}
+            </div>
+            <p className="text-gray-600 text-[12px] mb-2 font-medium leading-snug">
+              Based on <span className="font-bold text-gray-800">1,779 reviews</span>
+            </p>
+            <img src="/images/logoss.svg" alt="Powered by" className="h-4 object-contain opacity-80" />
+          </div>
+
+          {/* Vertical Divider */}
+          <div className="w-px bg-gray-300 self-stretch shrink-0"></div>
+
+          {/* Auto-scrolling Carousel */}
+          <div className="flex-grow overflow-hidden relative">
+            <div className="flex gap-5 reviews-marquee">
+              {allCards.map((rev, idx) => (
+                <div key={idx} className="w-[280px] shrink-0">
+                  <ReviewCard
+                    name={rev.name}
+                    date={rev.date}
+                    review={rev.review}
+                    avatarSrc={rev.avatarSrc}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
       </div>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes reviewsScroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .reviews-marquee {
+          animation: reviewsScroll 28s linear infinite;
+          width: max-content;
+        }
+      `}} />
     </section>
   );
 };

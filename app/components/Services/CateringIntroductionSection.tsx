@@ -24,10 +24,10 @@ const CateringIntroductionSection = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h2 className="font-bold leading-tight text-[36px] md:text-[48px] lg:text-[60px] text-[#F5A623] font-['Outfit',sans-serif]">
+            <h3 className="font-bold leading-tight text-[24px] md:text-[32px] lg:text-[40px] text-[#F5A623] font-['Outfit',sans-serif]">
               {t('titleColored')}
-            </h2>
-            <h2 className="font-bold leading-tight text-[36px] md:text-[48px] lg:text-[60px] text-black font-['Outfit',sans-serif] mt-2.5 whitespace-pre-line">
+            </h3>
+            <h2 className="font-bold leading-tight text-[36px] md:text-[48px] lg:text-[60px] text-black font-['Outfit',sans-serif] mt-2 whitespace-pre-line">
               {t('titleBlack')}
             </h2>
           </motion.div>

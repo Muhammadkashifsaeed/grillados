@@ -12,7 +12,7 @@ const HeroSection = () => {
   const router = useRouter();
 
   return (
-    <section className="relative w-full h-[85vh] min-h-150 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8 lg:mt-[5px] xl:mt-2 2xl:mt-3">
+    <section className="relative w-full h-[85vh] min-h-150 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
       
       {/* Background Image with Cinematic Zoom and floating */}
       <motion.div 
@@ -42,30 +42,28 @@ const HeroSection = () => {
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto">
         
         {/* Yellow rounded badge behind heading */}
-        <div className="mb-8 relative inline-block">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8, rotate: 2 }}
-            animate={{ opacity: 1, scale: 1, rotate: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        <motion.div 
+          initial={{ opacity: 0, y: 30, scale: 0.9, rotate: -2 }}
+          animate={{ opacity: 1, y: 0, scale: 1, rotate: -2 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="mb-8 relative inline-block"
+        >
+          <div 
             className="absolute inset-0 bg-[#DAAF18] rounded-xl z-[-1] shadow-2xl"
-            style={{ transformOrigin: 'center' }}
-          ></motion.div>
+          ></div>
           
-          <motion.h1 
-            initial={{ opacity: 0, y: 30, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          <h1 
             className="text-lg sm:text-2xl md:text-3xl lg:text-5xl font-extrabold text-white tracking-tight py-3 px-4 sm:px-5 relative z-10 font-['Outfit',sans-serif] whitespace-nowrap"
           >
             {t('welcome')}
-          </motion.h1>
-        </div>
+          </h1>
+        </motion.div>
 
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-          className="text-xl md:text-2xl text-gray-100 mb-10 max-w-2xl drop-shadow-md font-medium leading-relaxed"
+          className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100 mb-10 max-w-4xl drop-shadow-md font-medium leading-relaxed w-full"
         >
           {t('subtitle')}
         </motion.p>

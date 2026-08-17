@@ -18,24 +18,19 @@ const CateringPartnersSection = () => {
       <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16 mb-8 flex flex-col items-center text-center">
 
         {/* Centered Heading */}
-        <h2 className="text-2xl md:text-3xl font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase tracking-wide mb-3">
+        <h2 className="text-xl md:text-2xl font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase tracking-wide mb-2">
           {t('heading')}
         </h2>
-
-        {/* Centered Subtitle */}
-        <p className="text-gray-800 text-sm md:text-base uppercase tracking-widest max-w-2xl">
-          {t('subtitle')}
-        </p>
 
       </div>
 
       {/* Infinite Image Carousel (Marquee) */}
-      <div className="relative w-full flex overflow-hidden group py-8 bg-zinc-50 border-y border-gray-100">
-        <div className="flex w-max animate-marquee space-x-2 md:space-x-4 px-4 md:px-8 items-center">
+      <div className="relative w-full flex overflow-hidden py-8 bg-zinc-50 border-y border-gray-100">
+        <div className="flex w-max animate-marquee gap-2 md:gap-3 px-2 items-center">
           {marqueeSponsors.map((src, idx) => (
             <div
               key={idx}
-              className="relative h-20 w-40 md:h-28 md:w-56 shrink-0 transition-all duration-500 ease-out hover:scale-125 cursor-pointer hover:drop-shadow-2xl z-10 hover:z-20"
+              className="relative h-20 w-32 md:h-28 md:w-44 shrink-0"
             >
               <Image
                 src={src}
@@ -57,9 +52,6 @@ const CateringPartnersSection = () => {
         }
         .animate-marquee {
           animation: marquee 50s linear infinite;
-        }
-        .group:hover .animate-marquee {
-          animation-play-state: paused;
         }
       `}} />
     </section>
