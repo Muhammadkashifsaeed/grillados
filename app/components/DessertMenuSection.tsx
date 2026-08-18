@@ -23,7 +23,7 @@ export const DessertMenuSection = () => {
     <MenuSection id="desserts">
       {/* ROW 1: e-1 and f-1 Images */}
       <div className="hidden md:block">
-        <MenuDualImage 
+        <MenuDualImage
           leftImageSrc="/images/e-1.png"
           rightImageSrc="/images/f-1.png"
         />
@@ -33,7 +33,7 @@ export const DessertMenuSection = () => {
         {/* Custom Mobile Diagonal Split for mobile15 & 16 */}
         <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-2 mb-2">
           {/* Left Image */}
-          <div 
+          <div
             className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
             style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
           >
@@ -47,7 +47,7 @@ export const DessertMenuSection = () => {
           </div>
 
           {/* Right Image */}
-          <div 
+          <div
             className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
             style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
           >
@@ -68,11 +68,11 @@ export const DessertMenuSection = () => {
               <MenuHeading title={t('heading')} />
               <div className="flex flex-col gap-3 md:gap-4 w-full">
                 {menuItems.map((item, index) => (
-                  <MenuItem 
-                    key={index} 
-                    name={t(`items.${item.translationKey}`)} 
-                    price={item.price} 
-                    isLast={index === menuItems.length - 1} 
+                  <MenuItem
+                    key={index}
+                    name={t(`items.${item.translationKey}`)}
+                    price={item.price}
+                    isLast={index === menuItems.length - 1}
                   />
                 ))}
               </div>
@@ -81,7 +81,7 @@ export const DessertMenuSection = () => {
           rightContent={
             <div className="relative w-full h-full lg:min-h-[500px] flex items-center justify-center lg:mb-8">
               {/* Desktop Image */}
-              <Image 
+              <Image
                 src="/images/a-1.png"
                 alt="Dessert"
                 width={1000}
@@ -91,7 +91,7 @@ export const DessertMenuSection = () => {
                 priority
               />
               {/* Mobile Image */}
-              <Image 
+              <Image
                 src="/images/mobile17.jpg"
                 alt="Dessert Mobile"
                 width={1000}
@@ -107,7 +107,7 @@ export const DessertMenuSection = () => {
 
       {/* ROW 3: b-1 and c-1 Images */}
       <div className="hidden md:block">
-        <MenuDualImage 
+        <MenuDualImage
           leftImageSrc="/images/b-1.png"
           rightImageSrc="/images/c-1.png"
         />
@@ -116,7 +116,7 @@ export const DessertMenuSection = () => {
       {/* Custom Mobile Diagonal Split for mobile18 & 19 */}
       <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-4 mb-2">
         {/* Left Image */}
-        <div 
+        <div
           className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
           style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
         >
@@ -130,7 +130,7 @@ export const DessertMenuSection = () => {
         </div>
 
         {/* Right Image */}
-        <div 
+        <div
           className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
           style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
         >
