@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { staggerContainer, fadeLeftItem } from '../utils/animations';
 
 export const SandwichSaladMenuSection = () => {
   return (
@@ -24,23 +25,23 @@ export const SandwichSaladMenuSection = () => {
 
           {/* Left Column: Menu Items */}
           <motion.div
-            initial={{ opacity: 0, x: -80 }}
-            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
             className="w-full lg:w-1/2 flex flex-col justify-start pr-14 sm:pr-16 md:pr-16 lg:pr-0"
           >
             {/* CATEGORY 1: SANDWICH, WRAPS & PITA */}
-            <div className="mb-6 lg:mb-10">
+            <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
                 SANDWICH, WRAPS & PITA
               </h2>
               <div className="w-full max-w-50 md:max-w-62.5 lg:max-w-80 h-1.5 bg-[#FAAE40] mt-4"></div>
-            </div>
+            </motion.div>
 
             <div className="flex flex-col gap-6 md:gap-8 w-full mb-16">
               {/* Chicken Item */}
-              <div className="flex flex-col w-full">
+              <motion.div variants={fadeLeftItem} className="flex flex-col w-full">
                 <div className="flex items-end w-full gap-1.5 sm:gap-2">
                   <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">Chicken</span>
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
@@ -52,10 +53,10 @@ export const SandwichSaladMenuSection = () => {
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.3)', minWidth: '4px' }}></div>
                   <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">(1 SIDE + POP)</span></span>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Vegetarian Item */}
-              <div className="flex flex-col w-full">
+              <motion.div variants={fadeLeftItem} className="flex flex-col w-full">
                 <div className="flex items-end w-full gap-1.5 sm:gap-2">
                   <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">Vegetarian</span>
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
@@ -67,16 +68,16 @@ export const SandwichSaladMenuSection = () => {
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.3)', minWidth: '4px' }}></div>
                   <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">(1 SIDE + POP)</span></span>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* CATEGORY 2: SALADS */}
-            <div className="mb-4 lg:mb-8">
+            <motion.div variants={fadeLeftItem} className="mb-4 lg:mb-8">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
                 SALADS
               </h2>
               <div className="w-full max-w-50 md:max-w-62.5 lg:max-w-80 h-1.5 bg-[#FAAE40] mt-4"></div>
-            </div>
+            </motion.div>
 
             <div className="flex flex-col gap-4 md:gap-5 w-full">
               {/* Salad Items */}
@@ -85,24 +86,24 @@ export const SandwichSaladMenuSection = () => {
                 { name: 'Spring Salad', price: '7.99' },
                 { name: 'Cesar Salad.', price: '7.99' }
               ].map((item, index) => (
-                <div key={index} className="flex flex-col w-full">
+                <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
                     <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">{item.name}</span>
                     <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
                     <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">{item.price}</span>
                   </div>
-                </div>
+                </motion.div>
               ))}
 
               {/* Additional Options */}
-              <div className="mt-8 flex flex-col w-full pt-4 border-t border-white/10">
+              <motion.div variants={fadeLeftItem} className="mt-8 flex flex-col w-full pt-4 border-t border-white/10">
                 <p className="text-white text-sm md:text-base font-bold uppercase tracking-wider mb-1">
                   Salads LARGE 9.99 - ADD
                 </p>
                 <p className="text-[#FAAE40] text-lg md:text-xl font-bold font-['Outfit',sans-serif]">
                   GRILLED CHICKEN 5.99
                 </p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 

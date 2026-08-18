@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { staggerContainer, fadeLeftItem } from '../utils/animations';
 import { MenuDualImage } from './Menu/MenuDualImage';
 
 const menuItems = [
@@ -100,13 +101,13 @@ export const BeefLambSpecialsMenuSection = () => {
 
           {/* LEFT: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
-            initial={{ opacity: 0, x: -80 }}
-            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
             className="w-full lg:w-1/2 flex flex-col justify-start pr-14 sm:pr-16 md:pr-16 lg:pr-0"
           >
-            <div className="mb-6 lg:mb-10">
+            <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2
                 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] uppercase tracking-wide"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
@@ -114,11 +115,11 @@ export const BeefLambSpecialsMenuSection = () => {
                 GRILLADO&apos;S<br />BEEF & LAMB SPECIALS
               </h2>
               <div className="w-full h-1.5 bg-[#FAAE40] mt-3" />
-            </div>
+            </motion.div>
 
             <div className="flex flex-col gap-5 md:gap-6 w-full">
               {menuItems.map((item, index) => (
-                <div key={index} className="flex flex-col w-full">
+                <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
                   {/* Name + dotted leader + price */}
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
                     <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
@@ -150,7 +151,7 @@ export const BeefLambSpecialsMenuSection = () => {
                       style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}
                     />
                   )}
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>

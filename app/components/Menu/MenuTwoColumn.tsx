@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import { staggerContainer } from '../../utils/animations';
 
 interface MenuTwoColumnProps {
   leftContent: ReactNode;
@@ -19,10 +20,10 @@ export const MenuTwoColumn = ({
       
       {/* Left Column */}
       <motion.div
-        initial={{ opacity: 0, x: -80 }}
-        whileInView={{ opacity: 1, x: 0, y: 0 }}
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
         className={`w-full flex flex-col justify-start ${reverseOnMobile ? 'order-2 lg:order-1' : 'order-1'} pr-14 sm:pr-4 lg:pr-0`}
       >
         {leftContent}

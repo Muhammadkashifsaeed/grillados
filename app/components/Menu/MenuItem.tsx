@@ -1,4 +1,8 @@
+'use client';
+
 import React, { ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import { fadeLeftItem } from '../../utils/animations';
 
 interface MenuItemProps {
   name: string;
@@ -16,7 +20,7 @@ export const MenuItem = ({
   isLast = false 
 }: MenuItemProps) => {
   return (
-    <div className="flex flex-col w-full">
+    <motion.div variants={fadeLeftItem} className="flex flex-col w-full">
       {/* Name and Price Row */}
       <div className="flex items-end w-full gap-1.5 sm:gap-2">
         <span className="text-white text-[11px] sm:text-xs md:text-base lg:text-base font-normal whitespace-normal shrink leading-snug">
@@ -55,6 +59,6 @@ export const MenuItem = ({
           style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}
         />
       )}
-    </div>
+    </motion.div>
   );
 };
