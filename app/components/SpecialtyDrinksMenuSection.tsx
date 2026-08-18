@@ -26,7 +26,7 @@ export const SpecialtyDrinksMenuSection = () => {
   const t = useTranslations('SpecialtyDrinks');
 
   return (
-    <section className="relative w-full py-6 lg:pt-8 lg:pb-32 bg-[#0a0a0a]">
+    <section className="relative w-full py-6 lg:pt-8 lg:pb-48 bg-[#0a0a0a]">
       {/* Background with subtle food outline pattern */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -49,7 +49,7 @@ export const SpecialtyDrinksMenuSection = () => {
           }
         `}</style>
 
-        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-4 lg:gap-8 w-full lg:pr-[80px]">
+        <div className="flex flex-col lg:flex-row lg:items-center items-center justify-between gap-4 lg:gap-8 w-full lg:pr-[80px]">
 
           {/* Left Column: Menu Items */}
           <motion.div

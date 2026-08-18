@@ -16,7 +16,7 @@ const menuItems = [
 
 export const ComboDePouletMenuSection = () => {
   return (
-    <section id="combos" className="relative w-full py-6 lg:pt-8 lg:pb-32 bg-[#0a0a0a]">
+    <section id="combos" className="relative w-full py-6 lg:pt-8 lg:pb-48 bg-[#0a0a0a]">
       {/* Background with subtle food outline pattern */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -30,7 +30,7 @@ export const ComboDePouletMenuSection = () => {
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-4 lg:gap-8 w-full lg:pr-[80px]">
+        <div className="flex flex-col lg:flex-row lg:items-center items-center justify-between gap-4 lg:gap-8 w-full lg:pr-[80px]">
 
           {/* Left Column: Menu Items */}
           <motion.div
