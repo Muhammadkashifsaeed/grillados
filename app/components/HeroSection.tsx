@@ -73,25 +73,25 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
-          className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto"
+          className="flex flex-row gap-2 sm:gap-5 w-full sm:w-auto justify-center"
         >
           <motion.button 
             whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/order')}
-            className="group flex items-center justify-center gap-2 bg-[#E04B51] text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 hover:bg-[#c73f45] shadow-lg"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-lg transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none"
           >
             <span>{t('orderNow')}</span>
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
           </motion.button>
           
           <motion.button 
             whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(255,255,255,0.2)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/order')}
-            className="group flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-lg"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-lg transition-colors duration-300 shadow-lg flex-1 sm:flex-none"
           >
-            <Menu className="w-6 h-6" />
+            <Menu className="w-4 h-4 sm:w-6 sm:h-6" />
             <span>{t('viewMenu')}</span>
           </motion.button>
         </motion.div>

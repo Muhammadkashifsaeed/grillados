@@ -52,15 +52,15 @@ const NewDishes = () => {
             </p>
             
             {/* Buttons: Yellow default, Red on hover */}
-            <div className="flex flex-col sm:flex-row gap-5 justify-center">
-              <Link href="/order" className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
+            <div className="flex flex-row gap-2 sm:gap-5 justify-center w-full">
+              <Link href="/order" className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white px-4 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 flex-1 sm:flex-none">
                 <span>{t('orderNow')}</span>
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
               </Link>
               
-              <Link href="/menu" className="group flex items-center justify-center gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white border-transparent px-8 py-4 rounded-full font-bold text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
-                <Info className="w-5 h-5" />
-                <span>{t('learnMore')}</span>
+              <Link href="/menu" className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white border-transparent px-4 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 flex-1 sm:flex-none">
+                <Info className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="whitespace-nowrap">{t('learnMore')}</span>
               </Link>
             </div>
             

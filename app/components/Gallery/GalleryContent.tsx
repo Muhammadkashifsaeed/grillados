@@ -158,11 +158,11 @@ export default function GalleryContent() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full">
+            <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 mt-4 w-full">
               {visibleVideos < gridVideos.length && (
                 <button 
                   onClick={handleLoadMore}
-                  className="px-8 py-3 rounded-full font-bold text-lg bg-black text-white hover:bg-gray-800 transition-all duration-300 shadow-md"
+                  className="px-4 py-3 sm:px-8 sm:py-3 rounded-full font-bold text-xs sm:text-lg bg-black text-white hover:bg-gray-800 transition-all duration-300 shadow-md flex-1 sm:flex-none text-center whitespace-nowrap"
                 >
                   Load More
                 </button>
@@ -171,9 +171,9 @@ export default function GalleryContent() {
                 href="https://www.youtube.com/channel/UCwa_w9BuVndNvHcZ9vUb5sA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 rounded-full font-bold text-lg bg-blue-600 text-white hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-600/30 flex items-center gap-2"
+                className="px-4 py-3 sm:px-8 sm:py-3 rounded-full font-bold text-xs sm:text-lg bg-blue-600 text-white hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-600/30 flex items-center justify-center gap-1 sm:gap-2 flex-1 sm:flex-none whitespace-nowrap"
               >
-                <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24">
                   <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
                 </svg>
                 Subscribe
