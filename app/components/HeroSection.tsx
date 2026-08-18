@@ -63,7 +63,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-          className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100 mb-10 max-w-4xl drop-shadow-md font-medium leading-relaxed w-full"
+          className="text-sm sm:text-base md:text-base lg:text-xl text-gray-100 mb-10 max-w-4xl drop-shadow-md font-medium leading-relaxed w-full"
         >
           {t('subtitle')}
         </motion.p>

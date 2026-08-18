@@ -59,7 +59,7 @@ export default function FranchisingFAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <p className="pt-4 text-gray-600 text-base md:text-lg leading-relaxed whitespace-pre-line">
+                      <p className="pt-4 text-gray-600 text-base md:text-base leading-relaxed whitespace-pre-line">
                         {faq.answer}
                       </p>
                     </motion.div>

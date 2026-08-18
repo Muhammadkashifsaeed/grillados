@@ -19,7 +19,7 @@ export const MenuItem = ({
     <div className="flex flex-col w-full">
       {/* Name and Price Row */}
       <div className="flex items-end w-full gap-1.5 sm:gap-2">
-        <span className="text-white text-[11px] sm:text-xs md:text-base lg:text-lg font-normal whitespace-normal shrink leading-snug">
+        <span className="text-white text-[11px] sm:text-xs md:text-base lg:text-base font-normal whitespace-normal shrink leading-snug">
           {name}
         </span>
         <div
@@ -29,7 +29,7 @@ export const MenuItem = ({
             minWidth: '4px'
           }}
         />
-        <span className="text-white text-[11px] sm:text-xs md:text-base lg:text-lg font-bold whitespace-nowrap leading-snug">
+        <span className="text-white text-[11px] sm:text-xs md:text-base lg:text-base font-bold whitespace-nowrap leading-snug">
           {price}
         </span>
       </div>

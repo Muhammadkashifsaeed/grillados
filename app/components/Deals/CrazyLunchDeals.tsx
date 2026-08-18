@@ -62,7 +62,7 @@ export default function CrazyLunchDeals() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#DAAF18] font-['Outfit',sans-serif] uppercase tracking-wide mb-4">
             Crazy Lunch Deals
           </h2>
-          <p className="text-gray-800 text-base md:text-lg lg:text-xl font-semibold max-w-2xl">
+          <p className="text-gray-800 text-base md:text-base lg:text-xl font-semibold max-w-2xl">
             Discover this week&apos;s incredible treats
           </p>
         </motion.div>

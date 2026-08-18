@@ -15,7 +15,7 @@ export default function FranchisingJoinTeam() {
         <span className="text-black">{t(`step${num}_num`)} </span>
         <span className="text-[#DAAF18]">{t(`step${num}_title`)}</span>
       </h3>
-      <p className="text-gray-500 text-base md:text-lg leading-relaxed">
+      <p className="text-gray-500 text-base md:text-base leading-relaxed">
         {t(`step${num}_desc`)}
       </p>
     </div>

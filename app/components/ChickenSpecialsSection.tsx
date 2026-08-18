@@ -40,7 +40,7 @@ const ChickenSpecialsSection = () => {
             <div className="w-24 h-1.5 bg-black rounded-full mb-8"></div>
 
             {/* Paragraph */}
-            <p className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed max-w-lg">
+            <p className="text-base md:text-base text-gray-600 mb-10 leading-relaxed max-w-lg">
               Experience the ultimate taste of our freshly crafted menu. From sizzling steaks to mouth-watering ribs, every bite is a testament to the art of grilling meeting excellence. Discover our newest additions and elevate your dining experience today!
             </p>
 

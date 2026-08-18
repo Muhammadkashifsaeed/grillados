@@ -27,7 +27,7 @@ const MenuVoucherCTA = () => {
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black font-['Outfit',sans-serif] uppercase leading-[1.1] mb-2 sm:mb-3 tracking-tight drop-shadow-sm">
               GET UP TO 20% OFF <br className="hidden md:block" />On The Entire Menu.
             </h2>
-            <p className="text-black/90 font-bold text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto xl:mx-0">
+            <p className="text-black/90 font-bold text-sm sm:text-base md:text-base leading-relaxed max-w-3xl mx-auto xl:mx-0">
               Click on &apos;Get your Voucher Now&apos; and enjoy up to 20% off at all Grillados branches across Canada!
             </p>
           </div>

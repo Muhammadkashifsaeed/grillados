@@ -32,7 +32,7 @@ const BeefLambSpecialsSection = () => {
             <div className="w-24 h-1.5 bg-black rounded-full mb-8"></div>
             
             {/* Paragraph */}
-            <p className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed max-w-lg">
+            <p className="text-base md:text-base text-gray-600 mb-10 leading-relaxed max-w-lg">
               {t('description')}
             </p>
             

@@ -37,7 +37,7 @@ const CateringOffersSection = () => {
           <h4 className="text-xl md:text-2xl font-bold text-gray-800 font-['Outfit',sans-serif] mb-4 tracking-wide">
             {tPartners('smallHeading')}
           </h4>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed font-medium whitespace-pre-wrap max-w-5xl mx-auto">
+          <p className="text-gray-700 text-base md:text-base leading-relaxed font-medium whitespace-pre-wrap max-w-5xl mx-auto">
             {tPartners('description')}
           </p>
         </div>

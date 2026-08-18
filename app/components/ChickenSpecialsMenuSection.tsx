@@ -105,14 +105,14 @@ export const ChickenSpecialsMenuSection = () => {
               {menuItems.map((item, index) => (
                 <div key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-normal leading-snug">
+                    <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
                       {item.name}
                     </span>
                     <div
                       className="grow mb-1"
                       style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}
                     />
-                    <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-nowrap leading-snug">
+                    <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
                       {item.price}
                     </span>
                   </div>

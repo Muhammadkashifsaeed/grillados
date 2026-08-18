@@ -65,7 +65,7 @@ export default function BirthdayCateringSection() {
             </h2>
             
             {/* Description */}
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 font-medium max-w-112.5">
+            <p className="text-gray-600 text-base md:text-base leading-relaxed mb-8 font-medium max-w-112.5">
               With Grillado&apos;s countless menu choices, no one will be left out in this ocean of culinary delights. Let Grillado make your birthday… delicious.
             </p>
 
