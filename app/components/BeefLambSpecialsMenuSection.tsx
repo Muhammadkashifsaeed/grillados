@@ -97,7 +97,7 @@ export const BeefLambSpecialsMenuSection = () => {
 
 
         {/* ZONE 2: Bottom row */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
 
           {/* LEFT: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div

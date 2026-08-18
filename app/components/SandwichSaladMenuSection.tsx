@@ -21,7 +21,7 @@ export const SandwichSaladMenuSection = () => {
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-4 lg:gap-8 w-full lg:pr-[80px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
 
           {/* Left Column: Menu Items */}
           <motion.div
@@ -29,7 +29,7 @@ export const SandwichSaladMenuSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="w-full lg:w-1/2 flex flex-col justify-start pr-14 sm:pr-16 md:pr-16 lg:pr-0"
+            className="w-full flex flex-col justify-start"
           >
             {/* CATEGORY 1: SANDWICH, WRAPS & PITA */}
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
@@ -113,7 +113,7 @@ export const SandwichSaladMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] pt-0 lg:pt-0 pb-0 lg:pb-8 pr-12 md:pr-16 lg:pr-0"
+            className="w-full flex items-start justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] pt-0 lg:pt-0 pb-0 lg:pb-8"
           >
             <div className="relative w-full h-full aspect-[4/3] lg:min-h-[500px]">
               {/* Desktop Image */}
