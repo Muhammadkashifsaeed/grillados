@@ -5,6 +5,7 @@ interface MenuSectionProps {
   id?: string;
   bgTexture?: string;
   bgOpacity?: string;
+  className?: string;
 }
 
 export const MenuSection = ({ 
