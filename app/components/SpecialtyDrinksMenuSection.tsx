@@ -97,7 +97,7 @@ export const SpecialtyDrinksMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] pt-0 lg:pt-0 pb-0 lg:pb-16 pr-12 md:pr-16 lg:pr-0"
+            className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] pt-0 lg:pt-0 pb-0 lg:pb-32 pr-12 md:pr-16 lg:pr-0"
           >
             <div className="relative w-full h-full aspect-[4/3] lg:min-h-[500px]">
               {/* Desktop Image */}
