@@ -30,10 +30,10 @@ const ReviewsSection = () => {
         </div>
 
         {/* Row: GOOD panel + auto-scroll carousel */}
-        <div className="flex items-center gap-6">
+        <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-8 overflow-hidden w-full">
 
           {/* Left: GOOD block */}
-          <div className="flex flex-col items-start shrink-0 w-[170px]">
+          <div className="flex flex-col items-center md:items-start shrink-0 w-auto md:w-[170px] text-center md:text-left">
             <h3 className="text-4xl font-extrabold text-gray-900 mb-1 tracking-tight font-['Outfit',sans-serif]">GOOD</h3>
             <div className="flex gap-0.5 mb-1">
               {[...Array(5)].map((_, i) => (
@@ -48,11 +48,11 @@ const ReviewsSection = () => {
             <img src="/images/logoss.svg" alt="Powered by" className="h-4 object-contain opacity-80" />
           </div>
 
-          {/* Vertical Divider */}
-          <div className="w-px bg-gray-300 self-stretch shrink-0"></div>
+          {/* Divider */}
+          <div className="w-full h-px md:w-px md:self-stretch bg-gray-300 shrink-0 my-2 md:my-0"></div>
 
           {/* Auto-scrolling Carousel */}
-          <div className="flex-grow overflow-hidden relative">
+          <div className="flex-grow overflow-hidden relative w-full">
             <div className="flex gap-5 reviews-marquee">
               {allCards.map((rev, idx) => (
                 <div key={idx} className="w-[280px] shrink-0">

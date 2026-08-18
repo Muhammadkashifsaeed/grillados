@@ -199,7 +199,7 @@ export default function ContactFormSection() {
               </div>
 
               {/* Cloudflare Verification Success */}
-              <div className="w-[280px] h-[65px] bg-[#f9f9f9] border border-[#e0e0e0] rounded-[3px] flex items-center justify-between px-3 py-2 mt-2">
+              <div className="w-full max-w-[280px] h-[65px] bg-[#f9f9f9] border border-[#e0e0e0] rounded-[3px] flex items-center justify-between px-3 py-2 mt-2">
                 <div className="flex items-center gap-3">
                   <div className="w-[26px] h-[26px] bg-[#22c55e] rounded-full flex items-center justify-center relative shadow-sm">
                     {/* Checkmark SVG */}

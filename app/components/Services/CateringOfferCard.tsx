@@ -35,7 +35,7 @@ const CateringOfferCard: React.FC<CateringOfferProps> = ({
       <div className="w-full md:w-[55%] flex flex-col items-start justify-center pt-24 lg:pt-16 relative">
         
         {/* Brand Image at Top-Left (Fixed closer to border edge) */}
-        <div className="absolute -top-2 left-0 sm:-top-4 sm:left-2 lg:-top-6 lg:left-4 w-[220px] h-[70px] sm:w-[280px] sm:h-[90px]">
+        <div className="absolute -top-2 left-0 sm:-top-4 sm:left-2 lg:-top-6 lg:left-4 w-48 sm:w-64 lg:w-72 h-16 sm:h-20 lg:h-24">
           <Image 
             src="/images/whole.png"
             alt="Grillado's Logo"
