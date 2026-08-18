@@ -35,7 +35,7 @@ const menuItems = [
 
 export const PlateauxMenuSection = () => {
   return (
-    <section id="plateaux" className="relative w-full py-6 lg:py-8 bg-[#0a0a0a]">
+    <section id="plateaux" className="relative w-full py-6 lg:py-12 bg-[#0a0a0a]">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -117,7 +117,7 @@ export const PlateauxMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="w-full hidden md:flex items-start justify-center lg:justify-end relative lg:min-h-[500px] pt-0 lg:pt-0 pb-0 lg:pb-8 mx-auto lg:mt-0 lg:mb-0"
+            className="w-full hidden md:flex items-start justify-center lg:justify-end relative lg:min-h-[500px] mx-auto"
           >
             {/* Desktop Image */}
             <Image

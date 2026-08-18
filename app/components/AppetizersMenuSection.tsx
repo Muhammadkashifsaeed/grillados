@@ -20,7 +20,7 @@ const menuItems = [
 
 export const AppetizersMenuSection = () => {
   return (
-    <section id="appetizers" className="relative w-full py-6 lg:pt-12 lg:pb-24 bg-[#0a0a0a]">
+    <section id="appetizers" className="relative w-full py-6 lg:py-12 bg-[#0a0a0a]">
       {/* 
         Background with subtle food outline pattern. 
         Update the URL if you have a specific pattern image.
@@ -88,7 +88,7 @@ export const AppetizersMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full flex items-start justify-center lg:justify-end relative lg:min-h-[500px] pt-0 lg:pt-0 pb-0 lg:pb-8 mx-auto lg:mt-0"
+            className="w-full flex items-start justify-center lg:justify-end relative lg:min-h-[500px] mx-auto"
           >
             {/* Desktop Image */}
             <Image
