@@ -63,16 +63,16 @@ export const GarnishedRiceSauceMenuSection = () => {
         leftContent={
           <>
             <MenuHeading title={t('heading')} />
-            
+
             <div className="flex flex-col w-full mb-12">
               <div className="flex flex-col gap-4 md:gap-5 w-full">
                 {loadedRiceItems.map((item, index) => (
-                  <MenuItem 
-                    key={index} 
-                    name={item.name} 
+                  <MenuItem
+                    key={index}
+                    name={item.name}
                     price={item.price}
                     note={item.description}
-                    isLast={index === loadedRiceItems.length - 1} 
+                    isLast={index === loadedRiceItems.length - 1}
                   />
                 ))}
               </div>
@@ -80,7 +80,7 @@ export const GarnishedRiceSauceMenuSection = () => {
 
             {/* Mobile Image (mobile13) moved above Fiery section */}
             <div className="w-full flex md:hidden justify-center mb-8">
-              <Image 
+              <Image
                 src="/images/mobile13.jpg"
                 alt="Zesty Food Mobile"
                 width={1000}
@@ -94,8 +94,8 @@ export const GarnishedRiceSauceMenuSection = () => {
             <div className="mb-10 w-full pt-8 border-t border-white/10">
               <div className="flex flex-col gap-10 md:gap-12 lg:gap-14 w-full">
                 {sauceLevels.map((item, index) => (
-                  <motion.div 
-                    key={index} 
+                  <motion.div
+                    key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
@@ -103,7 +103,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                     className="flex flex-col md:flex-row items-center w-full gap-4 md:gap-8 lg:gap-10"
                   >
                     <div className="relative w-36 h-36 md:w-36 md:h-36 lg:w-48 lg:h-48 shrink-0">
-                      <Image 
+                      <Image
                         src={item.image}
                         alt={item.name}
                         fill sizes="100vw"
@@ -129,12 +129,12 @@ export const GarnishedRiceSauceMenuSection = () => {
             {/* Top Large Peri Image */}
             <div className="relative w-full py-4 lg:pt-8 lg:pb-8 flex justify-center">
               {/* Desktop Image */}
-              <Image 
+              <Image
                 src="/images/zasty.png"
                 alt="Zesty Food"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-top scale-95 lg:scale-100 xl:scale-[1.15] origin-top drop-shadow-2xl hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-top scale-90 xl:scale-100 origin-top drop-shadow-2xl hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
@@ -142,7 +142,7 @@ export const GarnishedRiceSauceMenuSection = () => {
 
             {/* Bottom Saucess Image */}
             <div className="relative w-full py-4 lg:py-8 flex justify-center">
-              <Image 
+              <Image
                 src="/images/saucess.png"
                 alt="Saucess"
                 width={1000}

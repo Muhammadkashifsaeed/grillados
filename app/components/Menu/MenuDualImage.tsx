@@ -31,7 +31,7 @@ export const MenuDualImage = ({
             alt="Menu Item Left"
             fill
             sizes="(max-width: 768px) 100vw, 60vw"
-            className="object-contain object-bottom md:object-bottom-right scale-100 xl:scale-[1.15] drop-shadow-2xl"
+            className="object-contain object-bottom md:object-bottom-right scale-95 xl:scale-100 drop-shadow-2xl"
             priority
           />
         </div>
@@ -43,7 +43,7 @@ export const MenuDualImage = ({
             alt="Menu Item Right"
             fill
             sizes="(max-width: 768px) 100vw, 60vw"
-            className="object-contain object-top md:object-bottom-left scale-100 xl:scale-[1.15] drop-shadow-2xl"
+            className="object-contain object-top md:object-bottom-left scale-95 xl:scale-100 drop-shadow-2xl"
           />
         </div>
 

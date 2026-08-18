@@ -122,7 +122,7 @@ export const SandwichSaladMenuSection = () => {
                 alt="Poulet"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-top scale-95 lg:scale-100 xl:scale-[1.15] origin-top hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-top scale-90 xl:scale-100 origin-top hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
