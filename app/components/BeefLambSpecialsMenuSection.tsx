@@ -104,7 +104,7 @@ export const BeefLambSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex flex-col justify-start"
+            className="w-full lg:w-1/2 flex flex-col justify-start pr-14 sm:pr-16 md:pr-16 lg:pr-0"
           >
             <div className="mb-10">
               <h2
@@ -121,7 +121,7 @@ export const BeefLambSpecialsMenuSection = () => {
                 <div key={index} className="flex flex-col w-full">
                   {/* Name + dotted leader + price */}
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-normal">
+                    <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-normal leading-snug">
                       {item.name}
                     </span>
                     <div
@@ -131,7 +131,7 @@ export const BeefLambSpecialsMenuSection = () => {
                         minWidth: '4px',
                       }}
                     />
-                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">
+                    <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-nowrap leading-snug">
                       {item.price}
                     </span>
                   </div>

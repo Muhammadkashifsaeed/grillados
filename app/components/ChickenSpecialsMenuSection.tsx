@@ -91,7 +91,7 @@ export const ChickenSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex flex-col justify-start"
+            className="w-full lg:w-1/2 flex flex-col justify-start pr-14 sm:pr-16 md:pr-16 lg:pr-0"
           >
             <div className="mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
@@ -105,14 +105,14 @@ export const ChickenSpecialsMenuSection = () => {
               {menuItems.map((item, index) => (
                 <div key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-normal">
+                    <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-normal leading-snug">
                       {item.name}
                     </span>
                     <div
                       className="grow mb-1"
                       style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}
                     />
-                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">
+                    <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-nowrap leading-snug">
                       {item.price}
                     </span>
                   </div>

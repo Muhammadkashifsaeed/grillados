@@ -28,7 +28,7 @@ export const SandwichSaladMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex flex-col justify-start"
+            className="w-full lg:w-1/2 flex flex-col justify-start pr-14 sm:pr-16 md:pr-16 lg:pr-0"
           >
             {/* CATEGORY 1: SANDWICH, WRAPS & PITA */}
             <div className="mb-8 lg:mb-10">
@@ -42,30 +42,30 @@ export const SandwichSaladMenuSection = () => {
               {/* Chicken Item */}
               <div className="flex flex-col w-full">
                 <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                  <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-normal">Chicken</span>
+                  <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-normal leading-snug">Chicken</span>
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
-                  <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">11.99</span>
+                  <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-nowrap leading-snug">11.99</span>
                 </div>
                 {/* Combo row */}
                 <div className="flex items-end w-full gap-2 sm:gap-3 mt-2 md:mt-3">
                   <span className="text-red-500 text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">COMBO</span>
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.3)', minWidth: '4px' }}></div>
-                  <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">(1 SIDE + POP)</span></span>
+                  <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-nowrap leading-snug">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">(1 SIDE + POP)</span></span>
                 </div>
               </div>
 
               {/* Vegetarian Item */}
               <div className="flex flex-col w-full">
                 <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                  <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-normal">Vegetarian</span>
+                  <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-normal leading-snug">Vegetarian</span>
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
-                  <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">11.99</span>
+                  <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-nowrap leading-snug">11.99</span>
                 </div>
                 {/* Combo row */}
                 <div className="flex items-end w-full gap-2 sm:gap-3 mt-2 md:mt-3">
                   <span className="text-red-500 text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">COMBO</span>
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.3)', minWidth: '4px' }}></div>
-                  <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">(1 SIDE + POP)</span></span>
+                  <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-nowrap leading-snug">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">(1 SIDE + POP)</span></span>
                 </div>
               </div>
             </div>
@@ -87,9 +87,9 @@ export const SandwichSaladMenuSection = () => {
               ].map((item, index) => (
                 <div key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-normal">{item.name}</span>
+                    <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-normal leading-snug">{item.name}</span>
                     <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
-                    <span className="text-white text-sm sm:text-base md:text-lg font-bold whitespace-nowrap">{item.price}</span>
+                    <span className="text-white text-[11px] sm:text-xs md:text-lg font-bold whitespace-nowrap leading-snug">{item.price}</span>
                   </div>
                 </div>
               ))}
