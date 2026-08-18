@@ -56,7 +56,7 @@ const menuItems = [
 
 export const ChickenSpecialsMenuSection = () => {
   return (
-    <section id="chicken-specials" className="relative w-full py-10 lg:py-8 bg-[#0a0a0a]">
+    <section id="chicken-specials" className="relative w-full py-6 lg:py-8 bg-[#0a0a0a]">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -69,7 +69,7 @@ export const ChickenSpecialsMenuSection = () => {
       />
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-10 md:gap-14">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
 
         <div className="hidden md:block md:-mt-8 lg:-mt-16 xl:-mt-20">
           <MenuDualImage 
@@ -83,7 +83,7 @@ export const ChickenSpecialsMenuSection = () => {
 
 
         {/* ZONE 2: Bottom row — Left: menu content | Right: set.png */}
-        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-10 lg:gap-8 w-full lg:pr-[80px]">
+        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-4 lg:gap-8 w-full lg:pr-[80px]">
 
           {/* Left: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
@@ -93,7 +93,7 @@ export const ChickenSpecialsMenuSection = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="w-full lg:w-1/2 flex flex-col justify-start pr-14 sm:pr-16 md:pr-16 lg:pr-0"
           >
-            <div className="mb-10">
+            <div className="mb-6 lg:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
                 GRILLADO&apos;S CHICKEN<br />
                 SPECIALS
@@ -143,7 +143,7 @@ export const ChickenSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end relative lg:min-h-[500px] pt-8 lg:pt-0 pb-0 lg:pb-32 lg:mt-0 pr-12 md:pr-16 lg:pr-0"
+            className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end relative lg:min-h-[500px] pt-0 lg:pt-0 pb-0 lg:pb-32 lg:mt-0 pr-12 md:pr-16 lg:pr-0"
           >
             {/* Desktop Image */}
             <Image
@@ -160,7 +160,7 @@ export const ChickenSpecialsMenuSection = () => {
               alt="Grillado Chicken Set Mobile"
               width={1000}
               height={750}
-              className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-8 mb-4"
+              className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-4 mb-2"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </motion.div>

@@ -16,7 +16,7 @@ const menuItems = [
 
 export const ComboDePouletMenuSection = () => {
   return (
-    <section id="combos" className="relative w-full py-10 lg:pt-8 lg:pb-32 bg-[#0a0a0a]">
+    <section id="combos" className="relative w-full py-6 lg:pt-8 lg:pb-32 bg-[#0a0a0a]">
       {/* Background with subtle food outline pattern */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -30,7 +30,7 @@ export const ComboDePouletMenuSection = () => {
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-10 lg:gap-8 w-full lg:pr-[80px]">
+        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-4 lg:gap-8 w-full lg:pr-[80px]">
 
           {/* Left Column: Menu Items */}
           <motion.div
@@ -40,7 +40,7 @@ export const ComboDePouletMenuSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="w-full lg:w-1/2 flex flex-col justify-start pr-14 sm:pr-16 md:pr-16 lg:pr-0"
           >
-            <div className="mb-8 lg:mb-10">
+            <div className="mb-6 lg:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
                 COMBO DE<br />POULET
               </h2>
@@ -74,7 +74,7 @@ export const ComboDePouletMenuSection = () => {
               ))}
 
               {/* Bottom Note */}
-              <div className="mt-8 md:mt-10 w-full pt-4 border-t border-white/10">
+              <div className="mt-6 md:mt-10 w-full pt-4 border-t border-white/10">
                 <p className="text-[#FAAE40] text-sm md:text-base font-bold uppercase tracking-widest">
                   Ajoutez un 2ᵉ accompagnement pour 4,99
                 </p>
@@ -88,7 +88,7 @@ export const ComboDePouletMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] pt-8 lg:pt-0 pb-0 lg:pb-32 pr-12 md:pr-16 lg:pr-0"
+            className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end relative aspect-[4/3] lg:min-h-[500px] pt-0 lg:pt-0 pb-0 lg:pb-32 pr-12 md:pr-16 lg:pr-0"
           >
             <div className="relative w-full h-full aspect-[4/3] lg:min-h-[500px]">
               {/* Desktop Image */}
@@ -107,7 +107,7 @@ export const ComboDePouletMenuSection = () => {
                 alt="Combo de Poulet Grillé Mobile"
                 width={1000}
                 height={750}
-                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-8 mb-4"
+                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-4 mb-2"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

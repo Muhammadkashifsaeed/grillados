@@ -40,7 +40,7 @@ const menuItems = [
 
 export const BeefLambSpecialsMenuSection = () => {
   return (
-    <section id="beef-lamb-specials" className="relative w-full py-10 lg:py-8 bg-[#0a0a0a]">
+    <section id="beef-lamb-specials" className="relative w-full py-6 lg:py-8 bg-[#0a0a0a]">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -53,7 +53,7 @@ export const BeefLambSpecialsMenuSection = () => {
       />
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-10 md:gap-14">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
 
         <div className="hidden md:block">
           <MenuDualImage 
@@ -63,7 +63,7 @@ export const BeefLambSpecialsMenuSection = () => {
         </div>
 
         {/* Custom Mobile Diagonal Split for mobile5 & 6 */}
-        <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-8 mb-4">
+        <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-4 mb-2">
           {/* Left Image */}
           <div 
             className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
@@ -96,7 +96,7 @@ export const BeefLambSpecialsMenuSection = () => {
 
 
         {/* ZONE 2: Bottom row */}
-        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-10 lg:gap-8 w-full lg:pr-[80px]">
+        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-4 lg:gap-8 w-full lg:pr-[80px]">
 
           {/* LEFT: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
@@ -106,7 +106,7 @@ export const BeefLambSpecialsMenuSection = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="w-full lg:w-1/2 flex flex-col justify-start pr-14 sm:pr-16 md:pr-16 lg:pr-0"
           >
-            <div className="mb-10">
+            <div className="mb-6 lg:mb-10">
               <h2
                 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] uppercase tracking-wide"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
@@ -161,7 +161,7 @@ export const BeefLambSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end relative lg:min-h-[500px] pt-8 lg:pt-0 pb-0 lg:pb-32 lg:mt-0 pr-12 md:pr-16 lg:pr-0"
+            className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end relative lg:min-h-[500px] pt-0 lg:pt-0 pb-0 lg:pb-32 lg:mt-0 pr-12 md:pr-16 lg:pr-0"
           >
             {/* Desktop Image */}
             <Image
@@ -173,7 +173,7 @@ export const BeefLambSpecialsMenuSection = () => {
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             {/* Mobile Layout for 7, 8, 9 */}
-            <div className="w-full max-w-[500px] mx-auto flex md:hidden flex-col gap-4 mt-8 mb-4">
+            <div className="w-full max-w-[500px] mx-auto flex md:hidden flex-col gap-4 mt-4 mb-2">
               {/* Top Image: Mobile 7 */}
               <div className="w-full drop-shadow-2xl">
                 <Image
