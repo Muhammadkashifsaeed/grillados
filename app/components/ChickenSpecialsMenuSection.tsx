@@ -73,7 +73,7 @@ export const ChickenSpecialsMenuSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
 
         <div className="hidden md:block md:-mt-8 lg:-mt-16 xl:-mt-20">
-          <MenuDualImage 
+          <MenuDualImage
             leftImageSrc="/images/lockfiles1.png"
             rightImageSrc="/images/lockfiles2.png"
           />

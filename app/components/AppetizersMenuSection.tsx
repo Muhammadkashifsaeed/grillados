@@ -113,11 +113,11 @@ export const AppetizersMenuSection = () => {
                   priority
                 />
               </div>
-              
+
               {/* Bottom Images: Mobile 2 & 3 with exact diagonal split */}
               <div className="relative w-full aspect-[4/3] drop-shadow-2xl">
                 {/* Left Image (Nachos) */}
-                <div 
+                <div
                   className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
                   style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
                 >
@@ -131,7 +131,7 @@ export const AppetizersMenuSection = () => {
                 </div>
 
                 {/* Right Image (Wings) */}
-                <div 
+                <div
                   className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
                   style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
                 >
@@ -144,7 +144,7 @@ export const AppetizersMenuSection = () => {
                   />
                 </div>
               </div>
-              
+
               {/* CTA Voucher placed directly below mobile2 & mobile3 images in mobile view */}
               <div className="w-full mt-2">
                 <MenuVoucherCTA />

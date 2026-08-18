@@ -32,7 +32,7 @@ export const AccompagnementsMenuSection = () => {
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col-reverse lg:flex-row items-stretch justify-between gap-4 xl:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
 
           {/* Left Column: Image */}
           <motion.div
@@ -40,9 +40,9 @@ export const AccompagnementsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full lg:w-1/2 flex items-center justify-center relative lg:min-h-[500px] pt-0 lg:pt-0 md:mb-8 lg:mb-0"
+            className="w-full flex items-center justify-center relative min-h-[300px] lg:min-h-[500px]"
           >
-            <div className="relative w-full h-full lg:min-h-[500px]">
+            <div className="relative w-full h-full min-h-[300px] lg:min-h-[500px]">
               {/* Desktop Image */}
               <Image
                 src="/images/Frities.png"
@@ -74,7 +74,7 @@ export const AccompagnementsMenuSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="w-full lg:w-1/2 flex flex-col justify-center pr-14 sm:pr-16 md:pr-16 lg:pr-0"
+            className="w-full flex flex-col justify-center"
           >
             <motion.div variants={fadeRightItem} className="mb-6 lg:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">

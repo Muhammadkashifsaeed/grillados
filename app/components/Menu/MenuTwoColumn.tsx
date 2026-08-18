@@ -5,19 +5,19 @@ import { staggerContainer } from '../../utils/animations';
 interface MenuTwoColumnProps {
   leftContent: ReactNode;
   rightContent: ReactNode;
-  reverseOnMobile?: boolean; 
+  reverseOnMobile?: boolean;
   alignItems?: 'items-stretch' | 'items-center' | 'items-start';
 }
 
-export const MenuTwoColumn = ({ 
-  leftContent, 
-  rightContent, 
+export const MenuTwoColumn = ({
+  leftContent,
+  rightContent,
   reverseOnMobile = false,
   alignItems = 'items-start'
 }: MenuTwoColumnProps) => {
   return (
     <div className={`grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 w-full lg:pr-[80px] ${alignItems}`}>
-      
+
       {/* Left Column */}
       <motion.div
         variants={staggerContainer}
@@ -39,7 +39,7 @@ export const MenuTwoColumn = ({
       >
         {rightContent}
       </motion.div>
-      
+
     </div>
   );
 };
