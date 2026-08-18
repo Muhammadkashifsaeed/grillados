@@ -54,7 +54,7 @@ export const AppetizersMenuSection = () => {
               <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
             </motion.div>
 
-            <div className="flex flex-col gap-4 md:gap-5 w-full">
+            <div className="flex flex-col gap-6 md:gap-8 w-full">
               {menuItems.map((item, index) => (
                 <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
