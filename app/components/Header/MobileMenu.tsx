@@ -60,7 +60,8 @@ export const MobileMenu = () => {
             alt="Grillado's Logo"
             width={120}
             height={40}
-            className="w-auto h-10 scale-110 ml-2"
+            style={{ width: "auto", height: "auto" }}
+            className="h-10 scale-110 ml-2"
           />
           <button
             onClick={toggleMenu}

@@ -31,7 +31,7 @@ export const Header = () => {
               src="/images/saman.png"
               alt="Grillado's Logo"
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 150px, 180px"
               className="object-contain object-left scale-110"
               priority
             />

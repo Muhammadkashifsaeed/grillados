@@ -106,7 +106,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                       <Image
                         src={item.image}
                         alt={item.name}
-                        fill sizes="100vw"
+                        fill sizes="(max-width: 1024px) 144px, 192px"
                         className="object-contain"
                       />
                     </div>
