@@ -57,7 +57,7 @@ const menuItems = [
 
 export const ChickenSpecialsMenuSection = () => {
   return (
-    <section id="chicken-specials" className="relative w-full py-6 lg:py-12 bg-[#0a0a0a]">
+    <section id="chicken-specials" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
       {/* Background texture */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -78,7 +78,9 @@ export const ChickenSpecialsMenuSection = () => {
             rightImageSrc="/images/lockfiles2.png"
           />
           {/* CTA Voucher placed directly below lockfiles1 & lockfiles2 images in desktop view */}
-          <MenuVoucherCTA />
+          <div className="w-full mt-12 lg:mt-24">
+            <MenuVoucherCTA />
+          </div>
         </div>
 
 

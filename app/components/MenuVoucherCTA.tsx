@@ -8,7 +8,7 @@ import VoucherModal from './VoucherModal';
 const MenuVoucherCTA = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="w-full relative overflow-visible flex flex-col items-center justify-center bg-transparent mt-16 lg:mt-32 mb-12 px-2 md:px-0 z-30">
+    <div className="w-full relative overflow-visible flex flex-col items-center justify-center bg-transparent mt-4 lg:mt-6 mb-6 lg:mb-8 px-2 md:px-0 z-30">
       <div className="w-full">
 
         {/* CTA Banner Section */}

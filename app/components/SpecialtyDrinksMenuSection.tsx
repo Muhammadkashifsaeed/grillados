@@ -27,7 +27,7 @@ export const SpecialtyDrinksMenuSection = () => {
   const t = useTranslations('SpecialtyDrinks');
 
   return (
-    <section className="relative w-full py-6 lg:py-12 bg-[#0a0a0a]">
+    <section className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
       {/* Background with subtle food outline pattern */}
       <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"

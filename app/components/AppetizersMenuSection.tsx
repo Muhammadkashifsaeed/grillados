@@ -20,7 +20,7 @@ const menuItems = [
 
 export const AppetizersMenuSection = () => {
   return (
-    <section id="appetizers" className="relative w-full py-6 lg:py-12 bg-[#0a0a0a]">
+    <section id="appetizers" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
       {/* 
         Background with subtle food outline pattern. 
         Update the URL if you have a specific pattern image.
