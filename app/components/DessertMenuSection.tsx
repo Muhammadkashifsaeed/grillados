@@ -79,7 +79,7 @@ export const DessertMenuSection = () => {
             </>
           }
           rightContent={
-            <div className="relative w-full h-full lg:min-h-[500px] flex items-center justify-center lg:mb-24">
+            <div className="relative w-full h-full lg:min-h-[500px] flex items-center justify-center lg:mb-8">
               {/* Desktop Image */}
               <Image 
                 src="/images/a-1.png"

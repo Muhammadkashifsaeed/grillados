@@ -127,7 +127,7 @@ export const GarnishedRiceSauceMenuSection = () => {
         rightContent={
           <div className="w-full flex flex-col items-center justify-start gap-8">
             {/* Top Large Peri Image */}
-            <div className="relative w-full py-4 lg:pt-8 lg:pb-32 flex justify-center">
+            <div className="relative w-full py-4 lg:pt-8 lg:pb-8 flex justify-center">
               {/* Desktop Image */}
               <Image 
                 src="/images/zasty.png"
