@@ -12,7 +12,7 @@ export interface ReviewProps {
 
 const ReviewCard: React.FC<ReviewProps> = ({ date, review, name, avatarSrc }) => {
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-md p-5 flex flex-col gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
+    <div className="h-full bg-white rounded-2xl border border-gray-100 shadow-md p-5 flex flex-col gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
 
       {/* Header: Avatar + Name + Date + Google Icon */}
       <div className="flex justify-between items-start">
