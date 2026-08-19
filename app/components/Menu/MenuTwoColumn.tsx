@@ -16,7 +16,7 @@ export const MenuTwoColumn = ({
   alignItems = 'items-start'
 }: MenuTwoColumnProps) => {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 w-full ${alignItems}`}>
+    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full ${alignItems}`}>
 
       {/* Left Column */}
       <motion.div
