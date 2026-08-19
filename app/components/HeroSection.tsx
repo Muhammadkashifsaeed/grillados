@@ -26,7 +26,7 @@ const HeroSection = () => {
       >
         <Image 
           src="/images/hero-bg-new.png" 
-          alt="Premium Fast Food Spread" 
+          alt="Grillado's Premium Grilled Chicken and Portuguese Food" 
           fill 
           priority
           quality={100}

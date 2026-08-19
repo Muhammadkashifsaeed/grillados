@@ -24,6 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   return {
     metadataBase: new URL('https://grillados.ca'),
+    alternates: { canonical: '/' },
+    robots: { index: true, follow: true },
     title: {
       template: "%s | GRILLADO'S",
       default: titleDefault,
@@ -83,12 +85,31 @@ export default async function RootLayout({
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Grillado's",
+    "image": "https://grillados.ca/images/hero-bg-new.png",
+    "url": "https://grillados.ca",
+    "servesCuisine": ["Portuguese", "Grilled Chicken", "Steak"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CA"
+    }
+  };
+
   return (
     <html
       lang={locale}
       className={`${inter.variable} h-full antialiased font-sans`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-white" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Header />
