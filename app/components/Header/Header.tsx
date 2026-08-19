@@ -25,8 +25,8 @@ export const Header = () => {
       <div className="max-w-375 mx-auto px-2 lg:px-3 h-full flex items-center justify-between gap-1 lg:gap-2">
         
         {/* Left Side: Logo */}
-        <Link href="/" className="shrink-0 flex items-center h-full py-2 group mr-2">
-          <div className="relative h-[55px] w-35 md:h-15 md:w-[150px] lg:h-[65px] lg:w-[165px] xl:h-17.5 xl:w-[180px] transition-transform duration-300 group-hover:scale-105">
+        <Link href="/" className="shrink-0 flex items-center h-full py-2 mr-2">
+          <div className="relative h-[55px] w-35 md:h-15 md:w-[150px] lg:h-[65px] lg:w-[165px] xl:h-17.5 xl:w-[180px]">
             <Image
               src="/images/saman.png"
               alt="Grillado's Logo"

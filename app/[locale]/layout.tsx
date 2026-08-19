@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const keywords = t('keywords').toUpperCase().split(', ');
 
   return {
+    metadataBase: new URL('https://grillados.ca'),
     title: {
       template: "%s | GRILLADO'S",
       default: titleDefault,
