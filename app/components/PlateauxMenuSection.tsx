@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { staggerContainer, fadeLeftItem } from '../utils/animations';
 
 const menuItems = [
@@ -34,6 +35,15 @@ const menuItems = [
 ];
 
 export const PlateauxMenuSection = () => {
+  const t = useTranslations('Menu');
+  const rawItems = t.raw('plateauxMenu');
+  const menuItemsLocal = [
+    { name: rawItems[0].name, price: '49.99', note: rawItems[0].note },
+    { name: rawItems[1].name, price: '94.99', note: rawItems[1].note },
+    { name: rawItems[2].name, price: '119.99', note: rawItems[2].note },
+    { name: rawItems[3].name, price: '149.99', note: rawItems[3].note },
+    { name: rawItems[4].name, price: '159.99', note: rawItems[4].note },
+  ];
   return (
     <section id="plateaux" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
       {/* Background texture */}
@@ -67,13 +77,13 @@ export const PlateauxMenuSection = () => {
                 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] uppercase tracking-wide"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
-                GRILLADO&apos;S<br />PLATEAUX
+                <span dangerouslySetInnerHTML={{ __html: t('plateaux') }} />
               </h2>
               <div className="w-full h-1.5 bg-[#FAAE40] mt-3" />
             </motion.div>
 
             <div className="flex flex-col gap-5 md:gap-6 w-full">
-              {menuItems.map((item, index) => (
+              {menuItemsLocal.map((item, index) => (
                 <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
                   {/* Name + dotted leader + price */}
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">

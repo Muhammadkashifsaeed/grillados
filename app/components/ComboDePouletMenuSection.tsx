@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { staggerContainer, fadeLeftItem } from '../utils/animations';
 
 const menuItems = [
@@ -16,6 +17,17 @@ const menuItems = [
 ];
 
 export const ComboDePouletMenuSection = () => {
+  const t = useTranslations('Menu');
+  const rawItems = t.raw('comboDePouletMenu');
+  const menuItemsLocal = [
+    { name: rawItems[0].name, price: '15.99', note: rawItems[0].note },
+    { name: rawItems[1].name, price: '16.99', note: rawItems[1].note },
+    { name: rawItems[2].name, price: '18.99' },
+    { name: rawItems[3].name, price: '16.99' },
+    { name: rawItems[4].name, price: '19.99', note: rawItems[4].note },
+    { name: rawItems[5].name, price: '20.99' },
+    { name: rawItems[6].name, price: '21.99' },
+  ];
   return (
     <section id="combos" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
       {/* Background with subtle food outline pattern */}
@@ -43,13 +55,13 @@ export const ComboDePouletMenuSection = () => {
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
-                COMBO DE<br />POULET
+                <span dangerouslySetInnerHTML={{ __html: t('comboDePoulet') }} />
               </h2>
               <div className="w-full max-w-40 md:max-w-48 lg:max-w-64 h-1.5 bg-[#FAAE40] mt-4"></div>
             </motion.div>
 
             <div className="flex flex-col gap-5 md:gap-6 w-full">
-              {menuItems.map((item, index) => (
+              {menuItemsLocal.map((item, index) => (
                 <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
                     <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
@@ -77,7 +89,7 @@ export const ComboDePouletMenuSection = () => {
               {/* Bottom Note */}
               <motion.div variants={fadeLeftItem} className="mt-6 md:mt-10 w-full pt-4 border-t border-white/10">
                 <p className="text-[#FAAE40] text-sm md:text-base font-bold uppercase tracking-widest">
-                  Ajoutez un 2ᵉ accompagnement pour 4,99
+                  {t('addSide')}
                 </p>
               </motion.div>
             </div>

@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const AboutUsSmart = () => {
+  const t = useTranslations('AboutUs');
   return (
     <section className="bg-white pt-8 md:pt-12 pb-16 md:pb-24 px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -10,8 +12,8 @@ const AboutUsSmart = () => {
         <div className="flex flex-col justify-center order-2 lg:order-1">
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black font-['Outfit',sans-serif] leading-tight mb-6 uppercase tracking-wide">
-            Being <br />
-            <span className="text-[#FACC15] drop-shadow-sm">Smart!</span>
+            {t('smartHeading1')} <br />
+            <span className="text-[#FACC15] drop-shadow-sm">{t('smartHeading2')}</span>
           </h2>
 
           <p className="text-gray-700 text-lg sm:text-xl leading-relaxed font-medium">

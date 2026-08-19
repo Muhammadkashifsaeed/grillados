@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReviewCard from './ReviewCard';
+import { useTranslations } from 'next-intl';
 
 const reviewsData = [
   { avatarSrc: "/images/Ali Z.png",        name: "Ali Z",            date: "7 months ago", review: "Harprith provided amazing services. Great food" },
@@ -14,9 +15,12 @@ const reviewsData = [
 ];
 
 // Duplicate for seamless infinite loop
-const allCards = [...reviewsData, ...reviewsData];
 
-const ReviewsSection = () => {
+
+const {t('heading')}Section = () => {
+  const t = useTranslations('ServiceReviews');
+  const reviewsData = getReviewsData(t);
+  const allCards = [...reviewsData, ...reviewsData];
   return (
     <section className="w-full bg-[#FDF8F1] py-14 overflow-hidden">
       <div className="w-full max-w-[1400px] mx-auto px-6 md:px-10">
@@ -29,7 +33,7 @@ const ReviewsSection = () => {
           <div className="w-[110px] h-[3px] bg-black rounded-full mt-2"></div>
         </div>
 
-        {/* Row: GOOD panel + auto-scroll carousel */}
+        {/* Row: {t('good')} panel + auto-scroll carousel */}
         <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-8 overflow-hidden w-full">
 
           {/* Left: GOOD block */}
@@ -43,7 +47,7 @@ const ReviewsSection = () => {
               ))}
             </div>
             <p className="text-gray-600 text-[12px] mb-2 font-medium leading-snug">
-              Based on <span className="font-bold text-gray-800">1,779 reviews</span>
+              {t('basedOn').split('1,779')[0]}<span className="font-bold text-gray-800">1,779{t('basedOn').split('1,779')[1]}</span>
             </p>
             <img src="/images/logoss.svg" alt="Powered by" className="h-4 object-contain opacity-80" />
           </div>

@@ -24,7 +24,7 @@ export default function WeddingCateringSection() {
         >
           {/* Heading */}
           <h2 className="text-2xl sm:text-3xl lg:text- font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase leading-tight tracking-wide mb-4">
-            Wedding catering service
+            {t('heading')}
           </h2>
           
           {/* Divider */}
@@ -40,7 +40,7 @@ export default function WeddingCateringSection() {
 
           {/* Description */}
           <p className="text-gray-600 text-xs md:text-sm leading-relaxed max-w-112.5 mb-8 font-medium">
-            Your wedding is a once-in-a-lifetime event. Elevate your catering service to the next level with Grillado&apos;s certified halal dishes, prepared with fresh ingredients and the best Portuguese chicken in Canada.
+            {t('description')}
           </p>
 
           {/* Button */}

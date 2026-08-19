@@ -4,9 +4,11 @@ import React from 'react';
 import Image from 'next/image';
 import { Link } from "@/i18n/routing";
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 
 export default function EventsCateringSection() {
+  const t = useTranslations('EventsCatering');
   const locale = useLocale();
   
   return (

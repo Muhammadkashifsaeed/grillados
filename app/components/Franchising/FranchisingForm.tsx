@@ -90,7 +90,7 @@ export default function FranchisingForm() {
     e.preventDefault();
     if (!validate()) return;
     if (!turnstileToken) {
-      alert("Please complete the Turnstile verification.");
+      alert(t('turnstileAlert') || "Please complete the Turnstile verification.");
       return;
     }
 

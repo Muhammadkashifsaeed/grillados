@@ -3,8 +3,10 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export default function DeliveryPickupSection() {
+  const t = useTranslations('DeliveryPickup');
   return (
     <section className="relative w-full overflow-hidden bg-linear-to-r from-[#f08519] to-[#DAAF18]">
 

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { X, ChevronDown } from 'lucide-react';
 
 interface VoucherModalProps {
@@ -33,11 +34,11 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.consent) {
-      alert('Please agree to the terms to continue.');
+      alert(t('alertAgree') || 'Please agree to the terms to continue.');
       return;
     }
     console.log('Form submitted:', formData);
-    alert("Voucher sent! Check your email/SMS.");
+    alert(t('alertSent') || "Voucher sent! Check your email/SMS.");
     onClose();
   };
 
@@ -77,10 +78,10 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
             {/* Header */}
             <div className="p-8 sm:p-10 pb-6 text-center relative z-10 border-b border-white/5 bg-gradient-to-b from-white/5 to-transparent">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-['Outfit',sans-serif] uppercase leading-[1.1] mb-3 tracking-tight drop-shadow-md">
-                GET UP TO <span className="text-[#FEC602]">20% OFF</span><br />On The Entire Menu.
+                {t('getUpToText')} <span className="text-[#FEC602]">{t('discountText')}</span><br />{t('onEntireMenu')}
               </h2>
               <p className="text-white/80 font-medium text-sm sm:text-base">
-                Fill out the form to get your Discounted Voucher
+                {t('fillOutForm')}
               </p>
             </div>
 
@@ -88,33 +89,33 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
             <form onSubmit={handleSubmit} className="p-8 sm:p-10 pt-6 flex flex-col gap-4 sm:gap-5 relative z-10 bg-black/20 flex-1 overflow-y-auto">
               
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="firstName" className="text-white/90 font-bold text-sm ml-1">First Name*</label>
+                <label htmlFor="firstName" className="text-white/90 font-bold text-sm ml-1">{t('firstName')}</label>
                 <input
                   type="text"
                   id="firstName"
                   required
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#FEC602] focus:bg-white/10 transition-all font-medium"
-                  placeholder="Enter your first name"
+                  placeholder="{t('enterFirstName')}"
                   value={formData.firstName}
                   onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                 />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="email" className="text-white/90 font-bold text-sm ml-1">Email*</label>
+                <label htmlFor="email" className="text-white/90 font-bold text-sm ml-1">{t('email')}</label>
                 <input
                   type="email"
                   id="email"
                   required
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#FEC602] focus:bg-white/10 transition-all font-medium"
-                  placeholder="Enter your email address"
+                  placeholder="{t('enterEmail')}"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="phone" className="text-white/90 font-bold text-sm ml-1">Phone</label>
+                <label htmlFor="phone" className="text-white/90 font-bold text-sm ml-1">{t('phone')}</label>
                 <div className="flex gap-2 relative">
                   <div className="relative">
                     <select 
@@ -152,7 +153,7 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
                   />
                 </div>
                 <label htmlFor="consent" className="text-white/60 text-[11px] sm:text-xs leading-relaxed cursor-pointer select-none">
-                  I agree to receive SMS notifications and marketing from Grillado&apos;s. Msg & data rates may apply. Reply STOP to unsubscribe, HELP for help. <a href="#" className="underline hover:text-white transition-colors">Privacy Policy</a> | <a href="#" className="underline hover:text-white transition-colors">Terms of Service</a>
+                  {t('iAgree')} <a href="#" className="underline hover:text-white transition-colors">{t('privacyPolicy')}</a> | <a href="#" className="underline hover:text-white transition-colors">{t('termsOfService')}</a>
                 </label>
               </div>
 
@@ -160,7 +161,7 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
                 type="submit"
                 className="w-full bg-[#E50000] hover:bg-red-500 text-white font-extrabold text-base sm:text-lg py-4 sm:py-5 rounded-xl shadow-[0_10px_20px_rgba(229,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(229,0,0,0.5)] transition-all duration-300 active:scale-95 mt-2 border-2 border-[#E50000] hover:border-red-400"
               >
-                GET YOUR VOUCHER
+                {t('getYourVoucher')}
               </button>
             </form>
 

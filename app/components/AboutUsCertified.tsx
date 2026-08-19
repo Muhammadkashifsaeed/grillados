@@ -1,32 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const AboutUsCertified = () => {
+  const t = useTranslations('AboutUsCertified');
+  // Cards are managed by translations now
+  const rawCards = t.raw('cards') as { heading: string, text: string }[];
   const cards = [
-    {
-      id: 1,
-      image: '/images/certified1.png',
-      heading: 'Taste Meets Nutrition',
-      text: 'Our chicken is sourced from grain-fed, certified Halal distributors. We prioritize nutrition without compromising on taste.',
-    },
-    {
-      id: 2,
-      image: '/images/certified2.png',
-      heading: 'Freshness Unleashed',
-      text: 'Our chicken is prepared fresh, never frozen. We take pride in meticulously trimming off excess fat, and marinating in our signature sauce for a full 24 hours to create a healthier, flavour-packed dining experience.',
-    },
-    {
-      id: 3,
-      image: '/images/certified3.png',
-      heading: 'Grilling Magic',
-      text: 'Our chicken is masterfully grilled to perfection over an open flame. We are committed to delivering a burst of flavour while keeping cholesterol and fat content low.',
-    },
-    {
-      id: 4,
-      image: '/images/certified4.png',
-      heading: 'Craft Your Perfect Meal',
-      text: 'Our chicken is the perfect canvas for achieving culinary perfection. We offer an array of delectable sauces, including Lemon & Herb, Mild, BBQ, Hot, and Extra Hot, to personalize your healthy dining experience.',
-    },
+    { id: 1, image: '/images/certified1.png', heading: rawCards[0].heading, text: rawCards[0].text },
+    { id: 2, image: '/images/certified2.png', heading: rawCards[1].heading, text: rawCards[1].text },
+    { id: 3, image: '/images/certified3.png', heading: rawCards[2].heading, text: rawCards[2].text },
+    { id: 4, image: '/images/certified4.png', heading: rawCards[3].heading, text: rawCards[3].text },
   ];
 
   return (
@@ -36,8 +20,8 @@ const AboutUsCertified = () => {
         {/* Centered Heading */}
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black font-['Outfit',sans-serif] uppercase tracking-wide leading-tight">
-            Being <br />
-            <span className="text-[#FACC15] drop-shadow-sm">Healthy!</span>
+            {t('heading1')} <br />
+            <span className="text-[#FACC15] drop-shadow-sm">{t('heading2')}</span>
           </h2>
         </div>
 

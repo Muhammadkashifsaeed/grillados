@@ -307,7 +307,8 @@
     "error": "Une erreur s'est produite lors de la soumission. Veuillez réessayer.",
     "required": "Ce champ est obligatoire",
     "invalidEmail": "Veuillez entrer une adresse email valide",
-    "invalidPhone": "Veuillez entrer un numéro de téléphone valide"
+    "invalidPhone": "Veuillez entrer un numéro de téléphone valide",
+    "turnstileAlert": "Veuillez compléter la vérification Turnstile."
   },
   "Gallery": {
     "pageTitle": "Galerie",
@@ -391,5 +392,379 @@
     "title": "Grillado's | Poulet Grillé Premium et Saveurs Portugaises",
     "description": "Découvrez le poulet grillé premium, les steaks grésillants et saveurs portugaises authentiques chez Grillado's. Commandez pour emporter ou livraison.",
     "keywords": "Grillado's, poulet grillé, poulet peri peri, restaurant, nourriture portugaise, traiteur, commande en ligne, halal, steaks"
+  },
+  "CateringFAQ": {
+    "heading": "FAQ Traiteur",
+    "faqs": [
+      {
+        "q": "Combien de préavis avez-vous besoin pour le service traiteur ?",
+        "a": "Un minimum de 48 heures pour les commandes de moins de 50 personnes, et de 5 jours pour les commandes de 50 à 500 personnes. Des commandes urgentes peuvent être possibles — appelez-nous."
+      },
+      {
+        "q": "Est-ce que tout est halal ?",
+        "a": "Oui. Toute la viande chez Grillado’s est certifiée halal et abattue à la main."
+      },
+      {
+        "q": "Faites-vous la livraison ?",
+        "a": "Oui, dans un rayon de 30 km de n'importe quelle succursale Grillado’s. Les frais de livraison dépendent de la distance et de la taille de la commande."
+      },
+      {
+        "q": "Installez-vous le service sur place ?",
+        "a": "Oui — installation complète, supports de service et équipement de chauffage disponibles. Nous pouvons rester pour servir les invités moyennant des frais supplémentaires."
+      },
+      {
+        "q": "Quelle est la commande minimale ?",
+        "a": "Notre plus petit forfait traiteur sert 10 personnes pour 219,99 $."
+      },
+      {
+        "q": "Qu'en est-il des restrictions alimentaires ?",
+        "a": "Nous proposons des options végétariennes, une préparation adaptée au gluten, et pouvons répondre à la plupart des besoins alimentaires. Informez-nous lors de la commande."
+      },
+      {
+        "q": "Comment puis-je payer ?",
+        "a": "Carte de crédit, virement électronique ou facture pour les entreprises clientes avec des conditions NET 30."
+      },
+      {
+        "q": "Puis-je annuler ?",
+        "a": "Annulation gratuite jusqu'à 48 heures avant l'événement. Dans les 48 heures, des frais de 50 % s'appliquent."
+      }
+    ]
+  },
+  "ContactCatering": {
+    "heading": "Entrer en contact",
+    "contactInfo": "Coordonnées",
+    "firstName": "Prénom",
+    "lastName": "Nom de famille",
+    "phoneNumber": "Numéro de téléphone*",
+    "email": "Adresse e-mail*",
+    "eventInfo": "Informations sur l'événement",
+    "guests": "Nombre d'invités*",
+    "guestsPlaceholder": "10 à 10 000",
+    "deliveryDate": "Date de livraison*",
+    "deliveryTime": "Heure de livraison*",
+    "deliveryNotes": "Notes de livraison",
+    "deliveryNotesPlaceholder": "Écrivez les instructions de livraison...",
+    "deliveryInfo": "Informations de livraison",
+    "searchAddress": "Rechercher l'adresse",
+    "searchAddressPlaceholder": "Rechercher une adresse",
+    "address": "Adresse*",
+    "city": "Ville*",
+    "postalCode": "Code postal*",
+    "nearbyLandmark": "Emplacement à proximité (popup)*",
+    "selectLocation": "Sélectionnez l'emplacement à proximité",
+    "laval": "LAVAL",
+    "milton": "MILTON",
+    "cambridge": "CAMBRIDGE",
+    "mississauga": "MISSISSAUGA",
+    "consent": "Je consens à recevoir des notifications par SMS, des alertes et des messages marketing occasionnels. La fréquence des messages varie ; des tarifs standard s'appliquent. Textez AIDE pour de l'aide ou ARRET pour vous désabonner.",
+    "processing": "Traitement...",
+    "success": "Commande passée avec succès !",
+    "submit": "Passez votre commande maintenant",
+    "privacy": "Politique de confidentialité",
+    "terms": "Termes et conditions"
+  },
+  "BirthdayCatering": {
+    "heading": "anniversaire !",
+    "description": "Avec les innombrables choix de menu de Grillado's, personne ne sera laissé pour compte dans cet océan de délices culinaires. Laissez Grillado rendre votre anniversaire… délicieux.",
+    "contactUs": "Nous contacter"
+  },
+  "WeddingCatering": {
+    "heading": "Service traiteur de mariage",
+    "description": "Votre mariage est un événement unique dans une vie. Amenez votre service traiteur au niveau supérieur avec les plats certifiés halal de Grillado's, préparés avec des ingrédients frais et le meilleur poulet portugais au Canada.",
+    "contactUs": "Nous contacter"
+  },
+  "EventsCatering": {
+    "heading": "Événements d'entreprise et fêtes privées",
+    "description": "Vous organisez un événement pour votre entreprise ou une fête privée pour vos amis et votre famille ? Vous pouvez compter sur Grillado's. Contactez-nous et nous trouverons les meilleures combinaisons de menu pour votre événement.",
+    "contactUs": "Nous contacter"
+  },
+  "DeliveryPickup": {
+    "heading": "Service de livraison et de cueillette",
+    "description": "Votre emplacement est notre limite. Contactez-nous pour en savoir plus sur nos options de livraison et de cueillette.",
+    "contactUs": "Nous contacter"
+  },
+  "ServiceReviews": {
+    "heading": "Avis",
+    "good": "BON",
+    "basedOn": "Basé sur 1 779 avis",
+    "monthsAgo": "il y a des mois",
+    "ratingOnly": "L'utilisateur a seulement laissé une note.",
+    "review1": "Harprith a fourni un service incroyable. Super nourriture",
+    "review2": "BIEn",
+    "review5": "Super service client et la nourriture était délicieuse et cuisinée à la perfection ! Fortement recommandé"
+  },
+  "AboutUs": {
+    "propertyHeading": "Propriété",
+    "propertyDesc": "Vous pouvez profiter de notre expérience complète en matière d'exigences et de conception de propriétés, avec un accès à des équipes de conception externes et internes. Les conceptions de restaurants innovantes garantissent que notre marque établit les tendances et maintient sa position sur le marché de la restauration décontractée rapide.",
+    "smartHeading1": "Soyez ",
+    "smartHeading2": "Intelligent !",
+    "smartDesc": "Chez <span className=\"text-[#FBC18A] font-bold\">Grillado’s</span>, nous pensons qu'une alimentation saine est vitale pour une bonne santé. Notre menu axé sur la santé est conçu pour répondre à votre style de vie soucieux de votre santé. Le poulet de <span className=\"text-[#FBC18A] font-bold\">Grillado’s</span> est grillé à la perfection, ce qui en fait le choix le plus intelligent pour une vie équilibrée.",
+    "storyHeading1": "tout a commencé",
+    "storyHeading2": "avec une envie...",
+    "storyDesc1": "Grillado’s™ est un restaurant décontracté qui se concentre sur les grillades du meilleur poulet portugais avec une touche sud-africaine. Cette touche est notre variété de sauces de renommée mondiale.",
+    "storyDesc2": "Situé au cœur de Montréal, il est rapidement devenu connu pour son atmosphère amusante et engageante, ainsi que pour sa multitude de saveurs qui gardent les clients heureux et reviennent pour plus…",
+    "votedText1": "<span className=\"text-[#FACC15]\">Grillado’s™</span> a été lancé à Montréal en 2015 et a été élu",
+    "votedText2": "\"Nouveau restaurant le plus branché de Montréal\"",
+    "votedText3": "par Michael D’Alimonite du <span className=\"font-bold\">Thrilist Media Group.</span>"
+  },
+  "AboutUsCertified": {
+    "heading1": "Soyez ",
+    "heading2": "En santé !",
+    "cards": [
+      {
+        "heading": "Le goût rencontre la nutrition",
+        "text": "Notre poulet provient de distributeurs certifiés Halal nourris au grain. Nous priorisons la nutrition sans compromettre le goût."
+      },
+      {
+        "heading": "Fraîcheur libérée",
+        "text": "Notre poulet est préparé frais, jamais congelé. Nous sommes fiers de couper méticuleusement l'excès de gras et de mariner dans notre sauce signature pendant 24 heures pour créer une expérience culinaire plus saine et riche en saveurs."
+      },
+      {
+        "heading": "Magie de la grillade",
+        "text": "Notre poulet est magistralement grillé à la perfection sur une flamme nue. Nous nous engageons à offrir une explosion de saveurs tout en maintenant un faible taux de cholestérol et de matières grasses."
+      },
+      {
+        "heading": "Créez votre repas parfait",
+        "text": "Notre poulet est la toile parfaite pour atteindre la perfection culinaire. Nous proposons une gamme de sauces délectables, notamment Citron & Herbes, Doux, BBQ, Épicé et Extra Épicé, pour personnaliser votre expérience culinaire saine."
+      }
+    ]
+  },
+  "ContactForm": {
+    "heading": "Entrer en contact",
+    "desc": "Hé, nous aimerions avoir une conversation avec vous au sujet de notre nourriture et de nos services. N'hésitez pas à nous contacter en remplissant notre formulaire ci-dessous !",
+    "fullName": "Nom complet*",
+    "address": "Adresse",
+    "email": "E-mail*",
+    "phone": "Numéro de téléphone*",
+    "message": "Message",
+    "success": "Succès !",
+    "privacy": "Confidentialité",
+    "help": "Aide",
+    "submit": "SOUMETTRE"
+  },
+  "Menu": {
+    "appetizers": "ENTRÉES",
+    "appetizersMenu": [
+      {
+        "name": "Pain Portugais",
+        "note": "SERVI AVEC DU BEURRE"
+      },
+      {
+        "name": "Pain Pita"
+      },
+      {
+        "name": "Pain à l'Ail"
+      },
+      {
+        "name": "Houmous & Pita"
+      },
+      {
+        "name": "5 Bâtonnets de Fromage Mozzarella",
+        "note": "AVEC SAUCE MARINARA"
+      },
+      {
+        "name": "5 Ailes de Poulet Entières"
+      },
+      {
+        "name": "10 Mini Brochettes de Bœuf"
+      },
+      {
+        "name": "Nachos Végétariens"
+      },
+      {
+        "name": "Nachos au Poulet Grillé",
+        "note": "AJOUTEZ DU POULET SUPPLÉMENTAIRE POUR 4.99"
+      }
+    ],
+    "chickenSpecials": "SPÉCIALITÉS DE POULET<br />GRILLADO'S",
+    "chickenSpecialsMenu": [
+      {
+        "name": "Espetada Grillée",
+        "description": "Poulet mariné tendre avec des poivrons frais, servi en brochette avec 2 accompagnements réguliers."
+      },
+      {
+        "name": "Poulet Grillé Biologique Entier",
+        "note": "AVEC 1 ACCOMPAGNEMENT RÉGULIER"
+      },
+      {
+        "name": "Poutine Authentique de Montréal",
+        "note": "AJOUTEZ DU POULET GRILLÉ POUR 5.49"
+      },
+      {
+        "name": "Fiesta",
+        "description": "Poulet, riz et salade servis avec une vinaigrette italienne."
+      },
+      {
+        "name": "Burger Végétarien",
+        "note": "AVEC 1 ACCOMPAGNEMENT RÉGULIER (AJOUTEZ UNE GALETTE SUPPLÉMENTAIRE POUR 4.99)"
+      },
+      {
+        "name": "Burger au Poulet Grillé",
+        "note": "AVEC 1 ACCOMPAGNEMENT RÉGULIER (AJOUTEZ UNE GALETTE SUPPLÉMENTAIRE POUR 4.99)"
+      },
+      {
+        "name": "Sandwich au Poulet Grillé à l'Ail",
+        "note": "AVEC 1 ACCOMPAGNEMENT RÉGULIER (AJOUTEZ UNE GALETTE SUPPLÉMENTAIRE POUR 4.99)"
+      },
+      {
+        "name": "Grillade Tandoori Flamboyante",
+        "note": "8 MORCEAUX DE POULET ÉPICÉ TANDOORI SUR UN GRIL CHAUD"
+      },
+      {
+        "name": "Poulet Saji Balochi",
+        "note": "SUR COMMANDE SEULEMENT AVEC 2 ACCOMPAGNEMENTS RÉGULIERS ET 2 PAINS PITA OU 2 PAINS À L'AIL"
+      }
+    ],
+    "comboDePoulet": "COMBO DE<br />POULET",
+    "comboDePouletMenu": [
+      {
+        "name": "¼ Cuisse de Poulet Grillée",
+        "note": "(CUISSE + HAUT DE CUISSE)"
+      },
+      {
+        "name": "¼ Poitrine de Poulet Grillée",
+        "note": "(POITRINE + AILES)"
+      },
+      {
+        "name": "6 Ailes de Poulet Entières"
+      },
+      {
+        "name": "Doubles Kebabs"
+      },
+      {
+        "name": "Poitrine de Poulet Grillée Désossée",
+        "note": "(NOUVEL ARTICLE)"
+      },
+      {
+        "name": "Doubles Cuisses"
+      },
+      {
+        "name": "Demi-poulet"
+      }
+    ],
+    "addSide": "Ajoutez un 2ème accompagnement pour 4,99",
+    "beefLambSpecials": "SPÉCIALITÉS BŒUF & AGNEAU<br />GRILLADO'S",
+    "beefLambSpecialsMenu": [
+      {
+        "name": "Côtes Arrières",
+        "note": "AVEC 2 ACCOMPAGNEMENTS RÉGULIERS"
+      },
+      {
+        "name": "Côtelettes d'Agneau",
+        "note": "AVEC 2 ACCOMPAGNEMENTS RÉGULIERS"
+      },
+      {
+        "name": "Bifteck de Surlonge 12 oz",
+        "note": "AVEC 2 ACCOMPAGNEMENTS RÉGULIERS (VEUILLEZ PRÉVOIR 30 À 40 MINUTES DE CUISSON)"
+      },
+      {
+        "name": "Bifteck de Surlonge 12 oz",
+        "note": "AVEC 2 ACCOMPAGNEMENTS RÉGULIERS (TERRE ET MER) ET UNE BROCHETTE DE CREVETTES (VEUILLEZ PRÉVOIR 30 À 40 MINUTES DE CUISSON)"
+      },
+      {
+        "name": "Burger de Bœuf Grillado's",
+        "note": "AVEC 1 ACCOMPAGNEMENT RÉGULIER (AJOUTEZ UNE GALETTE SUPPLÉMENTAIRE POUR 4.99)"
+      },
+      {
+        "name": "Carré Complet de Côtes Arrières",
+        "note": "7 CÔTES DOS DE QUALITÉ SUPÉRIEURE"
+      }
+    ],
+    "plateaux": "PLATEAUX<br />GRILLADO'S",
+    "plateauxMenu": [
+      {
+        "name": "Plateau d'Ailes de Poulet Grillées",
+        "note": "15 AILES DE POULET ENTIÈRES, 2 ACCOMPAGNEMENTS RÉGULIERS, 2 PAINS À L'AIL OU 3 PETITS PAINS PORTUGAIS"
+      },
+      {
+        "name": "Plateau de Poulet",
+        "note": "2 POULETS GRILLÉS ENTIERS BIO, 2 GRANDS ACCOMPAGNEMENTS, 2 PAINS À L'AIL OU 3 PETITS PAINS PORTUGAIS"
+      },
+      {
+        "name": "Plateau de Bœuf",
+        "note": "1 CARRÉ COMPLET DE CÔTES DE BŒUF DE QUALITÉ SUPÉRIEURE, 2 GRANDS ACCOMPAGNEMENTS, 2 PAINS À L'AIL OU 3 PETITS PAINS PORTUGAIS"
+      },
+      {
+        "name": "Plateau Signature",
+        "note": "5 BÂTONNETS DE FROMAGE MOZZARELLA, 1 POULET GRILLÉ ENTIER BIO, 10 AILES DE POULET ENTIÈRES, 10 MINI BROCHETTES DE BŒUF, 2 BROCHETTES ESPETADA GRILLÉES, 3 GRANDS ACCOMPAGNEMENTS, 3 PAINS À L'AIL OU 4 PETITS PAINS PORTUGAIS"
+      },
+      {
+        "name": "Plateau Mixte",
+        "note": "1 POULET GRILLÉ ENTIER BIO, 1 CARRÉ COMPLET DE CÔTES DE BŒUF DE QUALITÉ SUPÉRIEURE, 3 GRANDS ACCOMPAGNEMENTS, 3 PAINS À L'AIL OU 4 PETITS PAINS PORTUGAIS"
+      }
+    ],
+    "sandwichWrapsPita": "SANDWICHS, WRAPS ET PITA",
+    "chicken": "Poulet",
+    "vegetarian": "Végétarien",
+    "combo": "COMBO",
+    "sideAndPop": "(1 ACCOMPAGNEMENT + BOISSON GAZEUSE)",
+    "salads": "SALADES",
+    "saladsMenu": [
+      {
+        "name": "Salade Grecque"
+      },
+      {
+        "name": "Salade Printanière"
+      },
+      {
+        "name": "Salade César"
+      }
+    ],
+    "saladsLargeAdd": "Salades GRAND FORMAT 9.99 - AJOUTEZ",
+    "grilledChickenPrice": "POULET GRILLÉ 5.99",
+    "accompagnements": "ACCOMPAGNEMENTS",
+    "accompagnementsMenu": [
+      {
+        "name": "Frites Peri"
+      },
+      {
+        "name": "Frites Masala"
+      },
+      {
+        "name": "Quartiers de Pommes de Terre"
+      },
+      {
+        "name": "Rondelles d'Oignon"
+      },
+      {
+        "name": "Légumes Grillés Mélangés"
+      },
+      {
+        "name": "Salade de Chou Crémeuse"
+      },
+      {
+        "name": "Riz Épicé"
+      },
+      {
+        "name": "Maïs Grillé"
+      }
+    ],
+    "seasonal": "SAISONNIER",
+    "sidesSizes": "Accompagnements Grand format 8,99 & À partager 12,99"
+  },
+  "Voucher": {
+    "getUpTo": "OBTENEZ JUSQU'À 20 % DE RABAIS",
+    "onEntireMenu": "Sur tout le menu.",
+    "clickToGet": "Cliquez sur 'Obtenez votre coupon maintenant' et profitez d'un rabais allant jusqu'à 20 % dans toutes les succursales Grillado's à travers le Canada !",
+    "getVoucherNow": "Obtenez votre coupon maintenant",
+    "fillOutForm": "Remplissez le formulaire pour obtenir votre coupon de réduction",
+    "firstName": "Prénom*",
+    "enterFirstName": "Entrez votre prénom",
+    "email": "E-mail*",
+    "enterEmail": "Entrez votre adresse e-mail",
+    "phone": "Téléphone",
+    "iAgree": "J'accepte de recevoir des notifications SMS et du marketing de Grillado's. Des frais de messagerie et de données peuvent s'appliquer. Répondez STOP pour vous désabonner, HELP pour obtenir de l'aide.",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "getYourVoucher": "OBTENEZ VOTRE COUPON",
+    "alertAgree": "Veuillez accepter les conditions pour continuer.",
+    "alertSent": "Coupon envoyé ! Vérifiez vos e-mails/SMS.",
+    "getUpToText": "OBTENEZ JUSQU'À",
+    "discountText": "20 % DE RABAIS"
+  },
+  "Blog": {
+    "exploreArticles": "Explorer les Articles",
+    "readMore": "Lire la suite",
+    "loadMore": "Charger plus"
   }
 }

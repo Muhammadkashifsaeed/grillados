@@ -336,6 +336,7 @@ const articles = [
 ];
 
 export const ExploreArticles = () => {
+  const t = useTranslations('Blog');
   const [visibleCount, setVisibleCount] = useState(6);
 
   const handleLoadMore = () => {
@@ -347,7 +348,7 @@ export const ExploreArticles = () => {
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         
         <h2 className="text-4xl md:text-5xl font-extrabold text-white font-['Outfit',sans-serif] tracking-wide mb-12 text-center drop-shadow-lg">
-          Explore Articles
+          {t('exploreArticles')}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
@@ -404,7 +405,7 @@ export const ExploreArticles = () => {
                     href={`/blog/${article.id}`} 
                     className="text-[#DAAF18] font-extrabold uppercase text-sm tracking-wider hover:text-white active:bg-red-600 active:text-white px-3 py-2 rounded-lg -mr-3 transition-all duration-300 group/btn flex items-center gap-2"
                   >
-                    Read More
+                    {t('readMore')}
                     <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
                   </Link>
                 </div>
@@ -414,7 +415,7 @@ export const ExploreArticles = () => {
           ))}
         </div>
 
-        {/* Load More Button */}
+        {/* {t('loadMore')} Button */}
         {visibleCount < articles.length && (
           <div className="mt-16 flex justify-center w-full">
             <button 

@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const AboutUsStory = () => {
+  const t = useTranslations('AboutUs');
   return (
     <section className="bg-[#fafafa] pt-16 md:pt-24 pb-8 md:pb-12 px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -35,18 +37,17 @@ const AboutUsStory = () => {
         <div className="flex flex-col justify-center">
           
           <h2 className="font-extrabold text-black font-['Outfit',sans-serif] leading-tight mb-8 uppercase tracking-wide">
-            <span className="block text-xl sm:text-2xl md:text-3xl mb-1">it all started</span>
-            <span className="block text-[#FACC15] text-2xl sm:text-3xl md:text-4xl drop-shadow-sm">with a craving...</span>
+            <span className="block text-xl sm:text-2xl md:text-3xl mb-1">{t('storyHeading1')}</span>
+            <span className="block text-[#FACC15] text-2xl sm:text-3xl md:text-4xl drop-shadow-sm">{t('storyHeading2')}</span>
           </h2>
 
           <div className="space-y-6 mb-10">
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium">
-              Grillado’s™ is a casual dining restaurant that focuses on grilling the very best Portuguese chicken with a South African twist. That twist is our variety of world famous sauces. 
+              {t('storyDesc1')} 
             </p>
 
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium">
-              Located in the heart of Montreal, it has quickly become known for its fun and engaging atmosphere, as well as its multitude of flavours that keep customers happy and coming back for more…
-            </p>
+              {t('storyDesc2')}</p>
           </div>
 
           {/* Bottom Right Images */}

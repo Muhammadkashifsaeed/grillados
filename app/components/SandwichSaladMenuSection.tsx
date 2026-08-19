@@ -3,9 +3,17 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { staggerContainer, fadeLeftItem } from '../utils/animations';
 
 export const SandwichSaladMenuSection = () => {
+  const t = useTranslations('Menu');
+  const rawSalads = t.raw('saladsMenu');
+  const saladsMenuLocal = [
+    { name: rawSalads[0].name, price: '7.99' },
+    { name: rawSalads[1].name, price: '7.99' },
+    { name: rawSalads[2].name, price: '7.99' }
+  ];
   return (
     <section id="sandwich-salad" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
       {/* Background with subtle food outline pattern */}
@@ -31,10 +39,10 @@ export const SandwichSaladMenuSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="w-full flex flex-col justify-start"
           >
-            {/* CATEGORY 1: SANDWICH, WRAPS & PITA */}
+            {/* CATEGORY 1: {t('sandwichWrapsPita')} */}
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
-                SANDWICH, WRAPS & PITA
+                {t('sandwichWrapsPita')}
               </h2>
               <div className="w-full max-w-50 md:max-w-62.5 lg:max-w-80 h-1.5 bg-[#FAAE40] mt-4"></div>
             </motion.div>
@@ -43,30 +51,30 @@ export const SandwichSaladMenuSection = () => {
               {/* Chicken Item */}
               <motion.div variants={fadeLeftItem} className="flex flex-col w-full">
                 <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                  <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">Chicken</span>
+                  <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">{t('chicken')}</span>
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
                   <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">11.99</span>
                 </div>
                 {/* Combo row */}
                 <div className="flex items-end w-full gap-2 sm:gap-3 mt-2 md:mt-3">
-                  <span className="text-red-500 text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">COMBO</span>
+                  <span className="text-red-500 text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">{t('combo')}</span>
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.3)', minWidth: '4px' }}></div>
-                  <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">(1 SIDE + POP)</span></span>
+                  <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">{t('sideAndPop')}</span></span>
                 </div>
               </motion.div>
 
               {/* Vegetarian Item */}
               <motion.div variants={fadeLeftItem} className="flex flex-col w-full">
                 <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                  <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">Vegetarian</span>
+                  <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">{t('vegetarian')}</span>
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
                   <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">11.99</span>
                 </div>
                 {/* Combo row */}
                 <div className="flex items-end w-full gap-2 sm:gap-3 mt-2 md:mt-3">
-                  <span className="text-red-500 text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">COMBO</span>
+                  <span className="text-red-500 text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">{t('combo')}</span>
                   <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.3)', minWidth: '4px' }}></div>
-                  <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">(1 SIDE + POP)</span></span>
+                  <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">{t('sideAndPop')}</span></span>
                 </div>
               </motion.div>
             </div>
@@ -74,18 +82,14 @@ export const SandwichSaladMenuSection = () => {
             {/* CATEGORY 2: SALADS */}
             <motion.div variants={fadeLeftItem} className="mb-4 lg:mb-8">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
-                SALADS
+                {t('salads')}
               </h2>
               <div className="w-full max-w-50 md:max-w-62.5 lg:max-w-80 h-1.5 bg-[#FAAE40] mt-4"></div>
             </motion.div>
 
             <div className="flex flex-col gap-4 md:gap-5 w-full">
               {/* Salad Items */}
-              {[
-                { name: 'Greek Salad', price: '7.99' },
-                { name: 'Spring Salad', price: '7.99' },
-                { name: 'Cesar Salad.', price: '7.99' }
-              ].map((item, index) => (
+              {saladsMenuLocal.map((item, index) => (
                 <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
                     <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">{item.name}</span>
@@ -98,10 +102,10 @@ export const SandwichSaladMenuSection = () => {
               {/* Additional Options */}
               <motion.div variants={fadeLeftItem} className="mt-8 flex flex-col w-full pt-4 border-t border-white/10">
                 <p className="text-white text-sm md:text-base font-bold uppercase tracking-wider mb-1">
-                  Salads LARGE 9.99 - ADD
+                  {t('saladsLargeAdd')}
                 </p>
                 <p className="text-[#FAAE40] text-lg md:text-xl font-bold font-['Outfit',sans-serif]">
-                  GRILLED CHICKEN 5.99
+                  {t('grilledChickenPrice')}
                 </p>
               </motion.div>
             </div>

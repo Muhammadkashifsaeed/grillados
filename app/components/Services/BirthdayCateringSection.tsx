@@ -61,12 +61,12 @@ export default function BirthdayCateringSection() {
           >
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase leading-tight tracking-wide mb-4">
-              birthday!
+              {t('heading')}
             </h2>
             
             {/* Description */}
             <p className="text-gray-600 text-base md:text-base leading-relaxed mb-8 font-medium max-w-112.5">
-              With Grillado&apos;s countless menu choices, no one will be left out in this ocean of culinary delights. Let Grillado make your birthday… delicious.
+              {t('description')}
             </p>
 
             {/* Button */}

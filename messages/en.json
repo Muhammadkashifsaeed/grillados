@@ -308,7 +308,8 @@
     "error": "An error occurred while submitting. Please try again.",
     "required": "This field is required",
     "invalidEmail": "Please enter a valid email address",
-    "invalidPhone": "Please enter a valid phone number"
+    "invalidPhone": "Please enter a valid phone number",
+    "turnstileAlert": "Please complete the Turnstile verification."
   },
   "Gallery": {
     "pageTitle": "Gallery",
@@ -392,5 +393,379 @@
     "title": "Grillado's | Premium Grilled Chicken & Portuguese Flavours",
     "description": "Experience premium grilled chicken, sizzling steaks, and authentic Portuguese flavours at Grillado's. Order online for pickup, delivery, or catering.",
     "keywords": "Grillado's, grilled chicken, peri peri chicken, restaurant, Portuguese food, catering, order online, halal, steaks"
+  },
+  "CateringFAQ": {
+    "heading": "Catering FAQs",
+    "faqs": [
+      {
+        "q": "How much notice do you need for catering?",
+        "a": "48 hours minimum for orders under 50 people, 5 days for orders 50–500. Rush orders may be possible — call us."
+      },
+      {
+        "q": "Is everything halal?",
+        "a": "Yes. All meat at Grillado’s is hand-slaughtered halal-certified."
+      },
+      {
+        "q": "Do you deliver?",
+        "a": "Yes, within 30km of any Grillado’s location. Delivery fee depends on distance and order size."
+      },
+      {
+        "q": "Do you set up at the venue?",
+        "a": "Yes — full setup, serving stands, and heating equipment available. We can stay to serve guests for an additional fee."
+      },
+      {
+        "q": "What's the minimum order?",
+        "a": "Our smallest catering package serves 10 people for .99."
+      },
+      {
+        "q": "What about dietary restrictions?",
+        "a": "We offer vegetarian options, gluten-aware preparation, and can accommodate most dietary needs. Tell us when ordering."
+      },
+      {
+        "q": "How do I pay?",
+        "a": "Credit card, e-transfer, or invoice for corporate clients with NET 30 terms."
+      },
+      {
+        "q": "Can I cancel?",
+        "a": "Free cancellation up to 48 hours before the event. Within 48 hours, 50% charge applies."
+      }
+    ]
+  },
+  "ContactCatering": {
+    "heading": "Get in touch",
+    "contactInfo": "Contact Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phoneNumber": "Phone Number*",
+    "email": "Email Address*",
+    "eventInfo": "Event Information",
+    "guests": "Number of Guests*",
+    "guestsPlaceholder": "10 to 10,000",
+    "deliveryDate": "Delivery Date*",
+    "deliveryTime": "Delivery Time*",
+    "deliveryNotes": "Delivery Notes",
+    "deliveryNotesPlaceholder": "Write delivery instructions...",
+    "deliveryInfo": "Delivery Information",
+    "searchAddress": "Search Address",
+    "searchAddressPlaceholder": "Search address",
+    "address": "Address*",
+    "city": "City*",
+    "postalCode": "Postal Code*",
+    "nearbyLandmark": "Nearby Location on popup*",
+    "selectLocation": "Select Nearby Location",
+    "laval": "LAVAL",
+    "milton": "MILTON",
+    "cambridge": "CAMBRIDGE",
+    "mississauga": "MISSISSAUGA",
+    "consent": "I consent to receive SMS notifications, alerts, and occasional marketing messages. Message frequency varies; standard rates apply. Text HELP for support or STOP to unsubscribe.",
+    "processing": "Processing...",
+    "success": "Order Placed Successfully!",
+    "submit": "Place Your Order Now",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "BirthdayCatering": {
+    "heading": "birthday!",
+    "description": "With Grillado's countless menu choices, no one will be left out in this ocean of culinary delights. Let Grillado make your birthday… delicious.",
+    "contactUs": "Contact us"
+  },
+  "WeddingCatering": {
+    "heading": "Wedding catering service",
+    "description": "Your wedding is a once-in-a-lifetime event. Elevate your catering service to the next level with Grillado's certified halal dishes, prepared with fresh ingredients and the best Portuguese chicken in Canada.",
+    "contactUs": "Contact us"
+  },
+  "EventsCatering": {
+    "heading": "Corporate events and private parties",
+    "description": "Throwing an event for your company or a private party for your friends and family? You can count on Grillado's. Just contact us and we will find the best menu combinations for your event.",
+    "contactUs": "Contact us"
+  },
+  "DeliveryPickup": {
+    "heading": "Delivery & Pick-up service",
+    "description": "Your location is our limit. Contact us to learn more about our delivery and pick-up options.",
+    "contactUs": "Contact us"
+  },
+  "ServiceReviews": {
+    "heading": "Reviews",
+    "good": "GOOD",
+    "basedOn": "Based on 1,779 reviews",
+    "monthsAgo": "months ago",
+    "ratingOnly": "The user only left a rating.",
+    "review1": "Harprith provided amazing services. Great food",
+    "review2": "GOOd",
+    "review5": "Great Customer Service and food was so delicious and cooked with perfection! Highly recommend"
+  },
+  "AboutUs": {
+    "propertyHeading": "Property",
+    "propertyDesc": "You can gain from our comprehensive experience in property requirements & design, with access to both external and internal design teams. Innovative restaurant designs ensure our brand sets trends and maintains its position in the fast-pace casual dining market place.",
+    "smartHeading1": "Being ",
+    "smartHeading2": "Smart!",
+    "smartDesc": "At <span className=\"text-[#FBC18A] font-bold\">Grillado’s</span>, we believe healthy food is vital for good health. Our health-conscious menu is designed to cater to your health-conscious lifestyle. <span className=\"text-[#FBC18A] font-bold\">Grillado’s</span> chicken is grilled to perfection, making it the smarter choice for a balanced life.",
+    "storyHeading1": "it all started",
+    "storyHeading2": "with a craving...",
+    "storyDesc1": "Grillado’s™ is a casual dining restaurant that focuses on grilling the very best Portuguese chicken with a South African twist. That twist is our variety of world famous sauces.",
+    "storyDesc2": "Located in the heart of Montreal, it has quickly become known for its fun and engaging atmosphere, as well as its multitude of flavours that keep customers happy and coming back for more…",
+    "votedText1": "<span className=\"text-[#FACC15]\">Grillado’s™</span> was launched in Montreal back in 2015 and was voted the",
+    "votedText2": "\"Hottest New Restaurant in Montreal\"",
+    "votedText3": "by Michael D’Alimonite of <span className=\"font-bold\">Thrilist Media Group.</span>"
+  },
+  "AboutUsCertified": {
+    "heading1": "Being ",
+    "heading2": "Healthy!",
+    "cards": [
+      {
+        "heading": "Taste Meets Nutrition",
+        "text": "Our chicken is sourced from grain-fed, certified Halal distributors. We prioritize nutrition without compromising on taste."
+      },
+      {
+        "heading": "Freshness Unleashed",
+        "text": "Our chicken is prepared fresh, never frozen. We take pride in meticulously trimming off excess fat, and marinating in our signature sauce for a full 24 hours to create a healthier, flavour-packed dining experience."
+      },
+      {
+        "heading": "Grilling Magic",
+        "text": "Our chicken is masterfully grilled to perfection over an open flame. We are committed to delivering a burst of flavour while keeping cholesterol and fat content low."
+      },
+      {
+        "heading": "Craft Your Perfect Meal",
+        "text": "Our chicken is the perfect canvas for achieving culinary perfection. We offer an array of delectable sauces, including Lemon & Herb, Mild, BBQ, Hot, and Extra Hot, to personalize your healthy dining experience."
+      }
+    ]
+  },
+  "ContactForm": {
+    "heading": "Get in touch",
+    "desc": "Hey, we’d love to have a conversation with you about our food and services. Feel free to contact us by filling in our form below!",
+    "fullName": "Full Name*",
+    "address": "Address",
+    "email": "Email*",
+    "phone": "Phone Number*",
+    "message": "Message",
+    "success": "Success!",
+    "privacy": "Privacy",
+    "help": "Help",
+    "submit": "SUBMIT"
+  },
+  "Menu": {
+    "appetizers": "APPETIZERS",
+    "appetizersMenu": [
+      {
+        "name": "Portuguese Bun",
+        "note": "SERVED WITH BUTTER"
+      },
+      {
+        "name": "Pita Bread"
+      },
+      {
+        "name": "Garlic Bread"
+      },
+      {
+        "name": "Hummus & Pita"
+      },
+      {
+        "name": "5 Mozzarella Cheese Sticks",
+        "note": "WITH MARINARA SAUCE"
+      },
+      {
+        "name": "5 Whole Chicken Wings"
+      },
+      {
+        "name": "10 Mini Beef Kebabs"
+      },
+      {
+        "name": "Veggie Nachos"
+      },
+      {
+        "name": "Grilled Chicken Nachos",
+        "note": "ADD EXTRA CHICKEN FOR 4.99"
+      }
+    ],
+    "chickenSpecials": "GRILLADO'S CHICKEN<br />SPECIALS",
+    "chickenSpecialsMenu": [
+      {
+        "name": "Grilled Espetada",
+        "description": "Tender marinated chicken with fresh peppers, served on a skewer with 2 regular side dishes."
+      },
+      {
+        "name": "Whole Organic Grilled Chicken",
+        "note": "WITH 1 REGULAR ACCOMPANIST"
+      },
+      {
+        "name": "Authentic Montreal Poutine",
+        "note": "ADD GRILLED CHICKEN FOR 5.49"
+      },
+      {
+        "name": "Fiesta",
+        "description": "Chicken, rice and salad served with Italian dressing."
+      },
+      {
+        "name": "Veggie Burger",
+        "note": "WITH 1 REGULAR SIDE DISH (ADD AN EXTRA PATTY FOR 4.99)"
+      },
+      {
+        "name": "Grilled Chicken Burger",
+        "note": "WITH 1 REGULAR SIDE (ADD EXTRA PATTY FOR 4.99)"
+      },
+      {
+        "name": "Garlic Grilled Chicken Sandwich",
+        "note": "WITH 1 REGULAR SIDE DISH (ADD AN EXTRA PATTY FOR 4.99)"
+      },
+      {
+        "name": "Flaming Tandoori Grill",
+        "note": "8 PIECES OF TANDOORI SPICED CHICKEN ON A HOT GRILL"
+      },
+      {
+        "name": "Saji Balochi Chicken",
+        "note": "PRE-ORDER ONLY WITH 2 REGULAR SIDES AND 2 PITA BREADS OR 2 GARLIC BREADS"
+      }
+    ],
+    "comboDePoulet": "CHICKEN<br />COMBO",
+    "comboDePouletMenu": [
+      {
+        "name": "¼ Grilled Chicken Leg",
+        "note": "(LEG + THIGH)"
+      },
+      {
+        "name": "¼ Grilled Chicken Breast",
+        "note": "(BREAST + WING)"
+      },
+      {
+        "name": "6 Whole Chicken Wings"
+      },
+      {
+        "name": "Double Kebabs"
+      },
+      {
+        "name": "Boneless Grilled Chicken Breast",
+        "note": "(NEW ITEM)"
+      },
+      {
+        "name": "Double Legs"
+      },
+      {
+        "name": "Half Chicken"
+      }
+    ],
+    "addSide": "Add a 2nd side for 4.99",
+    "beefLambSpecials": "GRILLADO'S<br />BEEF & LAMB SPECIALS",
+    "beefLambSpecialsMenu": [
+      {
+        "name": "Rear Ribs",
+        "note": "WITH 2 REGULAR SIDE DISHES"
+      },
+      {
+        "name": "Lamb Chops",
+        "note": "WITH 2 REGULAR SIDES"
+      },
+      {
+        "name": "12 oz Sirloin Steak",
+        "note": "WITH 2 REGULAR SIDES (PLEASE ALLOW 30 TO 40 MINUTES TO COOK)"
+      },
+      {
+        "name": "12 oz Sirloin Steak",
+        "note": "WITH 2 REGULAR ACCOMPANISTS (SURF AND TURF) AND A SKEWER OF SHRIMP (PLEASE ALLOW 30 TO 40 MINUTES TO COOK)"
+      },
+      {
+        "name": "Grillado's Beef Burger",
+        "note": "WITH 1 REGULAR SIDE (ADD AN EXTRA PATTY FOR 4.99)"
+      },
+      {
+        "name": "Full Rack of Rear Ribs",
+        "note": "7 PREMIUM BACK RIBS"
+      }
+    ],
+    "plateaux": "GRILLADO'S<br />PLATTERS",
+    "plateauxMenu": [
+      {
+        "name": "Grilled Chicken Wings Platter",
+        "note": "15 WHOLE CHICKEN WINGS, 2 REGULAR SIDES, 2 GARLIC BREADS OR 3 SMALL PORTUGUESE BUNS"
+      },
+      {
+        "name": "Chicken Platter",
+        "note": "2 WHOLE ORGANIC GRILLED CHICKENS, 2 LARGE SIDES, 2 GARLIC BREADS OR 3 SMALL PORTUGUESE BUNS"
+      },
+      {
+        "name": "Beef Platter",
+        "note": "1 FULL RACK OF PREMIUM BEEF BACK RIBS, 2 LARGE SIDES, 2 GARLIC BREADS OR 3 SMALL PORTUGUESE BUNS"
+      },
+      {
+        "name": "Signature Platter",
+        "note": "5 MOZZARELLA CHEESE STICKS, 1 WHOLE ORGANIC GRILLED CHICKEN, 10 WHOLE CHICKEN WINGS, 10 MINI BEEF KEBABS, 2 GRILLED ESPETADA SKEWERS, 3 LARGE SIDES, 3 GARLIC BREADS OR 4 SMALL PORTUGUESE BUNS"
+      },
+      {
+        "name": "Mixed Platter",
+        "note": "1 WHOLE ORGANIC GRILLED CHICKEN, 1 FULL RACK OF PREMIUM BEEF BACK RIBS, 3 LARGE SIDES, 3 GARLIC BREADS OR 4 SMALL PORTUGUESE BUNS"
+      }
+    ],
+    "sandwichWrapsPita": "SANDWICH, WRAPS & PITA",
+    "chicken": "Chicken",
+    "vegetarian": "Vegetarian",
+    "combo": "COMBO",
+    "sideAndPop": "(1 SIDE + POP)",
+    "salads": "SALADS",
+    "saladsMenu": [
+      {
+        "name": "Greek Salad"
+      },
+      {
+        "name": "Spring Salad"
+      },
+      {
+        "name": "Cesar Salad"
+      }
+    ],
+    "saladsLargeAdd": "Salads LARGE 9.99 - ADD",
+    "grilledChickenPrice": "GRILLED CHICKEN 5.99",
+    "accompagnements": "SIDES",
+    "accompagnementsMenu": [
+      {
+        "name": "Peri Fries"
+      },
+      {
+        "name": "Masala Fries"
+      },
+      {
+        "name": "Potato Wedges"
+      },
+      {
+        "name": "Onion Rings"
+      },
+      {
+        "name": "Mixed Grilled Veggies"
+      },
+      {
+        "name": "Creamy Coleslaw"
+      },
+      {
+        "name": "Spicy Rice"
+      },
+      {
+        "name": "Grilled Corn"
+      }
+    ],
+    "seasonal": "SEASONAL",
+    "sidesSizes": "Sides Large 8.99 & Sharable 12.99"
+  },
+  "Voucher": {
+    "getUpTo": "GET UP TO 20% OFF",
+    "onEntireMenu": "On The Entire Menu.",
+    "clickToGet": "Click on 'Get your Voucher Now' and enjoy up to 20% off at all Grillados branches across Canada!",
+    "getVoucherNow": "Get your Voucher Now",
+    "fillOutForm": "Fill out the form to get your Discounted Voucher",
+    "firstName": "First Name*",
+    "enterFirstName": "Enter your first name",
+    "email": "Email*",
+    "enterEmail": "Enter your email address",
+    "phone": "Phone",
+    "iAgree": "I agree to receive SMS notifications and marketing from Grillado's. Msg & data rates may apply. Reply STOP to unsubscribe, HELP for help.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "getYourVoucher": "GET YOUR VOUCHER",
+    "alertAgree": "Please agree to the terms to continue.",
+    "alertSent": "Voucher sent! Check your email/SMS.",
+    "getUpToText": "GET UP TO",
+    "discountText": "20% OFF"
+  },
+  "Blog": {
+    "exploreArticles": "Explore Articles",
+    "readMore": "Read More",
+    "loadMore": "Load More"
   }
 }

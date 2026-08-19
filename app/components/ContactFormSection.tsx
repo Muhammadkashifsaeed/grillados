@@ -3,8 +3,10 @@
 import React, { useState } from 'react';
 import { Mail, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export default function ContactFormSection() {
+  const t = useTranslations('ContactForm');
   const [formData, setFormData] = useState({
     fullName: '',
     address: '',
@@ -84,12 +86,12 @@ export default function ContactFormSection() {
             
             {/* Heading */}
             <h2 className="text-[#333333] text-[28px] sm:text-[36px] font-[800] text-center tracking-tight mb-3 font-['Outfit',sans-serif]">
-              Get in touch
+              {t('heading')}
             </h2>
 
             {/* Description */}
             <p className="text-[#333333] text-center text-[14px] sm:text-[15px] leading-[1.6] max-w-[480px] mx-auto mb-4 font-medium">
-              Hey, we’d love to have a conversation with you about our food and services. Feel free to contact us by filling in our form below!
+              {t('desc')}
             </p>
 
             {/* Email Link */}
@@ -108,7 +110,7 @@ export default function ContactFormSection() {
                   type="text" 
                   name="fullName"
                   required
-                  placeholder="Full Name*"
+                  placeholder={t('fullName')}
                   value={formData.fullName}
                   onChange={handleChange}
                   className="w-full h-[47px] bg-[#f4f4f4] rounded-[6px] px-[15px] text-[15px] text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow border-none"
@@ -120,7 +122,7 @@ export default function ContactFormSection() {
                 <input 
                   type="text" 
                   name="address"
-                  placeholder="Address"
+                  placeholder={t('address')}
                   value={formData.address}
                   onChange={handleChange}
                   className="w-full h-[47px] bg-[#f4f4f4] rounded-[6px] px-[15px] text-[15px] text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow border-none"
@@ -136,7 +138,7 @@ export default function ContactFormSection() {
                   type="email" 
                   name="email"
                   required
-                  placeholder="Email*"
+                  placeholder={t('email')}
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full h-[47px] bg-[#f4f4f4] rounded-[6px] pl-[40px] pr-[15px] text-[15px] text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow border-none"
@@ -180,7 +182,7 @@ export default function ContactFormSection() {
                   type="tel" 
                   name="phone"
                   required
-                  placeholder="Phone Number*"
+                  placeholder={t('phone')}
                   value={formData.phone}
                   onChange={handleChange}
                   className="flex-1 h-full bg-[#f4f4f4] px-[10px] text-[15px] text-[#333] placeholder-[#999999] focus:outline-none border-none rounded-r-[6px]"
@@ -191,7 +193,7 @@ export default function ContactFormSection() {
               <div>
                 <textarea 
                   name="message"
-                  placeholder="Message"
+                  placeholder={t('message')}
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full h-[100px] bg-[#f4f4f4] rounded-[6px] p-[15px] text-[15px] text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow resize-none border-none"
@@ -207,13 +209,13 @@ export default function ContactFormSection() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
-                  <span className="text-[14px] text-[#333] font-medium">Success!</span>
+                  <span className="text-[14px] text-[#333] font-medium">{t('success')}</span>
                 </div>
                 <div className="flex flex-col items-end">
                   <div className="flex items-center gap-1 mb-0.5">
                     <span className="font-bold text-[13px] text-[#f48120] tracking-tight">CLOUDFLARE</span>
                   </div>
-                  <span className="text-[9px] text-[#999]">Privacy • Help</span>
+                  <span className="text-[9px] text-[#999]">{t('privacy')} • {t('help')}</span>
                 </div>
               </div>
 
@@ -222,7 +224,7 @@ export default function ContactFormSection() {
                 type="submit"
                 className="w-full h-[46px] bg-[#e12529] hover:bg-[#c92025] text-white text-[15px] font-[600] rounded-[25px] tracking-wider transition-colors duration-300 mt-4 cursor-pointer flex items-center justify-center shadow-md"
               >
-                SUBMIT
+                {t('submit')}
               </button>
             </form>
 

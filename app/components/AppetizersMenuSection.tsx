@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { staggerContainer, fadeLeftItem } from '../utils/animations';
 import MenuVoucherCTA from './MenuVoucherCTA';
 
@@ -19,6 +20,19 @@ const menuItems = [
 ];
 
 export const AppetizersMenuSection = () => {
+  const t = useTranslations('Menu');
+  const rawItems = t.raw('appetizersMenu');
+  const menuItemsLocal = [
+    { name: rawItems[0].name, price: '3.99', note: rawItems[0].note },
+    { name: rawItems[1].name, price: '3.50' },
+    { name: rawItems[2].name, price: '4.99' },
+    { name: rawItems[3].name, price: '8.99' },
+    { name: rawItems[4].name, price: '11.99', note: rawItems[4].note },
+    { name: rawItems[5].name, price: '14.99' },
+    { name: rawItems[6].name, price: '19.99' },
+    { name: rawItems[7].name, price: '18.99' },
+    { name: rawItems[8].name, price: '19.99', note: rawItems[8].note },
+  ];
   return (
     <section id="appetizers" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
       {/* 
@@ -49,13 +63,13 @@ export const AppetizersMenuSection = () => {
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
-                APPETIZERS
+                {t('appetizers')}
               </h2>
               <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
             </motion.div>
 
             <div className="flex flex-col gap-8 md:gap-10 w-full">
-              {menuItems.map((item, index) => (
+              {menuItemsLocal.map((item, index) => (
                 <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
                     <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">

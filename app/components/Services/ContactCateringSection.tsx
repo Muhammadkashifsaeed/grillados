@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Link } from "@/i18n/routing";
 import { Search, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const countryList = [
   { code: '+1', iso: 'ca', name: 'Canada' },
@@ -29,6 +30,7 @@ const countryList = [
 ];
 
 export default function ContactCateringSection() {
+  const t = useTranslations('ContactCatering');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState(countryList[0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -100,17 +102,17 @@ export default function ContactCateringSection() {
             
             {/* Section 1: Contact Information */}
             <section>
-              <h2 className={sectionTitleClass}>Contact Information</h2>
+              <h2 className={sectionTitleClass}>{t('contactInfo')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 
                 {/* Left Column */}
                 <div className="flex flex-col gap-6">
                   <div>
-                    <label className={labelClass}>First Name</label>
-                    <input type="text" placeholder="First Name" className={inputClass} />
+                    <label className={labelClass}>{t('firstName')}</label>
+                    <input type="text" placeholder={t('firstName')} className={inputClass} />
                   </div>
                   <div>
-                    <label className={labelClass}>Phone Number*</label>
+                    <label className={labelClass}>{t('phoneNumber')}</label>
                     <div className="flex h-13 md:h-14 rounded-xl bg-white border border-transparent focus-within:ring-2 focus-within:ring-[#DAAF18] transition-all duration-300">
                       {/* Functional Custom Country Code Selector with Real Flags */}
                       <div className="relative flex items-center bg-gray-100 border-r border-gray-200 hover:bg-gray-200 transition-colors rounded-l-xl" ref={dropdownRef}>
@@ -146,7 +148,7 @@ export default function ContactCateringSection() {
                       </div>
                       <input 
                         type="tel" 
-                        placeholder="Phone Number" 
+                        placeholder={t('phoneNumber').replace('*', '')} 
                         required
                         className="flex-1 h-full px-4 text-gray-900 focus:outline-none placeholder:text-gray-400 font-medium rounded-r-xl" 
                       />
@@ -157,12 +159,12 @@ export default function ContactCateringSection() {
                 {/* Right Column */}
                 <div className="flex flex-col gap-6">
                   <div>
-                    <label className={labelClass}>Last Name</label>
-                    <input type="text" placeholder="Last Name" className={inputClass} />
+                    <label className={labelClass}>{t('lastName')}</label>
+                    <input type="text" placeholder={t('lastName')} className={inputClass} />
                   </div>
                   <div>
-                    <label className={labelClass}>Email Address*</label>
-                    <input type="email" placeholder="Email Address" required className={inputClass} />
+                    <label className={labelClass}>{t('email')}</label>
+                    <input type="email" placeholder={t('email').replace('*', '')} required className={inputClass} />
                   </div>
                 </div>
                 
@@ -171,18 +173,18 @@ export default function ContactCateringSection() {
 
             {/* Section 2: Event Information */}
             <section>
-              <h2 className={sectionTitleClass}>Event Information</h2>
+              <h2 className={sectionTitleClass}>{t('eventInfo')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-6">
                 
                 {/* Left */}
                 <div>
-                  <label className={labelClass}>Number of Guests*</label>
-                  <input type="text" placeholder="10 to 10,000" required className={inputClass} />
+                  <label className={labelClass}>{t('guests')}</label>
+                  <input type="text" placeholder={t('guestsPlaceholder')} required className={inputClass} />
                 </div>
 
                 {/* Right */}
                 <div>
-                  <label className={labelClass}>Delivery Date*</label>
+                  <label className={labelClass}>{t('deliveryDate')}</label>
                   <div className="relative">
                     <input type="date" required className={`${inputClass} text-gray-400 appearance-none`} />
                     {/* Custom Calendar Icon Overlay to match design if native isn't enough, but native date picker works */}
@@ -192,14 +194,14 @@ export default function ContactCateringSection() {
 
               {/* Full Width */}
               <div className="mb-6">
-                <label className={labelClass}>Delivery Time*</label>
+                <label className={labelClass}>{t('deliveryTime')}</label>
                 <input type="time" placeholder="16:00" required className={inputClass} />
               </div>
 
               <div>
-                <label className={labelClass}>Delivery Notes</label>
+                <label className={labelClass}>{t('deliveryNotes')}</label>
                 <textarea 
-                  placeholder="Write delivery instructions..." 
+                  placeholder={t('deliveryNotesPlaceholder')} 
                   className="w-full h-45 p-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#DAAF18] transition-all duration-300 placeholder:text-gray-400 font-medium resize-none"
                 ></textarea>
               </div>
@@ -207,48 +209,48 @@ export default function ContactCateringSection() {
 
             {/* Section 3: Delivery Information */}
             <section>
-              <h2 className={sectionTitleClass}>Delivery Information</h2>
+              <h2 className={sectionTitleClass}>{t('deliveryInfo')}</h2>
               
               <div className="flex flex-col gap-6">
                 {/* Full Width Search */}
                 <div>
-                  <label className={labelClass}>Search Address</label>
+                  <label className={labelClass}>{t('searchAddress')}</label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                       <Search size={20} className="text-gray-400" />
                     </div>
-                    <input type="text" placeholder="Search address" className={`${inputClass} pl-12`} />
+                    <input type="text" placeholder={t('searchAddressPlaceholder')} className={`${inputClass} pl-12`} />
                   </div>
                 </div>
 
                 {/* Full Width Address */}
                 <div>
-                  <label className={labelClass}>Address*</label>
-                  <input type="text" placeholder="Address" required className={inputClass} />
+                  <label className={labelClass}>{t('address')}</label>
+                  <input type="text" placeholder={t('address').replace('*', '')} required className={inputClass} />
                 </div>
 
                 {/* City & Postal Code */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   <div>
-                    <label className={labelClass}>City*</label>
-                    <input type="text" placeholder="City" required className={inputClass} />
+                    <label className={labelClass}>{t('city')}</label>
+                    <input type="text" placeholder={t('city').replace('*', '')} required className={inputClass} />
                   </div>
                   <div>
-                    <label className={labelClass}>Postal Code*</label>
-                    <input type="text" placeholder="Postal Code" required className={inputClass} />
+                    <label className={labelClass}>{t('postalCode')}</label>
+                    <input type="text" placeholder={t('postalCode').replace('*', '')} required className={inputClass} />
                   </div>
                 </div>
 
                 {/* Nearby Landmark Select */}
                 <div>
-                  <label className={labelClass}>Nearby Location on popup*</label>
+                  <label className={labelClass}>{t('nearbyLandmark')}</label>
                   <div className="relative">
                     <select defaultValue="" required className={`${inputClass} appearance-none cursor-pointer text-gray-500`}>
-                      <option value="" disabled>Select Nearby Location</option>
-                      <option value="laval">LAVAL</option>
-                      <option value="milton">MILTON</option>
-                      <option value="cambridge">CAMBRIDGE</option>
-                      <option value="mississauga">MISSISSAUGA</option>
+                      <option value="" disabled>{t('selectLocation')}</option>
+                      <option value="laval">{t('laval')}</option>
+                      <option value="milton">{t('milton')}</option>
+                      <option value="cambridge">{t('cambridge')}</option>
+                      <option value="mississauga">{t('mississauga')}</option>
                     </select>
                     <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
                       <ChevronDown size={20} className="text-gray-400" />
@@ -270,7 +272,7 @@ export default function ContactCateringSection() {
                   </svg>
                 </div>
                 <span className="text-gray-300 text-sm leading-relaxed select-none group-hover:text-white transition-colors duration-200">
-                  I consent to receive SMS notifications, alerts, and occasional marketing messages. Message frequency varies; standard rates apply. Text HELP for support or STOP to unsubscribe.
+                  {t('consent')}
                 </span>
               </label>
 
@@ -292,20 +294,20 @@ export default function ContactCateringSection() {
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
-                    Processing...
+                    {t('processing')}
                   </span>
                 ) : isSuccess ? (
-                  "Order Placed Successfully!"
+                  t('success')
                 ) : (
-                  "Place Your Order Now"
+                  t('submit')
                 )}
               </button>
 
               {/* Legal Links */}
               <div className="mt-6 flex items-center gap-2 text-sm text-blue-400 font-medium">
-                <Link href="/privacy" className="hover:text-blue-300 hover:underline transition-colors">Privacy Policy</Link>
+                <Link href="/privacy" className="hover:text-blue-300 hover:underline transition-colors">{t('privacy')}</Link>
                 <span className="text-gray-500">|</span>
-                <Link href="/terms" className="hover:text-blue-300 hover:underline transition-colors">Terms & Conditions</Link>
+                <Link href="/terms" className="hover:text-blue-300 hover:underline transition-colors">{t('terms')}</Link>
               </div>
 
             </div>

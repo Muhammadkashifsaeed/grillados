@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const AboutUsMissionVision = () => {
+  const t = useTranslations('AboutUs');
   return (
     <section className="bg-[#fafafa] pt-4 md:pt-8 pb-4 md:pb-8 px-4 sm:px-6 lg:px-8 w-full">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">

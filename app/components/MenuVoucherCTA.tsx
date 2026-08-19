@@ -4,8 +4,10 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import VoucherModal from './VoucherModal';
+import { useTranslations } from 'next-intl';
 
 const MenuVoucherCTA = () => {
+  const t = useTranslations('Voucher');
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="w-full relative overflow-visible flex flex-col items-center justify-center bg-transparent mt-4 lg:mt-6 mb-6 lg:mb-8 px-2 md:px-0 z-30">
@@ -25,10 +27,10 @@ const MenuVoucherCTA = () => {
           {/* Left Content Area */}
           <div className="w-full xl:w-[60%] flex flex-col text-center xl:text-left mb-4 xl:mb-0 relative z-10">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black font-['Outfit',sans-serif] uppercase leading-[1.1] mb-2 sm:mb-3 tracking-tight drop-shadow-sm">
-              GET UP TO 20% OFF <br className="hidden md:block" />On The Entire Menu.
+              {t('getUpToText')} <span className="text-[#FEC602] drop-shadow-lg">{t('discountText')}</span> <br className="hidden md:block" />{t('onEntireMenu')}
             </h2>
             <p className="text-black/90 font-bold text-sm sm:text-base md:text-base leading-relaxed max-w-3xl mx-auto xl:mx-0">
-              Click on &apos;Get your Voucher Now&apos; and enjoy up to 20% off at all Grillados branches across Canada!
+              {t('clickToGet')}
             </p>
           </div>
 
@@ -40,7 +42,7 @@ const MenuVoucherCTA = () => {
               className="w-auto flex-1 max-w-[280px] sm:max-w-[320px] xl:max-w-[360px] bg-black text-white hover:bg-red-600 font-extrabold text-xs sm:text-sm md:text-base py-3 sm:py-4 px-3 sm:px-6 rounded-xl shadow-xl hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(220,38,38,0.4)] transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 active:scale-95 group border-2 border-black/10 shrink-0"
             >
               <span className="text-lg sm:text-2xl group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300">🎟</span>
-              <span className="tracking-wide uppercase text-center whitespace-nowrap">Get your Voucher Now</span>
+              <span className="tracking-wide uppercase text-center whitespace-nowrap">{t('getVoucherNow')}</span>
             </button>
 
             {/* Decorative Arrow (Outside Button, Pointing Left, Straight) */}

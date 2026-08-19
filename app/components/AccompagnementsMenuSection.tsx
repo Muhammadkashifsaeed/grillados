@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { staggerContainer, fadeRightItem } from '../utils/animations';
 
 const menuItems = [
@@ -17,6 +18,18 @@ const menuItems = [
 ];
 
 export const AccompagnementsMenuSection = () => {
+  const t = useTranslations('Menu');
+  const rawSides = t.raw('accompagnementsMenu');
+  const menuItemsLocal = [
+    { name: rawSides[0].name, price: '5.99' },
+    { name: rawSides[1].name, price: '5.99' },
+    { name: rawSides[2].name, price: '5.99' },
+    { name: rawSides[3].name, price: '5.99' },
+    { name: rawSides[4].name, price: '5.99' },
+    { name: rawSides[5].name, price: '5.99' },
+    { name: rawSides[6].name, price: '5.99' },
+    { name: rawSides[7].name, price: '5.99' },
+  ];
   return (
     <section id="accompagnements" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
       {/* Background with subtle food outline pattern */}
@@ -78,13 +91,13 @@ export const AccompagnementsMenuSection = () => {
           >
             <motion.div variants={fadeRightItem} className="mb-6 lg:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
-                ACCOMPAGNEMENTS
+                {t('accompagnements')}
               </h2>
               <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
             </motion.div>
 
             <div className="flex flex-col gap-4 md:gap-5 w-full">
-              {menuItems.map((item, index) => (
+              {menuItemsLocal.map((item, index) => (
                 <motion.div variants={fadeRightItem} key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
                     <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
@@ -104,13 +117,13 @@ export const AccompagnementsMenuSection = () => {
                 </motion.div>
               ))}
 
-              {/* SEASONAL */}
+              {/* {t('seasonal')} */}
               <motion.div variants={fadeRightItem} className="mt-6 md:mt-8 flex flex-col w-full">
                 <h3 className="text-red-600 text-sm md:text-base font-bold uppercase tracking-widest mb-1.5 md:mb-2">
-                  SEASONAL
+                  {t('seasonal')}
                 </h3>
                 <p className="text-[#FAAE40] text-xl md:text-2xl font-bold font-['Outfit',sans-serif]">
-                  Sides Large 8.99 & Sharable 12.99
+                  {t('sidesSizes')}
                 </p>
               </motion.div>
             </div>
