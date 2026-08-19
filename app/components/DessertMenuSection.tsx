@@ -26,8 +26,6 @@ export const DessertMenuSection = () => {
         <MenuDualImage
           leftImageSrc="/images/e-1.png"
           rightImageSrc="/images/f-1.png"
-          leftImageClass="object-contain object-center scale-100"
-          rightImageClass="object-contain object-center scale-100"
         />
       </div>
 

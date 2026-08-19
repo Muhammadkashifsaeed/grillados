@@ -7,8 +7,6 @@ interface MenuDualImageProps {
   rightImageSrc: string;
   mobileLeftImageSrc?: string;
   mobileRightImageSrc?: string;
-  leftImageClass?: string;
-  rightImageClass?: string;
 }
 
 export const MenuDualImage = ({
@@ -16,8 +14,6 @@ export const MenuDualImage = ({
   rightImageSrc,
   mobileLeftImageSrc,
   mobileRightImageSrc,
-  leftImageClass = "object-bottom md:object-bottom-right scale-[1.15]",
-  rightImageClass = "object-top md:object-bottom-left scale-[1.15]",
 }: MenuDualImageProps) => {
   return (
     <>
@@ -35,7 +31,7 @@ export const MenuDualImage = ({
             alt="Menu Item Left"
             fill
             sizes="(max-width: 768px) 100vw, 60vw"
-            className={`object-contain drop-shadow-2xl ${leftImageClass}`}
+            className="object-contain object-bottom md:object-bottom-right scale-[1.15] drop-shadow-2xl"
             priority
           />
         </div>
@@ -47,7 +43,7 @@ export const MenuDualImage = ({
             alt="Menu Item Right"
             fill
             sizes="(max-width: 768px) 100vw, 60vw"
-            className={`object-contain drop-shadow-2xl ${rightImageClass}`}
+            className="object-contain object-top md:object-bottom-left scale-[1.15] drop-shadow-2xl"
           />
         </div>
 
