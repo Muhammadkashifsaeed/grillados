@@ -36,7 +36,8 @@ const BookEventCTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="text-[#F5A623] text-[32px] md:text-[42px] lg:text-[54px] font-bold font-['Outfit',sans-serif] mb-2"
+          className="mb-2"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '40px', lineHeight: '52px', color: 'rgb(250, 174, 64)' }}
         >
           {t('smallTitle')}
         </motion.h3>
@@ -47,7 +48,8 @@ const BookEventCTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-white font-bold uppercase tracking-wide text-[40px] md:text-[56px] lg:text-[72px] leading-tight"
+          className="uppercase tracking-wide"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '50px', lineHeight: '65px', color: 'rgb(255, 255, 255)' }}
         >
           {t('mainTitle')}
         </motion.h2>

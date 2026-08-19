@@ -46,27 +46,31 @@ const CateringOfferCard: React.FC<CateringOfferProps> = ({
 
         {/* Heading (Offer 1 / Offer 2) */}
         <h3 
-          className="text-3xl sm:text-4xl font-extrabold mb-2 font-['Outfit',sans-serif]" 
-          style={{ color: headingColor }}
+          className="mb-2" 
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '45px', lineHeight: '59px', color: 'rgb(250, 174, 64)' }}
         >
           {t(headingKey)}
         </h3>
 
-        {/* Bold Title (Even Smaller Size) */}
-        <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-black leading-tight mb-6 tracking-tight">
+        <h2 
+          className="mb-6 tracking-tight"
+          style={{ fontFamily: "'Port Lligat Sans', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '25px', lineHeight: '35px', color: 'rgb(0, 0, 0)' }}
+        >
           {t(titleKey)}
         </h2>
 
-        {/* Paragraph (Allows rendering \n from JSON) */}
-        <p className="text-lg md:text-xl text-gray-700 font-medium mb-10 whitespace-pre-line leading-relaxed">
+        <p 
+          className="mb-10 whitespace-pre-line leading-relaxed"
+          style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(0, 0, 0)' }}
+        >
           {t(descKey)}
         </p>
 
-        {/* Button */}
         <Link 
           href="/order"
           aria-label={t('orderNow')}
-          className="bg-[#fbbc04] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-lg px-8 py-4 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-md flex items-center justify-center uppercase tracking-wider text-sm md:text-base cursor-pointer inline-flex max-w-[fit-content]"
+          className="bg-[#fbbc04] hover:bg-[#d72323] rounded-lg px-8 py-4 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-md flex items-center justify-center uppercase tracking-wider cursor-pointer inline-flex max-w-[fit-content]"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '20px', color: 'rgb(255, 255, 255)' }}
         >
           {t('orderNow')}
         </Link>

@@ -5,13 +5,6 @@ import ComingSoonLocations from '../../components/ComingSoonLocations';
 
 const locations = [
   {
-    name: 'Montréal',
-    image: '/images/as1.png',
-    address: '2079 Sainte-Catherine St. West, Montreal, QC H3H 1M6, Canada',
-    phone: '(514) 933-9399',
-    phoneLink: 'tel:+15149339399'
-  },
-  {
     name: 'Laval',
     image: '/images/amanie.png',
     address: '1228A Bd Curé-Labelle, Laval, QC H7V 2V5, Canada',
@@ -61,26 +54,14 @@ export default function LocationsPage() {
         }}
       ></div>
 
-      {/* Hero Section */}
-      <div className="relative w-full h-[40vh] min-h-[300px] md:h-[50vh] mb-12 flex items-center justify-center z-10">
-        <div 
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            backgroundImage: "url('/images/Picture-back-ground.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        ></div>
-        {/* Optional overlay if needed, currently transparent */}
-        {/* <div className="absolute inset-0 bg-black/30 z-0"></div> */}
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-24 pt-16">
         
         {/* Header Section */}
         <div className="mb-16 md:mb-24 flex flex-col items-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide text-center">
+          <h1 
+            className="uppercase tracking-wide text-center"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '48px', lineHeight: '56px', color: 'rgb(255,255,255)' }}
+          >
             {t('availableLocations')}
           </h1>
           <div className="w-24 h-1.5 bg-orange-500 mx-auto mt-6"></div>

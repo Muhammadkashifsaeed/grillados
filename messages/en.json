@@ -25,13 +25,13 @@
   },
   "NewDishes": {
     "heading": "The New Grillados Dishes",
-    "description": "Experience the ultimate taste of our freshly crafted menu. From sizzling steaks to mouth-watering ribs, every bite is a testament to the art of grilling meeting excellence. Discover our newest additions and elevate your dining experience today!",
+    "description": "These dishes bring new excitement to Grillados, each one offering an unforgettable blend of flavors that will make every visit something special.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
   "ChickenSpecials": {
     "title": "GRILLADO'S CHICKEN SPECIALS",
-    "desc": "Experience the ultimate taste of our freshly crafted menu. From sizzling steaks to mouth-watering ribs, every bite is a testament to the art of grilling meeting excellence. Discover our newest additions and elevate your dining experience today!",
+    "desc": "Grillado's Specials highlight a unique selection of grilled chicken dishes that showcase bold flavors and fresh ingredients. Each special features a carefully curated combination of marinated chicken, meats, and seasonal vegetables, expertly grilled to perfection.",
     "order": "Order Now",
     "learnMore": "Learn More"
   },
@@ -42,14 +42,14 @@
     "learnMore": "Learn More"
   },
   "Sandwiches": {
-    "heading": "GRILLADO'S SANDWICHES / PITAS / WRAPS",
-    "description": "Grillado's Sandwiches, Pitas, and Wraps offer a delicious variety of freshly grilled meats wrapped in warm, soft bread or pitas. Packed with fresh veggies and signature sauces, each option delivers a perfect balance of bold flavors and satisfying textures for a quick, mouthwatering meal.",
+    "heading": "SANDWICHES / PITAS / WRAPS",
+    "description": "Our Sandwiches, Pitas, and Wraps offer a delightful variety of flavors and textures, perfect for any meal or snack. Each option features fresh, high-quality ingredients, from tender meats and vibrant veggies to zesty sauces and flavorful spreads.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
   "Platters": {
     "heading": "GRILLADO'S PLATTERS",
-    "description": "Grillado's Platters offer a generous, satisfying feast featuring a perfect combination of expertly grilled meats, vibrant sides, and savory sauces. Whether you're craving tender chicken, succulent beef, or hearty lamb, each platter is crafted to deliver bold, unforgettable flavors in every bite, perfect for sharing or indulging yourself.",
+    "description": "Grillado's Platters features a beautifully arranged selection of grilled meats. Ideal for gatherings or a hearty meal, these platters showcase the best of our grilling expertise.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
@@ -139,7 +139,7 @@
     "r8_initials": "MS"
   },
   "BookEventCTA": {
-    "smallTitle": "Book today",
+    "smallTitle": "Reserve Today",
     "mainTitle": "CHECK YOUR DATE",
     "p1": "At Grillado, we believe that healthy food is essential for good health.",
     "p2": "Our wellness-focused menu is designed to fit your health-conscious lifestyle.",
@@ -505,9 +505,9 @@
     "storyHeading2": "with a craving...",
     "storyDesc1": "Grillado’s™ is a casual dining restaurant that focuses on grilling the very best Portuguese chicken with a South African twist. That twist is our variety of world famous sauces.",
     "storyDesc2": "Located in the heart of Montreal, it has quickly become known for its fun and engaging atmosphere, as well as its multitude of flavours that keep customers happy and coming back for more…",
-    "votedText1": "<span className=\"text-[#FACC15]\">Grillado’s™</span> was launched in Montreal back in 2015 and was voted the",
+    "votedText1": "<span>Grillado’s™</span> was launched in Montreal back in 2015 and was voted the",
     "votedText2": "\"Hottest New Restaurant in Montreal\"",
-    "votedText3": "by Michael D’Alimonite of <span className=\"font-bold\">Thrilist Media Group.</span>"
+    "votedText3": "by Michael D’Alimonite of <span>Thrilist Media Group.</span>"
   },
   "AboutUsCertified": {
     "heading1": "Being ",

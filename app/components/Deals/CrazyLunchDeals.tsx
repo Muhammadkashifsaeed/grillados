@@ -62,10 +62,16 @@ export default function CrazyLunchDeals() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center text-center mb-16 md:mb-20"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#DAAF18] font-['Outfit',sans-serif] uppercase tracking-wide mb-4">
+          <h2 
+            className="uppercase tracking-wide mb-4 text-center"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '65px', lineHeight: '91px', color: 'rgb(250,199,22)' }}
+          >
             {t('title')}
           </h2>
-          <p className="text-gray-800 text-base md:text-base lg:text-xl font-semibold max-w-2xl">
+          <p 
+            className="max-w-2xl mx-auto"
+            style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '25px', color: 'rgb(0,0,0)' }}
+          >
             {t('subtitle')}
           </p>
         </motion.div>
@@ -95,7 +101,10 @@ export default function CrazyLunchDeals() {
 
               {/* Right Content Section */}
               <div className="flex flex-col justify-center p-6 sm:p-8 flex-1">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 font-['Outfit',sans-serif] leading-tight mb-4">
+                <h3 
+                  className="mb-4"
+                  style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '33px', color: 'rgb(69,69,69)' }}
+                >
                   {deal.heading}
                 </h3>
                 
@@ -106,17 +115,18 @@ export default function CrazyLunchDeals() {
                     </p>
                     <button
                       onClick={() => router.push('/contact-us')}
-                      className="inline-block bg-[#fbbc04] hover:bg-[#e5aa03] text-black font-bold text-sm md:text-base uppercase tracking-wider px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                      className="inline-block bg-[#fbbc04] hover:bg-[#e5aa03] uppercase tracking-wider px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                      style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: 'rgb(255,255,255)' }}
                     >
                       {t('contactUs')}
                     </button>
                   </div>
                 ) : (
-                  <div className="mt-2 flex items-baseline">
-                    <span className="text-black text-2xl md:text-3xl font-extrabold mr-1.5">
+                  <div className="mt-2 flex items-baseline gap-1">
+                    <span style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '33px', color: 'rgb(0,0,0)' }}>
                       $
                     </span>
-                    <span className="text-[#fbbc04] text-3xl md:text-4xl font-extrabold tracking-tight">
+                    <span style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '33px', color: 'rgb(250,199,22)' }}>
                       {deal.price ? deal.price.replace('$ ', '').replace('$', '') : ''}
                     </span>
                   </div>

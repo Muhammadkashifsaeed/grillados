@@ -120,7 +120,10 @@ const ReviewsSection = () => {
           <h2 className="text-2xl md:text-4xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide mb-4">
             {t('heading')}
           </h2>
-          <p className="text-gray-500 text-sm md:text-base tracking-widest uppercase">
+          <p 
+            className="tracking-widest uppercase"
+            style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(0,0,0)' }}
+          >
             {t('subtitle')}
           </p>
         </div>

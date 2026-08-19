@@ -54,7 +54,10 @@ export const ComboDePouletMenuSection = () => {
             className="w-full flex flex-col justify-start"
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
+              <h2 
+                className="uppercase tracking-wide drop-shadow-sm mb-4"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
+              >
                 <span dangerouslySetInnerHTML={{ __html: t('comboDePoulet') }} />
               </h2>
               <div className="w-full max-w-40 md:max-w-48 lg:max-w-64 h-1.5 bg-[#FAAE40] mt-4"></div>
@@ -79,7 +82,10 @@ export const ComboDePouletMenuSection = () => {
                     </span>
                   </div>
                   {item.note && (
-                    <p className="text-red-600 text-xs md:text-xs font-bold uppercase mt-1 tracking-widest leading-relaxed">
+                    <p 
+                      className="uppercase mt-1 tracking-widest leading-relaxed"
+                      style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
+                    >
                       {item.note}
                     </p>
                   )}
@@ -88,7 +94,10 @@ export const ComboDePouletMenuSection = () => {
 
               {/* Bottom Note */}
               <motion.div variants={fadeLeftItem} className="mt-6 md:mt-10 w-full pt-4 border-t border-white/10">
-                <p className="text-[#FAAE40] text-sm md:text-base font-bold uppercase tracking-widest">
+                <p 
+                  className="uppercase tracking-widest"
+                  style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '26px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
+                >
                   {t('addSide')}
                 </p>
               </motion.div>

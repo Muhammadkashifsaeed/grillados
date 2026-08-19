@@ -44,7 +44,10 @@ const CustomizedOptionsSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black font-['Outfit',sans-serif] leading-tight inline-block whitespace-nowrap">
+            <h2 
+              className="inline-block whitespace-nowrap"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
+            >
               {t('heading')}
               {/* Divider (Full width of heading) */}
               <div className="w-full h-[4px] bg-black rounded-full mt-4 mb-[40px]"></div>
@@ -66,7 +69,9 @@ const CustomizedOptionsSection = () => {
                 <div className="flex-shrink-0 w-3 h-3 rounded-full bg-black mt-2.5 shadow-sm"></div>
 
                 {/* Feature Text */}
-                <p className="text-black text-lg leading-relaxed font-normal">
+                <p 
+                  style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
+                >
                   {t(featureKey)}
                 </p>
               </motion.div>
@@ -82,12 +87,19 @@ const CustomizedOptionsSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             {/* Button 1 */}
-            <Link href="/order" className="h-[52px] px-8 bg-[#fbbc04] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md w-full md:w-auto inline-flex items-center justify-center">
+            <Link 
+              href="/order" 
+              className="h-[52px] px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md w-full md:w-auto inline-flex items-center justify-center"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px' }}
+            >
               {t('orderNow')}
             </Link>
 
             {/* Button 2 */}
-            <button className="h-[52px] px-8 bg-[#fbbc04] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md w-full md:w-auto">
+            <button 
+              className="h-[52px] px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md w-full md:w-auto"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px' }}
+            >
               {t('learnMore')}
             </button>
           </motion.div>

@@ -19,9 +19,19 @@ const AboutUsCertified = () => {
         
         {/* Centered Heading */}
         <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black font-['Outfit',sans-serif] uppercase tracking-wide leading-tight">
-            {t('heading1')} <br />
-            <span className="text-[#FACC15] drop-shadow-sm">{t('heading2')}</span>
+          <h2 className="uppercase tracking-wide flex flex-col items-center">
+            <span 
+              className="block"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(23, 23, 23)', fontSize: '32px', lineHeight: '40px' }}
+            >
+              {t('heading1')}
+            </span>
+            <span 
+              className="block drop-shadow-sm mt-1"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(250, 199, 22)', fontSize: '56px', lineHeight: '60px' }}
+            >
+              {t('heading2')}
+            </span>
           </h2>
         </div>
 
@@ -37,10 +47,15 @@ const AboutUsCertified = () => {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-black font-['Outfit',sans-serif] mb-4">
+              <h3 
+                className="mb-4"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(23, 23, 23)', fontSize: '20px', lineHeight: '26px' }}
+              >
                 {card.heading}
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              <p 
+                style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 400, color: 'rgb(114, 114, 114)', fontSize: '15px', lineHeight: '22px' }}
+              >
                 {card.text}
               </p>
             </div>

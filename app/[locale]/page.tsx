@@ -29,10 +29,13 @@ export default function Home() {
       
       {/* Newsletter / Blogs Section */}
       <section className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 bg-white text-center">
-        <h2 className="text-2xl md:text-4xl font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase tracking-wide mb-6">
+        <h2
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
+          className="uppercase tracking-wide mb-6"
+        >
           {t('headingStart')} <span className="text-[#fbbc04]">{t('headingHighlight')}</span>
         </h2>
-        <p className="text-gray-600 text-base md:text-lg max-w-3xl leading-relaxed">
+        <p className="max-w-3xl" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}>
           {t('description')}
         </p>
       </section>

@@ -30,14 +30,23 @@ const CateringOffersSection = () => {
         
         {/* Made with Love Section */}
         <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16 mb-16 flex flex-col items-center text-center">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-zinc-900 font-['Outfit',sans-serif] tracking-tight">
+          <h3 
+            className="tracking-tight"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
+          >
             {tPartners('madeWithLove')}
           </h3>
           <div className="w-24 h-[2px] bg-black my-6"></div>
-          <h4 className="text-xl md:text-2xl font-bold text-gray-800 font-['Outfit',sans-serif] mb-4 tracking-wide">
+          <h4 
+            className="mb-4 tracking-wide"
+            style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '16px', lineHeight: '26px', color: 'rgb(0,0,0)' }}
+          >
             {tPartners('smallHeading')}
           </h4>
-          <p className="text-gray-700 text-base md:text-base leading-relaxed font-medium whitespace-pre-wrap max-w-5xl mx-auto">
+          <p 
+            className="whitespace-pre-wrap max-w-5xl mx-auto"
+            style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(0,0,0)' }}
+          >
             {tPartners('description')}
           </p>
         </div>

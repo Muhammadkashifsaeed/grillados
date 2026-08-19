@@ -20,16 +20,25 @@ const AboutUsVoted = () => {
       {/* Center Box */}
       <div className="relative z-10 w-full max-w-4xl bg-[#808080] border-4 border-[#FACC15] rounded-xl shadow-xl p-6 sm:p-10 text-center flex flex-col items-center justify-center mx-12 sm:mx-24">
         
-        <p className="text-white text-base sm:text-xl md:text-2xl font-bold font-['Outfit',sans-serif] leading-relaxed mb-4">
-          {t.rich('votedText1', { span: (chunks) => <span className="text-[#FACC15]">{chunks}</span> })}
+        <p 
+          className="mb-4"
+          style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 400, color: 'rgb(255, 255, 255)', fontSize: '20px', lineHeight: '24px' }}
+        >
+          {t.rich('votedText1', { span: (chunks) => <span className="text-[#FACC15] font-bold">{chunks}</span> })}
         </p>
 
-        <h2 className="text-[#FACC15] text-lg sm:text-2xl md:text-3xl font-extrabold uppercase tracking-wide font-['Outfit',sans-serif] mb-3 drop-shadow-md whitespace-nowrap">
+        <h2 
+          className="font-semibold uppercase tracking-wide mb-3 drop-shadow-md whitespace-nowrap"
+          style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)', fontSize: '28px', lineHeight: '36px' }}
+        >
           {t('votedText2')}
         </h2>
 
-        <p className="text-white text-xs sm:text-base font-medium opacity-90 italic">
-          {t.rich('votedText3', { span: (chunks) => <span className="font-bold">{chunks}</span> })}
+        <p 
+          className="italic font-normal opacity-90"
+          style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 400, color: 'rgb(255, 240, 240)', fontSize: '16px', lineHeight: '24px' }}
+        >
+          {t.rich('votedText3', { span: (chunks) => <span style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 700, fontStyle: 'italic', color: 'rgb(255, 240, 240)', fontSize: '16px', lineHeight: '24px' }}>{chunks}</span> })}
         </p>
 
       </div>

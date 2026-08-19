@@ -62,7 +62,8 @@ export default function NewsletterSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-2xl md:text-3xl lg:text- font-extrabold text-gray-900 font-['Outfit',sans-serif] text-center leading-[] tracking-tight mb-6 max-w-2xl"
+          className="text-center tracking-tight mb-6 max-w-2xl"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '32px', lineHeight: '40px', color: 'rgb(0,0,0)' }}
         >
           {t('headingStart')} <span className="text-[#DAAF18]">{t('headingHighlight')}</span>{t('headingEnd')}<br className="hidden md:block" />
           {t('headingEnd2')}
@@ -74,7 +75,8 @@ export default function NewsletterSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-gray-600 text-xs md:text-sm font-medium text-center leading-relaxed mb-10 max-w-xl"
+          className="text-center mb-10 max-w-xl"
+          style={{ fontFamily: "'Albert Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(0,0,0)' }}
         >
           {t('descriptionLine1')}<br className="hidden md:block" />
           {t('descriptionLine2')}

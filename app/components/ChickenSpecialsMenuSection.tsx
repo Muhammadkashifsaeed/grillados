@@ -111,7 +111,10 @@ export const ChickenSpecialsMenuSection = () => {
             className="w-full flex flex-col justify-start"
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              <h2 
+                className="uppercase tracking-wide drop-shadow-sm mb-4"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
+              >
                 <span dangerouslySetInnerHTML={{ __html: t('chickenSpecials') }} />
               </h2>
               <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
@@ -138,7 +141,10 @@ export const ChickenSpecialsMenuSection = () => {
                     </p>
                   )}
                   {item.note && (
-                    <p className="text-red-400 text-xs md:text-sm font-semibold uppercase mt-0.5 tracking-widest">
+                    <p 
+                      className="uppercase mt-0.5 tracking-widest"
+                      style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
+                    >
                       {item.note}
                     </p>
                   )}

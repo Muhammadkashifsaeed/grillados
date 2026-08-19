@@ -24,16 +24,24 @@ const CateringIntroductionSection = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h3 className="font-bold leading-tight text-[24px] md:text-[32px] lg:text-[40px] text-[#F5A623] font-['Outfit',sans-serif]">
+            <h3 
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '35px', lineHeight: '46px', color: 'rgb(250, 174, 64)' }}
+            >
               {t('titleColored')}
             </h3>
-            <h2 className="font-bold leading-tight text-[36px] md:text-[48px] lg:text-[60px] text-black font-['Outfit',sans-serif] mt-2 whitespace-pre-line">
+            <h2 
+              className="mt-2 whitespace-pre-line"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '50px', lineHeight: '65px', color: 'rgb(0, 0, 0)' }}
+            >
               {t('titleBlack')}
             </h2>
           </motion.div>
 
           {/* Paragraphs */}
-          <div className="space-y-6 text-gray-700 text-lg leading-relaxed text-left">
+          <div 
+            className="space-y-6 text-left"
+            style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(0, 0, 0)' }}
+          >
             {paragraphs.map((pKey, index) => (
               <motion.p
                 key={pKey}

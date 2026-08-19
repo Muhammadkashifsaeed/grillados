@@ -36,17 +36,33 @@ const AboutUsStory = () => {
         {/* Right Side: Content */}
         <div className="flex flex-col justify-center">
           
-          <h2 className="font-extrabold text-black font-['Outfit',sans-serif] leading-tight mb-8 uppercase tracking-wide">
-            <span className="block text-xl sm:text-2xl md:text-3xl mb-1">{t('storyHeading1')}</span>
-            <span className="block text-[#FACC15] text-2xl sm:text-3xl md:text-4xl drop-shadow-sm">{t('storyHeading2')}</span>
+          <h2 className="mb-8 flex flex-col">
+            <span 
+              className="block font-semibold"
+              style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(23, 23, 23)', fontSize: '25px', lineHeight: '30px' }}
+            >
+              {t('storyHeading1')}
+            </span>
+            <span 
+              className="block font-semibold drop-shadow-sm mt-1"
+              style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)', fontSize: '48px', lineHeight: '50px' }}
+            >
+              {t('storyHeading2')}
+            </span>
           </h2>
 
           <div className="space-y-6 mb-10">
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium">
+            <p 
+              className="font-normal"
+              style={{ fontFamily: "'Noto Sans', sans-serif", color: 'rgb(114, 114, 114)', fontSize: '18px', lineHeight: '30px' }}
+            >
               {t('storyDesc1')} 
             </p>
 
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium">
+            <p 
+              className="font-normal"
+              style={{ fontFamily: "'Noto Sans', sans-serif", color: 'rgb(114, 114, 114)', fontSize: '18px', lineHeight: '30px' }}
+            >
               {t('storyDesc2')}</p>
           </div>
 

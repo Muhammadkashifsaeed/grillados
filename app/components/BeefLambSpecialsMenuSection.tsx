@@ -120,8 +120,8 @@ export const BeefLambSpecialsMenuSection = () => {
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2
-                className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] uppercase tracking-wide"
-                style={{ fontFamily: "'Outfit', sans-serif" }}
+                className="uppercase tracking-wide"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
               >
                 <span dangerouslySetInnerHTML={{ __html: t('beefLambSpecials') }} />
               </h2>
@@ -150,7 +150,10 @@ export const BeefLambSpecialsMenuSection = () => {
 
                   {/* Note — red, uppercase, small */}
                   {item.note && (
-                    <p className="text-red-400 text-xs md:text-sm font-semibold uppercase mt-0.5 tracking-widest">
+                    <p 
+                      className="uppercase mt-0.5 tracking-widest"
+                      style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
+                    >
                       {item.note}
                     </p>
                   )}

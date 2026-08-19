@@ -86,7 +86,8 @@ export default function ContactCateringSection() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl md:text-5xl lg:text- font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide mb-10 text-center drop-shadow-lg"
+          className="uppercase tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '48px', lineHeight: '56px', color: 'rgb(255,255,255)' }}
         >
           Get in touch
         </motion.h1>

@@ -61,7 +61,10 @@ export const SpecialtyDrinksMenuSection = () => {
             className="w-full flex flex-col justify-start"
           >
             <motion.div variants={fadeLeftItem} className="mb-4 lg:mb-10 flex flex-col items-start">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
+              <h2 
+                className="uppercase tracking-wide drop-shadow-sm mb-4"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
+              >
                 {t('heading')}<br />
                 {t('subheading')}
               </h2>

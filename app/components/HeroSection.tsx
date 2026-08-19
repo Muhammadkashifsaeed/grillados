@@ -52,8 +52,9 @@ const HeroSection = () => {
             className="absolute inset-0 bg-[#DAAF18] rounded-xl z-[-1] shadow-2xl"
           ></div>
           
-          <h1 
-            className="text-lg sm:text-2xl md:text-3xl lg:text-5xl font-extrabold text-white tracking-tight py-3 px-4 sm:px-5 relative z-10 font-['Outfit',sans-serif] whitespace-nowrap"
+          <h1
+            className="text-white py-3 px-4 sm:px-5 relative z-10 whitespace-nowrap"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '55px', lineHeight: '70px', color: 'rgb(255,255,255)' }}
           >
             {t('welcome')}
           </h1>
@@ -63,7 +64,8 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-          className="text-sm sm:text-base md:text-base lg:text-xl text-gray-100 mb-10 max-w-4xl drop-shadow-md font-medium leading-relaxed w-full"
+          className="mb-10 max-w-4xl drop-shadow-md w-full"
+          style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(255,255,255)' }}
         >
           {t('subtitle')}
         </motion.p>
@@ -79,7 +81,8 @@ const HeroSection = () => {
             whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/order')}
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-lg transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '20px', lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
             <span>{t('orderNow')}</span>
             <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
@@ -89,7 +92,8 @@ const HeroSection = () => {
             whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/order')}
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-lg transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '20px', lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
             <Menu className="w-4 h-4 sm:w-6 sm:h-6" />
             <span>{t('viewMenu')}</span>

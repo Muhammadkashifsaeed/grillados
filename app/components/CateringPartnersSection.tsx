@@ -18,9 +18,20 @@ const CateringPartnersSection = () => {
       <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16 mb-8 flex flex-col items-center text-center">
 
         {/* Centered Heading */}
-        <h2 className="text-xl md:text-2xl font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase tracking-wide mb-2">
+        <h2 
+          className="uppercase tracking-wide mb-2"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
+        >
           {t('heading')}
         </h2>
+        
+        {/* Subtitle */}
+        <p 
+          className="max-w-2xl mx-auto mt-2"
+          style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}
+        >
+          {t('subtitle')}
+        </p>
 
       </div>
 

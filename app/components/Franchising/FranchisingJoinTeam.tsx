@@ -11,9 +11,9 @@ export default function FranchisingJoinTeam() {
 
   const StepItem = ({ num }: { num: number }) => (
     <div className="flex flex-col gap-2 mb-10">
-      <h3 className="text-xl md:text-2xl font-bold font-['Outfit',sans-serif]">
+      <h3 className="text-[#FAC716] text-[20px] leading-[26px] font-semibold font-['Ribeat',sans-serif]">
         <span className="text-black">{t(`step${num}_num`)} </span>
-        <span className="text-[#DAAF18]">{t(`step${num}_title`)}</span>
+        <span>{t(`step${num}_title`)}</span>
       </h3>
       <p className="text-gray-500 text-base md:text-base leading-relaxed">
         {t(`step${num}_desc`)}
@@ -26,7 +26,7 @@ export default function FranchisingJoinTeam() {
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         
         {/* Section Heading */}
-        <h2 className="text-3xl md:text-5xl font-extrabold text-center uppercase tracking-wide mb-4 text-black drop-shadow-sm">
+        <h2 className="text-[#000000] text-[48px] leading-[65px] font-semibold font-['Ribeat',sans-serif] text-center uppercase tracking-wide mb-4 drop-shadow-sm">
           {t('joinTeamHeading')}
         </h2>
         

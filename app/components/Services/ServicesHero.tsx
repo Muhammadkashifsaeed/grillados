@@ -43,7 +43,8 @@ export default function ServicesHero() {
             initial={{ opacity: 0, y: 30, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-tight py-3 px-6 rounded-xl bg-[#DAAF18] shadow-2xl relative z-10 font-['Outfit',sans-serif] uppercase leading-tight text-center whitespace-normal md:whitespace-nowrap"
+            className="tracking-tight py-3 px-6 rounded-xl bg-[#DAAF18] shadow-2xl relative z-10 uppercase text-center whitespace-normal md:whitespace-nowrap"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '60px', color: 'rgb(255,255,255)' }}
           >
             {t('titlePart1')}<br className="block md:hidden" /> {t('titlePart2')}
           </motion.h1>

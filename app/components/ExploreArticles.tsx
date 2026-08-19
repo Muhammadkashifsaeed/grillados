@@ -348,7 +348,7 @@ export const ExploreArticles = () => {
     <section className="bg-black py-20 px-4 sm:px-6 lg:px-8 w-full">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         
-        <h2 className="text-4xl md:text-5xl font-extrabold text-white font-['Outfit',sans-serif] tracking-wide mb-12 text-center drop-shadow-lg">
+        <h2 className="text-[#FFFFFF] text-[52px] leading-[34px] font-bold font-['Ribeat',sans-serif] tracking-wide mb-12 text-center drop-shadow-lg">
           {t('exploreArticles')}
         </h2>
 
@@ -375,12 +375,12 @@ export const ExploreArticles = () => {
                 
                 <Link 
                   href={`/blog/${article.id}`} 
-                  className="text-xl md:text-2xl font-bold text-white mb-4 hover:text-[#DAAF18] transition-colors duration-300 leading-snug line-clamp-2 font-['Outfit',sans-serif] underline underline-offset-4"
+                  className="text-[#FFFFFF] text-[20px] leading-[25px] font-medium font-['Ribeat',sans-serif] mb-4 hover:text-[#FAAE40] transition-colors duration-300 line-clamp-2 underline underline-offset-4"
                 >
                   {article.heading}
                 </Link>
 
-                <p className="text-gray-300 text-sm md:text-base leading-relaxed line-clamp-3">
+                <p className="text-[#FFFFFF] text-[16px] leading-[26px] font-normal font-['Roboto',sans-serif] line-clamp-3">
                   {article.text}
                 </p>
 
@@ -391,7 +391,7 @@ export const ExploreArticles = () => {
                 <div className="mb-6">
                   <Link 
                     href="#" 
-                    className="text-sm font-bold text-[#DAAF18] hover:text-white transition-colors duration-300 underline underline-offset-4"
+                    className="text-[#FAAE40] text-[14px] leading-[23px] font-normal font-['Poppins',sans-serif] transition-colors duration-300 underline underline-offset-4"
                   >
                     {article.tags.join(', ')}
                   </Link>
@@ -404,7 +404,7 @@ export const ExploreArticles = () => {
                   
                   <Link 
                     href={`/blog/${article.id}`} 
-                    className="text-[#DAAF18] font-extrabold uppercase text-sm tracking-wider hover:text-white active:bg-red-600 active:text-white px-3 py-2 rounded-lg -mr-3 transition-all duration-300 group/btn flex items-center gap-2"
+                    className="text-[#FAAE40] text-[16px] leading-[16px] font-semibold font-['Poppins',sans-serif] uppercase tracking-wider hover:bg-[#EB5250] hover:text-white active:bg-[#d44947] active:text-white rounded transition-all duration-300 group/btn flex items-center gap-2"
                   >
                     {t('readMore')}
                     <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
@@ -422,7 +422,7 @@ export const ExploreArticles = () => {
             <button 
               type="button" 
               onClick={handleLoadMore}
-              className="bg-[#DAAF18] text-black hover:bg-[#E04B51] hover:text-white font-extrabold py-4 px-10 rounded-full transition-all duration-300 uppercase tracking-widest text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-[#DAAF18] text-[#FFFFFF] hover:bg-[#E04B51] font-medium font-['Ribeat',sans-serif] text-[16px] leading-[16px] py-4 px-10 rounded-none transition-all duration-300 uppercase tracking-widest shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Load More
             </button>

@@ -42,7 +42,8 @@ export default function OrderPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0a0a0a] font-['Outfit',sans-serif] tracking-tight"
+            className="tracking-tight"
+            style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif', fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '38px', color: 'rgb(44,48,52)' }}
           >
             {t('title')}
           </motion.h1>
@@ -90,7 +91,10 @@ export default function OrderPage() {
                 <Info className="w-5 h-5" />
               </button>
 
-              <h3 className="text-2xl md:text-3xl font-extrabold text-[#0a0a0a] font-['Outfit',sans-serif] uppercase mb-2 pr-12">
+              <h3 
+                className="uppercase mb-2 pr-12"
+                style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif', fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '30px', color: 'rgb(44,48,52)' }}
+              >
                 {loc.name}
               </h3>
               <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed maxw-[-85%] mb-8">

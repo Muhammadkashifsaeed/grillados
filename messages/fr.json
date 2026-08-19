@@ -505,9 +505,9 @@
     "storyHeading2": "avec une envie...",
     "storyDesc1": "Grillado’s™ est un restaurant décontracté qui se concentre sur les grillades du meilleur poulet portugais avec une touche sud-africaine. Cette touche est notre variété de sauces de renommée mondiale.",
     "storyDesc2": "Situé au cœur de Montréal, il est rapidement devenu connu pour son atmosphère amusante et engageante, ainsi que pour sa multitude de saveurs qui gardent les clients heureux et reviennent pour plus…",
-    "votedText1": "<span className=\"text-[#FACC15]\">Grillado’s™</span> a été lancé à Montréal en 2015 et a été élu",
+    "votedText1": "<span>Grillado’s™</span> a été lancé à Montréal en 2015 et a été élu",
     "votedText2": "\"Nouveau restaurant le plus branché de Montréal\"",
-    "votedText3": "par Michael D’Alimonite du <span className=\"font-bold\">Thrilist Media Group.</span>"
+    "votedText3": "par Michael D’Alimonite du <span>Thrilist Media Group.</span>"
   },
   "AboutUsCertified": {
     "heading1": "Soyez ",

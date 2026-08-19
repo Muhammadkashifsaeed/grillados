@@ -45,13 +45,13 @@ const NewDishesSection = () => {
   };
 
   return (
-    <section className="w-full pt-8 md:pt-16 pb-4 md:pb-8 bg-white overflow-hidden">
-      <div className="w-full px-6 md:px-10 lg:px-16 mx-auto">
+    <section className="w-full pt-12 md:pt-16 pb-4 md:pb-8 bg-gray-50 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Heading */}
-        <h2 
-          className="text-center font-bold text-zinc-900 font-['Outfit',sans-serif] uppercase tracking-wide
-                     text-xl md:text-3xl lg:text-4xl leading-tight mb-2"
+        <h2
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
+          className="text-center uppercase tracking-wide mb-2"
         >
           {t('heading')}
         </h2>

@@ -27,7 +27,10 @@ const ReviewsSection = () => {
 
         {/* Centered Reviews Heading */}
         <div className="flex flex-col items-center mb-10">
-          <h2 className="text-[42px] md:text-[52px] font-bold text-[#F5A623] font-['Outfit',sans-serif] leading-tight">
+          <h2 
+            className="leading-tight"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '35px', lineHeight: '46px', color: 'rgb(250, 174, 64)' }}
+          >
             Reviews
           </h2>
           <div className="w-[110px] h-[3px] bg-black rounded-full mt-2"></div>
@@ -38,7 +41,12 @@ const ReviewsSection = () => {
 
           {/* Left: GOOD block */}
           <div className="flex flex-col items-center md:items-start shrink-0 w-auto md:w-[170px] text-center md:text-left">
-            <h3 className="text-4xl font-extrabold text-gray-900 mb-1 tracking-tight font-['Outfit',sans-serif]">GOOD</h3>
+            <h3 
+              className="mb-1 tracking-tight"
+              style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '24px', lineHeight: '34px', color: 'rgb(0,0,0)' }}
+            >
+              GOOD
+            </h3>
             <div className="flex gap-0.5 mb-1">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="w-5 h-5 text-[#F5A623] fill-current" viewBox="0 0 24 24">

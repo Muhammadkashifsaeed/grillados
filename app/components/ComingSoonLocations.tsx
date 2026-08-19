@@ -49,7 +49,10 @@ export default function ComingSoonLocations() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center mb-16 md:mb-24"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide text-center">
+          <h2 
+            className="uppercase tracking-wide text-center"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '48px', lineHeight: '56px', color: 'rgb(255,255,255)' }}
+          >
             {t('comingSoonLocations')}
           </h2>
           <div className="w-25 h-[3px] bg-orange-500 mt-5"></div>
@@ -67,7 +70,10 @@ export default function ComingSoonLocations() {
               className="flex flex-col"
             >
               {/* Province Heading */}
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wider mb-8 md:mb-12">
+              <h3 
+                className="uppercase tracking-wider mb-8 md:mb-12"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '40px', lineHeight: '60px', color: 'rgb(255,255,255)' }}
+              >
                 {region.province}
               </h3>
 

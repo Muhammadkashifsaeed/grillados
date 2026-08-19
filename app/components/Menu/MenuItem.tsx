@@ -23,7 +23,10 @@ export const MenuItem = ({
     <motion.div variants={fadeLeftItem} className="flex flex-col w-full">
       {/* Name and Price Row */}
       <div className="flex items-end w-full gap-1.5 sm:gap-2">
-        <span className="text-white text-[11px] sm:text-xs md:text-base lg:text-base font-normal whitespace-normal shrink leading-snug">
+        <span 
+          className="whitespace-normal shrink leading-snug"
+          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '20px', lineHeight: '33px', color: 'rgb(255,255,255)' }}
+        >
           {name}
         </span>
         <div
@@ -33,7 +36,10 @@ export const MenuItem = ({
             minWidth: '4px'
           }}
         />
-        <span className="text-white text-[11px] sm:text-xs md:text-base lg:text-base font-bold whitespace-nowrap leading-snug">
+        <span 
+          className="whitespace-nowrap leading-snug"
+          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '20px', lineHeight: '33px', color: 'rgb(255,255,255)' }}
+        >
           {price}
         </span>
       </div>
@@ -47,7 +53,10 @@ export const MenuItem = ({
       
       {/* Highlighted Note */}
       {note && (
-        <p className="text-red-500 text-[10px] md:text-xs font-bold uppercase mt-1 tracking-widest leading-relaxed">
+        <p 
+          className="uppercase mt-1 tracking-widest leading-relaxed"
+          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
+        >
           {note}
         </p>
       )}

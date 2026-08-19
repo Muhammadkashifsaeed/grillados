@@ -11,12 +11,25 @@ const AboutUsSmart = () => {
         {/* Left Side: Content */}
         <div className="flex flex-col justify-center order-2 lg:order-1">
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black font-['Outfit',sans-serif] leading-tight mb-6 uppercase tracking-wide">
-            {t('smartHeading1')} <br />
-            <span className="text-[#FACC15] drop-shadow-sm">{t('smartHeading2')}</span>
+          <h2 className="mb-6 flex flex-col">
+            <span 
+              className="block font-semibold"
+              style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(23, 23, 23)', fontSize: '25px', lineHeight: '30px' }}
+            >
+              {t('smartHeading1')}
+            </span>
+            <span 
+              className="block font-semibold drop-shadow-sm mt-1"
+              style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)', fontSize: '48px', lineHeight: '50px' }}
+            >
+              {t('smartHeading2')}
+            </span>
           </h2>
 
-          <p className="text-gray-700 text-lg sm:text-xl leading-relaxed font-medium">
+          <p 
+            className="font-normal"
+            style={{ fontFamily: "'Noto Sans', sans-serif", color: 'rgb(114, 114, 114)', fontSize: '18px', lineHeight: '30px' }}
+          >
             At <span className="text-[#FBC18A] font-bold">Grillado’s</span>, we believe healthy food is vital for good health. Our health-conscious menu is designed to cater to your health-conscious lifestyle. <span className="text-[#FBC18A] font-bold">Grillado’s</span> chicken is grilled to perfection, making it the smarter choice for a balanced life.
           </p>
           

@@ -90,7 +90,10 @@ export const AccompagnementsMenuSection = () => {
             className="w-full flex flex-col justify-center"
           >
             <motion.div variants={fadeRightItem} className="mb-6 lg:mb-10">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] font-['Outfit',sans-serif] uppercase tracking-wide leading-tight drop-shadow-sm mb-4">
+              <h2 
+                className="uppercase tracking-wide drop-shadow-sm mb-4"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
+              >
                 {t('accompagnements')}
               </h2>
               <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
@@ -122,7 +125,7 @@ export const AccompagnementsMenuSection = () => {
                 <h3 className="text-red-600 text-sm md:text-base font-bold uppercase tracking-widest mb-1.5 md:mb-2">
                   {t('seasonal')}
                 </h3>
-                <p className="text-[#FAAE40] text-xl md:text-2xl font-bold font-['Outfit',sans-serif]">
+                <p style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '26px', lineHeight: '45px', color: 'rgb(250,174,64)' }}>
                   {t('sidesSizes')}
                 </p>
               </motion.div>

@@ -1,4 +1,13 @@
+@font-face {
+  font-family: 'Ribeat';
+  src: url('/fonts/Ribeat.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
+
 
 :root {
   --background: #ffffff;

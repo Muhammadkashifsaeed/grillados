@@ -10,23 +10,34 @@ const AboutUsMissionVision = () => {
         
         {/* Left Side: Mission */}
         <div className="flex flex-col items-center text-center border-2 border-gray-200 rounded-xl p-6 sm:p-10 shadow-sm bg-white hover:shadow-md transition-shadow">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-black font-['Outfit',sans-serif] uppercase mb-4">
+          <h2 
+            className="uppercase mb-4"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: '48px', lineHeight: '47px' }}
+          >
             Our Mission
           </h2>
           {/* Yellow Divider */}
           <div className="w-16 h-1 bg-[#FACC15] mb-8"></div>
           
-          <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium mb-6">
+          <p 
+            className="mb-6"
+            style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 400, color: 'rgb(23, 23, 23)', fontSize: '16px', lineHeight: '24px' }}
+          >
             Our goal is to become the world’s leading brand in fast-paced, casual dining, by combining great quality and a healthy choice for food-lovers globally.
           </p>
-          <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium">
+          <p 
+            style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 400, color: 'rgb(23, 23, 23)', fontSize: '16px', lineHeight: '24px' }}
+          >
             Furthermore, our environmentally-friendly approach and community-support initiatives ensure that we give back to the society that support us year after year.
           </p>
         </div>
 
         {/* Right Side: Vision */}
         <div className="flex flex-col items-center text-center border-2 border-gray-200 rounded-xl p-6 sm:p-10 shadow-sm bg-white hover:shadow-md transition-shadow">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-black font-['Outfit',sans-serif] uppercase mb-4">
+          <h2 
+            className="uppercase mb-4"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: '48px', lineHeight: '47px' }}
+          >
             Our Vision
           </h2>
           {/* Yellow Divider */}
@@ -42,7 +53,10 @@ const AboutUsMissionVision = () => {
                   className="object-contain"
                 />
               </div>
-              <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium capitalize">
+              <p 
+                className="capitalize"
+                style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 400, color: 'rgb(23, 23, 23)', fontSize: '16px', lineHeight: '24px' }}
+              >
                 to establish a world-class brand
               </p>
             </li>
@@ -55,7 +69,10 @@ const AboutUsMissionVision = () => {
                   className="object-contain"
                 />
               </div>
-              <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium capitalize">
+              <p 
+                className="capitalize"
+                style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 400, color: 'rgb(23, 23, 23)', fontSize: '16px', lineHeight: '24px' }}
+              >
                 to be the leading & fastest growing restaurant-chain globally
               </p>
             </li>
@@ -68,7 +85,10 @@ const AboutUsMissionVision = () => {
                   className="object-contain"
                 />
               </div>
-              <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium capitalize">
+              <p 
+                className="capitalize"
+                style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 400, color: 'rgb(23, 23, 23)', fontSize: '16px', lineHeight: '24px' }}
+              >
                 to be synonymous with quality and customer care
               </p>
             </li>

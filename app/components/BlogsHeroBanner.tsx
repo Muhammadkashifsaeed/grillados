@@ -36,7 +36,7 @@ const BlogsHeroBanner = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-2"
         >
-          <h1 className="text-white font-extrabold tracking-tight text-[36px] sm:text-[42px] md:text-[50px] lg:text-[60px] leading-none drop-shadow-lg uppercase font-['Outfit',sans-serif]">
+          <h1 className="text-[#FFFFFF] text-[52px] leading-[34px] font-bold font-['Ribeat',sans-serif] tracking-tight drop-shadow-lg uppercase">
             {t('title')}
           </h1>
         </motion.div>
@@ -46,7 +46,7 @@ const BlogsHeroBanner = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="text-white/90 text-base sm:text-lg md:text-xl max-w-2xl drop-shadow-md font-medium leading-relaxed"
+          className="text-[#FFFFFF] text-[24px] leading-[40px] font-normal font-['Poppins',sans-serif] max-w-2xl drop-shadow-md"
         >
           {t('subtitle')}
         </motion.p>

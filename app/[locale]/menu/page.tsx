@@ -19,9 +19,9 @@ export default function MenuPage() {
 
   return (
     <main className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden">
-      
+
       {/* Global Unified Background for the Menu Page */}
-      <div 
+      <div
         className="fixed inset-0 z-0"
         style={{
           backgroundImage: "url('/images/Grilladossss.jpg')",
@@ -35,16 +35,16 @@ export default function MenuPage() {
 
       {/* Content wrapper */}
       <div className="relative z-10 flex flex-col w-full gap-[2px] bg-black">
-      <AppetizersMenuSection />
-      <ChickenSpecialsMenuSection />
-      <BeefLambSpecialsMenuSection />
-      <PlateauxMenuSection />
-      <AccompagnementsMenuSection />
-      <ComboDePouletMenuSection />
-      <SandwichSaladMenuSection />
-      <GarnishedRiceSauceMenuSection />
-      <SpecialtyDrinksMenuSection />
-      <DessertMenuSection />
+        <AppetizersMenuSection />
+        <ChickenSpecialsMenuSection />
+        <BeefLambSpecialsMenuSection />
+        <PlateauxMenuSection />
+        <AccompagnementsMenuSection />
+        <ComboDePouletMenuSection />
+        <SandwichSaladMenuSection />
+        <GarnishedRiceSauceMenuSection />
+        <SpecialtyDrinksMenuSection />
+        <DessertMenuSection />
       </div>
     </main>
   );

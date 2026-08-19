@@ -35,25 +35,25 @@ export const GarnishedRiceSauceMenuSection = () => {
       name: t('sauces.lemonHerbs'),
       description: t('sauces.lemonHerbsDesc'),
       image: '/images/Fiery.png',
-      colorClass: 'text-green-500',
+      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '59px', color: 'rgb(140, 197, 63)' }
     },
     {
       name: t('sauces.average'),
       description: t('sauces.averageDesc'),
       image: '/images/Fiery1.png',
-      colorClass: 'text-[#FAAE40]',
+      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '59px', color: 'rgb(247, 148, 31)' }
     },
     {
       name: t('sauces.strong'),
       description: t('sauces.strongDesc'),
       image: '/images/Fiery2.png',
-      colorClass: 'text-red-500',
+      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '59px', color: 'rgb(147, 26, 29)' }
     },
     {
       name: t('sauces.barbecue'),
       description: t('sauces.barbecueDesc'),
       image: '/images/Fiery3.png',
-      colorClass: 'text-[#b91c1c]',
+      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '59px', color: 'rgb(147, 26, 29)' }
     },
   ];
 
@@ -113,7 +113,10 @@ export const GarnishedRiceSauceMenuSection = () => {
                         />
                       </div>
                       <div className="flex flex-col justify-center flex-1">
-                        <h4 className={`text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase tracking-wider mb-1 md:mb-2 ${item.colorClass}`}>
+                        <h4 
+                          className="uppercase tracking-wider mb-1 md:mb-2"
+                          style={item.style}
+                        >
                           {item.name}
                         </h4>
                         <p className="text-gray-200 text-lg md:text-xl lg:text-2xl leading-relaxed font-medium">

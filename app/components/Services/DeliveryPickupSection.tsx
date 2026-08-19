@@ -49,10 +49,10 @@ export default function DeliveryPickupSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="bg-[#1c3664] rounded-3xl px-8 py-4 mb-8 shadow-lg"
+            className="mb-8"
           >
             <p className="text-white text-lg md:text-xl font-medium">
-              Call <span className="font-bold">(514) 933-9399</span> for more details!
+              Call <span style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '22px', lineHeight: '36px', color: 'rgb(182, 34, 59)' }}>(514) 933-9399</span> for more details!
             </p>
           </motion.div>
 

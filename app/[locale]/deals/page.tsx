@@ -8,12 +8,22 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import CrazyLunchDeals from '../../components/Deals/CrazyLunchDeals';
 import NewsletterSection from '../../components/Deals/NewsletterSection';
 
-const dealImages = [
-  { src: '/images/deals1.webp', alt: 'Deal 1' },
-  { src: '/images/deals2.webp', alt: 'Deal 2' },
-];
+import { useLocale } from 'next-intl';
 
 export default function DealsPage() {
+  const locale = useLocale();
+
+  const dealImages = locale === 'en'
+    ? [
+        { src: '/images/mon-to-friday-22-07-26-3rd-var-2nd.webp', alt: 'Monday to Friday Deal' },
+        { src: '/images/deals1.webp', alt: 'Deal 1' },
+        { src: '/images/deals2.webp', alt: 'Deal 2' },
+      ]
+    : [
+        { src: '/images/deals1.webp', alt: 'Deal 1' },
+        { src: '/images/deals2.webp', alt: 'Deal 2' },
+      ];
+
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 10000, stopOnInteraction: false })
   ]);

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans, Poppins } from "next/font/google";
 import "../globals.css";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
@@ -11,6 +11,18 @@ import { notFound } from 'next/navigation';
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const notoSans = Noto_Sans({
+  variable: "--font-noto-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -107,7 +119,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${inter.variable} h-full antialiased font-sans`}
+      className={`${inter.variable} ${notoSans.variable} ${poppins.variable} h-full antialiased font-sans`}
       suppressHydrationWarning
     >
       <head>

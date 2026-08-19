@@ -10,13 +10,13 @@ export default function FranchisingHero() {
 
   return (
     <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-      
+
       {/* Background Image with Cinematic Zoom and Float */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 z-0"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1, y: [0, -5, 0] }}
-        transition={{ 
+        transition={{
           scale: { duration: 1.5, ease: "easeOut" },
           y: { duration: 6, ease: "easeInOut", repeat: Infinity }
         }}
@@ -37,7 +37,7 @@ export default function FranchisingHero() {
 
       {/* Skewed Banner Content */}
       <div className="relative z-20 w-full w-full px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-center">
-        
+
         <motion.div
           initial={{ opacity: 0, scale: 0.8, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -45,22 +45,22 @@ export default function FranchisingHero() {
           className="relative"
         >
           {/* Yellow skewed background container */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, rotate: -10 }}
             animate={{ opacity: 1, rotate: -2 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
             className="absolute inset-0 bg-[#DAAF18] -skew-x-6 md:-skew-x-12 rounded-xl sm:rounded-2xl shadow-2xl transform origin-center z-[-1]"
           ></motion.div>
-          
+
           {/* Text Content (unskewed/unrotated visually against the container) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
             className="relative px-4 py-3 sm:px-8 sm:py-5 md:px-12 md:py-6 flex items-center justify-center"
           >
-            <h1 className="text-white font-extrabold font-['Outfit',sans-serif] text-center uppercase tracking-wide
-                           text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+            <h1 className="text-white font-semibold font-['Ribeat',sans-serif] text-center uppercase tracking-wide
+                           text-[45px] leading-[60px]
                            drop-shadow-lg"
             >
               {t('heroHeading')}
@@ -70,7 +70,7 @@ export default function FranchisingHero() {
         </motion.div>
 
       </div>
-      
+
     </section>
   );
 }

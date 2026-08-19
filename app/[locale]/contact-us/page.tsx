@@ -66,7 +66,10 @@ export default function ContactUsPage() {
 
         {/* Heading */}
         <div className="z-10 bg-[#FAC716] px-4 sm:px-6 py-2 sm:py-3 rounded-md shadow-lg border-2 border-white/20 inline-block">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide text-center drop-shadow-sm">
+          <h1 
+            className="uppercase tracking-wide text-center drop-shadow-sm"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(255, 255, 255)', fontSize: '55px', lineHeight: '60px' }}
+          >
             {t('title')}
           </h1>
         </div>
@@ -76,7 +79,10 @@ export default function ContactUsPage() {
       <div className="w-full bg-white pt-16 md:pt-24 pb-8 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
           
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-black font-['Outfit',sans-serif] uppercase tracking-wide text-center mb-16">
+          <h2 
+            className="uppercase tracking-wide text-center mb-16"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: '48px', lineHeight: '56px' }}
+          >
             Find Us Here
           </h2>
 
@@ -107,7 +113,10 @@ export default function ContactUsPage() {
                   className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-[#fafafa] border-2 border-[#FAC716] rounded-xl p-8 shadow-md hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center"
                 >
                 
-                  <h3 className="text-2xl font-black text-black font-['Outfit',sans-serif] uppercase mb-6 tracking-wide">
+                  <h3 
+                    className="uppercase mb-6 tracking-wide"
+                    style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: '28px', lineHeight: '32px' }}
+                  >
                     {loc.city}
                   </h3>
                   

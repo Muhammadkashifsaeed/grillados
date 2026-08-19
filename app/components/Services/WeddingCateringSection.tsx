@@ -23,11 +23,6 @@ export default function WeddingCateringSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center justify-center text-center order-2 md:order-1 px-6 md:px-12 lg:px-20 xl:px-24 py-12 md:py-16"
         >
-          {/* Heading */}
-          <h2 className="text-2xl sm:text-3xl lg:text- font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase leading-tight tracking-wide mb-4">
-            {t('heading')}
-          </h2>
-          
           {/* Divider */}
           <div className="w-37.5 mb-6 flex justify-center">
              <Image 
@@ -39,13 +34,28 @@ export default function WeddingCateringSection() {
              />
           </div>
 
+          {/* Heading */}
+          <h2 
+            className="uppercase leading-tight tracking-wide mb-4 text-center"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
+          >
+            {t('heading')}
+          </h2>
+
           {/* Description */}
-          <p className="text-gray-600 text-xs md:text-sm leading-relaxed max-w-112.5 mb-8 font-medium">
+          <p 
+            className="mb-8 text-center"
+            style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}
+          >
             {t('description')}
           </p>
 
           {/* Button */}
-          <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="px-10 py-3 sm:py-4 bg-[#fbbc04] hover:bg-[#d72323] active:scale-95 text-black hover:text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide">
+          <button 
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
+            className="px-10 py-3 sm:py-4 bg-[#fbbc04] hover:bg-[#d72323] active:scale-95 shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide rounded-none"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px', color: 'rgb(255,255,255)' }}
+          >
               {t('contactUs')}
           </button>
         </motion.div>

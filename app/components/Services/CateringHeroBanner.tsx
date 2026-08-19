@@ -39,7 +39,10 @@ const CateringHeroBanner = () => {
           className="mb-[30px]"
         >
           <div className="bg-[#EB5250] rounded-lg py-3 px-6 md:px-8 inline-block shadow-lg">
-            <h1 className="text-white font-extrabold tracking-tight text-[28px] sm:text-[34px] md:text-[42px] lg:text-[52px] xl:text-[60px] leading-none">
+            <h1 
+              className="tracking-tight"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '55px', lineHeight: '69px', color: 'rgb(255, 255, 255)' }}
+            >
               {t('heading')}
             </h1>
           </div>
@@ -50,7 +53,8 @@ const CateringHeroBanner = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="text-white text-sm sm:text-base md:text-base mb-[30px] max-w-3xl drop-shadow-md font-medium leading-relaxed whitespace-pre-wrap"
+          className="mb-[30px] max-w-3xl drop-shadow-md whitespace-pre-wrap"
+          style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(255, 255, 255)' }}
         >
           {t('description')}
         </motion.p>
@@ -64,7 +68,8 @@ const CateringHeroBanner = () => {
           <Link 
             href="/order"
             aria-label={t('orderNow')}
-            className="bg-[#F4C430] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-md h-[52px] px-[32px] flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer inline-flex"
+            className="bg-[#F4C430] hover:bg-[#d72323] rounded-md h-[52px] px-[32px] flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer inline-flex"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px', color: 'rgb(255, 255, 255)' }}
           >
             {t('orderNow')}
           </Link>

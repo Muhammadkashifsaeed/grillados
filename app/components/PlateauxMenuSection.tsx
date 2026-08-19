@@ -74,8 +74,8 @@ export const PlateauxMenuSection = () => {
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2
-                className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-extrabold text-[#FAAE40] uppercase tracking-wide"
-                style={{ fontFamily: "'Outfit', sans-serif" }}
+                className="uppercase tracking-wide"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
               >
                 <span dangerouslySetInnerHTML={{ __html: t('plateaux') }} />
               </h2>
@@ -104,7 +104,10 @@ export const PlateauxMenuSection = () => {
 
                   {/* Note — bright red, uppercase */}
                   {item.note && (
-                    <p className="text-red-400 text-xs md:text-sm font-semibold uppercase mt-0.5 tracking-widest leading-relaxed">
+                    <p 
+                      className="uppercase mt-0.5 tracking-widest leading-relaxed"
+                      style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
+                    >
                       {item.note}
                     </p>
                   )}

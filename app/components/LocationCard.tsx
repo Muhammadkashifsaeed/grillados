@@ -49,7 +49,10 @@ export default function LocationCard({
 
       {/* Info Box */}
       <div className="flex flex-col justify-center w-full lg:w-[50%] p-6 md:p-8 lg:p-10">
-        <h3 className="text-lg md:text-xl lg:text-2xl font-extrabold text-orange-500 font-['Outfit',sans-serif] uppercase tracking-wide mb-2">
+        <h3 
+          className="uppercase tracking-wide mb-2"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '24px', lineHeight: '34px', color: 'rgb(250,174,65)' }}
+        >
           {name}
         </h3>
 

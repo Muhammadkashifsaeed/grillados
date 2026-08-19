@@ -126,10 +126,10 @@ export const Footer = () => {
               <div className="flex flex-col gap-6">
                 <h3 className="text-lg sm:text-xl font-bold tracking-wider uppercase">{t('locationsHeading')}</h3>
                 <ul className="flex flex-col gap-4">
-                  <li><a href="https://www.google.com/maps/place/Grillado's+Cambridge+Halal+Steak+%26+BBQ/@43.3981375,-80.3262932,17z/data=!4m16!1m9!3m8!1s0x882b89ca29555555:0x883188bb847c75f1!2s480+Hespeler+Rd+Unit+23,+Cambridge,+ON+N1R+7R9,+Canada!3b1!8m2!3d43.3981182!4d-80.3265331!10e3!16s%2Fg%2F11sn009qp1!3m5!1s0x882b89121d736a31:0x2a5f4735f29c1fc!8m2!3d43.3987651!4d-80.3263276!16s%2Fg%2F11vpqz7x3v?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('cambridge')}</a></li>
-                  <li><a href="https://www.google.com/maps/place/1228a+Bd+du+Curé-Labelle,+Laval,+QC+H7V+2V5,+Canada/@45.5456049,-73.7540548,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc923a88442e81d:0x88138a1d2d083eff!8m2!3d45.5456049!4d-73.7540548!16s%2Fg%2F11fp0lfn35?entry=ttu" target="_blank" rel="noopener noreferrer" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('laval')}</a></li>
-                  <li><a href="https://www.google.com/maps/place/6000+Main+St+W+%239,+Milton,+ON+L9T+9M1,+Canada/@43.4955417,-79.8962679,16z/data=!4m5!3m4!1s0x882b65600fbfcb4b:0x4318f46d8eecba17!8m2!3d43.495796!4d-79.8961919?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('milton')}</a></li>
-                  <li><a href="https://www.google.com/maps/place/Grillados+Grilled+Beef+Back+Ribs+%26+Chicken/@43.6400885,-79.627836,16z/data=!4m6!3m5!1s0x882b397f951bead7:0xd3c9b67ec4658cc1!8m2!3d43.6399698!4d-79.6249145!16s%2Fg%2F11rd5rg27d?entry=tts&g_ep=EgoyMDI1MTAwNy4wIPu8ASoASAFQAw%3D%3D&skid=c7ef8e32-33cb-4a19-8eff-4da1090a6f23" target="_blank" rel="noopener noreferrer" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('mississauga')}</a></li>
+                  <li><a href="tel:+15196217771" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('cambridge')}</a></li>
+                  <li><a href="tel:+14506883399" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('laval')}</a></li>
+                  <li><a href="tel:+19058787770" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('milton')}</a></li>
+                  <li><a href="tel:+19056255558" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('mississauga')}</a></li>
                 </ul>
               </div>
             </div>
