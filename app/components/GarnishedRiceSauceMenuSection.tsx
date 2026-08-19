@@ -102,21 +102,21 @@ export const GarnishedRiceSauceMenuSection = () => {
                     transition={{ duration: 0.8, delay: index * 0.15, ease: "easeOut" }}
                     className="flex flex-col w-full"
                   >
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 bg-white/5 rounded-2xl flex items-center justify-center p-2">
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8">
+                      <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 bg-white/5 rounded-2xl flex items-center justify-center p-3 md:p-4 shadow-lg">
                         <Image
                           src={item.image}
                           alt={item.name}
-                          width={64}
-                          height={64}
-                          className="w-full h-full object-contain"
+                          width={128}
+                          height={128}
+                          className="w-full h-full object-contain drop-shadow-md scale-110"
                         />
                       </div>
-                      <div className="flex flex-col justify-center">
-                        <h4 className={`text-xl md:text-2xl font-bold uppercase tracking-wider ${item.colorClass}`}>
+                      <div className="flex flex-col justify-center flex-1">
+                        <h4 className={`text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase tracking-wider mb-2 ${item.colorClass}`}>
                           {item.name}
                         </h4>
-                        <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed">
+                        <p className="text-gray-200 text-lg md:text-xl lg:text-2xl leading-relaxed font-medium">
                           {item.description}
                         </p>
                       </div>
