@@ -22,28 +22,28 @@ export const MenuDualImage = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className={`w-full grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 items-center ${(mobileLeftImageSrc || mobileRightImageSrc) ? 'py-4 lg:pt-0 lg:pb-0' : 'py-0 lg:pt-0 lg:pb-0'}`}
+        className={`w-full flex flex-col md:flex-row items-center justify-center lg:pr-0 ${(mobileLeftImageSrc || mobileRightImageSrc) ? 'py-4 lg:pt-0 lg:pb-0' : 'py-0 lg:pt-0 lg:pb-0'}`}
       >
         {/* Desktop Left Image */}
-        <div className="relative w-full h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-10 hidden md:block">
+        <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-10 hidden md:block">
           <Image
             src={leftImageSrc}
             alt="Menu Item Left"
             fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-contain object-bottom md:object-bottom-left scale-[1.15] drop-shadow-2xl"
+            sizes="(max-width: 768px) 100vw, 60vw"
+            className="object-contain object-bottom md:object-bottom-right scale-[1.15] drop-shadow-2xl"
             priority
           />
         </div>
 
         {/* Desktop Right Image */}
-        <div className="relative w-full h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-0 hidden md:block">
+        <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-0 ml-[-15%] hidden md:block">
           <Image
             src={rightImageSrc}
             alt="Menu Item Right"
             fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-contain object-bottom md:object-bottom-right scale-[1.15] drop-shadow-2xl"
+            sizes="(max-width: 768px) 100vw, 60vw"
+            className="object-contain object-top md:object-bottom-left scale-[1.15] drop-shadow-2xl"
           />
         </div>
 
