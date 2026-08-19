@@ -4,20 +4,20 @@ import React from 'react';
 import ReviewCard from './ReviewCard';
 import { useTranslations } from 'next-intl';
 
-const reviewsData = [
-  { avatarSrc: "/images/Ali Z.png",        name: "Ali Z",            date: "7 months ago", review: "Harprith provided amazing services. Great food" },
-  { avatarSrc: "/images/Naz H.png",        name: "Naz H",            date: "7 months ago", review: "GOOd" },
-  { avatarSrc: "/images/yttyts.png",       name: "Usama Ismail",     date: "7 months ago", review: "The user only left a rating." },
-  { avatarSrc: "/images/Mohamed Nagy.png", name: "Mohamed Nagy",     date: "7 months ago", review: "This user only left a rating." },
-  { avatarSrc: "/images/mansnsjd.png",     name: "Jeremias Almazan", date: "7 months ago", review: "Great Customer Service and food was so delicious and cooked with perfection! Highly recommend" },
-  { avatarSrc: "/images/mnsnds.png",       name: "Ashmit Samyal",    date: "7 months ago", review: "The user only left a rating." },
-  { avatarSrc: "/images/Aarif Amin.png",   name: "Aarif Amin",       date: "months ago",   review: "This user only left a rating." },
+const getReviewsData = (t: any) => [
+  { avatarSrc: "/images/Ali Z.png",        name: "Ali Z",            date: `7 ${t('monthsAgo')}`, review: t('review1') },
+  { avatarSrc: "/images/Naz H.png",        name: "Naz H",            date: `7 ${t('monthsAgo')}`, review: t('review2') },
+  { avatarSrc: "/images/yttyts.png",       name: "Usama Ismail",     date: `7 ${t('monthsAgo')}`, review: t('ratingOnly') },
+  { avatarSrc: "/images/Mohamed Nagy.png", name: "Mohamed Nagy",     date: `7 ${t('monthsAgo')}`, review: t('ratingOnly') },
+  { avatarSrc: "/images/mansnsjd.png",     name: "Jeremias Almazan", date: `7 ${t('monthsAgo')}`, review: t('review5') },
+  { avatarSrc: "/images/mnsnds.png",       name: "Ashmit Samyal",    date: `7 ${t('monthsAgo')}`, review: t('ratingOnly') },
+  { avatarSrc: "/images/Aarif Amin.png",   name: "Aarif Amin",       date: `7 ${t('monthsAgo')}`, review: t('ratingOnly') },
 ];
 
 // Duplicate for seamless infinite loop
 
 
-const {t('heading')}Section = () => {
+const ReviewsSection = () => {
   const t = useTranslations('ServiceReviews');
   const reviewsData = getReviewsData(t);
   const allCards = [...reviewsData, ...reviewsData];

@@ -4,10 +4,11 @@ import React from 'react';
 import Image from 'next/image';
 import { Link } from "@/i18n/routing";
 import { motion } from 'framer-motion';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function WeddingCateringSection() {
   const locale = useLocale();
+  const t = useTranslations('WeddingCatering');
   
   return (
     <section className="relative w-full overflow-hidden bg-white">

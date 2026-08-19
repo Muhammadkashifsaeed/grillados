@@ -11,6 +11,7 @@ interface VoucherModalProps {
 }
 
 const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
+  const t = useTranslations('Voucher');
   const [formData, setFormData] = useState({
     firstName: '',
     email: '',
