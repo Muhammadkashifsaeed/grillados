@@ -24,7 +24,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   return {
     metadataBase: new URL('https://grillados.ca'),
-    alternates: { canonical: '/' },
+    alternates: { 
+      canonical: `/${locale}`,
+      languages: {
+        'en': '/en',
+        'fr': '/fr',
+      },
+    },
     robots: { index: true, follow: true },
     title: {
       template: "%s | GRILLADO'S",
