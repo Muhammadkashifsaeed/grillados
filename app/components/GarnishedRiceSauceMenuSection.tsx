@@ -100,23 +100,26 @@ export const GarnishedRiceSauceMenuSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.8, delay: index * 0.15, ease: "easeOut" }}
-                    className="flex flex-col md:flex-row items-center w-full gap-4 md:gap-8 lg:gap-10"
+                    className="flex flex-col w-full"
                   >
-                    <div className="relative w-36 h-36 md:w-36 md:h-36 lg:w-48 lg:h-48 shrink-0">
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        fill sizes="(max-width: 1024px) 144px, 192px"
-                        className="object-contain"
-                      />
-                    </div>
-                    <div className="flex flex-col flex-1 items-center text-center md:items-start md:text-left mt-2 md:mt-0">
-                      <h4 className={`text-2xl md:text-3xl lg:text-4xl font-extrabold font-['Outfit',sans-serif] uppercase tracking-wide mb-2 md:mb-1 ${item.colorClass}`}>
-                        {item.name}
-                      </h4>
-                      <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed">
-                        {item.description}
-                      </p>
+                    <div className="flex items-center gap-4">
+                      <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 bg-white/5 rounded-2xl flex items-center justify-center p-2">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <div className="flex flex-col justify-center">
+                        <h4 className={`text-xl md:text-2xl font-bold uppercase tracking-wider ${item.colorClass}`}>
+                          {item.name}
+                        </h4>
+                        <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
@@ -134,7 +137,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                 alt="Zesty Food"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-top scale-90 xl:scale-100 origin-top drop-shadow-2xl hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-top scale-95 xl:scale-100 origin-top drop-shadow-2xl hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
