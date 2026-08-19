@@ -162,7 +162,7 @@ export const BeefLambSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="w-full flex items-start justify-center lg:justify-end relative lg:min-h-[500px] mx-auto"
+            className="w-full flex items-start justify-center relative lg:min-h-[500px] mx-auto"
           >
             {/* Desktop Image */}
             <Image
