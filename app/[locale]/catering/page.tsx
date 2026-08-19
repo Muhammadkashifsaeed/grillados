@@ -8,6 +8,7 @@ import CateringOffersSection from '../../components/Services/CateringOffersSecti
 import CustomizedOptionsSection from '../../components/Services/CustomizedOptionsSection';
 import ReviewsSection from '../../components/Services/ReviewsSection';
 import BookEventCTASection from '../../components/Services/BookEventCTASection';
+import CateringFAQSection from '../../components/Services/CateringFAQSection';
 
 export default function CateringPage() {
   return (
@@ -19,6 +20,8 @@ export default function CateringPage() {
       <CustomizedOptionsSection />
       <ReviewsSection />
       <BookEventCTASection />
+      <CateringFAQSection />
     </main>
   );
 }
+
