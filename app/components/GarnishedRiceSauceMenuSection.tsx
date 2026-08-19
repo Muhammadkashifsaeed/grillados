@@ -102,7 +102,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                     transition={{ duration: 0.8, delay: index * 0.15, ease: "easeOut" }}
                     className="flex flex-col w-full"
                   >
-                    <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
+                    <div className="flex items-center gap-4 md:gap-8">
                       <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 shrink-0 bg-white/5 rounded-3xl flex items-center justify-center p-4 md:p-6 shadow-xl">
                         <Image
                           src={item.image}
@@ -113,10 +113,10 @@ export const GarnishedRiceSauceMenuSection = () => {
                         />
                       </div>
                       <div className="flex flex-col justify-center flex-1">
-                        <h4 className={`text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase tracking-wider mb-2 md:mb-4 ${item.colorClass}`}>
+                        <h4 className={`text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase tracking-wider mb-1 md:mb-2 ${item.colorClass}`}>
                           {item.name}
                         </h4>
-                        <p className="text-gray-200 text-xl md:text-2xl lg:text-3xl leading-relaxed font-medium">
+                        <p className="text-gray-200 text-lg md:text-xl lg:text-2xl leading-relaxed font-medium">
                           {item.description}
                         </p>
                       </div>
