@@ -4,49 +4,52 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Link, useRouter } from "@/i18n/routing";
-
-const deals = [
-  {
-    id: 1,
-    image: '/images/Crazy1.jpeg',
-    heading: '1/4 thigh or breast with fries or rice for',
-    price: '$ 11.99'
-  },
-  {
-    id: 2,
-    image: '/images/Crazy2.jpeg',
-    heading: 'Grilled Chicken Poutine',
-    price: '$ 11.99'
-  },
-  {
-    id: 3,
-    image: '/images/Crazy3.jpeg',
-    heading: 'Monday to Friday',
-    price: '$ 11.99'
-  },
-  {
-    id: 4,
-    image: '/images/Crazy4.jpeg',
-    heading: '5 whole chicken wings',
-    price: '$ 11.99'
-  },
-  {
-    id: 5,
-    image: '/images/Crazy5.jpeg',
-    heading: 'Grilled chicken with Greek salad or spring salad',
-    price: '$ 11.99'
-  },
-  {
-    id: 6,
-    image: '/images/Crazy6.png',
-    heading: 'Get 10% off for LA Fitness members',
-    description: "Grillado's offers a 10% discount to all LA Fitness members. Please present your gym membership card at the counter.",
-    isSpecial: true
-  }
-];
+import { useTranslations } from 'next-intl';
 
 export default function CrazyLunchDeals() {
   const router = useRouter();
+  const t = useTranslations('CrazyLunch');
+  
+  const deals = [
+    {
+      id: 1,
+      image: '/images/Crazy1.jpeg',
+      heading: t('deal1'),
+      price: '$ 11.99'
+    },
+    {
+      id: 2,
+      image: '/images/Crazy2.jpeg',
+      heading: t('deal2'),
+      price: '$ 11.99'
+    },
+    {
+      id: 3,
+      image: '/images/Crazy3.jpeg',
+      heading: t('deal3'),
+      price: '$ 11.99'
+    },
+    {
+      id: 4,
+      image: '/images/Crazy4.jpeg',
+      heading: t('deal4'),
+      price: '$ 11.99'
+    },
+    {
+      id: 5,
+      image: '/images/Crazy5.jpeg',
+      heading: t('deal5'),
+      price: '$ 11.99'
+    },
+    {
+      id: 6,
+      image: '/images/Crazy6.png',
+      heading: t('deal6'),
+      description: t('deal6Desc'),
+      isSpecial: true
+    }
+  ];
+
   return (
     <section className="relative w-full bg-gray-50 py-10 md:py-16 z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,10 +63,10 @@ export default function CrazyLunchDeals() {
           className="flex flex-col items-center text-center mb-16 md:mb-20"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#DAAF18] font-['Outfit',sans-serif] uppercase tracking-wide mb-4">
-            Crazy Lunch Deals
+            {t('title')}
           </h2>
           <p className="text-gray-800 text-base md:text-base lg:text-xl font-semibold max-w-2xl">
-            Discover this week&apos;s incredible treats
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -105,7 +108,7 @@ export default function CrazyLunchDeals() {
                       onClick={() => router.push('/contact-us')}
                       className="inline-block bg-[#fbbc04] hover:bg-[#e5aa03] text-black font-bold text-sm md:text-base uppercase tracking-wider px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
                     >
-                      Contact Us
+                      {t('contactUs')}
                     </button>
                   </div>
                 ) : (

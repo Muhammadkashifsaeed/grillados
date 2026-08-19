@@ -55,7 +55,7 @@ const PlattersSection = () => {
               
               <Link href="/menu#platters" className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white border-transparent px-4 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 flex-1 sm:flex-none">
                 <Info className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="whitespace-nowrap">Learn More</span>
+                <span className="whitespace-nowrap">{t('learnMore')}</span>
               </Link>
             </div>
             

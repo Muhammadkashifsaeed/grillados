@@ -30,10 +30,10 @@
     "learnMore": "En savoir plus"
   },
   "ChickenSpecials": {
-    "heading": "SPÉCIALITÉS DE POULET GRILLADO'S",
-    "description": "Découvrez le goût ultime de notre menu fraîchement préparé. Des steaks grésillants aux côtes levées appétissantes, chaque bouchée est un témoignage de l'art de la grillade rencontrant l'excellence. Découvrez nos nouveautés et élevez votre expérience culinaire dès aujourd'hui !",
-    "orderNow": "Commander",
-    "learnMore": "En savoir plus"
+    "title": "SPÉCIALITÉS DE POULET GRILLADO'S",
+    "desc": "Découvrez le goût ultime de notre menu fraîchement préparé. Des steaks grésillants aux côtes levées alléchantes, chaque bouchée est un témoignage de l'art de la grillade à son meilleur. Découvrez nos nouveautés et améliorez votre expérience culinaire dès aujourd'hui!",
+    "order": "Commander",
+    "learnMore": "En Savoir Plus"
   },
   "BeefLambSpecials": {
     "heading": "SPÉCIALITÉS DE BOEUF ET AGNEAU GRILLADO'S",
@@ -467,22 +467,23 @@
   "BirthdayCatering": {
     "heading": "anniversaire !",
     "description": "Avec les innombrables choix de menu de Grillado's, personne ne sera laissé pour compte dans cet océan de délices culinaires. Laissez Grillado rendre votre anniversaire… délicieux.",
-    "contactUs": "Nous contacter"
+    "contactUs": "Contactez-nous"
   },
   "WeddingCatering": {
     "heading": "Service traiteur de mariage",
     "description": "Votre mariage est un événement unique dans une vie. Amenez votre service traiteur au niveau supérieur avec les plats certifiés halal de Grillado's, préparés avec des ingrédients frais et le meilleur poulet portugais au Canada.",
-    "contactUs": "Nous contacter"
+    "contactUs": "Contactez-nous"
   },
   "EventsCatering": {
     "heading": "Événements d'entreprise et fêtes privées",
     "description": "Vous organisez un événement pour votre entreprise ou une fête privée pour vos amis et votre famille ? Vous pouvez compter sur Grillado's. Contactez-nous et nous trouverons les meilleures combinaisons de menu pour votre événement.",
-    "contactUs": "Nous contacter"
+    "contactUs": "Contactez-nous"
   },
   "DeliveryPickup": {
     "heading": "Service de livraison et de cueillette",
     "description": "Votre emplacement est notre limite. Contactez-nous pour en savoir plus sur nos options de livraison et de cueillette.",
-    "contactUs": "Nous contacter"
+    "contactUs": "Nous contacter",
+    "orderNow": "Commander"
   },
   "ServiceReviews": {
     "heading": "Avis",
@@ -767,5 +768,59 @@
     "exploreArticles": "Explorer les Articles",
     "readMore": "Lire la suite",
     "loadMore": "Charger plus"
+  },
+  "BlogsHero": {
+    "title": "Blogs",
+    "subtitle": "Lisez les dernières tendances du monde entier"
+  },
+  "CrazyLunch": {
+    "title": "Offres de Dîner Fous",
+    "subtitle": "Découvrez les délices incroyables de cette semaine",
+    "contactUs": "Nous Contacter",
+    "deal1": "1/4 de cuisse ou de poitrine avec frites ou riz pour",
+    "deal2": "Poutine au poulet grillé",
+    "deal3": "Du lundi au vendredi",
+    "deal4": "5 ailes de poulet entières",
+    "deal5": "Poulet grillé avec salade grecque ou salade printanière",
+    "deal6": "Obtenez 10 % de réduction pour les membres de LA Fitness",
+    "deal6Desc": "Grillado's offre une réduction de 10 % à tous les membres de LA Fitness. Veuillez présenter votre carte d'abonnement au comptoir."
+  },
+  "ServicesHero": {
+    "titlePart1": "Nous préparons pour vos",
+    "titlePart2": "occasions spéciales"
+  },
+  "Terms": {
+    "title": "Informations Légales",
+    "h1": "Grillado's Canada",
+    "p1": "Ce qui suit décrit les conditions régissant votre accès et votre utilisation des services. En accédant ou en utilisant l'un des services, vous acceptez de respecter ces conditions de service. Si vous n'acceptez pas toutes les conditions décrites dans ces conditions de service, vous n'êtes pas autorisé à accéder ou à utiliser l'un des services.",
+    "h2": "Modifications",
+    "p2a": "Grillado’s se réserve le droit de modifier ces Conditions de Service à tout moment en les remplaçant par des conditions mises à jour. L'avis de modification sera publié sur son site Web principal à l'adresse www.Grillado’s.ca pendant une période de 30 jours. Les conditions de service révisées entreront automatiquement en vigueur dès leur publication. Votre utilisation continue des Services après la publication des conditions mises à jour, ainsi que l'avis fourni, indique votre acceptation des Conditions de Service modifiées. Si vous n'êtes pas d'accord avec l'une des conditions des Conditions de Service modifiées, vous devez cesser toute utilisation des Services. Ces Conditions de Service ne peuvent pas être modifiées autrement.",
+    "p2b": "Le paragraphe initial de ces Conditions de Service précise la date de la dernière modification. Veuillez consulter cette section régulièrement pour rester informé de toute mise à jour ou modification.",
+    "h3": "Licence",
+    "p3": "Il vous est par la présente accordé une licence non exclusive et non transférable pour accéder et utiliser les Services conformément aux conditions décrites dans les présentes Conditions de Service.",
+    "h4": "Accès",
+    "p4a": "Pour accéder et utiliser les Services, vous devez adhérer aux termes et conditions spécifiés dans les présentes Conditions de Service. Tout accès ou utilisation non autorisé sera considéré comme une intrusion dans les systèmes informatiques de Grillado’s, constituant une violation de la propriété intellectuelle de Grillado’s et une utilisation illégale des actifs de Grillado’s.",
+    "p4b": "Certaines sections des Services peuvent nécessiter l'utilisation d'un identifiant utilisateur, ce qui pourrait impliquer la fourniture de certaines informations personnelles à Grillado’s. En utilisant les Services, vous acceptez de (a) fournir des informations véridiques, exactes, actuelles et complètes sur vous-même, et (b) mettre à jour rapidement ces informations pour garantir leur exactitude, leur actualité et leur exhaustivité.",
+    "p4c": "Grillado’s conserve le droit, à sa seule discrétion, de suspendre ou de résilier votre accès et votre utilisation présents et futurs des Services si Grillado’s a des raisons de croire que votre conduite ou la fourniture d'informations viole les présentes Conditions de Service.",
+    "p4d": "Grillado’s se réserve le droit d'observer votre utilisation des Services pour vérifier la conformité avec les conditions décrites dans les présentes Conditions de Service."
+  },
+  "GiftCardsSection": {
+    "heading": "Cartes-cadeaux",
+    "description": "Offrez le cadeau de la bonne cuisine à vos proches. Grillado propose une gamme de cartes-cadeaux pour toutes les occasions : choisissez-en une simplement et offrez à vos proches le meilleur poulet portugais au Canada.",
+    "contactUs": "Contactez-nous"
+  },
+  "OrderPage": {
+    "title": "Nos Emplacements",
+    "subtitle": "Entrez votre adresse pour trouver l'emplacement le plus proche",
+    "searchPlaceholder": "Entrez votre adresse",
+    "orderNow": "Commander"
+  },
+  "ContactPage": {
+    "title": "Contactez-nous"
+  },
+  "SocialTree": {
+    "orderNow": "COMMANDER",
+    "website": "SITE WEB",
+    "getInTouch": "Contactez-nous"
   }
 }

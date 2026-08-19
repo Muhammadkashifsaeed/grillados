@@ -4,10 +4,10 @@ import React from 'react';
 import Image from 'next/image';
 import { Link } from "@/i18n/routing";
 import { motion } from 'framer-motion';
-import { useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 export default function GiftCardsSection() {
-  const locale = useLocale();
+  const t = useTranslations('GiftCardsSection');
   
   return (
     <section className="relative w-full overflow-hidden bg-white">
@@ -61,17 +61,17 @@ export default function GiftCardsSection() {
           >
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text- font-extrabold text-zinc-900 font-['Outfit',sans-serif] uppercase leading-tight tracking-wide mb-6">
-              Gift Cards
+              {t('heading')}
             </h2>
 
             {/* Description */}
             <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-8 font-medium max-w-112.5">
-              Give the gift of good food to your loved ones. Grillado offers a range of gift cards for all occasions: simply choose one and treat your loved ones to the best Portuguese chicken in Canada.
+              {t('description')}
             </p>
 
             {/* Button */}
             <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="px-10 py-3 sm:py-4 bg-[#fbbc04] hover:bg-[#d72323] active:scale-95 text-black hover:text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide">
-              Contact us
+              {t('contactUs')}
             </button>
           </motion.div>
 

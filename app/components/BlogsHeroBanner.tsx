@@ -3,8 +3,10 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const BlogsHeroBanner = () => {
+  const t = useTranslations('BlogsHero');
   return (
     <section className="relative w-full h-[250px] md:h-[300px] lg:h-[350px] flex items-center justify-center overflow-hidden bg-black">
       
@@ -35,7 +37,7 @@ const BlogsHeroBanner = () => {
           className="mb-2"
         >
           <h1 className="text-white font-extrabold tracking-tight text-[36px] sm:text-[42px] md:text-[50px] lg:text-[60px] leading-none drop-shadow-lg uppercase font-['Outfit',sans-serif]">
-            Blogs
+            {t('title')}
           </h1>
         </motion.div>
 
@@ -46,7 +48,7 @@ const BlogsHeroBanner = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="text-white/90 text-base sm:text-lg md:text-xl max-w-2xl drop-shadow-md font-medium leading-relaxed"
         >
-          Read the latest trends around the world
+          {t('subtitle')}
         </motion.p>
 
       </div>

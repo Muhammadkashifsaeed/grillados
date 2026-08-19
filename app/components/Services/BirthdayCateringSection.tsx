@@ -72,7 +72,7 @@ export default function BirthdayCateringSection() {
 
             {/* Button */}
             <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="px-10 py-3 sm:py-4 bg-[#fbbc04] hover:bg-[#d72323] active:scale-95 text-black hover:text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide">
-              Contact us
+              {t('contactUs')}
             </button>
           </motion.div>
 

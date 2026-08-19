@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Search, Info } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const dealLocations = [
   {
@@ -29,6 +30,7 @@ const dealLocations = [
 ];
 
 export default function OrderPage() {
+  const t = useTranslations('OrderPage');
   return (
     <main className="flex flex-col flex-1 min-h-screen bg-gray-50 relative pt-25 pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
@@ -42,7 +44,7 @@ export default function OrderPage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0a0a0a] font-['Outfit',sans-serif] tracking-tight"
           >
-            Our Locations
+            {t('title')}
           </motion.h1>
 
           <motion.div
@@ -53,7 +55,7 @@ export default function OrderPage() {
             className="w-full max-w-150 bg-[#d72323] rounded-2xl p-6 md:p-8 shadow-xl"
           >
             <h2 className="text-white text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif]">
-              Enter your address to find the closest location
+              {t('subtitle')}
             </h2>
             <div className="relative w-full">
                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -61,7 +63,7 @@ export default function OrderPage() {
               </div>
               <input
                 type="text"
-                placeholder="Enter your address"
+                placeholder={t('searchPlaceholder')}
                 className="w-full pl-12 pr-4 py-3.5 md:py-4 bg-white text-black font-medium rounded-xl outline-none focus:ring-2 focus:ring-black/20 shadow-inner"
               />
             </div>
@@ -102,7 +104,7 @@ export default function OrderPage() {
                   rel="noopener noreferrer"
                   className="inline-block w-fit bg-[#d72323] hover:bg-[#b01c1c] text-white font-bold text-sm md:text-base uppercase tracking-wider px-8 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 text-center"
                 >
-                  Order Now
+                  {t('orderNow')}
                 </a>
               </div>
             </motion.div>

@@ -35,6 +35,7 @@ const locations = [
 ];
 
 export default function ContactUsPage() {
+  const t = useTranslations('ContactPage');
   return (
     <main className="flex flex-col flex-1 min-h-screen bg-[#0a0a0a] relative overflow-hidden">
       {/* Background Texture for the rest of the page (if any) */}
@@ -66,7 +67,7 @@ export default function ContactUsPage() {
         {/* Heading */}
         <div className="z-10 bg-[#FAC716] px-4 sm:px-6 py-2 sm:py-3 rounded-md shadow-lg border-2 border-white/20 inline-block">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white font-['Outfit',sans-serif] uppercase tracking-wide text-center drop-shadow-sm">
-            Contact Us
+            {t('title')}
           </h1>
         </div>
       </div>

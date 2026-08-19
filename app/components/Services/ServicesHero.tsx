@@ -3,8 +3,10 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export default function ServicesHero() {
+  const t = useTranslations('ServicesHero');
   return (
     <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
       
@@ -43,7 +45,7 @@ export default function ServicesHero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
             className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-tight py-3 px-6 rounded-xl bg-[#DAAF18] shadow-2xl relative z-10 font-['Outfit',sans-serif] uppercase leading-tight text-center whitespace-normal md:whitespace-nowrap"
           >
-            We cater for your<br className="block md:hidden" /> special occasions
+            {t('titlePart1')}<br className="block md:hidden" /> {t('titlePart2')}
           </motion.h1>
         </div>
 

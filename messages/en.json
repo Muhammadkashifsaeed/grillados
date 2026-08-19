@@ -30,9 +30,9 @@
     "learnMore": "Learn More"
   },
   "ChickenSpecials": {
-    "heading": "GRILLADO'S CHICKEN SPECIALS",
-    "description": "Experience the ultimate taste of our freshly crafted menu. From sizzling steaks to mouth-watering ribs, every bite is a testament to the art of grilling meeting excellence. Discover our newest additions and elevate your dining experience today!",
-    "orderNow": "Order Now",
+    "title": "GRILLADO'S CHICKEN SPECIALS",
+    "desc": "Experience the ultimate taste of our freshly crafted menu. From sizzling steaks to mouth-watering ribs, every bite is a testament to the art of grilling meeting excellence. Discover our newest additions and elevate your dining experience today!",
+    "order": "Order Now",
     "learnMore": "Learn More"
   },
   "BeefLambSpecials": {
@@ -482,7 +482,8 @@
   "DeliveryPickup": {
     "heading": "Delivery & Pick-up service",
     "description": "Your location is our limit. Contact us to learn more about our delivery and pick-up options.",
-    "contactUs": "Contact us"
+    "contactUs": "Contact us",
+    "orderNow": "Order Now"
   },
   "ServiceReviews": {
     "heading": "Reviews",
@@ -767,5 +768,59 @@
     "exploreArticles": "Explore Articles",
     "readMore": "Read More",
     "loadMore": "Load More"
+  },
+  "BlogsHero": {
+    "title": "Blogs",
+    "subtitle": "Read the latest trends around the world"
+  },
+  "CrazyLunch": {
+    "title": "Crazy Lunch Deals",
+    "subtitle": "Discover this week's incredible treats",
+    "contactUs": "Contact Us",
+    "deal1": "1/4 thigh or breast with fries or rice for",
+    "deal2": "Grilled Chicken Poutine",
+    "deal3": "Monday to Friday",
+    "deal4": "5 whole chicken wings",
+    "deal5": "Grilled chicken with Greek salad or spring salad",
+    "deal6": "Get 10% off for LA Fitness members",
+    "deal6Desc": "Grillado's offers a 10% discount to all LA Fitness members. Please present your gym membership card at the counter."
+  },
+  "ServicesHero": {
+    "titlePart1": "We cater for your",
+    "titlePart2": "special occasions"
+  },
+  "Terms": {
+    "title": "Legal Information",
+    "h1": "Grillado's canada",
+    "p1": "The following outlines the conditions governing your access to and use of the services. By accessing or using any of the services, you agree to abide by these terms of service. If you do not agree with all the terms outlined in these terms of service, you are not permitted to access or use any of the services.",
+    "h2": "Modifications",
+    "p2a": "Grillado’s reserves the right to modify these Terms of Service at any time by replacing them with updated terms. Notice of amendments will be published on its primary website at www.Grillado’s.ca for a period of 30 days. The revised terms of service will automatically become effective upon posting. Your ongoing use of the Services after the publication of the updated terms, along with the provided notice, indicates your acceptance of the modified Terms of Service. If you disagree with any of the terms in the amended Terms of Service, you must discontinue all use of the Services. These Terms of Service may not be altered otherwise.",
+    "p2b": "The initial paragraph of these Terms of Service specifies the date of the last amendment. Please revisit this section regularly to stay informed about any updates or changes.",
+    "h3": "License",
+    "p3": "You are hereby given a non-exclusive and non-transferable license to access and utilize the Services in accordance with the terms outlined in these Terms of Service.",
+    "h4": "Accessing",
+    "p4a": "To access and utilize the Services, you must adhere to the terms and conditions specified in these Terms of Service. Any unauthorized access or use will be deemed a trespass on Grillado’s computer systems, constituting an infringement of Grillado’s intellectual property and an unlawful utilization of Grillado’s assets.",
+    "p4b": "Certain sections of the Services may necessitate the use of a user ID, which could entail providing certain personal information to Grillado’s. By using the Services, you agree to (a) furnish truthful, accurate, current, and complete information about yourself as requested, and (b) promptly update this information to ensure its continued accuracy, currency, and completeness.",
+    "p4c": "Grillado’s retains the right, at its sole discretion, to suspend or terminate your present and future access and use of the Services if Grillado’s reasonably believes that your conduct or provision of information violates these Terms of Service.",
+    "p4d": "Grillado’s holds the right to observe your utilization of the Services to verify compliance with the terms outlined in these Terms of Service."
+  },
+  "GiftCardsSection": {
+    "heading": "Gift Cards",
+    "description": "Give the gift of good food to your loved ones. Grillado offers a range of gift cards for all occasions: simply choose one and treat your loved ones to the best Portuguese chicken in Canada.",
+    "contactUs": "Contact us"
+  },
+  "OrderPage": {
+    "title": "Our Locations",
+    "subtitle": "Enter your address to find the closest location",
+    "searchPlaceholder": "Enter your address",
+    "orderNow": "Order Now"
+  },
+  "ContactPage": {
+    "title": "Contact Us"
+  },
+  "SocialTree": {
+    "orderNow": "ORDER NOW",
+    "website": "WEBSITE",
+    "getInTouch": "Get in touch"
   }
 }

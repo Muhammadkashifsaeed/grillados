@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { Globe } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const FacebookIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -30,9 +31,11 @@ const GmailIcon = ({ className }: { className?: string }) => (
 );
 
 export default function SocialTreePage() {
+  const t = useTranslations('SocialTree');
+  
   const socialLinks = [
-    { label: 'ORDER NOW', url: '/order' },
-    { label: 'WEBSITE', url: '/' },
+    { label: t('orderNow'), url: '/order' },
+    { label: t('website'), url: '/' },
     { label: 'INSTAGRAM', url: 'https://www.instagram.com/grilladoscanada' },
     { label: 'TIKTOK', url: 'https://www.tiktok.com/@grilladoscanada' },
     { label: 'FACEBOOK', url: 'https://www.facebook.com/Grillados' },
