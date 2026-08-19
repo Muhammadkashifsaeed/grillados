@@ -24,18 +24,18 @@ export const MenuTwoColumn = ({
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-80px' }}
-        className={`w-full flex flex-col justify-start ${reverseOnMobile ? 'order-2 lg:order-1' : 'order-1'} pr-14 sm:pr-4 lg:pr-0`}
+        className={`w-full flex flex-col justify-start ${reverseOnMobile ? 'order-2 lg:order-1' : 'order-1'}`}
       >
         {leftContent}
       </motion.div>
 
-      {/* Right Column - Contains the required right padding for the floating button */}
+      {/* Right Column */}
       <motion.div
         initial={{ opacity: 0, x: 80 }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className={`w-full flex flex-col justify-start pr-14 sm:pr-16 md:pr-16 lg:pr-0 ${reverseOnMobile ? 'order-1 lg:order-2' : 'order-2'}`}
+        className={`w-full flex flex-col justify-start ${reverseOnMobile ? 'order-1 lg:order-2' : 'order-2'}`}
       >
         {rightContent}
       </motion.div>

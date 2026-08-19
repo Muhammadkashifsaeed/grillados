@@ -86,10 +86,10 @@ const HeroSection = () => {
           </motion.button>
           
           <motion.button 
-            whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(255,255,255,0.2)" }}
+            whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/order')}
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-lg transition-colors duration-300 shadow-lg flex-1 sm:flex-none"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-lg transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none"
           >
             <Menu className="w-4 h-4 sm:w-6 sm:h-6" />
             <span>{t('viewMenu')}</span>

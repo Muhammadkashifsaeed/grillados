@@ -101,26 +101,17 @@ export const MobileMenu = () => {
               </div>
             )}
           </div>
-          
           <div className="flex gap-4 items-center mt-2 pl-2">
-            <button onClick={() => switchLanguage('en')} className={`flex items-center gap-2 transition-opacity ${locale === 'en' ? 'scale-110 drop-shadow-[0_0_4px_rgba(247,180,28,0.8)]' : 'opacity-60 hover:opacity-100 hover:scale-110'}`}>
-              <span className="text-xl">🇬🇧</span>
+            <button onClick={() => switchLanguage('en')} className={`flex items-center justify-center transition-all duration-300 w-8 h-6 relative ${locale === 'en' ? 'scale-125 drop-shadow-[0_0_8px_rgba(247,180,28,0.6)]' : 'opacity-60 hover:opacity-100 hover:scale-110'}`}>
+              <Image src="/images/eng.png" alt="English" fill sizes="20vw" className="object-contain" />
             </button>
-            <button onClick={() => switchLanguage('fr')} className={`flex items-center gap-2 transition-opacity ${locale === 'fr' ? 'scale-110 drop-shadow-[0_0_4px_rgba(247,180,28,0.8)]' : 'opacity-60 hover:opacity-100 hover:scale-110'}`}>
-              <span className="text-xl">🇫🇷</span>
+            <button onClick={() => switchLanguage('fr')} className={`flex items-center justify-center transition-all duration-300 w-8 h-6 relative ${locale === 'fr' ? 'scale-125 drop-shadow-[0_0_8px_rgba(247,180,28,0.6)]' : 'opacity-60 hover:opacity-100 hover:scale-110'}`}>
+              <Image src="/images/fre.png" alt="Français" fill sizes="20vw" className="object-contain" />
             </button>
           </div>
         </nav>
 
-        <div className="p-5 border-t border-white/10">
-          <Link
-            href="/order"
-            className="flex items-center justify-center w-full bg-[#DAAF18] hover:bg-[#b89214] text-black font-bold py-4 rounded-xl transition-all duration-300"
-            onClick={toggleMenu}
-          >
-            {t('orderNow')}
-          </Link>
-        </div>
+
       </div>
     </div>
   );
