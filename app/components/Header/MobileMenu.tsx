@@ -61,7 +61,7 @@ export const MobileMenu = () => {
             width={120}
             height={40}
             style={{ width: "auto", height: "auto" }}
-            className="h-10 scale-110 ml-2"
+            className="h-10 scale-110 -ml-2"
           />
           <button
             onClick={toggleMenu}
