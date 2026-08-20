@@ -10,61 +10,53 @@ const PlattersSection = () => {
   const t = useTranslations('Platters');
 
   return (
-    <section className="w-full bg-gray-50 py-8 lg:py-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-y border-gray-200">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px]">
         
-        <div className="flex flex-col lg:flex-row items-stretch bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-          
-          {/* Left Column: Image */}
-          <div className="w-full lg:w-1/2 relative min-h-[300px] lg:min-h-full bg-zinc-50 flex items-center justify-center">
-            <Image 
-              src="/images/meats.webp" 
-              alt="Grillado's Platters" 
-              fill sizes="100vw"
-              className="object-cover" 
-            />
-          </div>
+        {/* Left Column: Image */}
+        <div className="w-full h-[400px] lg:h-auto relative order-1 lg:order-1">
+          <Image 
+            src="/images/meats.webp" 
+            alt="Grillado's Platters" 
+            fill sizes="100vw"
+            className="object-cover" 
+          />
+        </div>
 
-          {/* Right Column: Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-center text-center px-6 md:px-12 lg:px-16 xl:px-24 py-8 md:py-12">
+        {/* Right Column: Content */}
+        <div className="w-full flex flex-col justify-center items-center text-center order-2 lg:order-2 px-6 md:px-12 lg:px-16 xl:px-24 py-12 md:py-20 bg-gray-50">
+          
+          {/* Custom SVG Icon */}
+          <div className="flex justify-center mb-6">
+            <Image src="/images/test-1.svg" alt="Grillados Icon" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 object-contain" />
+          </div>
+          
+          {/* Centered Heading */}
+          <h2
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
+            className="mb-4"
+          >
+            {t('heading')}
+          </h2>
+          
+          {/* Paragraph */}
+          <p className="mb-8" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}>
+            {t('description')}
+          </p>
+          
+          {/* Buttons */}
+          <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
+            <Link href="/order" className="group h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+              <span>{t('orderNow')}</span>
+            </Link>
             
-            {/* Custom SVG Icon */}
-            <div className="flex justify-center mb-6">
-              <Image src="/images/test-1.svg" alt="Grillados Icon" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 object-contain" />
-            </div>
-            
-            {/* Centered Heading */}
-            <h2
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
-              className="uppercase tracking-wide mb-6"
-            >
-              {t('heading')}
-            </h2>
-            
-            {/* Centered Black Divider */}
-            <div className="w-24 h-1.5 bg-black rounded-md mb-8"></div>
-            
-            {/* Paragraph */}
-            <p className="mb-10 max-w-lg" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}>
-              {t('description')}
-            </p>
-            
-            {/* Buttons: Match previous sections (Yellow default, Red on hover) */}
-            <div className="flex flex-row gap-2 sm:gap-5 justify-center w-full">
-              <Link href="/order" className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 flex-1 sm:flex-none" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '20px', lineHeight: '20px', color: 'rgb(255,255,255)' }}>
-                <span>{t('orderNow')}</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-              
-              <Link href="/menu#platters" className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white border-transparent px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 flex-1 sm:flex-none" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '20px', lineHeight: '20px', color: 'rgb(255,255,255)' }}>
-                <Info className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="whitespace-nowrap">{t('learnMore')}</span>
-              </Link>
-            </div>
-            
+            <Link href="/menu#platters" className="group h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+              <span>{t('learnMore')}</span>
+            </Link>
           </div>
           
         </div>
+        
       </div>
     </section>
   );
