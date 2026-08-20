@@ -80,7 +80,7 @@ const CustomizedOptionsSection = () => {
 
           {/* Buttons */}
           <motion.div
-            className="flex flex-col md:flex-row gap-4 w-full"
+            className="flex flex-row gap-3 sm:gap-4 w-full justify-start"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -89,16 +89,16 @@ const CustomizedOptionsSection = () => {
             {/* Button 1 */}
             <Link 
               href="/order" 
-              className="h-[52px] px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md w-full md:w-auto inline-flex items-center justify-center"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px' }}
+              className="h-[48px] sm:h-[52px] px-2 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }}
             >
               {t('orderNow')}
             </Link>
 
             {/* Button 2 */}
             <button 
-              className="h-[52px] px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md w-full md:w-auto"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px' }}
+              className="h-[48px] sm:h-[52px] px-2 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }}
             >
               {t('learnMore')}
             </button>
