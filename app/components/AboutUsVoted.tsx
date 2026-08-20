@@ -28,8 +28,8 @@ const AboutUsVoted = () => {
         </p>
 
         <h2 
-          className="font-semibold uppercase tracking-wide mb-3 drop-shadow-md whitespace-nowrap"
-          style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)', fontSize: '28px', lineHeight: '36px' }}
+          className="font-semibold uppercase tracking-wide mb-3 drop-shadow-md whitespace-normal sm:whitespace-nowrap text-xl sm:text-[28px] leading-snug sm:leading-[36px] break-words text-center"
+          style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)' }}
         >
           {t('votedText2')}
         </h2>

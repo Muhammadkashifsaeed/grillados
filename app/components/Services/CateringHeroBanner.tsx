@@ -38,10 +38,10 @@ const CateringHeroBanner = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-[30px]"
         >
-          <div className="bg-[#EB5250] rounded-lg py-3 px-6 md:px-8 inline-block shadow-lg">
+          <div className="bg-[#EB5250] rounded-lg py-3 px-4 sm:px-6 md:px-8 inline-block shadow-lg max-w-[90vw] md:max-w-none">
             <h1 
-              className="tracking-tight"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '55px', lineHeight: '69px', color: 'rgb(255, 255, 255)' }}
+              className="tracking-tight text-3xl sm:text-4xl md:text-[55px] leading-snug md:leading-[69px] whitespace-normal sm:whitespace-nowrap break-words"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255, 255, 255)' }}
             >
               {t('heading')}
             </h1>

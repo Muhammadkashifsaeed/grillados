@@ -46,15 +46,15 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30, scale: 0.9, rotate: -2 }}
           animate={{ opacity: 1, y: 0, scale: 1, rotate: -2 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="mb-8 relative inline-block"
+          className="mb-8 relative inline-block mx-4 sm:mx-0 max-w-[90vw] sm:max-w-none"
         >
           <div 
             className="absolute inset-0 bg-[#DAAF18] rounded-xl z-[-1] shadow-2xl"
           ></div>
           
           <h1
-            className="text-white py-3 px-4 sm:px-5 relative z-10 whitespace-nowrap"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '55px', lineHeight: '70px', color: 'rgb(255,255,255)' }}
+            className="text-white py-3 px-3 sm:px-5 relative z-10 text-center whitespace-normal sm:whitespace-nowrap text-3xl sm:text-4xl md:text-[55px] leading-snug md:leading-[70px] break-words"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255,255,255)' }}
           >
             {t('welcome')}
           </h1>
@@ -64,8 +64,8 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-          className="mb-10 max-w-4xl drop-shadow-md w-full"
-          style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(255,255,255)' }}
+          className="mb-10 max-w-4xl drop-shadow-md w-full px-4 text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[30px]"
+          style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, color: 'rgb(255,255,255)' }}
         >
           {t('subtitle')}
         </motion.p>
@@ -75,28 +75,28 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
-          className="flex flex-row gap-2 sm:gap-5 w-full sm:w-auto justify-center"
+          className="flex flex-row gap-3 sm:gap-5 w-full px-4 sm:px-0 sm:w-auto justify-center"
         >
           <motion.button 
             whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/order')}
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '20px', lineHeight: '20px', color: 'rgb(255,255,255)' }}
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-3 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none text-[15px] sm:text-[20px]"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
-            <span>{t('orderNow')}</span>
-            <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
+            <span className="whitespace-nowrap">{t('orderNow')}</span>
+            <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform shrink-0" />
           </motion.button>
           
           <motion.button 
             whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/order')}
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '20px', lineHeight: '20px', color: 'rgb(255,255,255)' }}
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-3 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none text-[15px] sm:text-[20px]"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
-            <Menu className="w-4 h-4 sm:w-6 sm:h-6" />
-            <span>{t('viewMenu')}</span>
+            <Menu className="w-4 h-4 sm:w-6 sm:h-6 shrink-0" />
+            <span className="whitespace-nowrap">{t('viewMenu')}</span>
           </motion.button>
         </motion.div>
 
