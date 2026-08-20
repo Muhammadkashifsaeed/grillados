@@ -6,6 +6,7 @@ import ChickenSpecialsSection from '../components/ChickenSpecialsSection';
 import BeefLambSpecialsSection from '../components/BeefLambSpecialsSection';
 import PlattersSection from '../components/PlattersSection';
 import SandwichesSection from '../components/SandwichesSection';
+import HomePromoSections from '../components/HomePromoSections';
 import CateringPartnersSection from '../components/CateringPartnersSection';
 import ReviewsSection from '../components/ReviewsSection';
 import BlogsSection from '../components/BlogsSection';
@@ -24,6 +25,7 @@ export default function Home() {
       <BeefLambSpecialsSection />
       <PlattersSection />
       <SandwichesSection />
+      <HomePromoSections />
       <CateringPartnersSection />
       <ReviewsSection />
       

@@ -1,0 +1,162 @@
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Link } from '@/i18n/routing';
+
+const HomePromoSections = () => {
+  return (
+    <section className="w-full bg-white overflow-hidden flex flex-col gap-0">
+      
+      {/* First Promo Container */}
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[500px]">
+        
+        {/* Left Side - Image */}
+        <motion.div
+          className="w-full h-[400px] md:h-auto relative order-1 md:order-1"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+        >
+          <Image
+            src="/images/1350278.webp"
+            alt="Catering Partner"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </motion.div>
+
+        {/* Right Side - Content */}
+        <div className="w-full flex flex-col justify-center order-2 md:order-2 px-6 md:px-12 lg:px-20 py-12 md:py-20 bg-gray-50">
+          
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="mb-6 relative w-16 h-16">
+              <Image 
+                src="/images/test-1.svg" 
+                alt="Test Icon" 
+                fill 
+                className="object-contain"
+              />
+            </div>
+            
+            <h2 
+              className="mb-4"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
+            >
+              Les partenaires traiteurs de Grillado's
+            </h2>
+            
+            <p 
+              className="mb-8"
+              style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
+            >
+              Les plateaux de Grillado’s présentent une sélection magnifiquement arrangée de viandes grillées. Idéals pour les repas conviviaux ou copieux, ces plateaux mettent en valeur tout notre savoir-faire du grill.
+            </p>
+
+            <div className="flex flex-row gap-3 sm:gap-4 w-full justify-start">
+              <Link 
+                href="/order" 
+                className="h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
+              >
+                Order Now
+              </Link>
+              <button 
+                className="h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
+              >
+                Learn More
+              </button>
+            </div>
+          </motion.div>
+        </div>
+
+
+      </div>
+
+      {/* Second Promo Container */}
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[500px]">
+        
+        {/* Left Side - Content */}
+        <div className="w-full flex flex-col justify-center order-2 md:order-1 px-6 md:px-12 lg:px-20 py-12 md:py-20 bg-gray-50 border-t border-gray-200">
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="mb-6 relative w-16 h-16">
+              <Image 
+                src="/images/test-1.svg" 
+                alt="Test Icon" 
+                fill 
+                className="object-contain"
+              />
+            </div>
+            
+            <h2 
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
+            >
+              GRILLADO'S Application
+            </h2>
+            
+            {/* Divider */}
+            <div className="w-16 h-[4px] bg-black rounded-full mt-4 mb-6"></div>
+            
+            <p 
+              className="mb-8"
+              style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
+            >
+              Grillado’s est une application mobile pratique et conviviale, conçue pour améliorer l’expérience culinaire des clients de Grillado’s, un restaurant réputé proposant une variété de plats grillés savoureux. Disponible en téléchargement, l’application Grillado’s permet aux utilisateurs de parcourir facilement le menu, de passer des commandes à emporter ou en livraison, et de profiter d’options de paiement fluides — le tout depuis le confort de leur smartphone.
+            </p>
+
+            <div className="flex flex-row gap-3 sm:gap-4 w-full justify-start">
+              <Link 
+                href="/order" 
+                className="h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
+              >
+                Order Now
+              </Link>
+              <button 
+                className="h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
+              >
+                Learn More
+              </button>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Right Side - Image */}
+        <motion.div
+          className="w-full h-[400px] md:h-auto relative order-1 md:order-2"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+        >
+          <Image
+            src="/images/mobile-post.webp"
+            alt="Mobile App"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </motion.div>
+      </div>
+
+    </section>
+  );
+};
+
+export default HomePromoSections;
