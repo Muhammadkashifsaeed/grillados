@@ -81,22 +81,7 @@ const HomePromoSections = () => {
           </motion.div>
         </div>
 
-        {/* Right Side - Image */}
-        <motion.div
-          className="w-full h-[400px] md:h-auto relative order-1 md:order-2"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-        >
-          <Image
-            src="/images/1350278.webp"
-            alt="Catering Partner"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </motion.div>
+
       </div>
 
       {/* Second Promo Container */}
