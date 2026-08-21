@@ -62,9 +62,12 @@ const NewDishesSection = () => {
         ></div>
 
         {/* Carousel Gallery */}
-        <div className="relative w-full group">
+        <div className="relative w-full group py-4">
           
-          <div className="overflow-hidden relative">
+          {/* Static Center Divider for Desktop */}
+          <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[4px] bg-white z-20 -translate-x-1/2 shadow-[0_0_15px_rgba(0,0,0,0.15)] rounded-full"></div>
+
+          <div className="overflow-hidden relative z-10">
             <div 
               className="flex transition-transform duration-500 ease-in-out w-full"
               style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
