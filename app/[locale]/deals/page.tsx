@@ -37,21 +37,19 @@ export default function DealsPage() {
   }, [emblaApi]);
 
   return (
-    <>
-      <main className="flex flex-col flex-1 w-full bg-[#0a0a0a] relative overflow-hidden">
-        
-        {/* Background Texture */}
-        <div 
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            backgroundImage: "url('/images/Black-Background.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'repeat'
-          }}
-        ></div>
+    <main 
+      className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-[#0a0a0a]"
+      style={{
+        backgroundImage: "url('/images/Blackksss.png')",
+        backgroundSize: '120% auto',
+        backgroundPosition: 'top center',
+        backgroundRepeat: 'repeat-y',
+      }}
+    >
+      {/* Light overlay */}
+      <div className="absolute inset-0 bg-black/40 z-0 pointer-events-none"></div>
 
-        <div className="relative z-10 w-full flex flex-col items-center group">
+      <div className="relative z-10 w-full flex flex-col items-center group">
           
           {/* Embla Carousel Container */}
           <div 
@@ -110,13 +108,15 @@ export default function DealsPage() {
             ))}
           </div>
         </div>
-      </main>
-
       {/* New Crazy Lunch Deals Section */}
-      <CrazyLunchDeals />
+      <div className="relative z-10">
+        <CrazyLunchDeals />
+      </div>
       
       {/* Newsletter Section */}
-      <NewsletterSection />
-    </>
+      <div className="relative z-10">
+        <NewsletterSection />
+      </div>
+    </main>
   );
 }

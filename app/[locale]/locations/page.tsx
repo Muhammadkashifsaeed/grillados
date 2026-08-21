@@ -42,17 +42,17 @@ export default function LocationsPage() {
   const displayLocations = locale === 'en' ? [...locations].reverse() : locations;
 
   return (
-    <main className="flex flex-col flex-1 min-h-screen bg-[#0a0a0a] relative overflow-hidden pb-12">
-      {/* Background Texture for the rest of the page */}
-      <div 
-        className="absolute inset-0 z-0 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/Black-Background.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
+    <main 
+      className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-[#0a0a0a]"
+      style={{
+        backgroundImage: "url('/images/Blackksss.png')",
+        backgroundSize: '120% auto',
+        backgroundPosition: 'top center',
+        backgroundRepeat: 'repeat-y',
+      }}
+    >
+      {/* Light overlay */}
+      <div className="absolute inset-0 bg-black/40 z-0 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-24 pt-16">
         
