@@ -12,7 +12,7 @@ const HeroSection = () => {
   const router = useRouter();
 
   return (
-    <section className="relative w-full h-[85vh] min-h-150 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
+    <section className="relative w-full h-[65vh] min-h-[450px] md:min-h-[550px] flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
       
       {/* Background Image with Cinematic Zoom and floating */}
       <motion.div 
@@ -25,7 +25,7 @@ const HeroSection = () => {
         }}
       >
         <Image 
-          src="/images/hero-bg-new.png" 
+          src="/images/website-main-banner2.webp" 
           alt="Grillado's Premium Grilled Chicken and Portuguese Food" 
           fill 
           priority
