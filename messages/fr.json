@@ -25,13 +25,13 @@
   },
   "NewDishes": {
     "heading": "Les Nouveaux Plats Grillados",
-    "description": "Découvrez le goût ultime de notre menu fraîchement préparé. Des steaks grésillants aux côtes levées appétissantes, chaque bouchée est un témoignage de l'art de la grillade rencontrant l'excellence. Découvrez nos nouveautés et élevez votre expérience culinaire dès aujourd'hui !",
+    "description": "Ces plats apportent une nouvelle excitation chez Grillado’s, chacun offrant un mélange de saveurs inoubliable qui rendra chaque visite vraiment spéciale.",
     "orderNow": "Commander",
     "learnMore": "En savoir plus"
   },
   "ChickenSpecials": {
-    "title": "SPÉCIALITÉS DE POULET GRILLADO'S",
-    "desc": "Découvrez le goût ultime de notre menu fraîchement préparé. Des steaks grésillants aux côtes levées alléchantes, chaque bouchée est un témoignage de l'art de la grillade à son meilleur. Découvrez nos nouveautés et améliorez votre expérience culinaire dès aujourd'hui!",
+    "title": "Les spécialités de poulet de Grillado's",
+    "desc": "Les plats spéciaux de Grillado’s mettent en avant une sélection unique de recettes de poulet grillé qui révèlent des saveurs audacieuses et des ingrédients frais. Chaque spécialité propose une combinaison soigneusement élaborée de poulet mariné, de viandes et de légumes de saison, grillés à la perfection.",
     "order": "Commander",
     "learnMore": "En Savoir Plus"
   },
@@ -43,13 +43,13 @@
   },
   "Sandwiches": {
     "heading": "SANDWICHES / PITAS / WRAPS GRILLADO'S",
-    "description": "Les Sandwiches, Pitas et Wraps de Grillado's offrent une délicieuse variété de viandes fraîchement grillées enveloppées dans du pain chaud et moelleux. Remplie de légumes frais et de sauces signatures, chaque option offre un équilibre parfait entre saveurs audacieuses et textures satisfaisantes pour un repas rapide et appétissant.",
+    "description": "Nos sandwiches, pitas et wraps offrent une délicieuse variété de saveurs et de textures, parfaites pour un repas ou une collation. Chaque option met en avant des ingrédients frais et de haute qualité, allant des viandes tendres et légumes croquants aux sauces relevées et tartinades savoureuses.",
     "orderNow": "Commander",
     "learnMore": "En savoir plus"
   },
   "Platters": {
-    "heading": "PLATEAUX GRILLADO'S",
-    "description": "Les Plateaux Grillado's offrent un festin généreux et satisfaisant avec une combinaison parfaite de viandes savamment grillées, d'accompagnements vibrants et de sauces savoureuses. Que vous ayez envie de poulet tendre, de bœuf succulent ou d'agneau copieux, chaque plateau est conçu pour offrir des saveurs audacieuses et inoubliables à chaque bouchée.",
+    "heading": "Les plateaux de Grillado's",
+    "description": "Les plateaux de Grillado’s présentent une sélection magnifiquement arrangée de viandes grillées. Idéals pour les repas conviviaux ou copieux, ces plateaux mettent en valeur tout notre savoir-faire du grill.",
     "orderNow": "Commander",
     "learnMore": "En savoir plus"
   },

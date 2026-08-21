@@ -25,13 +25,13 @@
   },
   "NewDishes": {
     "heading": "The New Grillados Dishes",
-    "description": "These dishes bring new excitement to Grillados, each one offering an unforgettable blend of flavors that will make every visit something special.",
+    "description": "These dishes bring a new excitement to Grillado’s, each offering an unforgettable blend of flavors that will make every visit truly special.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
   "ChickenSpecials": {
-    "title": "GRILLADO'S CHICKEN SPECIALS",
-    "desc": "Grillado's Specials highlight a unique selection of grilled chicken dishes that showcase bold flavors and fresh ingredients. Each special features a carefully curated combination of marinated chicken, meats, and seasonal vegetables, expertly grilled to perfection.",
+    "title": "Grillado's Chicken Specials",
+    "desc": "Grillado’s special dishes feature a unique selection of grilled chicken recipes that reveal bold flavors and fresh ingredients. Each specialty offers a carefully crafted combination of marinated chicken, meats, and seasonal vegetables, grilled to perfection.",
     "order": "Order Now",
     "learnMore": "Learn More"
   },
@@ -43,13 +43,13 @@
   },
   "Sandwiches": {
     "heading": "SANDWICHES / PITAS / WRAPS",
-    "description": "Our Sandwiches, Pitas, and Wraps offer a delightful variety of flavors and textures, perfect for any meal or snack. Each option features fresh, high-quality ingredients, from tender meats and vibrant veggies to zesty sauces and flavorful spreads.",
+    "description": "Our sandwiches, pitas, and wraps offer a delicious variety of flavors and textures, perfect for a meal or a snack. Each option features fresh, high-quality ingredients, ranging from tender meats and crisp vegetables to spicy sauces and savory spreads.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
   "Platters": {
-    "heading": "GRILLADO'S PLATTERS",
-    "description": "Grillado's Platters features a beautifully arranged selection of grilled meats. Ideal for gatherings or a hearty meal, these platters showcase the best of our grilling expertise.",
+    "heading": "Grillado's Platters",
+    "description": "Grillado’s platters present a beautifully arranged selection of grilled meats. Ideal for friendly or hearty meals, these platters highlight all our grilling expertise.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
