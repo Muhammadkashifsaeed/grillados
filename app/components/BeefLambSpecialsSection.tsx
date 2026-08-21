@@ -11,7 +11,7 @@ const BeefLambSpecialsSection = () => {
 
   return (
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-y border-gray-200">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px]">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] lg:min-h-[650px]">
         
         {/* Left Column: Content */}
         <div className="w-full flex flex-col justify-center items-center text-center order-2 lg:order-1 px-6 md:px-12 lg:px-16 xl:px-24 py-12 md:py-20 bg-gray-50">

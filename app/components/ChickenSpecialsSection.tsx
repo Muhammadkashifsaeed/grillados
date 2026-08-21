@@ -11,7 +11,7 @@ const ChickenSpecialsSection = () => {
   const t = useTranslations('ChickenSpecials');
   return (
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-y border-gray-200">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px]">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] lg:min-h-[650px]">
         
         {/* Left Column: Image */}
         <div className="w-full h-[400px] lg:h-auto relative order-1 lg:order-1">
