@@ -45,18 +45,8 @@ export const PlateauxMenuSection = () => {
     { name: rawItems[4].name, price: '159.99', note: rawItems[4].note },
   ];
   return (
-    <section id="plateaux" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
-      {/* Background texture */}
-      <div
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/footer-doodle.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat',
-        }}
-      />
-      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" />
+    <section id="plateaux" className="relative w-full py-4 lg:py-8 bg-transparent">
+
 
       <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8 flex flex-col lg:flex-col gap-4 md:gap-10 lg:gap-14">
 
@@ -104,7 +94,7 @@ export const PlateauxMenuSection = () => {
 
                   {/* Note — bright red, uppercase */}
                   {item.note && (
-                    <p 
+                    <p
                       className="uppercase mt-0.5 tracking-widest leading-relaxed"
                       style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
                     >
@@ -151,3 +141,5 @@ export const PlateauxMenuSection = () => {
 };
 
 export default PlateauxMenuSection;
+
+

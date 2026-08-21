@@ -31,18 +31,8 @@ export const AccompagnementsMenuSection = () => {
     { name: rawSides[7].name, price: '5.99' },
   ];
   return (
-    <section id="accompagnements" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
-      {/* Background with subtle food outline pattern */}
-      <div
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/footer-doodle.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
+    <section id="accompagnements" className="relative w-full py-4 lg:py-8 bg-transparent">
+
 
       <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
@@ -77,7 +67,7 @@ export const AccompagnementsMenuSection = () => {
                 priority
               />
               {/* Fade on the right edge (desktop) */}
-              <div className="absolute inset-y-0 right-0 w-24 md:w-32 lg:w-48 bg-linear-to-l from-[#0a0a0a] to-transparent pointer-events-none hidden lg:block"></div>
+              <div className="absolute inset-y-0 right-0 w-24 md:w-32 lg:w-48 bg-linear-to-l from-transparent to-transparent pointer-events-none hidden lg:block"></div>
             </div>
           </motion.div>
 
@@ -90,7 +80,7 @@ export const AccompagnementsMenuSection = () => {
             className="w-full flex flex-col justify-center"
           >
             <motion.div variants={fadeRightItem} className="mb-6 lg:mb-10">
-              <h2 
+              <h2
                 className="uppercase tracking-wide drop-shadow-sm mb-4"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
               >
@@ -139,3 +129,5 @@ export const AccompagnementsMenuSection = () => {
 };
 
 export default AccompagnementsMenuSection;
+
+

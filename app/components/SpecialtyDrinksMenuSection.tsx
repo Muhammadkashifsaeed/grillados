@@ -27,18 +27,8 @@ export const SpecialtyDrinksMenuSection = () => {
   const t = useTranslations('SpecialtyDrinks');
 
   return (
-    <section className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
-      {/* Background with subtle food outline pattern */}
-      <div
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/footer-doodle.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
+    <section className="relative w-full py-4 lg:py-8 bg-transparent">
+
 
       <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8">
 
@@ -61,7 +51,7 @@ export const SpecialtyDrinksMenuSection = () => {
             className="w-full flex flex-col justify-start"
           >
             <motion.div variants={fadeLeftItem} className="mb-4 lg:mb-10 flex flex-col items-start">
-              <h2 
+              <h2
                 className="uppercase tracking-wide drop-shadow-sm mb-4"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
               >
@@ -134,3 +124,5 @@ export const SpecialtyDrinksMenuSection = () => {
 };
 
 export default SpecialtyDrinksMenuSection;
+
+

@@ -15,18 +15,8 @@ export const SandwichSaladMenuSection = () => {
     { name: rawSalads[2].name, price: '7.99' }
   ];
   return (
-    <section id="sandwich-salad" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
-      {/* Background with subtle food outline pattern */}
-      <div
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/footer-doodle.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
+    <section id="sandwich-salad" className="relative w-full py-4 lg:py-8 bg-transparent">
+
 
       <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
@@ -41,7 +31,7 @@ export const SandwichSaladMenuSection = () => {
           >
             {/* CATEGORY 1: {t('sandwichWrapsPita')} */}
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
-              <h2 
+              <h2
                 className="uppercase tracking-wide drop-shadow-sm mb-4"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
               >
@@ -84,7 +74,7 @@ export const SandwichSaladMenuSection = () => {
 
             {/* CATEGORY 2: SALADS */}
             <motion.div variants={fadeLeftItem} className="mb-4 lg:mb-8">
-              <h2 
+              <h2
                 className="uppercase tracking-wide drop-shadow-sm mb-4"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
               >
@@ -107,7 +97,7 @@ export const SandwichSaladMenuSection = () => {
 
               {/* Additional Options */}
               <motion.div variants={fadeLeftItem} className="mt-8 flex flex-col w-full pt-4 border-t border-white/10">
-                <p 
+                <p
                   className="uppercase tracking-wider mb-1"
                   style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '26px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
                 >
@@ -159,3 +149,5 @@ export const SandwichSaladMenuSection = () => {
 };
 
 export default SandwichSaladMenuSection;
+
+

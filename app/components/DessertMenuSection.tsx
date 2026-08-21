@@ -106,7 +106,7 @@ export const DessertMenuSection = () => {
       </div>
 
       {/* ROW 3: b-1 and c-1 Images */}
-      <div className="hidden md:block">
+      <div className="hidden md:block pb-24">
         <MenuDualImage
           leftImageSrc="/images/b-1.png"
           rightImageSrc="/images/c-1.png"
@@ -114,7 +114,7 @@ export const DessertMenuSection = () => {
       </div>
 
       {/* Custom Mobile Diagonal Split for mobile18 & 19 */}
-      <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-4 mb-2">
+      <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-4 mb-16">
         {/* Left Image */}
         <div
           className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
@@ -148,3 +148,5 @@ export const DessertMenuSection = () => {
 };
 
 export default DessertMenuSection;
+
+

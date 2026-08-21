@@ -71,18 +71,8 @@ export const ChickenSpecialsMenuSection = () => {
     { name: rawItems[8].name, price: '39.99', note: rawItems[8].note },
   ];
   return (
-    <section id="chicken-specials" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
-      {/* Background texture */}
-      <div
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/footer-doodle.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat',
-        }}
-      />
-      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" />
+    <section id="chicken-specials" className="relative w-full py-4 lg:py-8 bg-transparent">
+
 
       <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
 
@@ -111,7 +101,7 @@ export const ChickenSpecialsMenuSection = () => {
             className="w-full flex flex-col justify-start"
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
-              <h2 
+              <h2
                 className="uppercase tracking-wide drop-shadow-sm mb-4"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
               >
@@ -141,7 +131,7 @@ export const ChickenSpecialsMenuSection = () => {
                     </p>
                   )}
                   {item.note && (
-                    <p 
+                    <p
                       className="uppercase mt-0.5 tracking-widest"
                       style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
                     >
@@ -194,3 +184,5 @@ export const ChickenSpecialsMenuSection = () => {
 };
 
 export default ChickenSpecialsMenuSection;
+
+

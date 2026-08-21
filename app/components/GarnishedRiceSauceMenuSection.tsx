@@ -103,13 +103,13 @@ export const GarnishedRiceSauceMenuSection = () => {
                     className="flex flex-col w-full"
                   >
                     <div className="flex items-center gap-4 md:gap-8">
-                      <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 shrink-0 bg-white/5 rounded-3xl flex items-center justify-center p-4 md:p-6 shadow-xl">
+                      <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 shrink-0 flex items-center justify-center">
                         <Image
                           src={item.image}
                           alt={item.name}
                           width={200}
                           height={200}
-                          className="w-full h-full object-contain drop-shadow-xl scale-125"
+                          className="w-full h-full object-contain drop-shadow-2xl scale-150"
                         />
                       </div>
                       <div className="flex flex-col justify-center flex-1">
@@ -165,3 +165,5 @@ export const GarnishedRiceSauceMenuSection = () => {
 };
 
 export default GarnishedRiceSauceMenuSection;
+
+

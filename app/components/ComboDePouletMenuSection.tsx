@@ -29,18 +29,8 @@ export const ComboDePouletMenuSection = () => {
     { name: rawItems[6].name, price: '21.99' },
   ];
   return (
-    <section id="combos" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
-      {/* Background with subtle food outline pattern */}
-      <div
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/footer-doodle.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
+    <section id="combos" className="relative w-full py-4 lg:py-8 bg-transparent">
+
 
       <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
@@ -54,7 +44,7 @@ export const ComboDePouletMenuSection = () => {
             className="w-full flex flex-col justify-start"
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
-              <h2 
+              <h2
                 className="uppercase tracking-wide drop-shadow-sm mb-4"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
               >
@@ -82,7 +72,7 @@ export const ComboDePouletMenuSection = () => {
                     </span>
                   </div>
                   {item.note && (
-                    <p 
+                    <p
                       className="uppercase mt-1 tracking-widest leading-relaxed"
                       style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
                     >
@@ -94,7 +84,7 @@ export const ComboDePouletMenuSection = () => {
 
               {/* Bottom Note */}
               <motion.div variants={fadeLeftItem} className="mt-6 md:mt-10 w-full pt-4 border-t border-white/10">
-                <p 
+                <p
                   className="uppercase tracking-widest"
                   style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '26px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
                 >
@@ -134,9 +124,9 @@ export const ComboDePouletMenuSection = () => {
                 priority
               />
               {/* Fade on the left edge (desktop) */}
-              <div className="absolute inset-y-0 left-0 w-24 md:w-32 lg:w-48 bg-linear-to-r from-[#0a0a0a] to-transparent pointer-events-none hidden lg:block"></div>
+              <div className="absolute inset-y-0 left-0 w-24 md:w-32 lg:w-48 bg-linear-to-r from-transparent to-transparent pointer-events-none hidden lg:block"></div>
               {/* Top fade for mobile */}
-              <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#0a0a0a] to-transparent pointer-events-none lg:hidden"></div>
+              <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-transparent to-transparent pointer-events-none lg:hidden"></div>
             </div>
           </motion.div>
 
@@ -147,3 +137,5 @@ export const ComboDePouletMenuSection = () => {
 };
 
 export default ComboDePouletMenuSection;
+
+

@@ -52,23 +52,13 @@ export const BeefLambSpecialsMenuSection = () => {
     { name: rawItems[5].name, price: '34.99', note: rawItems[5].note },
   ];
   return (
-    <section id="beef-lamb-specials" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
-      {/* Background texture */}
-      <div
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/footer-doodle.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat',
-        }}
-      />
-      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" />
+    <section id="beef-lamb-specials" className="relative w-full py-4 lg:py-8 bg-transparent">
+
 
       <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
 
         <div className="hidden md:block">
-          <MenuDualImage 
+          <MenuDualImage
             leftImageSrc="/images/Order.png"
             rightImageSrc="/images/Order1.png"
           />
@@ -77,7 +67,7 @@ export const BeefLambSpecialsMenuSection = () => {
         {/* Custom Mobile Diagonal Split for mobile5 & 6 */}
         <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-4 mb-2">
           {/* Left Image */}
-          <div 
+          <div
             className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
             style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
           >
@@ -91,7 +81,7 @@ export const BeefLambSpecialsMenuSection = () => {
           </div>
 
           {/* Right Image */}
-          <div 
+          <div
             className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
             style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
           >
@@ -150,7 +140,7 @@ export const BeefLambSpecialsMenuSection = () => {
 
                   {/* Note — red, uppercase, small */}
                   {item.note && (
-                    <p 
+                    <p
                       className="uppercase mt-0.5 tracking-widest"
                       style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
                     >
@@ -201,11 +191,11 @@ export const BeefLambSpecialsMenuSection = () => {
                   priority
                 />
               </div>
-              
+
               {/* Bottom Images: Mobile 8 & 9 with VIP diagonal split */}
               <div className="relative w-full aspect-[4/3] drop-shadow-2xl">
                 {/* Left Image (8) */}
-                <div 
+                <div
                   className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
                   style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
                 >
@@ -219,7 +209,7 @@ export const BeefLambSpecialsMenuSection = () => {
                 </div>
 
                 {/* Right Image (9) */}
-                <div 
+                <div
                   className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
                   style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
                 >
@@ -239,7 +229,7 @@ export const BeefLambSpecialsMenuSection = () => {
 
         {/* ZONE 3: Centered previous1.png and previous2.png images */}
         <div className="hidden md:block">
-          <MenuDualImage 
+          <MenuDualImage
             leftImageSrc="/images/previous1.png"
             rightImageSrc="/images/previous2.png"
           />
@@ -251,3 +241,5 @@ export const BeefLambSpecialsMenuSection = () => {
 };
 
 export default BeefLambSpecialsMenuSection;
+
+

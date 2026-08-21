@@ -34,21 +34,8 @@ export const AppetizersMenuSection = () => {
     { name: rawItems[8].name, price: '19.99', note: rawItems[8].note },
   ];
   return (
-    <section id="appetizers" className="relative w-full py-4 lg:py-8 bg-[#0a0a0a]">
-      {/* 
-        Background with subtle food outline pattern. 
-        Update the URL if you have a specific pattern image.
-      */}
-      <div
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: "url('/images/footer-doodle.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
+    <section id="appetizers" className="relative w-full py-4 lg:py-8 bg-transparent">
+
 
       <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
@@ -176,3 +163,5 @@ export const AppetizersMenuSection = () => {
 };
 
 export default AppetizersMenuSection;
+
+
