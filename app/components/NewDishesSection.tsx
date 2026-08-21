@@ -64,9 +64,6 @@ const NewDishesSection = () => {
         {/* Carousel Gallery */}
         <div className="relative w-full group py-4">
           
-          {/* Static Center Divider for Desktop */}
-          <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[4px] bg-white z-20 -translate-x-1/2 shadow-[0_0_15px_rgba(0,0,0,0.15)] rounded-full"></div>
-
           <div className="overflow-hidden relative z-10">
             <div 
               className="flex transition-transform duration-500 ease-in-out w-full"
@@ -75,7 +72,7 @@ const NewDishesSection = () => {
               {images.map((image, idx) => (
                 <div 
                   key={idx} 
-                  className="shrink-0 relative flex items-center justify-center"
+                  className="shrink-0 relative flex items-center justify-center border-r-[4px] border-white"
                   style={{ width: `${100 / itemsPerView}%` }}
                 >
                   <Image 
