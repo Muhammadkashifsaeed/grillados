@@ -32,8 +32,8 @@ const HeroSection = () => {
         />
       </motion.div>
 
-      {/* Dark Overlay with subtle gradient for depth */}
-      <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/60 to-black/80 z-10 pointer-events-none"></div>
+      {/* Very light overlay just to ensure text readability without darkening the image too much */}
+      <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none"></div>
 
       {/* Center Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto">
