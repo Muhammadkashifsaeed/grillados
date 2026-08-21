@@ -46,7 +46,7 @@ const NewDishesSection = () => {
 
   return (
     <section className="w-full pt-12 md:pt-16 pb-4 md:pb-8 bg-gray-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Heading */}
         <h2
