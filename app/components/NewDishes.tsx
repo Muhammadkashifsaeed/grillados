@@ -11,65 +11,60 @@ const NewDishes = () => {
   const videoId = "QpcvfWCcBVY"; // Original video
 
   return (
-    <section className="w-full bg-gray-50 py-8 lg:py-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-
-        <div className="flex flex-col lg:flex-row items-center bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-
-          {/* Left Column: YouTube Video */}
-          <div className="w-full lg:w-1/2 relative overflow-hidden aspect-video shrink-0 bg-zinc-900 self-end">
-            {/* 16:9 Aspect Ratio container prevents black bars, full 100% width/height shows everything clearly */}
-            <div className="absolute inset-0 w-full h-full pointer-events-none">
-              <iframe
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&controls=0&playlist=${videoId}&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3`}
-                title="Grillados New Dishes"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                className="w-full h-full"
-                style={{ border: 'none' }}
-              ></iframe>
-            </div>
+    <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-t border-gray-200">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] lg:min-h-[650px]">
+        
+        {/* Left Column: YouTube Video */}
+        <div className="w-full relative overflow-hidden h-[400px] lg:h-auto bg-zinc-900 order-1">
+          {/* 16:9 Aspect Ratio container prevents black bars, full 100% width/height shows everything clearly */}
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&controls=0&playlist=${videoId}&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3`}
+              title="Grillados New Dishes"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              className="w-full h-full"
+              style={{ border: 'none' }}
+            ></iframe>
           </div>
-
-          {/* Right Column: Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-center text-center px-6 md:px-12 lg:px-16 xl:px-24 py-4 md:py-6">
-
-            {/* Custom SVG Icon */}
-            <div className="mb-4 flex justify-center">
-              <Image src="/images/test-1.svg" alt="Grillados Icon" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 object-contain" />
-            </div>
-
-            {/* Heading */}
-            <h2
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
-              className="uppercase tracking-wide mb-6"
-            >
-              {t('heading')}
-            </h2>
-
-            {/* Divider Centered */}
-            <div className="w-24 h-1.5 bg-black rounded-md mb-8"></div>
-
-            {/* Description */}
-            <p className="mb-10 max-w-lg" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}>
-              {t('description')}
-            </p>
-
-            {/* Buttons: Yellow default, Red on hover */}
-            <div className="flex flex-row gap-2 sm:gap-5 justify-center w-full">
-              <Link href="/order" className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 flex-1 sm:flex-none" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '20px', lineHeight: '20px', color: 'rgb(255,255,255)' }}>
-                <span>{t('orderNow')}</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-
-              <Link href="/menu" className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white border-transparent px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 flex-1 sm:flex-none" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '20px', lineHeight: '20px', color: 'rgb(255,255,255)' }}>
-                <Info className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="whitespace-nowrap">{t('learnMore')}</span>
-              </Link>
-            </div>
-
-          </div>
-
         </div>
+
+        {/* Right Column: Content */}
+        <div className="w-full flex flex-col justify-center items-center text-center px-6 md:px-12 lg:px-16 xl:px-24 py-12 md:py-20 bg-gray-50 order-2">
+          
+          {/* Custom SVG Icon */}
+          <div className="mb-4 flex justify-center">
+            <Image src="/images/test-1.svg" alt="Grillados Icon" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 object-contain" />
+          </div>
+          
+          {/* Heading */}
+          <h2
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
+            className="mb-4"
+          >
+            {t('heading')}
+          </h2>
+          
+          {/* Divider Centered */}
+          <div className="w-24 h-1.5 bg-black rounded-md mb-8"></div>
+          
+          {/* Description */}
+          <p className="mb-8" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}>
+            {t('description')}
+          </p>
+          
+          {/* Buttons: Yellow default, Red on hover */}
+          <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
+            <Link href="/order" className="group h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+              <span>{t('orderNow')}</span>
+            </Link>
+            
+            <Link href="/menu" className="group h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+              <span>{t('learnMore')}</span>
+            </Link>
+          </div>
+          
+        </div>
+        
       </div>
     </section>
   );
