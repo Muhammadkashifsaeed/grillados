@@ -81,7 +81,7 @@ const NewDishesSection = () => {
                     width={1200}
                     height={800}
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="w-full h-auto object-contain"
+                    className="w-full h-auto object-contain scale-110 lg:scale-[1.15] transition-transform duration-500 hover:scale-[1.2] drop-shadow-2xl"
                   />
                 </div>
               ))}
