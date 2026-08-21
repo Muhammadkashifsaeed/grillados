@@ -12,17 +12,14 @@ const HeroSection = () => {
   const router = useRouter();
 
   return (
-    <section className="relative w-full h-[65vh] min-h-[450px] md:min-h-[550px] flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
+    <section className="relative w-full h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
       
       {/* Background Image with Cinematic Zoom and floating */}
       <motion.div 
         className="absolute inset-0 z-0"
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1, y: [0, -10, 0] }}
-        transition={{ 
-          scale: { duration: 1.5, ease: "easeOut" },
-          y: { duration: 6, ease: "easeInOut", repeat: Infinity }
-        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
       >
         <Image 
           src="/images/website-main-banner2.webp" 
@@ -30,7 +27,7 @@ const HeroSection = () => {
           fill 
           priority
           quality={100}
-          className="object-cover object-center" 
+          className="object-contain object-center" 
           sizes="100vw"
         />
       </motion.div>
