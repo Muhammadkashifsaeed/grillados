@@ -22,13 +22,13 @@ export default function MenuPage() {
       className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden"
       style={{
         backgroundImage: "url('/images/Blackksss.png')",
-        backgroundSize: '120% auto', // Zoomed in a bit as requested ("zome kr ky enhance kro")
-        backgroundPosition: 'top center',
-        backgroundRepeat: 'repeat-y', // So it repeats down the long page while scrolling
+        backgroundSize: 'cover', // Scales cleanly to the screen
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed', // Keeps it perfectly clean and still while scrolling
       }}
     >
-      {/* Light overlay just in case text needs a bit of contrast, but much lighter than before */}
-      <div className="absolute inset-0 bg-black/40 z-0 pointer-events-none"></div>
+      {/* Content wrapper without the bg-black that was hiding everything */}
 
       {/* Content wrapper without the bg-black that was hiding everything */}
       <div className="relative z-10 flex flex-col w-full gap-[2px]">
