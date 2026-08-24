@@ -12,10 +12,10 @@ const NewDishes = () => {
 
   return (
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-t border-gray-200">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] lg:min-h-[650px]">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-center">
         
         {/* Left Column: YouTube Video */}
-        <div className="w-full relative overflow-hidden h-[400px] lg:h-auto bg-zinc-900 order-1">
+        <div className="w-full relative overflow-hidden aspect-video order-1 shadow-sm">
           {/* 16:9 Aspect Ratio container prevents black bars, full 100% width/height shows everything clearly */}
           <div className="absolute inset-0 w-full h-full pointer-events-none">
             <iframe
@@ -29,26 +29,26 @@ const NewDishes = () => {
         </div>
 
         {/* Right Column: Content */}
-        <div className="w-full flex flex-col justify-center items-center text-center px-6 md:px-12 lg:px-16 xl:px-24 py-12 md:py-20 bg-gray-50 order-2">
+        <div className="w-full h-full flex flex-col justify-center items-center text-center px-4 md:px-8 lg:px-12 xl:px-16 py-4 lg:py-0 bg-gray-50 order-2">
           
           {/* Custom SVG Icon */}
-          <div className="mb-4 flex justify-center">
-            <Image src="/images/test-1.svg" alt="Grillados Icon" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 object-contain" />
+          <div className="mb-2 flex justify-center">
+            <Image src="/images/test-1.svg" alt="Grillados Icon" width={72} height={72} className="w-16 h-16 md:w-20 md:h-20 object-contain" />
           </div>
           
           {/* Heading */}
           <h2
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
-            className="mb-4"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '24px', lineHeight: '32px', color: 'rgb(0,0,0)' }}
+            className="mb-3"
           >
             {t('heading')}
           </h2>
           
           {/* Divider Centered */}
-          <div className="w-24 h-1.5 bg-black rounded-md mb-8"></div>
+          <div className="w-16 h-1 bg-black rounded-md mb-4"></div>
           
           {/* Description */}
-          <p className="mb-8" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}>
+          <p className="mb-6 max-w-md" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '15px', lineHeight: '24px', color: 'rgb(0,0,0)' }}>
             {t('description')}
           </p>
           

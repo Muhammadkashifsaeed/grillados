@@ -11,16 +11,16 @@ const SandwichesSection = () => {
 
   return (
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-y border-gray-200">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] lg:min-h-[650px]">
-        
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[400px] lg:min-h-[700px]">
+
         {/* Left Column: Content */}
-        <div className="w-full flex flex-col justify-center items-center text-center order-2 lg:order-1 px-6 md:px-12 lg:px-16 xl:px-24 py-12 md:py-20 bg-gray-50">
-          
+        <div className="w-full flex flex-col justify-center items-center text-center order-2 lg:order-1 px-6 md:px-12 lg:px-16 xl:px-24 py-8 md:py-12 bg-gray-50">
+
           {/* Custom SVG Icon */}
           <div className="flex justify-center mb-6">
             <Image src="/images/test-1.svg" alt="Grillados Icon" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 object-contain" />
           </div>
-          
+
           {/* Centered Heading */}
           <h2
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
@@ -28,35 +28,35 @@ const SandwichesSection = () => {
           >
             {t('heading')}
           </h2>
-          
+
           {/* Paragraph */}
           <p className="mb-8" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}>
             {t('description')}
           </p>
-          
+
           {/* Buttons */}
           <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
             <Link href="/order" className="group h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('orderNow')}</span>
             </Link>
-            
+
             <Link href="/menu#sandwiches" className="group h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('learnMore')}</span>
             </Link>
           </div>
-          
+
         </div>
 
         {/* Right Column: Image */}
-        <div className="w-full h-[400px] lg:h-auto relative order-1 lg:order-2">
-          <Image 
-            src="/images/zesty.jpg" 
-            alt="Grillado's Sandwiches" 
+        <div className="w-full h-[280px] lg:h-auto relative order-1 lg:order-2">
+          <Image
+            src="/images/zesty.jpg"
+            alt="Grillado's Sandwiches"
             fill sizes="100vw"
-            className="object-cover" 
+            className="object-cover"
           />
         </div>
-        
+
       </div>
     </section>
   );

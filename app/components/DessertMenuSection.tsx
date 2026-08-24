@@ -22,10 +22,12 @@ export const DessertMenuSection = () => {
   return (
     <MenuSection id="desserts">
       {/* ROW 1: e-1 and f-1 Images */}
-      <div className="hidden md:block">
+      <div className="hidden md:block pt-14 pb-14">
         <MenuDualImage
           leftImageSrc="/images/e-1.png"
           rightImageSrc="/images/f-1.png"
+          leftImageClassName="object-contain object-bottom md:object-bottom-right scale-[1.25] md:-translate-x-12 drop-shadow-2xl"
+          rightImageClassName="object-contain object-top md:object-bottom-left scale-[1.25] md:translate-x-4 drop-shadow-2xl"
         />
       </div>
 
@@ -106,10 +108,12 @@ export const DessertMenuSection = () => {
       </div>
 
       {/* ROW 3: b-1 and c-1 Images */}
-      <div className="hidden md:block pb-24">
+      <div className="hidden md:block pt-14 pb-24">
         <MenuDualImage
           leftImageSrc="/images/b-1.png"
           rightImageSrc="/images/c-1.png"
+          leftImageClassName="object-contain object-bottom md:object-bottom-right scale-[1.25] md:-translate-x-12 drop-shadow-2xl"
+          rightImageClassName="object-contain object-top md:object-bottom-left scale-[1.25] md:translate-x-4 drop-shadow-2xl"
         />
       </div>
 

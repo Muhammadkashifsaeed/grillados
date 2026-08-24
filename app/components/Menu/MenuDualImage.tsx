@@ -7,6 +7,9 @@ interface MenuDualImageProps {
   rightImageSrc: string;
   mobileLeftImageSrc?: string;
   mobileRightImageSrc?: string;
+  leftImageClassName?: string;
+  rightImageClassName?: string;
+  rightImageWrapperClassName?: string;
 }
 
 export const MenuDualImage = ({
@@ -14,6 +17,9 @@ export const MenuDualImage = ({
   rightImageSrc,
   mobileLeftImageSrc,
   mobileRightImageSrc,
+  leftImageClassName = "object-contain object-bottom md:object-bottom-right scale-[1.15] drop-shadow-2xl",
+  rightImageClassName = "object-contain object-top md:object-bottom-left scale-[1.15] drop-shadow-2xl",
+  rightImageWrapperClassName = "ml-[-15%]",
 }: MenuDualImageProps) => {
   return (
     <>
@@ -31,19 +37,19 @@ export const MenuDualImage = ({
             alt="Menu Item Left"
             fill
             sizes="(max-width: 768px) 100vw, 60vw"
-            className="object-contain object-bottom md:object-bottom-right scale-[1.15] drop-shadow-2xl"
+            className={leftImageClassName}
             priority
           />
         </div>
 
         {/* Desktop Right Image */}
-        <div className="relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-0 ml-[-15%] hidden md:block">
+        <div className={`relative w-[55%] h-[200px] sm:h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] z-0 hidden md:block ${rightImageWrapperClassName}`}>
           <Image
             src={rightImageSrc}
             alt="Menu Item Right"
             fill
             sizes="(max-width: 768px) 100vw, 60vw"
-            className="object-contain object-top md:object-bottom-left scale-[1.15] drop-shadow-2xl"
+            className={rightImageClassName}
           />
         </div>
 

@@ -8,13 +8,13 @@ import { Link } from '@/i18n/routing';
 const HomePromoSections = () => {
   return (
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0">
-      
+
       {/* First Promo Container */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[500px] lg:min-h-[650px]">
-        
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[400px] lg:min-h-[700px]">
+
         {/* Left Side - Image */}
         <motion.div
-          className="w-full h-[400px] md:h-auto relative order-1 md:order-1"
+          className="w-full h-[280px] md:h-auto relative order-1 md:order-1"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -23,15 +23,16 @@ const HomePromoSections = () => {
           <Image
             src="/images/1350278.webp"
             alt="Catering Partner"
-            fill
-            className="object-cover"
+            width={1200}
+            height={800}
+            className="w-full h-full object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </motion.div>
 
         {/* Right Side - Content */}
-        <div className="w-full flex flex-col justify-center items-center text-center order-2 md:order-2 px-6 md:px-12 lg:px-20 py-12 md:py-20 bg-gray-50">
-          
+        <div className="w-full flex flex-col justify-center items-center text-center order-2 md:order-2 px-6 md:px-12 lg:px-20 py-8 md:py-12 bg-gray-50">
+
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -40,23 +41,23 @@ const HomePromoSections = () => {
             className="flex flex-col items-center w-full"
           >
             <div className="flex justify-center mb-6">
-              <Image 
-                src="/images/test-1.svg" 
-                alt="Grillados Icon" 
-                width={96} 
-                height={96} 
-                className="w-20 h-20 md:w-24 md:h-24 object-contain" 
+              <Image
+                src="/images/test-1.svg"
+                alt="Grillados Icon"
+                width={96}
+                height={96}
+                className="w-20 h-20 md:w-24 md:h-24 object-contain"
               />
             </div>
-            
-            <h2 
+
+            <h2
               className="mb-4"
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
             >
               Les partenaires traiteurs de Grillado's
             </h2>
-            
-            <p 
+
+            <p
               className="mb-8"
               style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
             >
@@ -64,14 +65,14 @@ const HomePromoSections = () => {
             </p>
 
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
-              <Link 
-                href="/order" 
+              <Link
+                href="/order"
                 className="h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 Order Now
               </Link>
-              <button 
+              <button
                 className="h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
@@ -85,11 +86,11 @@ const HomePromoSections = () => {
       </div>
 
       {/* Second Promo Container */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[500px] lg:min-h-[650px]">
-        
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[400px] lg:min-h-[700px]">
+
         {/* Left Side - Content */}
-        <div className="w-full flex flex-col justify-center items-center text-center order-2 md:order-1 px-6 md:px-12 lg:px-20 py-12 md:py-20 bg-gray-50 border-t border-gray-200">
-          
+        <div className="w-full flex flex-col justify-center items-center text-center order-2 md:order-1 px-6 md:px-12 lg:px-20 py-8 md:py-12 bg-gray-50 border-t border-gray-200">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -98,25 +99,25 @@ const HomePromoSections = () => {
             className="flex flex-col items-center w-full"
           >
             <div className="flex justify-center mb-6">
-              <Image 
-                src="/images/test-1.svg" 
-                alt="Grillados Icon" 
-                width={96} 
-                height={96} 
-                className="w-20 h-20 md:w-24 md:h-24 object-contain" 
+              <Image
+                src="/images/test-1.svg"
+                alt="Grillados Icon"
+                width={96}
+                height={96}
+                className="w-20 h-20 md:w-24 md:h-24 object-contain"
               />
             </div>
-            
-            <h2 
+
+            <h2
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
             >
               GRILLADO'S Application
             </h2>
-            
+
             {/* Divider */}
             <div className="w-16 h-[4px] bg-black rounded-full mt-4 mb-6"></div>
-            
-            <p 
+
+            <p
               className="mb-8"
               style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
             >
@@ -124,14 +125,14 @@ const HomePromoSections = () => {
             </p>
 
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
-              <Link 
-                href="/order" 
+              <Link
+                href="/order"
                 className="h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 Order Now
               </Link>
-              <button 
+              <button
                 className="h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
@@ -143,7 +144,7 @@ const HomePromoSections = () => {
 
         {/* Right Side - Image */}
         <motion.div
-          className="w-full h-[400px] md:h-auto relative order-1 md:order-2"
+          className="w-full h-[280px] md:h-auto relative order-1 md:order-2"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -152,8 +153,9 @@ const HomePromoSections = () => {
           <Image
             src="/images/mobile-post.webp"
             alt="Mobile App"
-            fill
-            className="object-cover"
+            width={1200}
+            height={800}
+            className="w-full h-full object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </motion.div>
