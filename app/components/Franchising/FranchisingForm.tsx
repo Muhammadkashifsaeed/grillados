@@ -31,13 +31,13 @@ const countryList = [
 
 export default function FranchisingForm() {
   const t = useTranslations('FranchiseForm');
-  
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState(countryList[0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
-  
+
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Form Fields State
@@ -81,7 +81,7 @@ export default function FranchisingForm() {
     if (!formData.q2) newErrors.q2 = t('required');
     if (!formData.q3) newErrors.q3 = t('required');
     if (!formData.q4) newErrors.q4 = t('required');
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -95,12 +95,12 @@ export default function FranchisingForm() {
     }
 
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-      
+
       // Reset form & success state after 5 seconds
       setTimeout(() => {
         setIsSuccess(false);
@@ -125,23 +125,23 @@ export default function FranchisingForm() {
       <label className={labelClass}>{question}</label>
       <div className="flex items-center gap-6">
         <label className="flex items-center gap-2 text-white font-medium cursor-pointer">
-          <input 
-            type="radio" 
-            name={name} 
-            value="yes" 
-            checked={formData[name as keyof typeof formData] === 'yes'} 
-            onChange={handleChange} 
+          <input
+            type="radio"
+            name={name}
+            value="yes"
+            checked={formData[name as keyof typeof formData] === 'yes'}
+            onChange={handleChange}
             className="w-5 h-5 accent-[#DAAF18] cursor-pointer"
           />
           {t('yes')}
         </label>
         <label className="flex items-center gap-2 text-white font-medium cursor-pointer">
-          <input 
-            type="radio" 
-            name={name} 
-            value="no" 
-            checked={formData[name as keyof typeof formData] === 'no'} 
-            onChange={handleChange} 
+          <input
+            type="radio"
+            name={name}
+            value="no"
+            checked={formData[name as keyof typeof formData] === 'no'}
+            onChange={handleChange}
             className="w-5 h-5 accent-[#DAAF18] cursor-pointer"
           />
           {t('no')}
@@ -167,9 +167,9 @@ export default function FranchisingForm() {
 
       {/* Main Content Wrapper */}
       <div className="relative z-10 w-full flex flex-col items-center px-4 sm:px-6">
-        
+
         {/* Main Heading */}
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -179,26 +179,26 @@ export default function FranchisingForm() {
         </motion.h1>
 
         {/* Glassmorphism Form Container */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="w-full max-w-4xl bg-black/40 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-10 lg:p-12 border border-white/10"
         >
           <form className="flex flex-col gap-12" onSubmit={handleSubmit}>
-            
+
             {/* Section 1: Personal Information */}
             <section>
               <h2 className={sectionTitleClass}>{t('section1')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div>
                   <label className={labelClass}>{t('fullName')}</label>
-                  <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder={t('fullName').replace('*','')} className={inputClass} />
+                  <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder={t('fullName').replace('*', '')} className={inputClass} />
                   {errors.fullName && <p className={errorClass}>{errors.fullName}</p>}
                 </div>
                 <div>
                   <label className={labelClass}>{t('email')}</label>
-                  <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder={t('email').replace('*','')} className={inputClass} />
+                  <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder={t('email').replace('*', '')} className={inputClass} />
                   {errors.email && <p className={errorClass}>{errors.email}</p>}
                 </div>
 
@@ -206,7 +206,7 @@ export default function FranchisingForm() {
                   <label className={labelClass}>{t('phone')}</label>
                   <div className="flex h-13 md:h-14 rounded-xl bg-white border border-transparent focus-within:ring-2 focus-within:ring-[#DAAF18] transition-all duration-300">
                     <div className="relative flex items-center bg-gray-100 border-r border-gray-200 hover:bg-gray-200 transition-colors rounded-l-xl" ref={dropdownRef}>
-                      <div 
+                      <div
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                         className="flex items-center gap-2 px-3 cursor-pointer h-full"
                       >
@@ -215,11 +215,11 @@ export default function FranchisingForm() {
                         <span className="text-gray-700 font-medium text-base">{selectedCountry.code}</span>
                         <ChevronDown size={16} className="text-gray-500" />
                       </div>
-                      
+
                       {isDropdownOpen && (
                         <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 shadow-xl rounded-xl z-50 max-h-60 overflow-y-auto py-2 flex flex-col">
                           {countryList.map((c, idx) => (
-                            <div 
+                            <div
                               key={idx}
                               onClick={() => {
                                 setSelectedCountry(c);
@@ -236,13 +236,13 @@ export default function FranchisingForm() {
                         </div>
                       )}
                     </div>
-                    <input 
-                      type="tel" 
+                    <input
+                      type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder={t('phone').replace('*','')} 
-                      className="flex-1 h-full px-4 text-gray-900 focus:outline-none placeholder:text-gray-400 font-medium rounded-r-xl" 
+                      placeholder={t('phone').replace('*', '')}
+                      className="flex-1 h-full px-4 text-gray-900 focus:outline-none placeholder:text-gray-400 font-medium rounded-r-xl"
                     />
                   </div>
                   {errors.phone && <p className={errorClass}>{errors.phone}</p>}
@@ -275,7 +275,7 @@ export default function FranchisingForm() {
                   <label className={labelClass}>{t('address2')}</label>
                   <input type="text" name="address2" value={formData.address2} onChange={handleChange} placeholder={t('address2')} className={inputClass} />
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   <div>
                     <label className={labelClass}>{t('city')}</label>
@@ -313,7 +313,7 @@ export default function FranchisingForm() {
               <div className="flex flex-col gap-6 md:gap-8">
                 <div className="w-full">
                   <label className={labelClass}>{t('prefCity1')}</label>
-                  <input type="text" name="prefCity1" value={formData.prefCity1} onChange={handleChange} placeholder={t('prefCity1').replace('*','')} className={inputClass} />
+                  <input type="text" name="prefCity1" value={formData.prefCity1} onChange={handleChange} placeholder={t('prefCity1').replace('*', '')} className={inputClass} />
                   {errors.prefCity1 && <p className={errorClass}>{errors.prefCity1}</p>}
                 </div>
                 <div className="w-full">
@@ -347,7 +347,7 @@ export default function FranchisingForm() {
 
             {/* Cloudflare Turnstile */}
             <div className="flex flex-col items-center mt-4">
-              <Turnstile 
+              <Turnstile
                 siteKey="1x00000000000000000000AA" // Dummy key for testing, always passes. Replace with real key in production.
                 onSuccess={(token) => setTurnstileToken(token)}
                 onError={() => setTurnstileToken(null)}
@@ -357,8 +357,8 @@ export default function FranchisingForm() {
 
             {/* Submit Button & Messages */}
             <div className="flex flex-col items-center mt-2">
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 disabled={isSubmitting || !turnstileToken}
                 className={`w-full max-w-3xl bg-[#DAAF18] hover:bg-[#b89214] text-black font-extrabold py-5 px-8 rounded-full transition-all duration-300 uppercase tracking-widest text-lg shadow-[0_0_15px_rgba(247,180,28,0.4)] hover:shadow-[0_0_25px_rgba(247,180,28,0.6)] ${(!turnstileToken || isSubmitting) ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-1'}`}
               >
@@ -366,9 +366,9 @@ export default function FranchisingForm() {
               </button>
 
               {isSuccess && (
-                <motion.div 
-                  initial={{ opacity: 0, y: 10 }} 
-                  animate={{ opacity: 1, y: 0 }} 
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   className="mt-6 px-6 py-4 bg-white border border-gray-200 rounded-xl text-green-600 font-bold text-left shadow-lg w-full self-start"
                 >
                   {t('success')}
