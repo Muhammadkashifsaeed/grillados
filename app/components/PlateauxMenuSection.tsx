@@ -116,10 +116,10 @@ export const PlateauxMenuSection = () => {
 
           {/* RIGHT: Fade-in from right — reserved for visual balance */}
           <motion.div
-            initial={{ opacity: 0, x: 80 }}
+            initial={{ opacity: 0, x: 300 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 1.2, ease: 'easeOut' }}
             className="w-full hidden md:flex items-start justify-center relative lg:min-h-[500px] mx-auto"
           >
             {/* Desktop Image */}

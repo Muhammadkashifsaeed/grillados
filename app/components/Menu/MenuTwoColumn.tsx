@@ -31,10 +31,10 @@ export const MenuTwoColumn = ({
 
       {/* Right Column */}
       <motion.div
-        initial={{ opacity: 0, x: 80 }}
+        initial={{ opacity: 0, x: 300 }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
+        transition={{ duration: 1.2, ease: 'easeOut' }}
         className={`w-full flex flex-col justify-start ${reverseOnMobile ? 'order-1 lg:order-2' : 'order-2'}`}
       >
         {rightContent}

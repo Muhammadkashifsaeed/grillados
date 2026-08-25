@@ -24,10 +24,10 @@ export const MenuDualImage = ({
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: -80 }}
+        initial={{ opacity: 0, y: -200 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
+        transition={{ duration: 1.2, ease: 'easeOut' }}
         className={`w-full flex flex-col md:flex-row items-center justify-center lg:pr-0 ${(mobileLeftImageSrc || mobileRightImageSrc) ? 'py-4 lg:pt-0 lg:pb-0' : 'py-0 lg:pt-0 lg:pb-0'}`}
       >
         {/* Desktop Left Image */}

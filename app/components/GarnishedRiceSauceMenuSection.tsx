@@ -96,10 +96,10 @@ export const GarnishedRiceSauceMenuSection = () => {
                 {sauceLevels.map((item, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 150 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.8, delay: index * 0.15, ease: "easeOut" }}
+                    transition={{ duration: 1.2, delay: index * 0.15, ease: "easeOut" }}
                     className="flex flex-col w-full"
                   >
                     <div className="flex items-center gap-4 md:gap-8">
