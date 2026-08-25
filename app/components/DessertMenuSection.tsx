@@ -124,6 +124,8 @@ export const DessertMenuSection = () => {
           className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
           style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
         >
+
+          {/* Desktop Image */}
           <Image
             src="/images/mobile18.jpg"
             alt="Dessert Detail Left"

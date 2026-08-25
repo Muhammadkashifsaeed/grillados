@@ -19,7 +19,7 @@ export default function TermsPage({ params: { locale } }: { params: { locale: st
 
       <div className="relative z-10 w-full mx-auto px-6 md:px-12 lg:px-20 mt-8 md:mt-12">
         <div className="mb-10">
-          <h1 className="text-2xl md:text-3xl font-extrabold text-[#0a0a0a] font-['Outfit',sans-serif] uppercase tracking-wide">
+          <h1 className="text-[30px] md:text-[40px] leading-tight font-semibold text-black font-['Ribeat',sans-serif] uppercase tracking-wide">
             Legal Information
           </h1>
         </div>
@@ -27,25 +27,25 @@ export default function TermsPage({ params: { locale } }: { params: { locale: st
         {locale === 'fr' ? (
           <TermsFr />
         ) : (
-          <div className="text-gray-700 space-y-10 leading-relaxed text-sm md:text-base">
+          <div className="text-black space-y-10 font-['Poppins',sans-serif] text-[14px] leading-[23px] font-normal">
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Grillado's canada</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Grillado's canada</h2>
               <p>The following outlines the conditions governing your access to and use of the services. By accessing or using any of the services, you agree to abide by these terms of service. If you do not agree with all the terms outlined in these terms of service, you are not permitted to access or use any of the services.</p>
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Modifications</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Modifications</h2>
               <p>Grillado’s reserves the right to modify these Terms of Service at any time by replacing them with updated terms. Notice of amendments will be published on its primary website at <a href="https://www.grillados.ca/" target="_blank" rel="noopener noreferrer" className="text-[#d72323] hover:underline font-semibold">www.Grillado’s.ca</a> for a period of 30 days. The revised terms of service will automatically become effective upon posting. Your ongoing use of the Services after the publication of the updated terms, along with the provided notice, indicates your acceptance of the modified Terms of Service. If you disagree with any of the terms in the amended Terms of Service, you must discontinue all use of the Services. These Terms of Service may not be altered otherwise.</p>
               <p className="mt-4">The initial paragraph of these Terms of Service specifies the date of the last amendment. Please revisit this section regularly to stay informed about any updates or changes.</p>
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">License</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">License</h2>
               <p>You are hereby given a non-exclusive and non-transferable license to access and utilize the Services in accordance with the terms outlined in these Terms of Service.</p>
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Accessing</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Accessing</h2>
               <p>To access and utilize the Services, you must adhere to the terms and conditions specified in these Terms of Service. Any unauthorized access or use will be deemed a trespass on Grillado’s computer systems, constituting an infringement of Grillado’s intellectual property and an unlawful utilization of Grillado’s assets.</p>
               <p className="mt-4">Certain sections of the Services may necessitate the use of a user ID, which could entail providing certain personal information to Grillado’s. By using the Services, you agree to (a) furnish truthful, accurate, current, and complete information about yourself as requested, and (b) promptly update this information to ensure its continued accuracy, currency, and completeness.</p>
               <p className="mt-4">Grillado’s retains the right, at its sole discretion, to suspend or terminate your present and future access and use of the Services if Grillado’s reasonably believes that your conduct or provision of information violates these Terms of Service.</p>
@@ -53,12 +53,12 @@ export default function TermsPage({ params: { locale } }: { params: { locale: st
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Applications</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Applications</h2>
               <p>All Applications are strictly licensed to you in accordance with these Terms of Service, and all rights, title, and interest in and to the Applications shall always remain with Grillado’s. You shall have no right, title, or interest in or to any Applications except for the limited right to use them as specified in these Terms of Service. Upon termination of these Terms of Service or the termination of your right to use the Services, you are obligated to delete all copies of the Applications from your electronic device. You may not disassemble, decompile, reverse engineer, or attempt to generate any source code for any of the Applications.</p>
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Behavior</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Behavior</h2>
               <p>You are prohibited from creating, uploading, downloading, storing, or sharing any documents, information, content, or other material, including in your communications with other users of the Services, that:</p>
               <ul className="list-disc pl-6 md:pl-8 mt-4 space-y-3">
                 <li>is false, misleading, deceptive, or fraudulent, including the failure to maintain accurate, true, and current information or the omission of any relevant information;</li>
@@ -90,7 +90,7 @@ export default function TermsPage({ params: { locale } }: { params: { locale: st
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Services</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Services</h2>
               <p>You acknowledge that Grillado’s will not be held liable for any delay or unavailability of any of the Services, whether caused by the actions or omissions of Grillado’s or any third party.</p>
               <p className="mt-4">Grillado’s reserves the right to modify, add, or remove from its Services at any time without prior notice. You agree to assume all risks, costs, and damages that may arise or be incurred as a result of such changes.</p>
               <p className="mt-4">Grillado’s does not utilize any verification processes to confirm the authenticity of individuals and ensure that they are who they claim to be.</p>
@@ -98,44 +98,44 @@ export default function TermsPage({ params: { locale } }: { params: { locale: st
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Links to Internet Resources</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Links to Internet Resources</h2>
               <p>Links to other internet resources provided through the Services are offered as a courtesy, and you may only use them at your own risk. Grillado’s does not investigate, verify, monitor, or endorse the content, accuracy, opinions expressed, or any products or services obtained from or through these links. Grillado’s shall not be held responsible for any content or for any products or services obtained from or through those links.</p>
               <p className="mt-4">The provision of a link to a third-party website on the Services should not imply the existence of any partnership or other relationship.</p>
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">User Suggestions</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">User Suggestions</h2>
               <p>Grillado’s may enable you to provide suggestions or comments about the Services or about Grillado’s other products and services. By making any suggestion or comment by or through the Services or otherwise, you agree to grant, and you will be thereby granting, to Grillado’s a world-wide, royalty-free, non-exclusive and irrevocable license to use that suggestion or comment in any manner that it may wish, including to improve its products and services and its organisation and its processes. You hereby agree and acknowledge that you will not receive any recognition or compensation in connection with the same.</p>
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Intellectual Property</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Intellectual Property</h2>
               <p>Grillado’s holds proprietary rights, including copyrights and trademarks, in its Services. You are not permitted to modify, copy, publish, republish, transmit, sell, create derivative works, display, frame, or exploit in any way the Services or any content obtained from or through the Services, except as explicitly permitted as outlined on the Services.</p>
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Warranty Disclaimer</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Warranty Disclaimer</h2>
               <p>The Services are provided on an “as is” and “as available” basis, and your use of them is at your sole risk. Grillado’s makes no express or implied warranties, conditions, or representations whatsoever, and explicitly disclaims any such warranties, representations, or conditions, including, without limitation, correctness, merchantability, or fitness for a particular purpose, as implied by statute. The Services may contain bugs, errors, problems, viruses, or other limitations, and Grillado’s assumes no liability or responsibility for any such issues.</p>
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Limited Liability</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Limited Liability</h2>
               <p>Under no circumstances shall Grillado’s be liable for any incidental, special, indirect, or consequential damages or losses, including, without limitation, any interruption of business or related losses or expenses, loss of anticipated savings, lost opportunity, goodwill, revenue, data, or profit incurred or suffered by you. These damages may arise out of any failure of, or any defects or errors in, the Services, whether or not Grillado’s was informed of the possibility of such issues.</p>
               <p className="mt-4">Regardless of the circumstances, Grillado’s maximum aggregate liability under these Terms of Service, in relation to any failure of, or defects or errors in, the Services, arising in any manner whatsoever, shall be capped at the total amount paid by you to Grillado’s for the Services or $10.00 (CDN), whichever is greater.</p>
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Indemnity</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Indemnity</h2>
               <p>You agree to indemnify and hold Grillado’s, its employees, officers, directors, agents, and partners harmless, including reasonable attorney fees, from any and all claims and demands made by anyone due to or arising from your use of the Services or your violation of these Terms of Service.</p>
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">No Agency</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">No Agency</h2>
               <p>The involved entities are independent, and these Terms of Service do not intend to establish any agency, partnership, joint venture, employer-employee, or franchiser-franchisee relationship between them. Neither party shall make any statements or imply otherwise.</p>
             </section>
 
             <section>
-              <h2 className="text-xl md:text-2xl font-bold mb-4 font-['Outfit',sans-serif] text-[#0a0a0a]">Accessibility</h2>
+              <h2 className="mb-4 font-['Ribeat',sans-serif] font-semibold text-black text-[20px] leading-[26px]">Accessibility</h2>
               <p>Grillado’s Chickenland (Canada) Inc. is dedicated to providing service to all customers, including those with disabilities. This website is crafted to adhere to the Web Content Accessibility Guidelines (WCAG) 2.1 digital accessibility standards and has undergone compliance testing using various digital accessibility audit tools, such as Accessibility Insights and AChecker.</p>
             </section>
 

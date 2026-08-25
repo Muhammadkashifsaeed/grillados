@@ -46,7 +46,6 @@ const AppetizersSection = () => {
           </div>
 
         </div>
-
         {/* Right Column: Image */}
         <div className="w-full h-[280px] lg:h-auto relative order-1 lg:order-2">
           <Image
@@ -56,8 +55,8 @@ const AppetizersSection = () => {
             className="object-cover"
           />
         </div>
-
       </div>
+
     </section>
   );
 };

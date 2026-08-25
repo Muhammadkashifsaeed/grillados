@@ -40,7 +40,7 @@ export default function ComingSoonLocations() {
   return (
     <section className="relative w-full py-10 md:py-16 z-10">
       <div className="max-w-7xl mx-auto px-6">
-        
+
         {/* Main Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -49,7 +49,7 @@ export default function ComingSoonLocations() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center mb-16 md:mb-24"
         >
-          <h2 
+          <h2
             className="uppercase tracking-wide text-center"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '48px', lineHeight: '56px', color: 'rgb(255,255,255)' }}
           >
@@ -70,7 +70,7 @@ export default function ComingSoonLocations() {
               className="flex flex-col"
             >
               {/* Province Heading */}
-              <h3 
+              <h3
                 className="uppercase tracking-wider mb-8 md:mb-12"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '40px', lineHeight: '60px', color: 'rgb(255,255,255)' }}
               >
@@ -91,7 +91,7 @@ export default function ComingSoonLocations() {
             </motion.div>
           ))}
         </div>
-        
+
       </div>
     </section>
   );
