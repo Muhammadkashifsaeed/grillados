@@ -9,7 +9,7 @@ export default function FranchisingHero() {
   const t = useTranslations('FranchisingPage');
 
   return (
-    <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[40vh] md:h-[50vh] min-h-[300px] flex items-center justify-center overflow-hidden">
 
       {/* Background Image with Cinematic Zoom and Float */}
       <motion.div
@@ -57,9 +57,9 @@ export default function FranchisingHero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-            className="relative px-4 py-3 sm:px-8 sm:py-5 md:px-12 md:py-6 flex items-center justify-center"
+            className="relative px-4 py-2 md:px-6 md:py-3 flex items-center justify-center"
           >
-            <h1 className="text-white font-semibold font-['Ribeat',sans-serif] text-center uppercase tracking-wide
+            <h1 className="text-white font-[600] font-['Ribeat',sans-serif] text-center uppercase tracking-wide
                            text-[45px] leading-[60px]
                            drop-shadow-lg"
             >

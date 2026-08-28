@@ -67,6 +67,9 @@ export default function BirthdayCateringSection() {
             >
               {t('heading')}
             </h2>
+
+            {/* Divider */}
+            <div className="w-16 h-[4px] bg-black rounded-full mb-6 mx-auto"></div>
             
             {/* Description */}
             <p 

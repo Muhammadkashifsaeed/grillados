@@ -65,7 +65,7 @@ const getInitialColor = (name: string) => {
 
 const ReviewsSection = () => {
   const t = useTranslations('Reviews');
-  
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [isHovered, setIsHovered] = useState(false);
@@ -83,10 +83,10 @@ const ReviewsSection = () => {
         setItemsPerView(5); // Large Desktop (e.g., 1536px+)
       }
     };
-    
+
     // Initial check
     handleResize();
-    
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -104,32 +104,35 @@ const ReviewsSection = () => {
   // Autoplay Logic (Pause on hover, 5.5s delay)
   useEffect(() => {
     if (isHovered) return;
-    
+
     const timer = setInterval(() => {
       nextSlide();
     }, 5500); // 5.5 seconds between slides
-    
+
     return () => clearInterval(timer);
   }, [nextSlide, isHovered]);
 
   return (
     <section className="w-full py-6 md:py-8 bg-white overflow-hidden">
       <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16">
-        
+
         <div className="text-center mb-8 md:mb-10">
-          <h2 className="text-2xl md:text-4xl font-extrabold text-[#fbbc04] font-['Outfit',sans-serif] uppercase tracking-wide mb-4">
+          <h2 
+            className="uppercase tracking-wide mb-4"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '40px', lineHeight: '80px', color: 'rgb(250, 174, 64)' }}
+          >
             {t('heading')}
           </h2>
-          <p 
-            className="tracking-widest uppercase"
-            style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(0,0,0)' }}
+          <p
+            className="mt-2"
+            style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(0, 0, 0)' }}
           >
             {t('subtitle')}
           </p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center lg:items-stretch">
-          
+
           {/* Left Side: Fixed Google Rating Summary */}
           <div className="w-full lg:w-1/4 xl:w-1/5 shrink-0 flex flex-col justify-center items-center lg:items-start text-center lg:text-left bg-white p-8 rounded-2xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-gray-100">
             <div className="flex items-center gap-2 mb-4">
@@ -147,55 +150,55 @@ const ReviewsSection = () => {
             <p className="text-gray-500 text-sm mt-2 mb-4">
               <span className="font-bold text-gray-900">{t('basedOn').split('1,779')[0]}1,779{t('basedOn').split('1,779')[1] || ' reviews'}</span>
             </p>
-            
+
             {/* Added based.svg Image */}
             <div className="w-32 h-auto relative mt-2">
-              <Image 
-                src="/images/based.svg" 
-                alt="Powered by Google" 
-                width={128} 
-                height={40} 
-                className="object-contain" 
+              <Image
+                src="/images/based.svg"
+                alt="Powered by Google"
+                width={128}
+                height={40}
+                className="object-contain"
               />
             </div>
           </div>
 
           {/* Right Side: Carousel Container */}
-          <div 
+          <div
             className="relative w-full lg:w-3/4 xl:w-4/5 mx-auto lg:mx-0 group"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onTouchStart={() => setIsHovered(true)}
             onTouchEnd={() => setIsHovered(false)}
           >
-            
+
             <div className="overflow-hidden relative px-2 py-4 h-full flex items-stretch">
-              <div 
+              <div
                 className="flex transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] items-stretch w-full"
                 style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
               >
                 {reviews.map((review, idx) => (
-                  <div 
-                    key={idx} 
+                  <div
+                    key={idx}
                     className="shrink-0 px-2 md:px-3 flex justify-center"
                     style={{ width: `${100 / itemsPerView}%` }}
                   >
-                    
+
                     {/* Google Review Card - Matches Google Widget exactly */}
                     <div className="bg-transparent border border-gray-200 rounded-2xl hover:border-[#fbbc04] hover:shadow-lg hover:-translate-y-2 transition-all duration-300 p-4 sm:p-6 w-full relative flex flex-col h-full min-h-55">
-                      
+
                       {/* Google Icon Top Right */}
                       <div className="absolute top-6 right-6 w-6 h-6 opacity-90">
                         <svg viewBox="0 0 48 48" className="w-full h-full">
-                          <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
-                          <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
-                          <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
-                          <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+                          <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                          <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                          <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                          <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
                         </svg>
                       </div>
 
                       <div className="flex items-center gap-4 mb-4">
-                        
+
                         {/* Avatar - Exact 48px by 48px */}
                         {review.image ? (
                           <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0">
@@ -206,7 +209,7 @@ const ReviewsSection = () => {
                             {review.name.charAt(0).toUpperCase()}
                           </div>
                         )}
-                        
+
                         {/* Name & Time */}
                         <div className="flex flex-col justify-center">
                           <h3 className="font-semibold text-gray-900 text- leading-tight mb-0.5">{review.name}</h3>
@@ -233,14 +236,14 @@ const ReviewsSection = () => {
             </div>
 
             {/* Navigation Buttons (Fade in on hover) */}
-            <button 
+            <button
               onClick={prevSlide}
               className={`absolute left-[-15px] top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
-            
-            <button 
+
+            <button
               onClick={nextSlide}
               className={`absolute right-[-15px] top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex >= maxIndex ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
             >

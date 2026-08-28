@@ -24,13 +24,9 @@ const CateringPartnersSection = () => {
         >
           {t('heading')}
         </h2>
-        
-        {/* Subtitle */}
-        <p 
-          className="max-w-2xl mx-auto mt-2"
-          style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}
-        >
-          {t('subtitle')}
+
+        <p className="max-w-3xl text-center mt-3" style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(0, 0, 0)' }}>
+          {t('platterDescription')}
         </p>
 
       </div>

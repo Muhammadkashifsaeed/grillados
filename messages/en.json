@@ -43,13 +43,13 @@
   },
   "Sandwiches": {
     "heading": "Sandwiches / Pitas / Wraps",
-    "description": "Our sandwiches, pitas, and wraps offer a delicious variety of flavors and textures, perfect for a meal or a snack. Each option features fresh, high-quality ingredients, ranging from tender meats and crisp vegetables to spicy sauces and savory spreads.",
+    "description": "Our Sandwiches, Pitas, and Wraps offer a delightful variety of flavors and textures, perfect for any meal or snack. Each option features fresh, high-quality ingredients, from tender meats and vibrant veggies to zesty sauces and flavorful spreads.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
   "Platters": {
     "heading": "Grillado's Platters",
-    "description": "Grillado’s platters present a beautifully arranged selection of grilled meats. Ideal for friendly or hearty meals, these platters highlight all our grilling expertise.",
+    "description": "Grillado’s platters feature a beautifully arranged selection of grilled meats. Ideal for gatherings or a hearty meal, these platters showcase the full expertise of our grilling art.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
@@ -63,8 +63,9 @@
     "heading": "Grillado's Catering Partners",
     "subtitle": "Catering By Grillados Customized Food Catering At Its Best",
     "madeWithLove": "Made with Love",
-    "smallHeading": "",
-    "description": "Whether for a small family gathering or to celebrate a holiday, Grillado's catering service wants you to fully enjoy your day with your loved ones and leave the cooking to us. At Grillado Catering, we are here to serve you!"
+    "smallHeading": "Leave the Grill to Us — You Focus on the Memories",
+    "description": "From intimate family dinners to holiday feasts, Grillados brings the flavour straight to your door. Tell us what you need — we do custom orders because every celebration deserves something special.\n\nServing Cambridge · Laval · Milton · Mississauga Groups of 10 and above  Fresh grilled, never frozen  Call your nearest location to book",
+    "platterDescription": "Catering By Grillados Customized Food Catering At Its Best"
   },
   "CateringOffers": {
     "offer1": "Offer 1",
@@ -89,7 +90,7 @@
     "feature1": "All items can be individually packed or served on catering trays.",
     "feature2": "Serving stands and food warming equipment are available.",
     "feature3": "Add extra bottles of sauce for an additional charge.",
-    "feature4": "Catering service available both in restaurant and off-site.",
+    "feature4": "Restaurant and off-site Catering  available",
     "orderNow": "ORDER NOW",
     "learnMore": "LEARN MORE",
     "ourMenu": "OUR MENU"
@@ -236,16 +237,16 @@
     }
   },
   "CateringHero": {
-    "heading": "Catering Services",
+    "heading": "Grillado's Catering",
     "description": "At Grillado’s, we believe healthy food is vital for good health.\nOur health-conscious menu is designed to cater to your health-conscious lifestyle.",
     "orderNow": "Order Now"
   },
   "FranchisingPage": {
     "heroHeading": "Franchise",
     "whatWeDo": "What we will do",
-    "whatWeDoSub": "What we will do",
+    "whatWeDoSub": "To assure your success",
     "p1_1": "Grillado’s™ Head Office will ensure the success of each location by offering our franchisees a ",
-    "p1_highlight": "turnkey solution",
+    "p1_highlight": "turn-key solution.",
     "p2_1": "Our restaurants are built on a reliable, proven system designed to ensure the quality of our food, brand image, and performance of every Grillado’s™ location. Our operations are simple to manage and require no prior restaurant experience—only a passion for delivering a great dining experience. We provide field consultants, regional representatives, and a comprehensive training program to ensure our franchisees and restaurant managers are capable of running daily operations at every Grillado’s™. Our support team will equip you with the manuals, guidance, and training necessary to ensure total competency. ",
     "p2_highlight": "Your success is our success.",
     "p3": "We are committed to the continuous growth and expansion of the Grillado’s™ brand. Our team remains consistently focused on innovative methods to promote and elevate the Grillado’s™ name.",
@@ -466,7 +467,7 @@
   },
   "BirthdayCatering": {
     "heading": "birthday!",
-    "description": "With Grillado's countless menu choices, no one will be left out in this ocean of culinary delights. Let Grillado make your birthday… delicious.",
+    "description": "With the endless choices in the Grillado’s menu, no one will be left behind in this sea of culinary delights. Let Grillado’s make your birthday – a delicious one.",
     "contactUs": "Contact us"
   },
   "WeddingCatering": {
@@ -786,7 +787,7 @@
     "deal6Desc": "Grillado's offers a 10% discount to all LA Fitness members. Please present your gym membership card at the counter."
   },
   "ServicesHero": {
-    "titlePart1": "We cater for your",
+    "titlePart1": "We serve on your",
     "titlePart2": "special occasions"
   },
   "Terms": {
@@ -843,5 +844,13 @@
     "za": "South Africa",
     "eg": "Egypt",
     "tr": "Turkey"
+  },
+  "HomePromo": {
+    "cateringHeading": "Grillado's Catering Partners",
+    "cateringDesc": "Grillado’s platters feature a beautifully arranged selection of grilled meats. Ideal for gatherings or a hearty meal, these platters showcase the full expertise of our grilling art.",
+    "appHeading": "GRILLADO'S App",
+    "appDesc": "Grillado’s is a convenient and user-friendly mobile application designed to enhance the dining experience of Grillado’s customers, a renowned restaurant offering a variety of tasty grilled dishes. Available for download, the Grillado’s app allows users to easily browse the menu, place orders for takeout or delivery, and enjoy seamless payment options — all from the comfort of their smartphone.",
+    "orderNow": "Order Now",
+    "learnMore": "Learn More"
   }
 }

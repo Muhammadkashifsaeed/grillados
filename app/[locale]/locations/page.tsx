@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import LocationCard from '../../components/LocationCard';
 import ComingSoonLocations from '../../components/ComingSoonLocations';
@@ -46,13 +47,26 @@ export default function LocationsPage() {
       className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-[#0a0a0a]"
       style={{
         backgroundImage: "url('/images/Blackksss.png')",
-        backgroundSize: '120% auto',
+        backgroundSize: 'cover',
         backgroundPosition: 'top center',
-        backgroundRepeat: 'repeat-y',
+        backgroundRepeat: 'no-repeat'
       }}
     >
       {/* Light overlay */}
-      <div className="absolute inset-0 bg-black/40 z-0 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black/10 z-0 pointer-events-none"></div>
+
+      {/* Hero Section */}
+      <div className="relative w-full h-[30vh] md:h-[40vh] min-h-[250px] z-10">
+        <Image 
+          src="/images/Picture-back-ground.png" 
+          alt="Locations Hero" 
+          fill 
+          priority
+          className="object-cover object-center" 
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-24 pt-16">
         

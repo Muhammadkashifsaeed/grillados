@@ -29,7 +29,7 @@ const ReviewsSection = () => {
         <div className="flex flex-col items-center mb-10">
           <h2 
             className="leading-tight"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '35px', lineHeight: '46px', color: 'rgb(250, 174, 64)' }}
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '40px', lineHeight: '80px', color: 'rgb(250, 174, 64)' }}
           >
             Reviews
           </h2>

@@ -18,7 +18,7 @@ const AboutUsVoted = () => {
       </div>
 
       {/* Center Box */}
-      <div className="relative z-10 w-full max-w-4xl bg-[#808080] border-4 border-[#FACC15] rounded-xl shadow-xl p-6 sm:p-10 text-center flex flex-col items-center justify-center mx-12 sm:mx-24">
+      <div className="relative z-10 w-full max-w-3xl min-h-[280px] bg-[#808080] border-4 border-[#FACC15] rounded-xl shadow-xl p-8 sm:p-10 text-center flex flex-col items-center justify-center mx-4 sm:mx-12">
         
         <p 
           className="mb-4"

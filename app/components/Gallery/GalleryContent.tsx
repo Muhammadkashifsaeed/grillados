@@ -29,7 +29,13 @@ export default function GalleryContent() {
     "XjuvDiLlbDE",
     "J0bQraF2Bhk",
     "W2r3PI_MyPw",
-    "1kWV8Z1EQII"
+    "1kWV8Z1EQII",
+    "Cbawog1tba8",
+    "JJWGsHQrAOA",
+    "xgTU2bi5eyE",
+    "2PHXbquUyPU",
+    "dm_yrxn7tBE",
+    "NrAle8I1GFo"
   ];
 
   const handleLoadMore = () => {

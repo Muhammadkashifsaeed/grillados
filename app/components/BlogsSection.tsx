@@ -17,7 +17,7 @@ const blogsData = [
 
 const BlogsSection = () => {
   const t = useTranslations('Blogs');
-  
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [isHovered, setIsHovered] = useState(false);
@@ -33,7 +33,7 @@ const BlogsSection = () => {
         setItemsPerView(3);
       }
     };
-    
+
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -60,58 +60,58 @@ const BlogsSection = () => {
   return (
     <section className="w-full py-6 md:py-8 bg-zinc-50 overflow-hidden">
       <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16">
-        
+
         {/* Navigation & Container */}
-        <div 
+        <div
           className="relative group"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Carousel Track */}
           <div className="overflow-hidden px-2 py-6">
-            <div 
+            <div
               className="flex transition-transform duration-1000 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
             >
               {blogsData.map((blog) => (
-                <div 
-                  key={blog.id} 
+                <div
+                  key={blog.id}
                   className="px-4"
                   style={{ minWidth: `${100 / itemsPerView}%` }}
                 >
                   <div className="bg-white shadow-md overflow-hidden h-full flex flex-col border border-gray-100 rounded-2xl">
-                    
+
                     {/* Blog Image */}
                     <div className="w-full bg-white overflow-hidden border-b border-gray-100">
-                      <Image 
-                        src={blog.image} 
-                        alt={t(`${blog.tKey}.title`)} 
+                      <Image
+                        src={blog.image}
+                        alt={t(`${blog.tKey}.title`)}
                         width={600}
                         height={400}
-                        sizes="100vw" 
-                        className="w-full h-auto object-contain" 
+                        sizes="100vw"
+                        className="w-full h-auto object-contain"
                       />
                     </div>
-                    
+
                     {/* Content */}
                     <div className="p-6 flex flex-col grow">
-                      
+
                       {/* Date */}
                       <div className="flex items-center text-black text-sm font-semibold mb-3 tracking-wider uppercase">
                         <Calendar className="w-4 h-4 mr-2" />
                         {t(`${blog.tKey}.date`)}
                       </div>
-                      
+
                       {/* Title */}
                       <h3 className="text-xl md:text-2xl font-bold text-black mb-3 leading-snug font-['Outfit',sans-serif]">
                         {t(`${blog.tKey}.title`)}
                       </h3>
-                      
+
                       {/* Description */}
                       <p className="text-black mb-6 grow leading-relaxed">
                         {t(`${blog.tKey}.description`)}
                       </p>
-                      
+
                       {/* Read More Link */}
                       <Link href={`/blog/${blog.id}`} className="flex items-center text-black font-bold hover:text-red-600 transition-colors group/link mt-auto w-max">
                         {t('readMore')}
@@ -126,15 +126,15 @@ const BlogsSection = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <button 
+          <button
             onClick={prevSlide}
             className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 lg:-ml-6 bg-white p-3 rounded-full shadow-lg border border-gray-100 text-gray-700 hover:text-red-600 hover:scale-110 transition-all z-10 hidden md:flex"
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          
-          <button 
+
+          <button
             onClick={nextSlide}
             className="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 lg:-mr-6 bg-white p-3 rounded-full shadow-lg border border-gray-100 text-gray-700 hover:text-red-600 hover:scale-110 transition-all z-10 hidden md:flex"
             aria-label="Next slide"

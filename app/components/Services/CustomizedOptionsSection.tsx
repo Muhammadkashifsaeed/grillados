@@ -23,19 +23,20 @@ const CustomizedOptionsSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] xl:h-[900px] overflow-hidden">
+          <div className="relative w-full flex items-end justify-center overflow-hidden">
             <Image
               src="/images/bottle.png"
               alt="Grillado Customized Options"
-              fill
-              className="object-cover md:object-contain md:object-right drop-shadow-2xl scale-110 md:scale-125 origin-center md:origin-right"
+              width={800}
+              height={800}
+              className="w-full max-w-full h-auto object-cover drop-shadow-2xl translate-y-2"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </motion.div>
 
         {/* Right Side - Content */}
-        <div className="w-full flex flex-col justify-center order-2 md:order-none px-6 md:pr-12 md:pl-4 lg:pr-20 lg:pl-8 xl:pr-24 xl:pl-12 pt-12 pb-4 md:pt-16 md:pb-6">
+        <div className="w-full flex flex-col justify-center order-2 md:order-none px-6 md:pr-12 md:pl-4 lg:pr-20 lg:pl-8 xl:pr-24 xl:pl-12 pt-2 pb-4 md:pt-16 md:pb-6">
 
           {/* Heading */}
           <motion.div

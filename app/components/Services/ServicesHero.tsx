@@ -9,13 +9,13 @@ export default function ServicesHero() {
   const t = useTranslations('ServicesHero');
   return (
     <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
-      
+
       {/* Background Image with Cinematic Zoom and Float */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 z-0"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1, y: [0, -10, 0] }}
-        transition={{ 
+        transition={{
           scale: { duration: 1.5, ease: "easeOut" },
           y: { duration: 6, ease: "easeInOut", repeat: Infinity }
         }}
@@ -36,22 +36,22 @@ export default function ServicesHero() {
 
       {/* Center Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto">
-        
+
         {/* Yellow rounded badge behind heading */}
         <div className="relative inline-block max-w-[90vw]">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="tracking-tight py-3 px-4 sm:px-6 rounded-xl bg-[#DAAF18] shadow-2xl relative z-10 uppercase text-center whitespace-normal sm:whitespace-nowrap text-2xl sm:text-3xl md:text-[45px] leading-snug md:leading-[60px] break-words max-w-[90vw] md:max-w-none"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255,255,255)' }}
+            className="tracking-wide py-3 px-6 sm:px-8 rounded-xl bg-[#DAAF18] shadow-2xl relative z-10 uppercase text-center whitespace-normal sm:whitespace-nowrap break-words max-w-[90vw] md:max-w-none"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255,255,255)', fontSize: '35px', lineHeight: '50px', wordSpacing: '4px' }}
           >
             {t('titlePart1')}<br className="block md:hidden" /> {t('titlePart2')}
           </motion.h1>
         </div>
 
       </div>
-      
+
     </section>
   );
 }

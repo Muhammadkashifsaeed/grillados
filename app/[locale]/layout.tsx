@@ -87,6 +87,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default async function RootLayout({
   children,
   params,
@@ -109,11 +115,34 @@ export default async function RootLayout({
     "name": "Grillado's",
     "image": "https://grillados.ca/images/hero-bg-new.png",
     "url": "https://grillados.ca",
+    "priceRange": "$$",
     "servesCuisine": ["Portuguese", "Grilled Chicken", "Steak"],
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "CA"
-    }
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Cambridge",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Milton",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Mississauga",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Laval",
+        "addressRegion": "QC",
+        "addressCountry": "CA"
+      }
+    ]
   };
 
   return (

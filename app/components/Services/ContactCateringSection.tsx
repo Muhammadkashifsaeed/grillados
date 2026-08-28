@@ -65,11 +65,11 @@ export default function ContactCateringSection() {
   const sectionTitleClass = "text-2xl font-bold text-white font-['Outfit',sans-serif] mb-6 tracking-wide border-b border-gray-600/50 pb-2";
 
   return (
-    <section id="contact" className="relative w-full min-h-screen flex flex-col items-center justify-start">
+    <section id="contact" className="relative w-full min-h-screen flex flex-col items-center justify-start pb-24">
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-bg-new.png"
+          src="/images/cable32.png"
           alt="Contact Background"
           fill sizes="100vw"
           className="object-cover"
@@ -79,7 +79,7 @@ export default function ContactCateringSection() {
       </div>
 
       {/* Main Content Wrapper */}
-      <div className="relative z-10 w-full flex flex-col items-center">
+      <div className="relative z-10 w-full flex flex-col items-center px-4 sm:px-6 lg:px-8">
         
         {/* Main Heading */}
         <motion.h1 
@@ -97,7 +97,7 @@ export default function ContactCateringSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="w-full max-w-325 bg-black/40 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-10 lg:p-12 border border-white/10"
+          className="w-full max-w-6xl bg-[#A77B5C]/40 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-10 lg:p-12 border border-white/20"
         >
           <form className="flex flex-col gap-12" onSubmit={handleSubmit}>
             

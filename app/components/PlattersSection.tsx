@@ -11,10 +11,10 @@ const PlattersSection = () => {
 
   return (
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-y border-gray-200">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[400px] lg:min-h-[700px]">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[400px] lg:min-h-[400px] xl:min-h-[700px]">
 
         {/* Left Column: Image */}
-        <div className="w-full h-[280px] lg:h-auto relative order-1 lg:order-1">
+        <div className="w-full h-[280px] md:h-auto relative order-1 md:order-1">
           <Image
             src="/images/meats.webp"
             alt="Grillado's Platters"
@@ -24,7 +24,7 @@ const PlattersSection = () => {
         </div>
 
         {/* Right Column: Content */}
-        <div className="w-full flex flex-col justify-center items-center text-center order-2 lg:order-2 px-6 md:px-12 lg:px-16 xl:px-24 py-8 md:py-12 bg-gray-50">
+        <div className="w-full flex flex-col justify-center items-center text-center order-2 md:order-2 px-6 md:px-12 lg:px-16 xl:px-24 py-6 md:py-6 xl:py-12 bg-gray-50">
 
           {/* Custom SVG Icon */}
           <div className="flex justify-center mb-6">

@@ -20,6 +20,8 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
     consent: false,
   });
 
+
+
   // Prevent background scrolling when modal is open
   useEffect(() => {
     if (isOpen) {

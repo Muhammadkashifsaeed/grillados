@@ -27,7 +27,7 @@ const HeroSection = () => {
           fill 
           priority
           quality={100}
-          className="object-contain object-center" 
+          className="object-cover object-center" 
           sizes="100vw"
         />
       </motion.div>

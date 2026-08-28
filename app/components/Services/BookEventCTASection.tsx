@@ -11,18 +11,11 @@ const BookEventCTASection = () => {
   return (
     <section className="relative w-full min-h-[450px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden">
       
-      {/* Background Image - Reused from Hero */}
-      <div className="absolute inset-0 z-0">
-        <Image 
-          src="/images/vecteezy_ai-generated-banque.jpg" 
-          alt="Grillado Catering Book Event" 
-          fill 
-          priority
-          quality={100}
-          className="object-cover object-center" 
-          sizes="100vw"
-        />
-      </div>
+      {/* Background Image - Reused from Hero (Now Fixed Parallax) */}
+      <div 
+        className="absolute inset-0 z-0 bg-fixed bg-cover bg-center"
+        style={{ backgroundImage: 'url("/images/vecteezy_ai-generated-banque.jpg")' }}
+      ></div>
 
       {/* Dark Overlay - Identical to Hero */}
       <div className="absolute inset-0 bg-black/65 z-10 pointer-events-none"></div>

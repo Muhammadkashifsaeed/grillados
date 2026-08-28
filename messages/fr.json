@@ -43,7 +43,7 @@
   },
   "Sandwiches": {
     "heading": "Sandwichs / Pitas / Wraps",
-    "description": "Nos sandwiches, pitas et wraps offrent une délicieuse variété de saveurs et de textures, parfaites pour un repas ou une collation. Chaque option met en avant des ingrédients frais et de haute qualité, allant des viandes tendres et légumes croquants aux sauces relevées et tartinades savoureuses.",
+    "description": "Nos Sandwichs, Pitas et Wraps offrent une délicieuse variété de saveurs et de textures, parfaits pour tout repas ou collation. Chaque option est préparée avec des ingrédients frais et de haute qualité, allant des viandes tendres et des légumes éclatants aux sauces piquantes et aux tartinades savoureuses.",
     "orderNow": "Commander",
     "learnMore": "En savoir plus"
   },
@@ -64,7 +64,8 @@
     "subtitle": "Service Traiteur Par Grillados - La Restauration Sur Mesure À Son Meilleur",
     "madeWithLove": "Fait avec Amour",
     "description": "Que ce soit pour une petite réunion de famille ou pour célébrer une fête, le service traiteur de Grillado veut que vous profitiez pleinement de votre journée avec vos proches et nous laisser la cuisine. Chez Grillado Traiteur, nous sommes là pour vous servir !",
-    "smallHeading": ""
+    "smallHeading": "",
+    "platterDescription": "Service Traiteur Par Grillados - La Restauration Sur Mesure À Son Meilleur"
   },
   "CateringOffers": {
     "offer1": "Offre 1",
@@ -236,7 +237,7 @@
     }
   },
   "CateringHero": {
-    "heading": "Services de Traiteur",
+    "heading": "Grillado's Catering",
     "description": "Service traiteur préparé avec des ingrédients frais pour les événements d'entreprise, les fêtes privées, les mariages, les anniversaires et toutes les occasions spéciales.",
     "orderNow": "Commander Maintenant"
   },
@@ -466,7 +467,7 @@
   },
   "BirthdayCatering": {
     "heading": "anniversaire !",
-    "description": "Avec les innombrables choix de menu de Grillado's, personne ne sera laissé pour compte dans cet océan de délices culinaires. Laissez Grillado rendre votre anniversaire… délicieux.",
+    "description": "Avec les choix infinis du menu de Grillado's, personne ne sera laissé pour compte dans cet océan de délices culinaires. Laissez Grillado's rendre votre anniversaire – délicieux.",
     "contactUs": "Contactez-nous"
   },
   "WeddingCatering": {
@@ -786,7 +787,7 @@
     "deal6Desc": "Grillado's offre une réduction de 10 % à tous les membres de LA Fitness. Veuillez présenter votre carte d'abonnement au comptoir."
   },
   "ServicesHero": {
-    "titlePart1": "Nous préparons pour vos",
+    "titlePart1": "Nous servons lors de vos",
     "titlePart2": "occasions spéciales"
   },
   "Terms": {
@@ -843,5 +844,13 @@
     "za": "Afrique du Sud",
     "eg": "Égypte",
     "tr": "Turquie"
+  },
+  "HomePromo": {
+    "cateringHeading": "Les partenaires traiteurs de Grillado's",
+    "cateringDesc": "Grillado’s platters feature a beautifully arranged selection of grilled meats. Ideal for gatherings or a hearty meal, these platters showcase the full expertise of our grilling art.",
+    "appHeading": "GRILLADO'S Application",
+    "appDesc": "Grillado’s est une application mobile pratique et conviviale, conçue pour améliorer l’expérience culinaire des clients de Grillado’s, un restaurant réputé proposant une variété de plats grillés savoureux. Disponible en téléchargement, l’application Grillado’s permet aux utilisateurs de parcourir facilement le menu, de passer des commandes à emporter ou en livraison, et de profiter d’options de paiement fluides — le tout depuis le confort de leur smartphone.",
+    "orderNow": "Commander",
+    "learnMore": "En savoir plus"
   }
 }

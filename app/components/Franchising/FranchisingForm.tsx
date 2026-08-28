@@ -152,17 +152,15 @@ export default function FranchisingForm() {
   );
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-start pt-16 pb-24">
-      {/* Background Image with Dark Overlay */}
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-start pt-0 pb-24 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-bg-new.png"
+          src="/images/cable32.png"
           alt="Contact Background"
           fill sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/45 backdrop-blur-[2px]" />
       </div>
 
       {/* Main Content Wrapper */}
@@ -173,7 +171,7 @@ export default function FranchisingForm() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-[#FFFFFF] text-[48px] leading-[65px] font-semibold font-['Ribeat',sans-serif] uppercase tracking-wide mb-10 text-center drop-shadow-lg"
+          className="text-[#FFFFFF] text-[48px] leading-[65px] font-semibold font-['Ribeat',sans-serif] uppercase tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
         >
           {t('formHeading')}
         </motion.h1>
@@ -183,7 +181,7 @@ export default function FranchisingForm() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="w-full max-w-4xl bg-black/40 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-10 lg:p-12 border border-white/10"
+          className="w-full max-w-4xl bg-[#A77B5C]/40 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-10 lg:p-12 border border-white/20"
         >
           <form className="flex flex-col gap-12" onSubmit={handleSubmit}>
 
@@ -346,7 +344,7 @@ export default function FranchisingForm() {
             </section>
 
             {/* Cloudflare Turnstile */}
-            <div className="flex flex-col items-center mt-4">
+            <div className="flex flex-col items-start mt-4">
               <Turnstile
                 siteKey="1x00000000000000000000AA" // Dummy key for testing, always passes. Replace with real key in production.
                 onSuccess={(token) => setTurnstileToken(token)}
@@ -360,7 +358,7 @@ export default function FranchisingForm() {
               <button
                 type="submit"
                 disabled={isSubmitting || !turnstileToken}
-                className={`w-full max-w-3xl bg-[#DAAF18] hover:bg-[#b89214] text-black font-extrabold py-5 px-8 rounded-full transition-all duration-300 uppercase tracking-widest text-lg shadow-[0_0_15px_rgba(247,180,28,0.4)] hover:shadow-[0_0_25px_rgba(247,180,28,0.6)] ${(!turnstileToken || isSubmitting) ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-1'}`}
+                className={`w-full max-w-3xl bg-[#FAC716] hover:bg-[#b89214] text-black font-extrabold py-3 md:py-4 px-8 rounded-full transition-all duration-300 uppercase tracking-widest text-lg shadow-[0_0_15px_rgba(247,180,28,0.4)] hover:shadow-[0_0_25px_rgba(247,180,28,0.6)] ${(!turnstileToken || isSubmitting) ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-1'}`}
               >
                 {isSubmitting ? t('submitting') : t('submit')}
               </button>
