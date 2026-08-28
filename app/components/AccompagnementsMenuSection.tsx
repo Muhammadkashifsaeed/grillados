@@ -61,6 +61,7 @@ export const AccompagnementsMenuSection = () => {
                 src="/images/mobile10.jpg"
                 alt="Frites Accompagnements Mobile"
                 width={1000}
+                height={750}
                 className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-0 mb-0"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
