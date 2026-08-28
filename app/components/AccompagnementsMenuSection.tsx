@@ -31,11 +31,11 @@ export const AccompagnementsMenuSection = () => {
     { name: rawSides[7].name, price: '5.99' },
   ];
   return (
-    <section id="accompagnements" className="relative w-full py-4 lg:py-8 bg-transparent">
+    <section id="accompagnements" className="relative w-full py-0 md:py-4 lg:py-8 bg-transparent">
 
 
       <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-4 lg:gap-12 w-full items-stretch">
 
           {/* Left Column: Image */}
           <motion.div
@@ -61,8 +61,7 @@ export const AccompagnementsMenuSection = () => {
                 src="/images/mobile10.jpg"
                 alt="Frites Accompagnements Mobile"
                 width={1000}
-                height={750}
-                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-4 mb-0"
+                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-0 mb-0"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
