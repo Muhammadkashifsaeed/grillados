@@ -42,7 +42,7 @@ const CateringPartnersSection = () => {
               <Image
                 src={src}
                 alt={`Catering Partner ${idx + 1}`}
-                fill sizes="100vw"
+                fill sizes="200px"
                 className="object-contain"
               />
             </div>
