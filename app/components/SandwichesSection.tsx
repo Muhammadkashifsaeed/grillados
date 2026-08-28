@@ -11,7 +11,7 @@ const SandwichesSection = () => {
 
   return (
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-y border-gray-200">
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[400px] lg:min-h-[400px] xl:min-h-[700px]">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[400px] lg:min-h-[400px] xl:min-h-[500px]">
 
         {/* Left Column: Content */}
         <div className="w-full flex flex-col justify-center items-center text-center order-2 md:order-1 px-6 md:px-12 lg:px-16 xl:px-24 py-6 md:py-6 xl:py-12 bg-gray-50">
