@@ -12,24 +12,23 @@ const NewDishes = () => {
 
   return (
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-t border-gray-200">
-      <div className="w-full flex flex-col lg:flex-row items-center">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[400px] lg:min-h-[400px] xl:min-h-[700px]">
         
         {/* Left Column: YouTube Video */}
-        <div className="w-full lg:w-[60%] relative overflow-hidden aspect-video order-1 shadow-sm">
-          {/* 16:9 Aspect Ratio container prevents black bars, full 100% width/height shows everything clearly */}
-          <div className="absolute inset-0 w-full h-full pointer-events-none">
+        <div className="w-full h-[300px] md:h-auto relative overflow-hidden order-1 bg-black">
+          <div className="absolute top-1/2 left-1/2 w-[350%] h-[350%] md:w-[250%] md:h-[250%] lg:w-[200%] lg:h-[200%] transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
             <iframe
               src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&controls=0&playlist=${videoId}&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3`}
               title="Grillados New Dishes"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              className="w-full h-full scale-[1.05]"
+              className="w-full h-full"
               style={{ border: 'none' }}
             ></iframe>
           </div>
         </div>
 
         {/* Right Column: Content */}
-        <div className="w-full lg:w-[40%] h-full flex flex-col justify-center items-center text-center px-4 md:px-8 lg:px-12 xl:px-16 py-8 lg:py-12 bg-gray-50 order-2">
+        <div className="w-full flex flex-col justify-center items-center text-center px-4 md:px-8 lg:px-16 xl:px-24 py-8 lg:py-12 bg-gray-50 order-2">
           
           {/* Custom SVG Icon */}
           <div className="mb-2 flex justify-center">
