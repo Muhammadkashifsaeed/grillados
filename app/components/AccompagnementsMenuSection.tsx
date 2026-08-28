@@ -43,9 +43,9 @@ export const AccompagnementsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="w-full flex items-center justify-center relative min-h-[300px] lg:min-h-[500px]"
+            className="w-full flex items-center justify-center relative min-h-0 md:min-h-[300px] lg:min-h-[500px]"
           >
-            <div className="relative w-full h-full min-h-[300px] lg:min-h-[500px]">
+            <div className="relative w-full h-full min-h-0 md:min-h-[300px] lg:min-h-[500px]">
               {/* Desktop Image */}
               <Image
                 src="/images/Frities.png"
@@ -62,7 +62,7 @@ export const AccompagnementsMenuSection = () => {
                 alt="Frites Accompagnements Mobile"
                 width={1000}
                 height={750}
-                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-4 mb-2"
+                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-4 mb-0"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
