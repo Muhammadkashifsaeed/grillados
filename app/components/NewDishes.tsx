@@ -12,7 +12,7 @@ const NewDishes = () => {
 
   return (
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-t border-gray-200">
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[400px] lg:min-h-[400px] xl:min-h-[500px]">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[400px] lg:min-h-[400px] xl:min-h-[600px]">
         
         {/* Left Column: YouTube Video */}
         <div className="w-full h-[300px] md:h-auto relative overflow-hidden order-1 bg-black">
