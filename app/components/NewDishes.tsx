@@ -45,7 +45,7 @@ const NewDishes = () => {
           </h2>
           
           {/* Divider Centered */}
-          <div className="w-16 h-1 bg-black rounded-md mb-4"></div>
+          <div className="w-24 h-1 bg-[#fbbc04] mx-auto mt-2 mb-4 rounded-full"></div>
           
           {/* Description */}
           <p className="mb-6 max-w-md" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '15px', lineHeight: '24px', color: 'rgb(0,0,0)' }}>

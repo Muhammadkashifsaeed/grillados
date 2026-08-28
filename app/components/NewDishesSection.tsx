@@ -58,7 +58,7 @@ const NewDishesSection = () => {
         
         {/* Divider */}
         <div 
-          className="w-[140px] h-[3px] bg-black rounded-full mx-auto mb-2"
+          className="w-24 h-1 bg-[#fbbc04] mx-auto mt-2 mb-4 rounded-full"
         ></div>
 
         {/* Carousel Gallery */}

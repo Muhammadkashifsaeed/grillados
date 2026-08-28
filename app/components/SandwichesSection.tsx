@@ -28,6 +28,8 @@ const SandwichesSection = () => {
           >
             {t('heading')}
           </h2>
+          <div className="w-24 h-1 bg-[#fbbc04] mx-auto mt-2 mb-4 rounded-full"></div>
+
 
           {/* Paragraph */}
           <p className="mb-8" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}>
