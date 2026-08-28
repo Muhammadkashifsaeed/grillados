@@ -129,6 +129,7 @@ const ReviewsSection = () => {
           >
             {t('subtitle')}
           </p>
+          <div className="w-24 h-1 bg-black mx-auto mt-4 mb-2 rounded-full"></div>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center lg:items-stretch">

@@ -24,7 +24,7 @@ const CateringPartnersSection = () => {
         >
           {t('heading')}
         </h2>
-        <div className="w-24 h-1 bg-[#fbbc04] mx-auto mt-2 mb-1 rounded-full"></div>
+        <div className="w-24 h-1 bg-black mx-auto mt-2 mb-1 rounded-full"></div>
 
 
         <p className="max-w-3xl text-center mt-3" style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(0, 0, 0)' }}>

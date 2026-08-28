@@ -117,7 +117,7 @@ const HomePromoSections = () => {
             </h2>
 
             {/* Divider */}
-            <div className="w-16 h-[4px] bg-black rounded-full mt-4 mb-6"></div>
+            <div className="w-24 h-1 bg-black mx-auto mt-2 mb-4 rounded-full"></div>
 
             <p
               className="mb-8"

@@ -38,7 +38,7 @@ const PlattersSection = () => {
           >
             {t('heading')}
           </h2>
-          <div className="w-24 h-1 bg-[#fbbc04] mx-auto mt-2 mb-4 rounded-full"></div>
+          <div className="w-24 h-1 bg-black mx-auto mt-2 mb-4 rounded-full"></div>
 
 
           {/* Paragraph */}
