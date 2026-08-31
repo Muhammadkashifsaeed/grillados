@@ -88,9 +88,9 @@ export const AppetizersMenuSection = () => {
 
           {/* Right Column: Image */}
           <motion.div
-            initial={{ opacity: 0, x: 300 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="w-full flex items-start justify-center relative lg:min-h-[500px] mx-auto"
           >
