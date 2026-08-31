@@ -69,17 +69,6 @@ const BookEventCTASection = () => {
           <p>{t('p3')}</p>
         </motion.div>
 
-        {/* Button */}
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-[#fbbc04] hover:bg-[#d72323] hover:text-white text-black font-bold rounded-lg h-[56px] px-10 shadow-md transition-all duration-300 hover:scale-[1.03] w-full max-w-[320px] md:w-auto cursor-pointer"
-        >
-          {t('button')}
-        </motion.button>
-
       </div>
     </section>
   );
