@@ -79,13 +79,13 @@ export const GarnishedRiceSauceMenuSection = () => {
             </div>
 
             {/* Mobile Image (mobile13) moved above Fiery section */}
-            <div className="w-full flex md:hidden justify-center mb-8">
+            <div className="w-full block md:hidden mx-auto text-center mb-8">
               <Image
                 src="/images/mobile13.jpg"
                 alt="Zesty Food Mobile"
                 width={1000}
                 height={750}
-                className="w-full max-w-[500px] h-auto object-contain rounded-xl drop-shadow-xl"
+                className="w-full max-w-[500px] h-auto object-contain rounded-xl drop-shadow-xl inline-block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

@@ -43,7 +43,7 @@ export const AccompagnementsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="w-full flex items-center justify-center relative min-h-0 md:min-h-[300px] lg:min-h-[500px]"
+            className="w-full flex items-center justify-center relative min-h-0 md:min-h-[300px] lg:min-h-[500px] order-2 md:order-1"
           >
             <div className="relative w-full h-full min-h-0 md:min-h-[300px] lg:min-h-[500px]">
               {/* Desktop Image */}
@@ -77,7 +77,7 @@ export const AccompagnementsMenuSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="w-full flex flex-col justify-center"
+            className="w-full flex flex-col justify-center order-1 md:order-2"
           >
             <motion.div variants={fadeRightItem} className="mb-6 lg:mb-10">
               <h2
