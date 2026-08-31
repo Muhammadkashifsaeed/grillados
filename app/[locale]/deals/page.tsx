@@ -83,7 +83,7 @@ export default function DealsPage() {
             className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#f7b41c] text-white/80 hover:text-black backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20"
             aria-label="Previous image"
           >
-            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 ml-[-2px]" />
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 -ml-0.5" />
           </button>
 
           {/* Right Arrow */}
@@ -93,7 +93,7 @@ export default function DealsPage() {
             className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#f7b41c] text-white/80 hover:text-black backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20"
             aria-label="Next image"
           >
-            <ChevronRight className="w-5 h-5 md:w-6 md:h-6 mr-[-2px]" />
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6 -mr-0.5" />
           </button>
 
           {/* Navigation Dots */}

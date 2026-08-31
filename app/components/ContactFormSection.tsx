@@ -57,7 +57,7 @@ export default function ContactFormSection() {
 
   return (
     <section className="w-full pb-16 pt-0 px-4 md:px-8 flex items-center justify-center bg-white relative z-10">
-      <div className="relative w-full max-w-[1200px] rounded-[32px] overflow-hidden flex flex-col lg:flex-row shadow-2xl min-h-[750px]">
+      <div className="relative w-full max-w-300 rounded-8 overflow-hidden flex flex-col lg:flex-row shadow-2xl min-h-187.5">
         
         {/* Background Image for the rounded container */}
         <div 
@@ -75,34 +75,34 @@ export default function ContactFormSection() {
           <img 
             src="/images/image-66.png" 
             alt="Chef" 
-            className="w-[85%] md:w-[70%] lg:w-[95%] h-auto max-h-[800px] object-contain object-bottom pointer-events-none drop-shadow-2xl translate-y-2 lg:translate-y-4"
+            className="w-[85%] md:w-[70%] lg:w-[95%] h-auto max-h-200 object-contain object-bottom pointer-events-none drop-shadow-2xl translate-y-2 lg:translate-y-4"
           />
         </div>
 
         {/* Right Area - The Contact Form Card */}
         <div className="w-full lg:w-1/2 relative z-10 flex items-center justify-center p-6 sm:p-8 md:p-12 lg:p-12 my-auto">
           
-          <div className="w-full max-w-[550px] bg-white rounded-[16px] shadow-2xl p-8 sm:p-10 flex flex-col">
+          <div className="w-full max-w-137.5 bg-white rounded-4 shadow-2xl p-8 sm:p-10 flex flex-col">
             
             {/* Heading */}
-            <h2 className="text-[#333333] text-[28px] sm:text-[36px] font-[800] text-center tracking-tight mb-3 font-['Outfit',sans-serif]">
+            <h2 className="text-[#333333] text-7 sm:text-9 font-[800] text-center tracking-tight mb-3 font-['Outfit',sans-serif]">
               {t('heading')}
             </h2>
 
             {/* Description */}
-            <p className="text-[#333333] text-center text-[14px] sm:text-[15px] leading-[1.6] max-w-[480px] mx-auto mb-4 font-medium">
+            <p className="text-[#333333] text-center text-3.5 sm:text-3.75 leading-[1.6] max-w-120 mx-auto mb-4 font-medium">
               {t('desc')}
             </p>
 
             {/* Email Link */}
             <div className="text-center mb-6">
-              <a href="mailto:info@grillados.ca" className="text-[#f4a123] text-[15px] font-medium hover:underline">
+              <a href="mailto:info@grillados.ca" className="text-[#f4a123] text-3.75 font-medium hover:underline">
                 info@grillados.ca
               </a>
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="flex flex-col gap-[14px]">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
               
               {/* Full Name */}
               <div>
@@ -113,7 +113,7 @@ export default function ContactFormSection() {
                   placeholder={t('fullName')}
                   value={formData.fullName}
                   onChange={handleChange}
-                  className="w-full h-[47px] bg-[#f4f4f4] rounded-[6px] px-[15px] text-[15px] text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow border-none"
+                  className="w-full h-11.75 bg-[#f4f4f4] rounded-1.5 px-3.75 text-3.75 text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow border-none"
                 />
               </div>
 
@@ -125,14 +125,14 @@ export default function ContactFormSection() {
                   placeholder={t('address')}
                   value={formData.address}
                   onChange={handleChange}
-                  className="w-full h-[47px] bg-[#f4f4f4] rounded-[6px] px-[15px] text-[15px] text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow border-none"
+                  className="w-full h-11.75 bg-[#f4f4f4] rounded-1.5 px-3.75 text-3.75 text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow border-none"
                 />
               </div>
 
               {/* Email */}
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-[15px] flex items-center pointer-events-none">
-                  <Mail className="w-[16px] h-[16px] text-[#999999]" />
+                <div className="absolute inset-y-0 left-0 pl-3.75 flex items-center pointer-events-none">
+                  <Mail className="w-4 h-4 text-[#999999]" />
                 </div>
                 <input 
                   type="email" 
@@ -141,26 +141,26 @@ export default function ContactFormSection() {
                   placeholder={t('email')}
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full h-[47px] bg-[#f4f4f4] rounded-[6px] pl-[40px] pr-[15px] text-[15px] text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow border-none"
+                  className="w-full h-11.75 bg-[#f4f4f4] rounded-1.5 pl-10 pr-3.75 text-3.75 text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow border-none"
                 />
               </div>
 
               {/* Phone Number */}
-              <div className="relative flex items-center h-[47px] bg-[#f4f4f4] rounded-[6px] focus-within:ring-2 focus-within:ring-[#f47f23]/50 transition-shadow overflow-visible">
+              <div className="relative flex items-center h-11.75 bg-[#f4f4f4] rounded-1.5 focus-within:ring-2 focus-within:ring-[#f47f23]/50 transition-shadow overflow-visible">
                 
                 {/* Country Dropdown Trigger */}
                 <div 
-                  className="relative flex items-center gap-1 pl-[15px] pr-[10px] h-full shrink-0 bg-[#f4f4f4] cursor-pointer hover:bg-gray-200 transition-colors border-r border-[#e0e0e0] rounded-l-[6px]"
+                  className="relative flex items-center gap-1 pl-3.75 pr-2.5 h-full shrink-0 bg-[#f4f4f4] cursor-pointer hover:bg-gray-200 transition-colors border-r border-[#e0e0e0] rounded-l-[6px]"
                   onClick={() => setShowCountryDropdown(!showCountryDropdown)}
                 >
-                  <img src={selectedCountry.flag} alt={selectedCountry.code} className="w-[18px] h-auto object-contain rounded-[2px]" />
-                  <span className="text-[13px] text-[#333] font-medium ml-1">{selectedCountry.dialCode}</span>
-                  <ChevronDown className="w-[14px] h-[14px] text-[#666666]" />
+                  <img src={selectedCountry.flag} alt={selectedCountry.code} className="w-4.5 h-auto object-contain rounded-0.5" />
+                  <span className="text-3.25 text-[#333] font-medium ml-1">{selectedCountry.dialCode}</span>
+                  <ChevronDown className="w-3.5 h-3.5 text-[#666666]" />
                 </div>
 
                 {/* Dropdown Menu */}
                 {showCountryDropdown && (
-                  <div className="absolute top-[52px] left-0 w-[240px] bg-white shadow-xl border border-gray-100 rounded-[8px] py-2 z-50 max-h-[220px] overflow-y-auto">
+                  <div className="absolute top-13 left-0 w-60 bg-white shadow-xl border border-gray-100 rounded-2 py-2 z-50 max-h-55 overflow-y-auto">
                     {countries.map((country) => (
                       <div 
                         key={country.code}
@@ -170,9 +170,9 @@ export default function ContactFormSection() {
                           setShowCountryDropdown(false);
                         }}
                       >
-                        <img src={country.flag} alt={country.name} className="w-[20px] h-auto object-contain rounded-[2px]" />
-                        <span className="text-[14px] text-[#333] flex-1">{country.name}</span>
-                        <span className="text-[13px] text-[#666] font-medium">{country.dialCode}</span>
+                        <img src={country.flag} alt={country.name} className="w-5 h-auto object-contain rounded-0.5" />
+                        <span className="text-3.5 text-[#333] flex-1">{country.name}</span>
+                        <span className="text-3.25 text-[#666] font-medium">{country.dialCode}</span>
                       </div>
                     ))}
                   </div>
@@ -185,7 +185,7 @@ export default function ContactFormSection() {
                   placeholder={t('phone')}
                   value={formData.phone}
                   onChange={handleChange}
-                  className="flex-1 h-full bg-[#f4f4f4] px-[10px] text-[15px] text-[#333] placeholder-[#999999] focus:outline-none border-none rounded-r-[6px]"
+                  className="flex-1 h-full bg-[#f4f4f4] px-2.5 text-3.75 text-[#333] placeholder-[#999999] focus:outline-none border-none rounded-r-[6px]"
                 />
               </div>
 
@@ -196,33 +196,33 @@ export default function ContactFormSection() {
                   placeholder={t('message')}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full h-[100px] bg-[#f4f4f4] rounded-[6px] p-[15px] text-[15px] text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow resize-none border-none"
+                  className="w-full h-25 bg-[#f4f4f4] rounded-1.5 p-3.75 text-3.75 text-[#333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#f47f23]/50 transition-shadow resize-none border-none"
                 ></textarea>
               </div>
 
               {/* Cloudflare Verification Success */}
-              <div className="w-full max-w-[280px] h-[65px] bg-[#f9f9f9] border border-[#e0e0e0] rounded-[3px] flex items-center justify-between px-3 py-2 mt-2">
+              <div className="w-full max-w-70 h-16.25 bg-[#f9f9f9] border border-[#e0e0e0] rounded-0.75 flex items-center justify-between px-3 py-2 mt-2">
                 <div className="flex items-center gap-3">
-                  <div className="w-[26px] h-[26px] bg-[#22c55e] rounded-full flex items-center justify-center relative shadow-sm">
+                  <div className="w-6.5 h-6.5 bg-[#22c55e] rounded-full flex items-center justify-center relative shadow-sm">
                     {/* Checkmark SVG */}
-                    <svg className="w-[14px] h-[14px] text-white" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                    <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
-                  <span className="text-[14px] text-[#333] font-medium">{t('success')}</span>
+                  <span className="text-3.5 text-[#333] font-medium">{t('success')}</span>
                 </div>
                 <div className="flex flex-col items-end">
                   <div className="flex items-center gap-1 mb-0.5">
-                    <span className="font-bold text-[13px] text-[#f48120] tracking-tight">CLOUDFLARE</span>
+                    <span className="font-bold text-3.25 text-[#f48120] tracking-tight">CLOUDFLARE</span>
                   </div>
-                  <span className="text-[9px] text-[#999]">{t('privacy')} • {t('help')}</span>
+                  <span className="text-2.25 text-[#999]">{t('privacy')} • {t('help')}</span>
                 </div>
               </div>
 
               {/* Submit Button */}
               <button 
                 type="submit"
-                className="w-full h-[46px] bg-[#e12529] hover:bg-[#c92025] text-white text-[15px] font-[600] rounded-[25px] tracking-wider transition-colors duration-300 mt-4 cursor-pointer flex items-center justify-center shadow-md"
+                className="w-full h-11.5 bg-[#e12529] hover:bg-[#c92025] text-white text-3.75 font-[600] rounded-6.25 tracking-wider transition-colors duration-300 mt-4 cursor-pointer flex items-center justify-center shadow-md"
               >
                 {t('submit')}
               </button>

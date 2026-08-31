@@ -55,7 +55,7 @@ export default function ComingSoonLocations() {
           >
             {t('comingSoonLocations')}
           </h2>
-          <div className="w-25 h-[3px] bg-orange-500 mt-5"></div>
+          <div className="w-25 h-0.75 bg-orange-500 mt-5"></div>
         </motion.div>
 
         {/* Content Container */}

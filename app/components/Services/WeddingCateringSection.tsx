@@ -43,7 +43,7 @@ export default function WeddingCateringSection() {
           </h2>
 
           {/* Divider */}
-          <div className="w-16 h-[4px] bg-black rounded-full mb-6 mx-auto"></div>
+          <div className="w-16 h-1 bg-black rounded-full mb-6 mx-auto"></div>
 
           {/* Description */}
           <p 
@@ -69,7 +69,7 @@ export default function WeddingCateringSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] overflow-hidden shadow-2xl order-1 md:order-2"
+          className="relative w-full h-100 sm:h-125 md:h-150 lg:h-175 xl:h-200 overflow-hidden shadow-2xl order-1 md:order-2"
         >
           <Image
             src="/images/servededd.png"

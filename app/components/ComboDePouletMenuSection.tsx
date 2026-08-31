@@ -32,7 +32,7 @@ export const ComboDePouletMenuSection = () => {
     <section id="combos" className="relative w-full py-4 lg:py-8 bg-transparent">
 
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-16.25 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
 
           {/* Left Column: Menu Items */}
@@ -57,7 +57,7 @@ export const ComboDePouletMenuSection = () => {
               {menuItemsLocal.map((item, index) => (
                 <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
+                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
                       {item.name}
                     </span>
                     <div
@@ -67,7 +67,7 @@ export const ComboDePouletMenuSection = () => {
                         minWidth: '4px'
                       }}
                     ></div>
-                    <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
+                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
                       {item.price}
                     </span>
                   </div>
@@ -96,13 +96,13 @@ export const ComboDePouletMenuSection = () => {
 
           {/* Right Column: Image */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "0px" }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className="w-full flex items-start justify-center relative lg:min-h-[500px] mx-auto"
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="w-full flex items-start justify-center relative lg:min-h-125 mx-auto"
           >
-            <div className="relative w-full h-full lg:min-h-[500px]">
+            <div className="relative w-full h-full lg:min-h-125">
               {/* Desktop Image */}
               <Image
                 src="/images/chcken.png"
@@ -119,7 +119,7 @@ export const ComboDePouletMenuSection = () => {
                 alt="Combo de Poulet Grillé Mobile"
                 width={1000}
                 height={750}
-                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-4 mb-2"
+                className="w-full max-w-125 mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-4 mb-2"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

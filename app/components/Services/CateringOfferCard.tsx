@@ -77,9 +77,9 @@ const CateringOfferCard: React.FC<CateringOfferProps> = ({
       </div>
 
       {/* Right Image - 45% Width on Desktop */}
-      <div className="w-full md:w-[45%] flex items-center justify-center relative min-h-[250px] sm:min-h-[350px] lg:min-h-[450px]">
+      <div className="w-full md:w-[45%] flex items-center justify-center relative min-h-62.5 sm:min-h-87.5 lg:min-h-112.5">
         <motion.div 
-          className="relative w-[70%] sm:w-[60%] lg:w-[65%] min-h-[250px] sm:min-h-[350px] lg:min-h-[450px] mx-auto"
+          className="relative w-[70%] sm:w-[60%] lg:w-[65%] min-h-62.5 sm:min-h-87.5 lg:min-h-112.5 mx-auto"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
         >

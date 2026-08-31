@@ -36,7 +36,7 @@ const AboutUsSmart = () => {
         </div>
 
         {/* Right Side: Image */}
-        <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px] rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2 transform transition-transform duration-500 hover:scale-[1.02]">
+        <div className="relative w-full h-62.5 sm:h-87.5 md:h-100 rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2 transform transition-transform duration-500 hover:scale-[1.02]">
           <Image 
             src="/images/making.jpg" 
             alt="Making Grillados" 

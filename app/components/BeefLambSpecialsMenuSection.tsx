@@ -55,7 +55,7 @@ export const BeefLambSpecialsMenuSection = () => {
     <section id="beef-lamb-specials" className="relative w-full py-4 lg:py-8 bg-transparent">
 
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
+      <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-16.25 md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
 
         <div className="hidden md:block">
           <MenuDualImage
@@ -65,9 +65,10 @@ export const BeefLambSpecialsMenuSection = () => {
         </div>
 
         {/* Custom Mobile Diagonal Split for mobile5 & 6 */}
-        <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-4 mb-2">
+        <div className="w-full max-w-125 mx-auto flex md:hidden relative aspect-4/3 drop-shadow-2xl mt-4 mb-2">
           {/* Left Image */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}
             className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
             style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
           >
@@ -78,10 +79,11 @@ export const BeefLambSpecialsMenuSection = () => {
               className="object-cover scale-[1.15] origin-center"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-          </div>
+          </motion.div>
 
           {/* Right Image */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
             className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
             style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
           >
@@ -92,7 +94,7 @@ export const BeefLambSpecialsMenuSection = () => {
               className="object-cover scale-[1.15] origin-center"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-          </div>
+          </motion.div>
         </div>
 
 
@@ -123,7 +125,7 @@ export const BeefLambSpecialsMenuSection = () => {
                 <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
                   {/* Name + dotted leader + price */}
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
+                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
                       {item.name}
                     </span>
                     <div
@@ -133,7 +135,7 @@ export const BeefLambSpecialsMenuSection = () => {
                         minWidth: '4px',
                       }}
                     />
-                    <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
+                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
                       {item.price}
                     </span>
                   </div>
@@ -162,11 +164,11 @@ export const BeefLambSpecialsMenuSection = () => {
 
           {/* RIGHT: component.png — fade RIGHT */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "0px" }}
-            transition={{ duration: 1.2, ease: 'easeOut' }}
-            className="w-full flex items-start justify-center relative lg:min-h-[500px] mx-auto"
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="w-full flex items-start justify-center relative lg:min-h-125 mx-auto"
           >
             {/* Desktop Image */}
             <Image
@@ -178,7 +180,7 @@ export const BeefLambSpecialsMenuSection = () => {
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             {/* Mobile Layout for 7, 8, 9 */}
-            <div className="w-full max-w-[500px] mx-auto flex md:hidden flex-col gap-4 mt-4 mb-2">
+            <div className="w-full max-w-125 mx-auto flex md:hidden flex-col gap-4 mt-4 mb-2">
               {/* Top Image: Mobile 7 */}
               <div className="w-full drop-shadow-2xl">
                 <Image
@@ -193,9 +195,10 @@ export const BeefLambSpecialsMenuSection = () => {
               </div>
 
               {/* Bottom Images: Mobile 8 & 9 with VIP diagonal split */}
-              <div className="relative w-full aspect-[4/3] drop-shadow-2xl">
+              <div className="relative w-full aspect-4/3 drop-shadow-2xl">
                 {/* Left Image (8) */}
-                <div
+                <motion.div
+                  initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}
                   className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
                   style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
                 >
@@ -206,10 +209,11 @@ export const BeefLambSpecialsMenuSection = () => {
                     className="object-cover scale-[1.15] origin-center"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                </div>
+                </motion.div>
 
                 {/* Right Image (9) */}
-                <div
+                <motion.div
+                  initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
                   className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
                   style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
                 >
@@ -220,7 +224,7 @@ export const BeefLambSpecialsMenuSection = () => {
                     className="object-cover scale-[1.15] origin-center"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>

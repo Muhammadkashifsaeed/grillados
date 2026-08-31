@@ -9,7 +9,7 @@ const AboutUsStory = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
         {/* Left Side: Images Composition */}
-        <div className="relative w-full h-[350px] sm:h-[450px] md:h-[550px] flex items-center justify-center">
+        <div className="relative w-full h-87.5 sm:h-112.5 md:h-137.5 flex items-center justify-center">
 
           {/* First Image (Top Left) */}
           <div className="absolute top-[3%] left-0 w-[48%] h-[70%] sm:h-[75%] md:h-[80%] rounded-2xl overflow-hidden shadow-2xl z-10 border-[6px] border-white">

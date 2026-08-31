@@ -37,7 +37,7 @@ const ReviewCard: React.FC<ReviewProps> = ({ date, review, name, avatarSrc }) =>
 
           {/* Name + Date */}
           <div className="flex flex-col">
-            <span className="text-gray-900 font-semibold text-[15px] leading-tight">{name}</span>
+            <span className="text-gray-900 font-semibold text-3.75 leading-tight">{name}</span>
             <span className="text-gray-500 text-xs">{date}</span>
           </div>
         </div>
@@ -68,7 +68,7 @@ const ReviewCard: React.FC<ReviewProps> = ({ date, review, name, avatarSrc }) =>
       </div>
 
       {/* Review Text */}
-      <p className="text-gray-700 text-[14px] leading-relaxed">
+      <p className="text-gray-700 text-3.5 leading-relaxed">
         {review}
       </p>
     </div>

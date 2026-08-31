@@ -51,7 +51,7 @@ const CustomizedOptionsSection = () => {
             >
               {t('heading')}
               {/* Divider (Full width of heading) */}
-              <div className="w-full h-[4px] bg-black rounded-full mt-4 mb-[40px]"></div>
+              <div className="w-full h-1 bg-black rounded-full mt-4 mb-10"></div>
             </h2>
           </motion.div>
 
@@ -90,7 +90,7 @@ const CustomizedOptionsSection = () => {
             {/* Button 1 */}
             <Link 
               href="/order" 
-              className="h-[48px] sm:h-[52px] px-2 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
+              className="h-12 sm:h-13 px-2 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }}
             >
               {t('orderNow')}
@@ -98,7 +98,7 @@ const CustomizedOptionsSection = () => {
 
             {/* Button 2 */}
             <button 
-              className="h-[48px] sm:h-[52px] px-2 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
+              className="h-12 sm:h-13 px-2 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }}
             >
               {t('learnMore')}

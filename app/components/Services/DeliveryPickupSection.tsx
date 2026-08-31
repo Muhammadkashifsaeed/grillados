@@ -83,7 +83,7 @@ export default function DeliveryPickupSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px]"
+          className="relative w-full h-100 sm:h-125 md:h-150 lg:h-175 xl:h-200"
         >
           {/* Note: Adjusting image fit to ensure it blends nicely with the background without strict bounding boxes unless desired */}
           <Image

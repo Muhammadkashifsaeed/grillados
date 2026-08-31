@@ -64,7 +64,7 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="relative w-full max-w-[550px] bg-[#660000] rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden border-2 border-white/10 z-10 flex flex-col max-h-[90vh]"
+            className="relative w-full max-w-137.5 bg-[#660000] rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden border-2 border-white/10 z-10 flex flex-col max-h-[90vh]"
           >
             {/* Decorative Pattern Background */}
             <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay pointer-events-none"></div>
@@ -155,7 +155,7 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
                     onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
                   />
                 </div>
-                <label htmlFor="consent" className="text-white/60 text-[11px] sm:text-xs leading-relaxed cursor-pointer select-none">
+                <label htmlFor="consent" className="text-white/60 text-2.75 sm:text-xs leading-relaxed cursor-pointer select-none">
                   {t('iAgree')} <a href="#" className="underline hover:text-white transition-colors">{t('privacyPolicy')}</a> | <a href="#" className="underline hover:text-white transition-colors">{t('termsOfService')}</a>
                 </label>
               </div>

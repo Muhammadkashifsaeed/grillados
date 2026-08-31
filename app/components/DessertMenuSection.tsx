@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { MenuSection } from './Menu/MenuSection';
@@ -33,9 +34,10 @@ export const DessertMenuSection = () => {
 
       <div className="flex flex-col gap-0 md:gap-12 w-full">
         {/* Custom Mobile Diagonal Split for mobile15 & 16 */}
-        <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-2 mb-2">
+        <div className="w-full max-w-125 mx-auto flex md:hidden relative aspect-4/3 drop-shadow-2xl mt-2 mb-2">
           {/* Left Image */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}
             className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
             style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
           >
@@ -46,10 +48,11 @@ export const DessertMenuSection = () => {
               className="object-cover scale-[1.15] origin-center"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-          </div>
+          </motion.div>
 
           {/* Right Image */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
             className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
             style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
           >
@@ -60,7 +63,7 @@ export const DessertMenuSection = () => {
               className="object-cover scale-[1.15] origin-center"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-          </div>
+          </motion.div>
         </div>
 
         {/* ROW 2: Dessert Menu + a-1 Image */}
@@ -81,7 +84,7 @@ export const DessertMenuSection = () => {
             </>
           }
           rightContent={
-            <div className="relative w-full h-full lg:min-h-[500px] flex items-center justify-center lg:mb-8">
+            <div className="relative w-full h-full lg:min-h-125 flex items-center justify-center lg:mb-8">
               {/* Desktop Image */}
               <Image
                 src="/images/a-1.png"
@@ -98,7 +101,7 @@ export const DessertMenuSection = () => {
                 alt="Dessert Mobile"
                 width={1000}
                 height={750}
-                className="w-full max-w-[500px] mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-4 mb-2"
+                className="w-full max-w-125 mx-auto h-auto object-contain rounded-xl drop-shadow-2xl block md:hidden mt-4 mb-2"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
@@ -118,9 +121,10 @@ export const DessertMenuSection = () => {
       </div>
 
       {/* Custom Mobile Diagonal Split for mobile18 & 19 */}
-      <div className="w-full max-w-[500px] mx-auto flex md:hidden relative aspect-[4/3] drop-shadow-2xl mt-4 mb-16">
+      <div className="w-full max-w-125 mx-auto flex md:hidden relative aspect-4/3 drop-shadow-2xl mt-4 mb-16">
         {/* Left Image */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}
           className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
           style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}
         >
@@ -133,10 +137,11 @@ export const DessertMenuSection = () => {
             className="object-cover scale-[1.15] origin-center"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
-        </div>
+        </motion.div>
 
         {/* Right Image */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
           className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]"
           style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}
         >
@@ -147,7 +152,7 @@ export const DessertMenuSection = () => {
             className="object-cover scale-[1.15] origin-center"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
-        </div>
+        </motion.div>
       </div>
     </MenuSection>
   );

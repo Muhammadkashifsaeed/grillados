@@ -10,7 +10,7 @@ const CateringHeroBanner = () => {
   const t = useTranslations('CateringHero');
 
   return (
-    <section className="relative w-full h-[400px] lg:h-[500px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-100 lg:h-125 flex items-center justify-center overflow-hidden">
       
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -36,11 +36,11 @@ const CateringHeroBanner = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-[30px]"
+          className="mb-7.5"
         >
           <div className="bg-[#EB5250] rounded-lg py-3 px-4 sm:px-6 md:px-8 inline-block shadow-lg max-w-[90vw] md:max-w-none">
             <h1 
-              className="tracking-tight text-3xl sm:text-4xl md:text-[55px] leading-snug md:leading-[69px] whitespace-normal sm:whitespace-nowrap break-words"
+              className="tracking-tight text-3xl sm:text-4xl md:text-13.75 leading-snug md:leading-17.25 whitespace-normal sm:whitespace-nowrap break-words"
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255, 255, 255)' }}
             >
               {t('heading')}
@@ -53,7 +53,7 @@ const CateringHeroBanner = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="mb-[30px] max-w-3xl drop-shadow-md whitespace-pre-wrap"
+          className="mb-7.5 max-w-3xl drop-shadow-md whitespace-pre-wrap"
           style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(255, 255, 255)' }}
         >
           {t('description')}
@@ -68,7 +68,7 @@ const CateringHeroBanner = () => {
           <Link 
             href="/order"
             aria-label={t('orderNow')}
-            className="bg-[#F4C430] hover:bg-[#d72323] rounded-md h-[52px] px-[32px] flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer inline-flex"
+            className="bg-[#F4C430] hover:bg-[#d72323] rounded-md h-13 px-8 flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer inline-flex"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px', color: 'rgb(255, 255, 255)' }}
           >
             {t('orderNow')}

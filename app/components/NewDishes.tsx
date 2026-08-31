@@ -12,10 +12,10 @@ const NewDishes = () => {
 
   return (
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-t border-gray-200">
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[200px] lg:min-h-[280px] xl:min-h-[450px]">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-40 lg:min-h-60 xl:min-h-75">
         
         {/* Left Column: YouTube Video */}
-        <div className="w-full h-[180px] md:h-auto relative overflow-hidden order-1 bg-black group">
+        <div className="w-full h-35 md:h-auto relative overflow-hidden order-1 bg-black group">
           <iframe
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&controls=0&playlist=${videoId}&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3`}
             title="Grillados New Dishes"
@@ -28,7 +28,7 @@ const NewDishes = () => {
         </div>
 
         {/* Right Column: Content */}
-        <div className="w-full flex flex-col justify-center items-center text-center px-4 md:px-8 lg:px-16 xl:px-24 py-8 lg:py-12 bg-gray-50 order-2">
+        <div className="w-full flex flex-col justify-center items-center text-center px-4 md:px-8 lg:px-16 xl:px-24 py-6 lg:py-8 bg-gray-50 order-2">
 
           {/* Custom SVG Icon */}
           <div className="mb-2 flex justify-center">
@@ -53,11 +53,11 @@ const NewDishes = () => {
 
           {/* Buttons: Yellow default, Red on hover */}
           <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
-            <Link href="/order" className="group h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+            <Link href="/order" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('orderNow')}</span>
             </Link>
 
-            <Link href="/menu" className="group h-[48px] sm:h-[52px] px-4 sm:px-8 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+            <Link href="/menu" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#DAAF18] hover:bg-[#E04B51] text-zinc-900 hover:text-white rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('learnMore')}</span>
             </Link>
           </div>

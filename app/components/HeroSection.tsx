@@ -12,7 +12,7 @@ const HeroSection = () => {
   const router = useRouter();
 
   return (
-    <section className="relative w-full h-[40vh] min-h-[350px] md:min-h-[400px] flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
+    <section className="relative w-full h-[40vh] min-h-87.5 md:min-h-100 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
       
       {/* Background Image with Cinematic Zoom and floating */}
       <motion.div 
@@ -50,7 +50,7 @@ const HeroSection = () => {
           ></div>
           
           <h1
-            className="text-white py-3 px-3 sm:px-5 relative z-10 text-center whitespace-normal sm:whitespace-nowrap text-3xl sm:text-4xl md:text-[55px] leading-snug md:leading-[70px] break-words"
+            className="text-white py-3 px-3 sm:px-5 relative z-10 text-center whitespace-normal sm:whitespace-nowrap text-3xl sm:text-4xl md:text-13.75 leading-snug md:leading-17.5 break-words"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255,255,255)' }}
           >
             {t('welcome')}
@@ -61,7 +61,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-          className="mb-10 max-w-4xl drop-shadow-md w-full px-4 text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[30px]"
+          className="mb-10 max-w-4xl drop-shadow-md w-full px-4 text-sm sm:text-base md:text-4.5 leading-relaxed md:leading-7.5"
           style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, color: 'rgb(255,255,255)' }}
         >
           {t('subtitle')}
@@ -78,7 +78,7 @@ const HeroSection = () => {
             whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/order')}
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-3 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none text-[15px] sm:text-[20px]"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-3 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none text-3.75 sm:text-5"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
             <span className="whitespace-nowrap">{t('orderNow')}</span>
@@ -89,7 +89,7 @@ const HeroSection = () => {
             whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/order')}
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-3 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none text-[15px] sm:text-[20px]"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-3 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none text-3.75 sm:text-5"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
             <Menu className="w-4 h-4 sm:w-6 sm:h-6 shrink-0" />

@@ -171,7 +171,7 @@ export default function FranchisingForm() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-[#FFFFFF] text-[48px] leading-[65px] font-semibold font-['Ribeat',sans-serif] uppercase tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
+          className="text-[#FFFFFF] text-12 leading-16.25 font-semibold font-['Ribeat',sans-serif] uppercase tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
         >
           {t('formHeading')}
         </motion.h1>

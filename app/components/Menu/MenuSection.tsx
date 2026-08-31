@@ -20,7 +20,7 @@ export const MenuSection = ({
       
 
       {/* Main Container */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8 flex flex-col gap-8 lg:gap-16">
+      <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-16.25 md:px-6 lg:px-8 flex flex-col gap-8 lg:gap-16">
         {children}
       </div>
     </section>

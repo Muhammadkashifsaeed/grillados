@@ -46,7 +46,7 @@ const NewDishesSection = () => {
 
   return (
     <section className="w-full pt-12 md:pt-16 pb-4 md:pb-8 bg-gray-50 overflow-hidden">
-      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-400 mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Heading */}
         <h2
@@ -91,7 +91,7 @@ const NewDishesSection = () => {
           {/* Left Button */}
           <button 
             onClick={prevSlide}
-            className="absolute left-[-15px] md:left-[-25px] top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 z-10 border border-gray-100"
+            className="absolute -left-3.75 md:-left-6.25 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 z-10 border border-gray-100"
           >
             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
           </button>
@@ -99,7 +99,7 @@ const NewDishesSection = () => {
           {/* Right Button */}
           <button 
             onClick={nextSlide}
-            className="absolute right-[-15px] md:right-[-25px] top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 z-10 border border-gray-100"
+            className="absolute -right-3.75 md:-right-6.25 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 z-10 border border-gray-100"
           >
             <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
           </button>

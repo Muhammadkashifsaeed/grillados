@@ -16,7 +16,7 @@ export const fadeLeftItem: Variants = {
   visible: { 
     opacity: 1, 
     x: 0, 
-    transition: { duration: 1.2, ease: "easeOut" } 
+    transition: { duration: 0.5, ease: "easeOut" } 
   },
 };
 
@@ -25,7 +25,7 @@ export const fadeRightItem: Variants = {
   visible: { 
     opacity: 1, 
     x: 0, 
-    transition: { duration: 1.2, ease: "easeOut" } 
+    transition: { duration: 0.5, ease: "easeOut" } 
   },
 };
 
@@ -34,7 +34,7 @@ export const fadeUpItem: Variants = {
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { duration: 1.2, ease: "easeOut" } 
+    transition: { duration: 0.5, ease: "easeOut" } 
   },
 };
 
@@ -43,6 +43,6 @@ export const fadeDownItem: Variants = {
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { duration: 1.2, ease: "easeOut" } 
+    transition: { duration: 0.5, ease: "easeOut" } 
   },
 };

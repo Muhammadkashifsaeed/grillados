@@ -9,7 +9,7 @@ const AboutUsHero = () => {
     <section className="relative w-full flex items-center justify-center bg-black overflow-hidden">
 
       {/* Background Image - Aspect ratio matching the provided screenshot exactly */}
-      <div className="w-full relative aspect-[100/34] md:aspect-[100/31] max-h-[55vh] md:max-h-[65vh]">
+      <div className="w-full relative aspect-100/34 md:aspect-100/31 max-h-[55vh] md:max-h-[65vh]">
         <Image
           src="/images/Grillados-Cambridge-interior.jpg"
           alt="About Us Background"

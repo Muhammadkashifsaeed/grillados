@@ -50,7 +50,7 @@ export default function ContactUsPage() {
       ></div>
 
       {/* Hero Section */}
-      <div className="relative w-full h-[40vh] min-h-[300px] md:h-[50vh] flex items-center justify-center z-10">
+      <div className="relative w-full h-[40vh] min-h-75 md:h-[50vh] flex items-center justify-center z-10">
         <div 
           className="absolute inset-0 z-0 pointer-events-none"
           style={{

@@ -26,7 +26,7 @@ export const Header = () => {
         
         {/* Left Side: Logo */}
         <Link href="/" className="shrink-0 flex items-center h-full py-2 mr-2 ml-0 lg:ml-2">
-          <div className="relative h-[55px] w-35 md:h-15 md:w-[150px] lg:h-[65px] lg:w-[165px] xl:h-17.5 xl:w-[180px]">
+          <div className="relative h-13.75 w-35 md:h-15 md:w-37.5 lg:h-16.25 lg:w-41.25 xl:h-17.5 xl:w-45">
             <Image
               src="/images/saman.png"
               alt="Grillado's Logo"
@@ -94,7 +94,7 @@ export const Header = () => {
           >
             <ShoppingBag className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
             <div className="flex flex-col text-left">
-              <span className="text-[10px] sm:text-xs md:text-sm xl:text-xs whitespace-nowrap">{t('orderOnline')}</span>
+              <span className="text-2.5 sm:text-xs md:text-sm xl:text-xs whitespace-nowrap">{t('orderOnline')}</span>
             </div>
           </Link>
 

@@ -18,7 +18,7 @@ const AboutUsVoted = () => {
       </div>
 
       {/* Center Box */}
-      <div className="relative z-10 w-full max-w-3xl min-h-[280px] bg-[#808080] border-4 border-[#FACC15] rounded-xl shadow-xl p-8 sm:p-10 text-center flex flex-col items-center justify-center mx-4 sm:mx-12">
+      <div className="relative z-10 w-full max-w-3xl min-h-70 bg-[#808080] border-4 border-[#FACC15] rounded-xl shadow-xl p-8 sm:p-10 text-center flex flex-col items-center justify-center mx-4 sm:mx-12">
         
         <p 
           className="mb-4"
@@ -28,7 +28,7 @@ const AboutUsVoted = () => {
         </p>
 
         <h2 
-          className="font-semibold uppercase tracking-wide mb-3 drop-shadow-md whitespace-normal sm:whitespace-nowrap text-xl sm:text-[28px] leading-snug sm:leading-[36px] break-words text-center"
+          className="font-semibold uppercase tracking-wide mb-3 drop-shadow-md whitespace-normal sm:whitespace-nowrap text-xl sm:text-7 leading-snug sm:leading-9 break-words text-center"
           style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)' }}
         >
           {t('votedText2')}

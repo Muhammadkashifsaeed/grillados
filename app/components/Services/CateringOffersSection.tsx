@@ -36,7 +36,7 @@ const CateringOffersSection = () => {
           >
             {tPartners('madeWithLove')}
           </h3>
-          <div className="w-24 h-[2px] bg-black my-6"></div>
+          <div className="w-24 h-0.5 bg-black my-6"></div>
           <h4 
             className="mb-4 tracking-wide"
             style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '16px', lineHeight: '26px', color: 'rgb(0,0,0)' }}

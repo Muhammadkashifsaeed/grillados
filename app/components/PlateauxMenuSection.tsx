@@ -48,7 +48,7 @@ export const PlateauxMenuSection = () => {
     <section id="plateaux" className="relative w-full pt-4 pb-1 md:py-4 lg:py-8 bg-transparent">
 
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-[65px] md:px-6 lg:px-8 flex flex-col lg:flex-col gap-0 md:gap-10 lg:gap-14">
+      <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-16.25 md:px-6 lg:px-8 flex flex-col lg:flex-col gap-0 md:gap-10 lg:gap-14">
 
 
         {/* ZONE 2: Bottom row */}
@@ -77,7 +77,7 @@ export const PlateauxMenuSection = () => {
                 <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
                   {/* Name + dotted leader + price */}
                   <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
+                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
                       {item.name}
                     </span>
                     <div
@@ -87,7 +87,7 @@ export const PlateauxMenuSection = () => {
                         minWidth: '4px',
                       }}
                     ></div>
-                    <span className="text-white text-[11px] sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
+                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
                       {item.price}
                     </span>
                   </div>
@@ -119,8 +119,8 @@ export const PlateauxMenuSection = () => {
             initial={{ opacity: 0, x: 300 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 1.2, ease: 'easeOut' }}
-            className="w-full hidden md:flex items-start justify-center relative lg:min-h-[500px] mx-auto"
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="w-full hidden md:flex items-start justify-center relative lg:min-h-125 mx-auto"
           >
             {/* Desktop Image */}
             <Image

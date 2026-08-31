@@ -85,7 +85,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                 alt="Zesty Food Mobile"
                 width={1000}
                 height={750}
-                className="w-full max-w-[500px] h-auto object-contain rounded-xl drop-shadow-xl inline-block"
+                className="w-full max-w-125 h-auto object-contain rounded-xl drop-shadow-xl inline-block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
@@ -99,7 +99,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                     initial={{ opacity: 0, y: 150 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 1.2, delay: index * 0.15, ease: "easeOut" }}
+                    transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
                     className="flex flex-col w-full"
                   >
                     <div className="flex items-center gap-4 md:gap-8">

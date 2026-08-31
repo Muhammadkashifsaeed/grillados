@@ -9,7 +9,7 @@ const BookEventCTASection = () => {
   const t = useTranslations('BookEventCTA');
 
   return (
-    <section className="relative w-full min-h-[450px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full min-h-112.5 md:min-h-125 lg:min-h-150 flex items-center justify-center overflow-hidden">
       
       {/* Background Image - Reused from Hero (Now Fixed Parallax) */}
       <div 
@@ -53,7 +53,7 @@ const BookEventCTASection = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-[120px] h-[3px] bg-white rounded-full my-6"
+          className="w-30 h-0.75 bg-white rounded-full my-6"
         ></motion.div>
 
         {/* Description Paragraphs */}
@@ -62,7 +62,7 @@ const BookEventCTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-white text-[18px] leading-relaxed max-w-[700px] mb-10"
+          className="text-white text-4.5 leading-relaxed max-w-175 mb-10"
         >
           <p className="mb-2">{t('p1')}</p>
           <p className="mb-2">{t('p2')}</p>

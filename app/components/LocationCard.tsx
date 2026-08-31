@@ -36,7 +36,7 @@ export default function LocationCard({
       className="flex flex-col lg:flex-row items-stretch w-full mx-auto max-w-lg lg:max-w-none rounded-2xl overflow-hidden shadow-2xl bg-white"
     >
       {/* Image Container */}
-      <div className="relative w-full aspect-video sm:h-[300px] md:h-[350px] lg:h-auto lg:aspect-auto lg:w-[50%] shrink-0">
+      <div className="relative w-full aspect-video sm:h-75 md:h-87.5 lg:h-auto lg:aspect-auto lg:w-[50%] shrink-0">
         <Image
           src={image}
           alt={`Grillado's ${name}`}

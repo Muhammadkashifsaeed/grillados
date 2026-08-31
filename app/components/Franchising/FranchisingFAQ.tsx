@@ -23,7 +23,7 @@ export default function FranchisingFAQ() {
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         
         {/* Section Heading */}
-        <h2 className="text-[#000000] text-[48px] leading-[65px] font-semibold font-['Ribeat',sans-serif] text-center mb-4">
+        <h2 className="text-[#000000] text-12 leading-16.25 font-semibold font-['Ribeat',sans-serif] text-center mb-4">
           {t('heading')}
         </h2>
         

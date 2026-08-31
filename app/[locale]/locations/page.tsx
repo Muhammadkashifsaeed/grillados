@@ -56,7 +56,7 @@ export default function LocationsPage() {
       <div className="absolute inset-0 bg-black/10 z-0 pointer-events-none"></div>
 
       {/* Hero Section */}
-      <div className="relative w-full h-[30vh] md:h-[40vh] min-h-[250px] z-10">
+      <div className="relative w-full h-[30vh] md:h-[40vh] min-h-62.5 z-10">
         <Image 
           src="/images/Picture-back-ground.png" 
           alt="Locations Hero" 

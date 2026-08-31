@@ -239,14 +239,14 @@ const ReviewsSection = () => {
             {/* Navigation Buttons (Fade in on hover) */}
             <button
               onClick={prevSlide}
-              className={`absolute left-[-15px] top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
+              className={`absolute -left-3.75 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
 
             <button
               onClick={nextSlide}
-              className={`absolute right-[-15px] top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex >= maxIndex ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
+              className={`absolute -right-3.75 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex >= maxIndex ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
             >
               <ChevronRight className="w-5 h-5" />
             </button>

@@ -46,7 +46,7 @@ export const MenuItem = ({
       
       {/* Description */}
       {description && (
-        <p className="text-gray-400 text-[11px] sm:text-xs md:text-sm mt-1 leading-relaxed">
+        <p className="text-gray-400 text-2.75 sm:text-xs md:text-sm mt-1 leading-relaxed">
           {description}
         </p>
       )}

@@ -45,7 +45,7 @@ const MenuVoucherCTA = () => {
 
             <button
               onClick={() => setIsModalOpen(true)}
-              className="w-auto flex-1 max-w-[280px] sm:max-w-[320px] xl:max-w-[360px] bg-black text-white hover:bg-red-600 font-extrabold text-xs sm:text-sm md:text-base py-3 sm:py-4 px-3 sm:px-6 rounded-xl shadow-xl hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(220,38,38,0.4)] transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 active:scale-95 group border-2 border-black/10 shrink-0"
+              className="w-auto flex-1 max-w-70 sm:max-w-80 xl:max-w-90 bg-black text-white hover:bg-red-600 font-extrabold text-xs sm:text-sm md:text-base py-3 sm:py-4 px-3 sm:px-6 rounded-xl shadow-xl hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(220,38,38,0.4)] transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 active:scale-95 group border-2 border-black/10 shrink-0"
             >
               <span className="text-lg sm:text-2xl group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300">🎟</span>
               <span 

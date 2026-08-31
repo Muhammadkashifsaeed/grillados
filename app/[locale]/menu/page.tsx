@@ -19,13 +19,13 @@ export default function MenuPage() {
 
   return (
     <main 
-      className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-[length:250%_auto] md:bg-[length:100%_auto] bg-top bg-repeat-y"
+      className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-size-[250%_auto] md:bg-size-[100%_auto] bg-top bg-repeat-y"
       style={{
         backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.3)), url('/images/Blackksss.png')",
       }}
     >
       {/* Content wrapper without the bg-black that was hiding everything */}
-      <div className="relative z-10 flex flex-col w-full gap-[2px]">
+      <div className="relative z-10 flex flex-col w-full gap-0.5">
         <AppetizersMenuSection />
         <ChickenSpecialsMenuSection />
         <BeefLambSpecialsMenuSection />
