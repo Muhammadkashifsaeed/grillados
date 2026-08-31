@@ -20,7 +20,7 @@ export default function MenuPage() {
   return (
     <main className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden">
       <div 
-        className="fixed inset-0 z-0 pointer-events-none scale-[1.5] md:scale-100 origin-center transition-transform duration-500"
+        className="fixed inset-0 z-0 pointer-events-none scale-[2.5] md:scale-100 origin-center transition-transform duration-500"
         style={{
           backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.3)), url('/images/Blackksss.png')",
           backgroundSize: 'cover',
