@@ -118,26 +118,26 @@ export const AppetizersMenuSection = () => {
                 />
               </div>
 
-              {/* Bottom Images: Mobile 2 & 3 with exact diagonal split */}
-              <div className="relative w-full aspect-4/3 drop-shadow-2xl">
+              {/* Bottom Images: Mobile 2 & 3 side by side */}
+              <div className="w-full grid grid-cols-2 gap-2 drop-shadow-2xl">
                 {/* Left Image (Nachos) */}
-                <motion.div initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }} className="absolute inset-0 z-10 hover:z-30 transition-transform duration-500 hover:scale-[1.02]" style={{ clipPath: 'polygon(0 0, 62% 0, 38% 100%, 0 100%)' }}>
+                <motion.div initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }} className="relative w-full aspect-square rounded-xl overflow-hidden shadow-md">
                   <Image
                     src="/images/mobile2.jpg"
                     alt="Appetizers Detail Left"
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 1024px) 50vw"
                   />
                 </motion.div>
                 {/* Right Image (Wings) */}
-                <motion.div initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }} className="absolute inset-0 z-20 hover:z-30 transition-transform duration-500 hover:scale-[1.02]" style={{ clipPath: 'polygon(64% 0, 100% 0, 100% 100%, 40% 100%)' }}>
+                <motion.div initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }} className="relative w-full aspect-square rounded-xl overflow-hidden shadow-md">
                   <Image
                     src="/images/mobile3.jpg"
                     alt="Appetizers Detail Right"
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 1024px) 50vw"
                   />
                 </motion.div>
               </div>
