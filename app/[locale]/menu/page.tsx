@@ -18,16 +18,12 @@ export default function MenuPage() {
   const t = useTranslations('Header');
 
   return (
-    <main className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden">
-      <div 
-        className="fixed inset-0 z-0 pointer-events-none scale-[2.5] md:scale-100 origin-center transition-transform duration-500"
-        style={{
-          backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.3)), url('/images/Blackksss.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
+    <main 
+      className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-[length:250%_auto] md:bg-[length:100%_auto] bg-top bg-repeat-y"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.3)), url('/images/Blackksss.png')",
+      }}
+    >
       {/* Content wrapper without the bg-black that was hiding everything */}
       <div className="relative z-10 flex flex-col w-full gap-[2px]">
         <AppetizersMenuSection />
