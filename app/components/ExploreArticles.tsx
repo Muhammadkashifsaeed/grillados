@@ -348,7 +348,7 @@ export const ExploreArticles = () => {
     <section className="bg-black py-20 px-4 sm:px-6 lg:px-8 w-full">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         
-        <h2 className="text-[#FFFFFF] text-13 leading-8.5 font-bold font-['Ribeat',sans-serif] tracking-wide mb-12 text-center drop-shadow-lg">
+        <h2 className="text-[#FFFFFF] text-[45px] leading-[60px] font-bold font-['Ribeat',sans-serif] tracking-wide mb-12 text-center drop-shadow-lg">
           {t('exploreArticles')}
         </h2>
 

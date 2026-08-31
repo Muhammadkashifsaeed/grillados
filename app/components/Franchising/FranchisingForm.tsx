@@ -118,7 +118,7 @@ export default function FranchisingForm() {
   const inputClass = "w-full h-13 md:h-14 px-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#DAAF18] transition-all duration-300 placeholder:text-gray-400 font-medium";
   const errorClass = "text-red-400 text-sm mt-1 font-medium";
   const labelClass = "block text-sm font-semibold text-gray-200 mb-2";
-  const sectionTitleClass = "text-2xl font-bold text-white font-['Outfit',sans-serif] mb-6 tracking-wide border-b border-gray-600/50 pb-2";
+  const sectionTitleClass = "text-xl font-semibold text-white font-['Outfit',sans-serif] mb-6 tracking-wide border-b border-gray-600/50 pb-2";
 
   const renderRadioGroup = (name: string, question: string) => (
     <div className="flex flex-col gap-2">
@@ -171,7 +171,7 @@ export default function FranchisingForm() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-[#FFFFFF] text-12 leading-16.25 font-semibold font-['Ribeat',sans-serif] uppercase tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
+          className="text-[#FFFFFF] text-[45px] leading-[60px] font-semibold font-['Ribeat',sans-serif] uppercase tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
         >
           {t('formHeading')}
         </motion.h1>

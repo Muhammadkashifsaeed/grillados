@@ -26,7 +26,7 @@ export default function FranchisingJoinTeam() {
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         
         {/* Section Heading */}
-        <h2 className="text-[#000000] text-12 leading-16.25 font-semibold font-['Ribeat',sans-serif] text-center uppercase tracking-wide mb-4 drop-shadow-sm">
+        <h2 className="text-[#000000] text-[45px] leading-[60px] font-semibold font-['Ribeat',sans-serif] text-center uppercase tracking-wide mb-4 drop-shadow-sm">
           {t('joinTeamHeading')}
         </h2>
         

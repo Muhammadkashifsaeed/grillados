@@ -63,7 +63,7 @@ const HomePromoSections = () => {
               className="mb-8"
               style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
             >
-              Les plateaux de Grillado’s présentent une sélection magnifiquement arrangée de viandes grillées. Idéals pour les repas conviviaux ou copieux, ces plateaux mettent en valeur tout notre savoir-faire du grill.
+              {t('cateringDesc')}
             </p>
 
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
@@ -72,13 +72,13 @@ const HomePromoSections = () => {
                 className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
-                Order Now
+                {t('orderNow')}
               </Link>
               <button
                 className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
-                Learn More
+                {t('learnMore')}
               </button>
             </div>
           </motion.div>
@@ -123,7 +123,7 @@ const HomePromoSections = () => {
               className="mb-8"
               style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
             >
-              Grillado’s est une application mobile pratique et conviviale, conçue pour améliorer l’expérience culinaire des clients de Grillado’s, un restaurant réputé proposant une variété de plats grillés savoureux. Disponible en téléchargement, l’application Grillado’s permet aux utilisateurs de parcourir facilement le menu, de passer des commandes à emporter ou en livraison, et de profiter d’options de paiement fluides — le tout depuis le confort de leur smartphone.
+              {t('appDesc')}
             </p>
 
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
@@ -132,13 +132,13 @@ const HomePromoSections = () => {
                 className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
-                Order Now
+                {t('orderNow')}
               </Link>
               <button
                 className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
-                Learn More
+                {t('learnMore')}
               </button>
             </div>
           </motion.div>

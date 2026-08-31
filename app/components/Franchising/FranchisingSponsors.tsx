@@ -19,8 +19,8 @@ export default function FranchisingSponsors() {
         
         {/* Heading */}
         <h2 className="text-center uppercase tracking-wide mb-4 drop-shadow-sm flex items-center justify-center flex-wrap gap-2">
-          <span className="text-[#000000] text-12 leading-16.25 font-semibold font-['Ribeat',sans-serif]">{t('sponsorsHeadingMain')}</span>
-          <span className="text-[#FAC716] text-12 leading-16.25 font-semibold font-['Ribeat',sans-serif]">{t('sponsorsHeadingYellow')}</span>
+          <span className="text-[#000000] text-[45px] leading-[60px] font-semibold font-['Ribeat',sans-serif]">{t('sponsorsHeadingMain')}</span>
+          <span className="text-[#FAC716] text-[45px] leading-[60px] font-semibold font-['Ribeat',sans-serif]">{t('sponsorsHeadingYellow')}</span>
         </h2>
         
         {/* Red Divider */}

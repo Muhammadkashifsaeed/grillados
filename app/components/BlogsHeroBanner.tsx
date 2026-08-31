@@ -36,7 +36,7 @@ const BlogsHeroBanner = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-2"
         >
-          <h1 className="text-[#FFFFFF] text-13 leading-8.5 font-bold font-['Ribeat',sans-serif] tracking-tight drop-shadow-lg uppercase">
+          <h1 className="text-[#FFFFFF] text-[45px] leading-[60px] font-bold font-['Ribeat',sans-serif] tracking-tight drop-shadow-lg uppercase">
             {t('title')}
           </h1>
         </motion.div>

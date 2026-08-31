@@ -9,7 +9,7 @@ export default function FranchisingHero() {
   const t = useTranslations('FranchisingPage');
 
   return (
-    <section className="relative w-full h-[40vh] md:h-[50vh] min-h-75 flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[35vh] md:h-[40vh] min-h-75 flex items-center justify-center overflow-hidden">
 
       {/* Background Image with Cinematic Zoom and Float */}
       <motion.div
@@ -36,32 +36,32 @@ export default function FranchisingHero() {
       <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none"></div>
 
       {/* Skewed Banner Content */}
-      <div className="relative z-20 w-full w-full px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-center">
+      <div className="relative z-20 flex items-center justify-center px-6 text-center">
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="relative"
+          className="relative inline-block mx-4"
         >
           {/* Yellow skewed background container */}
           <motion.div
             initial={{ opacity: 0, rotate: -10 }}
             animate={{ opacity: 1, rotate: -2 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="absolute inset-0 bg-[#DAAF18] -skew-x-6 md:-skew-x-12 rounded-xl sm:rounded-2xl shadow-2xl transform origin-center z-[-1]"
+            className="absolute inset-0 bg-[#DAAF18] rounded-xl z-[-1] shadow-2xl transform origin-center"
           ></motion.div>
 
-          {/* Text Content (unskewed/unrotated visually against the container) */}
+          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-            className="relative px-4 py-2 md:px-6 md:py-3 flex items-center justify-center"
+            className="relative px-5 py-3 flex items-center justify-center"
           >
-            <h1 className="text-white font-[600] font-['Ribeat',sans-serif] text-center uppercase tracking-wide
-                           text-11.25 leading-15
-                           drop-shadow-lg"
+            <h1 
+              className="text-white text-center uppercase whitespace-normal sm:whitespace-nowrap drop-shadow-lg"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255, 255, 255)', fontSize: '45px', lineHeight: '60px' }}
             >
               {t('heroHeading')}
             </h1>
