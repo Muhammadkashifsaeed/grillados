@@ -59,12 +59,11 @@ const HomePromoSections = () => {
               {t('cateringHeading')}
             </motion.h2>
 
-            <p
-              className="mb-8"
+            <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="mb-8"
               style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
             >
               {t('cateringDesc')}
-            </p>
+            </motion.p>
 
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
               <Link
@@ -119,12 +118,11 @@ const HomePromoSections = () => {
             {/* Divider */}
             <div className="w-24 h-1 bg-black mx-auto mt-2 mb-4 rounded-full"></div>
 
-            <p
-              className="mb-8"
+            <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="mb-8"
               style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
             >
               {t('appDesc')}
-            </p>
+            </motion.p>
 
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
               <Link

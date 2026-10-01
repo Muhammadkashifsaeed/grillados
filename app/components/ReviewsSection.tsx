@@ -182,12 +182,12 @@ const ReviewsSection = () => {
                 {reviews.map((review, idx) => (
                   <div
                     key={idx}
-                    className="shrink-0 px-2 md:px-3 flex justify-center"
+                    className="shrink-0 px-1 md:px-1.5 flex justify-center"
                     style={{ width: `${100 / itemsPerView}%` }}
                   >
 
                     {/* Google Review Card - Matches Google Widget exactly */}
-                    <div className="bg-transparent border border-gray-200 rounded-2xl hover:border-[#D8AC15] hover:shadow-lg hover:-translate-y-2 transition-all duration-300 p-4 sm:p-6 w-full relative flex flex-col h-full min-h-55">
+                    <div className="bg-white border border-gray-100 shadow-[0_0_15px_rgba(0,0,0,0.02)] rounded-2xl hover:border-[#D8AC15] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 sm:p-4 w-full relative flex flex-col h-full min-h-[190px]">
 
                       {/* Google Icon Top Right */}
                       <div className="absolute top-6 right-6 w-6 h-6 opacity-90">
@@ -240,14 +240,14 @@ const ReviewsSection = () => {
             {/* Navigation Buttons (Fade in on hover) */}
             <button
               onClick={prevSlide}
-              className={`absolute -left-3.75 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
+              className={`absolute -left-3.75 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-black hover:text-white hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
 
             <button
               onClick={nextSlide}
-              className={`absolute -right-3.75 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex >= maxIndex ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
+              className={`absolute -right-3.75 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-black hover:text-white hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex >= maxIndex ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
             >
               <ChevronRight className="w-5 h-5" />
             </button>
