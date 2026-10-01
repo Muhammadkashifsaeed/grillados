@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -58,7 +59,7 @@ const reviews = [
 ];
 
 const getInitialColor = (name: string) => {
-  const colors = ['bg-red-500', 'bg-blue-500', 'bg-green-500', 'bg-[#DAAF18]', 'bg-purple-500', 'bg-pink-500'];
+  const colors = ['bg-red-500', 'bg-blue-500', 'bg-green-500', 'bg-[#D8AC15]', 'bg-purple-500', 'bg-pink-500'];
   const charCode = name.charCodeAt(0) || 0;
   return colors[charCode % colors.length];
 };
@@ -117,12 +118,12 @@ const ReviewsSection = () => {
       <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16">
 
         <div className="text-center mb-8 md:mb-10">
-          <h2 
+          <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} 
             className="uppercase tracking-wide mb-4"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '40px', lineHeight: '80px', color: 'rgb(250, 174, 64)' }}
           >
             {t('heading')}
-          </h2>
+          </motion.h2>
           <p
             className="mt-2"
             style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(0, 0, 0)' }}
@@ -143,7 +144,7 @@ const ReviewsSection = () => {
               <div className="flex flex-col gap-1">
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#fbbc04] text-[#fbbc04]" />
+                    <Star key={i} className="w-5 h-5 fill-[#D8AC15] text-[#D8AC15]" />
                   ))}
                 </div>
               </div>
@@ -186,7 +187,7 @@ const ReviewsSection = () => {
                   >
 
                     {/* Google Review Card - Matches Google Widget exactly */}
-                    <div className="bg-transparent border border-gray-200 rounded-2xl hover:border-[#fbbc04] hover:shadow-lg hover:-translate-y-2 transition-all duration-300 p-4 sm:p-6 w-full relative flex flex-col h-full min-h-55">
+                    <div className="bg-transparent border border-gray-200 rounded-2xl hover:border-[#D8AC15] hover:shadow-lg hover:-translate-y-2 transition-all duration-300 p-4 sm:p-6 w-full relative flex flex-col h-full min-h-55">
 
                       {/* Google Icon Top Right */}
                       <div className="absolute top-6 right-6 w-6 h-6 opacity-90">
@@ -221,7 +222,7 @@ const ReviewsSection = () => {
                       {/* Stars */}
                       <div className="flex gap-0.5 mb-3">
                         {[...Array(review.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-[#fbbc04] text-[#fbbc04]" />
+                          <Star key={i} className="w-4 h-4 fill-[#D8AC15] text-[#D8AC15]" />
                         ))}
                       </div>
 

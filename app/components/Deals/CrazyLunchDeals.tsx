@@ -115,7 +115,7 @@ export default function CrazyLunchDeals() {
                     </p>
                     <button
                       onClick={() => router.push('/contact-us')}
-                      className="inline-block bg-[#fbbc04] hover:bg-[#e5aa03] uppercase tracking-wider px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                      className="inline-block bg-[#D8AC15] hover:bg-[#D8AC15] uppercase tracking-wider px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
                       style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: 'rgb(255,255,255)' }}
                     >
                       {t('contactUs')}

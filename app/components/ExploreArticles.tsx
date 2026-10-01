@@ -426,7 +426,7 @@ export const ExploreArticles = () => {
             <button 
               type="button" 
               onClick={handleLoadMore}
-              className="bg-[#DAAF18] text-[#FFFFFF] hover:bg-[#EB5250] font-medium font-['Ribeat',sans-serif] text-4 leading-4 py-4 px-10 rounded-none transition-all duration-300 uppercase tracking-widest shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-[#D8AC15] text-[#FFFFFF] hover:bg-[#EB5250] font-medium font-['Ribeat',sans-serif] text-4 leading-4 py-4 px-10 rounded-none transition-all duration-300 uppercase tracking-widest shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Load More
             </button>

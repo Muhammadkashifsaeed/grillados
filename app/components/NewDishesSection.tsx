@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -49,12 +50,14 @@ const NewDishesSection = () => {
       <div className="w-full max-w-400 mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Heading */}
-        <h2
+        <div className="w-full flex justify-center text-center">
+          <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
           style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
-          className="text-center uppercase tracking-wide mb-2"
+          className="transform -rotate-2 inline-block text-center uppercase tracking-wide mb-2"
         >
           {t('heading')}
-        </h2>
+        </motion.h2>
+        </div>
         
         {/* Divider */}
         <div 

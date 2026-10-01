@@ -34,7 +34,7 @@ export const MobileMenu = () => {
     <div className="lg:hidden flex items-center">
       <button
         onClick={toggleMenu}
-        className="text-white hover:text-[#DAAF18] transition-colors"
+        className="text-white hover:text-[#D8AC15] transition-colors"
         aria-label="Open Menu"
       >
         <Menu className="w-8 h-8" />
@@ -65,7 +65,7 @@ export const MobileMenu = () => {
           />
           <button
             onClick={toggleMenu}
-            className="text-white hover:text-[#DAAF18] transition-colors"
+            className="text-white hover:text-[#D8AC15] transition-colors"
             aria-label="Close Menu"
           >
             <X className="w-8 h-8" />
@@ -83,7 +83,7 @@ export const MobileMenu = () => {
           <div className="flex flex-col">
             <button 
               onClick={() => setIsPagesOpen(!isPagesOpen)}
-              className="flex items-center justify-between w-full text-white hover:text-[#DAAF18] transition-colors py-2"
+              className="flex items-center justify-between w-full text-white hover:text-[#D8AC15] transition-colors py-2"
             >
               <div className="flex items-center gap-1.5 font-bold text-sm tracking-wide uppercase">
                 <FileText className="w-5 h-5 opacity-90" />
@@ -93,11 +93,11 @@ export const MobileMenu = () => {
             </button>
             {isPagesOpen && (
               <div className="flex flex-col pl-6 mt-2 gap-3 border-l border-white/10 ml-2">
-                <Link href="/franchising" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#DAAF18] transition-colors font-bold uppercase">{t('franchising')}</Link>
-                <Link href="/gallery" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#DAAF18] transition-colors font-bold uppercase">{t('gallery')}</Link>
-                <Link href="/blogs" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#DAAF18] transition-colors font-bold uppercase">{t('blogs')}</Link>
-                <Link href="/about-us" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#DAAF18] transition-colors font-bold uppercase">{t('aboutUs')}</Link>
-                <Link href="/contact-us" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#DAAF18] transition-colors font-bold uppercase">{t('contactUs')}</Link>
+                <Link href="/franchising" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#D8AC15] transition-colors font-bold uppercase">{t('franchising')}</Link>
+                <Link href="/gallery" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#D8AC15] transition-colors font-bold uppercase">{t('gallery')}</Link>
+                <Link href="/blogs" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#D8AC15] transition-colors font-bold uppercase">{t('blogs')}</Link>
+                <Link href="/about-us" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#D8AC15] transition-colors font-bold uppercase">{t('aboutUs')}</Link>
+                <Link href="/contact-us" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#D8AC15] transition-colors font-bold uppercase">{t('contactUs')}</Link>
               </div>
             )}
           </div>

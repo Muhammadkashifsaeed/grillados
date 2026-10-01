@@ -49,11 +49,11 @@ export default function FranchisingContent() {
           <div className="w-full lg:w-1/2 flex flex-col gap-6 text-[#727272] text-4 leading-6 font-normal font-['Poppins',sans-serif]">
             <p>
               {t('p1_1')}
-              <span className="text-[#DAAF18] font-bold">{t('p1_highlight')}</span>
+              <span className="text-[#D8AC15] font-bold">{t('p1_highlight')}</span>
             </p>
             <p>
               {t('p2_1')}
-              <span className="text-[#DAAF18] font-bold">{t('p2_highlight')}</span>
+              <span className="text-[#D8AC15] font-bold">{t('p2_highlight')}</span>
             </p>
             <p>
               {t('p3')}

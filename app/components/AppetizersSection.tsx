@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Utensils, ArrowRight, Info } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { motion } from 'framer-motion';
 
 const AppetizersSection = () => {
   const t = useTranslations('Appetizers');
@@ -22,43 +23,55 @@ const AppetizersSection = () => {
           </div>
 
           {/* Centered Heading */}
-          <div className="text-center">
-<h2
+          <div className="text-center overflow-hidden">
+            <motion.h2
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
             className="mb-4 transform -rotate-2 inline-block text-center"
           >
             {t('heading')}
-          </h2>
+          </motion.h2>
 </div>
           <div className="w-24 h-1 bg-black mx-auto mt-2 mb-4 rounded-full"></div>
 
 
           {/* Paragraph */}
-          <p className="mb-8" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="mb-8" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}>
             {t('description')}
-          </p>
+          </motion.p>
 
           {/* Buttons */}
-          <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
-            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }} className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
+            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('orderNow')}</span>
             </Link>
 
-            <Link href="/menu#appetizers" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+            <Link href="/menu#appetizers" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('learnMore')}</span>
             </Link>
-          </div>
+          </motion.div>
 
         </div>
         {/* Right Column: Image */}
         <div className="w-full h-70 md:h-auto relative order-1 md:order-2">
+<motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="absolute inset-0">
+
           <Image
             src="/images/smentes.webp"
             alt="Grillado's Appetizers"
             fill sizes="100vw"
             className="object-cover"
           />
-        </div>
+        </motion.div>
+</div>
       </div>
 
     </section>

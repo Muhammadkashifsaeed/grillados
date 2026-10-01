@@ -29,7 +29,7 @@ const CateringFAQSection = () => {
           >
             {t('heading')}
           </h2>
-          <div className="w-24 h-1.5 bg-[#fbbc04] mx-auto mt-4 rounded-full"></div>
+          <div className="w-24 h-1.5 bg-[#D8AC15] mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* FAQs */}

@@ -2,6 +2,7 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Flame, ArrowRight, Info } from 'lucide-react';
 import { Link } from '@/i18n/routing';
@@ -15,30 +16,33 @@ const ChickenSpecialsSection = () => {
 
         {/* Left Column: Image */}
         <div className="w-full h-70 md:h-auto relative order-1 md:order-1">
+<motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="absolute inset-0">
+
           <Image
             src="/images/dishes.webp"
             alt="Grillado's Chicken Specials"
             fill sizes="100vw"
             className="object-cover"
           />
-        </div>
+        </motion.div>
+</div>
 
         {/* Right Column: Content */}
         <div className="w-full flex flex-col justify-center items-center text-center order-2 md:order-2 px-6 md:px-12 lg:px-16 xl:px-24 py-6 md:py-6 xl:py-12 bg-gray-50">
 
           {/* Custom SVG Icon */}
           <div className="flex justify-center mb-6">
-            <Image src="/images/test-1.svg" alt="Grillados Icon" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 object-contain" />
+            <motion.img src="/images/test-1.svg" initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} alt="Grillados Icon" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 object-contain" />
           </div>
 
           {/* Centered Heading */}
           <div className="text-center">
-<h2
+<motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
             className="mb-4 transform -rotate-2 inline-block text-center"
           >
             {t('title')}
-          </h2>
+          </motion.h2>
 </div>
           <div className="w-24 h-1 bg-black mx-auto mt-2 mb-4 rounded-full"></div>
 
@@ -49,15 +53,15 @@ const ChickenSpecialsSection = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
-            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }} className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
+            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('order')}</span>
             </Link>
 
-            <Link href="/menu#chicken-specials" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+            <Link href="/menu#chicken-specials" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('learnMore')}</span>
             </Link>
-          </div>
+          </motion.div>
 
         </div>
       </div>

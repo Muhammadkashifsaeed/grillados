@@ -65,7 +65,7 @@ export default function NewsletterSection() {
           className="text-center tracking-tight mb-6 max-w-2xl"
           style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '32px', lineHeight: '40px', color: 'rgb(0,0,0)' }}
         >
-          {t('headingStart')} <span className="text-[#DAAF18]">{t('headingHighlight')}</span>{t('headingEnd')}<br className="hidden md:block" />
+          {t('headingStart')} <span className="text-[#D8AC15]">{t('headingHighlight')}</span>{t('headingEnd')}<br className="hidden md:block" />
           {t('headingEnd2')}
         </motion.h2>
 
@@ -108,7 +108,7 @@ export default function NewsletterSection() {
                   placeholder={t('firstNamePlaceholder')}
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="w-full h-12 md:h-12.5 px-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DAAF18] focus:border-transparent transition-all"
+                  className="w-full h-12 md:h-12.5 px-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D8AC15] focus:border-transparent transition-all"
                 />
               </div>
 
@@ -122,7 +122,7 @@ export default function NewsletterSection() {
                   placeholder={t('emailPlaceholder')}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full h-12 md:h-12.5 pl-14 pr-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DAAF18] focus:border-transparent transition-all"
+                  className="w-full h-12 md:h-12.5 pl-14 pr-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D8AC15] focus:border-transparent transition-all"
                 />
               </div>
 

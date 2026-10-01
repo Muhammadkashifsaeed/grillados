@@ -46,7 +46,7 @@ const HeroSection = () => {
           className="mb-8 relative inline-block mx-4 sm:mx-0 max-w-[90vw] sm:max-w-none"
         >
           <div 
-            className="absolute inset-0 bg-[#DAAF18] rounded-xl z-[-1] shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
+            className="absolute inset-0 bg-[#D8AC15] rounded-xl z-[-1] shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
           ></div>
           
           <h1
@@ -78,7 +78,7 @@ const HeroSection = () => {
             href="https://grillados.bycalibre.ca/location" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] hover:bg-[#EB5250] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-all duration-300 shadow-md hover:-translate-y-1 hover:shadow-xl flex-1 sm:flex-none text-3.75 sm:text-5"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-zinc-900 hover:text-white px-4 py-3 sm:px-8 sm:py-4 rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 hover:shadow-xl flex-1 sm:flex-none text-3.75 sm:text-5"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
             <span className="whitespace-nowrap">{t('orderNow')}</span>
@@ -88,7 +88,7 @@ const HeroSection = () => {
             href="https://grillados.bycalibre.ca/location" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] hover:bg-[#EB5250] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-all duration-300 shadow-md hover:-translate-y-1 hover:shadow-xl flex-1 sm:flex-none text-3.75 sm:text-5"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-zinc-900 hover:text-white px-4 py-3 sm:px-8 sm:py-4 rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 hover:shadow-xl flex-1 sm:flex-none text-3.75 sm:text-5"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
             <span className="whitespace-nowrap">{t('viewMenu')}</span>

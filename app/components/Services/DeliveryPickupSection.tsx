@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 export default function DeliveryPickupSection() {
   const t = useTranslations('DeliveryPickup');
   return (
-    <section className="relative w-full overflow-hidden bg-linear-to-r from-[#f08519] to-[#DAAF18]">
+    <section className="relative w-full overflow-hidden bg-linear-to-r from-[#f08519] to-[#D8AC15]">
 
       <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 items-stretch">
 

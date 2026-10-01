@@ -52,12 +52,12 @@ const HomePromoSections = () => {
               />
             </div>
 
-            <h2
+            <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
               className="mb-4"
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
             >
               {t('cateringHeading')}
-            </h2>
+            </motion.h2>
 
             <p
               className="mb-8"
@@ -69,13 +69,13 @@ const HomePromoSections = () => {
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
               <Link
                 href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('orderNow')}
               </Link>
               <button
-                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('learnMore')}
@@ -110,11 +110,11 @@ const HomePromoSections = () => {
               />
             </div>
 
-            <h2
+            <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
             >
               {t('appHeading')}
-            </h2>
+            </motion.h2>
 
             {/* Divider */}
             <div className="w-24 h-1 bg-black mx-auto mt-2 mb-4 rounded-full"></div>
@@ -129,13 +129,13 @@ const HomePromoSections = () => {
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
               <Link
                 href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('orderNow')}
               </Link>
               <button
-                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('learnMore')}

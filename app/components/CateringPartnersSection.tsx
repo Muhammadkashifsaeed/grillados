@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
@@ -19,12 +20,12 @@ const CateringPartnersSection = () => {
 
         {/* Centered Heading */}
         <div className="text-center">
-<h2 
+<motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} 
           className="uppercase tracking-wide mb-2 inline-block text-center"
           style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
         >
           {t('heading')}
-        </h2>
+        </motion.h2>
 </div>
 
 

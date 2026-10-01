@@ -87,7 +87,7 @@ export const Footer = () => {
                 alt="Grillado's Logo"
                 width={200}
                 height={70}
-                className="w-56 h-auto scale-110 transform-gpu origin-left"
+                className="w-44 sm:w-48 h-auto object-contain drop-shadow-md transition-transform duration-300 hover:scale-105 origin-left"
               />
               <div className="flex items-center gap-3 mt-4">
                 <a href="https://www.facebook.com/Grillados?mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
@@ -114,10 +114,10 @@ export const Footer = () => {
               <div className="flex flex-col gap-6">
                 <h3 className="text-lg sm:text-xl font-bold tracking-wider uppercase">{t('menuHeading')}</h3>
                 <ul className="flex flex-col gap-4">
-                  <li><Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('orderOnline')}</Link></li>
-                  <li><Link href="/franchising" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('franchising')}</Link></li>
-                  <li><Link href="/about-us" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('aboutUs')}</Link></li>
-                  <li><Link href="/contact-us" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('contact')}</Link></li>
+                  <li><Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('orderOnline')}</Link></li>
+                  <li><Link href="/franchising" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('franchising')}</Link></li>
+                  <li><Link href="/about-us" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('aboutUs')}</Link></li>
+                  <li><Link href="/contact-us" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('contact')}</Link></li>
                 </ul>
               </div>
 
@@ -125,10 +125,10 @@ export const Footer = () => {
               <div className="flex flex-col gap-6">
                 <h3 className="text-lg sm:text-xl font-bold tracking-wider uppercase">{t('locationsHeading')}</h3>
                 <ul className="flex flex-col gap-4">
-                  <li><a href="tel:+15196217771" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('cambridge')}</a></li>
-                  <li><a href="tel:+14506883399" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('laval')}</a></li>
-                  <li><a href="tel:+19058787770" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('milton')}</a></li>
-                  <li><a href="tel:+19056255558" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('mississauga')}</a></li>
+                  <li><a href="tel:+15196217771" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('cambridge')}</a></li>
+                  <li><a href="tel:+14506883399" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('laval')}</a></li>
+                  <li><a href="tel:+19058787770" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('milton')}</a></li>
+                  <li><a href="tel:+19056255558" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('mississauga')}</a></li>
                 </ul>
               </div>
             </div>
@@ -143,8 +143,8 @@ export const Footer = () => {
                 className="w-24 h-auto"
               />
               <ul className="flex flex-col gap-4 mt-2">
-                <li><Link href="/terms" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm">{t('termsAndConditions')}</Link></li>
-                <li><Link href="/privacy" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm">{t('privacyPolicy')}</Link></li>
+                <li><Link href="/terms" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm">{t('termsAndConditions')}</Link></li>
+                <li><Link href="/privacy" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm">{t('privacyPolicy')}</Link></li>
               </ul>
             </div>
           </div>
@@ -163,7 +163,7 @@ export const Footer = () => {
       <div className="hidden lg:flex fixed top-1/2 right-0 -translate-y-1/2 z-50">
         <Link 
           href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-          className="bg-[#DAAF18] hover:bg-[#EB5250] hover:text-white text-black font-bold py-4 px-2 rounded-l-lg shadow-lg transition-all duration-300 flex flex-col items-center gap-3 cursor-pointer"
+          className="bg-[#D8AC15] hover:bg-[#EB5250] hover:text-white text-black font-bold py-4 px-2 rounded-l-lg shadow-lg transition-all duration-300 flex flex-col items-center gap-3 cursor-pointer"
         >
           <UtensilsCrossed className="w-5 h-5" />
           <span className="writing-vertical-rl text-sm tracking-widest whitespace-nowrap rotate-180" style={{ writingMode: 'vertical-rl' }}>

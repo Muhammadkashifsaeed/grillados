@@ -49,7 +49,7 @@ export default function FranchisingHero() {
             initial={{ opacity: 0, rotate: -10 }}
             animate={{ opacity: 1, rotate: -2 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="absolute inset-0 bg-[#DAAF18] rounded-xl z-[-1] shadow-2xl transform origin-center"
+            className="absolute inset-0 bg-[#D8AC15] rounded-xl z-[-1] shadow-2xl transform origin-center"
           ></motion.div>
 
           {/* Text Content */}
