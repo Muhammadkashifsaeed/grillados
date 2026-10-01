@@ -48,11 +48,11 @@ export const PlateauxMenuSection = () => {
     <section id="plateaux" className="relative w-full pt-4 pb-1 md:py-4 lg:py-8 bg-transparent">
 
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-16.25 md:px-6 lg:px-8 flex flex-col lg:flex-col gap-0 md:gap-10 lg:gap-14">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col lg:flex-col gap-0 md:gap-10 lg:gap-14">
 
 
         {/* ZONE 2: Bottom row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center">
 
           {/* LEFT: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
@@ -128,7 +128,7 @@ export const PlateauxMenuSection = () => {
               alt="Grillado Plateaux Featured"
               width={1000}
               height={750}
-              className="w-full h-auto object-contain object-top lg:object-right-top drop-shadow-2xl rounded-2xl lg:rounded-none scale-95 xl:scale-100 origin-top hidden md:block"
+              className="w-full h-auto object-contain object-center lg:object-right-top drop-shadow-2xl rounded-2xl lg:rounded-none scale-95 xl:scale-100 origin-center hidden md:block"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
 

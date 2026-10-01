@@ -67,9 +67,9 @@ const CateringOfferCard: React.FC<CateringOfferProps> = ({
         </p>
 
         <Link 
-          href="/order"
+          href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
           aria-label={t('orderNow')}
-          className="bg-[#fbbc04] hover:bg-[#d72323] rounded-lg px-8 py-4 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-md flex items-center justify-center uppercase tracking-wider cursor-pointer inline-flex max-w-[fit-content]"
+          className="bg-[#fbbc04] hover:bg-[#EB5250] rounded-lg px-8 py-4 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-md flex items-center justify-center uppercase tracking-wider cursor-pointer inline-flex max-w-[fit-content]"
           style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '20px', color: 'rgb(255, 255, 255)' }}
         >
           {t('orderNow')}

@@ -32,8 +32,8 @@ export const ComboDePouletMenuSection = () => {
     <section id="combos" className="relative w-full py-4 lg:py-8 bg-transparent">
 
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-16.25 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center">
 
           {/* Left Column: Menu Items */}
           <motion.div
@@ -41,7 +41,7 @@ export const ComboDePouletMenuSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="w-full flex flex-col justify-start"
+            className="w-full flex flex-col justify-center"
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2
@@ -50,7 +50,7 @@ export const ComboDePouletMenuSection = () => {
               >
                 <span dangerouslySetInnerHTML={{ __html: t('comboDePoulet') }} />
               </h2>
-              <div className="w-full max-w-40 md:max-w-48 lg:max-w-64 h-1.5 bg-[#FAAE40] mt-4"></div>
+              <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
             </motion.div>
 
             <div className="flex flex-col gap-5 md:gap-6 w-full">
@@ -100,7 +100,7 @@ export const ComboDePouletMenuSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="w-full flex items-start justify-center relative lg:min-h-125 mx-auto"
+            className="w-full flex items-center justify-center relative lg:min-h-125 mx-auto"
           >
             <div className="relative w-full h-full lg:min-h-125">
               {/* Desktop Image */}
@@ -109,7 +109,7 @@ export const ComboDePouletMenuSection = () => {
                 alt="Combo de Poulet Grillé"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-top scale-90 xl:scale-100 origin-top hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-90 xl:scale-100 origin-center hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

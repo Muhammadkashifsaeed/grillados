@@ -85,7 +85,7 @@ export default function OrderPage() {
               {/* Info Icon */}
               <button 
                 type="button" 
-                className="absolute top-6 right-6 p-1.5 rounded-full border-2 border-[#d72323] text-[#d72323] hover:bg-[#d72323] hover:text-white transition-colors"
+                className="absolute top-6 right-6 p-1.5 rounded-full border-2 border-[#d72323] text-[#d72323] hover:bg-[#EB5250] hover:text-white transition-colors"
                 aria-label={`More info about ${loc.name}`}
               >
                 <Info className="w-5 h-5" />

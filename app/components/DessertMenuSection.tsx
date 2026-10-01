@@ -28,7 +28,7 @@ export const DessertMenuSection = () => {
           leftImageSrc="/images/e-1.png"
           rightImageSrc="/images/f-1.png"
           leftImageClassName="object-contain object-bottom md:object-bottom-right scale-[1.25] md:-translate-x-12 drop-shadow-2xl"
-          rightImageClassName="object-contain object-top md:object-bottom-left scale-[1.25] md:translate-x-4 drop-shadow-2xl"
+          rightImageClassName="object-contain object-center md:object-bottom-left scale-[1.25] md:translate-x-4 drop-shadow-2xl"
         />
       </div>
 
@@ -68,10 +68,13 @@ export const DessertMenuSection = () => {
 
         {/* ROW 2: Dessert Menu + a-1 Image */}
         <MenuTwoColumn
+          alignItems="items-stretch"
           leftContent={
-            <>
-              <MenuHeading title={t('heading')} />
-              <div className="flex flex-col gap-3 md:gap-4 w-full">
+            <div className="flex flex-col w-full pb-4 lg:pb-8 justify-start">
+              <div>
+                <MenuHeading title={t('heading')} />
+              </div>
+              <div className="flex flex-col gap-3 md:gap-4 w-full mt-4">
                 {menuItems.map((item, index) => (
                   <MenuItem
                     key={index}
@@ -81,7 +84,7 @@ export const DessertMenuSection = () => {
                   />
                 ))}
               </div>
-            </>
+            </div>
           }
           rightContent={
             <div className="relative w-full h-full lg:min-h-125 flex items-center justify-center lg:mb-8">
@@ -116,7 +119,7 @@ export const DessertMenuSection = () => {
           leftImageSrc="/images/b-1.png"
           rightImageSrc="/images/c-1.png"
           leftImageClassName="object-contain object-bottom md:object-bottom-right scale-[1.25] md:-translate-x-12 drop-shadow-2xl"
-          rightImageClassName="object-contain object-top md:object-bottom-left scale-[1.25] md:translate-x-4 drop-shadow-2xl"
+          rightImageClassName="object-contain object-center md:object-bottom-left scale-[1.25] md:translate-x-4 drop-shadow-2xl"
         />
       </div>
 

@@ -61,11 +61,11 @@
   },
   "CateringPartners": {
     "heading": "Les partenaires traiteurs de Grillado's",
-    "subtitle": "Service Traiteur Par Grillados - La Restauration Sur Mesure À Son Meilleur",
+    "subtitle": "",
     "madeWithLove": "Fait avec Amour",
     "description": "Que ce soit pour une petite réunion de famille ou pour célébrer une fête, le service traiteur de Grillado veut que vous profitiez pleinement de votre journée avec vos proches et nous laisser la cuisine. Chez Grillado Traiteur, nous sommes là pour vous servir !",
     "smallHeading": "",
-    "platterDescription": "Service Traiteur Par Grillados - La Restauration Sur Mesure À Son Meilleur"
+    "platterDescription": ""
   },
   "CateringOffers": {
     "offer1": "Offre 1",
@@ -79,11 +79,11 @@
   "CateringIntroduction": {
     "titleColored": "Service Traiteur Grillado",
     "titleBlack": "Nourriture sur mesure.\nLe meilleur du service traiteur.",
-    "p1": "Grillados organise un large éventail d'événements, y compris des mariages de toutes tailles, styles et thèmes, ainsi que des anniversaires, des fêtes et des réunions de famille. Qu'il s'agisse d'un événement d'entreprise ou d'une activité communautaire, nous offrons des plats délicieux et visuellement époustouflants, adaptés à vos préférences, pour élever votre événement et créer des souvenirs durables.",
-    "p2": "Chez Grillado, vous êtes notre priorité. Nous écoutons attentivement pour comprendre vos objectifs, en tirant parti de nos décennies d'expérience et de notre engagement à dépasser vos attentes pour assurer le succès de votre événement sous tous ses aspects.",
-    "p3": "Menus personnalisés : Notre équipe travaille en étroite collaboration avec vous pour élaborer un menu qui reflète vos goûts et vos besoins alimentaires. Qu'il s'agisse d'un mariage, d'un événement d'entreprise ou d'une réunion intime, nous créons des plats qui raviront chaque invité.",
-    "p4": "Nous sommes fiers d'utiliser uniquement des ingrédients de la plus haute qualité, biologiques et d'origine locale. Notre engagement envers la fraîcheur et la durabilité garantit que chaque bouchée est à la fois délicieuse et nutritive.",
-    "p5": "Chez Grillado, notre mission est d'élever votre expérience de traiteur avec une cuisine personnalisée de haute qualité qui laisse une impression durable. Nous nous engageons à dépasser vos attentes et à transformer votre occasion spéciale en un véritable chef-d'œuvre culinaire."
+    "p1": "Grillados caters to a diverse range of events, including weddings of varying sizes, styles, and themes, as well as anniversaries, birthdays, and family gatherings. Whether it’s corporate events or community-wide activities, we offer delectable and visually stunning food options of your choice to elevate your event and create lasting memories.",
+    "p2": "At Grillados, our focus is entirely on you. We attentively listen to understand your goals, leveraging our decades of experience and commitment to go above and beyond to ensure the success of your event in every aspect.",
+    "p3": "Tailored Menus: Our team works closely with you to craft a menu that reflects your taste and dietary needs. Whether it’s a wedding, corporate event, or an intimate gathering, we create dishes that will delight every guest.",
+    "p4": "We pride ourselves on using only the highest quality, organic, and locally sourced ingredients. Our commitment to freshness and sustainability ensures that every bite is both delicious and nutritious.",
+    "p5": "At Grillados, our mission is to elevate your catering experience with personalized, high-quality food that leaves a lasting impression. We are committed to exceeding your expectations and making your special occasion a culinary masterpiece."
   },
   "CustomizedOptions": {
     "heading": "Options personnalisées",
@@ -350,7 +350,7 @@
     "a14": "Tous les équipements et fournitures sont achetés auprès de fournisseurs de confiance et approuvés par le franchiseur."
   },
   "GarnishedRice": {
-    "heading": "RIZ GARNI",
+    "heading": "LOADED RICE",
     "items": {
       "chicken": "Poulet",
       "chickenDesc": "RIZ, POULET PERI, OIGNON ROUGE, POIVRONS ROUGES, MAÏS DOUX, LAITUE, JALAPENOS, SAUCE PERI MAISON ET SAUCE À L'AIL MAISON.",
@@ -362,12 +362,12 @@
     "sauces": {
       "lemonHerbs": "Citron & Herbes",
       "lemonHerbsDesc": "Un mélange acidulé avec une touche rafraîchissante d'agrumes.",
-      "average": "MOYEN",
-      "averageDesc": "Une sauce équilibrée, légèrement épicée avec une touche de chaleur.",
+      "average": "Medium",
+      "averageDesc": "A balanced, mildly spicy sauce with a hint of heat.",
       "strong": "Fort",
-      "strongDesc": "Ardent, audacieux et rempli d'une chaleur acidulée – le rêve d'un amateur d'épices !",
-      "barbecue": "Barbecue",
-      "barbecueDesc": "Une sauce riche, fumée et légèrement sucrée avec une saveur classique de barbecue."
+      "strongDesc": "Fiery, bold, and packed with tangy heat – a spice lover's dream!",
+      "barbecue": "BBQ",
+      "barbecueDesc": "A rich, smoky, and slightly sweet sauce with a classic barbecue flavor."
     }
   },
   "LocationsPage": {
@@ -471,7 +471,7 @@
     "contactUs": "Contactez-nous"
   },
   "WeddingCatering": {
-    "heading": "Service traiteur de mariage",
+    "heading": "Traiteur de mariage",
     "description": "Votre mariage est un événement unique dans une vie. Amenez votre service traiteur au niveau supérieur avec les plats certifiés halal de Grillado's, préparés avec des ingrédients frais et le meilleur poulet portugais au Canada.",
     "contactUs": "Contactez-nous"
   },
@@ -583,7 +583,8 @@
     "chickenSpecialsMenu": [
       {
         "name": "Espetada Grillée",
-        "description": "Poulet mariné tendre avec des poivrons frais, servi en brochette avec 2 accompagnements réguliers."
+        "description": "Poulet mariné tendre avec des poivrons frais, servi en brochette avec 2 accompagnements réguliers.",
+        "note": "TENDER MARINATED CHICKEN WITH FRESH PEPPERS, SERVED ON A SKEWER WITH 2 REGULAR SIDES"
       },
       {
         "name": "Poulet Grillé Biologique Entier",
@@ -618,7 +619,7 @@
         "note": "SUR COMMANDE SEULEMENT AVEC 2 ACCOMPAGNEMENTS RÉGULIERS ET 2 PAINS PITA OU 2 PAINS À L'AIL"
       }
     ],
-    "comboDePoulet": "COMBO DE<br />POULET",
+    "comboDePoulet": "GRILLADO’S GRILLED<br />CHICKEN COMBO",
     "comboDePouletMenu": [
       {
         "name": "¼ Cuisse de Poulet Grillée",
@@ -654,23 +655,26 @@
       },
       {
         "name": "Côtelettes d'Agneau",
-        "note": "AVEC 2 ACCOMPAGNEMENTS RÉGULIERS"
+        "note": "4 FRENCH CUT LAMBCHOPS SERVED WITH 1 REGULAR SIDE AND 1 GARLIC BREAD",
+        "price": "36.99"
       },
       {
-        "name": "Bifteck de Surlonge 12 oz",
-        "note": "AVEC 2 ACCOMPAGNEMENTS RÉGULIERS (VEUILLEZ PRÉVOIR 30 À 40 MINUTES DE CUISSON)"
+        "name": "12 OZ Rib Eye Steak",
+        "note": "AAA RIB EYE STEAK SERVED WITH 1 REGULAR SIDE AND GARLIC BREAD"
       },
       {
-        "name": "Bifteck de Surlonge 12 oz",
-        "note": "AVEC 2 ACCOMPAGNEMENTS RÉGULIERS (TERRE ET MER) ET UNE BROCHETTE DE CREVETTES (VEUILLEZ PRÉVOIR 30 À 40 MINUTES DE CUISSON)"
+        "name": "12 OZ Striploin Steak",
+        "note": "AAA STRIPLOIN STEAK SERVED WITH 1 REGULAR SIDE & GARLIC BREAD"
       },
       {
-        "name": "Burger de Bœuf Grillado's",
-        "note": "AVEC 1 ACCOMPAGNEMENT RÉGULIER (AJOUTEZ UNE GALETTE SUPPLÉMENTAIRE POUR 4.99)"
+        "name": "Grillado’s Beef Burger",
+        "note": "WITH 1 REGULAR SIDE (ADD EXTRA PATTY 4.99)",
+        "price": "17.99"
       },
       {
-        "name": "Carré Complet de Côtes Arrières",
-        "note": "7 CÔTES DOS DE QUALITÉ SUPÉRIEURE"
+        "name": "Full Beef Back Ribs Rack",
+        "note": "7 PRIME BEEF BACK RIBS",
+        "price": "94.99"
       }
     ],
     "plateaux": "PLATEAUX<br />GRILLADO'S",
@@ -776,7 +780,7 @@
   },
   "CrazyLunch": {
     "title": "Offres de Dîner Fous",
-    "subtitle": "Découvrez les délices incroyables de cette semaine",
+    "subtitle": "Check out this week’s incredible treats",
     "contactUs": "Nous Contacter",
     "deal1": "1/4 de cuisse ou de poitrine avec frites ou riz pour",
     "deal2": "Poutine au poulet grillé",

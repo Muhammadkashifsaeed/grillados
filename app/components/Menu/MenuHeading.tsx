@@ -15,7 +15,7 @@ export const MenuHeading = ({ title }: MenuHeadingProps) => {
       >
         {title}
       </h2>
-      <div className="w-full max-w-40 md:max-w-48 lg:max-w-64 h-1.5 bg-[#FAAE40] mt-3 md:mt-4" />
+      <div className="w-full h-1.5 bg-[#FAAE40] mt-3" />
     </motion.div>
   );
 };

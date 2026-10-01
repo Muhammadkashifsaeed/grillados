@@ -43,10 +43,18 @@ const AboutUsStory = () => {
               {t('storyHeading1')}
             </span>
             <span
-              className="block font-semibold drop-shadow-sm mt-1"
+              className="flex flex-wrap items-center gap-4 font-semibold drop-shadow-sm mt-1"
               style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)', fontSize: '48px', lineHeight: '50px' }}
             >
-              {t('storyHeading2')}
+              <span>{t('storyHeading2')}</span>
+              <div className="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0 mt-2 sm:mt-0">
+                <Image
+                  src="/images/burger-shape-3.png"
+                  alt="Burger Shape"
+                  fill sizes="80px"
+                  className="object-contain"
+                />
+              </div>
             </span>
           </h2>
 

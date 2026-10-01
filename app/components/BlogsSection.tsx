@@ -18,9 +18,15 @@ const blogsData = [
 const BlogsSection = () => {
   const t = useTranslations('Blogs');
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalOriginal = blogsData.length;
+  // We duplicate the array many times so it never runs out for normal usage
+  const extendedBlogsData = React.useMemo(() => Array(20).fill(blogsData).flat(), []);
+  const startIndex = 10 * totalOriginal;
+
+  const [currentIndex, setCurrentIndex] = useState(startIndex);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [isHovered, setIsHovered] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
   // Responsive items per view
   useEffect(() => {
@@ -41,14 +47,16 @@ const BlogsSection = () => {
 
   // Sliding Logic
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev + itemsPerView >= blogsData.length ? 0 : prev + 1));
-  }, [itemsPerView]);
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => prev + 1);
+  }, []);
 
   const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev === 0 ? Math.max(0, blogsData.length - itemsPerView) : prev - 1));
-  }, [itemsPerView]);
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => prev - 1);
+  }, []);
 
-  // Auto-slide every 5.5 seconds (paused on hover)
+  // Auto-slide every 5.5 seconds
   useEffect(() => {
     if (isHovered) return;
     const interval = setInterval(() => {
@@ -57,8 +65,20 @@ const BlogsSection = () => {
     return () => clearInterval(interval);
   }, [nextSlide, isHovered]);
 
+  // Snap back to middle when idle
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (currentIndex !== startIndex) {
+        setIsTransitioning(false);
+        const offset = (currentIndex % totalOriginal + totalOriginal) % totalOriginal;
+        setCurrentIndex(startIndex + offset);
+      }
+    }, 1100);
+    return () => clearTimeout(timer);
+  }, [currentIndex, startIndex, totalOriginal]);
+
   return (
-    <section className="w-full py-6 md:py-8 bg-zinc-50 overflow-hidden">
+    <section className="w-full pt-2 pb-6 md:pt-2 md:pb-8 bg-zinc-50 overflow-hidden">
       <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16">
 
         {/* Navigation & Container */}
@@ -68,16 +88,16 @@ const BlogsSection = () => {
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Carousel Track */}
-          <div className="overflow-hidden px-2 py-6">
+          <div className="overflow-hidden py-6">
             <div
-              className="flex transition-transform duration-1000 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
+              className={`flex ${isTransitioning ? 'transition-transform duration-1000 ease-in-out' : ''}`}
+              style={{ transform: `translateX(calc(-100% * ${currentIndex} / ${itemsPerView}))` }}
             >
-              {blogsData.map((blog) => (
+              {extendedBlogsData.map((blog, idx) => (
                 <div
-                  key={blog.id}
-                  className="px-4"
-                  style={{ minWidth: `${100 / itemsPerView}%` }}
+                  key={`${blog.id}-${idx}`}
+                  className="px-2"
+                  style={{ minWidth: `calc(100% / ${itemsPerView})` }}
                 >
                   <div className="bg-white shadow-md overflow-hidden h-full flex flex-col border border-gray-100 rounded-2xl">
 
@@ -103,12 +123,18 @@ const BlogsSection = () => {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-xl md:text-2xl font-bold text-black mb-3 leading-snug font-['Outfit',sans-serif]">
+                      <h3 
+                        className="mb-3"
+                        style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px', color: '#000000' }}
+                      >
                         {t(`${blog.tKey}.title`)}
                       </h3>
 
                       {/* Description */}
-                      <p className="text-black mb-6 grow leading-relaxed">
+                      <p 
+                        className="mb-6 grow line-clamp-2"
+                        style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '15px', lineHeight: '25px', color: '#000000' }}
+                      >
                         {t(`${blog.tKey}.description`)}
                       </p>
 
@@ -128,7 +154,7 @@ const BlogsSection = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 lg:-ml-6 bg-white p-3 rounded-full shadow-lg border border-gray-100 text-gray-700 hover:text-red-600 hover:scale-110 transition-all z-10 hidden md:flex"
+            className="absolute -left-4 md:-left-8 lg:-left-10 xl:-left-12 top-1/2 -translate-y-1/2 bg-[#FAC716] p-3 rounded-full shadow-lg text-black hover:text-white hover:scale-110 transition-all z-10 hidden md:flex"
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -136,7 +162,7 @@ const BlogsSection = () => {
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 lg:-mr-6 bg-white p-3 rounded-full shadow-lg border border-gray-100 text-gray-700 hover:text-red-600 hover:scale-110 transition-all z-10 hidden md:flex"
+            className="absolute -right-4 md:-right-8 lg:-right-10 xl:-right-12 top-1/2 -translate-y-1/2 bg-[#FAC716] p-3 rounded-full shadow-lg text-black hover:text-white hover:scale-110 transition-all z-10 hidden md:flex"
             aria-label="Next slide"
           >
             <ChevronRight className="w-6 h-6" />

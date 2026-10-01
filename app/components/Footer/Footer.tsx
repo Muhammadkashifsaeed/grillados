@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { UtensilsCrossed } from "lucide-react";
-import BackToTopButton from "./BackToTopButton";
 // Since lucide doesn't have TikTok and Yelp directly, using generic placeholders or available equivalents.
 // For Yelp, we can use a Star, and for TikTok we can use a Music/Video icon, or we can use custom SVG if provided. 
 // I'll use generic Lucide icons that represent media well, or text if needed. Let's use custom SVGs for those if possible.
@@ -76,10 +75,10 @@ export const Footer = () => {
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-350 mx-auto px-6 pt-20 pb-12 lg:px-8 flex flex-col items-center">
+        <div className="relative z-10 max-w-350 mx-auto px-6 pt-10 pb-6 lg:px-8 flex flex-col items-center">
           
           {/* Top Row: 4 Columns */}
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-8">
             
             {/* Column 1 */}
             <div className="flex flex-col items-start gap-6">
@@ -115,7 +114,7 @@ export const Footer = () => {
               <div className="flex flex-col gap-6">
                 <h3 className="text-lg sm:text-xl font-bold tracking-wider uppercase">{t('menuHeading')}</h3>
                 <ul className="flex flex-col gap-4">
-                  <li><Link href="/order" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('orderOnline')}</Link></li>
+                  <li><Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('orderOnline')}</Link></li>
                   <li><Link href="/franchising" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('franchising')}</Link></li>
                   <li><Link href="/about-us" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('aboutUs')}</Link></li>
                   <li><Link href="/contact-us" className="hover:text-[#DAAF18] transition-colors duration-300 text-sm sm:text-base">{t('contact')}</Link></li>
@@ -158,15 +157,13 @@ export const Footer = () => {
             {t('copyright')}
           </p>
         </div>
-        {/* Back to top button */}
-        <BackToTopButton />
       </footer>
 
       {/* Floating Order Button */}
       <div className="hidden lg:flex fixed top-1/2 right-0 -translate-y-1/2 z-50">
         <Link 
-          href="/order"
-          className="bg-[#DAAF18] hover:bg-[#d72323] hover:text-white text-black font-bold py-4 px-2 rounded-l-lg shadow-lg transition-all duration-300 flex flex-col items-center gap-3 cursor-pointer"
+          href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
+          className="bg-[#DAAF18] hover:bg-[#EB5250] hover:text-white text-black font-bold py-4 px-2 rounded-l-lg shadow-lg transition-all duration-300 flex flex-col items-center gap-3 cursor-pointer"
         >
           <UtensilsCrossed className="w-5 h-5" />
           <span className="writing-vertical-rl text-sm tracking-widest whitespace-nowrap rotate-180" style={{ writingMode: 'vertical-rl' }}>

@@ -140,7 +140,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                 alt="Zesty Food"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-top scale-95 xl:scale-100 origin-top drop-shadow-2xl hidden md:block"
+                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 xl:scale-100 origin-center drop-shadow-2xl hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

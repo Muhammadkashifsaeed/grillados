@@ -61,11 +61,11 @@
   },
   "CateringPartners": {
     "heading": "Grillado's Catering Partners",
-    "subtitle": "Catering By Grillados Customized Food Catering At Its Best",
+    "subtitle": "",
     "madeWithLove": "Made with Love",
     "smallHeading": "Leave the Grill to Us — You Focus on the Memories",
     "description": "From intimate family dinners to holiday feasts, Grillados brings the flavour straight to your door. Tell us what you need — we do custom orders because every celebration deserves something special.\n\nServing Cambridge · Laval · Milton · Mississauga Groups of 10 and above  Fresh grilled, never frozen  Call your nearest location to book",
-    "platterDescription": "Catering By Grillados Customized Food Catering At Its Best"
+    "platterDescription": ""
   },
   "CateringOffers": {
     "offer1": "Offer 1",
@@ -79,11 +79,11 @@
   "CateringIntroduction": {
     "titleColored": "Catering By Grillados",
     "titleBlack": "Customized Food\nCatering At Its Best",
-    "p1": "Grillados caters to a wide range of events, including weddings of all sizes, styles, and themes, as well as birthdays, anniversary parties, and family gatherings. Whether it's a corporate event or a community activity, we offer delicious and visually stunning dishes, tailored to your preferences, to elevate your event and create lasting memories.",
-    "p2": "At Grillado, you are our priority. We listen carefully to understand your objectives, leveraging our decades of experience and commitment to exceeding your expectations to ensure the success of your event in every aspect.",
-    "p3": "Customized menus: Our team works closely with you to develop a menu that reflects your tastes and dietary needs. Whether it's a wedding, a corporate event, or an intimate gathering, we create dishes that will delight every guest.",
+    "p1": "Grillados caters to a diverse range of events, including weddings of varying sizes, styles, and themes, as well as anniversaries, birthdays, and family gatherings. Whether it’s corporate events or community-wide activities, we offer delectable and visually stunning food options of your choice to elevate your event and create lasting memories.",
+    "p2": "At Grillados, our focus is entirely on you. We attentively listen to understand your goals, leveraging our decades of experience and commitment to go above and beyond to ensure the success of your event in every aspect.",
+    "p3": "Tailored Menus: Our team works closely with you to craft a menu that reflects your taste and dietary needs. Whether it’s a wedding, corporate event, or an intimate gathering, we create dishes that will delight every guest.",
     "p4": "We pride ourselves on using only the highest quality, organic, and locally sourced ingredients. Our commitment to freshness and sustainability ensures that every bite is both delicious and nutritious.",
-    "p5": "At Grillado, our mission is to elevate your catering experience with personalized, high-quality cuisine that leaves a lasting impression. We are committed to exceeding your expectations and transforming your special occasion into a true culinary masterpiece."
+    "p5": "At Grillados, our mission is to elevate your catering experience with personalized, high-quality food that leaves a lasting impression. We are committed to exceeding your expectations and making your special occasion a culinary masterpiece."
   },
   "CustomizedOptions": {
     "heading": "Customized Options",
@@ -350,7 +350,7 @@
     "a14": "All equipment and supplies are purchased from the franchisor’s trusted and approved vendors."
   },
   "GarnishedRice": {
-    "heading": "GARNISHED RICE",
+    "heading": "LOADED RICE",
     "items": {
       "chicken": "Chicken",
       "chickenDesc": "RICE, PERI CHICKEN, RED ONION, RED PEPPERS, SWEETCORN, LETTUCE, JALAPENOS, HOMEMADE PERISAUCE AND HOMEMADE GARLIC SAUCE.",
@@ -361,13 +361,13 @@
     },
     "sauces": {
       "lemonHerbs": "Lemon & Herbs",
-      "lemonHerbsDesc": "A tangy and tangy blend with a refreshing citrus touch.",
-      "average": "AVERAGE",
-      "averageDesc": "A balanced sauce, slightly spicy with a touch of warmth.",
-      "strong": "Strong",
-      "strongDesc": "Fiery, bold and filled with tangy warmth – a spice lover's dream!",
-      "barbecue": "Barbecue",
-      "barbecueDesc": "A rich, smoky and slightly sweet sauce with a classic barbecue flavor."
+      "lemonHerbsDesc": "A zesty and tangy blend with a refreshing citrus kick.",
+      "average": "Medium",
+      "averageDesc": "A balanced, mildly spicy sauce with a hint of heat.",
+      "strong": "Hot",
+      "strongDesc": "Fiery, bold, and packed with tangy heat – a spice lover's dream!",
+      "barbecue": "BBQ",
+      "barbecueDesc": "A rich, smoky, and slightly sweet sauce with a classic barbecue flavor."
     }
   },
   "LocationsPage": {
@@ -471,7 +471,7 @@
     "contactUs": "Contact us"
   },
   "WeddingCatering": {
-    "heading": "Wedding catering service",
+    "heading": "Wedding Catering",
     "description": "Your wedding is a once-in-a-lifetime event. Elevate your catering service to the next level with Grillado's certified halal dishes, prepared with fresh ingredients and the best Portuguese chicken in Canada.",
     "contactUs": "Contact us"
   },
@@ -583,11 +583,12 @@
     "chickenSpecialsMenu": [
       {
         "name": "Grilled Espetada",
-        "description": "Tender marinated chicken with fresh peppers, served on a skewer with 2 regular side dishes."
+        "description": "Tender marinated chicken with fresh peppers, served on a skewer with 2 regular side dishes.",
+        "note": "TENDER MARINATED CHICKEN WITH FRESH PEPPERS, SERVED ON A SKEWER WITH 2 REGULAR SIDES"
       },
       {
         "name": "Whole Organic Grilled Chicken",
-        "note": "WITH 1 REGULAR ACCOMPANIST"
+        "note": "WITH 1 REGULAR SIDE"
       },
       {
         "name": "Authentic Montreal Poutine",
@@ -610,15 +611,15 @@
         "note": "WITH 1 REGULAR SIDE DISH (ADD AN EXTRA PATTY FOR 4.99)"
       },
       {
-        "name": "Flaming Tandoori Grill",
-        "note": "8 PIECES OF TANDOORI SPICED CHICKEN ON A HOT GRILL"
+        "name": "Tandoori Sizzler",
+        "note": "8 PIECES OF CHICKEN WITH TANDOORI SPICES ON SIZZLER"
       },
       {
         "name": "Saji Balochi Chicken",
         "note": "PRE-ORDER ONLY WITH 2 REGULAR SIDES AND 2 PITA BREADS OR 2 GARLIC BREADS"
       }
     ],
-    "comboDePoulet": "CHICKEN<br />COMBO",
+    "comboDePoulet": "GRILLADO’S GRILLED<br />CHICKEN COMBO",
     "comboDePouletMenu": [
       {
         "name": "¼ Grilled Chicken Leg",
@@ -649,28 +650,32 @@
     "beefLambSpecials": "GRILLADO'S<br />BEEF & LAMB SPECIALS",
     "beefLambSpecialsMenu": [
       {
-        "name": "Rear Ribs",
-        "note": "WITH 2 REGULAR SIDE DISHES"
+        "name": "Beef Back Ribs",
+        "note": "BEEF RIBS (3 BONES), 1 SIDE, 1 PORTUGUESE BUN OR 1 GARLIC BREAD",
+        "price": "44.99"
       },
       {
         "name": "Lamb Chops",
-        "note": "WITH 2 REGULAR SIDES"
+        "note": "4 FRENCH CUT LAMBCHOPS SERVED WITH 1 REGULAR SIDE AND 1 GARLIC BREAD",
+        "price": "36.99"
       },
       {
-        "name": "12 oz Sirloin Steak",
-        "note": "WITH 2 REGULAR SIDES (PLEASE ALLOW 30 TO 40 MINUTES TO COOK)"
+        "name": "12 OZ Rib Eye Steak",
+        "note": "AAA RIB EYE STEAK SERVED WITH 1 REGULAR SIDE AND GARLIC BREAD"
       },
       {
-        "name": "12 oz Sirloin Steak",
-        "note": "WITH 2 REGULAR ACCOMPANISTS (SURF AND TURF) AND A SKEWER OF SHRIMP (PLEASE ALLOW 30 TO 40 MINUTES TO COOK)"
+        "name": "12 OZ Striploin Steak",
+        "note": "AAA STRIPLOIN STEAK SERVED WITH 1 REGULAR SIDE & GARLIC BREAD"
       },
       {
-        "name": "Grillado's Beef Burger",
-        "note": "WITH 1 REGULAR SIDE (ADD AN EXTRA PATTY FOR 4.99)"
+        "name": "Grillado’s Beef Burger",
+        "note": "WITH 1 REGULAR SIDE (ADD EXTRA PATTY 4.99)",
+        "price": "17.99"
       },
       {
-        "name": "Full Rack of Rear Ribs",
-        "note": "7 PREMIUM BACK RIBS"
+        "name": "Full Beef Back Ribs Rack",
+        "note": "7 PRIME BEEF BACK RIBS",
+        "price": "94.99"
       }
     ],
     "plateaux": "GRILLADO'S<br />PLATTERS",
@@ -776,7 +781,7 @@
   },
   "CrazyLunch": {
     "title": "Crazy Lunch Deals",
-    "subtitle": "Discover this week's incredible treats",
+    "subtitle": "Check out this week’s incredible treats",
     "contactUs": "Contact Us",
     "deal1": "1/4 thigh or breast with fries or rice for",
     "deal2": "Grilled Chicken Poutine",

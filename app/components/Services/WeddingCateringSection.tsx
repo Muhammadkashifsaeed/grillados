@@ -35,12 +35,14 @@ export default function WeddingCateringSection() {
           </div>
 
           {/* Heading */}
-          <h2 
-            className="uppercase leading-tight tracking-wide mb-4 text-center"
+          <div className="text-center">
+<h2 
+            className="uppercase leading-tight tracking-wide mb-4 text-center transform -rotate-2 inline-block text-center"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
           >
             {t('heading')}
           </h2>
+</div>
 
           {/* Divider */}
           <div className="w-16 h-1 bg-black rounded-full mb-6 mx-auto"></div>
@@ -56,7 +58,7 @@ export default function WeddingCateringSection() {
           {/* Button */}
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
-            className="px-10 py-3 sm:py-4 bg-[#fbbc04] hover:bg-[#d72323] active:scale-95 shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide rounded-none"
+            className="px-10 py-3 sm:py-4 bg-[#fbbc04] hover:bg-[#EB5250] active:scale-95 shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide rounded-none"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px', color: 'rgb(255,255,255)' }}
           >
               {t('contactUs')}

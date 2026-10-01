@@ -25,7 +25,7 @@ export const Header = () => {
       <div className="max-w-375 mx-auto px-2 lg:px-3 h-full flex items-center justify-between gap-1 lg:gap-2">
         
         {/* Left Side: Logo */}
-        <Link href="/" className="shrink-0 flex items-center h-full py-2 mr-2 ml-0 lg:ml-2">
+        <Link href="/" className="shrink-0 flex items-center h-full mr-2 ml-0 lg:ml-2">
           <div className="relative h-13.75 w-35 md:h-15 md:w-37.5 lg:h-16.25 lg:w-41.25 xl:h-17.5 xl:w-45">
             <Image
               src="/images/saman.png"
@@ -40,10 +40,10 @@ export const Header = () => {
 
         {/* Center: Navigation & Language Switcher (Desktop Only) */}
         <div className="hidden lg:flex flex-1 items-center justify-center min-w-0 relative z-10">
-          <nav className="flex items-center gap-0.5 xl:gap-2 bg-white/5 px-1.5 xl:px-3 py-1.5 rounded-2xl backdrop-blur-sm border border-white/5 flex-nowrap">
+          <nav className="flex items-center gap-0.5 xl:gap-2 px-1.5 xl:px-3 py-1.5 flex-nowrap">
             <NavItem href="/menu" icon={<Utensils className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('menu')} />
             <NavItem href="/locations" icon={<MapPin className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('locations')} />
-            <NavItem href="/order" icon={<ShoppingBag className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('orderOnline')} />
+            <NavItem href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" icon={<ShoppingBag className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('orderOnline')} />
             <NavItem href="/deals" icon={<Tag className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('deals')} />
             <NavItem href="/services" icon={<Users className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('services')} />
             <NavItem href="/catering" icon={<Truck className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('cateringServices')} />
@@ -89,8 +89,8 @@ export const Header = () => {
         <div className="flex items-center gap-2 xl:gap-4 h-full py-2 shrink-0 ml-2 relative z-20">
           
           <Link
-            href="/order"
-            className="h-8 md:h-10 lg:h-full inline-flex items-center justify-center gap-1 xl:gap-1.5 bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white font-extrabold px-2 sm:px-3 lg:px-2.5 xl:px-3 rounded-lg xl:rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink"
+            href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
+            className="h-8 md:h-10 lg:h-10 xl:h-11 inline-flex items-center justify-center gap-1 xl:gap-1.5 bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white font-extrabold px-3 sm:px-4 lg:px-5 xl:px-6 rounded-lg xl:rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink"
           >
             <ShoppingBag className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
             <div className="flex flex-col text-left">

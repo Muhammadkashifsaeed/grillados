@@ -68,14 +68,14 @@ const HomePromoSections = () => {
 
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
               <Link
-                href="/order"
-                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
+                href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('orderNow')}
               </Link>
               <button
-                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('learnMore')}
@@ -128,14 +128,14 @@ const HomePromoSections = () => {
 
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
               <Link
-                href="/order"
-                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
+                href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('orderNow')}
               </Link>
               <button
-                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('learnMore')}

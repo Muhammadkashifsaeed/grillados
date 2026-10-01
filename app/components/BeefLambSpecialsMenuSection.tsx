@@ -44,18 +44,18 @@ export const BeefLambSpecialsMenuSection = () => {
   const t = useTranslations('Menu');
   const rawItems = t.raw('beefLambSpecialsMenu');
   const menuItemsLocal = [
-    { name: rawItems[0].name, price: '21.99', note: rawItems[0].note },
-    { name: rawItems[1].name, price: '29.99', note: rawItems[1].note },
-    { name: rawItems[2].name, price: '45.99', note: rawItems[2].note },
-    { name: rawItems[3].name, price: '52.99', note: rawItems[3].note },
-    { name: rawItems[4].name, price: '16.99', note: rawItems[4].note },
-    { name: rawItems[5].name, price: '34.99', note: rawItems[5].note },
+    { name: rawItems[0].name, price: '44.99', note: rawItems[0].note },
+    { name: rawItems[1].name, price: '36.99', note: rawItems[1].note },
+    { name: rawItems[2].name, price: '47.99', note: rawItems[2].note },
+    { name: rawItems[3].name, price: '46.99', note: rawItems[3].note },
+    { name: rawItems[4].name, price: '17.99', note: rawItems[4].note },
+    { name: rawItems[5].name, price: '94.99', note: rawItems[5].note },
   ];
   return (
     <section id="beef-lamb-specials" className="relative w-full py-4 lg:py-8 bg-transparent">
 
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full pl-4 pr-16.25 md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
 
         <div className="hidden md:block">
           <MenuDualImage
@@ -100,7 +100,7 @@ export const BeefLambSpecialsMenuSection = () => {
 
 
         {/* ZONE 2: Bottom row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 w-full items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center">
 
           {/* LEFT: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
@@ -108,7 +108,7 @@ export const BeefLambSpecialsMenuSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
-            className="w-full flex flex-col justify-start"
+            className="w-full flex flex-col justify-center"
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2
@@ -168,7 +168,7 @@ export const BeefLambSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="w-full flex items-start justify-center relative lg:min-h-125 mx-auto"
+            className="w-full flex items-center justify-center relative lg:min-h-125 mx-auto"
           >
             {/* Desktop Image */}
             <Image
@@ -176,7 +176,7 @@ export const BeefLambSpecialsMenuSection = () => {
               alt="Grillado Beef and Lamb"
               width={1000}
               height={750}
-              className="w-full h-auto object-contain rounded-xl lg:rounded-none object-top drop-shadow-2xl scale-95 xl:scale-100 origin-top hidden md:block"
+              className="w-full h-auto object-contain rounded-xl lg:rounded-none object-center drop-shadow-2xl scale-95 xl:scale-100 origin-center hidden md:block"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             {/* Mobile Layout for 7, 8, 9 */}

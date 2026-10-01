@@ -356,7 +356,7 @@ export const ExploreArticles = () => {
           {articles.slice(0, visibleCount).map((article) => (
             <div 
               key={article.id} 
-              className="bg-[#111111] border border-gray-800 rounded-2xl overflow-hidden shadow-2xl group flex flex-col h-full hover:border-gray-700 transition-colors duration-300"
+              className="w-[92%] md:w-full max-w-[380px] md:max-w-none mx-auto bg-[#111111] border border-gray-800 rounded-2xl overflow-hidden shadow-2xl group flex flex-col h-full hover:border-gray-700 transition-colors duration-300"
             >
               {/* Image Container */}
               {article.image && (
@@ -375,12 +375,16 @@ export const ExploreArticles = () => {
                 
                 <Link 
                   href={`/blog/${article.id}`} 
-                  className="text-[#FFFFFF] text-5 leading-6.25 font-medium font-['Ribeat',sans-serif] mb-4 hover:text-[#FAAE40] transition-colors duration-300 line-clamp-2 underline underline-offset-4"
+                  className="mb-4 hover:text-[#FAAE40] transition-colors duration-300 line-clamp-2 underline underline-offset-4"
+                  style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px', color: '#FFFFFF' }}
                 >
                   {article.heading}
                 </Link>
 
-                <p className="text-[#FFFFFF] text-4 leading-6.5 font-normal font-['Roboto',sans-serif] line-clamp-3">
+                <p 
+                  className="line-clamp-2"
+                  style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '15px', lineHeight: '25px', color: '#FFFFFF' }}
+                >
                   {article.text}
                 </p>
 
@@ -422,7 +426,7 @@ export const ExploreArticles = () => {
             <button 
               type="button" 
               onClick={handleLoadMore}
-              className="bg-[#DAAF18] text-[#FFFFFF] hover:bg-[#E04B51] font-medium font-['Ribeat',sans-serif] text-4 leading-4 py-4 px-10 rounded-none transition-all duration-300 uppercase tracking-widest shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-[#DAAF18] text-[#FFFFFF] hover:bg-[#EB5250] font-medium font-['Ribeat',sans-serif] text-4 leading-4 py-4 px-10 rounded-none transition-all duration-300 uppercase tracking-widest shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Load More
             </button>

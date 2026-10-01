@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 
 const CateringIntroductionSection = () => {
+  // Trigger hot reload for translation changes
   const t = useTranslations('CateringIntroduction');
 
   const paragraphs = ['p1', 'p2', 'p3', 'p4', 'p5'];
@@ -16,7 +17,9 @@ const CateringIntroductionSection = () => {
         {/* Left Side - Text */}
         <div className="w-full md:w-[55%] flex flex-col">
           
-          {/* Heading */}
+          
+
+                    {/* Heading */}
           <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

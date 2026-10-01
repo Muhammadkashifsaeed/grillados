@@ -75,7 +75,7 @@ export const MobileMenu = () => {
         <nav className="flex-1 overflow-y-auto py-6 px-5 flex flex-col gap-6">
           <NavItem href="/menu" icon={<Utensils className="w-5 h-5" />} label={t('menu')} />
           <NavItem href="/locations" icon={<MapPin className="w-5 h-5" />} label={t('locations')} />
-          <NavItem href="/order" icon={<ShoppingBag className="w-5 h-5" />} label={t('orderOnline')} />
+          <NavItem href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" icon={<ShoppingBag className="w-5 h-5" />} label={t('orderOnline')} />
           <NavItem href="/deals" icon={<Tag className="w-5 h-5" />} label={t('deals')} />
           <NavItem href="/services" icon={<Users className="w-5 h-5" />} label={t('services')} />
           <NavItem href="/catering" icon={<Truck className="w-5 h-5" />} label={t('cateringServices')} />

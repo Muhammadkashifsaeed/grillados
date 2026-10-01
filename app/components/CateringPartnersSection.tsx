@@ -18,23 +18,25 @@ const CateringPartnersSection = () => {
       <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16 mb-8 flex flex-col items-center text-center">
 
         {/* Centered Heading */}
-        <h2 
-          className="uppercase tracking-wide mb-2"
+        <div className="text-center">
+<h2 
+          className="uppercase tracking-wide mb-2 inline-block text-center"
           style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
         >
           {t('heading')}
         </h2>
-        <div className="w-24 h-1 bg-black mx-auto mt-2 mb-1 rounded-full"></div>
+</div>
+
 
 
         <p className="max-w-3xl text-center mt-3" style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(0, 0, 0)' }}>
-          {t('platterDescription')}
+          Catering By Grillados Customized Food Catering At Its Best
         </p>
 
       </div>
 
       {/* Infinite Image Carousel (Marquee) */}
-      <div className="relative w-full flex overflow-hidden py-8 bg-zinc-50 border-y border-gray-100">
+      <div className="relative w-full flex overflow-hidden py-8 bg-white">
         <div className="flex w-max animate-marquee gap-2 md:gap-3 px-2 items-center">
           {marqueeSponsors.map((src, idx) => (
             <div

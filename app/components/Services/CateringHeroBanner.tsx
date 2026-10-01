@@ -66,9 +66,9 @@ const CateringHeroBanner = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         >
           <Link 
-            href="/order"
+            href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
             aria-label={t('orderNow')}
-            className="bg-[#F4C430] hover:bg-[#d72323] rounded-md h-13 px-8 flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer inline-flex"
+            className="bg-[#F4C430] hover:bg-[#EB5250] rounded-md h-13 px-8 flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer inline-flex"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px', color: 'rgb(255, 255, 255)' }}
           >
             {t('orderNow')}

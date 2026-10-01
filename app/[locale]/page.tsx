@@ -30,7 +30,7 @@ export default function Home() {
       <ReviewsSection />
       
       {/* Newsletter / Blogs Section */}
-      <section className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 bg-white text-center">
+      <section className="flex flex-col items-center justify-center pt-10 pb-2 px-4 sm:px-6 lg:px-8 bg-white text-center">
         <h2
           style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
           className="uppercase tracking-wide mb-6"

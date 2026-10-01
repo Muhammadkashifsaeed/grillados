@@ -22,12 +22,14 @@ const SandwichesSection = () => {
           </div>
 
           {/* Centered Heading */}
-          <h2
+          <div className="text-center">
+<h2
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
-            className="mb-4"
+            className="mb-4 transform -rotate-2 inline-block text-center"
           >
             {t('heading')}
           </h2>
+</div>
           <div className="w-24 h-1 bg-black mx-auto mt-2 mb-4 rounded-full"></div>
 
 
@@ -38,11 +40,11 @@ const SandwichesSection = () => {
 
           {/* Buttons */}
           <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
-            <Link href="/order" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('orderNow')}</span>
             </Link>
 
-            <Link href="/menu#sandwiches" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#d72323] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+            <Link href="/menu#sandwiches" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#fbbc04] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('learnMore')}</span>
             </Link>
           </div>

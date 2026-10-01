@@ -5,7 +5,7 @@ import { ArrowRight, Menu, ChevronDown } from 'lucide-react';
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { useRouter } from '@/i18n/routing';
+import { useRouter, Link } from '@/i18n/routing';
 
 const HeroSection = () => {
   const t = useTranslations('Hero');
@@ -32,8 +32,8 @@ const HeroSection = () => {
         />
       </motion.div>
 
-      {/* Very light overlay just to ensure text readability without darkening the image too much */}
-      <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none"></div>
+      {/* Black overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none"></div>
 
       {/* Center Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto">
@@ -46,11 +46,11 @@ const HeroSection = () => {
           className="mb-8 relative inline-block mx-4 sm:mx-0 max-w-[90vw] sm:max-w-none"
         >
           <div 
-            className="absolute inset-0 bg-[#DAAF18] rounded-xl z-[-1] shadow-2xl"
+            className="absolute inset-0 bg-[#DAAF18] rounded-xl z-[-1] shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
           ></div>
           
           <h1
-            className="text-white py-3 px-3 sm:px-5 relative z-10 text-center whitespace-normal sm:whitespace-nowrap text-3xl sm:text-4xl md:text-13.75 leading-snug md:leading-17.5 break-words"
+            className="text-white py-1 px-2 sm:px-3 relative z-10 text-center whitespace-normal sm:whitespace-nowrap tracking-tight text-4xl sm:text-5xl md:text-[66px] leading-tight md:leading-[1.2] break-words"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255,255,255)' }}
           >
             {t('welcome')}
@@ -74,45 +74,28 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
           className="flex flex-row gap-3 sm:gap-5 w-full px-4 sm:px-0 sm:w-auto justify-center"
         >
-          <motion.button 
-            whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => router.push('/order')}
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-3 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none text-3.75 sm:text-5"
+          <Link 
+            href="https://grillados.bycalibre.ca/location" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] hover:bg-[#EB5250] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-all duration-300 shadow-md hover:-translate-y-1 hover:shadow-xl flex-1 sm:flex-none text-3.75 sm:text-5"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
             <span className="whitespace-nowrap">{t('orderNow')}</span>
-            <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform shrink-0" />
-          </motion.button>
+          </Link>
           
-          <motion.button 
-            whileHover={{ scale: 1.05, y: -4, boxShadow: "0 10px 25px -5px rgba(224,75,81,0.5)" }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => router.push('/order')}
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] text-white px-3 py-3 sm:px-8 sm:py-4 rounded-md transition-colors duration-300 hover:bg-[#c73f45] shadow-lg flex-1 sm:flex-none text-3.75 sm:text-5"
+          <Link 
+            href="https://grillados.bycalibre.ca/location" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#E04B51] hover:bg-[#EB5250] text-white px-4 py-3 sm:px-8 sm:py-4 rounded-md transition-all duration-300 shadow-md hover:-translate-y-1 hover:shadow-xl flex-1 sm:flex-none text-3.75 sm:text-5"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
-            <Menu className="w-4 h-4 sm:w-6 sm:h-6 shrink-0" />
             <span className="whitespace-nowrap">{t('viewMenu')}</span>
-          </motion.button>
+          </Link>
         </motion.div>
 
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center justify-center pointer-events-none"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ChevronDown className="w-8 h-8 text-white/50" />
-        </motion.div>
-      </motion.div>
 
     </section>
   );
