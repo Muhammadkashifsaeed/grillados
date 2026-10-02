@@ -68,9 +68,9 @@ const CateringIntroductionSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="relative w-full max-w-100 aspect-9/16 shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.02] border-4 border-white">
+          <div className="relative w-full max-w-100 aspect-[9/16] shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.02] border-4 border-white">
             <video
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover scale-[1.05]"
               src="https://grillados.ca/wp-content/uploads/2025/04/Add-2-reel.mp4"
               autoPlay
               muted
