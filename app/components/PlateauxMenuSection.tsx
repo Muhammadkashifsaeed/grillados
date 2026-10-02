@@ -48,7 +48,7 @@ export const PlateauxMenuSection = () => {
     <section id="plateaux" className="relative w-full pt-4 pb-1 md:py-4 lg:py-8 bg-transparent">
 
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col lg:flex-col gap-0 md:gap-10 lg:gap-14">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col lg:flex-col gap-0 md:gap-10 lg:gap-14">
 
 
         {/* ZONE 2: Bottom row */}

@@ -74,7 +74,7 @@ export const ChickenSpecialsMenuSection = () => {
     <section id="chicken-specials" className="relative w-full py-4 lg:py-8 bg-transparent">
 
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
 
         <div className="hidden md:block">
           <MenuDualImage
