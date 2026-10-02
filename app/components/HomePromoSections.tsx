@@ -53,14 +53,14 @@ const HomePromoSections = () => {
             </div>
 
             <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
-              className="uppercase tracking-wide drop-shadow-sm mb-0 text-center"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '40px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
+              className="mb-4 transform -rotate-2 inline-block text-center"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
             >
               {t('cateringHeading')}
             </motion.h2>
 
             {/* Divider */}
-            <div className="w-full h-1.5 bg-[#FAAE40] mt-3 mb-6 max-w-48 mx-auto"></div>
+            <div className="w-24 h-1 bg-black mx-auto mt-2 mb-4 rounded-full"></div>
 
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="mb-8"
               style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
@@ -113,14 +113,14 @@ const HomePromoSections = () => {
             </div>
 
             <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
-              className="uppercase tracking-wide drop-shadow-sm mb-0 text-center"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '40px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
+              className="mb-4 transform -rotate-2 inline-block text-center"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
             >
               {t('appHeading')}
             </motion.h2>
 
             {/* Divider */}
-            <div className="w-full h-1.5 bg-[#FAAE40] mt-3 mb-6 max-w-48 mx-auto"></div>
+            <div className="w-24 h-1 bg-black mx-auto mt-2 mb-4 rounded-full"></div>
 
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="mb-8"
               style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
