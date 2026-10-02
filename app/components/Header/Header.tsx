@@ -22,10 +22,10 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full h-20 bg-black shadow-xl border-b border-white/5">
-      <div className="max-w-375 mx-auto px-2 lg:px-3 h-full flex items-center justify-between gap-1 lg:gap-2">
+      <div className="max-w-375 mx-auto px-3 sm:px-4 lg:px-5 h-full flex items-center justify-between gap-2 lg:gap-4">
         
         {/* Left Side: Logo */}
-        <Link href="/" className="shrink-0 flex items-center h-full mr-2 ml-0 lg:ml-2">
+        <Link href="/" className="shrink-0 flex items-center h-full mr-2 ml-1 lg:ml-2">
           <div className="relative h-13.75 w-35 md:h-15 md:w-37.5 lg:h-16.25 lg:w-41.25 xl:h-17.5 xl:w-45">
             <Image
               src="/images/saman.png"
@@ -86,13 +86,13 @@ export const Header = () => {
         </div>
 
         {/* Right Side: Order Online Button & Mobile Menu */}
-        <div className="flex items-center gap-3 xl:gap-4 h-full py-2 shrink-0 ml-2 mr-1 lg:mr-0 relative z-20">
+        <div className="flex items-center gap-3 md:gap-4 xl:gap-6 h-full py-2 shrink-0 relative z-20">
           
           <Link
             href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-            className="h-8 md:h-10 lg:h-10 xl:h-11 inline-flex items-center justify-center gap-1 xl:gap-1.5 bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white font-extrabold px-5 sm:px-6 lg:px-5 xl:px-6 rounded-lg xl:rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink"
+            className="h-8 md:h-10 lg:h-10 xl:h-11 inline-flex items-center justify-center gap-1.5 xl:gap-2 bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white font-extrabold px-4 sm:px-5 lg:px-5 xl:px-6 rounded-lg xl:rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink"
           >
-            <ShoppingBag className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
+            <ShoppingBag className="w-4 h-4 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
             <div className="flex flex-col text-left">
               <span className="text-2.5 sm:text-xs md:text-sm xl:text-xs whitespace-nowrap">{t('orderOnline')}</span>
             </div>
