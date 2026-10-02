@@ -27,13 +27,13 @@ const HeroSection = () => {
           fill 
           priority
           quality={100}
-          className="object-cover object-center" 
+          className="object-cover object-[65%_center] sm:object-center" 
           sizes="100vw"
         />
       </motion.div>
 
       {/* Black overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black/30 sm:bg-black/50 z-10 pointer-events-none"></div>
 
       {/* Center Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto">
