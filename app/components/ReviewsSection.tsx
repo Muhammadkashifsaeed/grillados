@@ -81,7 +81,7 @@ const ReviewsSection = () => {
       } else if (window.innerWidth < 1536) {
         setItemsPerView(3); // Standard Laptop (e.g., 1280px to 1440px)
       } else {
-        setItemsPerView(5); // Large Desktop (e.g., 1536px+)
+        setItemsPerView(4); // Large Desktop (e.g., 1536px+)
       }
     };
 

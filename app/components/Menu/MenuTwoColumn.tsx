@@ -6,7 +6,7 @@ interface MenuTwoColumnProps {
   leftContent: ReactNode;
   rightContent: ReactNode;
   reverseOnMobile?: boolean;
-  alignItems?: 'items-stretch' | 'items-center' | 'items-center';
+  alignItems?: string;
 }
 
 export const MenuTwoColumn = ({

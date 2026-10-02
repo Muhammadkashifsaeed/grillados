@@ -112,7 +112,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                           className="w-full h-full object-contain drop-shadow-2xl scale-150"
                         />
                       </div>
-                      <div className="flex flex-col justify-center flex-1">
+                      <div className="flex flex-col justify-start flex-1">
                         <h4 
                           className="uppercase tracking-wider mb-1 md:mb-2"
                           style={item.style}
