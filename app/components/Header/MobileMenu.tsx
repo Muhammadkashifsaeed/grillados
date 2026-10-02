@@ -50,7 +50,7 @@ export const MobileMenu = () => {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-[80vw] sm:w-87.5 bg-[#1b140f] border-l border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[80vw] sm:w-87.5 bg-black border-l border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } flex flex-col`}
       >

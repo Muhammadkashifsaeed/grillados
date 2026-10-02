@@ -54,7 +54,7 @@ export const Header = () => {
                 <NavItem href="/pages" icon={<FileText className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('pages')} dropdown />
               </div>
 
-              <div className="absolute left-1/2 -translate-x-1/2 top-12.5 flex flex-col w-48 bg-[#1b140f] border border-[#D8AC15]/30 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
+              <div className="absolute left-1/2 -translate-x-1/2 top-12.5 flex flex-col w-48 bg-black border border-[#D8AC15]/30 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
                 <Link href="/franchising" className="px-5 py-3 text-white hover:bg-[#D8AC15] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('franchising')}</Link>
                 <Link href="/gallery" className="px-5 py-3 text-white hover:bg-[#D8AC15] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('gallery')}</Link>
                 <Link href="/blogs" className="px-5 py-3 text-white hover:bg-[#D8AC15] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('blogs')}</Link>
@@ -86,11 +86,11 @@ export const Header = () => {
         </div>
 
         {/* Right Side: Order Online Button & Mobile Menu */}
-        <div className="flex items-center gap-2 xl:gap-4 h-full py-2 shrink-0 ml-2 relative z-20">
+        <div className="flex items-center gap-3 xl:gap-4 h-full py-2 shrink-0 ml-2 mr-1 lg:mr-0 relative z-20">
           
           <Link
             href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-            className="h-8 md:h-10 lg:h-10 xl:h-11 inline-flex items-center justify-center gap-1 xl:gap-1.5 bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white font-extrabold px-3 sm:px-4 lg:px-5 xl:px-6 rounded-lg xl:rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink"
+            className="h-8 md:h-10 lg:h-10 xl:h-11 inline-flex items-center justify-center gap-1 xl:gap-1.5 bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white font-extrabold px-5 sm:px-6 lg:px-5 xl:px-6 rounded-lg xl:rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink"
           >
             <ShoppingBag className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
             <div className="flex flex-col text-left">
