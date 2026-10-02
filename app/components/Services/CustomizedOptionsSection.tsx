@@ -90,7 +90,7 @@ const CustomizedOptionsSection = () => {
             {/* Button 1 */}
             <Link 
               href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" 
-              className="h-12 sm:h-13 px-2 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
+              className="h-12 sm:h-13 px-2 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }}
             >
               {t('orderNow')}
@@ -98,7 +98,7 @@ const CustomizedOptionsSection = () => {
 
             {/* Button 2 */}
             <button 
-              className="h-12 sm:h-13 px-2 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
+              className="h-12 sm:h-13 px-2 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }}
             >
               {t('learnMore')}

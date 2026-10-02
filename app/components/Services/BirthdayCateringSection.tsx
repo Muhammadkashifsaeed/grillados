@@ -84,7 +84,7 @@ export default function BirthdayCateringSection() {
             {/* Button */}
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
-              className="px-10 py-3 sm:py-4 bg-[#D8AC15] hover:bg-[#EB5250] active:scale-95 shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-wide rounded-none"
+              className="px-10 py-3 sm:py-4 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md uppercase tracking-wide rounded-none"
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px', color: 'rgb(255,255,255)' }}
             >
               {t('contactUs')}

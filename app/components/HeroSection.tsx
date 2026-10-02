@@ -27,7 +27,7 @@ const HeroSection = () => {
           fill 
           priority
           quality={100}
-          className="object-cover object-[65%_center] sm:object-center" 
+          className="object-contain sm:object-cover object-center" 
           sizes="100vw"
         />
       </motion.div>
@@ -78,7 +78,7 @@ const HeroSection = () => {
             href="https://grillados.bycalibre.ca/location" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-zinc-900 hover:text-white px-4 py-3 sm:px-8 sm:py-4 rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 hover:shadow-xl flex-1 sm:flex-none text-3.75 sm:text-5"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg px-4 py-3 sm:px-8 sm:py-4 flex-1 sm:flex-none text-3.75 sm:text-5"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
             <span className="whitespace-nowrap">{t('orderNow')}</span>
@@ -88,7 +88,7 @@ const HeroSection = () => {
             href="https://grillados.bycalibre.ca/location" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-zinc-900 hover:text-white px-4 py-3 sm:px-8 sm:py-4 rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 hover:shadow-xl flex-1 sm:flex-none text-3.75 sm:text-5"
+            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg px-4 py-3 sm:px-8 sm:py-4 flex-1 sm:flex-none text-3.75 sm:text-5"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
             <span className="whitespace-nowrap">{t('viewMenu')}</span>
