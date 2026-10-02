@@ -90,7 +90,7 @@ export const ChickenSpecialsMenuSection = () => {
 
 
         {/* ZONE 2: Bottom row — Left: menu content | Right: set.png */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center md:items-start md:pt-4">
 
           {/* Left: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
@@ -98,7 +98,7 @@ export const ChickenSpecialsMenuSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
-            className="w-full flex flex-col justify-center"
+            className="w-full flex flex-col justify-start"
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2
@@ -155,7 +155,7 @@ export const ChickenSpecialsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="w-full flex items-center justify-center relative lg:min-h-125 mx-auto"
+            className="w-full flex items-center md:items-start justify-center relative lg:min-h-125 mx-auto"
           >
             {/* Desktop Image */}
             <Image

@@ -52,7 +52,7 @@ export const PlateauxMenuSection = () => {
 
 
         {/* ZONE 2: Bottom row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center md:items-start md:pt-4">
 
           {/* LEFT: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div
@@ -60,7 +60,7 @@ export const PlateauxMenuSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
-            className="w-full flex flex-col justify-center order-3 lg:order-none mt-0"
+            className="w-full flex flex-col justify-start order-3 lg:order-none mt-0"
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2

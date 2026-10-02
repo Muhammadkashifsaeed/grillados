@@ -68,7 +68,7 @@ export const DessertMenuSection = () => {
 
         {/* ROW 2: Dessert Menu + a-1 Image */}
         <MenuTwoColumn
-          alignItems="items-stretch"
+          alignItems="items-center md:items-start md:pt-4"
           leftContent={
             <div className="flex flex-col w-full pb-4 lg:pb-8 justify-start">
               <div>
@@ -87,7 +87,7 @@ export const DessertMenuSection = () => {
             </div>
           }
           rightContent={
-            <div className="relative w-full h-full lg:min-h-125 flex items-center justify-center lg:mb-8">
+            <div className="relative relative w-full h-full lg:min-h-125 flex items-center md:items-start justify-center lg:mb-8">
               {/* Desktop Image */}
               <Image
                 src="/images/a-1.png"

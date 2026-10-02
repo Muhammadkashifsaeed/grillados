@@ -35,7 +35,7 @@ export const AccompagnementsMenuSection = () => {
 
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center md:items-start md:pt-4">
 
           {/* Left Column: Image */}
           <motion.div
@@ -43,7 +43,7 @@ export const AccompagnementsMenuSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="w-full h-full flex items-center justify-center relative min-h-0 md:min-h-75 lg:min-h-125 order-2 md:order-1"
+            className="w-full flex items-center md:items-start justify-center relative min-h-0 md:min-h-75 lg:min-h-125 order-2 md:order-1"
           >
             <div className="relative w-full h-full min-h-0 md:min-h-75 lg:min-h-125">
               {/* Desktop Image */}
@@ -77,7 +77,7 @@ export const AccompagnementsMenuSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="w-full flex flex-col justify-center order-1 md:order-2"
+            className="w-full flex flex-col justify-start order-1 md:order-2"
           >
             <motion.div variants={fadeRightItem} className="mb-6 lg:mb-10">
               <h2
