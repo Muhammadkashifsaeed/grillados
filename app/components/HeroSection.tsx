@@ -12,7 +12,7 @@ const HeroSection = () => {
   const router = useRouter();
 
   return (
-    <section className="relative w-full h-[85vh] md:h-[50vh] lg:h-[55vh] xl:h-[60vh] min-h-[700px] md:min-h-100 flex items-center justify-center overflow-hidden bg-zinc-950 py-8 md:py-8">
+    <section className="relative w-full h-[80vh] lg:h-[55vh] xl:h-[60vh] min-h-[650px] md:min-h-100 flex items-center justify-center overflow-hidden bg-white md:bg-zinc-950 py-6 md:py-8">
       
       {/* Background Image with Cinematic Zoom and floating */}
       <motion.div 
@@ -27,13 +27,14 @@ const HeroSection = () => {
           fill 
           priority
           quality={100}
-          className="w-full h-full object-fill sm:object-cover object-center" 
+          unoptimized={true}
+          className="object-cover object-[75%_center] sm:object-center" 
           sizes="100vw"
         />
       </motion.div>
 
-      {/* Black overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none"></div>
+      {/* Dark overlay to ensure text readability on mobile and desktop */}
+      <div className="absolute inset-0 bg-black/60 sm:bg-black/50 z-10 pointer-events-none"></div>
 
       {/* Center Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto">
