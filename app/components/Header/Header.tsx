@@ -90,7 +90,7 @@ export const Header = () => {
           
           <Link
             href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-            className="h-8 md:h-10 lg:h-10 xl:h-11 inline-flex items-center justify-center gap-1.5 xl:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white font-extrabold px-4 sm:px-5 lg:px-5 xl:px-6 rounded-lg xl:rounded-xl shadow-lg hover:shadow-[#EB5250]/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase animate-text-blink"
+            className="h-10 lg:h-10 xl:h-11 inline-flex items-center justify-center gap-1.5 xl:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white font-extrabold px-4 sm:px-5 lg:px-5 xl:px-6 rounded-lg xl:rounded-xl shadow-lg hover:shadow-[#EB5250]/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase animate-text-blink"
           >
             <ShoppingBag className="w-4 h-4 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
             <div className="flex flex-col text-left">
