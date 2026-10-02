@@ -12,7 +12,7 @@ const HeroSection = () => {
   const router = useRouter();
 
   return (
-    <section className="relative w-full h-[80vh] lg:h-[55vh] xl:h-[60vh] min-h-[650px] md:min-h-100 flex items-center justify-center overflow-hidden bg-white md:bg-zinc-950 py-6 md:py-8">
+    <section className="relative w-full h-[85vh] md:h-[50vh] lg:h-[55vh] xl:h-[60vh] min-h-[700px] md:min-h-100 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
       
       {/* Background Image with Cinematic Zoom and floating */}
       <motion.div 
@@ -21,20 +21,37 @@ const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <Image 
-          src="/images/website-main-banner2.webp" 
-          alt="Grillado's Premium Grilled Chicken and Portuguese Food" 
-          fill 
-          priority
-          quality={100}
-          unoptimized={true}
-          className="object-cover object-[75%_center] sm:object-center" 
-          sizes="100vw"
-        />
+        {/* Desktop Image */}
+        <div className="hidden md:block w-full h-full relative">
+          <Image 
+            src="/images/website-main-banner2.webp" 
+            alt="Grillado's Premium Grilled Chicken and Portuguese Food" 
+            fill 
+            priority
+            quality={100}
+            unoptimized={true}
+            className="object-cover object-center" 
+            sizes="100vw"
+          />
+        </div>
+        
+        {/* Mobile Image */}
+        <div className="block md:hidden w-full h-full relative">
+          <Image 
+            src="/images/website-main-banner-Mobile-1.webp" 
+            alt="Grillado's Premium Grilled Chicken and Portuguese Food" 
+            fill 
+            priority
+            quality={100}
+            unoptimized={true}
+            className="object-cover object-center" 
+            sizes="100vw"
+          />
+        </div>
       </motion.div>
 
-      {/* Dark overlay to ensure text readability on mobile and desktop */}
-      <div className="absolute inset-0 bg-black/60 sm:bg-black/50 z-10 pointer-events-none"></div>
+      {/* Very light overlay on mobile to preserve brightness, standard dark overlay on desktop */}
+      <div className="absolute inset-0 bg-black/10 md:bg-black/50 z-10 pointer-events-none"></div>
 
       {/* Center Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto">
