@@ -163,7 +163,7 @@ export const Footer = () => {
       <div className="hidden lg:flex fixed top-1/2 right-0 -translate-y-1/2 z-50">
         <Link 
           href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-          className="py-4 px-2 rounded-l-lg bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white hover:text-white shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink flex flex-col items-center gap-3 cursor-pointer"
+          className="bg-[#D8AC15] hover:bg-[#EB5250] hover:text-white text-black font-bold py-4 px-2 rounded-l-lg shadow-lg transition-all duration-300 flex flex-col items-center gap-3 cursor-pointer"
         >
           <UtensilsCrossed className="w-5 h-5" />
           <span className="writing-vertical-rl text-sm tracking-widest whitespace-nowrap rotate-180" style={{ writingMode: 'vertical-rl' }}>

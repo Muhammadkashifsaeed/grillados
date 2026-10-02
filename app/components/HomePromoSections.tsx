@@ -71,13 +71,13 @@ const HomePromoSections = () => {
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
               <Link
                 href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-                className="h-12 sm:h-13 px-4 sm:px-8 rounded-lg bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white hover:text-white shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('orderNow')}
               </Link>
               <button
-                className="h-12 sm:h-13 px-4 sm:px-8 rounded-lg bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white hover:text-white shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('learnMore')}
@@ -131,13 +131,13 @@ const HomePromoSections = () => {
             <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
               <Link
                 href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-                className="h-12 sm:h-13 px-4 sm:px-8 rounded-lg bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white hover:text-white shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('orderNow')}
               </Link>
               <button
-                className="h-12 sm:h-13 px-4 sm:px-8 rounded-lg bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white hover:text-white shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
+                className="h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-md flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}
               >
                 {t('learnMore')}
