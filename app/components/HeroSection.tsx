@@ -78,7 +78,7 @@ const HeroSection = () => {
             href="https://grillados.bycalibre.ca/location" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-zinc-900 hover:text-white px-4 py-3 sm:px-8 sm:py-4 rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 hover:shadow-xl flex-1 sm:flex-none text-3.75 sm:text-5"
+            className="group flex items-center justify-center gap-1 sm:gap-2 px-4 py-3 sm:px-8 sm:py-4 rounded-lg bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white hover:text-white shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink flex-1 sm:flex-none text-3.75 sm:text-5"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
             <span className="whitespace-nowrap">{t('orderNow')}</span>
@@ -88,7 +88,7 @@ const HeroSection = () => {
             href="https://grillados.bycalibre.ca/location" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-zinc-900 hover:text-white px-4 py-3 sm:px-8 sm:py-4 rounded-lg transition-all duration-300 shadow-md hover:-translate-y-1 hover:shadow-xl flex-1 sm:flex-none text-3.75 sm:text-5"
+            className="group flex items-center justify-center gap-1 sm:gap-2 px-4 py-3 sm:px-8 sm:py-4 rounded-lg bg-linear-to-r from-[#fa9e42] to-[#f47f23] hover:from-[#f47f23] hover:to-[#e66c0e] text-white hover:text-white shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase border border-orange-400/50 animate-text-blink flex-1 sm:flex-none text-3.75 sm:text-5"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
           >
             <span className="whitespace-nowrap">{t('viewMenu')}</span>
