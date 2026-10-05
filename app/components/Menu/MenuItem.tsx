@@ -25,7 +25,7 @@ export const MenuItem = ({
       <div className="flex items-end w-full gap-1.5 sm:gap-2">
         <span 
           className="whitespace-normal shrink leading-snug"
-          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '20px', lineHeight: '33px', color: 'rgb(255,255,255)' }}
+          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '20px', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(255,255,255)' }}
         >
           {name}
         </span>
@@ -38,7 +38,7 @@ export const MenuItem = ({
         />
         <span 
           className="whitespace-nowrap leading-snug"
-          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '20px', lineHeight: '33px', color: 'rgb(255,255,255)' }}
+          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '20px', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(255,255,255)' }}
         >
           {price}
         </span>

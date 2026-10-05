@@ -4,12 +4,12 @@ import { useTranslations } from 'next-intl';
 const AboutUsProperty = () => {
   const t = useTranslations('AboutUs');
   return (
-    <section className="bg-white pt-4 md:pt-8 pb-4 md:pb-8 px-4 sm:px-6 lg:px-8 w-full">
+    <section className="bg-[#fafafa] pt-4 md:pt-8 pb-4 md:pb-8 px-4 sm:px-6 lg:px-8 w-full">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
         
         <h2 
           className="uppercase mb-4"
-          style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: '56px', lineHeight: '60px' }}
+          style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: 'clamp(34px, 5.6vw, 56px)', lineHeight: 'clamp(39px, 6vw, 60px)' }}
         >
           {t('propertyHeading')}
         </h2>

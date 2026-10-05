@@ -24,7 +24,7 @@ export const MenuTwoColumn = ({
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-80px' }}
-        className={`w-full h-full flex flex-col justify-start ${reverseOnMobile ? 'order-2 lg:order-1' : 'order-1'}`}
+        className={`w-full h-full flex flex-col justify-start pr-12 md:pr-14 lg:pr-0 ${reverseOnMobile ? 'order-2 lg:order-1' : 'order-1'}`}
       >
         {leftContent}
       </motion.div>

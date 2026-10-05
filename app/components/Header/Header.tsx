@@ -21,12 +21,12 @@ export const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full h-20 bg-black shadow-xl border-b border-white/5">
+    <header className="sticky top-0 z-50 w-full h-[84px] md:h-20 bg-black/80 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.6)] border-b border-white/5 transition-all duration-500">
       <div className="max-w-375 mx-auto px-3 sm:px-4 lg:px-5 h-full flex items-center justify-between gap-2 lg:gap-4">
         
         {/* Left Side: Logo */}
         <Link href="/" className="shrink-0 flex items-center h-full mr-2 ml-1 lg:ml-2">
-          <div className="relative h-13.75 w-35 md:h-15 md:w-37.5 lg:h-16.25 lg:w-41.25 xl:h-17.5 xl:w-45">
+          <div className="relative h-10 w-28 md:h-15 md:w-37.5 lg:h-16.25 lg:w-41.25 xl:h-17.5 xl:w-45">
             <Image
               src="/images/saman.png"
               alt="Grillado's Logo"
@@ -54,12 +54,12 @@ export const Header = () => {
                 <NavItem href="/pages" icon={<FileText className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('pages')} dropdown />
               </div>
 
-              <div className="absolute left-1/2 -translate-x-1/2 top-12.5 flex flex-col w-48 bg-black border border-[#D8AC15]/30 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
-                <Link href="/franchising" className="px-5 py-3 text-white hover:bg-[#D8AC15] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('franchising')}</Link>
-                <Link href="/gallery" className="px-5 py-3 text-white hover:bg-[#D8AC15] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('gallery')}</Link>
-                <Link href="/blogs" className="px-5 py-3 text-white hover:bg-[#D8AC15] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('blogs')}</Link>
-                <Link href="/about-us" className="px-5 py-3 text-white hover:bg-[#D8AC15] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('aboutUs')}</Link>
-                <Link href="/contact-us" className="px-5 py-3 text-white hover:bg-[#D8AC15] hover:text-black transition-colors text- xl:text-xs font-bold tracking-wide uppercase">{t('contactUs')}</Link>
+              <div className="absolute left-1/2 -translate-x-1/2 top-12.5 flex flex-col w-48 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
+                <Link href="/franchising" className="px-5 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase">{t('franchising')}</Link>
+                <Link href="/gallery" className="px-5 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase">{t('gallery')}</Link>
+                <Link href="/blogs" className="px-5 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase">{t('blogs')}</Link>
+                <Link href="/about-us" className="px-5 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase">{t('aboutUs')}</Link>
+                <Link href="/contact-us" className="px-5 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase">{t('contactUs')}</Link>
               </div>
             </div>
 
@@ -90,11 +90,11 @@ export const Header = () => {
           
           <Link
             href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-            className="h-10 lg:h-10 xl:h-11 inline-flex items-center justify-center gap-1.5 xl:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white font-extrabold px-4 sm:px-5 lg:px-5 xl:px-6 rounded-lg xl:rounded-xl shadow-lg hover:shadow-[#EB5250]/30 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase animate-text-blink"
+            className="h-8 md:h-10 lg:h-10 xl:h-11 inline-flex items-center justify-center gap-1.5 xl:gap-2 animate-bg-sweep text-white font-extrabold px-3 sm:px-5 lg:px-5 xl:px-6 rounded-lg shadow-[0_0_15px_rgba(239,113,64,0.3)] hover:shadow-[#EF7140]/50 border border-white/10 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase"
           >
-            <ShoppingBag className="w-4 h-4 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
+            <ShoppingBag className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-white" />
             <div className="flex flex-col text-left">
-              <span className="text-2.5 sm:text-xs md:text-sm xl:text-xs whitespace-nowrap">{t('orderOnline')}</span>
+              <span className="text-[10px] sm:text-xs md:text-sm xl:text-xs whitespace-nowrap animate-text-shimmer">{t('orderOnline')}</span>
             </div>
           </Link>
 

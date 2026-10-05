@@ -50,7 +50,7 @@ export default function ContactUsPage() {
       ></div>
 
       {/* Hero Section */}
-      <div className="relative w-full h-[40vh] min-h-75 md:h-[50vh] flex items-center justify-center z-10">
+      <div className="relative w-full h-[30vh] min-h-[200px] md:h-[50vh] flex items-center justify-center z-10">
         <div 
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
@@ -65,10 +65,10 @@ export default function ContactUsPage() {
         <div className="absolute inset-0 z-0"></div>
 
         {/* Heading */}
-        <div className="z-10 bg-[#FAC716] px-4 sm:px-6 py-2 sm:py-3 rounded-md shadow-lg border-2 border-white/20 inline-block">
+        <div className="z-10 bg-[#FAC716] px-3 sm:px-5 py-1 sm:py-2 rounded-none shadow-lg border-2 border-white/20 inline-block transform -rotate-3 cursor-default">
           <h1 
             className="uppercase tracking-wide text-center drop-shadow-sm"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(255, 255, 255)', fontSize: '55px', lineHeight: '60px' }}
+            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(255, 255, 255)', fontSize: 'clamp(33px, 5.5vw, 55px)', lineHeight: 'clamp(39px, 6vw, 60px)' }}
           >
             {t('title')}
           </h1>
@@ -80,14 +80,14 @@ export default function ContactUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
           
           <h2 
-            className="uppercase tracking-wide text-center mb-16"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: '48px', lineHeight: '56px' }}
+            className="uppercase tracking-wide text-center mb-10"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(36px, 5.6vw, 56px)' }}
           >
             Find Us Here
           </h2>
 
           {/* Cards Container (3 on first line, 2 centered on second line) */}
-          <div className="flex flex-wrap justify-center gap-8 w-full">
+          <div className="flex flex-wrap justify-center gap-5 w-full">
             {locations.map((loc, idx) => {
               // Default to Fade Down for the first 3 boxes (indices 0, 1, 2)
               let initialProps: any = { opacity: 0, y: -50 };
@@ -110,25 +110,25 @@ export default function ContactUsPage() {
                   whileInView={animateProps}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.7, ease: "easeOut", delay: idx * 0.1 }}
-                  className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-[#fafafa] border-2 border-[#FAC716] rounded-xl p-8 shadow-md hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center"
+                  className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-[#fafafa] border-2 border-[#9B9B9B] rounded-xl p-4 sm:p-5 shadow-md hover:shadow-2xl transition-shadow duration-300 flex flex-col items-start text-left"
                 >
                 
                   <h3 
-                    className="uppercase mb-6 tracking-wide"
-                    style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: '28px', lineHeight: '32px' }}
+                    className="uppercase mb-3 tracking-wide w-full"
+                    style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: '26px', lineHeight: '30px' }}
                   >
                     {loc.city}
                   </h3>
                   
-                  <div className="flex flex-col gap-5 w-full">
-                    <div className="flex items-start gap-4 justify-center sm:justify-start">
+                  <div className="flex flex-col gap-3 w-full">
+                    <div className="flex items-start gap-4 justify-start">
                       <MapPin className="w-6 h-6 text-[#FAC716] shrink-0 mt-1" />
                       <p className="text-gray-700 text-left font-medium leading-relaxed text-base sm:text-lg">
                         {loc.address}
                       </p>
                     </div>
                     
-                    <div className="flex items-center gap-4 justify-center sm:justify-start">
+                    <div className="flex items-center gap-4 justify-start">
                       <Phone className="w-6 h-6 text-[#FAC716] shrink-0" />
                       <a href={`tel:${loc.phone.replace(/[^0-9+]/g, '')}`} className="text-black text-left font-bold text-lg sm:text-xl hover:text-[#FAC716] transition-colors">
                         {loc.phone}

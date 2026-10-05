@@ -29,7 +29,7 @@ const ReviewsSection = () => {
         <div className="flex flex-col items-center mb-10">
           <h2 
             className="leading-tight"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '40px', lineHeight: '80px', color: 'rgb(250, 174, 64)' }}
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: 'clamp(24px, 4vw, 40px)', lineHeight: 'clamp(52px, 8vw, 80px)', color: 'rgb(250, 174, 64)' }}
           >
             Reviews
           </h2>
@@ -43,7 +43,7 @@ const ReviewsSection = () => {
           <div className="flex flex-col items-center md:items-start shrink-0 w-auto md:w-42.5 text-center md:text-left">
             <h3 
               className="mb-1 tracking-tight"
-              style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '24px', lineHeight: '34px', color: 'rgb(0,0,0)' }}
+              style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '24px', lineHeight: 'clamp(24px, 3.4vw, 34px)', color: 'rgb(0,0,0)' }}
             >
               GOOD
             </h3>

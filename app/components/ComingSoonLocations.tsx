@@ -51,7 +51,7 @@ export default function ComingSoonLocations() {
         >
           <h2
             className="uppercase tracking-wide text-center"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '48px', lineHeight: '56px', color: 'rgb(255,255,255)' }}
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(36px, 5.6vw, 56px)', color: 'rgb(255,255,255)' }}
           >
             {t('comingSoonLocations')}
           </h2>
@@ -59,7 +59,7 @@ export default function ComingSoonLocations() {
         </motion.div>
 
         {/* Content Container */}
-        <div className="flex flex-col gap-16 md:gap-20">
+        <div className="flex flex-col gap-10 md:gap-14">
           {comingSoonData.map((region, regionIndex) => (
             <motion.div
               key={region.province}
@@ -71,20 +71,20 @@ export default function ComingSoonLocations() {
             >
               {/* Province Heading */}
               <h3
-                className="uppercase tracking-wider mb-8 md:mb-12"
-                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '40px', lineHeight: '60px', color: 'rgb(255,255,255)' }}
+                className="uppercase tracking-widest mb-3 md:mb-8 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(24px, 4vw, 40px)', lineHeight: 'clamp(39px, 6vw, 60px)' }}
               >
                 {region.province}
               </h3>
 
               {/* Locations Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-3 md:gap-y-6 pr-12 md:pr-14 lg:pr-0">
                 {region.locations.map((loc, locIndex) => (
                   <div key={locIndex} className="flex flex-col">
-                    <span className="text-white text-xl md:text-2xl font-bold mb-3 font-['Outfit',sans-serif]">
+                    <span className="text-white text-xl md:text-2xl font-bold mb-2 font-['Outfit',sans-serif]">
                       {loc}
                     </span>
-                    <div className="w-full h-0.5 bg-orange-500"></div>
+                    <div className="w-full h-0.5 bg-orange-500/80"></div>
                   </div>
                 ))}
               </div>

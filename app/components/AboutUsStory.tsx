@@ -5,14 +5,14 @@ import { useTranslations } from 'next-intl';
 const AboutUsStory = () => {
   const t = useTranslations('AboutUs');
   return (
-    <section className="bg-[#fafafa] pt-16 md:pt-24 pb-8 md:pb-12 px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
+    <section className="bg-[#fafafa] pt-8 md:pt-24 pb-2 md:pb-12 px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
         {/* Left Side: Images Composition */}
         <div className="relative w-full h-87.5 sm:h-112.5 md:h-137.5 flex items-center justify-center">
 
           {/* First Image (Top Left) */}
-          <div className="absolute top-[3%] left-0 w-[48%] h-[70%] sm:h-[75%] md:h-[80%] rounded-2xl overflow-hidden shadow-2xl z-10 border-[6px] border-white">
+          <div className="absolute top-[3%] left-0 w-[48%] h-[70%] sm:h-[75%] md:h-[80%] rounded-2xl overflow-hidden shadow-2xl z-10">
             <Image
               src="/images/famous1.png"
               alt="Grillados Famous 1"
@@ -22,7 +22,7 @@ const AboutUsStory = () => {
           </div>
 
           {/* Second Image (Bottom Right) */}
-          <div className="absolute bottom-[3%] right-0 w-[48%] h-[70%] sm:h-[75%] md:h-[80%] rounded-2xl overflow-hidden shadow-2xl z-20 border-[6px] border-white">
+          <div className="absolute bottom-[3%] right-0 w-[48%] h-[70%] sm:h-[75%] md:h-[80%] rounded-2xl overflow-hidden shadow-2xl z-20">
             <Image
               src="/images/famous2.png"
               alt="Grillados Famous 2"
@@ -37,22 +37,29 @@ const AboutUsStory = () => {
         <div className="flex flex-col justify-center">
           <h2 className="mb-8 flex flex-col">
             <span
-              className="block font-semibold"
+              className="block font-semibold capitalize"
               style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(23, 23, 23)', fontSize: '25px', lineHeight: '30px' }}
             >
               {t('storyHeading1')}
             </span>
             <span
-              className="flex flex-wrap items-center gap-4 font-semibold drop-shadow-sm mt-1"
-              style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)', fontSize: '48px', lineHeight: '50px' }}
+              className="flex flex-wrap items-center font-semibold mt-1 capitalize"
+              style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)', fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(33px, 5vw, 50px)' }}
             >
               <span>{t('storyHeading2')}</span>
-              <div className="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0 mt-2 sm:mt-0">
+              <style>{`
+                @keyframes float-burger {
+                  0%, 100% { transform: translateY(0); }
+                  50% { transform: translateY(-12px); }
+                }
+                .animate-float-burger { animation: float-burger 4s ease-in-out infinite; }
+              `}</style>
+              <div className="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0 mt-2 sm:mt-0 ml-6 sm:ml-8 hidden md:block">
                 <Image
                   src="/images/burger-shape-3.png"
                   alt="Burger Shape"
                   fill sizes="80px"
-                  className="object-contain"
+                  className="object-contain animate-float-burger"
                 />
               </div>
             </span>
@@ -75,7 +82,7 @@ const AboutUsStory = () => {
 
           {/* Bottom Right Images */}
           <div className="flex flex-wrap gap-5 items-center">
-            <div className="relative w-40 h-28 sm:w-56 sm:h-36 rounded-xl overflow-hidden shadow-lg border-2 border-white">
+            <div className="relative w-40 h-28 sm:w-56 sm:h-36 rounded-xl overflow-hidden shadow-lg">
               <Image
                 src="/images/keep1.jpg"
                 alt="Grillados Keep 1"
@@ -83,7 +90,7 @@ const AboutUsStory = () => {
                 className="object-cover"
               />
             </div>
-            <div className="relative w-40 h-28 sm:w-56 sm:h-36 rounded-xl overflow-hidden shadow-lg border-2 border-white">
+            <div className="relative w-40 h-28 sm:w-56 sm:h-36 rounded-xl overflow-hidden shadow-lg">
               <Image
                 src="/images/keep2.jpg"
                 alt="Grillados Keep 2"

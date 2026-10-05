@@ -31,8 +31,8 @@ export default function ServicesHero() {
         />
       </motion.div>
 
-      {/* Dark Overlay with subtle gradient for depth */}
-      <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/60 to-black/80 z-10 pointer-events-none"></div>
+      {/* Very light overlay just to blend, image remains clean and clear */}
+      <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none"></div>
 
       {/* Center Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto">
@@ -43,8 +43,8 @@ export default function ServicesHero() {
             initial={{ opacity: 0, y: 30, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="tracking-wide py-3 px-6 sm:px-8 rounded-xl bg-[#D8AC15] shadow-2xl relative z-10 uppercase text-center whitespace-normal sm:whitespace-nowrap break-words max-w-[90vw] md:max-w-none"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255,255,255)', fontSize: '35px', lineHeight: '50px', wordSpacing: '4px' }}
+            className="tracking-wide py-1.5 md:py-2 px-6 sm:px-8 rounded-none bg-[#FAC716] shadow-2xl relative z-10 uppercase text-center whitespace-normal sm:whitespace-nowrap break-words max-w-[90vw] md:max-w-none transform -rotate-2"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255,255,255)', fontSize: 'clamp(22px, 3.5vw, 35px)', lineHeight: 'clamp(33px, 5vw, 50px)', wordSpacing: '4px' }}
           >
             {t('titlePart1')}<br className="block md:hidden" /> {t('titlePart2')}
           </motion.h1>

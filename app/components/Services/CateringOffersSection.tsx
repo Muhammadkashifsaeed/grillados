@@ -32,7 +32,7 @@ const CateringOffersSection = () => {
         <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16 mb-16 flex flex-col items-center text-center">
           <h3 
             className="tracking-tight"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(25px, 3.9vw, 39px)', color: 'rgb(0,0,0)' }}
           >
             {tPartners('madeWithLove')}
           </h3>

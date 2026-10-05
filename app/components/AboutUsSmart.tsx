@@ -5,13 +5,13 @@ import { useTranslations } from 'next-intl';
 const AboutUsSmart = () => {
   const t = useTranslations('AboutUs');
   return (
-    <section className="bg-white pt-8 md:pt-12 pb-16 md:pb-24 px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section className="bg-[#fafafa] pt-8 md:pt-12 pb-8 md:pb-16 px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
         
         {/* Left Side: Content */}
-        <div className="flex flex-col justify-center order-2 lg:order-1">
+        <div className="flex flex-col justify-center order-1 lg:order-1">
           
-          <h2 className="mb-6 flex flex-col">
+          <h2 className="mb-4 flex flex-col">
             <span 
               className="block font-semibold"
               style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(23, 23, 23)', fontSize: '25px', lineHeight: '30px' }}
@@ -20,7 +20,7 @@ const AboutUsSmart = () => {
             </span>
             <span 
               className="block font-semibold drop-shadow-sm mt-1"
-              style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)', fontSize: '48px', lineHeight: '50px' }}
+              style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)', fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(33px, 5vw, 50px)' }}
             >
               {t('smartHeading2')}
             </span>
@@ -36,7 +36,7 @@ const AboutUsSmart = () => {
         </div>
 
         {/* Right Side: Image */}
-        <div className="relative w-full h-62.5 sm:h-87.5 md:h-100 rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2 transform transition-transform duration-500 hover:scale-[1.02]">
+        <div className="relative w-full h-62.5 sm:h-87.5 md:h-100 rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-2 transform transition-transform duration-500 hover:scale-[1.02]">
           <Image 
             src="/images/making.jpg" 
             alt="Making Grillados" 

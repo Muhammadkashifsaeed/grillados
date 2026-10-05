@@ -60,15 +60,14 @@ export default function DealsPage() {
               {dealImages.map((image, index) => (
                 <div 
                   key={index} 
-                  className="flex-[0_0_100%] min-w-0 relative flex items-center justify-center w-full"
+                  className="flex-[0_0_100%] min-w-0 relative w-full aspect-video md:aspect-[21/9] lg:aspect-[21/9]"
                 >
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    width={1920}
-                    height={1080}
+                    fill
                     priority={index === 0}
-                    className="w-full h-auto object-cover"
+                    className="object-cover"
                     sizes="100vw"
                   />
                 </div>
@@ -77,22 +76,12 @@ export default function DealsPage() {
           </div>
 
           {/* Left Arrow */}
-          <button
-            type="button"
-            onClick={scrollPrev}
-            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#f7b41c] text-white/80 hover:text-black backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20"
-            aria-label="Previous image"
-          >
+          <button type="button" onClick={scrollPrev} className="text-black hover:text-white absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#FAC716] /80 backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20" aria-label="Previous image" >
             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 -ml-0.5" />
           </button>
 
           {/* Right Arrow */}
-          <button
-            type="button"
-            onClick={scrollNext}
-            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#f7b41c] text-white/80 hover:text-black backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20"
-            aria-label="Next image"
-          >
+          <button type="button" onClick={scrollNext} className="text-black hover:text-white absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#FAC716] /80 backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20" aria-label="Next image" >
             <ChevronRight className="w-5 h-5 md:w-6 md:h-6 -mr-0.5" />
           </button>
 
@@ -102,7 +91,7 @@ export default function DealsPage() {
               <button
                 key={idx}
                 onClick={() => emblaApi?.scrollTo(idx)}
-                className="w-3 h-3 rounded-full bg-white/40 hover:bg-[#f7b41c] transition-colors shadow-lg"
+                className="w-3 h-3 rounded-full bg-white/40 hover:bg-[#FAC716] transition-colors shadow-lg"
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}

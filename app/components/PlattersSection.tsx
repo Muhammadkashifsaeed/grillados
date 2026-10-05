@@ -38,7 +38,7 @@ const PlattersSection = () => {
           {/* Centered Heading */}
           <div className="text-center">
 <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(25px, 3.9vw, 39px)', color: 'rgb(0,0,0)' }}
             className="mb-4 transform -rotate-2 inline-block text-center"
           >
             {t('heading')}
@@ -54,11 +54,11 @@ const PlattersSection = () => {
 
           {/* Buttons */}
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }} className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
-            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white group h-12 sm:h-13 px-4 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('orderNow')}</span>
             </Link>
 
-            <Link href="/menu#platters" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+            <Link href="/menu#platters" className="text-black hover:text-white group h-12 sm:h-13 px-4 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('learnMore')}</span>
             </Link>
           </motion.div>

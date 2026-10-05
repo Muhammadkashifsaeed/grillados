@@ -11,7 +11,7 @@ export const MenuHeading = ({ title }: MenuHeadingProps) => {
     <motion.div variants={fadeLeftItem} className="mb-8 lg:mb-10 flex flex-col items-start w-full">
       <h2 
         className="uppercase tracking-wide"
-        style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
+        style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(27px, 4.5vw, 45px)', lineHeight: 'clamp(29px, 4.5vw, 45px)', color: 'rgb(250,174,64)' }}
       >
         {title}
       </h2>

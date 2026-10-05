@@ -47,14 +47,14 @@ const CateringOfferCard: React.FC<CateringOfferProps> = ({
         {/* Heading (Offer 1 / Offer 2) */}
         <h3 
           className="mb-2" 
-          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '45px', lineHeight: '59px', color: 'rgb(250, 174, 64)' }}
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: 'clamp(27px, 4.5vw, 45px)', lineHeight: 'clamp(38px, 5.9vw, 59px)', color: 'rgb(250, 174, 64)' }}
         >
           {t(headingKey)}
         </h3>
 
         <h2 
           className="mb-6 tracking-tight"
-          style={{ fontFamily: "'Port Lligat Sans', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '25px', lineHeight: '35px', color: 'rgb(0, 0, 0)' }}
+          style={{ fontFamily: "'Port Lligat Sans', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '25px', lineHeight: 'clamp(24px, 3.5vw, 35px)', color: 'rgb(0, 0, 0)' }}
         >
           {t(titleKey)}
         </h2>
@@ -66,12 +66,7 @@ const CateringOfferCard: React.FC<CateringOfferProps> = ({
           {t(descKey)}
         </p>
 
-        <Link 
-          href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-          aria-label={t('orderNow')}
-          className="bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg px-8 py-4 flex items-center justify-center uppercase tracking-wider cursor-pointer inline-flex max-w-[fit-content]"
-          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '20px', color: 'rgb(255, 255, 255)' }}
-        >
+        <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" aria-label={t('orderNow')} className="text-black hover:text-white bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg px-8 py-4 flex items-center justify-center uppercase tracking-wider cursor-pointer inline-flex max-w-[fit-content]" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '20px' }} >
           {t('orderNow')}
         </Link>
       </div>

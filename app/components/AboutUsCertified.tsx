@@ -14,7 +14,7 @@ const AboutUsCertified = () => {
   ];
 
   return (
-    <section className="bg-white pt-4 md:pt-8 pb-4 md:pb-8 px-4 sm:px-6 lg:px-8 w-full">
+    <section className="bg-[#fafafa] pt-4 md:pt-8 pb-2 md:pb-4 px-4 sm:px-6 lg:px-8 w-full">
       <div className="max-w-7xl mx-auto">
         
         {/* Centered Heading */}
@@ -22,13 +22,13 @@ const AboutUsCertified = () => {
           <h2 className="uppercase tracking-wide flex flex-col items-center">
             <span 
               className="block"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(23, 23, 23)', fontSize: '32px', lineHeight: '40px' }}
+              style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(23, 23, 23)', fontSize: 'clamp(22px, 3.2vw, 32px)', lineHeight: 'clamp(26px, 4vw, 40px)' }}
             >
               {t('heading1')}
             </span>
             <span 
               className="block drop-shadow-sm mt-1"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(250, 199, 22)', fontSize: '56px', lineHeight: '60px' }}
+              style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(250, 199, 22)', fontSize: 'clamp(34px, 5.6vw, 56px)', lineHeight: 'clamp(39px, 6vw, 60px)' }}
             >
               {t('heading2')}
             </span>
@@ -38,8 +38,8 @@ const AboutUsCertified = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 text-center">
           
           {cards.map((card) => (
-            <div key={card.id} className="flex flex-col items-center group border-2 border-gray-200 rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative w-16 h-16 sm:w-20 sm:h-20 mb-6 transform transition-transform duration-300 group-hover:scale-110">
+            <div key={card.id} className="flex flex-col items-center group border-2 border-gray-200 rounded-xl p-4 sm:p-5 shadow-md bg-white hover:shadow-xl transition-shadow">
+              <div className="relative w-16 h-16 sm:w-20 sm:h-20 mb-3">
                 <Image 
                   src={card.image} 
                   alt={card.heading} 
@@ -48,7 +48,7 @@ const AboutUsCertified = () => {
                 />
               </div>
               <h3 
-                className="mb-4"
+                className="mb-2"
                 style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(23, 23, 23)', fontSize: '20px', lineHeight: '26px' }}
               >
                 {card.heading}

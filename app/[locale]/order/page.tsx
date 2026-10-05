@@ -43,7 +43,7 @@ export default function OrderPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="tracking-tight"
-            style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif', fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '38px', color: 'rgb(44,48,52)' }}
+            style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif', fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(25px, 3.8vw, 38px)', color: 'rgb(44,48,52)' }}
           >
             {t('title')}
           </motion.h1>
@@ -83,11 +83,7 @@ export default function OrderPage() {
               className="relative flex flex-col bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 group hover:shadow-2xl transition-shadow"
             >
               {/* Info Icon */}
-              <button 
-                type="button" 
-                className="absolute top-6 right-6 p-1.5 rounded-full border-2 border-[#d72323] text-[#d72323] hover:bg-[#EB5250] hover:text-white transition-colors"
-                aria-label={`More info about ${loc.name}`}
-              >
+              <button type="button" className="text-black hover:text-white absolute top-6 right-6 p-1.5 rounded-full border-2 border-[#d72323] hover:bg-[#EB5250] transition-colors" aria-label={`More info about ${loc.name}`} >
                 <Info className="w-5 h-5" />
               </button>
 

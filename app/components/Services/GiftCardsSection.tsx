@@ -20,7 +20,7 @@ export default function GiftCardsSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative w-full h-100 sm:h-125 md:h-150 lg:h-175 xl:h-200 overflow-hidden shadow-2xl"
+          className="relative w-full h-80 sm:h-100 md:h-125 lg:h-150 xl:h-175 overflow-hidden shadow-2xl order-2 md:order-1"
         >
           <Image
             src="/images/propses.png"
@@ -32,7 +32,7 @@ export default function GiftCardsSection() {
         </motion.div>
 
         {/* Right Column: Top Image + Content */}
-        <div className="flex flex-col items-center justify-center w-full h-full px-6 md:px-12 lg:px-20 xl:px-24 py-12 md:py-16">
+        <div className="flex flex-col items-center justify-center w-full h-full px-6 md:px-12 lg:px-20 xl:px-24 py-8 md:py-10 order-1 md:order-2">
           
           {/* Top Image: simply.png (Smaller) */}
           <motion.div
@@ -63,7 +63,7 @@ export default function GiftCardsSection() {
             <div className="text-center">
 <h2 
               className="uppercase leading-tight tracking-wide mb-6 text-center transform -rotate-2 inline-block text-center"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '39px', color: 'rgb(0,0,0)' }}
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(25px, 3.9vw, 39px)', color: 'rgb(0,0,0)' }}
             >
               {t('heading')}
             </h2>
@@ -74,7 +74,7 @@ export default function GiftCardsSection() {
 
             {/* Description */}
             <p 
-              className="mb-8 text-center"
+              className="mb-8 text-center max-w-[380px] mx-auto"
               style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}
             >
               {t('description')}
@@ -83,7 +83,7 @@ export default function GiftCardsSection() {
             {/* Button */}
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
-              className="px-10 py-3 sm:py-4 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md uppercase tracking-wide rounded-none"
+              className="px-10 py-3 sm:py-4 bg-[#FAC716] hover:bg-[#EB5250] text-black hover:text-white hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md uppercase tracking-wide rounded-none"
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px', color: 'rgb(255,255,255)' }}
             >
               {t('contactUs')}

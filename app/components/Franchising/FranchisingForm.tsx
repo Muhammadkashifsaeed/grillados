@@ -115,7 +115,7 @@ export default function FranchisingForm() {
     }, 1500);
   };
 
-  const inputClass = "w-full h-13 md:h-14 px-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D8AC15] transition-all duration-300 placeholder:text-gray-400 font-medium";
+  const inputClass = "w-full h-13 md:h-14 px-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#FAC716] transition-all duration-300 placeholder:text-gray-400 font-medium";
   const errorClass = "text-red-400 text-sm mt-1 font-medium";
   const labelClass = "block text-sm font-semibold text-gray-200 mb-2";
   const sectionTitleClass = "text-xl font-semibold text-white font-['Outfit',sans-serif] mb-6 tracking-wide border-b border-gray-600/50 pb-2";
@@ -131,7 +131,7 @@ export default function FranchisingForm() {
             value="yes"
             checked={formData[name as keyof typeof formData] === 'yes'}
             onChange={handleChange}
-            className="w-5 h-5 accent-[#D8AC15] cursor-pointer"
+            className="w-5 h-5 accent-[#FAC716] cursor-pointer"
           />
           {t('yes')}
         </label>
@@ -142,7 +142,7 @@ export default function FranchisingForm() {
             value="no"
             checked={formData[name as keyof typeof formData] === 'no'}
             onChange={handleChange}
-            className="w-5 h-5 accent-[#D8AC15] cursor-pointer"
+            className="w-5 h-5 accent-[#FAC716] cursor-pointer"
           />
           {t('no')}
         </label>
@@ -171,7 +171,7 @@ export default function FranchisingForm() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-[#FFFFFF] text-[45px] leading-[60px] font-semibold font-['Ribeat',sans-serif] uppercase tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
+          className="text-[#FFFFFF] text-3xl sm:text-4xl md:text-[45px] leading-tight md:leading-[60px] font-semibold font-['Ribeat',sans-serif] uppercase tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
         >
           {t('formHeading')}
         </motion.h1>
@@ -202,7 +202,7 @@ export default function FranchisingForm() {
 
                 <div>
                   <label className={labelClass}>{t('phone')}</label>
-                  <div className="flex h-13 md:h-14 rounded-xl bg-white border border-transparent focus-within:ring-2 focus-within:ring-[#D8AC15] transition-all duration-300">
+                  <div className="flex h-13 md:h-14 rounded-xl bg-white border border-transparent focus-within:ring-2 focus-within:ring-[#FAC716] transition-all duration-300">
                     <div className="relative flex items-center bg-gray-100 border-r border-gray-200 hover:bg-gray-200 transition-colors rounded-l-xl" ref={dropdownRef}>
                       <div
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -355,11 +355,7 @@ export default function FranchisingForm() {
 
             {/* Submit Button & Messages */}
             <div className="flex flex-col items-center mt-2">
-              <button
-                type="submit"
-                disabled={isSubmitting || !turnstileToken}
-                className={`w-full max-w-3xl bg-[#FAC716] hover:bg-[#b89214] text-black font-extrabold py-3 md:py-4 px-8 rounded-full transition-all duration-300 uppercase tracking-widest text-lg shadow-[0_0_15px_rgba(247,180,28,0.4)] hover:shadow-[0_0_25px_rgba(247,180,28,0.6)] ${(!turnstileToken || isSubmitting) ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-1'}`}
-              >
+              <button type="submit" disabled={isSubmitting || !turnstileToken} className={`w-full max-w-3xl bg-[#FAC716] hover:bg-[#b89214] font-extrabold py-3 md:py-4 px-8 rounded-full transition-all duration-300 uppercase tracking-widest text-lg shadow-[0_0_15px_rgba(247,180,28,0.4)] hover:shadow-[0_0_25px_rgba(247,180,28,0.6)] ${(!turnstileToken || isSubmitting) ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-1'}`} >
                 {isSubmitting ? t('submitting') : t('submit')}
               </button>
 

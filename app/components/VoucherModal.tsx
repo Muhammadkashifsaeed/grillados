@@ -70,11 +70,7 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
             <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay pointer-events-none"></div>
 
             {/* Close Button */}
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-full bg-black/20 hover:bg-black/40 text-white/90 hover:text-white transition-colors z-20"
-              aria-label="Close modal"
-            >
+            <button onClick={onClose} className="text-black hover:text-white absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-full bg-black/20 hover:bg-black/40 /90 transition-colors z-20" aria-label="Close modal" >
               <X size={20} strokeWidth={3} />
             </button>
 
@@ -160,10 +156,7 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
                 </label>
               </div>
 
-              <button
-                type="submit"
-                className="w-full bg-[#E50000] hover:bg-red-500 text-white font-extrabold text-base sm:text-lg py-4 sm:py-5 rounded-xl shadow-[0_10px_20px_rgba(229,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(229,0,0,0.5)] transition-all duration-300 active:scale-95 mt-2 border-2 border-[#E50000] hover:border-red-400"
-              >
+              <button type="submit" className="text-black hover:text-white w-full bg-[#FAC716] hover:bg-red-500 font-extrabold text-base sm:text-lg py-4 sm:py-5 rounded-xl shadow-[0_10px_20px_rgba(229,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(229,0,0,0.5)] transition-all duration-300 active:scale-95 mt-2 border-2 border-[#E50000] hover:border-red-400" >
                 {t('getYourVoucher')}
               </button>
             </form>

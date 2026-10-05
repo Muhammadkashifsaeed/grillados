@@ -38,10 +38,10 @@ const CateringHeroBanner = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-7.5"
         >
-          <div className="bg-[#EB5250] rounded-lg py-3 px-4 sm:px-6 md:px-8 inline-block shadow-lg max-w-[90vw] md:max-w-none">
+          <div className="bg-[#EB5250] rounded-none px-2 py-1 inline-block shadow-lg max-w-[90vw] md:max-w-none">
             <h1 
-              className="tracking-tight text-3xl sm:text-4xl md:text-13.75 leading-snug md:leading-17.25 whitespace-normal sm:whitespace-nowrap break-words"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255, 255, 255)' }}
+              className="tracking-tight whitespace-normal sm:whitespace-nowrap break-words"
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255, 255, 255)', fontSize: 'clamp(33px, 5.5vw, 55px)', lineHeight: 'clamp(45px, 6.9vw, 69px)' }}
             >
               {t('heading')}
             </h1>
@@ -65,12 +65,7 @@ const CateringHeroBanner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         >
-          <Link 
-            href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-            aria-label={t('orderNow')}
-            className="bg-[#F4C430] hover:bg-[#EB5250] rounded-md h-13 px-8 flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer inline-flex"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px', color: 'rgb(255, 255, 255)' }}
-          >
+          <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" aria-label={t('orderNow')} className="text-black hover:text-white bg-[#FAC716] hover:bg-[#EB5250] rounded-md h-13 px-8 flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer inline-flex" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px' }} >
             {t('orderNow')}
           </Link>
         </motion.div>

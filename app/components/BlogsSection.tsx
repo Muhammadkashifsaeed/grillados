@@ -117,10 +117,10 @@ const BlogsSection = () => {
                     <div className="p-6 flex flex-col grow">
 
                       {/* Date */}
-                      <div className="flex items-center text-black text-sm font-semibold mb-3 tracking-wider uppercase">
+                      <Link href={`/blog/${blog.id}`} className="flex items-center text-[#CBCBCB] hover:text-red-500 transition-colors text-sm font-semibold mb-3 tracking-wider uppercase w-max">
                         <Calendar className="w-4 h-4 mr-2" />
                         {t(`${blog.tKey}.date`)}
-                      </div>
+                      </Link>
 
                       {/* Title */}
                       <h3 
@@ -139,9 +139,9 @@ const BlogsSection = () => {
                       </p>
 
                       {/* Read More Link */}
-                      <Link href={`/blog/${blog.id}`} className="flex items-center text-black font-bold hover:text-red-600 transition-colors group/link mt-auto w-max">
-                        {t('readMore')}
-                        <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" />
+                      <Link href={`/blog/${blog.id}`} className="inline-flex items-center gap-1.5 text-black font-bold mt-auto w-max group hover:opacity-80 transition-opacity">
+                        <span>{t('readMore')}</span>
+                        <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </div>
 
@@ -152,19 +152,11 @@ const BlogsSection = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute -left-4 md:-left-8 lg:-left-10 xl:-left-12 top-1/2 -translate-y-1/2 bg-[#FAC716] p-3 rounded-full shadow-lg text-black hover:text-white hover:scale-110 transition-all z-10 hidden md:flex"
-            aria-label="Previous slide"
-          >
+          <button onClick={prevSlide} className="text-black hover:text-white absolute -left-4 md:-left-8 lg:-left-10 xl:-left-12 top-1/2 -translate-y-1/2 bg-[#FAC716] p-3 rounded-full shadow-lg hover:scale-110 transition-all z-10 hidden md:flex" aria-label="Previous slide" >
             <ChevronLeft className="w-6 h-6" />
           </button>
 
-          <button
-            onClick={nextSlide}
-            className="absolute -right-4 md:-right-8 lg:-right-10 xl:-right-12 top-1/2 -translate-y-1/2 bg-[#FAC716] p-3 rounded-full shadow-lg text-black hover:text-white hover:scale-110 transition-all z-10 hidden md:flex"
-            aria-label="Next slide"
-          >
+          <button onClick={nextSlide} className="text-black hover:text-white absolute -right-4 md:-right-8 lg:-right-10 xl:-right-12 top-1/2 -translate-y-1/2 bg-[#FAC716] p-3 rounded-full shadow-lg hover:scale-110 transition-all z-10 hidden md:flex" aria-label="Next slide" >
             <ChevronRight className="w-6 h-6" />
           </button>
 

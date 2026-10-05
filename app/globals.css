@@ -41,3 +41,28 @@ body {
 .animate-text-blink {
   animation: color-blink 1.5s infinite;
 }
+
+@keyframes sweep-right-left {
+  0% { background-position: 200% 0; }
+  100% { background-position: 0% 0; }
+}
+
+.animate-bg-sweep {
+  background: linear-gradient(to left, #F18536, #F28A34, #F9C019, #EF7140, #F18536);
+  background-size: 300% 100%;
+  animation: sweep-right-left 3s ease-in-out infinite alternate;
+}
+
+@keyframes shimmer-text {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.animate-text-shimmer {
+  background: linear-gradient(to right, #ffffff 30%, #000000 50%, #ffffff 70%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer-text 6s ease-in-out infinite;
+}

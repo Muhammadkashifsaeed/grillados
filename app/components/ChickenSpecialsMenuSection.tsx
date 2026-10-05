@@ -98,12 +98,12 @@ export const ChickenSpecialsMenuSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
-            className="w-full flex flex-col justify-start"
+            className="w-full flex flex-col justify-start pr-12 md:pr-14 lg:pr-0"
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
               <h2
                 className="uppercase tracking-wide drop-shadow-sm mb-4"
-                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '45px', color: 'rgb(250,174,64)' }}
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(27px, 4.5vw, 45px)', lineHeight: 'clamp(29px, 4.5vw, 45px)', color: 'rgb(250,174,64)' }}
               >
                 <span dangerouslySetInnerHTML={{ __html: t('chickenSpecials') }} />
               </h2>

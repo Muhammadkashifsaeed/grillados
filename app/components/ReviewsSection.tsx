@@ -59,7 +59,7 @@ const reviews = [
 ];
 
 const getInitialColor = (name: string) => {
-  const colors = ['bg-red-500', 'bg-blue-500', 'bg-green-500', 'bg-[#D8AC15]', 'bg-purple-500', 'bg-pink-500'];
+  const colors = ['bg-red-500', 'bg-blue-500', 'bg-green-500', 'bg-[#FAC716]', 'bg-purple-500', 'bg-pink-500'];
   const charCode = name.charCodeAt(0) || 0;
   return colors[charCode % colors.length];
 };
@@ -120,7 +120,7 @@ const ReviewsSection = () => {
         <div className="text-center mb-8 md:mb-10">
           <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} 
             className="uppercase tracking-wide mb-4"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '40px', lineHeight: '80px', color: 'rgb(250, 174, 64)' }}
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: 'clamp(24px, 4vw, 40px)', lineHeight: 'clamp(52px, 8vw, 80px)', color: 'rgb(250, 174, 64)' }}
           >
             {t('heading')}
           </motion.h2>
@@ -144,7 +144,7 @@ const ReviewsSection = () => {
               <div className="flex flex-col gap-1">
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#D8AC15] text-[#D8AC15]" />
+                    <Star key={i} className="w-5 h-5 fill-[#FAC716] text-[#FAC716]" />
                   ))}
                 </div>
               </div>
@@ -187,7 +187,7 @@ const ReviewsSection = () => {
                   >
 
                     {/* Google Review Card - Matches Google Widget exactly */}
-                    <div className="bg-white border border-gray-100 shadow-[0_0_15px_rgba(0,0,0,0.02)] rounded-2xl hover:border-[#D8AC15] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 sm:p-4 w-full relative flex flex-col h-full min-h-[190px]">
+                    <div className="bg-white border border-gray-100 shadow-[0_0_15px_rgba(0,0,0,0.02)] rounded-2xl hover:border-[#FAC716] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 sm:p-4 w-full relative flex flex-col h-full min-h-[190px]">
 
                       {/* Google Icon Top Right */}
                       <div className="absolute top-6 right-6 w-6 h-6 opacity-90">
@@ -222,7 +222,7 @@ const ReviewsSection = () => {
                       {/* Stars */}
                       <div className="flex gap-0.5 mb-3">
                         {[...Array(review.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-[#D8AC15] text-[#D8AC15]" />
+                          <Star key={i} className="w-4 h-4 fill-[#FAC716] text-[#FAC716]" />
                         ))}
                       </div>
 
@@ -238,18 +238,13 @@ const ReviewsSection = () => {
             </div>
 
             {/* Navigation Buttons (Fade in on hover) */}
-            <button
-              onClick={prevSlide}
-              className={`absolute -left-3.75 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-black hover:text-white hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
-            >
-              <ChevronLeft className="w-5 h-5" />
+            <button onClick={prevSlide} className={`group/btn absolute -left-3.75 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center hover:bg-black hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`} >
+              <ChevronLeft className="w-5 h-5 text-black group-hover/btn:text-white transition-colors" />
             </button>
 
-            <button
-              onClick={nextSlide}
-              className={`absolute -right-3.75 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-black hover:text-white hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex >= maxIndex ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
+            <button onClick={nextSlide} className={`group/btn absolute -right-3.75 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center hover:bg-black hover:scale-105 transition-all z-10 border border-gray-100 ${currentIndex >= maxIndex ? 'opacity-0 pointer-events-none' : 'opacity-100 md:opacity-0 md:group-hover:opacity-100'}`}
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-5 h-5 text-black group-hover/btn:text-white transition-colors" />
             </button>
 
           </div>

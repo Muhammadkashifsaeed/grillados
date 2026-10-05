@@ -25,11 +25,11 @@ const CateringFAQSection = () => {
         <div className="text-center mb-12">
           <h2 
             className="uppercase tracking-wide"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '48px', lineHeight: '65px', color: 'rgb(0, 0, 0)' }}
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(42px, 6.5vw, 65px)', color: 'rgb(0, 0, 0)' }}
           >
             {t('heading')}
           </h2>
-          <div className="w-24 h-1.5 bg-[#D8AC15] mx-auto mt-4 rounded-full"></div>
+          <div className="w-24 h-1 bg-[#E02A2B] mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* FAQs */}
@@ -51,7 +51,7 @@ const CateringFAQSection = () => {
                   </span>
                   
                   {/* Plus/Minus Icon */}
-                  <span className="shrink-0 flex items-center justify-center text-[#e63946] text-2xl font-bold leading-none w-8 h-8">
+                  <span className={`shrink-0 flex items-center justify-center text-xl font-bold leading-none w-6 h-6 ${isOpen ? 'text-black bg-transparent' : 'bg-[#EB5250] text-white rounded-full'}`}>
                     {isOpen ? '−' : '+'}
                   </span>
                 </button>

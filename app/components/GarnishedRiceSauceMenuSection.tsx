@@ -35,25 +35,25 @@ export const GarnishedRiceSauceMenuSection = () => {
       name: t('sauces.lemonHerbs'),
       description: t('sauces.lemonHerbsDesc'),
       image: '/images/Fiery.png',
-      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '59px', color: 'rgb(140, 197, 63)' }
+      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(27px, 4.5vw, 45px)', lineHeight: 'clamp(38px, 5.9vw, 59px)', color: 'rgb(140, 197, 63)' }
     },
     {
       name: t('sauces.average'),
       description: t('sauces.averageDesc'),
       image: '/images/Fiery1.png',
-      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '59px', color: 'rgb(247, 148, 31)' }
+      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(27px, 4.5vw, 45px)', lineHeight: 'clamp(38px, 5.9vw, 59px)', color: 'rgb(247, 148, 31)' }
     },
     {
       name: t('sauces.strong'),
       description: t('sauces.strongDesc'),
       image: '/images/Fiery2.png',
-      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '59px', color: 'rgb(147, 26, 29)' }
+      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(27px, 4.5vw, 45px)', lineHeight: 'clamp(38px, 5.9vw, 59px)', color: 'rgb(147, 26, 29)' }
     },
     {
       name: t('sauces.barbecue'),
       description: t('sauces.barbecueDesc'),
       image: '/images/Fiery3.png',
-      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '45px', lineHeight: '59px', color: 'rgb(147, 26, 29)' }
+      style: { fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(27px, 4.5vw, 45px)', lineHeight: 'clamp(38px, 5.9vw, 59px)', color: 'rgb(147, 26, 29)' }
     },
   ];
 
@@ -102,7 +102,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                     transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
                     className="flex flex-col w-full"
                   >
-                    <div className="flex items-center gap-4 md:gap-8">
+                    <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
                       <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 shrink-0 flex items-center justify-center">
                         <Image
                           src={item.image}
@@ -112,7 +112,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                           className="w-full h-full object-contain drop-shadow-2xl scale-150"
                         />
                       </div>
-                      <div className="flex flex-col justify-start flex-1">
+                      <div className="flex flex-col justify-start items-center md:items-start text-center md:text-left flex-1">
                         <h4 
                           className="uppercase tracking-wider mb-1 md:mb-2"
                           style={item.style}

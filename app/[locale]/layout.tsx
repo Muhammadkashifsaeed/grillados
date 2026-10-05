@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Noto_Sans, Poppins } from "next/font/google";
+import { Inter, Noto_Sans, Poppins, Albert_Sans } from "next/font/google";
 import "../globals.css";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
@@ -25,6 +25,12 @@ const notoSans = Noto_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
+const albertSans = Albert_Sans({
+  variable: "--font-albert-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
@@ -45,10 +51,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     robots: { index: true, follow: true },
     title: {
-      template: "%s | GRILLADO'S",
-      default: titleDefault,
+      template: "%s | GRILLADOS | BEEF BACK RIBS & CHICKEN IN CANADA",
+      default: "GRILLADOS | BEEF BACK RIBS & CHICKEN IN CANADA",
     },
-    description: description,
+    description: "Enjoy juicy beef back ribs and grilled chicken at Grillados – your go-to spot in Canada for bold flavours and perfectly cooked meats.",
     keywords: keywords,
     authors: [{ name: "GRILLADO'S" }],
     creator: "GRILLADO'S",
@@ -156,7 +162,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${inter.variable} ${notoSans.variable} ${poppins.variable} h-full antialiased font-sans`}
+      className={`${inter.variable} ${notoSans.variable} ${poppins.variable} ${albertSans.variable} h-full antialiased font-sans`}
       suppressHydrationWarning
     >
       <head>

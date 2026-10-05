@@ -52,7 +52,7 @@ const NewDishesSection = () => {
         {/* Heading */}
         <div className="w-full flex justify-center text-center">
           <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
-          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 2.8vw, 28px)', lineHeight: 'clamp(24px, 3.6vw, 36px)', color: 'rgb(0,0,0)' }}
           className="transform -rotate-2 inline-block text-center uppercase tracking-wide mb-2"
         >
           {t('heading')}
@@ -92,18 +92,12 @@ const NewDishesSection = () => {
           </div>
 
           {/* Left Button */}
-          <button 
-            onClick={prevSlide}
-            className="absolute -left-3.75 md:-left-6.25 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 z-10 border border-gray-100"
-          >
+          <button onClick={prevSlide} className="text-black hover:text-white absolute -left-3.75 md:-left-6.25 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center hover:bg-gray-50 z-10 border border-gray-100" >
             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
           </button>
           
           {/* Right Button */}
-          <button 
-            onClick={nextSlide}
-            className="absolute -right-3.75 md:-right-6.25 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-800 hover:bg-gray-50 z-10 border border-gray-100"
-          >
+          <button onClick={nextSlide} className="text-black hover:text-white absolute -right-3.75 md:-right-6.25 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center hover:bg-gray-50 z-10 border border-gray-100" >
             <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
           </button>
 

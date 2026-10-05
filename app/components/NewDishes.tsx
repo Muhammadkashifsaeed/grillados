@@ -17,13 +17,13 @@ const NewDishes = () => {
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0 border-t border-gray-200">
       <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch">
         
-        <div className="w-full h-full min-h-[300px] relative overflow-hidden order-1 bg-black group flex items-center justify-center">
+        <div className="w-full aspect-video md:aspect-auto md:h-full md:min-h-[300px] relative overflow-hidden order-1 bg-black group flex items-center justify-center">
           <iframe
             ref={iframeRef}
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&cc_load_policy=0&showinfo=0&enablejsapi=1`}
             title="Grillados New Dishes"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            className="w-full aspect-video opacity-95 transition-opacity duration-700 pointer-events-none"
+            className="w-full h-full md:aspect-video opacity-95 transition-opacity duration-700 pointer-events-none"
             style={{ border: 'none' }}
           ></iframe>
           
@@ -62,7 +62,7 @@ const NewDishes = () => {
           {/* Heading */}
           <div className="text-center">
             <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 2.8vw, 28px)', lineHeight: 'clamp(24px, 3.6vw, 36px)', color: 'rgb(0,0,0)' }}
               className="mb-2 transform -rotate-2 inline-block text-center tracking-wide uppercase"
             >
               {t('heading')}
@@ -79,11 +79,11 @@ const NewDishes = () => {
 
           {/* Buttons: Yellow default, Red on hover */}
           <div className="flex flex-row gap-3 sm:gap-4 w-full justify-center">
-            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white group h-12 sm:h-13 px-4 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('orderNow')}</span>
             </Link>
 
-            <Link href="/menu" className="group h-12 sm:h-13 px-4 sm:px-8 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
+            <Link href="/menu" className="text-black hover:text-white group h-12 sm:h-13 px-4 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }}>
               <span>{t('learnMore')}</span>
             </Link>
           </div>

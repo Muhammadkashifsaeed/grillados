@@ -71,18 +71,18 @@ export default function LocationsPage() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-24 pt-16">
         
         {/* Header Section */}
-        <div className="mb-16 md:mb-24 flex flex-col items-center">
+        <div className="mb-12 md:mb-16 flex flex-col items-center">
           <h1 
-            className="uppercase tracking-wide text-center"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '48px', lineHeight: '56px', color: 'rgb(255,255,255)' }}
+            className="uppercase tracking-widest text-center drop-shadow-xl"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(28px, 4vw, 40px)', lineHeight: 'clamp(36px, 5vw, 48px)', color: 'rgb(255,255,255)' }}
           >
             {t('availableLocations')}
           </h1>
-          <div className="w-24 h-1.5 bg-orange-500 mx-auto mt-6"></div>
+          <div className="w-24 h-1.5 bg-orange-500 mx-auto mt-4 rounded-full shadow-[0_0_10px_rgba(249,115,22,0.6)]"></div>
         </div>
 
         {/* Locations Grid */}
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 md:gap-8">
           {displayLocations.map((loc, index) => (
             <LocationCard
               key={loc.name}

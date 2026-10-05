@@ -9,7 +9,7 @@ export default function FranchisingHero() {
   const t = useTranslations('FranchisingPage');
 
   return (
-    <section className="relative w-full h-[35vh] md:h-[40vh] min-h-75 flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[25vh] md:h-[40vh] min-h-[220px] md:min-h-[300px] flex items-center justify-center overflow-hidden">
 
       {/* Background Image with Cinematic Zoom and Float */}
       <motion.div
@@ -38,36 +38,16 @@ export default function FranchisingHero() {
       {/* Skewed Banner Content */}
       <div className="relative z-20 flex items-center justify-center px-6 text-center">
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, y: 30 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="relative inline-block mx-4"
+        <div
+          className="z-10 bg-[#FAC716] px-3 sm:px-5 py-1 sm:py-2 rounded-none shadow-lg border-2 border-white/20 inline-block transform -rotate-3 cursor-default"
         >
-          {/* Yellow skewed background container */}
-          <motion.div
-            initial={{ opacity: 0, rotate: -10 }}
-            animate={{ opacity: 1, rotate: -2 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="absolute inset-0 bg-[#D8AC15] rounded-xl z-[-1] shadow-2xl transform origin-center"
-          ></motion.div>
-
-          {/* Text Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-            className="relative px-5 py-3 flex items-center justify-center"
+          <h1 
+            className="text-white text-center uppercase whitespace-normal sm:whitespace-nowrap drop-shadow-sm tracking-wide"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255, 255, 255)', fontSize: 'clamp(27px, 4.5vw, 45px)', lineHeight: 'clamp(39px, 6vw, 60px)' }}
           >
-            <h1 
-              className="text-white text-center uppercase whitespace-normal sm:whitespace-nowrap drop-shadow-lg"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255, 255, 255)', fontSize: '45px', lineHeight: '60px' }}
-            >
-              {t('heroHeading')}
-            </h1>
-          </motion.div>
-
-        </motion.div>
+            {t('heroHeading')}
+          </h1>
+        </div>
 
       </div>
 

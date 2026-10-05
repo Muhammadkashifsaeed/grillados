@@ -75,13 +75,13 @@ export const Footer = () => {
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-350 mx-auto px-6 pt-10 pb-6 lg:px-8 flex flex-col items-center">
+        <div className="relative z-10 max-w-350 mx-auto px-4 sm:px-6 pt-6 pb-4 lg:pt-10 lg:pb-6 lg:px-8 flex flex-col items-center">
           
           {/* Top Row: 4 Columns */}
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-8">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 mb-6 lg:mb-8">
             
             {/* Column 1 */}
-            <div className="flex flex-col items-start gap-6">
+            <div className="flex flex-col items-start gap-4 lg:gap-6">
               <Image
                 src="/images/saman.png"
                 alt="Grillado's Logo"
@@ -109,32 +109,32 @@ export const Footer = () => {
             </div>
 
             {/* Columns 2 & 3 Wrapper for Mobile Side-by-Side */}
-            <div className="w-full grid grid-cols-2 gap-8 lg:gap-8 lg:col-span-2">
+            <div className="w-full grid grid-cols-2 gap-4 sm:gap-8 lg:col-span-2">
               {/* Column 2 */}
-              <div className="flex flex-col gap-6">
-                <h3 className="text-lg sm:text-xl font-bold tracking-wider uppercase">{t('menuHeading')}</h3>
-                <ul className="flex flex-col gap-4">
-                  <li><Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('orderOnline')}</Link></li>
-                  <li><Link href="/franchising" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('franchising')}</Link></li>
-                  <li><Link href="/about-us" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('aboutUs')}</Link></li>
-                  <li><Link href="/contact-us" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('contact')}</Link></li>
+              <div className="flex flex-col gap-3 lg:gap-6">
+                <h3 className="text-base sm:text-xl font-bold tracking-wider uppercase">{t('menuHeading')}</h3>
+                <ul className="flex flex-col gap-2 lg:gap-4">
+                  <li><Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('orderOnline')}</Link></li>
+                  <li><Link href="/franchising" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('franchising')}</Link></li>
+                  <li><Link href="/about-us" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('aboutUs')}</Link></li>
+                  <li><Link href="/contact-us" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('contact')}</Link></li>
                 </ul>
               </div>
 
               {/* Column 3 */}
-              <div className="flex flex-col gap-6">
-                <h3 className="text-lg sm:text-xl font-bold tracking-wider uppercase">{t('locationsHeading')}</h3>
-                <ul className="flex flex-col gap-4">
-                  <li><a href="tel:+15196217771" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('cambridge')}</a></li>
-                  <li><a href="tel:+14506883399" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('laval')}</a></li>
-                  <li><a href="tel:+19058787770" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('milton')}</a></li>
-                  <li><a href="tel:+19056255558" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm sm:text-base">{t('mississauga')}</a></li>
+              <div className="flex flex-col gap-3 lg:gap-6">
+                <h3 className="text-base sm:text-xl font-bold tracking-wider uppercase">{t('locationsHeading')}</h3>
+                <ul className="flex flex-col gap-2 lg:gap-4">
+                  <li><a href="tel:+15196217771" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('cambridge')}</a></li>
+                  <li><a href="tel:+14506883399" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('laval')}</a></li>
+                  <li><a href="tel:+19058787770" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('milton')}</a></li>
+                  <li><a href="tel:+19056255558" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('mississauga')}</a></li>
                 </ul>
               </div>
             </div>
 
             {/* Column 4 */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4 lg:gap-6">
               <Image
                 src="/images/hma.png"
                 alt="HMA Certification"
@@ -143,8 +143,8 @@ export const Footer = () => {
                 className="w-24 h-auto"
               />
               <ul className="flex flex-col gap-4 mt-2">
-                <li><Link href="/terms" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm">{t('termsAndConditions')}</Link></li>
-                <li><Link href="/privacy" className="hover:text-[#D8AC15] transition-colors duration-300 text-sm">{t('privacyPolicy')}</Link></li>
+                <li><Link href="/terms" className="hover:text-[#FAC716] transition-colors duration-300 text-sm">{t('termsAndConditions')}</Link></li>
+                <li><Link href="/privacy" className="hover:text-[#FAC716] transition-colors duration-300 text-sm">{t('privacyPolicy')}</Link></li>
               </ul>
             </div>
           </div>
@@ -161,10 +161,7 @@ export const Footer = () => {
 
       {/* Floating Order Button */}
       <div className="hidden lg:flex fixed top-1/2 right-0 -translate-y-1/2 z-50">
-        <Link 
-          href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-          className="bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md font-bold py-4 px-2 rounded-l-lg flex flex-col items-center gap-3 cursor-pointer"
-        >
+        <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md font-bold py-4 px-2 rounded-l-lg flex flex-col items-center gap-3 cursor-pointer" >
           <UtensilsCrossed className="w-5 h-5" />
           <span className="writing-vertical-rl text-sm tracking-widest whitespace-nowrap rotate-180" style={{ writingMode: 'vertical-rl' }}>
             {t('orderNow')}

@@ -32,7 +32,7 @@ export default function Home() {
       {/* Newsletter / Blogs Section */}
       <section className="flex flex-col items-center justify-center pt-10 pb-2 px-4 sm:px-6 lg:px-8 bg-white text-center">
         <h2
-          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '36px', color: 'rgb(0,0,0)' }}
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 2.8vw, 28px)', lineHeight: 'clamp(24px, 3.6vw, 36px)', color: 'rgb(0,0,0)' }}
           className="uppercase tracking-wide mb-6"
         >
           {t('headingStart')} <span className="text-[#fbbc04]">{t('headingHighlight')}</span>

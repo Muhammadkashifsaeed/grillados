@@ -60,7 +60,7 @@ export default function ContactCateringSection() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-  const inputClass = "w-full h-13 md:h-14 px-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D8AC15] transition-all duration-300 placeholder:text-gray-400 font-medium";
+  const inputClass = "w-full h-13 md:h-14 px-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#FAC716] transition-all duration-300 placeholder:text-gray-400 font-medium";
   const labelClass = "block text-sm font-semibold text-gray-200 mb-2";
   const sectionTitleClass = "text-2xl font-bold text-white font-['Outfit',sans-serif] mb-6 tracking-wide border-b border-gray-600/50 pb-2";
 
@@ -87,7 +87,7 @@ export default function ContactCateringSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="uppercase tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
-          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '48px', lineHeight: '56px', color: 'rgb(255,255,255)' }}
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(36px, 5.6vw, 56px)', color: 'rgb(255,255,255)' }}
         >
           Get in touch
         </motion.h1>
@@ -114,7 +114,7 @@ export default function ContactCateringSection() {
                   </div>
                   <div>
                     <label className={labelClass}>{t('phoneNumber')}</label>
-                    <div className="flex h-13 md:h-14 rounded-xl bg-white border border-transparent focus-within:ring-2 focus-within:ring-[#D8AC15] transition-all duration-300">
+                    <div className="flex h-13 md:h-14 rounded-xl bg-white border border-transparent focus-within:ring-2 focus-within:ring-[#FAC716] transition-all duration-300">
                       {/* Functional Custom Country Code Selector with Real Flags */}
                       <div className="relative flex items-center bg-gray-100 border-r border-gray-200 hover:bg-gray-200 transition-colors rounded-l-xl" ref={dropdownRef}>
                         <div 
@@ -203,7 +203,7 @@ export default function ContactCateringSection() {
                 <label className={labelClass}>{t('deliveryNotes')}</label>
                 <textarea 
                   placeholder={t('deliveryNotesPlaceholder')} 
-                  className="w-full h-45 p-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D8AC15] transition-all duration-300 placeholder:text-gray-400 font-medium resize-none"
+                  className="w-full h-45 p-4 rounded-xl bg-white text-gray-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#FAC716] transition-all duration-300 placeholder:text-gray-400 font-medium resize-none"
                 ></textarea>
               </div>
             </section>
@@ -267,7 +267,7 @@ export default function ContactCateringSection() {
               {/* SMS Consent */}
               <label className="flex items-start gap-4 cursor-pointer mb-8 max-w-4xl group">
                 <div className="relative flex items-center mt-1">
-                  <input type="checkbox" className="peer w-6 h-6 rounded-md border-gray-300 text-[#D8AC15] focus:ring-[#D8AC15] cursor-pointer appearance-none bg-white checked:bg-[#D8AC15] checked:border-transparent transition-all duration-200" />
+                  <input type="checkbox" className="peer w-6 h-6 rounded-md border-gray-300 text-[#FAC716] focus:ring-[#FAC716] cursor-pointer appearance-none bg-white checked:bg-[#FAC716] checked:border-transparent transition-all duration-200" />
                   <svg className="absolute w-4 h-4 text-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0 peer-checked:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
@@ -278,17 +278,7 @@ export default function ContactCateringSection() {
               </label>
 
               {/* Submit Button */}
-              <button 
-                type="submit" 
-                disabled={isSubmitting || isSuccess}
-                className={`w-full h-15 text-white font-extrabold text-xl rounded-xl shadow-lg uppercase tracking-widest font-['Outfit',sans-serif] transition-all duration-300 flex items-center justify-center ${
-                  isSuccess 
-                    ? 'bg-green-500 hover:bg-green-600 shadow-green-500/30' 
-                    : isSubmitting
-                    ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-[#D8AC15] hover:bg-[#e0a217] hover:shadow-xl hover:-translate-y-1 active:scale-[0.98]'
-                }`}
-              >
+              <button type="submit" disabled={isSubmitting || isSuccess} className={`w-full h-15 font-extrabold text-xl rounded-xl shadow-lg uppercase tracking-widest font-['Outfit',sans-serif] transition-all duration-300 flex items-center justify-center ${ isSuccess ? 'bg-[#FAC716] hover:bg-green-600 shadow-green-500/30' : isSubmitting ? 'bg-[#FAC716] cursor-not-allowed' : 'bg-[#FAC716] hover:bg-[#e0a217] hover:shadow-xl hover:-translate-y-1 active:scale-[0.98]' }`} >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center gap-3">
                     <svg className="animate-spin h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

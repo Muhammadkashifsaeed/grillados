@@ -62,10 +62,10 @@ export default function NewsletterSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center tracking-tight mb-6 max-w-2xl"
-          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '32px', lineHeight: '40px', color: 'rgb(0,0,0)' }}
+          className="text-center tracking-tight mb-6 max-w-2xl mx-auto"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3.2vw, 32px)', lineHeight: 'clamp(26px, 4vw, 40px)', color: 'rgb(0,0,0)' }}
         >
-          {t('headingStart')} <span className="text-[#D8AC15]">{t('headingHighlight')}</span>{t('headingEnd')}<br className="hidden md:block" />
+          {t('headingStart')} <span className="text-[#FAC716]">{t('headingHighlight')}</span>{t('headingEnd')}<br />
           {t('headingEnd2')}
         </motion.h2>
 
@@ -75,10 +75,10 @@ export default function NewsletterSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-10 max-w-xl"
-          style={{ fontFamily: "'Albert Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(0,0,0)' }}
+          className="text-center mb-10 max-w-xl mx-auto"
+          style={{ fontFamily: "var(--font-albert-sans), 'Albert Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(0,0,0)' }}
         >
-          {t('descriptionLine1')}<br className="hidden md:block" />
+          {t('descriptionLine1')}<br />
           {t('descriptionLine2')}
         </motion.p>
 
@@ -108,7 +108,7 @@ export default function NewsletterSection() {
                   placeholder={t('firstNamePlaceholder')}
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="w-full h-12 md:h-12.5 px-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D8AC15] focus:border-transparent transition-all"
+                  className="w-full h-12 md:h-12.5 px-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FAC716] focus:border-transparent transition-all"
                 />
               </div>
 
@@ -122,7 +122,7 @@ export default function NewsletterSection() {
                   placeholder={t('emailPlaceholder')}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full h-12 md:h-12.5 pl-14 pr-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D8AC15] focus:border-transparent transition-all"
+                  className="w-full h-12 md:h-12.5 pl-14 pr-6 bg-gray-50 border border-gray-300 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FAC716] focus:border-transparent transition-all"
                 />
               </div>
 
@@ -132,10 +132,7 @@ export default function NewsletterSection() {
               )}
 
               {/* Subscribe Button */}
-              <button
-                type="submit"
-                className="w-full h-12 md:h-12.5 mt-2 bg-[#E02A2B] hover:bg-[#c82222] active:scale-[0.98] text-white font-bold text-xs md:text-smbase uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300"
-              >
+              <button type="submit" className="text-black hover:text-white w-full h-12 md:h-12.5 mt-2 bg-[#FAC716] hover:bg-[#c82222] active:scale-[0.98] font-bold text-xs md:text-smbase uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300" >
                 {t('subscribeBtn')}
               </button>
 

@@ -65,8 +65,8 @@ export default function GalleryContent() {
             onClick={() => setActiveTab('photos')}
             className={`px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 ${
               activeTab === 'photos'
-                ? 'bg-red-600 text-white shadow-lg shadow-red-600/30'
-                : 'bg-white text-gray-700 border border-gray-300 hover:border-red-600 hover:text-red-600'
+                ? 'bg-[#E02A2B] text-white shadow-lg shadow-[#E02A2B]/30'
+                : 'bg-white text-black border border-gray-300 hover:border-[#E02A2B] hover:text-[#E02A2B]'
             }`}
           >
             {t('btnPhotos')}
@@ -75,8 +75,8 @@ export default function GalleryContent() {
             onClick={() => setActiveTab('videos')}
             className={`px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 ${
               activeTab === 'videos'
-                ? 'bg-red-600 text-white shadow-lg shadow-red-600/30'
-                : 'bg-white text-gray-700 border border-gray-300 hover:border-red-600 hover:text-red-600'
+                ? 'bg-[#E02A2B] text-white shadow-lg shadow-[#E02A2B]/30'
+                : 'bg-white text-black border border-gray-300 hover:border-[#E02A2B] hover:text-[#E02A2B]'
             }`}
           >
             {t('btnVideos')}
@@ -121,7 +121,7 @@ export default function GalleryContent() {
               href={`https://www.youtube.com/watch?v=${featuredVideo}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative w-full aspect-video mb-12 overflow-hidden shadow-2xl cursor-pointer block"
+              className="relative w-full aspect-video mb-4 sm:mb-6 overflow-hidden shadow-2xl cursor-pointer block"
             >
               <img
                 src={`https://img.youtube.com/vi/${featuredVideo}/hqdefault.jpg`}
@@ -138,7 +138,7 @@ export default function GalleryContent() {
             </a>
 
             {/* Grid Videos */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 w-full mb-8">
               {gridVideos.slice(0, visibleVideos).map((vid, idx) => (
                 <a 
                   key={idx} 
@@ -166,10 +166,7 @@ export default function GalleryContent() {
             {/* Action Buttons */}
             <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 mt-4 w-full">
               {visibleVideos < gridVideos.length && (
-                <button 
-                  onClick={handleLoadMore}
-                  className="px-4 py-3 sm:px-8 sm:py-3 rounded-full font-bold text-xs sm:text-lg bg-black text-white hover:bg-gray-800 transition-all duration-300 shadow-md flex-1 sm:flex-none text-center whitespace-nowrap"
-                >
+                <button onClick={handleLoadMore} className="text-black hover:text-white px-4 py-3 sm:px-8 sm:py-3 rounded-full font-bold text-xs sm:text-lg bg-[#FAC716] hover:bg-gray-800 transition-all duration-300 shadow-md flex-1 sm:flex-none text-center whitespace-nowrap" >
                   Load More
                 </button>
               )}

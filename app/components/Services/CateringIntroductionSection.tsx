@@ -28,13 +28,13 @@ const CateringIntroductionSection = () => {
             className="mb-8"
           >
             <h3 
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '35px', lineHeight: '46px', color: 'rgb(250, 174, 64)' }}
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: 'clamp(22px, 3.5vw, 35px)', lineHeight: 'clamp(30px, 4.6vw, 46px)', color: 'rgb(250, 174, 64)' }}
             >
               {t('titleColored')}
             </h3>
             <h2 
               className="mt-2 whitespace-pre-line"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '50px', lineHeight: '65px', color: 'rgb(0, 0, 0)' }}
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(30px, 5vw, 50px)', lineHeight: 'clamp(42px, 6.5vw, 65px)', color: 'rgb(0, 0, 0)' }}
             >
               {t('titleBlack')}
             </h2>
@@ -68,9 +68,9 @@ const CateringIntroductionSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="relative w-full max-w-100 aspect-[9/16] shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.02] border-4 border-white">
+          <div className="relative w-full aspect-[9/16] shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.02] border-4 border-white rounded-2xl">
             <video
-              className="w-full h-full object-cover scale-[1.05]"
+              className="w-full h-full object-cover"
               src="https://grillados.ca/wp-content/uploads/2025/04/Add-2-reel.mp4"
               autoPlay
               muted

@@ -8,12 +8,20 @@ import { useTranslations } from 'next-intl';
 export default function DeliveryPickupSection() {
   const t = useTranslations('DeliveryPickup');
   return (
-    <section className="relative w-full overflow-hidden bg-linear-to-r from-[#f08519] to-[#D8AC15]">
+    <section className="relative w-full max-w-[95%] lg:max-w-7xl mx-auto mt-12 md:mt-20 mb-6 md:mb-8 rounded-3xl overflow-hidden bg-[#121212] shadow-2xl">
+      {/* Background Image */}
+      <Image
+        src="/images/Rectangle-1.png"
+        alt="Background"
+        fill
+        className="object-cover z-0"
+        priority
+      />
 
       <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 items-stretch">
 
         {/* Left Column: Content */}
-        <div className="flex flex-col items-center justify-center text-center px-6 md:px-12 lg:px-20 xl:px-24 py-12 md:py-16">
+        <div className="flex flex-col items-center justify-center text-center px-6 md:px-12 lg:px-20 xl:px-24 py-2 md:py-4">
 
           {/* Top Icon: Vector.png */}
           <motion.div
@@ -21,7 +29,7 @@ export default function DeliveryPickupSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative w-22.5 h-22.5 md:w-27.5 md:h-27.5 mb-6"
+            className="relative w-16 h-16 md:w-20 md:h-20 mb-2"
           >
             <Image
               src="/images/Vector.png"
@@ -38,7 +46,7 @@ export default function DeliveryPickupSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="text-3xl sm:text-4xl lg:text- font-extrabold text-white font-['Outfit',sans-serif] leading-tight tracking-wide mb-6"
+            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-['Outfit',sans-serif] leading-tight tracking-wide mb-2"
           >
             At Grillado&apos;s, we offer <br className="hidden sm:block" /> 10 minutes of delivery <br className="hidden sm:block" /> and pickup.
           </motion.h2>
@@ -49,15 +57,15 @@ export default function DeliveryPickupSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="mb-8"
+            className="mb-4"
           >
             <p className="text-white text-lg md:text-xl font-medium">
-              Call <span style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '22px', lineHeight: '36px', color: 'rgb(182, 34, 59)' }}>(514) 933-9399</span> for more details!
+              Call <span style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '22px', lineHeight: 'clamp(24px, 3.6vw, 36px)', color: 'rgb(182, 34, 59)' }}>(514) 933-9399</span> for more details!
             </p>
           </motion.div>
 
           {/* Delivery Partner Logos */}
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-2">
             {/* Top Row: Rectangle1 and Rectangle2 */}
             <div className="flex flex-row gap-8 md:gap-10">
               <div className="bg-transparent w-35 h-15 md:w-40 md:h-17.5 relative px-4">
@@ -70,30 +78,12 @@ export default function DeliveryPickupSection() {
             </div>
 
             {/* Bottom Row: Rectangle3 */}
-            <div className="bg-transparent w-35 h-15 md:w-40 md:h-17.5 relative px-4 mt-4">
+            <div className="bg-transparent w-35 h-15 md:w-40 md:h-17.5 relative px-4 mt-1">
               <Image src="/images/Rectangle3.png" alt="Delivery Partner 3" fill className="object-contain scale-[1.15] mix-blend-multiply" sizes="160px" />
             </div>
           </div>
 
         </div>
-
-        {/* Right Column: Hero Image */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="relative w-full h-100 sm:h-125 md:h-150 lg:h-175 xl:h-200"
-        >
-          {/* Note: Adjusting image fit to ensure it blends nicely with the background without strict bounding boxes unless desired */}
-          <Image
-            src="/images/delivery_boy_ai.png"
-            alt="Delivery Rider"
-            fill
-            className="object-contain md:object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </motion.div>
 
       </div>
     </section>

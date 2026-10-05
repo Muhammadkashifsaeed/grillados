@@ -63,13 +63,13 @@ export default function CrazyLunchDeals() {
           className="flex flex-col items-center text-center mb-16 md:mb-20"
         >
           <h2 
-            className="uppercase tracking-wide mb-4 text-center"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '65px', lineHeight: '91px', color: 'rgb(250,199,22)' }}
+            className="uppercase tracking-wide mb-4 text-center lg:whitespace-nowrap px-4"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(39px, 6.5vw, 65px)', lineHeight: 'clamp(59px, 9.1vw, 91px)', color: 'rgb(250,199,22)' }}
           >
             {t('title')}
           </h2>
           <p 
-            className="max-w-2xl mx-auto"
+            className="max-w-4xl mx-auto lg:whitespace-nowrap px-4"
             style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '25px', color: 'rgb(0,0,0)' }}
           >
             {t('subtitle')}
@@ -103,7 +103,7 @@ export default function CrazyLunchDeals() {
               <div className="flex flex-col justify-center p-6 sm:p-8 flex-1">
                 <h3 
                   className="mb-4"
-                  style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '28px', lineHeight: '33px', color: 'rgb(69,69,69)' }}
+                  style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 2.8vw, 28px)', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(69,69,69)' }}
                 >
                   {deal.heading}
                 </h3>
@@ -115,7 +115,7 @@ export default function CrazyLunchDeals() {
                     </p>
                     <button
                       onClick={() => router.push('/contact-us')}
-                      className="inline-block bg-[#D8AC15] hover:bg-[#D8AC15] uppercase tracking-wider px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                      className="inline-block bg-[#FAC716] hover:bg-[#FAC716] uppercase tracking-wider px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
                       style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: 'rgb(255,255,255)' }}
                     >
                       {t('contactUs')}
@@ -123,10 +123,10 @@ export default function CrazyLunchDeals() {
                   </div>
                 ) : (
                   <div className="mt-2 flex items-baseline gap-1">
-                    <span style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '33px', color: 'rgb(0,0,0)' }}>
+                    <span style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(0,0,0)' }}>
                       $
                     </span>
-                    <span style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '30px', lineHeight: '33px', color: 'rgb(250,199,22)' }}>
+                    <span style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(250,199,22)' }}>
                       {deal.price ? deal.price.replace('$ ', '').replace('$', '') : ''}
                     </span>
                   </div>

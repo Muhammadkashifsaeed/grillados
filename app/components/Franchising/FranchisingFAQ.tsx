@@ -23,12 +23,12 @@ export default function FranchisingFAQ() {
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         
         {/* Section Heading */}
-        <h2 className="text-[#000000] text-[45px] leading-[60px] font-semibold font-['Ribeat',sans-serif] text-center mb-4">
+        <h2 className="text-[#000000] text-3xl sm:text-4xl md:text-[45px] leading-tight md:leading-[60px] font-semibold font-['Ribeat',sans-serif] text-center mb-4">
           {t('heading')}
         </h2>
         
         {/* Divider */}
-        <div className="w-24 h-1 bg-red-600 mb-12 rounded-full" />
+        <div className="w-22.5 h-[2px] bg-red-600 mb-12 rounded-full" />
 
         {/* FAQ Accordion */}
         <div className="w-full flex flex-col gap-4">
@@ -46,8 +46,8 @@ export default function FranchisingFAQ() {
                   <span className="text-lg md:text-xl font-bold text-gray-800 pr-8">
                     {faq.question}
                   </span>
-                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-red-100 text-red-600 transition-transform duration-300">
-                    {isOpen ? <Minus size={20} /> : <Plus size={20} />}
+                  <div className={`flex-shrink-0 flex items-center justify-center w-6 h-6 transition-transform duration-300 ${isOpen ? 'text-black bg-transparent' : 'bg-[#EB5250] text-white rounded-full'}`}>
+                    {isOpen ? <Minus size={18} /> : <Plus size={18} />}
                   </div>
                 </button>
                 

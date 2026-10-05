@@ -64,12 +64,12 @@ const HeroSection = () => {
           className="mb-8 relative inline-block mx-4 sm:mx-0 max-w-[90vw] sm:max-w-none"
         >
           <div 
-            className="absolute inset-0 bg-[#D8AC15] rounded-xl z-[-1] shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
+            className="absolute inset-0 bg-[#FAC716] rounded-none z-[-1] shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
           ></div>
           
           <h1
-            className="text-white py-1 px-2 sm:px-3 relative z-10 text-center whitespace-normal sm:whitespace-nowrap tracking-tight text-4xl sm:text-5xl md:text-[66px] leading-tight md:leading-[1.2] break-words"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255,255,255)' }}
+            className="py-1 px-2 sm:px-3 relative z-10 text-center whitespace-normal sm:whitespace-nowrap tracking-tight break-words"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255, 255, 255)', fontSize: 'clamp(33px, 5.5vw, 55px)', lineHeight: 'clamp(45px, 6.9vw, 69px)' }}
           >
             {t('welcome')}
           </h1>
@@ -92,23 +92,11 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
           className="flex flex-row gap-3 sm:gap-5 w-full px-4 sm:px-0 sm:w-auto justify-center"
         >
-          <Link 
-            href="https://grillados.bycalibre.ca/location" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg px-4 py-3 sm:px-8 sm:py-4 flex-1 sm:flex-none text-3.75 sm:text-5"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
-          >
+          <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white group flex items-center justify-center gap-1 sm:gap-2 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg px-4 py-3 sm:px-8 sm:py-4 flex-1 sm:flex-none text-3.75 sm:text-5" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px' }} >
             <span className="whitespace-nowrap">{t('orderNow')}</span>
           </Link>
           
-          <Link 
-            href="https://grillados.bycalibre.ca/location" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-1 sm:gap-2 bg-[#D8AC15] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg px-4 py-3 sm:px-8 sm:py-4 flex-1 sm:flex-none text-3.75 sm:text-5"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px', color: 'rgb(255,255,255)' }}
-          >
+          <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white group flex items-center justify-center gap-1 sm:gap-2 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg px-4 py-3 sm:px-8 sm:py-4 flex-1 sm:flex-none text-3.75 sm:text-5" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px' }} >
             <span className="whitespace-nowrap">{t('viewMenu')}</span>
           </Link>
         </motion.div>

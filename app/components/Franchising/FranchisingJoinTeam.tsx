@@ -26,12 +26,12 @@ export default function FranchisingJoinTeam() {
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         
         {/* Section Heading */}
-        <h2 className="text-[#000000] text-[45px] leading-[60px] font-semibold font-['Ribeat',sans-serif] text-center uppercase tracking-wide mb-4 drop-shadow-sm">
+        <h2 className="text-[#000000] text-3xl sm:text-4xl md:text-[45px] leading-tight md:leading-[60px] font-semibold font-['Ribeat',sans-serif] text-center uppercase tracking-wide mb-4 drop-shadow-sm">
           {t('joinTeamHeading')}
         </h2>
         
         {/* Short Centered Red Divider */}
-        <div className="w-22.5 h-0.75 bg-red-600 mb-16 rounded"></div>
+        <div className="w-22.5 h-[2px] bg-red-600 mb-16 rounded"></div>
 
         {/* Two-Column Layout */}
         <div className="w-full flex flex-col md:flex-row relative">

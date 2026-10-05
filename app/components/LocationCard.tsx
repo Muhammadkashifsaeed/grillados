@@ -36,7 +36,7 @@ export default function LocationCard({
       className="flex flex-col lg:flex-row items-stretch w-full mx-auto max-w-lg lg:max-w-none rounded-2xl overflow-hidden shadow-2xl bg-white"
     >
       {/* Image Container */}
-      <div className="relative w-full aspect-video sm:h-75 md:h-87.5 lg:h-auto lg:aspect-auto lg:w-[50%] shrink-0">
+      <div className="relative w-full aspect-video sm:h-75 md:h-87.5 lg:h-auto lg:aspect-auto lg:w-[40%] shrink-0">
         <Image
           src={image}
           alt={`Grillado's ${name}`}
@@ -48,10 +48,13 @@ export default function LocationCard({
       </div>
 
       {/* Info Box */}
-      <div className="flex flex-col justify-center w-full lg:w-[50%] p-6 md:p-8 lg:p-10">
+      <div className="flex flex-col justify-center w-full lg:w-[60%] p-6 md:p-8 lg:p-12 relative overflow-hidden group">
+        {/* Subtle premium gradient background for the white box */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-orange-50/50 z-0"></div>
+        <div className="relative z-10">
         <h3 
           className="uppercase tracking-wide mb-2"
-          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '24px', lineHeight: '34px', color: 'rgb(250,174,65)' }}
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: '24px', lineHeight: 'clamp(24px, 3.4vw, 34px)', color: 'rgb(250,174,65)' }}
         >
           {name}
         </h3>
@@ -89,6 +92,7 @@ export default function LocationCard({
               {phone}
             </p>
           </a>
+        </div>
         </div>
       </div>
     </motion.div>

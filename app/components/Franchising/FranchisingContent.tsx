@@ -12,15 +12,21 @@ export default function FranchisingContent() {
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         
         {/* Heading */}
-        <h2 className="text-[#171717] text-[45px] leading-[60px] font-semibold font-['Ribeat',sans-serif] text-center uppercase tracking-wide mb-2 drop-shadow-sm">
+        <h2 
+          className="text-center uppercase tracking-wide mb-4 drop-shadow-sm"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(23, 23, 23)', fontSize: 'clamp(22px, 3.2vw, 32px)', lineHeight: 'clamp(26px, 4vw, 40px)' }}
+        >
           {t('whatWeDo')}
         </h2>
-        <h3 className="text-[#FAC716] text-[45px] leading-[60px] font-semibold font-['Ribeat',sans-serif] text-center uppercase tracking-wide mb-4 drop-shadow-sm">
+        <h3 
+          className="text-center uppercase tracking-wide mb-4 drop-shadow-sm"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(250, 199, 22)', fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(39px, 6vw, 60px)' }}
+        >
           {t('whatWeDoSub')}
         </h3>
         
         {/* Divider */}
-        <div className="w-24 h-1 bg-black mb-12 rounded"></div>
+        <div className="w-22.5 h-[2px] bg-black mb-12 rounded"></div>
         
         {/* Content Container */}
         <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-16 items-center justify-between">
@@ -49,11 +55,11 @@ export default function FranchisingContent() {
           <div className="w-full lg:w-1/2 flex flex-col gap-6 text-[#727272] text-4 leading-6 font-normal font-['Poppins',sans-serif]">
             <p>
               {t('p1_1')}
-              <span className="text-[#D8AC15] font-bold">{t('p1_highlight')}</span>
+              <span style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 400, color: 'rgb(250, 174, 64)', fontSize: '16px', lineHeight: '24px' }}>{t('p1_highlight')}</span>
             </p>
             <p>
               {t('p2_1')}
-              <span className="text-[#D8AC15] font-bold">{t('p2_highlight')}</span>
+              <span style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 400, color: 'rgb(250, 174, 64)', fontSize: '16px', lineHeight: '24px' }}>{t('p2_highlight')}</span>
             </p>
             <p>
               {t('p3')}

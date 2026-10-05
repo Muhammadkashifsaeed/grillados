@@ -19,7 +19,7 @@ export default function FranchisingCarousel() {
   const duplicatedImages = [...images, ...images];
 
   return (
-    <section className="w-full bg-white py-6 overflow-hidden">
+    <section className="w-full bg-[#fafafa] py-6 overflow-hidden">
       <div className="relative w-full flex flex-col items-center">
         
         {/* Carousel Container */}
@@ -47,7 +47,7 @@ export default function FranchisingCarousel() {
                 <Image
                   src={src}
                   alt={`Location ${index + 1}`}
-                  fill sizes="100vw"
+                  fill sizes="(max-width: 768px) 160px, (max-width: 1024px) 192px, 224px"
                   className="object-cover"
                 />
               </div>

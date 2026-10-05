@@ -9,20 +9,17 @@ export default function GalleryHero() {
   const t = useTranslations('Gallery');
 
   return (
-    <section className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[30vh] md:h-[40vh] min-h-[250px] z-10 overflow-hidden">
       {/* Background Image */}
-      <Image
-        src="/images/Picture-background.png"
-        alt="Gallery Hero"
-        fill sizes="100vw"
-        className="object-cover"
-        quality={100}
-        unoptimized={true}
+      <Image 
+        src="/images/Picture-back-ground.png" 
+        alt="Gallery Hero" 
+        fill 
         priority
+        className="object-cover object-center" 
+        sizes="100vw"
       />
-
-      {/* No overlay to keep dishes clear */}
-
+      <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
       {/* Content */}
       <div className="relative z-10 text-center px-4">
         {/* Title removed per request */}
