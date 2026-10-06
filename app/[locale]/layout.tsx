@@ -171,7 +171,7 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-white overflow-x-clip" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-white" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Header />
           <MobileOrderButton />
