@@ -38,13 +38,13 @@ const NewDishes = () => {
               }
             }}
           >
-            <div className="flex items-center justify-center transition-transform duration-300 hover:scale-110 drop-shadow-2xl bg-black/40 rounded-full p-3">
+            <div className="flex items-center justify-center transition-transform duration-300 hover:scale-110 drop-shadow-2xl bg-black/40 rounded-full p-2.5">
               {isPlaying ? (
-                <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
                 </svg>
               ) : (
-                <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               )}
