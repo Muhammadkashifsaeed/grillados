@@ -124,8 +124,8 @@ const BlogsSection = () => {
 
                       {/* Title */}
                       <h3 
-                        className="mb-3"
-                        style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px', color: '#000000' }}
+                        className="mb-3 line-clamp-2"
+                        style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px', color: 'rgb(0, 0, 0)' }}
                       >
                         {t(`${blog.tKey}.title`)}
                       </h3>
