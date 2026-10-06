@@ -33,14 +33,14 @@ const HomePromoSections = () => {
         </motion.div>
 
         {/* Right Side - Content */}
-        <div className="w-full flex flex-col justify-start items-center text-center order-2 md:order-2 px-6 md:px-12 lg:px-20 pt-0 pb-6 md:pb-6 bg-gray-50">
+        <div className="w-full flex flex-col justify-center items-center text-center order-2 md:order-2 px-6 md:px-12 lg:px-20 py-10 md:py-16 bg-gray-50">
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col items-center w-full h-full justify-start mt-0"
+            className="flex flex-col items-center w-full h-full justify-center mt-0"
           >
             <div className="flex justify-center mb-6 mt-0">
               <Image
@@ -86,14 +86,14 @@ const HomePromoSections = () => {
       <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-100 lg:min-h-100 xl:min-h-100">
 
         {/* Left Side - Content */}
-        <div className="w-full flex flex-col justify-start items-center text-center order-2 md:order-1 px-6 md:px-12 lg:px-20 pt-0 pb-6 md:pb-6 bg-gray-50 border-t border-gray-200">
+        <div className="w-full flex flex-col justify-center items-center text-center order-2 md:order-1 px-6 md:px-12 lg:px-20 py-10 md:py-16 bg-gray-50 border-t border-gray-200">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col items-center w-full h-full justify-start mt-0"
+            className="flex flex-col items-center w-full h-full justify-center mt-0"
           >
             <div className="flex justify-center mb-6 mt-0">
               <Image
