@@ -38,8 +38,8 @@ export default function EventsCateringSection() {
           {/* Heading */}
           <div className="text-center">
 <h2 
-            className="uppercase leading-tight tracking-wide mb-6 text-center transform -rotate-2 inline-block text-center"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(25px, 3.9vw, 39px)', color: 'rgb(0,0,0)' }}
+            className="capitalize leading-tight tracking-wide mb-6 text-center transform -rotate-2 inline-block text-center"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(25px, 3.9vw, 39px)' }}
           >
             Event Catering
           </h2>
@@ -51,7 +51,7 @@ export default function EventsCateringSection() {
           {/* Description */}
           <p 
             className="mb-8 text-center max-w-[380px] mx-auto"
-            style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0,0,0)' }}
+            style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px' }}
           >
             When a big event comes calling, focus on what matters, and leave the food to us. With a variety of dishes and the best of preparation, Grillado’s is prepared to make your event, a memorable one.
           </p>
@@ -59,8 +59,8 @@ export default function EventsCateringSection() {
           {/* Button */}
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
-            className="px-10 py-3 sm:py-4 bg-[#FAC716] hover:bg-[#EB5250] text-black hover:text-white hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md uppercase tracking-wide rounded-none"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px', color: 'rgb(255,255,255)' }}
+            className="text-black hover:text-white px-10 py-3 sm:py-4 bg-[#FAC716] hover:bg-[#EB5250] hover: hover: transition-all duration-300 hover:scale-[1.03] shadow-md uppercase tracking-wide rounded-none"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px' }}
           >
               {t('contactUs')}
           </button>

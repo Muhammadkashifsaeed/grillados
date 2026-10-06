@@ -63,21 +63,21 @@ export default function CrazyLunchDeals() {
           className="flex flex-col items-center text-center mb-16 md:mb-20"
         >
           <h2 
-            className="uppercase tracking-wide mb-4 text-center lg:whitespace-nowrap px-4"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(39px, 6.5vw, 65px)', lineHeight: 'clamp(59px, 9.1vw, 91px)', color: 'rgb(250,199,22)' }}
+            className="capitalize tracking-wide mb-4 text-center lg:whitespace-nowrap px-4 text-[#FAC716]"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(39px, 6.5vw, 65px)', lineHeight: 'clamp(59px, 9.1vw, 91px)' }}
           >
             {t('title')}
           </h2>
           <p 
             className="max-w-4xl mx-auto lg:whitespace-nowrap px-4"
-            style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '25px', color: 'rgb(0,0,0)' }}
+            style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '25px' }}
           >
             {t('subtitle')}
           </p>
         </motion.div>
 
         {/* Deals Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pb-16">
           {deals.map((deal, index) => (
             <motion.div
               key={deal.id}
@@ -85,25 +85,32 @@ export default function CrazyLunchDeals() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
-              className="flex flex-col sm:flex-row bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-100"
+              className="flex flex-col sm:flex-row bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-300"
             >
               
               {/* Left Image Section */}
               <div className="relative w-full sm:w-1/2 md:w-[45%] h-62.5 sm:h-70 md:h-80 shrink-0 bg-gray-100">
-                <Image
-                  src={deal.image}
-                  alt={deal.heading}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 45vw"
-                />
+                <a 
+                  href="https://grillados.bycalibre.ca/location" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-full h-full block cursor-pointer group"
+                >
+                  <Image
+                    src={deal.image}
+                    alt={deal.heading}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 45vw"
+                  />
+                </a>
               </div>
 
               {/* Right Content Section */}
               <div className="flex flex-col justify-center p-6 sm:p-8 flex-1">
                 <h3 
-                  className="mb-4"
-                  style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 2.8vw, 28px)', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(69,69,69)' }}
+                  className="mb-4 uppercase"
+                  style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 2.8vw, 28px)', lineHeight: 'clamp(24px, 3.3vw, 33px)' }}
                 >
                   {deal.heading}
                 </h3>
@@ -115,18 +122,18 @@ export default function CrazyLunchDeals() {
                     </p>
                     <button
                       onClick={() => router.push('/contact-us')}
-                      className="inline-block bg-[#FAC716] hover:bg-[#FAC716] uppercase tracking-wider px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
-                      style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: 'rgb(255,255,255)' }}
+                      className="text-white inline-block bg-[#FAC716] uppercase tracking-wider px-6 py-3 rounded-full shadow-md cursor-pointer"
+                      style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '24px' }}
                     >
                       {t('contactUs')}
                     </button>
                   </div>
                 ) : (
-                  <div className="mt-2 flex items-baseline gap-1">
-                    <span style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(0,0,0)' }}>
+                  <div className="mt-2 flex items-baseline gap-1 text-[#FAC716]">
+                    <span className="text-black" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(24px, 3.3vw, 33px)' }}>
                       $
                     </span>
-                    <span style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(250,199,22)' }}>
+                    <span style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(24px, 3.3vw, 33px)' }}>
                       {deal.price ? deal.price.replace('$ ', '').replace('$', '') : ''}
                     </span>
                   </div>

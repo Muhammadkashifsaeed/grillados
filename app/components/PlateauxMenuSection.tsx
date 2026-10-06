@@ -128,7 +128,7 @@ export const PlateauxMenuSection = () => {
               alt="Grillado Plateaux Featured"
               width={1000}
               height={750}
-              className="w-full h-auto object-contain object-center lg:object-right-top drop-shadow-2xl rounded-2xl lg:rounded-none scale-95 xl:scale-100 origin-center hidden md:block"
+              className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 origin-center hidden md:block"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
 

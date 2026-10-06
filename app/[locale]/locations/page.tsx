@@ -73,7 +73,7 @@ export default function LocationsPage() {
         {/* Header Section */}
         <div className="mb-12 md:mb-16 flex flex-col items-center">
           <h1 
-            className="uppercase tracking-widest text-center drop-shadow-xl"
+            className="capitalize tracking-widest text-center drop-shadow-xl"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(28px, 4vw, 40px)', lineHeight: 'clamp(36px, 5vw, 48px)', color: 'rgb(255,255,255)' }}
           >
             {t('availableLocations')}

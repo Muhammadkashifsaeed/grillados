@@ -112,7 +112,7 @@ export const Footer = () => {
             <div className="w-full grid grid-cols-2 gap-4 sm:gap-8 lg:col-span-2">
               {/* Column 2 */}
               <div className="flex flex-col gap-3 lg:gap-6">
-                <h3 className="text-base sm:text-xl font-bold tracking-wider uppercase">{t('menuHeading')}</h3>
+                <h3 className="text-base sm:text-xl font-bold tracking-wider capitalize">{t('menuHeading')}</h3>
                 <ul className="flex flex-col gap-2 lg:gap-4">
                   <li><Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('orderOnline')}</Link></li>
                   <li><Link href="/franchising" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('franchising')}</Link></li>
@@ -123,7 +123,7 @@ export const Footer = () => {
 
               {/* Column 3 */}
               <div className="flex flex-col gap-3 lg:gap-6">
-                <h3 className="text-base sm:text-xl font-bold tracking-wider uppercase">{t('locationsHeading')}</h3>
+                <h3 className="text-base sm:text-xl font-bold tracking-wider capitalize">{t('locationsHeading')}</h3>
                 <ul className="flex flex-col gap-2 lg:gap-4">
                   <li><a href="tel:+15196217771" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('cambridge')}</a></li>
                   <li><a href="tel:+14506883399" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('laval')}</a></li>
@@ -161,9 +161,9 @@ export const Footer = () => {
 
       {/* Floating Order Button */}
       <div className="hidden lg:flex fixed top-1/2 right-0 -translate-y-1/2 z-50">
-        <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md font-bold py-4 px-2 rounded-l-lg flex flex-col items-center gap-3 cursor-pointer" >
+        <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white hover: hover: bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md font-bold py-4 px-2 rounded-l-lg flex flex-col items-center gap-3 cursor-pointer" >
           <UtensilsCrossed className="w-5 h-5" />
-          <span className="writing-vertical-rl text-sm tracking-widest whitespace-nowrap rotate-180" style={{ writingMode: 'vertical-rl' }}>
+          <span className="writing-vertical-rl text-sm tracking-widest whitespace-nowrap rotate-180 uppercase" style={{ writingMode: 'vertical-rl' }}>
             {t('orderNow')}
           </span>
         </Link>

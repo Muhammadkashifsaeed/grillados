@@ -50,7 +50,7 @@ export default function ComingSoonLocations() {
           className="flex flex-col items-center mb-16 md:mb-24"
         >
           <h2
-            className="uppercase tracking-wide text-center"
+            className="capitalize tracking-wide text-center"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(36px, 5.6vw, 56px)', color: 'rgb(255,255,255)' }}
           >
             {t('comingSoonLocations')}
@@ -84,7 +84,7 @@ export default function ComingSoonLocations() {
                     <span className="text-white text-xl md:text-2xl font-bold mb-2 font-['Outfit',sans-serif]">
                       {loc}
                     </span>
-                    <div className="w-full h-0.5 bg-orange-500/80"></div>
+                    <div className="w-full h-0.5 bg-[#FAAE40]"></div>
                   </div>
                 ))}
               </div>

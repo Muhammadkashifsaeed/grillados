@@ -88,7 +88,7 @@ export default function OrderPage() {
               </button>
 
               <h3 
-                className="uppercase mb-2 pr-12"
+                className="capitalize mb-2 pr-12"
                 style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif', fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '30px', color: 'rgb(44,48,52)' }}
               >
                 {loc.name}

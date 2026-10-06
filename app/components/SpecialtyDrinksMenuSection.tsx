@@ -100,7 +100,7 @@ export const SpecialtyDrinksMenuSection = () => {
                 alt="Specialty Drinks"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 xl:scale-100 origin-center drop-shadow-2xl hidden md:block"
+                className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 origin-center hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

@@ -19,7 +19,7 @@ export default function PrivacyPage({ params: { locale } }: { params: { locale: 
 
       <div className="relative z-10 w-full mx-auto px-6 md:px-12 lg:px-20 mt-8 md:mt-12">
         <div className="mb-10">
-          <h1 className="text-7.5 md:text-10 leading-tight font-semibold text-black font-['Ribeat',sans-serif] uppercase tracking-wide">
+          <h1 className="text-7.5 md:text-10 leading-tight font-semibold text-black font-['Ribeat',sans-serif] capitalize tracking-wide">
             Privacy Policy
           </h1>
         </div>

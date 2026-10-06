@@ -82,7 +82,7 @@ export default function ContactFormSection() {
         {/* Right Area - The Contact Form Card */}
         <div className="w-full lg:w-1/2 relative z-10 flex items-center justify-center p-6 sm:p-8 md:p-12 lg:p-12 my-auto">
           
-          <div className="w-full max-w-137.5 bg-white border-2 border-[#FACC15] rounded-4 shadow-2xl p-8 sm:p-10 flex flex-col">
+          <div className="w-full max-w-137.5 bg-white rounded-xl shadow-2xl p-8 sm:p-10 flex flex-col">
             
             {/* Heading */}
             <h2 className="text-[#333333] text-7 sm:text-9 font-[800] text-center tracking-tight mb-3 font-['Outfit',sans-serif]">
@@ -220,7 +220,7 @@ export default function ContactFormSection() {
               </div>
 
               {/* Submit Button */}
-              <button type="submit" className="text-black hover:text-white w-full h-11.5 bg-[#FAC716] hover:bg-[#c92025] text-3.75 font-[600] rounded-6.25 tracking-wider transition-colors duration-300 mt-4 cursor-pointer flex items-center justify-center shadow-md" >
+              <button type="submit" className="w-full h-11.5 bg-[#E02A2B] text-white text-3.75 font-[600] rounded-full tracking-wider mt-4 cursor-pointer flex items-center justify-center shadow-md" >
                 {t('submit')}
               </button>
             </form>

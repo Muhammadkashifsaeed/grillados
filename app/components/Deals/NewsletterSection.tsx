@@ -63,7 +63,7 @@ export default function NewsletterSection() {
           transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center tracking-tight mb-6 max-w-2xl mx-auto"
-          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3.2vw, 32px)', lineHeight: 'clamp(26px, 4vw, 40px)', color: 'rgb(0,0,0)' }}
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3.2vw, 32px)', lineHeight: 'clamp(26px, 4vw, 40px)' }}
         >
           {t('headingStart')} <span className="text-[#FAC716]">{t('headingHighlight')}</span>{t('headingEnd')}<br />
           {t('headingEnd2')}
@@ -76,7 +76,7 @@ export default function NewsletterSection() {
           transition={{ delay: 0.3, duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-10 max-w-xl mx-auto"
-          style={{ fontFamily: "var(--font-albert-sans), 'Albert Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(0,0,0)' }}
+          style={{ fontFamily: "var(--font-albert-sans), 'Albert Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px' }}
         >
           {t('descriptionLine1')}<br />
           {t('descriptionLine2')}
@@ -132,7 +132,7 @@ export default function NewsletterSection() {
               )}
 
               {/* Subscribe Button */}
-              <button type="submit" className="text-black hover:text-white w-full h-12 md:h-12.5 mt-2 bg-[#FAC716] hover:bg-[#c82222] active:scale-[0.98] font-bold text-xs md:text-smbase uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300" >
+              <button type="submit" className="w-full h-12 md:h-12.5 mt-2 bg-[#E02A2B] text-white font-bold text-xs md:text-base uppercase tracking-wider rounded-full shadow-md cursor-pointer">
                 {t('subscribeBtn')}
               </button>
 

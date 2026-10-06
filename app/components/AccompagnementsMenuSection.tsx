@@ -52,7 +52,7 @@ export const AccompagnementsMenuSection = () => {
                 alt="Frites Accompagnements"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-left scale-100 lg:scale-100 drop-shadow-2xl hidden md:block"
+                className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 origin-center hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
@@ -112,7 +112,7 @@ export const AccompagnementsMenuSection = () => {
 
               {/* {t('seasonal')} */}
               <motion.div variants={fadeRightItem} className="mt-6 md:mt-8 flex flex-col w-full">
-                <h3 className="text-red-600 text-sm md:text-base font-bold uppercase tracking-widest mb-1.5 md:mb-2">
+                <h3 className="text-red-600 text-sm md:text-base font-bold capitalize tracking-widest mb-1.5 md:mb-2">
                   {t('seasonal')}
                 </h3>
                 <p style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '26px', lineHeight: 'clamp(29px, 4.5vw, 45px)', color: 'rgb(250,174,64)' }}>

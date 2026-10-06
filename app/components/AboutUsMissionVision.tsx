@@ -11,7 +11,7 @@ const AboutUsMissionVision = () => {
         {/* Left Side: Mission */}
         <div className="flex flex-col items-center text-center border-2 border-gray-200 rounded-xl p-4 sm:p-6 shadow-md bg-white hover:shadow-xl transition-shadow">
           <h2 
-            className="uppercase mb-4"
+            className="capitalize mb-4"
             style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(31px, 4.7vw, 47px)' }}
           >
             Our Mission
@@ -35,7 +35,7 @@ const AboutUsMissionVision = () => {
         {/* Right Side: Vision */}
         <div className="flex flex-col items-center text-center border-2 border-gray-200 rounded-xl p-4 sm:p-6 shadow-md bg-white hover:shadow-xl transition-shadow">
           <h2 
-            className="uppercase mb-4"
+            className="capitalize mb-4"
             style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(31px, 4.7vw, 47px)' }}
           >
             Our Vision

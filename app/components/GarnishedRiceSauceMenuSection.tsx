@@ -114,7 +114,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                       </div>
                       <div className="flex flex-col justify-start items-center md:items-start text-center md:text-left flex-1">
                         <h4 
-                          className="uppercase tracking-wider mb-1 md:mb-2"
+                          className="capitalize tracking-wider mb-1 md:mb-2"
                           style={item.style}
                         >
                           {item.name}
@@ -140,7 +140,7 @@ export const GarnishedRiceSauceMenuSection = () => {
                 alt="Zesty Food"
                 width={1000}
                 height={750}
-                className="w-full h-auto rounded-xl lg:rounded-none object-contain object-center scale-95 xl:scale-100 origin-center drop-shadow-2xl hidden md:block"
+                className="w-full h-auto object-contain object-center drop-shadow-2xl rounded-xl lg:rounded-none scale-100 origin-center hidden md:block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

@@ -14,7 +14,7 @@ export default function CateringPage() {
   return (
     <main className="flex flex-col flex-1 w-full min-h-screen">
       <CateringHeroBanner />
-      <CateringPartnersSection />
+      <CateringPartnersSection hideDescription={true} />
       <CateringOffersSection />
       <CateringIntroductionSection />
       <CustomizedOptionsSection />

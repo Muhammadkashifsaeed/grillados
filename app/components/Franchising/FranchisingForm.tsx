@@ -171,7 +171,7 @@ export default function FranchisingForm() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-[#FFFFFF] text-3xl sm:text-4xl md:text-[45px] leading-tight md:leading-[60px] font-semibold font-['Ribeat',sans-serif] uppercase tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
+          className="text-[#FFFFFF] text-3xl sm:text-4xl md:text-[45px] leading-tight md:leading-[60px] font-semibold font-['Ribeat',sans-serif] capitalize tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
         >
           {t('formHeading')}
         </motion.h1>
@@ -355,7 +355,7 @@ export default function FranchisingForm() {
 
             {/* Submit Button & Messages */}
             <div className="flex flex-col items-center mt-2">
-              <button type="submit" disabled={isSubmitting || !turnstileToken} className={`w-full max-w-3xl bg-[#FAC716] hover:bg-[#b89214] font-extrabold py-3 md:py-4 px-8 rounded-full transition-all duration-300 uppercase tracking-widest text-lg shadow-[0_0_15px_rgba(247,180,28,0.4)] hover:shadow-[0_0_25px_rgba(247,180,28,0.6)] ${(!turnstileToken || isSubmitting) ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-1'}`} >
+              <button type="submit" disabled={isSubmitting || !turnstileToken} className={`text-black hover:text-white hover: w-full max-w-3xl bg-[#FAC716] hover:bg-[#b89214] font-extrabold py-3 md:py-4 px-8 rounded-full transition-all duration-300 uppercase tracking-widest text-lg shadow-[0_0_15px_rgba(247,180,28,0.4)] hover:shadow-[0_0_25px_rgba(247,180,28,0.6)] ${(!turnstileToken || isSubmitting) ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-1'}`} >
                 {isSubmitting ? t('submitting') : t('submit')}
               </button>
 

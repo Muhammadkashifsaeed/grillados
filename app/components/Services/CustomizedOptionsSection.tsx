@@ -47,7 +47,7 @@ const CustomizedOptionsSection = () => {
           >
             <h2 
               className="inline-block whitespace-nowrap"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(25px, 3.9vw, 39px)', color: 'rgb(0,0,0)' }}
+              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(25px, 3.9vw, 39px)' }}
             >
               {t('heading')}
               {/* Divider (Full width of heading) */}
@@ -72,7 +72,7 @@ const CustomizedOptionsSection = () => {
                 {/* Feature Text */}
                 <p 
                   className="max-w-[280px] sm:max-w-[320px] lg:max-w-[360px]"
-                  style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
+                  style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px' }}
                 >
                   {t(featureKey)}
                 </p>
@@ -89,12 +89,12 @@ const CustomizedOptionsSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             {/* Button 1 */}
-            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white h-12 sm:h-13 px-2 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }} >
+            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white hover: hover: h-12 sm:h-13 px-2 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }} >
               {t('orderNow')}
             </Link>
 
             {/* Button 2 */}
-            <button className="text-black hover:text-white h-12 sm:h-13 px-2 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }} >
+            <button className="text-black hover:text-white hover: hover: h-12 sm:h-13 px-2 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }} >
               {t('learnMore')}
             </button>
           </motion.div>

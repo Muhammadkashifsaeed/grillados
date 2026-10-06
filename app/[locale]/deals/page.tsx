@@ -67,7 +67,7 @@ export default function DealsPage() {
                     alt={image.alt}
                     fill
                     priority={index === 0}
-                    className="object-cover"
+                    className="object-contain md:object-cover"
                     sizes="100vw"
                   />
                 </div>
@@ -76,12 +76,12 @@ export default function DealsPage() {
           </div>
 
           {/* Left Arrow */}
-          <button type="button" onClick={scrollPrev} className="text-black hover:text-white absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#FAC716] /80 backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20" aria-label="Previous image" >
+          <button type="button" onClick={scrollPrev} className="text-black hover:text-white hover: hover: absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#FAC716] /80 backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20" aria-label="Previous image" >
             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 -ml-0.5" />
           </button>
 
           {/* Right Arrow */}
-          <button type="button" onClick={scrollNext} className="text-black hover:text-white absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#FAC716] /80 backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20" aria-label="Next image" >
+          <button type="button" onClick={scrollNext} className="text-black hover:text-white hover: hover: absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#FAC716] /80 backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20" aria-label="Next image" >
             <ChevronRight className="w-5 h-5 md:w-6 md:h-6 -mr-0.5" />
           </button>
 
@@ -91,7 +91,7 @@ export default function DealsPage() {
               <button
                 key={idx}
                 onClick={() => emblaApi?.scrollTo(idx)}
-                className="w-3 h-3 rounded-full bg-white/40 hover:bg-[#FAC716] transition-colors shadow-lg"
+                className="text-black hover:text-white w-3 h-3 rounded-full bg-white/40 hover:bg-[#FAC716] transition-colors shadow-lg"
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}

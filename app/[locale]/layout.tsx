@@ -81,10 +81,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: "GRILLADO'S",
       images: [
         {
-          url: "/images/hero-bg-new.png",
-          width: 1200,
-          height: 630,
-          alt: "GRILLADO'S PREMIUM FAST FOOD SPREAD",
+          url: "/images/13332603_transparent.png",
+          width: 800,
+          height: 800,
+          alt: "GRILLADO'S LOGO",
         },
       ],
       locale: locale === 'fr' ? 'fr_CA' : 'en_CA',
@@ -94,7 +94,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: titleDefault,
       description: description,
-      images: ["/images/hero-bg-new.png"],
+      images: ["/images/13332603_transparent.png"],
     },
   };
 }

@@ -42,7 +42,7 @@ export default function FranchisingHero() {
           className="z-10 bg-[#FAC716] px-3 sm:px-5 py-1 sm:py-2 rounded-none shadow-lg border-2 border-white/20 inline-block transform -rotate-3 cursor-default"
         >
           <h1 
-            className="text-white text-center uppercase whitespace-normal sm:whitespace-nowrap drop-shadow-sm tracking-wide"
+            className="text-white text-center capitalize whitespace-normal sm:whitespace-nowrap drop-shadow-sm tracking-wide"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255, 255, 255)', fontSize: 'clamp(27px, 4.5vw, 45px)', lineHeight: 'clamp(39px, 6vw, 60px)' }}
           >
             {t('heroHeading')}

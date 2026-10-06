@@ -24,7 +24,7 @@ const CateringFAQSection = () => {
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 
-            className="uppercase tracking-wide"
+            className="capitalize tracking-wide"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(42px, 6.5vw, 65px)', color: 'rgb(0, 0, 0)' }}
           >
             {t('heading')}

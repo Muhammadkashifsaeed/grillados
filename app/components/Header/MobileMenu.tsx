@@ -102,11 +102,11 @@ export const MobileMenu = () => {
             )}
           </div>
           <div className="flex gap-4 items-center mt-2 pl-2">
-            <button onClick={() => switchLanguage('en')} className={`flex items-center justify-center transition-all duration-300 w-8 h-6 relative ${locale === 'en' ? 'scale-125 drop-shadow-[0_0_8px_rgba(247,180,28,0.6)]' : 'opacity-60 hover:opacity-100 hover:scale-110'}`}>
-              <Image src="/images/eng.png" alt="English" fill sizes="20vw" className="object-contain" />
+            <button onClick={() => switchLanguage('en')} className={`flex items-center justify-center transition-all duration-300 w-8 h-[22px] rounded-[3px] overflow-hidden border border-white/20 relative ${locale === 'en' ? 'shadow-[0_0_8px_rgba(255,255,255,0.4)] ring-1 ring-white/50 z-10' : 'opacity-90 hover:opacity-100 z-0'}`}>
+              <Image src="/images/eng.png" alt="English" fill sizes="20vw" className="object-cover" />
             </button>
-            <button onClick={() => switchLanguage('fr')} className={`flex items-center justify-center transition-all duration-300 w-8 h-6 relative ${locale === 'fr' ? 'scale-125 drop-shadow-[0_0_8px_rgba(247,180,28,0.6)]' : 'opacity-60 hover:opacity-100 hover:scale-110'}`}>
-              <Image src="/images/fre.png" alt="Français" fill sizes="20vw" className="object-contain" />
+            <button onClick={() => switchLanguage('fr')} className={`flex items-center justify-center transition-all duration-300 w-8 h-[22px] rounded-[3px] overflow-hidden border border-white/20 relative ${locale === 'fr' ? 'shadow-[0_0_8px_rgba(255,255,255,0.4)] ring-1 ring-white/50 z-10' : 'opacity-90 hover:opacity-100 z-0'}`}>
+              <Image src="/images/fre.png" alt="Français" fill sizes="20vw" className="object-cover" />
             </button>
           </div>
         </nav>

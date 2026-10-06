@@ -43,7 +43,7 @@ const AboutUsStory = () => {
               {t('storyHeading1')}
             </span>
             <span
-              className="flex flex-wrap items-center font-semibold mt-1 capitalize"
+              className="flex flex-wrap items-center w-full justify-between font-semibold mt-1 capitalize"
               style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)', fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(33px, 5vw, 50px)' }}
             >
               <span>{t('storyHeading2')}</span>
@@ -54,7 +54,7 @@ const AboutUsStory = () => {
                 }
                 .animate-float-burger { animation: float-burger 4s ease-in-out infinite; }
               `}</style>
-              <div className="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0 mt-2 sm:mt-0 ml-6 sm:ml-8 hidden md:block">
+              <div className="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0 mt-2 sm:mt-0 hidden md:block ml-auto">
                 <Image
                   src="/images/burger-shape-3.png"
                   alt="Burger Shape"

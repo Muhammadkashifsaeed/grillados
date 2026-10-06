@@ -8,7 +8,7 @@ const AboutUsProperty = () => {
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
         
         <h2 
-          className="uppercase mb-4"
+          className="capitalize mb-4"
           style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: 'clamp(34px, 5.6vw, 56px)', lineHeight: 'clamp(39px, 6vw, 60px)' }}
         >
           {t('propertyHeading')}

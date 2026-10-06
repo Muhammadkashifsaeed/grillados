@@ -119,7 +119,7 @@ const ReviewsSection = () => {
 
         <div className="text-center mb-8 md:mb-10">
           <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} 
-            className="uppercase tracking-wide mb-4"
+            className="capitalize tracking-wide mb-4"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 700, fontSize: 'clamp(24px, 4vw, 40px)', lineHeight: 'clamp(52px, 8vw, 80px)', color: 'rgb(250, 174, 64)' }}
           >
             {t('heading')}

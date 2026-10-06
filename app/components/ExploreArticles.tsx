@@ -373,7 +373,7 @@ export const ExploreArticles = () => {
               {/* Content */}
               <div className="p-6 md:p-8 flex flex-col flex-1">
                 
-                <Link href={`/blogs/${article.id}`} className="mb-4 text-white hover:text-[#FAC716] transition-colors duration-300 line-clamp-2" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px' }} >
+                <Link href="#" className="mb-4 text-white hover:text-[#FAC716] transition-colors duration-300 line-clamp-2 block" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px' }} >
                   {article.heading}
                 </Link>
 
@@ -394,12 +394,12 @@ export const ExploreArticles = () => {
                   </Link>
                 </div>
 
-                <div className="mt-auto pt-6 border-t border-gray-800 flex items-center justify-between">
-                  <Link href={`/blogs/${article.id}`} className="text-[#CBCBCB] hover:text-white font-bold tracking-wider uppercase text-sm transition-colors">
+                <div className="mt-auto pt-6 border-t border-gray-600 flex items-center justify-between">
+                  <Link href="#" className="text-[#CBCBCB] hover:text-white font-bold tracking-wider uppercase text-sm transition-colors">
                     {article.date}
                   </Link>
                   
-                  <Link href={`/blogs/${article.id}`} className="text-[#F2A93F] hover:text-white hover:bg-[#EB5250] px-2 py-1 -ml-2 rounded text-[16px] leading-4 font-semibold font-['Poppins',sans-serif] uppercase tracking-wider transition-all duration-300 w-max" >
+                  <Link href="#" className="text-[#F2A93F] hover:text-white hover:bg-[#EB5250] px-2 py-1 -ml-2 rounded text-[16px] leading-4 font-semibold font-['Poppins',sans-serif] uppercase tracking-wider transition-all duration-300 w-max cursor-pointer" >
                     {t('readMore')}
                   </Link>
                 </div>
@@ -412,7 +412,7 @@ export const ExploreArticles = () => {
         {/* {t('loadMore')} Button */}
         {visibleCount < articles.length && (
           <div className="mt-16 flex justify-center w-full">
-            <button type="button" onClick={handleLoadMore} className="text-black hover:text-white bg-[#FAC716] hover:bg-[#EB5250] font-medium font-['Ribeat',sans-serif] text-4 leading-4 py-4 px-10 rounded-none transition-all duration-300 uppercase tracking-widest shadow-lg hover:shadow-xl transform hover:-translate-y-1" >
+            <button type="button" onClick={handleLoadMore} className="text-black hover:text-white hover: hover: bg-[#FAC716] hover:bg-[#EB5250] font-medium font-['Ribeat',sans-serif] text-4 leading-4 py-4 px-10 rounded-none transition-all duration-300 capitalize tracking-widest shadow-lg hover:shadow-xl transform hover:-translate-y-1" >
               Load More
             </button>
           </div>

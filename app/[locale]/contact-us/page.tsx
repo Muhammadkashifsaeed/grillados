@@ -65,10 +65,10 @@ export default function ContactUsPage() {
         <div className="absolute inset-0 z-0"></div>
 
         {/* Heading */}
-        <div className="z-10 bg-[#FAC716] px-3 sm:px-5 py-1 sm:py-2 rounded-none shadow-lg border-2 border-white/20 inline-block transform -rotate-3 cursor-default">
+        <div className="text-white z-10 bg-[#FAC716] px-3 sm:px-5 py-1 sm:py-2 rounded-none shadow-lg border-2 border-white/20 inline-block transform -rotate-3 cursor-default">
           <h1 
-            className="uppercase tracking-wide text-center drop-shadow-sm"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(255, 255, 255)', fontSize: 'clamp(33px, 5.5vw, 55px)', lineHeight: 'clamp(39px, 6vw, 60px)' }}
+            className="capitalize tracking-wide text-center drop-shadow-sm"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, fontSize: 'clamp(33px, 5.5vw, 55px)', lineHeight: 'clamp(39px, 6vw, 60px)' }}
           >
             {t('title')}
           </h1>
@@ -80,8 +80,8 @@ export default function ContactUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
           
           <h2 
-            className="uppercase tracking-wide text-center mb-10"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(36px, 5.6vw, 56px)' }}
+            className="capitalize tracking-wide text-center mb-10"
+            style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(36px, 5.6vw, 56px)' }}
           >
             Find Us Here
           </h2>
@@ -114,8 +114,8 @@ export default function ContactUsPage() {
                 >
                 
                   <h3 
-                    className="uppercase mb-3 tracking-wide w-full"
-                    style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(35, 31, 30)', fontSize: '26px', lineHeight: '30px' }}
+                    className="capitalize mb-3 tracking-wide w-full"
+                    style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, fontSize: '26px', lineHeight: '30px' }}
                   >
                     {loc.city}
                   </h3>
@@ -130,7 +130,7 @@ export default function ContactUsPage() {
                     
                     <div className="flex items-center gap-4 justify-start">
                       <Phone className="w-6 h-6 text-[#FAC716] shrink-0" />
-                      <a href={`tel:${loc.phone.replace(/[^0-9+]/g, '')}`} className="text-black text-left font-bold text-lg sm:text-xl hover:text-[#FAC716] transition-colors">
+                      <a href={`tel:${loc.phone.replace(/[^0-9+]/g, '')}`} className="text-gray-700 text-left font-medium leading-relaxed text-base sm:text-lg">
                         {loc.phone}
                       </a>
                     </div>

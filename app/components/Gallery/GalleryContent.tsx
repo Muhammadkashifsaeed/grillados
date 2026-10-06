@@ -166,7 +166,7 @@ export default function GalleryContent() {
             {/* Action Buttons */}
             <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 mt-4 w-full">
               {visibleVideos < gridVideos.length && (
-                <button onClick={handleLoadMore} className="text-black hover:text-white px-4 py-3 sm:px-8 sm:py-3 rounded-full font-bold text-xs sm:text-lg bg-[#FAC716] hover:bg-gray-800 transition-all duration-300 shadow-md flex-1 sm:flex-none text-center whitespace-nowrap" >
+                <button onClick={handleLoadMore} className="text-black hover:text-white hover: hover: px-4 py-3 sm:px-8 sm:py-3 rounded-full font-bold text-xs sm:text-lg bg-[#FAC716] hover:bg-gray-800 transition-all duration-300 shadow-md flex-1 sm:flex-none text-center whitespace-nowrap" >
                   Load More
                 </button>
               )}

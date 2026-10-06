@@ -13,13 +13,13 @@ export default function FranchisingContent() {
         
         {/* Heading */}
         <h2 
-          className="text-center uppercase tracking-wide mb-4 drop-shadow-sm"
+          className="text-center capitalize tracking-wide mb-4 drop-shadow-sm"
           style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(23, 23, 23)', fontSize: 'clamp(22px, 3.2vw, 32px)', lineHeight: 'clamp(26px, 4vw, 40px)' }}
         >
           {t('whatWeDo')}
         </h2>
         <h3 
-          className="text-center uppercase tracking-wide mb-4 drop-shadow-sm"
+          className="text-center capitalize tracking-wide mb-4 drop-shadow-sm"
           style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(250, 199, 22)', fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(39px, 6vw, 60px)' }}
         >
           {t('whatWeDoSub')}

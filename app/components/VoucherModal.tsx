@@ -76,7 +76,7 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
 
             {/* Header */}
             <div className="p-8 sm:p-10 pb-6 text-center relative z-10 border-b border-white/5 bg-gradient-to-b from-white/5 to-transparent">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-['Outfit',sans-serif] uppercase leading-[1.1] mb-3 tracking-tight drop-shadow-md">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-['Outfit',sans-serif] capitalize leading-[1.1] mb-3 tracking-tight drop-shadow-md">
                 {t('getUpToText')} <span className="text-[#FEC602]">{t('discountText')}</span><br />{t('onEntireMenu')}
               </h2>
               <p className="text-white/80 font-medium text-sm sm:text-base">
@@ -156,7 +156,7 @@ const VoucherModal: React.FC<VoucherModalProps> = ({ isOpen, onClose }) => {
                 </label>
               </div>
 
-              <button type="submit" className="text-black hover:text-white w-full bg-[#FAC716] hover:bg-red-500 font-extrabold text-base sm:text-lg py-4 sm:py-5 rounded-xl shadow-[0_10px_20px_rgba(229,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(229,0,0,0.5)] transition-all duration-300 active:scale-95 mt-2 border-2 border-[#E50000] hover:border-red-400" >
+              <button type="submit" className="text-black hover:text-white hover: hover: w-full bg-[#FAC716] hover:bg-red-500 font-extrabold text-base sm:text-lg py-4 sm:py-5 rounded-xl shadow-[0_10px_20px_rgba(229,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(229,0,0,0.5)] transition-all duration-300 active:scale-95 mt-2 border-2 border-[#E50000] hover:border-red-400" >
                 {t('getYourVoucher')}
               </button>
             </form>

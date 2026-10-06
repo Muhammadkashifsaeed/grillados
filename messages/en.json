@@ -5,7 +5,7 @@
   "Header": {
     "menu": "Menu",
     "locations": "Locations",
-    "orderOnline": "ONLINE ORDER",
+    "orderOnline": "Online Order",
     "deals": "Deals",
     "services": "Services",
     "cateringServices": "Catering Services",
@@ -15,7 +15,7 @@
     "blogs": "Blogs",
     "aboutUs": "About Us",
     "contactUs": "Contact Us",
-    "orderNow": "ORDER NOW"
+    "orderNow": "Order Now"
   },
   "Hero": {
     "welcome": "Welcome to Grillado's",
@@ -36,7 +36,7 @@
     "learnMore": "Learn More"
   },
   "BeefLambSpecials": {
-    "heading": "GRILLADO'S BEEF & LAMB SPECIALS",
+    "heading": "Grillado's Beef & Lamb Specials",
     "description": "Grillado's Beef & Lamb Specials offer a mouthwatering selection of tender, perfectly seasoned cuts, expertly grilled to perfection. From juicy steaks to succulent lamb chops, each dish is crafted with high-quality ingredients and bold flavors, ensuring a memorable dining experience for meat lovers.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
@@ -54,7 +54,7 @@
     "learnMore": "Learn More"
   },
   "Appetizers": {
-    "heading": "APPETIZERS",
+    "heading": "Appetizers",
     "description": "Grillado's appetizers are flavorful, grilled bites that showcase a variety of ingredients, often skewered for easy enjoyment. These appetizers typically feature marinated vegetables, meats, or seafood, cooked to perfection over an open flame, enhancing their natural flavors with a smoky char.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
@@ -73,8 +73,8 @@
     "desc1": "4 whole chickens, 2 small side platters of your choice,\n10 Portuguese breads or garlic breads",
     "offer2": "Offer 2",
     "title2": "$549.99 Tray for 25 people",
-    "desc2": "8 whole chickens, 25 chicken wings,\n3 large platters of side dishes of your choice",
-    "orderNow": "ORDER NOW"
+    "desc2": "8 Whole Chickens, 25 Chicken Wings,\n3 Large Platters Of Side Dishes Of Your Choice",
+    "orderNow": "Order Now"
   },
   "CateringIntroduction": {
     "titleColored": "Catering By Grillados",
@@ -91,9 +91,9 @@
     "feature2": "Serving stands and food warming equipment are available.",
     "feature3": "Add extra bottles of sauce for an additional charge.",
     "feature4": "Restaurant and off-site Catering  available",
-    "orderNow": "ORDER NOW",
-    "learnMore": "LEARN MORE",
-    "ourMenu": "OUR MENU"
+    "orderNow": "Order Now",
+    "learnMore": "Learn More",
+    "ourMenu": "Our Menu"
   },
   "CateringReviews": {
     "heading": "Reviews",
@@ -102,46 +102,46 @@
     "r1_date": "Jan 18, 2026",
     "r1_review": "Harprith provided amazing services . Great food",
     "r1_name": "Ali Z",
-    "r1_initials": "AZ",
+    "r1_initials": "Az",
     "r2_rating": "5 ★★★★★",
     "r2_date": "Jan 18, 2026",
     "r2_review": "Amazing",
-    "r2_name": "RAB I",
-    "r2_initials": "RI",
+    "r2_name": "Rab I",
+    "r2_initials": "Ri",
     "r3_rating": "5 ★★★★★",
     "r3_date": "Jan 16, 2026",
     "r3_review": "",
     "r3_name": "Anès Grine",
-    "r3_initials": "AG",
+    "r3_initials": "Ag",
     "r4_rating": "5 ★★★★★",
     "r4_date": "Jan 16, 2026",
     "r4_review": "Good",
     "r4_name": "Naz H",
-    "r4_initials": "NH",
+    "r4_initials": "Nh",
     "r5_rating": "5 ★★★★★",
     "r5_date": "Jan 15, 2026",
     "r5_review": "",
     "r5_name": "Rushi Jagada",
-    "r5_initials": "RJ",
+    "r5_initials": "Rj",
     "r6_rating": "5 ★★★★★",
     "r6_date": "Jan 14, 2026",
     "r6_review": "",
     "r6_name": "Usama Ismail",
-    "r6_initials": "UI",
+    "r6_initials": "Ui",
     "r7_rating": "5 ★★★★★",
     "r7_date": "Jan 14, 2026",
     "r7_review": "",
     "r7_name": "Mohamed Nagy",
-    "r7_initials": "MN",
+    "r7_initials": "Mn",
     "r8_rating": "5 ★★★★★",
     "r8_date": "Jan 14, 2026",
     "r8_review": "",
     "r8_name": "M S",
-    "r8_initials": "MS"
+    "r8_initials": "Ms"
   },
   "BookEventCTA": {
     "smallTitle": "Reserve Today",
-    "mainTitle": "CHECK YOUR DATE",
+    "mainTitle": "Check Your Date",
     "p1": "At Grillado, we believe that healthy food is essential for good health.",
     "p2": "Our wellness-focused menu is designed to fit your health-conscious lifestyle.",
     "p3": "Grillado chicken is grilled to perfection, making it the smartest choice for a balanced life.",
@@ -204,12 +204,12 @@
     "mississauga": "Mississauga",
     "termsAndConditions": "Terms and Conditions",
     "privacyPolicy": "Privacy Policy",
-    "copyright": "© 2026 GRILLADO'S GRILLED BEEF BACK RIBS & CHICKEN. ALL RIGHTS RESERVED",
-    "orderNow": "ORDER NOW"
+    "copyright": "© 2026 Grillado's Grilled Beef Back Ribs & Chicken. All Rights Reserved",
+    "orderNow": "Order Now"
   },
   "SpecialtyDrinks": {
-    "heading": "GRILLADO'S",
-    "subheading": "SPECIALTY DRINKS",
+    "heading": "Grillado's",
+    "subheading": "Specialty Drinks",
     "items": {
       "lycheeDelight": "Lychee Delight",
       "pinaColada": "Pina Colada",
@@ -246,7 +246,7 @@
     "whatWeDo": "What we will do",
     "whatWeDoSub": "To assure your success",
     "p1_1": "Grillado’s™ Head Office will ensure the success of each location by offering our franchisees a ",
-    "p1_highlight": "turn-key solution.",
+    "p1_highlight": "Turn-key Solution.",
     "p2_1": "Our restaurants are built on a reliable, proven system designed to ensure the quality of our food, brand image, and performance of every Grillado’s™ location. Our operations are simple to manage and require no prior restaurant experience—only a passion for delivering a great dining experience. We provide field consultants, regional representatives, and a comprehensive training program to ensure our franchisees and restaurant managers are capable of running daily operations at every Grillado’s™. Our support team will equip you with the manuals, guidance, and training necessary to ensure total competency. ",
     "p2_highlight": "Your success is our success.",
     "p3": "We are committed to the continuous growth and expansion of the Grillado’s™ brand. Our team remains consistently focused on innovative methods to promote and elevate the Grillado’s™ name.",
@@ -254,35 +254,35 @@
     "sponsorsHeadingYellow": "Sponsorship",
     "joinTeamHeading": "Join Our Team",
     "step1_num": "Step 1 -",
-    "step1_title": "SUBMIT THE APPLICATION",
+    "step1_title": "Submit The Application",
     "step1_desc": "Our franchise application form can be found at www.grillados.ca. The information provided in our application form will be used exclusively by Grillado's Franchising Inc. for the purpose of assessing the applicant's eligibility as a future franchisee.",
     "step2_num": "Step 2 -",
-    "step2_title": "INTERVIEW",
+    "step2_title": "Interview",
     "step2_desc": "Once the application has been received and reviewed, you will be informed of our interest and an interview will be scheduled.",
     "step3_num": "Step 3 -",
     "step3_title": "Financial Approval",
     "step3_desc": "We will require a statement of net worth.",
     "step4_num": "Step 4 -",
-    "step4_title": "FDD",
+    "step4_title": "Fdd",
     "step4_desc": "A Franchise Information Document (FID) will present essential information regarding the proposed franchise opportunity. The FID will contain all the details relating to Grillado's Franchising Inc.",
     "step5_num": "Step 5 -",
     "step5_title": "Site Selection",
     "step5_desc": "Grillado's team will assist in site selection to find the best options for both the Franchisor and Franchisee.",
     "step6_num": "Step 6 -",
-    "step6_title": "CONSTRUCTION",
+    "step6_title": "Construction",
     "step6_desc": "We will design and build your store.",
     "step7_num": "Step 7 -",
-    "step7_title": "TRAINING",
+    "step7_title": "Training",
     "step7_desc": "We will provide the franchisee with 4 to 6 weeks of training before opening. With the exception of travel expenses, the cost of the training is fully covered by the franchisor.",
     "step8_num": "Step 8 -",
-    "step8_title": "OPENING",
+    "step8_title": "Opening",
     "step8_desc": "The Grillado's™ team will provide you with full support during the opening of your new store."
   },
   "FranchiseForm": {
     "formHeading": "Your journey as a Grillado's franchisee starts here!",
-    "section1": "Personal Information",
+    "section1": "Personal Info",
     "section2": "Preferred Grillado's Location",
-    "section3": "Additional Information",
+    "section3": "Additional Info",
     "fullName": "Full Name*",
     "email": "Email Address*",
     "phone": "Phone Number*",
@@ -350,14 +350,14 @@
     "a14": "All equipment and supplies are purchased from the franchisor’s trusted and approved vendors."
   },
   "GarnishedRice": {
-    "heading": "LOADED RICE",
+    "heading": "Loaded Rice",
     "items": {
       "chicken": "Chicken",
-      "chickenDesc": "RICE, PERI CHICKEN, RED ONION, RED PEPPERS, SWEETCORN, LETTUCE, JALAPENOS, HOMEMADE PERISAUCE AND HOMEMADE GARLIC SAUCE.",
+      "chickenDesc": "Rice, Peri Chicken, Red Onion, Red Peppers, Sweetcorn, Lettuce, Jalapenos, Homemade Perisauce And Homemade Garlic Sauce.",
       "vegetarianSpecial": "Vegetarian Special",
-      "vegetarianSpecialDesc": "RICE, VEGGIE PATTY, RED ONION, RED PEPPERS, SWEETCORN, LETTUCE, JALAPENOS, HOMEMADE PERI SAUCE, HOMEMADE GARLIC SAUCE",
+      "vegetarianSpecialDesc": "Rice, Veggie Patty, Red Onion, Red Peppers, Sweetcorn, Lettuce, Jalapenos, Homemade Peri Sauce, Homemade Garlic Sauce",
       "houseSpecial": "House Special",
-      "houseSpecialDesc": "RICE, SMASHED BEEF, RED ONION, PEPPERS, SWEETCORN, LETTUCE, TOMATO, JALAPENOS, GHERKING, PERI SAUCE AND HOMEMADE GRILIC SAUCE"
+      "houseSpecialDesc": "Rice, Smashed Beef, Red Onion, Peppers, Sweetcorn, Lettuce, Tomato, Jalapenos, Gherking, Peri Sauce And Homemade Grilic Sauce"
     },
     "sauces": {
       "lemonHerbs": "Lemon & Herbs",
@@ -373,9 +373,9 @@
   "LocationsPage": {
     "availableLocations": "Available Locations",
     "comingSoonLocations": "Upcoming Locations",
-    "ontario": "ONTARIO",
-    "alberta": "ALBERTA",
-    "britishColumbia": "BRITISH COLUMBIA"
+    "ontario": "Ontario",
+    "alberta": "Alberta",
+    "britishColumbia": "British Columbia"
   },
   "DealsNewsletter": {
     "headingStart": "Stay on top of all our ",
@@ -383,7 +383,7 @@
     "headingEnd": " News,",
     "headingEnd2": "Subscribe to our newsletter",
     "descriptionLine1": "Be the first to know about Grillado’s news and events,",
-    "descriptionLine2": "subscribe to our newsletter and stay connected!",
+    "descriptionLine2": "Subscribe To Our Newsletter And Stay Connected!",
     "firstNamePlaceholder": "First Name*",
     "emailPlaceholder": "Email*",
     "subscribeBtn": "Subscribe",
@@ -434,19 +434,19 @@
   },
   "ContactCatering": {
     "heading": "Get in touch",
-    "contactInfo": "Contact Information",
+    "contactInfo": "Contact Info",
     "firstName": "First Name",
     "lastName": "Last Name",
     "phoneNumber": "Phone Number*",
     "email": "Email Address*",
-    "eventInfo": "Event Information",
+    "eventInfo": "Event Info",
     "guests": "Number of Guests*",
-    "guestsPlaceholder": "10 to 10,000",
+    "guestsPlaceholder": "10 To 10,000",
     "deliveryDate": "Delivery Date*",
     "deliveryTime": "Delivery Time*",
     "deliveryNotes": "Delivery Notes",
     "deliveryNotesPlaceholder": "Write delivery instructions...",
-    "deliveryInfo": "Delivery Information",
+    "deliveryInfo": "Delivery Info",
     "searchAddress": "Search Address",
     "searchAddressPlaceholder": "Search address",
     "address": "Address*",
@@ -454,10 +454,10 @@
     "postalCode": "Postal Code*",
     "nearbyLandmark": "Nearby Location on popup*",
     "selectLocation": "Select Nearby Location",
-    "laval": "LAVAL",
-    "milton": "MILTON",
-    "cambridge": "CAMBRIDGE",
-    "mississauga": "MISSISSAUGA",
+    "laval": "Laval",
+    "milton": "Milton",
+    "cambridge": "Cambridge",
+    "mississauga": "Mississauga",
     "consent": "I consent to receive SMS notifications, alerts, and occasional marketing messages. Message frequency varies; standard rates apply. Text HELP for support or STOP to unsubscribe.",
     "processing": "Processing...",
     "success": "Order Placed Successfully!",
@@ -466,7 +466,7 @@
     "terms": "Terms & Conditions"
   },
   "BirthdayCatering": {
-    "heading": "birthday!",
+    "heading": "Birthday!",
     "description": "With the endless choices in the Grillado’s menu, no one will be left behind in this sea of culinary delights. Let Grillado’s make your birthday – a delicious one.",
     "contactUs": "Contact us"
   },
@@ -488,9 +488,9 @@
   },
   "ServiceReviews": {
     "heading": "Reviews",
-    "good": "GOOD",
+    "good": "Good",
     "basedOn": "Based on 1,779 reviews",
-    "monthsAgo": "months ago",
+    "monthsAgo": "Months Ago",
     "ratingOnly": "The user only left a rating.",
     "review1": "Harprith provided amazing services. Great food",
     "review2": "GOOd",
@@ -502,8 +502,8 @@
     "smartHeading1": "Being ",
     "smartHeading2": "Smart!",
     "smartDesc": "At <span className=\"text-[#FBC18A] font-bold\">Grillado’s</span>, we believe healthy food is vital for good health. Our health-conscious menu is designed to cater to your health-conscious lifestyle. <span className=\"text-[#FBC18A] font-bold\">Grillado’s</span> chicken is grilled to perfection, making it the smarter choice for a balanced life.",
-    "storyHeading1": "it all started",
-    "storyHeading2": "with a craving...",
+    "storyHeading1": "It All Started",
+    "storyHeading2": "With A Craving...",
     "storyDesc1": "Grillado’s™ is a casual dining restaurant that focuses on grilling the very best Portuguese chicken with a South African twist. That twist is our variety of world famous sauces.",
     "storyDesc2": "Located in the heart of Montreal, it has quickly become known for its fun and engaging atmosphere, as well as its multitude of flavours that keep customers happy and coming back for more…",
     "votedText1": "<span>Grillado’s™</span> was launched in Montreal back in 2015 and was voted the",
@@ -543,14 +543,14 @@
     "success": "Success!",
     "privacy": "Privacy",
     "help": "Help",
-    "submit": "SUBMIT"
+    "submit": "Submit"
   },
   "Menu": {
-    "appetizers": "APPETIZERS",
+    "appetizers": "Appetizers",
     "appetizersMenu": [
       {
         "name": "Portuguese Bun",
-        "note": "SERVED WITH BUTTER"
+        "note": "Served With Butter"
       },
       {
         "name": "Pita Bread"
@@ -563,7 +563,7 @@
       },
       {
         "name": "5 Mozzarella Cheese Sticks",
-        "note": "WITH MARINARA SAUCE"
+        "note": "With Marinara Sauce"
       },
       {
         "name": "5 Whole Chicken Wings"
@@ -576,7 +576,7 @@
       },
       {
         "name": "Grilled Chicken Nachos",
-        "note": "ADD EXTRA CHICKEN FOR 4.99"
+        "note": "Add Extra Chicken For 4.99"
       }
     ],
     "chickenSpecials": "GRILLADO'S CHICKEN<br />SPECIALS",
@@ -584,15 +584,15 @@
       {
         "name": "Grilled Espetada",
         "description": "Tender marinated chicken with fresh peppers, served on a skewer with 2 regular side dishes.",
-        "note": "TENDER MARINATED CHICKEN WITH FRESH PEPPERS, SERVED ON A SKEWER WITH 2 REGULAR SIDES"
+        "note": "Tender Marinated Chicken With Fresh Peppers, Served On A Skewer With 2 Regular Sides"
       },
       {
         "name": "Whole Organic Grilled Chicken",
-        "note": "WITH 1 REGULAR SIDE"
+        "note": "With 1 Regular Side"
       },
       {
         "name": "Authentic Montreal Poutine",
-        "note": "ADD GRILLED CHICKEN FOR 5.49"
+        "note": "Add Grilled Chicken For 5.49"
       },
       {
         "name": "Fiesta",
@@ -600,34 +600,34 @@
       },
       {
         "name": "Veggie Burger",
-        "note": "WITH 1 REGULAR SIDE DISH (ADD AN EXTRA PATTY FOR 4.99)"
+        "note": "With 1 Regular Side Dish (Add An Extra Patty For 4.99)"
       },
       {
         "name": "Grilled Chicken Burger",
-        "note": "WITH 1 REGULAR SIDE (ADD EXTRA PATTY FOR 4.99)"
+        "note": "With 1 Regular Side (Add Extra Patty For 4.99)"
       },
       {
         "name": "Garlic Grilled Chicken Sandwich",
-        "note": "WITH 1 REGULAR SIDE DISH (ADD AN EXTRA PATTY FOR 4.99)"
+        "note": "With 1 Regular Side Dish (Add An Extra Patty For 4.99)"
       },
       {
         "name": "Tandoori Sizzler",
-        "note": "8 PIECES OF CHICKEN WITH TANDOORI SPICES ON SIZZLER"
+        "note": "8 Pieces Of Chicken With Tandoori Spices On Sizzler"
       },
       {
         "name": "Saji Balochi Chicken",
-        "note": "PRE-ORDER ONLY WITH 2 REGULAR SIDES AND 2 PITA BREADS OR 2 GARLIC BREADS"
+        "note": "Pre-order Only With 2 Regular Sides And 2 Pita Breads Or 2 Garlic Breads"
       }
     ],
     "comboDePoulet": "GRILLADO’S GRILLED<br />CHICKEN COMBO",
     "comboDePouletMenu": [
       {
         "name": "¼ Grilled Chicken Leg",
-        "note": "(LEG + THIGH)"
+        "note": "(Leg + Thigh)"
       },
       {
         "name": "¼ Grilled Chicken Breast",
-        "note": "(BREAST + WING)"
+        "note": "(Breast + Wing)"
       },
       {
         "name": "6 Whole Chicken Wings"
@@ -637,7 +637,7 @@
       },
       {
         "name": "Boneless Grilled Chicken Breast",
-        "note": "(NEW ITEM)"
+        "note": "(New Item)"
       },
       {
         "name": "Double Legs"
@@ -651,30 +651,30 @@
     "beefLambSpecialsMenu": [
       {
         "name": "Beef Back Ribs",
-        "note": "BEEF RIBS (3 BONES), 1 SIDE, 1 PORTUGUESE BUN OR 1 GARLIC BREAD",
+        "note": "Beef Ribs (3 Bones), 1 Side, 1 Portuguese Bun Or 1 Garlic Bread",
         "price": "44.99"
       },
       {
         "name": "Lamb Chops",
-        "note": "4 FRENCH CUT LAMBCHOPS SERVED WITH 1 REGULAR SIDE AND 1 GARLIC BREAD",
+        "note": "4 French Cut Lambchops Served With 1 Regular Side And 1 Garlic Bread",
         "price": "36.99"
       },
       {
         "name": "12 OZ Rib Eye Steak",
-        "note": "AAA RIB EYE STEAK SERVED WITH 1 REGULAR SIDE AND GARLIC BREAD"
+        "note": "Aaa Rib Eye Steak Served With 1 Regular Side And Garlic Bread"
       },
       {
         "name": "12 OZ Striploin Steak",
-        "note": "AAA STRIPLOIN STEAK SERVED WITH 1 REGULAR SIDE & GARLIC BREAD"
+        "note": "Aaa Striploin Steak Served With 1 Regular Side & Garlic Bread"
       },
       {
         "name": "Grillado’s Beef Burger",
-        "note": "WITH 1 REGULAR SIDE (ADD EXTRA PATTY 4.99)",
+        "note": "With 1 Regular Side (Add Extra Patty 4.99)",
         "price": "17.99"
       },
       {
         "name": "Full Beef Back Ribs Rack",
-        "note": "7 PRIME BEEF BACK RIBS",
+        "note": "7 Prime Beef Back Ribs",
         "price": "94.99"
       }
     ],
@@ -682,31 +682,31 @@
     "plateauxMenu": [
       {
         "name": "Grilled Chicken Wings Platter",
-        "note": "15 WHOLE CHICKEN WINGS, 2 REGULAR SIDES, 2 GARLIC BREADS OR 3 SMALL PORTUGUESE BUNS"
+        "note": "15 Whole Chicken Wings, 2 Regular Sides, 2 Garlic Breads Or 3 Small Portuguese Buns"
       },
       {
         "name": "Chicken Platter",
-        "note": "2 WHOLE ORGANIC GRILLED CHICKENS, 2 LARGE SIDES, 2 GARLIC BREADS OR 3 SMALL PORTUGUESE BUNS"
+        "note": "2 Whole Organic Grilled Chickens, 2 Large Sides, 2 Garlic Breads Or 3 Small Portuguese Buns"
       },
       {
         "name": "Beef Platter",
-        "note": "1 FULL RACK OF PREMIUM BEEF BACK RIBS, 2 LARGE SIDES, 2 GARLIC BREADS OR 3 SMALL PORTUGUESE BUNS"
+        "note": "1 Full Rack Of Premium Beef Back Ribs, 2 Large Sides, 2 Garlic Breads Or 3 Small Portuguese Buns"
       },
       {
         "name": "Signature Platter",
-        "note": "5 MOZZARELLA CHEESE STICKS, 1 WHOLE ORGANIC GRILLED CHICKEN, 10 WHOLE CHICKEN WINGS, 10 MINI BEEF KEBABS, 2 GRILLED ESPETADA SKEWERS, 3 LARGE SIDES, 3 GARLIC BREADS OR 4 SMALL PORTUGUESE BUNS"
+        "note": "5 Mozzarella Cheese Sticks, 1 Whole Organic Grilled Chicken, 10 Whole Chicken Wings, 10 Mini Beef Kebabs, 2 Grilled Espetada Skewers, 3 Large Sides, 3 Garlic Breads Or 4 Small Portuguese Buns"
       },
       {
         "name": "Mixed Platter",
-        "note": "1 WHOLE ORGANIC GRILLED CHICKEN, 1 FULL RACK OF PREMIUM BEEF BACK RIBS, 3 LARGE SIDES, 3 GARLIC BREADS OR 4 SMALL PORTUGUESE BUNS"
+        "note": "1 Whole Organic Grilled Chicken, 1 Full Rack Of Premium Beef Back Ribs, 3 Large Sides, 3 Garlic Breads Or 4 Small Portuguese Buns"
       }
     ],
-    "sandwichWrapsPita": "SANDWICH, WRAPS & PITA",
+    "sandwichWrapsPita": "Sandwich, Wraps & Pita",
     "chicken": "Chicken",
     "vegetarian": "Vegetarian",
-    "combo": "COMBO",
-    "sideAndPop": "(1 SIDE + POP)",
-    "salads": "SALADS",
+    "combo": "Combo",
+    "sideAndPop": "(1 Side + Pop)",
+    "salads": "Salads",
     "saladsMenu": [
       {
         "name": "Greek Salad"
@@ -719,8 +719,8 @@
       }
     ],
     "saladsLargeAdd": "Salads LARGE 9.99 - ADD",
-    "grilledChickenPrice": "GRILLED CHICKEN 5.99",
-    "accompagnements": "SIDES",
+    "grilledChickenPrice": "Grilled Chicken 5.99",
+    "accompagnements": "Sides",
     "accompagnementsMenu": [
       {
         "name": "Peri Fries"
@@ -747,11 +747,11 @@
         "name": "Grilled Corn"
       }
     ],
-    "seasonal": "SEASONAL",
+    "seasonal": "Seasonal",
     "sidesSizes": "Sides Large 8.99 & Sharable 12.99"
   },
   "Voucher": {
-    "getUpTo": "GET UP TO 20% OFF",
+    "getUpTo": "Get Up To 20% Off",
     "onEntireMenu": "On The Entire Menu.",
     "clickToGet": "Click on 'Get your Voucher Now' and enjoy up to 20% off at all Grillados branches across Canada!",
     "getVoucherNow": "Get your Voucher Now",
@@ -764,11 +764,11 @@
     "iAgree": "I agree to receive SMS notifications and marketing from Grillado's. Msg & data rates may apply. Reply STOP to unsubscribe, HELP for help.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "getYourVoucher": "GET YOUR VOUCHER",
+    "getYourVoucher": "Get Your Voucher",
     "alertAgree": "Please agree to the terms to continue.",
     "alertSent": "Voucher sent! Check your email/SMS.",
-    "getUpToText": "GET UP TO",
-    "discountText": "20% OFF"
+    "getUpToText": "Get Up To",
+    "discountText": "20% Off"
   },
   "Blog": {
     "exploreArticles": "Explore Articles",
@@ -783,17 +783,17 @@
     "title": "Crazy Lunch Deals",
     "subtitle": "Check out this week’s incredible treats",
     "contactUs": "Contact Us",
-    "deal1": "1/4 thigh or breast with fries or rice for",
+    "deal1": "1/4 Thigh Or Breast With Fries Or Rice For",
     "deal2": "Grilled Chicken Poutine",
     "deal3": "Monday to Friday",
-    "deal4": "5 whole chicken wings",
+    "deal4": "5 Whole Chicken Wings",
     "deal5": "Grilled chicken with Greek salad or spring salad",
     "deal6": "Get 10% off for LA Fitness members",
     "deal6Desc": "Grillado's offers a 10% discount to all LA Fitness members. Please present your gym membership card at the counter."
   },
   "ServicesHero": {
     "titlePart1": "We serve on your",
-    "titlePart2": "special occasions"
+    "titlePart2": "Special Occasions"
   },
   "Terms": {
     "title": "Legal Information",
@@ -825,8 +825,8 @@
     "title": "Contact Us"
   },
   "SocialTree": {
-    "orderNow": "ORDER NOW",
-    "website": "WEBSITE",
+    "orderNow": "Order Now",
+    "website": "Website",
     "getInTouch": "Get in touch"
   },
   "Countries": {
@@ -840,7 +840,7 @@
     "es": "Spain",
     "in": "India",
     "pk": "Pakistan",
-    "ae": "UAE",
+    "ae": "Uae",
     "sa": "Saudi Arabia",
     "cn": "China",
     "jp": "Japan",

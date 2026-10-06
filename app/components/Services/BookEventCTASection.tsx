@@ -41,7 +41,7 @@ const BookEventCTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="uppercase tracking-wide"
+          className="capitalize tracking-wide"
           style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(30px, 5vw, 50px)', lineHeight: 'clamp(42px, 6.5vw, 65px)', color: 'rgb(255, 255, 255)' }}
         >
           {t('mainTitle')}

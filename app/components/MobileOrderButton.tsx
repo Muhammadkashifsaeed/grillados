@@ -15,7 +15,7 @@ export const MobileOrderButton = () => {
     >
       <ShoppingBag className="w-4 h-4 md:w-5 md:h-5 mb-2 md:mb-3 drop-shadow-md shrink-0" />
       <span 
-        className="tracking-widest text-xs md:text-sm drop-shadow-md whitespace-nowrap"
+        className="tracking-widest text-xs md:text-sm drop-shadow-md whitespace-nowrap uppercase"
         style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
       >
         {t('orderNow') || 'ORDER NOW'}

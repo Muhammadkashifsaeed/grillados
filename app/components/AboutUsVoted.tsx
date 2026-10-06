@@ -14,7 +14,7 @@ const AboutUsVoted = () => {
       <motion.div 
         animate={{ y: [0, -15, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-16 h-16 sm:w-24 sm:h-24 opacity-80 pointer-events-none hidden md:block"
+        className="absolute left-[10%] top-1/2 -translate-y-1/2 w-16 h-16 sm:w-24 sm:h-24 opacity-80 pointer-events-none hidden md:block"
       >
         <Image 
           src="/images/was.png" 
@@ -35,7 +35,7 @@ const AboutUsVoted = () => {
         </p>
 
         <h2 
-          className="font-semibold uppercase tracking-wide mb-3 drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)] whitespace-normal sm:whitespace-nowrap text-xl sm:text-7 leading-snug sm:leading-9 break-words text-center"
+          className="font-semibold capitalize tracking-wide mb-3 drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)] whitespace-normal sm:whitespace-nowrap text-xl sm:text-7 leading-snug sm:leading-9 break-words text-center"
           style={{ fontFamily: "'Ribeat', sans-serif", color: 'rgb(250, 199, 22)' }}
         >
           {t('votedText2')}

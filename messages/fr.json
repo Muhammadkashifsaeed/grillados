@@ -5,7 +5,7 @@
   "Header": {
     "menu": "Menu",
     "locations": "Emplacements",
-    "orderOnline": "COMMANDE EN LIGNE",
+    "orderOnline": "Commande En Ligne",
     "deals": "Offres",
     "services": "Services",
     "cateringServices": "Services traiteur",
@@ -15,7 +15,7 @@
     "blogs": "Blogs",
     "aboutUs": "À propos de nous",
     "contactUs": "Nous contacter",
-    "orderNow": "COMMANDER"
+    "orderNow": "Commander"
   },
   "Hero": {
     "welcome": "Bienvenue chez Grillado's",
@@ -36,7 +36,7 @@
     "learnMore": "En Savoir Plus"
   },
   "BeefLambSpecials": {
-    "heading": "SPÉCIALITÉS DE BOEUF ET AGNEAU GRILLADO'S",
+    "heading": "Spécialités De Boeuf Et Agneau Grillado's",
     "description": "Les spécialités de bœuf et d'agneau de Grillado's offrent une sélection appétissante de coupes tendres et parfaitement assaisonnées, habilement grillées à la perfection. Des steaks juteux aux succulentes côtelettes d'agneau, chaque plat est préparé avec des ingrédients de haute qualité et des saveurs audacieuses, garantissant une expérience culinaire mémorable pour les amateurs de viande.",
     "orderNow": "Commander",
     "learnMore": "En savoir plus"
@@ -54,7 +54,7 @@
     "learnMore": "En savoir plus"
   },
   "Appetizers": {
-    "heading": "ENTRÉES",
+    "heading": "Entrées",
     "description": "Les entrées de Grillado's sont des bouchées grillées et savoureuses qui mettent en valeur une variété d'ingrédients, souvent en brochettes pour un plaisir facile. Ces entrées comprennent généralement des légumes marinés, des viandes ou des fruits de mer, cuits à la perfection sur une flamme nue, rehaussant leurs saveurs naturelles avec une saveur fumée.",
     "orderNow": "Commander",
     "learnMore": "En savoir plus"
@@ -70,11 +70,11 @@
   "CateringOffers": {
     "offer1": "Offre 1",
     "title1": "Plateau à 219,99 $ pour 10 personnes",
-    "desc1": "4 poulets entiers, 2 petits plateaux d'accompagnements au choix,\n10 pains portugais ou pains à l'ail",
+    "desc1": "4 Poulets Entiers, 2 Petits Plateaux D'accompagnements Au Choix,\n10 Pains Portugais Ou Pains à L'ail",
     "offer2": "Offre 2",
     "title2": "Plateau à 549,99 $ pour 25 personnes",
-    "desc2": "8 poulets entiers, 25 ailes de poulet,\n3 grands plateaux d'accompagnements au choix",
-    "orderNow": "COMMANDER"
+    "desc2": "8 Poulets Entiers, 25 Ailes De Poulet,\n3 Grands Plateaux D'accompagnements Au Choix",
+    "orderNow": "Commander"
   },
   "CateringIntroduction": {
     "titleColored": "Service Traiteur Grillado",
@@ -91,9 +91,9 @@
     "feature2": "Des présentoirs et du matériel de chauffage sont disponibles.",
     "feature3": "Ajoutez des bouteilles supplémentaires de sauce moyennant un coût additionnel.",
     "feature4": "Service traiteur disponible au restaurant et hors site.",
-    "orderNow": "COMMANDER",
-    "learnMore": "EN SAVOIR PLUS",
-    "ourMenu": "NOTRE MENU"
+    "orderNow": "Commander",
+    "learnMore": "En Savoir Plus",
+    "ourMenu": "Notre Menu"
   },
   "CateringReviews": {
     "heading": "Avis",
@@ -102,46 +102,46 @@
     "r1_date": "18 Jan 2026",
     "r1_review": "Harprith a fourni des services incroyables. Excellente nourriture",
     "r1_name": "Ali Z",
-    "r1_initials": "AZ",
+    "r1_initials": "Az",
     "r2_rating": "5 ★★★★★",
     "r2_date": "18 Jan 2026",
     "r2_review": "Incroyable",
-    "r2_name": "RAB I",
-    "r2_initials": "RI",
+    "r2_name": "Rab I",
+    "r2_initials": "Ri",
     "r3_rating": "5 ★★★★★",
     "r3_date": "16 Jan 2026",
     "r3_review": "",
     "r3_name": "Anès Grine",
-    "r3_initials": "AG",
+    "r3_initials": "Ag",
     "r4_rating": "5 ★★★★★",
     "r4_date": "16 Jan 2026",
     "r4_review": "Bien",
     "r4_name": "Naz H",
-    "r4_initials": "NH",
+    "r4_initials": "Nh",
     "r5_rating": "5 ★★★★★",
     "r5_date": "15 Jan 2026",
     "r5_review": "",
     "r5_name": "Rushi Jagada",
-    "r5_initials": "RJ",
+    "r5_initials": "Rj",
     "r6_rating": "5 ★★★★★",
     "r6_date": "14 Jan 2026",
     "r6_review": "",
     "r6_name": "Usama Ismail",
-    "r6_initials": "UI",
+    "r6_initials": "Ui",
     "r7_rating": "5 ★★★★★",
     "r7_date": "14 Jan 2026",
     "r7_review": "",
     "r7_name": "Mohamed Nagy",
-    "r7_initials": "MN",
+    "r7_initials": "Mn",
     "r8_rating": "5 ★★★★★",
     "r8_date": "14 Jan 2026",
     "r8_review": "",
     "r8_name": "M S",
-    "r8_initials": "MS"
+    "r8_initials": "Ms"
   },
   "BookEventCTA": {
     "smallTitle": "Réservez aujourd'hui",
-    "mainTitle": "VÉRIFIEZ VOTRE DATE",
+    "mainTitle": "Vérifiez Votre Date",
     "p1": "Chez Grillado, nous croyons qu'une alimentation saine est essentielle à une bonne santé.",
     "p2": "Notre menu axé sur le bien-être est conçu pour s'adapter à votre mode de vie soucieux de votre santé.",
     "p3": "Le poulet Grillado est grillé à la perfection, ce qui en fait le choix le plus judicieux pour une vie équilibrée.",
@@ -204,12 +204,12 @@
     "mississauga": "Mississauga",
     "termsAndConditions": "Termes et Conditions",
     "privacyPolicy": "Politique de Confidentialité",
-    "copyright": "© 2026 GRILLADO'S GRILLED BEEF BACK RIBS & CHICKEN. TOUS DROITS RÉSERVÉS",
-    "orderNow": "COMMANDER"
+    "copyright": "© 2026 Grillado's Grilled Beef Back Ribs & Chicken. Tous Droits Réservés",
+    "orderNow": "Commander"
   },
   "SpecialtyDrinks": {
-    "heading": "GRILLADO'S",
-    "subheading": "BOISSONS SPÉCIALES",
+    "heading": "Grillado's",
+    "subheading": "Boissons Spéciales",
     "items": {
       "lycheeDelight": "Délice Litchi",
       "pinaColada": "Pina Colada",
@@ -246,7 +246,7 @@
     "whatWeDo": "Ce que nous ferons",
     "whatWeDoSub": "Ce que nous ferons",
     "p1_1": "Le siège social de Grillado’s™ assurera le succès de chaque établissement en offrant à nos franchisés un(e)… ",
-    "p1_highlight": "solution clé en main",
+    "p1_highlight": "Solution Clé En Main",
     "p2_1": "Nos restaurants reposent sur un système fiable et éprouvé, mis en place pour garantir la qualité de nos plats, l’image de marque et la performance de chaque établissement Grillado’s™. Nos opérations sont simples à gérer et ne nécessitent aucune expérience préalable dans la restauration – seulement la passion de proposer une excellente expérience culinaire. Nous mettons à disposition des consultants de terrain, des représentants régionaux et un programme de formation complet afin d’assurer que nos franchisés et nos responsables de restaurant soient capables de gérer les activités quotidiennes dans chaque Grillado’s™. Notre équipe d’assistance vous fournira les manuels, les conseils et la formation nécessaires pour garantir une compétence globale. ",
     "p2_highlight": "Votre succès est notre succès.",
     "p3": "Nous nous engageons à poursuivre la croissance et l’expansion de la marque Grillado’s™. Notre équipe reste continuellement concentrée sur des méthodes innovantes pour promouvoir et valoriser le nom Grillado’s™",
@@ -254,28 +254,28 @@
     "sponsorsHeadingYellow": "Parrainage",
     "joinTeamHeading": "Rejoignez notre équipe",
     "step1_num": "Étape 1 -",
-    "step1_title": "SOUMETTRE LA CANDIDATURE",
+    "step1_title": "Soumettre La Candidature",
     "step1_desc": "Notre formulaire de demande de franchise se trouve à www.grillados.ca. Les informations renseignées dans notre formulaire de candidature seront utilisées exclusivement par Grillado’s Franchising Inc. dans le cadre de l’évaluation de l’éligibilité du candidat en tant que futur franchisé.",
     "step2_num": "Étape 2 -",
-    "step2_title": "ENTRETIEN",
+    "step2_title": "Entretien",
     "step2_desc": "Une fois la demande reçue et examinée, vous serez informé de notre intérêt et un entretien sera programmé.",
     "step3_num": "Étape 3 -",
     "step3_title": "Approbation financière",
     "step3_desc": "We will require a statement of net worth",
     "step4_num": "Étape 4 -",
-    "step4_title": "FDD",
+    "step4_title": "Fdd",
     "step4_desc": "Un Document d’Information sur la Franchise (DIF) présentera les informations essentielles concernant l’opportunité de franchise proposée. Le DIF contiendra tous les détails relatifs à Grillado’s Franchising Inc.",
     "step5_num": "Étape 5 -",
     "step5_title": "Site Sélection",
     "step5_desc": "L'équipe de Grillado's vous aidera dans la sélection du site afin de trouver les meilleures options pour le franchiseur et le franchisé.",
     "step6_num": "Étape 6 -",
-    "step6_title": "CONSTRUCTION",
+    "step6_title": "Construction",
     "step6_desc": "Nous concevrons et construirons votre magasin.",
     "step7_num": "Étape 7 -",
-    "step7_title": "FORMATION",
+    "step7_title": "Formation",
     "step7_desc": "Nous offrirons une formation de 4 à 6 semaines au franchisé avant l’ouverture. À l’exception des frais de déplacement, le coût de la formation est entièrement pris en charge par le franchiseur.",
     "step8_num": "Étape 8 -",
-    "step8_title": "OUVERTURE",
+    "step8_title": "Ouverture",
     "step8_desc": "L’équipe Grillado’s™ vous apportera un soutien complet lors de l’ouverture de votre nouveau magasin."
   },
   "FranchiseForm": {
@@ -350,14 +350,14 @@
     "a14": "Tous les équipements et fournitures sont achetés auprès de fournisseurs de confiance et approuvés par le franchiseur."
   },
   "GarnishedRice": {
-    "heading": "LOADED RICE",
+    "heading": "Loaded Rice",
     "items": {
       "chicken": "Poulet",
-      "chickenDesc": "RIZ, POULET PERI, OIGNON ROUGE, POIVRONS ROUGES, MAÏS DOUX, LAITUE, JALAPENOS, SAUCE PERI MAISON ET SAUCE À L'AIL MAISON.",
+      "chickenDesc": "Riz, Poulet Peri, Oignon Rouge, Poivrons Rouges, Maïs Doux, Laitue, Jalapenos, Sauce Peri Maison Et Sauce À L'ail Maison.",
       "vegetarianSpecial": "Spécial Végétarien",
-      "vegetarianSpecialDesc": "RIZ, GALETTE VÉGÉTARIENNE, OIGNON ROUGE, POIVRONS ROUGES, MAÏS DOUX, LAITUE, JALAPENOS, SAUCE PERI MAISON, SAUCE À L'AIL MAISON",
+      "vegetarianSpecialDesc": "Riz, Galette Végétarienne, Oignon Rouge, Poivrons Rouges, Maïs Doux, Laitue, Jalapenos, Sauce Peri Maison, Sauce À L'ail Maison",
       "houseSpecial": "Spécial Maison",
-      "houseSpecialDesc": "RIZ, BŒUF HACHÉ, OIGNON ROUGE, POIVRONS, MAÏS DOUX, LAITUE, TOMATE, JALAPENOS, CORNICHONS, SAUCE PERI ET SAUCE À L'AIL MAISON"
+      "houseSpecialDesc": "Riz, Bœuf Haché, Oignon Rouge, Poivrons, Maïs Doux, Laitue, Tomate, Jalapenos, Cornichons, Sauce Peri Et Sauce À L'ail Maison"
     },
     "sauces": {
       "lemonHerbs": "Citron & Herbes",
@@ -373,17 +373,17 @@
   "LocationsPage": {
     "availableLocations": "Lieux disponibles",
     "comingSoonLocations": "Lieux à venir",
-    "ontario": "ONTARIO",
-    "alberta": "ALBERTA",
-    "britishColumbia": "COLOMBIE-BRITANNIQUE"
+    "ontario": "Ontario",
+    "alberta": "Alberta",
+    "britishColumbia": "Colombie-britannique"
   },
   "DealsNewsletter": {
     "headingStart": "Restez au courant de tous nos ",
     "headingHighlight": "Grillado’s",
     "headingEnd": " Actualités,",
-    "headingEnd2": "abonnez-vous à notre newsletter",
+    "headingEnd2": "Abonnez-vous à Notre Newsletter",
     "descriptionLine1": "Soyez les premiers informés des nouvelles et événements de Grillado,",
-    "descriptionLine2": "abonnez-vous à notre newsletter et restez connectés!",
+    "descriptionLine2": "Abonnez-vous à Notre Newsletter Et Restez Connectés!",
     "firstNamePlaceholder": "Prénom*",
     "emailPlaceholder": "Courriel*",
     "subscribeBtn": "S'abonner",
@@ -454,10 +454,10 @@
     "postalCode": "Code postal*",
     "nearbyLandmark": "Emplacement à proximité (popup)*",
     "selectLocation": "Sélectionnez l'emplacement à proximité",
-    "laval": "LAVAL",
-    "milton": "MILTON",
-    "cambridge": "CAMBRIDGE",
-    "mississauga": "MISSISSAUGA",
+    "laval": "Laval",
+    "milton": "Milton",
+    "cambridge": "Cambridge",
+    "mississauga": "Mississauga",
     "consent": "Je consens à recevoir des notifications par SMS, des alertes et des messages marketing occasionnels. La fréquence des messages varie ; des tarifs standard s'appliquent. Textez AIDE pour de l'aide ou ARRET pour vous désabonner.",
     "processing": "Traitement...",
     "success": "Commande passée avec succès !",
@@ -466,7 +466,7 @@
     "terms": "Termes et conditions"
   },
   "BirthdayCatering": {
-    "heading": "anniversaire !",
+    "heading": "Anniversaire !",
     "description": "Avec les choix infinis du menu de Grillado's, personne ne sera laissé pour compte dans cet océan de délices culinaires. Laissez Grillado's rendre votre anniversaire – délicieux.",
     "contactUs": "Contactez-nous"
   },
@@ -488,9 +488,9 @@
   },
   "ServiceReviews": {
     "heading": "Avis",
-    "good": "BON",
+    "good": "Bon",
     "basedOn": "Basé sur 1 779 avis",
-    "monthsAgo": "il y a des mois",
+    "monthsAgo": "Il Y A Des Mois",
     "ratingOnly": "L'utilisateur a seulement laissé une note.",
     "review1": "Harprith a fourni un service incroyable. Super nourriture",
     "review2": "BIEn",
@@ -502,8 +502,8 @@
     "smartHeading1": "Soyez ",
     "smartHeading2": "Intelligent !",
     "smartDesc": "Chez <span className=\"text-[#FBC18A] font-bold\">Grillado’s</span>, nous pensons qu'une alimentation saine est vitale pour une bonne santé. Notre menu axé sur la santé est conçu pour répondre à votre style de vie soucieux de votre santé. Le poulet de <span className=\"text-[#FBC18A] font-bold\">Grillado’s</span> est grillé à la perfection, ce qui en fait le choix le plus intelligent pour une vie équilibrée.",
-    "storyHeading1": "tout a commencé",
-    "storyHeading2": "avec une envie...",
+    "storyHeading1": "Tout A Commencé",
+    "storyHeading2": "Avec Une Envie...",
     "storyDesc1": "Grillado’s™ est un restaurant décontracté qui se concentre sur les grillades du meilleur poulet portugais avec une touche sud-africaine. Cette touche est notre variété de sauces de renommée mondiale.",
     "storyDesc2": "Situé au cœur de Montréal, il est rapidement devenu connu pour son atmosphère amusante et engageante, ainsi que pour sa multitude de saveurs qui gardent les clients heureux et reviennent pour plus…",
     "votedText1": "<span>Grillado’s™</span> a été lancé à Montréal en 2015 et a été élu",
@@ -543,14 +543,14 @@
     "success": "Succès !",
     "privacy": "Confidentialité",
     "help": "Aide",
-    "submit": "SOUMETTRE"
+    "submit": "Soumettre"
   },
   "Menu": {
-    "appetizers": "ENTRÉES",
+    "appetizers": "Entrées",
     "appetizersMenu": [
       {
         "name": "Pain Portugais",
-        "note": "SERVI AVEC DU BEURRE"
+        "note": "Servi Avec Du Beurre"
       },
       {
         "name": "Pain Pita"
@@ -563,7 +563,7 @@
       },
       {
         "name": "5 Bâtonnets de Fromage Mozzarella",
-        "note": "AVEC SAUCE MARINARA"
+        "note": "Avec Sauce Marinara"
       },
       {
         "name": "5 Ailes de Poulet Entières"
@@ -576,7 +576,7 @@
       },
       {
         "name": "Nachos au Poulet Grillé",
-        "note": "AJOUTEZ DU POULET SUPPLÉMENTAIRE POUR 4.99"
+        "note": "Ajoutez Du Poulet Supplémentaire Pour 4.99"
       }
     ],
     "chickenSpecials": "SPÉCIALITÉS DE POULET<br />GRILLADO'S",
@@ -584,15 +584,15 @@
       {
         "name": "Espetada Grillée",
         "description": "Poulet mariné tendre avec des poivrons frais, servi en brochette avec 2 accompagnements réguliers.",
-        "note": "TENDER MARINATED CHICKEN WITH FRESH PEPPERS, SERVED ON A SKEWER WITH 2 REGULAR SIDES"
+        "note": "Tender Marinated Chicken With Fresh Peppers, Served On A Skewer With 2 Regular Sides"
       },
       {
         "name": "Poulet Grillé Biologique Entier",
-        "note": "AVEC 1 ACCOMPAGNEMENT RÉGULIER"
+        "note": "Avec 1 Accompagnement Régulier"
       },
       {
         "name": "Poutine Authentique de Montréal",
-        "note": "AJOUTEZ DU POULET GRILLÉ POUR 5.49"
+        "note": "Ajoutez Du Poulet Grillé Pour 5.49"
       },
       {
         "name": "Fiesta",
@@ -600,34 +600,34 @@
       },
       {
         "name": "Burger Végétarien",
-        "note": "AVEC 1 ACCOMPAGNEMENT RÉGULIER (AJOUTEZ UNE GALETTE SUPPLÉMENTAIRE POUR 4.99)"
+        "note": "Avec 1 Accompagnement Régulier (Ajoutez Une Galette Supplémentaire Pour 4.99)"
       },
       {
         "name": "Burger au Poulet Grillé",
-        "note": "AVEC 1 ACCOMPAGNEMENT RÉGULIER (AJOUTEZ UNE GALETTE SUPPLÉMENTAIRE POUR 4.99)"
+        "note": "Avec 1 Accompagnement Régulier (Ajoutez Une Galette Supplémentaire Pour 4.99)"
       },
       {
         "name": "Sandwich au Poulet Grillé à l'Ail",
-        "note": "AVEC 1 ACCOMPAGNEMENT RÉGULIER (AJOUTEZ UNE GALETTE SUPPLÉMENTAIRE POUR 4.99)"
+        "note": "Avec 1 Accompagnement Régulier (Ajoutez Une Galette Supplémentaire Pour 4.99)"
       },
       {
         "name": "Grillade Tandoori Flamboyante",
-        "note": "8 MORCEAUX DE POULET ÉPICÉ TANDOORI SUR UN GRIL CHAUD"
+        "note": "8 Morceaux De Poulet ÉPicé Tandoori Sur Un Gril Chaud"
       },
       {
         "name": "Poulet Saji Balochi",
-        "note": "SUR COMMANDE SEULEMENT AVEC 2 ACCOMPAGNEMENTS RÉGULIERS ET 2 PAINS PITA OU 2 PAINS À L'AIL"
+        "note": "Sur Commande Seulement Avec 2 Accompagnements Réguliers Et 2 Pains Pita Ou 2 Pains À L'ail"
       }
     ],
     "comboDePoulet": "GRILLADO’S GRILLED<br />CHICKEN COMBO",
     "comboDePouletMenu": [
       {
         "name": "¼ Cuisse de Poulet Grillée",
-        "note": "(CUISSE + HAUT DE CUISSE)"
+        "note": "(Cuisse + Haut De Cuisse)"
       },
       {
         "name": "¼ Poitrine de Poulet Grillée",
-        "note": "(POITRINE + AILES)"
+        "note": "(Poitrine + Ailes)"
       },
       {
         "name": "6 Ailes de Poulet Entières"
@@ -637,7 +637,7 @@
       },
       {
         "name": "Poitrine de Poulet Grillée Désossée",
-        "note": "(NOUVEL ARTICLE)"
+        "note": "(Nouvel Article)"
       },
       {
         "name": "Doubles Cuisses"
@@ -651,29 +651,29 @@
     "beefLambSpecialsMenu": [
       {
         "name": "Côtes Arrières",
-        "note": "AVEC 2 ACCOMPAGNEMENTS RÉGULIERS"
+        "note": "Avec 2 Accompagnements Réguliers"
       },
       {
         "name": "Côtelettes d'Agneau",
-        "note": "4 FRENCH CUT LAMBCHOPS SERVED WITH 1 REGULAR SIDE AND 1 GARLIC BREAD",
+        "note": "4 French Cut Lambchops Served With 1 Regular Side And 1 Garlic Bread",
         "price": "36.99"
       },
       {
         "name": "12 OZ Rib Eye Steak",
-        "note": "AAA RIB EYE STEAK SERVED WITH 1 REGULAR SIDE AND GARLIC BREAD"
+        "note": "Aaa Rib Eye Steak Served With 1 Regular Side And Garlic Bread"
       },
       {
         "name": "12 OZ Striploin Steak",
-        "note": "AAA STRIPLOIN STEAK SERVED WITH 1 REGULAR SIDE & GARLIC BREAD"
+        "note": "Aaa Striploin Steak Served With 1 Regular Side & Garlic Bread"
       },
       {
         "name": "Grillado’s Beef Burger",
-        "note": "WITH 1 REGULAR SIDE (ADD EXTRA PATTY 4.99)",
+        "note": "With 1 Regular Side (Add Extra Patty 4.99)",
         "price": "17.99"
       },
       {
         "name": "Full Beef Back Ribs Rack",
-        "note": "7 PRIME BEEF BACK RIBS",
+        "note": "7 Prime Beef Back Ribs",
         "price": "94.99"
       }
     ],
@@ -681,31 +681,31 @@
     "plateauxMenu": [
       {
         "name": "Plateau d'Ailes de Poulet Grillées",
-        "note": "15 AILES DE POULET ENTIÈRES, 2 ACCOMPAGNEMENTS RÉGULIERS, 2 PAINS À L'AIL OU 3 PETITS PAINS PORTUGAIS"
+        "note": "15 Ailes De Poulet Entières, 2 Accompagnements Réguliers, 2 Pains À L'ail Ou 3 Petits Pains Portugais"
       },
       {
         "name": "Plateau de Poulet",
-        "note": "2 POULETS GRILLÉS ENTIERS BIO, 2 GRANDS ACCOMPAGNEMENTS, 2 PAINS À L'AIL OU 3 PETITS PAINS PORTUGAIS"
+        "note": "2 Poulets Grillés Entiers Bio, 2 Grands Accompagnements, 2 Pains À L'ail Ou 3 Petits Pains Portugais"
       },
       {
         "name": "Plateau de Bœuf",
-        "note": "1 CARRÉ COMPLET DE CÔTES DE BŒUF DE QUALITÉ SUPÉRIEURE, 2 GRANDS ACCOMPAGNEMENTS, 2 PAINS À L'AIL OU 3 PETITS PAINS PORTUGAIS"
+        "note": "1 Carré Complet De Côtes De Bœuf De Qualité Supérieure, 2 Grands Accompagnements, 2 Pains À L'ail Ou 3 Petits Pains Portugais"
       },
       {
         "name": "Plateau Signature",
-        "note": "5 BÂTONNETS DE FROMAGE MOZZARELLA, 1 POULET GRILLÉ ENTIER BIO, 10 AILES DE POULET ENTIÈRES, 10 MINI BROCHETTES DE BŒUF, 2 BROCHETTES ESPETADA GRILLÉES, 3 GRANDS ACCOMPAGNEMENTS, 3 PAINS À L'AIL OU 4 PETITS PAINS PORTUGAIS"
+        "note": "5 Bâtonnets De Fromage Mozzarella, 1 Poulet Grillé Entier Bio, 10 Ailes De Poulet Entières, 10 Mini Brochettes De Bœuf, 2 Brochettes Espetada Grillées, 3 Grands Accompagnements, 3 Pains À L'ail Ou 4 Petits Pains Portugais"
       },
       {
         "name": "Plateau Mixte",
-        "note": "1 POULET GRILLÉ ENTIER BIO, 1 CARRÉ COMPLET DE CÔTES DE BŒUF DE QUALITÉ SUPÉRIEURE, 3 GRANDS ACCOMPAGNEMENTS, 3 PAINS À L'AIL OU 4 PETITS PAINS PORTUGAIS"
+        "note": "1 Poulet Grillé Entier Bio, 1 Carré Complet De Côtes De Bœuf De Qualité Supérieure, 3 Grands Accompagnements, 3 Pains À L'ail Ou 4 Petits Pains Portugais"
       }
     ],
-    "sandwichWrapsPita": "SANDWICHS, WRAPS ET PITA",
+    "sandwichWrapsPita": "Sandwichs, Wraps Et Pita",
     "chicken": "Poulet",
     "vegetarian": "Végétarien",
-    "combo": "COMBO",
-    "sideAndPop": "(1 ACCOMPAGNEMENT + BOISSON GAZEUSE)",
-    "salads": "SALADES",
+    "combo": "Combo",
+    "sideAndPop": "(1 Accompagnement + Boisson Gazeuse)",
+    "salads": "Salades",
     "saladsMenu": [
       {
         "name": "Salade Grecque"
@@ -718,8 +718,8 @@
       }
     ],
     "saladsLargeAdd": "Salades GRAND FORMAT 9.99 - AJOUTEZ",
-    "grilledChickenPrice": "POULET GRILLÉ 5.99",
-    "accompagnements": "ACCOMPAGNEMENTS",
+    "grilledChickenPrice": "Poulet Grillé 5.99",
+    "accompagnements": "Accompagnements",
     "accompagnementsMenu": [
       {
         "name": "Frites Peri"
@@ -746,11 +746,11 @@
         "name": "Maïs Grillé"
       }
     ],
-    "seasonal": "SAISONNIER",
+    "seasonal": "Saisonnier",
     "sidesSizes": "Accompagnements Grand format 8,99 & À partager 12,99"
   },
   "Voucher": {
-    "getUpTo": "OBTENEZ JUSQU'À 20 % DE RABAIS",
+    "getUpTo": "Obtenez Jusqu'à 20 % De Rabais",
     "onEntireMenu": "Sur tout le menu.",
     "clickToGet": "Cliquez sur 'Obtenez votre coupon maintenant' et profitez d'un rabais allant jusqu'à 20 % dans toutes les succursales Grillado's à travers le Canada !",
     "getVoucherNow": "Obtenez votre coupon maintenant",
@@ -763,11 +763,11 @@
     "iAgree": "J'accepte de recevoir des notifications SMS et du marketing de Grillado's. Des frais de messagerie et de données peuvent s'appliquer. Répondez STOP pour vous désabonner, HELP pour obtenir de l'aide.",
     "privacyPolicy": "Politique de confidentialité",
     "termsOfService": "Conditions d'utilisation",
-    "getYourVoucher": "OBTENEZ VOTRE COUPON",
+    "getYourVoucher": "Obtenez Votre Coupon",
     "alertAgree": "Veuillez accepter les conditions pour continuer.",
     "alertSent": "Coupon envoyé ! Vérifiez vos e-mails/SMS.",
-    "getUpToText": "OBTENEZ JUSQU'À",
-    "discountText": "20 % DE RABAIS"
+    "getUpToText": "Obtenez Jusqu'à",
+    "discountText": "20 % De Rabais"
   },
   "Blog": {
     "exploreArticles": "Explorer les Articles",
@@ -782,17 +782,17 @@
     "title": "Offres de Dîner Fous",
     "subtitle": "Check out this week’s incredible treats",
     "contactUs": "Nous Contacter",
-    "deal1": "1/4 de cuisse ou de poitrine avec frites ou riz pour",
+    "deal1": "1/4 De Cuisse Ou De Poitrine Avec Frites Ou Riz Pour",
     "deal2": "Poutine au poulet grillé",
     "deal3": "Du lundi au vendredi",
-    "deal4": "5 ailes de poulet entières",
+    "deal4": "5 Ailes De Poulet Entières",
     "deal5": "Poulet grillé avec salade grecque ou salade printanière",
     "deal6": "Obtenez 10 % de réduction pour les membres de LA Fitness",
     "deal6Desc": "Grillado's offre une réduction de 10 % à tous les membres de LA Fitness. Veuillez présenter votre carte d'abonnement au comptoir."
   },
   "ServicesHero": {
     "titlePart1": "Nous servons lors de vos",
-    "titlePart2": "occasions spéciales"
+    "titlePart2": "Occasions Spéciales"
   },
   "Terms": {
     "title": "Informations Légales",
@@ -824,8 +824,8 @@
     "title": "Contactez-nous"
   },
   "SocialTree": {
-    "orderNow": "COMMANDER",
-    "website": "SITE WEB",
+    "orderNow": "Commander",
+    "website": "Site Web",
     "getInTouch": "Contactez-nous"
   },
   "Countries": {

@@ -51,7 +51,7 @@ export default function SocialTreePage() {
       <div className="w-full max-w-lg mx-auto flex flex-col items-center gap-6">
         
         {/* Heading */}
-        <h1 className="text-2xl md:text-3xl font-extrabold text-white uppercase tracking-widest text-center mt-4">
+        <h1 className="text-2xl md:text-3xl font-extrabold text-white capitalize tracking-widest text-center mt-4">
           GRILLADOS SOCIAL TREE
         </h1>
 
@@ -97,7 +97,7 @@ export default function SocialTreePage() {
         {/* Links List */}
         <div className="w-full flex flex-col gap-5 mt-4 mb-20">
           {socialLinks.map((link, index) => (
-            <Link key={index} href={link.url} target={link.url.startsWith('http') ? '_blank' : undefined} className="text-black hover:text-white group relative w-full bg-[#FAC716] border-2 border-white/10 hover:border-[#DAAF18] rounded-[2rem] py-5 px-4 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(218,175,24,0.15)] hover:-translate-y-1 overflow-hidden" >
+            <Link key={index} href={link.url} target={link.url.startsWith('http') ? '_blank' : undefined} className="text-black hover:text-white hover: hover: group relative w-full bg-[#FAC716] border-2 border-white/10 hover:border-[#DAAF18] rounded-[2rem] py-5 px-4 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(218,175,24,0.15)] hover:-translate-y-1 overflow-hidden" >
               {/* Left Image 1333 */}
               <div className="absolute left-2.5 top-1/2 -translate-y-1/2 w-13 h-13 bg-white rounded-full flex items-center justify-center shadow-md overflow-hidden z-10 group-hover:scale-105 transition-transform duration-300 border border-gray-100">
                 <div className="relative w-10 h-10">

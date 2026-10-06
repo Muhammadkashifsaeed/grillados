@@ -43,7 +43,7 @@ export default function ServicesHero() {
             initial={{ opacity: 0, y: 30, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="tracking-wide py-1.5 md:py-2 px-6 sm:px-8 rounded-none bg-[#FAC716] shadow-2xl relative z-10 uppercase text-center whitespace-normal sm:whitespace-nowrap break-words max-w-[90vw] md:max-w-none transform -rotate-2"
+            className="tracking-wide py-1.5 md:py-2 px-6 sm:px-8 rounded-none bg-[#FAC716] shadow-2xl relative z-10 capitalize text-center whitespace-normal sm:whitespace-nowrap break-words max-w-[90vw] md:max-w-none transform -rotate-2"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, color: 'rgb(255,255,255)', fontSize: 'clamp(22px, 3.5vw, 35px)', lineHeight: 'clamp(33px, 5vw, 50px)', wordSpacing: '4px' }}
           >
             {t('titlePart1')}<br className="block md:hidden" /> {t('titlePart2')}

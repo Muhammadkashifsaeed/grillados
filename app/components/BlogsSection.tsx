@@ -152,11 +152,11 @@ const BlogsSection = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <button onClick={prevSlide} className="text-black hover:text-white absolute -left-4 md:-left-8 lg:-left-10 xl:-left-12 top-1/2 -translate-y-1/2 bg-[#FAC716] p-3 rounded-full shadow-lg hover:scale-110 transition-all z-10 hidden md:flex" aria-label="Previous slide" >
+          <button onClick={prevSlide} className="text-black hover:text-white hover: hover: absolute -left-4 md:-left-8 lg:-left-10 xl:-left-12 top-1/2 -translate-y-1/2 bg-[#FAC716] p-3 rounded-full shadow-lg hover:scale-110 transition-all z-10 hidden md:flex" aria-label="Previous slide" >
             <ChevronLeft className="w-6 h-6" />
           </button>
 
-          <button onClick={nextSlide} className="text-black hover:text-white absolute -right-4 md:-right-8 lg:-right-10 xl:-right-12 top-1/2 -translate-y-1/2 bg-[#FAC716] p-3 rounded-full shadow-lg hover:scale-110 transition-all z-10 hidden md:flex" aria-label="Next slide" >
+          <button onClick={nextSlide} className="text-black hover:text-white hover: hover: absolute -right-4 md:-right-8 lg:-right-10 xl:-right-12 top-1/2 -translate-y-1/2 bg-[#FAC716] p-3 rounded-full shadow-lg hover:scale-110 transition-all z-10 hidden md:flex" aria-label="Next slide" >
             <ChevronRight className="w-6 h-6" />
           </button>
 

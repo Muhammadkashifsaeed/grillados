@@ -19,7 +19,7 @@ const AboutUsCertified = () => {
         
         {/* Centered Heading */}
         <div className="text-center mb-10 md:mb-12">
-          <h2 className="uppercase tracking-wide flex flex-col items-center">
+          <h2 className="capitalize tracking-wide flex flex-col items-center">
             <span 
               className="block"
               style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(23, 23, 23)', fontSize: 'clamp(22px, 3.2vw, 32px)', lineHeight: 'clamp(26px, 4vw, 40px)' }}

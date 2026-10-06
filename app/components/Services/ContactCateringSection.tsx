@@ -86,8 +86,8 @@ export default function ContactCateringSection() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="uppercase tracking-wide mb-10 mt-16 text-center drop-shadow-lg"
-          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(36px, 5.6vw, 56px)', color: 'rgb(255,255,255)' }}
+          className="capitalize tracking-wide mb-10 mt-16 text-center drop-shadow-lg text-white"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(36px, 5.6vw, 56px)', color: 'rgb(255, 255, 255)' }}
         >
           Get in touch
         </motion.h1>
@@ -267,7 +267,7 @@ export default function ContactCateringSection() {
               {/* SMS Consent */}
               <label className="flex items-start gap-4 cursor-pointer mb-8 max-w-4xl group">
                 <div className="relative flex items-center mt-1">
-                  <input type="checkbox" className="peer w-6 h-6 rounded-md border-gray-300 text-[#FAC716] focus:ring-[#FAC716] cursor-pointer appearance-none bg-white checked:bg-[#FAC716] checked:border-transparent transition-all duration-200" />
+                  <input type="checkbox" className="text-black hover:text-white peer w-6 h-6 rounded-md border-gray-300 text-[#FAC716] focus:ring-[#FAC716] cursor-pointer appearance-none bg-white checked:bg-[#FAC716] checked:border-transparent transition-all duration-200" />
                   <svg className="absolute w-4 h-4 text-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0 peer-checked:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
@@ -278,7 +278,7 @@ export default function ContactCateringSection() {
               </label>
 
               {/* Submit Button */}
-              <button type="submit" disabled={isSubmitting || isSuccess} className={`w-full h-15 font-extrabold text-xl rounded-xl shadow-lg uppercase tracking-widest font-['Outfit',sans-serif] transition-all duration-300 flex items-center justify-center ${ isSuccess ? 'bg-[#FAC716] hover:bg-green-600 shadow-green-500/30' : isSubmitting ? 'bg-[#FAC716] cursor-not-allowed' : 'bg-[#FAC716] hover:bg-[#e0a217] hover:shadow-xl hover:-translate-y-1 active:scale-[0.98]' }`} >
+              <button type="submit" disabled={isSubmitting || isSuccess} className={`text-white w-full h-15 font-extrabold text-xl rounded-xl shadow-lg uppercase tracking-widest font-['Outfit',sans-serif] transition-all duration-300 flex items-center justify-center ${ isSuccess ? 'bg-[#FAC716] hover:bg-green-600 shadow-green-500/30' : isSubmitting ? 'bg-[#FAC716] cursor-not-allowed' : 'bg-[#FAC716] hover:bg-[#e0a217] hover:shadow-xl hover:-translate-y-1 active:scale-[0.98]' }`} >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center gap-3">
                     <svg className="animate-spin h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

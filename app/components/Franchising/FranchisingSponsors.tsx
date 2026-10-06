@@ -18,7 +18,7 @@ export default function FranchisingSponsors() {
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         
         {/* Heading */}
-        <h2 className="text-center uppercase tracking-wide mb-4 drop-shadow-sm flex items-center justify-center flex-wrap gap-2">
+        <h2 className="text-center capitalize tracking-wide mb-4 drop-shadow-sm flex items-center justify-center flex-wrap gap-2">
           <span className="text-[#000000] text-3xl sm:text-4xl md:text-[45px] leading-tight md:leading-[60px] font-semibold font-['Ribeat',sans-serif]">{t('sponsorsHeadingMain')}</span>
           <span className="text-[#FAC716] text-3xl sm:text-4xl md:text-[45px] leading-tight md:leading-[60px] font-semibold font-['Ribeat',sans-serif]">{t('sponsorsHeadingYellow')}</span>
         </h2>
@@ -39,7 +39,7 @@ export default function FranchisingSponsors() {
               <Image
                 src={src}
                 alt={`Franchising Partner ${idx + 1}`}
-                fill sizes="100vw"
+                fill sizes="200px"
                 className="object-contain"
               />
             </div>

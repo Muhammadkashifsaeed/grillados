@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-const CateringPartnersSection = () => {
+const CateringPartnersSection = ({ hideDescription = false }: { hideDescription?: boolean }) => {
   const t = useTranslations('CateringPartners');
 
   // We have sponsors from Spon1.png to Spon13.png
@@ -21,7 +21,7 @@ const CateringPartnersSection = () => {
         {/* Centered Heading */}
         <div className="text-center">
 <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} 
-          className="uppercase tracking-wide mb-2 inline-block text-center"
+          className="capitalize tracking-wide mb-2 inline-block text-center"
           style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 2.8vw, 28px)', lineHeight: 'clamp(24px, 3.6vw, 36px)', color: 'rgb(0,0,0)' }}
         >
           {t('heading')}
@@ -30,9 +30,9 @@ const CateringPartnersSection = () => {
 
 
 
-        <p className="max-w-3xl text-center mt-3" style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(0, 0, 0)' }}>
+        {!hideDescription && <p className="max-w-3xl text-center mt-3" style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px', color: 'rgb(0, 0, 0)' }}>
           Catering By Grillados Customized Food Catering At Its Best
-        </p>
+        </p>}
 
       </div>
 

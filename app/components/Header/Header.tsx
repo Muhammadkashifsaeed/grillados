@@ -39,7 +39,7 @@ export const Header = () => {
         </Link>
 
         {/* Center: Navigation & Language Switcher (Desktop Only) */}
-        <div className="hidden lg:flex flex-1 items-center justify-center min-w-0 relative z-10">
+        <div className="hidden lg:flex flex-1 items-center justify-center lg:pr-8 xl:pr-16 min-w-0 relative z-10">
           <nav className="flex items-center gap-0.5 xl:gap-2 px-1.5 xl:px-3 py-1.5 flex-nowrap">
             <NavItem href="/menu" icon={<Utensils className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('menu')} />
             <NavItem href="/locations" icon={<MapPin className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('locations')} />
@@ -64,22 +64,22 @@ export const Header = () => {
             </div>
 
             {/* Language Switcher - Grouped with Nav */}
-            <div className="flex items-center gap-0.5 xl:gap-1 pl-1.5 xl:pl-2 border-l border-white/20 mr-1 xl:mr-2">
+            <div className="flex items-center gap-3 xl:gap-4 pl-2 xl:pl-3 border-l border-white/20 mr-1 xl:mr-2">
               <button
                 type="button"
                 onClick={() => switchLanguage('en')}
-                className={`transition-all duration-300 w-5 h-3 xl:w-6 xl:h-3.5 relative ${locale === 'en' ? 'scale-110 drop-shadow-[0_0_4px_rgba(247,180,28,0.8)]' : 'opacity-60 hover:opacity-100 hover:scale-110'}`}
+                className={`transition-all duration-300 w-6 h-4 xl:w-7 xl:h-4.5 rounded-[3px] overflow-hidden border border-white/20 relative ${locale === 'en' ? 'shadow-[0_0_8px_rgba(255,255,255,0.4)] ring-1 ring-white/50 z-10' : 'opacity-90 hover:opacity-100 z-0'}`}
                 title="English"
               >
-                <Image src="/images/eng.png" alt="English" fill sizes="10vw" className="object-contain" />
+                <Image src="/images/eng.png" alt="English" fill sizes="10vw" className="object-cover" />
               </button>
               <button
                 type="button"
                 onClick={() => switchLanguage('fr')}
-                className={`transition-all duration-300 w-5 h-3 xl:w-6 xl:h-3.5 relative ${locale === 'fr' ? 'scale-110 drop-shadow-[0_0_4px_rgba(247,180,28,0.8)]' : 'opacity-60 hover:opacity-100 hover:scale-110'}`}
+                className={`transition-all duration-300 w-6 h-4 xl:w-7 xl:h-4.5 rounded-[3px] overflow-hidden border border-white/20 relative ${locale === 'fr' ? 'shadow-[0_0_8px_rgba(255,255,255,0.4)] ring-1 ring-white/50 z-10' : 'opacity-90 hover:opacity-100 z-0'}`}
                 title="Français"
               >
-                <Image src="/images/fre.png" alt="French" fill sizes="10vw" className="object-contain" />
+                <Image src="/images/fre.png" alt="French" fill sizes="10vw" className="object-cover" />
               </button>
             </div>
           </nav>
@@ -94,7 +94,7 @@ export const Header = () => {
           >
             <ShoppingBag className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-white" />
             <div className="flex flex-col text-left">
-              <span className="text-[10px] sm:text-xs md:text-sm xl:text-xs whitespace-nowrap animate-text-shimmer">{t('orderOnline')}</span>
+              <span className="text-[10px] sm:text-xs md:text-sm xl:text-xs whitespace-nowrap animate-text-shimmer uppercase">{t('orderOnline')}</span>
             </div>
           </Link>
 

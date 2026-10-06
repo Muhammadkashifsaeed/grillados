@@ -1,8 +1,9 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReviewCard from './ReviewCard';
 import { useTranslations } from 'next-intl';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const getReviewsData = (t: any) => [
   { avatarSrc: "/images/Ali Z.png",        name: "Ali Z",            date: `7 ${t('monthsAgo')}`, review: t('review1') },
@@ -14,15 +15,43 @@ const getReviewsData = (t: any) => [
   { avatarSrc: "/images/Aarif Amin.png",   name: "Aarif Amin",       date: `7 ${t('monthsAgo')}`, review: t('ratingOnly') },
 ];
 
-// Duplicate for seamless infinite loop
-
-
 const ReviewsSection = () => {
   const t = useTranslations('ServiceReviews');
   const reviewsData = getReviewsData(t);
-  const allCards = [...reviewsData, ...reviewsData];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [maxIndex, setMaxIndex] = useState(0);
+
+  useEffect(() => {
+    const updateMaxIndex = () => {
+      let newMax = reviewsData.length - 1;
+      if (window.innerWidth >= 1024) newMax = Math.max(0, reviewsData.length - 4);
+      else if (window.innerWidth >= 768) newMax = Math.max(0, reviewsData.length - 2);
+      
+      setMaxIndex(newMax);
+      setCurrentIndex((prev) => Math.min(prev, newMax));
+    };
+
+    updateMaxIndex();
+    window.addEventListener('resize', updateMaxIndex);
+    return () => window.removeEventListener('resize', updateMaxIndex);
+  }, [reviewsData.length]);
+
+  useEffect(() => {
+    if (maxIndex <= 0) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [maxIndex]);
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  };
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  };
   return (
-    <section className="w-full bg-[#FDF8F1] py-14 overflow-hidden">
+    <section className="w-full bg-[#FAF7F1] py-14 overflow-hidden">
       <div className="w-full max-w-350 mx-auto px-6 md:px-10">
 
         {/* Centered Reviews Heading */}
@@ -63,11 +92,24 @@ const ReviewsSection = () => {
           {/* Divider */}
           <div className="w-full h-px md:w-px md:self-stretch bg-gray-300 shrink-0 my-2 md:my-0"></div>
 
-          {/* Auto-scrolling Carousel */}
-          <div className="flex-grow overflow-hidden relative w-full">
-            <div className="flex gap-5 reviews-marquee">
-              {allCards.map((rev, idx) => (
-                <div key={idx} className="w-70 shrink-0">
+          {/* Interactive Carousel */}
+          <div className="flex-grow overflow-hidden relative w-full group px-1 review-card-container">
+            
+            {/* Left Arrow */}
+            <button 
+              onClick={handlePrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-2 rounded-full text-black hover:bg-[#FAC716] hover:text-white transition-colors opacity-0 md:group-hover:opacity-100"
+              aria-label="Previous Review"
+            >
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+            </button>
+
+            <div 
+              className="flex gap-5 transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(calc(-${currentIndex} * (var(--card-width) + 1.25rem)))` }}
+            >
+              {reviewsData.map((rev, idx) => (
+                <div key={idx} className="shrink-0" style={{ width: 'var(--card-width)' }}>
                   <ReviewCard
                     name={rev.name}
                     date={rev.date}
@@ -77,19 +119,33 @@ const ReviewsSection = () => {
                 </div>
               ))}
             </div>
+
+            {/* Right Arrow */}
+            <button 
+              onClick={handleNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-2 rounded-full text-black hover:bg-[#FAC716] hover:text-white transition-colors opacity-0 md:group-hover:opacity-100"
+              aria-label="Next Review"
+            >
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+            </button>
           </div>
 
         </div>
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes reviewsScroll {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+        .review-card-container {
+          --card-width: 85%;
         }
-        .reviews-marquee {
-          animation: reviewsScroll 28s linear infinite;
-          width: max-content;
+        @media (min-width: 768px) {
+          .review-card-container {
+            --card-width: calc((100% - 1.25rem) / 2);
+          }
+        }
+        @media (min-width: 1024px) {
+          .review-card-container {
+            --card-width: calc((100% - 3.75rem) / 4);
+          }
         }
       `}} />
     </section>
