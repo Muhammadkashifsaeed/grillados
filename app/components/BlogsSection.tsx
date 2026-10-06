@@ -7,9 +7,9 @@ import { Calendar, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 const blogsData = [
-  { id: 1, image: '/images/know1.jpeg', tKey: 'blog1' },
-  { id: 2, image: '/images/know2.jpeg', tKey: 'blog2' },
-  { id: 3, image: '/images/know3.jpeg', tKey: 'blog3' },
+  { id: 'grilled-corn-sweet-smoky-juicy-perfection-for-just-5-99', image: '/images/know1.jpeg', tKey: 'blog1' },
+  { id: 'creamy-coleslaw-a-cool-crunchy-classic-for-just-5-99', image: '/images/know2.jpeg', tKey: 'blog2' },
+  { id: 'peri-fries-recipe-crispy-spicy-snack-youll-crave-every-time', image: '/images/know3.jpeg', tKey: 'blog3' },
   { id: 4, image: '/images/know4.jpeg', tKey: 'blog4' },
   { id: 5, image: '/images/know5.jpeg', tKey: 'blog5' },
   { id: 6, image: '/images/know6.jpeg', tKey: 'blog6' },
@@ -117,7 +117,7 @@ const BlogsSection = () => {
                     <div className="p-6 flex flex-col grow">
 
                       {/* Date */}
-                      <Link href={`/blog/${blog.id}`} className="flex items-center text-[#CBCBCB] hover:text-red-500 transition-colors text-sm font-semibold mb-3 tracking-wider uppercase w-max">
+                      <Link href={`/blogs/${blog.id}`} className="flex items-center text-[#CBCBCB] hover:text-red-500 transition-colors text-sm font-semibold mb-3 tracking-wider uppercase w-max">
                         <Calendar className="w-4 h-4 mr-2" />
                         {t(`${blog.tKey}.date`)}
                       </Link>
@@ -139,7 +139,7 @@ const BlogsSection = () => {
                       </p>
 
                       {/* Read More Link */}
-                      <Link href={`/blog/${blog.id}`} className="inline-flex items-center gap-1.5 text-black font-bold mt-auto w-max group hover:opacity-80 transition-opacity">
+                      <Link href={`/blogs/${blog.id}`} className="inline-flex items-center gap-1.5 text-black font-bold mt-auto w-max group hover:opacity-80 transition-opacity">
                         <span>{t('readMore')}</span>
                         <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
                       </Link>

@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 
 const articles = [
   {
-    id: 1,
+    id: 'grilled-corn-sweet-smoky-juicy-perfection-for-just-5-99',
     image: '/images/juicy1.jpeg',
     heading: 'Grilled Corn – Sweet, Smoky & Juicy Perfection for Just $5.99',
     text: 'Introduction: Sweet, Smoky & Simply Delicious The feeling of the bite of a perfectly grilled corn is magical indeed. The […]',
@@ -15,7 +15,7 @@ const articles = [
     date: '2025-08-27',
   },
   {
-    id: 2,
+    id: 'creamy-coleslaw-a-cool-crunchy-classic-for-just-5-99',
     image: '/images/juicy2.jpeg',
     heading: 'Creamy Coleslaw – A Cool, Crunchy Classic for Just $5.99!',
     text: 'A Favourite Classic Side Dish Something about fresh cabbage and carrots in a creamy, sharp dressing feels so good, with […]',
@@ -23,7 +23,7 @@ const articles = [
     date: '2025-08-11',
   },
   {
-    id: 3,
+    id: 'peri-fries-recipe-crispy-spicy-snack-youll-crave-every-time',
     image: '/images/juicy3.jpeg',
     heading: 'Peri Fries Recipe: Crispy, Spicy Snack You’ll Crave Every Time',
     text: 'In the mood to spice up regular fries? Spice up your taste buds with Try Peri Fries, a perfect combination […]',
@@ -373,7 +373,7 @@ export const ExploreArticles = () => {
               {/* Content */}
               <div className="p-6 md:p-8 flex flex-col flex-1">
                 
-                <Link href={`/blog/${article.id}`} className="mb-4 text-white hover:text-[#FAC716] transition-colors duration-300 line-clamp-2" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px' }} >
+                <Link href={`/blogs/${article.id}`} className="mb-4 text-white hover:text-[#FAC716] transition-colors duration-300 line-clamp-2" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px' }} >
                   {article.heading}
                 </Link>
 
@@ -395,11 +395,11 @@ export const ExploreArticles = () => {
                 </div>
 
                 <div className="mt-auto pt-6 border-t border-gray-800 flex items-center justify-between">
-                  <Link href={`/blog/${article.id}`} className="text-[#CBCBCB] hover:text-white font-bold tracking-wider uppercase text-sm transition-colors">
+                  <Link href={`/blogs/${article.id}`} className="text-[#CBCBCB] hover:text-white font-bold tracking-wider uppercase text-sm transition-colors">
                     {article.date}
                   </Link>
                   
-                  <Link href={`/blog/${article.id}`} className="text-[#F2A93F] hover:text-white hover:bg-[#EB5250] px-2 py-1 -ml-2 rounded text-[16px] leading-4 font-semibold font-['Poppins',sans-serif] uppercase tracking-wider transition-all duration-300 w-max" >
+                  <Link href={`/blogs/${article.id}`} className="text-[#F2A93F] hover:text-white hover:bg-[#EB5250] px-2 py-1 -ml-2 rounded text-[16px] leading-4 font-semibold font-['Poppins',sans-serif] uppercase tracking-wider transition-all duration-300 w-max" >
                     {t('readMore')}
                   </Link>
                 </div>

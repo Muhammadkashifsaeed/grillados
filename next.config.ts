@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   typedRoutes: false,
   images: {
     qualities: [25, 50, 75, 100],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'grillados.ca',
+      },
+    ],
   },
   async headers() {
     return [
