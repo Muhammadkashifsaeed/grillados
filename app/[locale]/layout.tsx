@@ -174,7 +174,7 @@ export default async function RootLayout({
       <body className="min-h-screen flex flex-col bg-white" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <MobileOrderButton />
+          {/* <MobileOrderButton /> */}
           <main className="flex-1 pt-[84px] md:pt-20">{children}</main>
           <Footer />
         </NextIntlClientProvider>

@@ -33,7 +33,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center pt-10 pb-2 px-4 sm:px-6 lg:px-8 bg-white text-center">
         <h2
           style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 2.8vw, 28px)', lineHeight: 'clamp(24px, 3.6vw, 36px)', color: 'rgb(0,0,0)' }}
-          className="capitalize tracking-wide mb-6"
+          className="capitalize tracking-wide mb-6 w-full max-w-full break-words whitespace-normal px-2"
         >
           {t('headingStart')} <span className="text-[#fbbc04]">{t('headingHighlight')}</span>
         </h2>

@@ -59,7 +59,7 @@ body {
 }
 
 .animate-text-shimmer {
-  background: linear-gradient(to right, #ffffff 30%, #000000 50%, #ffffff 70%);
+  background: linear-gradient(to right, #ffffff 30%, #FAC716 50%, #ffffff 70%);
   background-size: 200% auto;
   color: transparent;
   -webkit-background-clip: text;
