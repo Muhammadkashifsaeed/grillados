@@ -21,7 +21,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full h-[84px] md:h-20 bg-black/80 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.6)] border-b border-white/5 transition-all duration-500">
+    <header className="fixed top-0 left-0 z-50 w-full h-[84px] md:h-20 bg-black/80 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.6)] border-b border-white/5 transition-all duration-500">
       <div className="max-w-375 mx-auto px-3 sm:px-4 lg:px-5 h-full flex items-center justify-between gap-2 lg:gap-4">
         
         {/* Left Side: Logo */}

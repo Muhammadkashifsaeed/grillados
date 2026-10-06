@@ -175,7 +175,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Header />
           <MobileOrderButton />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 pt-[84px] md:pt-20">{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>
