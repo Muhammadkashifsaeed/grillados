@@ -99,7 +99,7 @@ const BlogsSection = () => {
                   className="px-2"
                   style={{ minWidth: `calc(100% / ${itemsPerView})` }}
                 >
-                  <div className="bg-white shadow-md overflow-hidden h-full flex flex-col border border-gray-100 rounded-2xl">
+                  <div className="bg-white shadow-md overflow-hidden h-auto flex flex-col border border-gray-100 rounded-2xl">
 
                     {/* Blog Image */}
                     <div className="w-full bg-white overflow-hidden border-b border-gray-100">
@@ -114,7 +114,7 @@ const BlogsSection = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="p-6 flex flex-col grow">
+                    <div className="px-6 pt-6 pb-3 flex flex-col grow">
 
                       {/* Date */}
                       <Link href={`/blogs/${blog.id}`} className="flex items-center mb-3 w-max underline hover:text-red-500 transition-colors group" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: '#000000' }}>
