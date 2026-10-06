@@ -132,14 +132,14 @@ const BlogsSection = () => {
 
                       {/* Description */}
                       <p 
-                        className="mb-6 grow line-clamp-2"
+                        className="mb-2 line-clamp-2"
                         style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '15px', lineHeight: '25px', color: '#000000' }}
                       >
                         {t(`${blog.tKey}.description`)}
                       </p>
 
                       {/* Read More Link */}
-                      <Link href={`/blogs/${blog.id}`} className="inline-flex items-center gap-1.5 text-black font-bold mt-auto w-max group hover:opacity-80 transition-opacity">
+                      <Link href={`/blogs/${blog.id}`} className="inline-flex items-center gap-1.5 text-black font-bold w-max group hover:opacity-80 transition-opacity">
                         <span>{t('readMore')}</span>
                         <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
                       </Link>
