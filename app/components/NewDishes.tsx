@@ -20,12 +20,36 @@ const NewDishes = () => {
         <div className="w-full aspect-video md:aspect-auto md:h-full md:min-h-[300px] relative overflow-hidden order-1 bg-black group flex items-center justify-center">
           <iframe
             ref={iframeRef}
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&cc_load_policy=0&showinfo=0&enablejsapi=1`}
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&cc_load_policy=0&showinfo=0&enablejsapi=1`}
             title="Grillados New Dishes"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            className="w-full h-full md:aspect-video opacity-95 transition-opacity duration-700"
+            className="w-full h-full md:aspect-video opacity-95 transition-opacity duration-700 pointer-events-none"
             style={{ border: 'none' }}
           ></iframe>
+          
+          {/* Custom Play/Pause Overlay on Hover */}
+          <div 
+            className="absolute inset-0 z-20 flex items-center justify-center cursor-pointer opacity-0 hover:opacity-100 transition-opacity duration-300"
+            onClick={() => {
+              if (iframeRef.current && iframeRef.current.contentWindow) {
+                const command = isPlaying ? 'pauseVideo' : 'playVideo';
+                iframeRef.current.contentWindow.postMessage(JSON.stringify({ event: 'command', func: command, args: [] }), '*');
+                setIsPlaying(!isPlaying);
+              }
+            }}
+          >
+            <div className="flex items-center justify-center transition-transform duration-300 hover:scale-110 drop-shadow-2xl bg-black/40 rounded-full p-4">
+              {isPlaying ? (
+                <svg className="w-12 h-12 sm:w-16 sm:h-16 text-white drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                </svg>
+              ) : (
+                <svg className="w-12 h-12 sm:w-16 sm:h-16 text-white drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              )}
+            </div>
+          </div>
 
           {/* Subtle Vignette Overlay for premium look */}
           <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_50px_rgba(0,0,0,0.6)] z-10"></div>
