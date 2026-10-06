@@ -16,7 +16,7 @@ export default function Home() {
   const t = useTranslations('Newsletter');
 
   return (
-    <main className="flex flex-col flex-1 min-h-screen bg-white overflow-hidden">
+    <main className="flex flex-col flex-1 min-h-screen bg-white overflow-x-clip">
       <HeroSection />
       <NewDishesSection />
       <NewDishes />

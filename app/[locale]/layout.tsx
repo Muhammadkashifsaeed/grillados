@@ -162,7 +162,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${inter.variable} ${notoSans.variable} ${poppins.variable} ${albertSans.variable} h-full antialiased font-sans`}
+      className={`${inter.variable} ${notoSans.variable} ${poppins.variable} ${albertSans.variable} antialiased font-sans`}
       suppressHydrationWarning
     >
       <head>
@@ -171,7 +171,7 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-white" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-white overflow-x-clip" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Header />
           <MobileOrderButton />
