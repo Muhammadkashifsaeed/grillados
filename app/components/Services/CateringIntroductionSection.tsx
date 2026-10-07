@@ -15,7 +15,7 @@ const CateringIntroductionSection = () => {
       <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col md:flex-row gap-16 items-center">
         
         {/* Left Side - Text */}
-        <div className="w-full md:w-[54%] flex flex-col pl-2 md:pl-6 lg:pl-10">
+        <div className="w-full md:w-[52%] flex flex-col pl-2 md:pl-4 lg:pl-8">
           
           {/* Heading */}
           <motion.div 
@@ -70,8 +70,8 @@ const CateringIntroductionSection = () => {
 
         </div>
 
-        {/* Right Side - Video (Fixed static without animation, increased size, sharp corners) */}
-        <div className="hidden md:flex md:w-[42%] lg:w-[38%] max-w-[440px] mx-auto justify-center shrink-0">
+        {/* Right Side - Video (Fixed static, increased size by +6%, sharp corners) */}
+        <div className="hidden md:flex md:w-[45%] lg:w-[40%] max-w-[466px] mx-auto justify-center shrink-0">
           <div className="relative w-full aspect-[9/16] shadow-2xl overflow-hidden border-4 border-white rounded-none">
             <video
               className="w-full h-full object-cover"

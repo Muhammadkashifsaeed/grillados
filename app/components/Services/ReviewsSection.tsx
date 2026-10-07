@@ -12,7 +12,7 @@ const getReviewsData = (t: any) => [
   { avatarSrc: "/images/Mohamed Nagy.png", name: "Mohamed Nagy",     date: `7 ${t('monthsAgo')}`, review: t('ratingOnly') },
   { avatarSrc: "/images/mansnsjd.png",     name: "Jeremias Almazan", date: `7 ${t('monthsAgo')}`, review: t('review5') },
   { avatarSrc: "/images/mnsnds.png",       name: "Ashmit Samyal",    date: `7 ${t('monthsAgo')}`, review: t('ratingOnly') },
-  { avatarSrc: "/images/Aarif Amin.png",   name: "Aarif Amin",       date: `7 ${t('monthsAgo')}`, review: t('ratingOnly') },
+  { avatarSrc: "/images/aarif-amin.png",   name: "Aarif Amin",       date: `7 ${t('monthsAgo')}`, review: t('ratingOnly') },
 ];
 
 const ReviewsSection = () => {
