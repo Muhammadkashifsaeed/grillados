@@ -40,8 +40,8 @@ const CateringIntroductionSection = () => {
 
           {/* Paragraphs */}
           <div 
-            className="space-y-6 text-left"
-            style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
+            className="space-y-7 md:space-y-8 text-left"
+            style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '30px', color: 'rgb(0, 0, 0)' }}
           >
             {paragraphs.map((pKey, index) => {
               const text = t(pKey);
@@ -70,15 +70,15 @@ const CateringIntroductionSection = () => {
 
         </div>
 
-        {/* Right Side - Video (Reduced width & height on desktop) */}
+        {/* Right Side - Video (Increased size, non-rounded sharp corners) */}
         <motion.div 
-          className="hidden md:flex md:w-[30%] lg:w-[26%] max-w-[290px] mx-auto justify-center scale-[0.88] transform-gpu shrink-0"
+          className="hidden md:flex md:w-[36%] lg:w-[32%] max-w-[360px] mx-auto justify-center transform-gpu shrink-0"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="relative w-full aspect-[9/16] shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.02] border-4 border-white rounded-2xl">
+          <div className="relative w-full aspect-[9/16] shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.02] border-4 border-white rounded-none">
             <video
               className="w-full h-full object-cover"
               src="https://grillados.ca/wp-content/uploads/2025/04/Add-2-reel.mp4"
