@@ -14,8 +14,8 @@ const CateringIntroductionSection = () => {
     <section className="hidden md:block w-full bg-white overflow-hidden">
       <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col md:flex-row gap-16 items-center">
         
-        {/* Left Side - Text (Shifted rightward with padding) */}
-        <div className="w-full md:w-[58%] flex flex-col pl-4 md:pl-10 lg:pl-16 xl:pl-20">
+        {/* Left Side - Text */}
+        <div className="w-full md:w-[54%] flex flex-col pl-2 md:pl-6 lg:pl-10">
           
           {/* Heading */}
           <motion.div 
@@ -70,15 +70,9 @@ const CateringIntroductionSection = () => {
 
         </div>
 
-        {/* Right Side - Video (Increased size, non-rounded sharp corners) */}
-        <motion.div 
-          className="hidden md:flex md:w-[36%] lg:w-[32%] max-w-[360px] mx-auto justify-center transform-gpu shrink-0"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <div className="relative w-full aspect-[9/16] shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.02] border-4 border-white rounded-none">
+        {/* Right Side - Video (Fixed static without animation, increased size, sharp corners) */}
+        <div className="hidden md:flex md:w-[42%] lg:w-[38%] max-w-[440px] mx-auto justify-center shrink-0">
+          <div className="relative w-full aspect-[9/16] shadow-2xl overflow-hidden border-4 border-white rounded-none">
             <video
               className="w-full h-full object-cover"
               src="https://grillados.ca/wp-content/uploads/2025/04/Add-2-reel.mp4"
@@ -90,7 +84,7 @@ const CateringIntroductionSection = () => {
               aria-label="Grillado Catering Promotional Video"
             />
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>
