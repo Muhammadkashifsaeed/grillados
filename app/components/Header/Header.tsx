@@ -21,7 +21,10 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full h-[84px] md:h-20 bg-black/80 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.6)] border-b border-white/5 transition-all duration-500">
+    <header 
+      className="fixed top-0 left-0 z-50 w-full h-[84px] md:h-20 bg-[#1F1813] backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.6)] border-b border-white/10 transition-all duration-500"
+      style={{ backgroundColor: '#1F1813' }}
+    >
       <div className="max-w-375 mx-auto px-3 sm:px-4 lg:px-5 h-full flex items-center justify-between gap-2 lg:gap-4">
         
         {/* Left Side: Logo */}
@@ -54,7 +57,7 @@ export const Header = () => {
                 <NavItem href="/pages" icon={<FileText className="w-3 h-3 xl:w-4 xl:h-4" />} label={t('pages')} dropdown />
               </div>
 
-              <div className="absolute left-1/2 -translate-x-1/2 top-12.5 flex flex-col w-48 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
+              <div className="absolute left-1/2 -translate-x-1/2 top-12.5 flex flex-col w-48 bg-[#1F1813] backdrop-blur-2xl border border-white/10 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50" style={{ backgroundColor: '#1F1813' }}>
                 {[
                   { href: '/franchising', label: t('franchising') },
                   { href: '/gallery', label: t('gallery') },

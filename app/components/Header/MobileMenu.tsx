@@ -50,9 +50,10 @@ export const MobileMenu = () => {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-[100dvh] w-[80vw] sm:w-87.5 bg-black border-l border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-[100dvh] w-[80vw] sm:w-87.5 bg-[#1F1813] border-l border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } flex flex-col`}
+        style={{ backgroundColor: '#1F1813' }}
       >
         <div className="flex justify-between items-center p-5 border-b border-white/10">
           <Image
