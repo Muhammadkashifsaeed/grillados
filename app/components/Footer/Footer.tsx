@@ -62,7 +62,7 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className="relative w-full overflow-hidden text-white">
+      <footer className="relative w-full overflow-hidden text-white border-t border-white/20">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
