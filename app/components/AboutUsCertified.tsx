@@ -35,11 +35,11 @@ const AboutUsCertified = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6 text-center">
           
           {cards.map((card) => (
-            <div key={card.id} className="flex flex-col items-center group border-2 border-gray-200 rounded-xl p-4 sm:p-5 shadow-md bg-white hover:shadow-xl transition-shadow">
-              <div className="relative w-16 h-16 sm:w-20 sm:h-20 mb-3">
+            <div key={card.id} className="flex flex-col items-center group border border-gray-200/80 rounded-2xl p-6 shadow-sm bg-white hover:shadow-md transition-all">
+              <div className="relative w-16 h-16 sm:w-20 sm:h-20 mb-4">
                 <Image 
                   src={card.image} 
                   alt={card.heading} 
