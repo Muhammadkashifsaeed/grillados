@@ -55,11 +55,26 @@ export const Header = () => {
               </div>
 
               <div className="absolute left-1/2 -translate-x-1/2 top-12.5 flex flex-col w-48 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
-                <Link href="/franchising" className="px-5 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase">{t('franchising')}</Link>
-                <Link href="/gallery" className="px-5 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase">{t('gallery')}</Link>
-                <Link href="/blogs" className="px-5 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase">{t('blogs')}</Link>
-                <Link href="/about-us" className="px-5 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase">{t('aboutUs')}</Link>
-                <Link href="/contact-us" className="px-5 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase">{t('contactUs')}</Link>
+                {[
+                  { href: '/franchising', label: t('franchising') },
+                  { href: '/gallery', label: t('gallery') },
+                  { href: '/blogs', label: t('blogs') },
+                  { href: '/about-us', label: t('aboutUs') },
+                  { href: '/contact-us', label: t('contactUs') }
+                ].map((item) => {
+                  const isSubActive = pathname === item.href || (pathname.startsWith(item.href) && item.href !== '/');
+                  return (
+                    <Link 
+                      key={item.href} 
+                      href={item.href} 
+                      className={`px-5 py-3 transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase ${
+                        isSubActive ? 'text-[#E9A33C] bg-white/5 font-extrabold' : 'text-white/90 hover:bg-white/10 hover:text-[#E9A33C]'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
 

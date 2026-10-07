@@ -112,8 +112,8 @@ export const Footer = () => {
             <div className="w-full grid grid-cols-2 gap-4 sm:gap-8 lg:col-span-2">
               {/* Column 2 */}
               <div className="flex flex-col gap-3 lg:gap-6">
-                <h3 className="text-base sm:text-xl font-bold tracking-wider capitalize">{t('menuHeading')}</h3>
-                <ul className="flex flex-col gap-2 lg:gap-4">
+                <h3 className="text-base sm:text-xl font-bold tracking-wider uppercase">{t('menuHeading')}</h3>
+                <ul className="flex flex-col gap-2 lg:gap-4 uppercase">
                   <li><Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('orderOnline')}</Link></li>
                   <li><Link href="/franchising" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('franchising')}</Link></li>
                   <li><Link href="/about-us" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('aboutUs')}</Link></li>
@@ -124,7 +124,7 @@ export const Footer = () => {
               {/* Column 3 */}
               <div className="flex flex-col gap-3 lg:gap-6">
                 <h3 className="text-base sm:text-xl font-bold tracking-wider capitalize">{t('locationsHeading')}</h3>
-                <ul className="flex flex-col gap-2 lg:gap-4">
+                <ul className="flex flex-col gap-2 lg:gap-4 uppercase">
                   <li><a href="tel:+15196217771" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('cambridge')}</a></li>
                   <li><a href="tel:+14506883399" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('laval')}</a></li>
                   <li><a href="tel:+19058787770" className="hover:text-[#FAC716] transition-colors duration-300 text-sm sm:text-base">{t('milton')}</a></li>
@@ -142,7 +142,7 @@ export const Footer = () => {
                 height={120}
                 className="w-24 h-auto"
               />
-              <ul className="flex flex-col gap-4 mt-2">
+              <ul className="flex flex-col gap-4 mt-2 uppercase">
                 <li><Link href="/terms" className="hover:text-[#FAC716] transition-colors duration-300 text-sm">{t('termsAndConditions')}</Link></li>
                 <li><Link href="/privacy" className="hover:text-[#FAC716] transition-colors duration-300 text-sm">{t('privacyPolicy')}</Link></li>
               </ul>
@@ -153,7 +153,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="relative z-10 w-full bg-black/40 backdrop-blur-md py-4 px-4 flex items-center justify-center border-t border-white/10">
-          <p className="text-center text-sm tracking-wide text-white/90">
+          <p className="text-center text-sm tracking-wide text-white/90 uppercase">
             {t('copyright')}
           </p>
         </div>

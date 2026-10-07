@@ -24,13 +24,13 @@ export default function WeddingCateringSection() {
           className="flex flex-col items-center justify-center text-center order-1 md:order-1 px-6 md:px-12 lg:px-20 xl:px-24 py-8 md:py-10"
         >
           {/* Divider */}
-          <div className="w-37.5 mb-6 flex justify-center">
+          <div className="w-36 mb-6 flex justify-center">
              <Image 
                src="/images/catering.png" 
                alt="Divider" 
                width={200} 
                height={20} 
-               className="w-full h-auto object-contain"
+               className="w-full h-auto object-contain scale-[0.96]"
              />
           </div>
 

@@ -17,7 +17,7 @@ export const NavItem: React.FC<NavItemProps> = ({ href, icon, label, dropdown, .
     <Link
       href={href}
       className={`flex items-center gap-1 lg:gap-1.5 transition-all duration-300 font-bold text-xs md:text-sm lg:text-[11px] xl:text-xs 2xl:text-sm tracking-wide uppercase whitespace-nowrap px-1.5 md:px-2 py-1 rounded-md ${
-        isActive ? 'text-[#FAC716] drop-shadow-[0_0_8px_rgba(216,172,21,0.8)]' : 'text-white/80 hover:text-white group-hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]'
+        isActive ? 'text-[#E9A33C] drop-shadow-[0_0_8px_rgba(233,163,60,0.8)]' : 'text-white/80 hover:text-[#E9A33C] group-hover:text-[#E9A33C] hover:drop-shadow-[0_0_8px_rgba(233,163,60,0.5)]'
       }`}
       {...props}
     >

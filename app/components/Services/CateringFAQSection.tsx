@@ -3,14 +3,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { Plus, Minus } from 'lucide-react';
 
 const CateringFAQSection = () => {
   const t = useTranslations('CateringFAQ');
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  // Since FAQs is an array of objects in the translation file, we can map over it.
-  // In next-intl, to access arrays, we usually use `raw` if configured, or map over a known length.
-  // Alternatively, we can use `t.raw('faqs')`.
   const faqs = t.raw('faqs') as { q: string; a: string }[];
 
   const toggleFAQ = (index: number) => {
@@ -18,45 +16,41 @@ const CateringFAQSection = () => {
   };
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white border-t border-gray-100">
-      <div className="max-w-4xl mx-auto px-6 md:px-8">
+    <section className="w-full py-16 md:py-24 bg-white border-t border-gray-100 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto flex flex-col items-center">
         
-        {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 
-            className="capitalize tracking-wide"
-            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(29px, 4.8vw, 48px)', lineHeight: 'clamp(42px, 6.5vw, 65px)', color: 'rgb(0, 0, 0)' }}
-          >
-            {t('heading')}
-          </h2>
-          <div className="w-24 h-1 bg-[#E02A2B] mx-auto mt-4 rounded-full"></div>
-        </div>
+        {/* Section Heading */}
+        <h2 className="text-[#000000] text-3xl sm:text-4xl md:text-[45px] leading-tight md:leading-[60px] font-semibold font-['Ribeat',sans-serif] text-center mb-4 capitalize">
+          {t('heading')}
+        </h2>
+        
+        {/* Divider */}
+        <div className="w-22.5 h-[2px] bg-red-600 mb-12 rounded-full" />
 
-        {/* FAQs */}
-        <div className="flex flex-col gap-4">
+        {/* FAQ Accordion - Line Divider Style like Franchising Page */}
+        <div className="w-full flex flex-col gap-4">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             
             return (
               <div 
                 key={index}
-                className="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+                className={`w-full border-b border-gray-200 py-4 overflow-hidden transition-all duration-300 ${isOpen ? 'bg-gray-50/50 rounded-xl px-4' : ''}`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none"
+                  className="w-full flex items-center justify-between text-left focus:outline-none"
                 >
-                  <span className="font-semibold text-lg md:text-xl text-gray-900 pr-8">
+                  <span className="text-lg md:text-xl font-bold text-gray-800 pr-8">
                     {faq.q}
                   </span>
                   
-                  {/* Plus/Minus Icon */}
-                  <span className={`shrink-0 flex items-center justify-center text-xl font-bold leading-none w-6 h-6 ${isOpen ? 'text-black bg-transparent' : 'bg-[#EB5250] text-white rounded-full'}`}>
-                    {isOpen ? '−' : '+'}
-                  </span>
+                  <div className={`flex-shrink-0 flex items-center justify-center w-6 h-6 transition-transform duration-300 ${isOpen ? 'text-black bg-transparent' : 'bg-[#EB5250] text-white rounded-full'}`}>
+                    {isOpen ? <Minus size={18} /> : <Plus size={18} />}
+                  </div>
                 </button>
                 
-                <AnimatePresence>
+                <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
@@ -64,9 +58,9 @@ const CateringFAQSection = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 pt-1 text-gray-700 text-base md:text-lg leading-relaxed border-t border-gray-100/50 mt-1">
+                      <p className="pt-4 text-gray-600 text-base md:text-base leading-relaxed whitespace-pre-line">
                         {faq.a}
-                      </div>
+                      </p>
                     </motion.div>
                   )}
                 </AnimatePresence>

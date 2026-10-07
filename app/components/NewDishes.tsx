@@ -67,7 +67,7 @@ const NewDishes = () => {
           <div className="text-center">
             <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 2.8vw, 28px)', lineHeight: 'clamp(24px, 3.6vw, 36px)' }}
-              className="mb-2 transform -rotate-2 inline-block text-center tracking-wide capitalize"
+              className="mb-2 transform -rotate-2 inline-block text-center tracking-wide uppercase"
             >
               {t('heading')}
             </motion.h2>

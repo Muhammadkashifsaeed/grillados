@@ -68,12 +68,12 @@ export default function LocationsPage() {
         <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-24 pt-16">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full mb-24 pt-16">
         
         {/* Header Section */}
         <div className="mb-12 md:mb-16 flex flex-col items-center">
           <h1 
-            className="capitalize tracking-widest text-center drop-shadow-xl"
+            className="capitalize tracking-wide text-center drop-shadow-xl"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(28px, 4vw, 40px)', lineHeight: 'clamp(36px, 5vw, 48px)', color: 'rgb(255,255,255)' }}
           >
             {t('availableLocations')}
@@ -82,7 +82,7 @@ export default function LocationsPage() {
         </div>
 
         {/* Locations Grid */}
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-5">
           {displayLocations.map((loc, index) => (
             <LocationCard
               key={loc.name}

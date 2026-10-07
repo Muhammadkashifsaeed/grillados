@@ -13,7 +13,7 @@ export default function FranchisingContent() {
         
         {/* Heading */}
         <h2 
-          className="text-center capitalize tracking-wide mb-4 drop-shadow-sm"
+          className="text-center uppercase tracking-wide mb-4 drop-shadow-sm"
           style={{ fontFamily: "'Ribeat', sans-serif", fontWeight: 600, color: 'rgb(23, 23, 23)', fontSize: 'clamp(22px, 3.2vw, 32px)', lineHeight: 'clamp(26px, 4vw, 40px)' }}
         >
           {t('whatWeDo')}
@@ -32,8 +32,8 @@ export default function FranchisingContent() {
         <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-16 items-center justify-between">
           
           {/* Left Side: Images */}
-          <div className="w-full lg:w-1/2 flex flex-row gap-6 justify-center items-center py-8">
-            <div className="relative flex-1 w-full h-70 sm:h-87.5 md:h-100 rounded-[6%] overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.1)] -translate-y-6">
+          <div className="w-full lg:w-1/2 flex flex-row gap-3.5 sm:gap-6 justify-center items-center py-8">
+            <div className="relative flex-1 w-full h-[294px] sm:h-[368px] md:h-[420px] rounded-2xl overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.1)] -translate-y-6">
               <Image 
                 src="/images/Nos1.png" 
                 alt="Grillados Franchise Example 1" 
@@ -41,7 +41,7 @@ export default function FranchisingContent() {
                 className="object-cover" 
               />
             </div>
-            <div className="relative flex-1 w-full h-70 sm:h-87.5 md:h-100 rounded-[6%] overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.1)] translate-y-6">
+            <div className="relative flex-1 w-full h-[294px] sm:h-[368px] md:h-[420px] rounded-2xl overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.1)] translate-y-6">
               <Image 
                 src="/images/Nos2.jpg" 
                 alt="Grillados Franchise Example 2" 

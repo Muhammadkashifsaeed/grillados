@@ -11,9 +11,18 @@ export default function FranchisingJoinTeam() {
 
   const StepItem = ({ num }: { num: number }) => (
     <div className="flex flex-col gap-2 mb-10">
-      <h3 className="text-[#FAC716] text-5 leading-6.5 font-semibold font-['Ribeat',sans-serif] uppercase">
+      <h3 
+        className="uppercase"
+        style={{ 
+          fontFamily: "'Ribeat', sans-serif", 
+          fontStyle: 'normal', 
+          fontWeight: 600, 
+          fontSize: '20px', 
+          lineHeight: '26px' 
+        }}
+      >
         <span className="text-black">{t(`step${num}_num`)} </span>
-        <span>{t(`step${num}_title`)}</span>
+        <span style={{ color: 'rgb(250, 199, 22)' }}>{t(`step${num}_title`)}</span>
       </h3>
       <p className="text-gray-500 text-base md:text-base leading-relaxed">
         {t(`step${num}_desc`)}

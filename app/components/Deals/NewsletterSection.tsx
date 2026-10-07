@@ -33,7 +33,7 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section className="relative w-full min-h-200 flex items-center justify-center py-10 px-4 overflow-hidden">
+    <section className="relative w-full flex items-center justify-center py-10 sm:py-12 md:py-16 lg:py-20 px-0 sm:px-4 overflow-hidden">
       
       {/* Background Texture identical to Menu/Deals background */}
       <div 
@@ -53,7 +53,7 @@ export default function NewsletterSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 w-full max-w-175 bg-white rounded-3xl shadow-2xl p-8 md:p-14 lg:p-16 flex flex-col items-center mx-auto"
+        className="relative z-10 w-full md:max-w-175 bg-white rounded-none sm:rounded-3xl shadow-2xl p-6 sm:p-9 md:p-11 lg:p-13 flex flex-col items-center mx-auto"
       >
         
         {/* Heading */}
@@ -62,11 +62,11 @@ export default function NewsletterSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center tracking-tight mb-6 max-w-2xl mx-auto"
-          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3.2vw, 32px)', lineHeight: 'clamp(26px, 4vw, 40px)' }}
+          className="text-center tracking-tight mb-5 md:mb-6 max-w-[340px] sm:max-w-2xl mx-auto px-4 sm:px-0"
+          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(21px, 5vw, 32px)', lineHeight: 'clamp(27px, 5.8vw, 40px)' }}
         >
-          {t('headingStart')} <span className="text-[#FAC716]">{t('headingHighlight')}</span>{t('headingEnd')}<br />
-          {t('headingEnd2')}
+          {t('headingStart')} <span className="text-[#FAC716]">{t('headingHighlight')}</span>{t('headingEnd')}<br className="hidden sm:block" />
+          {' '}{t('headingEnd2')}
         </motion.h2>
 
         {/* Description */}
@@ -75,11 +75,10 @@ export default function NewsletterSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-10 max-w-xl mx-auto"
-          style={{ fontFamily: "var(--font-albert-sans), 'Albert Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px' }}
+          className="text-center mb-6 md:mb-8 max-w-[285px] sm:max-w-xl mx-auto px-2 sm:px-0 text-sm sm:text-base leading-relaxed sm:leading-[26px]"
+          style={{ fontFamily: "var(--font-albert-sans), 'Albert Sans', sans-serif", fontStyle: 'normal', fontWeight: 400 }}
         >
-          {t('descriptionLine1')}<br />
-          {t('descriptionLine2')}
+          {t('descriptionLine1')} {t('descriptionLine2')}
         </motion.p>
 
         {/* Form Container */}

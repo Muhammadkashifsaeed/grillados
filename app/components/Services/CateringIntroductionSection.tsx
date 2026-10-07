@@ -11,7 +11,7 @@ const CateringIntroductionSection = () => {
   const paragraphs = ['p1', 'p2', 'p3', 'p4', 'p5'];
 
   return (
-    <section className="w-full bg-white overflow-hidden">
+    <section className="hidden md:block w-full bg-white overflow-hidden">
       <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col md:flex-row gap-16 items-center">
         
         {/* Left Side - Text */}
@@ -60,9 +60,9 @@ const CateringIntroductionSection = () => {
 
         </div>
 
-        {/* Right Side - Video */}
+        {/* Right Side - Video (Hidden on mobile, 6% smaller width & height on desktop) */}
         <motion.div 
-          className="w-[90%] sm:w-[70%] md:w-[40%] lg:w-[35%] mx-auto flex justify-center md:justify-center"
+          className="hidden md:flex md:w-[37.6%] lg:w-[32.9%] mx-auto justify-center scale-[0.94] transform-gpu"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}

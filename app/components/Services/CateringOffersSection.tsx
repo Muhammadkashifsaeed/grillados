@@ -51,11 +51,11 @@ const CateringOffersSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-10 md:gap-16 pb-16">
+        <div className="flex flex-col gap-10 md:gap-16 pb-16 max-w-[920px] mx-auto w-full">
           {offers.map((offer, index) => (
             <div 
               key={index} 
-              className="sticky"
+              className="sticky w-full"
               style={{ top: '120px', zIndex: 10 + index }}
             >
               <CateringOfferCard 

@@ -1,6 +1,6 @@
 {
   "NewDishesSection": {
-    "heading": "The New Grillados Dishes"
+    "heading": "THE NEW GRILLADOS DISHES"
   },
   "Header": {
     "menu": "Menu",
@@ -24,37 +24,37 @@
     "viewMenu": "View Menu"
   },
   "NewDishes": {
-    "heading": "The New Grillados Dishes",
+    "heading": "THE NEW GRILLADOS DISHES",
     "description": "These dishes bring a new excitement to Grillado’s, each offering an unforgettable blend of flavors that will make every visit truly special.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
   "ChickenSpecials": {
-    "title": "Grillado's Chicken Specials",
+    "title": "GRILLADO'S CHICKEN SPECIALS",
     "desc": "Grillado’s special dishes feature a unique selection of grilled chicken recipes that reveal bold flavors and fresh ingredients. Each specialty offers a carefully crafted combination of marinated chicken, meats, and seasonal vegetables, grilled to perfection.",
     "order": "Order Now",
     "learnMore": "Learn More"
   },
   "BeefLambSpecials": {
-    "heading": "Grillado's Beef & Lamb Specials",
+    "heading": "GRILLADO'S BEEF & LAMB SPECIALS",
     "description": "Grillado's Beef & Lamb Specials offer a mouthwatering selection of tender, perfectly seasoned cuts, expertly grilled to perfection. From juicy steaks to succulent lamb chops, each dish is crafted with high-quality ingredients and bold flavors, ensuring a memorable dining experience for meat lovers.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
   "Sandwiches": {
-    "heading": "Sandwiches / Pitas / Wraps",
+    "heading": "SANDWICHES / PITAS / WRAPS",
     "description": "Our Sandwiches, Pitas, and Wraps offer a delightful variety of flavors and textures, perfect for any meal or snack. Each option features fresh, high-quality ingredients, from tender meats and vibrant veggies to zesty sauces and flavorful spreads.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
   "Platters": {
-    "heading": "Grillado's Platters",
+    "heading": "GRILLADO'S PLATTERS",
     "description": "Grillado’s platters feature a beautifully arranged selection of grilled meats. Ideal for gatherings or a hearty meal, these platters showcase the full expertise of our grilling art.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
   },
   "Appetizers": {
-    "heading": "Appetizers",
+    "heading": "APPETIZERS",
     "description": "Grillado's appetizers are flavorful, grilled bites that showcase a variety of ingredients, often skewered for easy enjoyment. These appetizers typically feature marinated vegetables, meats, or seafood, cooked to perfection over an open flame, enhancing their natural flavors with a smoky char.",
     "orderNow": "Order Now",
     "learnMore": "Learn More"
@@ -242,8 +242,8 @@
     "orderNow": "Order Now"
   },
   "FranchisingPage": {
-    "heroHeading": "Franchise",
-    "whatWeDo": "What we will do",
+    "heroHeading": "Franchising",
+    "whatWeDo": "WHAT WE WILL DO",
     "whatWeDoSub": "To assure your success",
     "p1_1": "Grillado’s™ Head Office will ensure the success of each location by offering our franchisees a ",
     "p1_highlight": "Turn-key Solution.",

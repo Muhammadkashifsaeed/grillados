@@ -46,7 +46,7 @@ export default function GiftCardsSection() {
               src="/images/simply.png"
               alt="Simply Gift"
               fill
-              className="object-contain"
+              className="object-contain scale-[0.96]"
               sizes="130px"
             />
           </motion.div>

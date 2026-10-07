@@ -33,7 +33,7 @@ export default function LocationCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
-      className="flex flex-col lg:flex-row items-stretch w-full mx-auto max-w-lg lg:max-w-none rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-white border border-gray-200"
+      className="flex flex-col lg:flex-row items-stretch w-full mx-auto max-w-2xl lg:max-w-none rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-white border border-gray-200"
     >
       {/* Image Container Link */}
       <a 
@@ -46,7 +46,7 @@ export default function LocationCard({
           src={image}
           alt={`Grillado's ${name}`}
           fill
-          className="w-full h-full object-cover object-center rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover object-center rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl"
           sizes="(max-width: 1024px) 100vw, 40vw"
           priority={index === 0}
         />
@@ -70,12 +70,12 @@ export default function LocationCard({
             href={mapLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-start gap-2.5 group"
+            className="flex items-start gap-2.5"
           >
             <div className="mt-0.5 shrink-0">
-              <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4 text-orange-500 group-hover:scale-110 transition-transform" />
+              <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4 text-orange-500" />
             </div>
-            <p className="text-[#0a0a0a] text-xs md:text-sm lg:text-base font-medium leading-relaxed group-hover:text-orange-500 transition-colors">
+            <p className="text-[#0a0a0a] text-xs md:text-sm lg:text-base font-medium leading-relaxed">
               {address.split(',').map((part, i, arr) => (
                 <React.Fragment key={i}>
                   {part.trim()}
@@ -88,12 +88,12 @@ export default function LocationCard({
           {/* Phone Link */}
           <a
             href={phoneLink}
-            className="flex items-center gap-2.5 group"
+            className="flex items-center gap-2.5"
           >
             <div className="shrink-0">
-              <Phone className="w-3.5 h-3.5 md:w-4 md:h-4 text-orange-500 group-hover:scale-110 transition-transform" />
+              <Phone className="w-3.5 h-3.5 md:w-4 md:h-4 text-orange-500" />
             </div>
-            <p className="text-[#0a0a0a] text-xs md:text-sm lg:text-base font-medium group-hover:text-orange-500 transition-colors">
+            <p className="text-[#0a0a0a] text-xs md:text-sm lg:text-base font-medium">
               {phone}
             </p>
           </a>

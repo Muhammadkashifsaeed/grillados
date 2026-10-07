@@ -60,14 +60,14 @@ export default function DealsPage() {
               {dealImages.map((image, index) => (
                 <div 
                   key={index} 
-                  className="flex-[0_0_100%] min-w-0 relative w-full aspect-video md:aspect-[21/9] lg:aspect-[21/9]"
+                  className="flex-[0_0_100%] min-w-0 relative w-full aspect-[21/9] md:aspect-[21/9]"
                 >
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
                     priority={index === 0}
-                    className="object-contain md:object-cover"
+                    className="object-cover"
                     sizes="100vw"
                   />
                 </div>
@@ -86,7 +86,7 @@ export default function DealsPage() {
           </button>
 
           {/* Navigation Dots */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-3 z-20">
+          <div className="absolute bottom-2 sm:bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2 sm:gap-3 z-20">
             {dealImages.map((_, idx) => (
               <button
                 key={idx}

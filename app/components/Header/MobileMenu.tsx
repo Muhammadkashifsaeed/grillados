@@ -83,7 +83,7 @@ export const MobileMenu = () => {
           <div className="flex flex-col">
             <button 
               onClick={() => setIsPagesOpen(!isPagesOpen)}
-              className="flex items-center justify-between w-full text-white hover:text-[#FAC716] transition-colors py-2"
+              className="flex items-center justify-between w-full text-white hover:text-[#E9A33C] transition-colors py-2"
             >
               <div className="flex items-center gap-1.5 font-bold text-sm tracking-wide uppercase">
                 <FileText className="w-5 h-5 opacity-90" />
@@ -93,11 +93,27 @@ export const MobileMenu = () => {
             </button>
             {isPagesOpen && (
               <div className="flex flex-col pl-6 mt-2 gap-3 border-l border-white/10 ml-2">
-                <Link href="/franchising" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#FAC716] transition-colors font-bold uppercase">{t('franchising')}</Link>
-                <Link href="/gallery" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#FAC716] transition-colors font-bold uppercase">{t('gallery')}</Link>
-                <Link href="/blogs" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#FAC716] transition-colors font-bold uppercase">{t('blogs')}</Link>
-                <Link href="/about-us" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#FAC716] transition-colors font-bold uppercase">{t('aboutUs')}</Link>
-                <Link href="/contact-us" onClick={toggleMenu} className="text-sm text-white/80 hover:text-[#FAC716] transition-colors font-bold uppercase">{t('contactUs')}</Link>
+                {[
+                  { href: '/franchising', label: t('franchising') },
+                  { href: '/gallery', label: t('gallery') },
+                  { href: '/blogs', label: t('blogs') },
+                  { href: '/about-us', label: t('aboutUs') },
+                  { href: '/contact-us', label: t('contactUs') }
+                ].map((item) => {
+                  const isSubActive = pathname === item.href || (pathname.startsWith(item.href) && item.href !== '/');
+                  return (
+                    <Link 
+                      key={item.href}
+                      href={item.href} 
+                      onClick={toggleMenu} 
+                      className={`text-sm font-bold uppercase transition-colors ${
+                        isSubActive ? 'text-[#E9A33C]' : 'text-white/80 hover:text-[#E9A33C]'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
               </div>
             )}
           </div>

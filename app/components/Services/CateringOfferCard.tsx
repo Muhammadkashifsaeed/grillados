@@ -29,21 +29,21 @@ const CateringOfferCard: React.FC<CateringOfferProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="bg-white rounded-3xl border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden w-full px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col md:flex-row gap-8 p-6 sm:p-10 lg:p-16 mb-0 group"
+      className="bg-white rounded-3xl border-2 border-[#8B5A2B]/30 shadow-xl overflow-hidden w-full flex flex-col md:flex-row gap-4 lg:gap-6 px-6 sm:px-8 lg:px-10 py-8 sm:py-10 lg:py-12 mb-0 group justify-between items-center relative"
     >
-      {/* Left Content (Text) - 55% Width on Desktop */}
-      <div className="w-full md:w-[55%] flex flex-col items-start justify-center pt-24 lg:pt-16 relative">
-        
-        {/* Brand Image at Top-Left (Fixed closer to border edge) */}
-        <div className="absolute -top-2 left-0 sm:-top-4 sm:left-2 lg:-top-6 lg:left-4 w-48 sm:w-64 lg:w-72 h-16 sm:h-20 lg:h-24">
-          <Image 
-            src="/images/whole.png"
-            alt="Grillado's Logo"
-            fill sizes="100vw"
-            className="object-contain object-left"
-          />
-        </div>
+      {/* Brand Image at Top-Left (Attached flush to top border edge with zero top gap) */}
+      <div className="absolute -top-1 sm:-top-2 left-4 sm:left-6 lg:left-8 w-56 sm:w-72 lg:w-80 h-16 sm:h-20 lg:h-24 z-20 pointer-events-none">
+        <Image 
+          src="/images/whole.png"
+          alt="Grillado's Logo"
+          fill sizes="100vw"
+          className="object-contain object-left-top"
+        />
+      </div>
 
+      {/* Left Content (Text) - 52% Width on Desktop */}
+      <div className="w-full md:w-[52%] flex flex-col items-start justify-center pt-10 sm:pt-14 md:pt-16 relative pr-0 md:pr-4">
+        
         {/* Heading (Offer 1 / Offer 2) */}
         <h3 
           className="mb-2" 
@@ -53,39 +53,35 @@ const CateringOfferCard: React.FC<CateringOfferProps> = ({
         </h3>
 
         <h2 
-          className="mb-6 tracking-tight"
-          style={{ fontFamily: "'Port Lligat Sans', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '25px', lineHeight: 'clamp(24px, 3.5vw, 35px)' }}
+          className="mb-5 tracking-tight"
+          style={{ fontFamily: "'Port Lligat Sans', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '24px', lineHeight: 'clamp(24px, 3.5vw, 34px)' }}
         >
           {t(titleKey)}
         </h2>
 
         <p 
-          className="mb-10 whitespace-pre-line leading-relaxed"
-          style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '18px', lineHeight: '30px' }}
+          className="mb-7 whitespace-pre-line leading-relaxed"
+          style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '27px' }}
         >
           {t(descKey)}
         </p>
 
-        <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" aria-label={t('orderNow')} className="text-black hover:text-white hover: hover: bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg px-8 py-4 flex items-center justify-center uppercase tracking-wider cursor-pointer inline-flex max-w-[fit-content]" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '20px' }} >
+        <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" aria-label={t('orderNow')} className="text-black hover:text-white bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 shadow-md rounded-lg px-8 py-3.5 flex items-center justify-center uppercase tracking-wider cursor-pointer inline-flex max-w-[fit-content]" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '20px' }} >
           {t('orderNow')}
         </Link>
       </div>
 
-      {/* Right Image - 45% Width on Desktop */}
-      <div className="w-full md:w-[45%] flex items-center justify-center relative min-h-62.5 sm:min-h-87.5 lg:min-h-112.5">
-        <motion.div 
-          className="relative w-[70%] sm:w-[60%] lg:w-[65%] min-h-62.5 sm:min-h-87.5 lg:min-h-112.5 mx-auto"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.4 }}
-        >
+      {/* Right Image - 48% Width on Desktop (Fixed without hover animation, centered with balanced space) */}
+      <div className="w-full md:w-[48%] flex items-center justify-center relative min-h-[255px] sm:min-h-[315px] lg:min-h-[360px]">
+        <div className="relative w-full h-full min-h-[255px] sm:min-h-[315px] lg:min-h-[360px] mx-auto">
           <Image 
             src={imageSrc}
             alt={t(titleKey)}
             fill
-            className="object-contain"
-            sizes="(max-width: 768px) 100vw, 45vw"
+            className="object-contain object-center"
+            sizes="(max-width: 768px) 100vw, 48vw"
           />
-        </motion.div>
+        </div>
       </div>
     </motion.div>
   );

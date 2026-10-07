@@ -47,7 +47,7 @@ export default function BirthdayCateringSection() {
               src="/images/culinary.png"
               alt="Culinary Delights"
               fill
-              className="object-contain"
+              className="object-contain scale-[0.96]"
               sizes="100px"
             />
           </motion.div>

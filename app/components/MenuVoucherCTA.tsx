@@ -27,7 +27,7 @@ const MenuVoucherCTA = () => {
           {/* Left Content Area */}
           <div className="w-full xl:w-[60%] flex flex-col text-center xl:text-left mb-4 xl:mb-0 relative z-10">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black font-['Outfit',sans-serif] uppercase leading-[1.1] mb-2 sm:mb-3 tracking-tight drop-shadow-sm">
-              {t('getUpToText')} <span className="text-[#FEC602] drop-shadow-lg">{t('discountText')}</span> <br className="hidden md:block" />{t('onEntireMenu')}
+              {t('getUpToText')} <span className="text-black drop-shadow-sm">{t('discountText')}</span> <br className="hidden md:block" />{t('onEntireMenu')}
             </h2>
             <p className="text-black/90 font-bold text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto xl:mx-0">
               {t('clickToGet')}

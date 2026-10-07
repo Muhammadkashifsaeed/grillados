@@ -30,7 +30,7 @@ export default function EventsCateringSection() {
               src="/images/focus.png"
               alt="Focus Icon"
               fill
-              className="object-contain"
+              className="object-contain scale-[0.96]"
               sizes="100px"
             />
           </div>

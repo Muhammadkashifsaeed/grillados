@@ -131,9 +131,9 @@ export const GarnishedRiceSauceMenuSection = () => {
           </>
         }
         rightContent={
-          <div className="w-full flex flex-col items-center justify-start gap-8">
+          <div className="w-full flex flex-col items-center justify-start gap-2 md:gap-8">
             {/* Top Large Peri Image */}
-            <div className="relative w-full py-4 flex justify-center">
+            <div className="relative w-full py-4 hidden md:flex justify-center">
               {/* Desktop Image */}
               <Image
                 src="/images/zasty.png"
@@ -147,7 +147,7 @@ export const GarnishedRiceSauceMenuSection = () => {
             </div>
 
             {/* Bottom Saucess Image */}
-            <div className="relative w-full py-4 lg:py-8 flex justify-center">
+            <div className="relative w-full pt-0 pb-4 lg:py-8 flex justify-center">
               <Image
                 src="/images/saucess.png"
                 alt="Saucess"

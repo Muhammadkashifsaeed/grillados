@@ -26,7 +26,7 @@ const SandwichesSection = () => {
           <div className="text-center">
 <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(25px, 3.9vw, 39px)' }}
-            className="mb-4 transform -rotate-2 inline-block text-center"
+            className="mb-4 transform -rotate-2 inline-block text-center uppercase"
           >
             {t('heading')}
           </motion.h2>

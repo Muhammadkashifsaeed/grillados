@@ -53,7 +53,7 @@ const NewDishesSection = () => {
         <div className="w-full flex justify-center text-center">
           <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }}
           style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 2.8vw, 28px)', lineHeight: 'clamp(24px, 3.6vw, 36px)', color: 'rgb(0,0,0)' }}
-          className="transform -rotate-2 inline-block text-center capitalize tracking-wide mb-2"
+          className="transform -rotate-2 inline-block text-center uppercase tracking-wide mb-2"
         >
           {t('heading')}
         </motion.h2>
