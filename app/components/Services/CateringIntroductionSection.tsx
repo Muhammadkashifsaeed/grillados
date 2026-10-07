@@ -14,12 +14,10 @@ const CateringIntroductionSection = () => {
     <section className="hidden md:block w-full bg-white overflow-hidden">
       <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col md:flex-row gap-16 items-center">
         
-        {/* Left Side - Text */}
-        <div className="w-full md:w-[55%] flex flex-col">
+        {/* Left Side - Text (Shifted rightward with padding) */}
+        <div className="w-full md:w-[58%] flex flex-col pl-4 md:pl-10 lg:pl-16 xl:pl-20">
           
-          
-
-                    {/* Heading */}
+          {/* Heading */}
           <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -43,26 +41,38 @@ const CateringIntroductionSection = () => {
           {/* Paragraphs */}
           <div 
             className="space-y-6 text-left"
-            style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(0, 0, 0)' }}
+            style={{ fontFamily: "'Poppins', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '28px', color: 'rgb(0, 0, 0)' }}
           >
-            {paragraphs.map((pKey, index) => (
-              <motion.p
-                key={pKey}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                {t(pKey)}
-              </motion.p>
-            ))}
+            {paragraphs.map((pKey, index) => {
+              const text = t(pKey);
+              const hasPrefix = text.startsWith("Tailored Menus:");
+              return (
+                <motion.p
+                  key={pKey}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="leading-relaxed"
+                >
+                  {hasPrefix ? (
+                    <>
+                      <span className="font-semibold text-black">Tailored Menus:</span>
+                      {text.replace("Tailored Menus:", "")}
+                    </>
+                  ) : (
+                    text
+                  )}
+                </motion.p>
+              );
+            })}
           </div>
 
         </div>
 
-        {/* Right Side - Video (Hidden on mobile, 6% smaller width & height on desktop) */}
+        {/* Right Side - Video (Reduced width & height on desktop) */}
         <motion.div 
-          className="hidden md:flex md:w-[37.6%] lg:w-[32.9%] mx-auto justify-center scale-[0.94] transform-gpu"
+          className="hidden md:flex md:w-[30%] lg:w-[26%] max-w-[290px] mx-auto justify-center scale-[0.88] transform-gpu shrink-0"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
