@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 const AboutUsMissionVision = () => {
   const t = useTranslations('AboutUs');
   return (
-    <section className="bg-[#fafafa] py-12 md:py-16 px-4 sm:px-6 lg:px-8 w-full">
+    <section className="bg-[#fafafa] pt-2 md:pt-4 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 w-full">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
         
         {/* Left Side: Mission */}
