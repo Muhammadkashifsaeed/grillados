@@ -61,3 +61,12 @@ body {
   background-clip: text;
   animation: shimmer-text 6s ease-in-out infinite;
 }
+
+@keyframes header-btn-text-anim {
+  0%, 100% { color: #ffffff; }
+  50% { color: #000000; }
+}
+
+.animate-header-btn-text {
+  animation: header-btn-text-anim 2s ease-in-out infinite;
+}

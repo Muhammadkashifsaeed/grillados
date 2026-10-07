@@ -105,12 +105,21 @@ export const Header = () => {
           
           <Link
             href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-            className="h-8 md:h-10 lg:h-10 xl:h-11 inline-flex items-center justify-center gap-1.5 xl:gap-2 animate-bg-sweep text-white font-extrabold px-3 sm:px-5 lg:px-5 xl:px-6 rounded-lg shadow-[0_0_15px_rgba(239,113,64,0.3)] hover:shadow-[#EF7140]/50 border border-white/10 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase"
+            className="h-9 md:h-10 lg:h-11 inline-flex items-center justify-center gap-2 animate-bg-sweep px-3.5 sm:px-5 lg:px-6 rounded-lg shadow-[0_0_15px_rgba(239,113,64,0.3)] hover:shadow-[#EF7140]/50 border border-white/10 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase cursor-pointer"
           >
-            <ShoppingBag className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-white" />
-            <div className="flex flex-col text-left">
-              <span className="text-[10px] sm:text-xs md:text-sm xl:text-xs whitespace-nowrap animate-text-shimmer uppercase">{t('orderOnline')}</span>
-            </div>
+            <ShoppingBag className="w-4 h-4 md:w-5 md:h-5 shrink-0 animate-header-btn-text" />
+            <span 
+              className="whitespace-nowrap animate-header-btn-text uppercase"
+              style={{ 
+                fontFamily: "'Ribeat', sans-serif", 
+                fontStyle: 'normal', 
+                fontWeight: 500, 
+                fontSize: '16px', 
+                lineHeight: '16px' 
+              }}
+            >
+              {t('orderOnline')}
+            </span>
           </Link>
 
           {/* Mobile hamburger */}
