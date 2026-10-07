@@ -101,7 +101,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
                   alt={post.title.rendered.replace(/<[^>]+>/g, '')} 
                   fill 
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transform scale-105 group-hover:scale-110 transition-transform duration-700 ease-in-out" 
+                  className="object-contain" 
                   priority
                 />
               </div>

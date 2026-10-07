@@ -45,8 +45,8 @@ const CateringFAQSection = () => {
                     {faq.q}
                   </span>
                   
-                  <div className={`flex-shrink-0 flex items-center justify-center w-6 h-6 transition-transform duration-300 ${isOpen ? 'text-black bg-transparent' : 'bg-[#EB5250] text-white rounded-full'}`}>
-                    {isOpen ? <Minus size={18} /> : <Plus size={18} />}
+                  <div className={`flex-shrink-0 flex items-center justify-center w-5 h-5 transition-transform duration-300 ${isOpen ? 'text-black bg-transparent' : 'bg-[#EB5250] text-white rounded-full'}`}>
+                    {isOpen ? <Minus size={14} className="text-black" /> : <Plus size={14} className="text-white" />}
                   </div>
                 </button>
                 

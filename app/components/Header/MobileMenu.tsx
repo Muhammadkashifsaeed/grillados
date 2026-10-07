@@ -107,7 +107,7 @@ export const MobileMenu = () => {
                       key={item.href}
                       href={item.href} 
                       onClick={toggleMenu} 
-                      className={`text-sm font-bold uppercase transition-colors ${
+                      className={`py-2.5 text-sm font-bold uppercase transition-colors border-b border-white last:border-b-0 ${
                         isSubActive ? 'text-[#E9A33C]' : 'text-white/80 hover:text-[#E9A33C]'
                       }`}
                     >

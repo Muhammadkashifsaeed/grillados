@@ -358,14 +358,19 @@ export const ExploreArticles = () => {
               key={article.id} 
               className="w-[92%] md:w-full max-w-[380px] md:max-w-none mx-auto bg-[#1E1F1F] border border-[#9B9B9B] rounded-2xl overflow-hidden shadow-2xl group flex flex-col h-full transition-colors duration-300"
             >
-              {/* Image Container */}
+              {/* Image Container - 100% Full width edge-to-edge with no left/right gaps from card border */}
               {article.image && (
-                <div className="relative w-full h-56 sm:h-64 overflow-hidden bg-gray-900">
+                <div 
+                  className="relative w-full overflow-hidden bg-gray-900 border-b border-gray-800 shrink-0"
+                  style={{ aspectRatio: '425 / 260' }}
+                >
                   <Image 
                     src={article.image} 
                     alt={article.heading} 
-                    fill sizes="100vw" 
+                    fill 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" 
                     className="object-cover" 
+                    quality={95}
                   />
                 </div>
               )}

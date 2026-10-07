@@ -79,7 +79,7 @@ const BlogsSection = () => {
 
   return (
     <section className="w-full pt-2 pb-6 md:pt-2 md:pb-8 bg-zinc-50 overflow-hidden">
-      <div className="w-full px-6 md:px-8 lg:px-12 xl:px-16">
+      <div className="max-w-[1664px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10">
 
         {/* Navigation & Container */}
         <div
@@ -101,14 +101,18 @@ const BlogsSection = () => {
                 >
                   <div className="bg-white shadow-md overflow-hidden h-full flex flex-col border border-gray-100/80 rounded-2xl transition-shadow duration-300 hover:shadow-lg">
 
-                    {/* Blog Image - Fixed aspect ratio for 100% equal image height */}
-                    <div className="relative w-full aspect-[16/10] bg-gray-100 overflow-hidden border-b border-gray-100 shrink-0">
+                    {/* Blog Image - 100% Full width edge-to-edge with no left/right gaps */}
+                    <div 
+                      className="relative w-full bg-gray-100 overflow-hidden border-b border-gray-100 shrink-0"
+                      style={{ aspectRatio: '2 / 1' }}
+                    >
                       <Image
                         src={blog.image}
                         alt={t(`${blog.tKey}.title`)}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover"
+                        quality={95}
                       />
                     </div>
 

@@ -70,8 +70,8 @@ export const Header = () => {
                     <Link 
                       key={item.href} 
                       href={item.href} 
-                      className={`px-5 py-3 transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase ${
-                        isSubActive ? 'text-[#E9A33C] bg-white/5 font-extrabold' : 'text-white/90 hover:bg-white/10 hover:text-[#E9A33C]'
+                      className={`px-5 py-3 transition-all text-[11px] xl:text-xs font-bold tracking-wider uppercase border-b border-white last:border-b-0 ${
+                        isSubActive ? 'text-[#E9A33C] font-extrabold' : 'text-white/90 hover:text-[#E9A33C]'
                       }`}
                     >
                       {item.label}

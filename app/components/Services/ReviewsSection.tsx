@@ -98,10 +98,10 @@ const ReviewsSection = () => {
             {/* Left Arrow */}
             <button 
               onClick={handlePrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-2 rounded-full text-black hover:bg-[#FAC716] hover:text-white transition-colors opacity-0 md:group-hover:opacity-100"
+              className="group/btn absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-2 rounded-full text-black hover:bg-black transition-colors opacity-0 md:group-hover:opacity-100"
               aria-label="Previous Review"
             >
-              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-black group-hover/btn:text-white transition-colors" />
             </button>
 
             <div 
@@ -123,10 +123,10 @@ const ReviewsSection = () => {
             {/* Right Arrow */}
             <button 
               onClick={handleNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-2 rounded-full text-black hover:bg-[#FAC716] hover:text-white transition-colors opacity-0 md:group-hover:opacity-100"
+              className="group/btn absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-2 rounded-full text-black hover:bg-black transition-colors opacity-0 md:group-hover:opacity-100"
               aria-label="Next Review"
             >
-              <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-black group-hover/btn:text-white transition-colors" />
             </button>
           </div>
 

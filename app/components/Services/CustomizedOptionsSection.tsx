@@ -37,68 +37,70 @@ const CustomizedOptionsSection = () => {
 
         {/* Right Side - Content */}
         <div className="w-full flex flex-col justify-center order-2 md:order-none px-6 pl-10 md:pl-16 md:pr-8 lg:pl-24 lg:pr-12 xl:pl-32 xl:pr-16 pt-2 pb-4 md:pt-16 md:pb-6">
+          <div className="pl-4 sm:pl-6 md:pl-8 lg:pl-10">
 
-          {/* Heading */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 
-              className="inline-block whitespace-nowrap"
-              style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(25px, 3.9vw, 39px)' }}
+            {/* Heading */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
             >
-              {t('heading')}
-              {/* Divider (Full width of heading) */}
-              <div className="w-full h-1 bg-black rounded-full mt-4 mb-10"></div>
-            </h2>
-          </motion.div>
-
-          {/* Feature List */}
-          <div className="flex flex-col mb-10">
-            {features.map((featureKey, index) => (
-              <motion.div
-                key={featureKey}
-                className="flex items-start gap-4 pb-2 mb-2 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+              <h2 
+                className="inline-block whitespace-nowrap"
+                style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', lineHeight: 'clamp(25px, 3.9vw, 39px)' }}
               >
-                {/* Circular Dot (Bullet Point) */}
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-black mt-3 shadow-sm"></div>
+                {t('heading')}
+                {/* Divider (Full width of heading) */}
+                <div className="w-full h-1 bg-black rounded-full mt-4 mb-10"></div>
+              </h2>
+            </motion.div>
 
-                {/* Feature Text */}
-                <p 
-                  className="max-w-[280px] sm:max-w-[320px] lg:max-w-[360px]"
-                  style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px' }}
+            {/* Feature List */}
+            <div className="flex flex-col mb-10">
+              {features.map((featureKey, index) => (
+                <motion.div
+                  key={featureKey}
+                  className="flex items-start gap-4 mb-3.5 last:mb-0"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  {t(featureKey)}
-                </p>
-              </motion.div>
-            ))}
+                  {/* Circular Dot (Bullet Point) */}
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-black mt-3 shadow-sm"></div>
+
+                  {/* Feature Text */}
+                  <p 
+                    className="max-w-[280px] sm:max-w-[320px] lg:max-w-[360px]"
+                    style={{ fontFamily: "'Noto Sans', sans-serif", fontStyle: 'normal', fontWeight: 400, fontSize: '17px', lineHeight: '28px' }}
+                  >
+                    {t(featureKey)}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Buttons */}
+            <motion.div
+              className="flex flex-row gap-3 sm:gap-4 w-full justify-start"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              {/* Button 1 */}
+              <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white hover: hover: h-12 sm:h-13 px-2 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }} >
+                {t('orderNow')}
+              </Link>
+
+              {/* Button 2 */}
+              <button className="text-black hover:text-white hover: hover: h-12 sm:h-13 px-2 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }} >
+                {t('learnMore')}
+              </button>
+            </motion.div>
+
           </div>
-
-          {/* Buttons */}
-          <motion.div
-            className="flex flex-row gap-3 sm:gap-4 w-full justify-start"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            {/* Button 1 */}
-            <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white hover: hover: h-12 sm:h-13 px-2 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }} >
-              {t('orderNow')}
-            </Link>
-
-            {/* Button 2 */}
-            <button className="text-black hover:text-white hover: hover: h-12 sm:h-13 px-2 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '14px', lineHeight: '16px' }} >
-              {t('learnMore')}
-            </button>
-          </motion.div>
-
         </div>
 
       </div>
