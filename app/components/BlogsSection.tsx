@@ -96,50 +96,50 @@ const BlogsSection = () => {
               {extendedBlogsData.map((blog, idx) => (
                 <div
                   key={`${blog.id}-${idx}`}
-                  className="px-2"
+                  className="px-2 h-full flex flex-col"
                   style={{ minWidth: `calc(100% / ${itemsPerView})` }}
                 >
-                  <div className="bg-white shadow-md overflow-hidden h-auto flex flex-col border border-gray-100 rounded-2xl">
+                  <div className="bg-white shadow-md overflow-hidden h-full flex flex-col border border-gray-100/80 rounded-2xl transition-shadow duration-300 hover:shadow-lg">
 
-                    {/* Blog Image */}
-                    <div className="w-full bg-white overflow-hidden border-b border-gray-100">
+                    {/* Blog Image - Fixed aspect ratio for 100% equal image height */}
+                    <div className="relative w-full aspect-[16/10] bg-gray-100 overflow-hidden border-b border-gray-100 shrink-0">
                       <Image
                         src={blog.image}
                         alt={t(`${blog.tKey}.title`)}
-                        width={600}
-                        height={400}
-                        sizes="100vw"
-                        className="w-full h-auto object-contain"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover"
                       />
                     </div>
 
-                    {/* Content */}
-                    <div className="px-6 pt-6 pb-3 flex flex-col grow">
+                    {/* Content - Equal height with flex grow & bottom alignment */}
+                    <div className="px-6 pt-6 pb-6 flex flex-col grow justify-between">
+                      <div>
+                        {/* Date */}
+                        <Link href={`/blogs/${blog.id}`} className="flex items-center mb-3 w-max underline hover:text-red-500 transition-colors group" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: '#000000' }}>
+                          <Calendar className="w-5 h-5 mr-2 group-hover:text-red-500 transition-colors shrink-0" />
+                          {t(`${blog.tKey}.date`)}
+                        </Link>
 
-                      {/* Date */}
-                      <Link href={`/blogs/${blog.id}`} className="flex items-center mb-3 w-max underline hover:text-red-500 transition-colors group" style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: '#000000' }}>
-                        <Calendar className="w-5 h-5 mr-2 group-hover:text-red-500 transition-colors" />
-                        {t(`${blog.tKey}.date`)}
-                      </Link>
+                        {/* Title - Fixed min-height so 1 line and 2 line titles occupy equal height */}
+                        <h3 
+                          className="mb-3 line-clamp-2 min-h-[52px] flex items-center"
+                          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px', color: 'rgb(0, 0, 0)' }}
+                        >
+                          {t(`${blog.tKey}.title`)}
+                        </h3>
 
-                      {/* Title */}
-                      <h3 
-                        className="mb-3 line-clamp-2"
-                        style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px', color: 'rgb(0, 0, 0)' }}
-                      >
-                        {t(`${blog.tKey}.title`)}
-                      </h3>
-
-                      {/* Description */}
-                      <p 
-                        className="mb-2 line-clamp-2"
-                        style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '15px', lineHeight: '25px', color: '#000000' }}
-                      >
-                        {t(`${blog.tKey}.description`)}
-                      </p>
+                        {/* Description - Fixed min-height */}
+                        <p 
+                          className="mb-4 line-clamp-2 min-h-[50px]"
+                          style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '15px', lineHeight: '25px', color: '#000000' }}
+                        >
+                          {t(`${blog.tKey}.description`)}
+                        </p>
+                      </div>
 
                       {/* Read More Link */}
-                      <Link href={`/blogs/${blog.id}`} className="inline-flex items-center gap-1.5 text-black font-bold w-max group hover:opacity-80 transition-opacity">
+                      <Link href={`/blogs/${blog.id}`} className="inline-flex items-center gap-1.5 text-black font-bold w-max group hover:opacity-80 transition-opacity mt-auto">
                         <span>{t('readMore')}</span>
                         <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
                       </Link>
