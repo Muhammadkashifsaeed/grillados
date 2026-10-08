@@ -74,7 +74,7 @@ export const DessertMenuSection = () => {
               <div>
                 <MenuHeading title={t('heading')} />
               </div>
-              <div className="flex flex-col gap-3 md:gap-4 w-full mt-4">
+              <div className="flex flex-col gap-5 md:gap-6 w-full mt-4">
                 {menuItems.map((item, index) => (
                   <MenuItem
                     key={index}

@@ -40,35 +40,53 @@ export const SandwichSaladMenuSection = () => {
               <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
             </motion.div>
 
-            <div className="flex flex-col gap-6 md:gap-8 w-full mb-16">
+            <div className="flex flex-col gap-5 md:gap-6 w-full mb-12">
               {/* Chicken Item */}
               <motion.div variants={fadeLeftItem} className="flex flex-col w-full">
-                <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                  <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">{t('chicken')}</span>
-                  <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
-                  <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">11.99</span>
-                </div>
-                {/* Combo row */}
-                <div className="flex items-end w-full gap-2 sm:gap-3 mt-2 md:mt-3">
-                  <span className="text-red-500 text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">{t('combo')}</span>
-                  <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.3)', minWidth: '4px' }}></div>
-                  <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">{t('sideAndPop')}</span></span>
-                </div>
+                <a
+                  href="/menu#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="flex flex-col w-full cursor-pointer"
+                >
+                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
+                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">{t('chicken')}</span>
+                    <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
+                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">11.99</span>
+                  </div>
+                  {/* Combo row */}
+                  <div className="flex items-end w-full gap-2 sm:gap-3 mt-1 md:mt-1.5">
+                    <span className="text-[#EB5250] text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">{t('combo')}</span>
+                    <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(235,82,80,0.6)', minWidth: '4px' }}></div>
+                    <span className="text-[#EB5250] text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-[#EB5250] font-normal text-xs md:text-sm ml-1">{t('sideAndPop')}</span></span>
+                  </div>
+                </a>
               </motion.div>
 
               {/* Vegetarian Item */}
               <motion.div variants={fadeLeftItem} className="flex flex-col w-full">
-                <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                  <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">{t('vegetarian')}</span>
-                  <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
-                  <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">11.99</span>
-                </div>
-                {/* Combo row */}
-                <div className="flex items-end w-full gap-2 sm:gap-3 mt-2 md:mt-3">
-                  <span className="text-red-500 text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">{t('combo')}</span>
-                  <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.3)', minWidth: '4px' }}></div>
-                  <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-gray-300 font-normal text-xs md:text-sm ml-1">{t('sideAndPop')}</span></span>
-                </div>
+                <a
+                  href="/menu#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="flex flex-col w-full cursor-pointer"
+                >
+                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
+                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">{t('vegetarian')}</span>
+                    <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
+                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">11.99</span>
+                  </div>
+                  {/* Combo row */}
+                  <div className="flex items-end w-full gap-2 sm:gap-3 mt-1 md:mt-1.5">
+                    <span className="text-[#EB5250] text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">{t('combo')}</span>
+                    <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(235,82,80,0.6)', minWidth: '4px' }}></div>
+                    <span className="text-[#EB5250] text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-[#EB5250] font-normal text-xs md:text-sm ml-1">{t('sideAndPop')}</span></span>
+                  </div>
+                </a>
               </motion.div>
             </div>
 
@@ -83,15 +101,24 @@ export const SandwichSaladMenuSection = () => {
               <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
             </motion.div>
 
-            <div className="flex flex-col gap-4 md:gap-5 w-full">
+            <div className="flex flex-col gap-5 md:gap-6 w-full">
               {/* Salad Items */}
               {saladsMenuLocal.map((item, index) => (
                 <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
-                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">{item.name}</span>
-                    <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
-                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">{item.price}</span>
-                  </div>
+                  <a
+                    href="/menu#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="flex flex-col w-full cursor-pointer"
+                  >
+                    <div className="flex items-end w-full gap-1.5 sm:gap-2">
+                      <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">{item.name}</span>
+                      <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}></div>
+                      <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">{item.price}</span>
+                    </div>
+                  </a>
                 </motion.div>
               ))}
 

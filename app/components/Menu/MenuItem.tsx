@@ -10,6 +10,7 @@ interface MenuItemProps {
   description?: ReactNode;
   note?: ReactNode;
   isLast?: boolean;
+  href?: string;
 }
 
 export const MenuItem = ({ 
@@ -17,54 +18,64 @@ export const MenuItem = ({
   price, 
   description, 
   note, 
-  isLast = false 
+  isLast = false,
+  href = "/menu#"
 }: MenuItemProps) => {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href === '/menu#' || href === '#') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <motion.div variants={fadeLeftItem} className="flex flex-col w-full">
-      {/* Name and Price Row */}
-      <div className="flex items-end w-full gap-1.5 sm:gap-2">
-        <span 
-          className="whitespace-normal shrink leading-snug"
-          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '20px', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(255,255,255)' }}
-        >
-          {name}
-        </span>
-        <div
-          className="grow mb-1"
-          style={{
-            borderBottom: '2px dotted rgba(255,255,255,0.5)',
-            minWidth: '4px'
-          }}
-        />
-        <span 
-          className="whitespace-nowrap leading-snug"
-          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '20px', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(255,255,255)' }}
-        >
-          {price}
-        </span>
-      </div>
-      
-      {/* Description */}
-      {description && (
-        <p className="text-gray-400 text-2.75 sm:text-xs md:text-sm mt-1 leading-relaxed">
-          {description}
-        </p>
-      )}
-      
-      {/* Highlighted Note */}
-      {note && (
-        <p 
-          className="uppercase mt-1 tracking-widest leading-relaxed"
-          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
-        >
-          {note}
-        </p>
-      )}
+      <a href={href} onClick={handleSmoothScroll} className="flex flex-col w-full cursor-pointer">
+        {/* Name and Price Row */}
+        <div className="flex items-end w-full gap-1.5 sm:gap-2">
+          <span 
+            className="whitespace-normal shrink leading-snug"
+            style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '20px', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(255,255,255)' }}
+          >
+            {name}
+          </span>
+          <div
+            className="grow mb-1"
+            style={{
+              borderBottom: '2px dotted rgba(255,255,255,0.5)',
+              minWidth: '4px'
+            }}
+          />
+          <span 
+            className="whitespace-nowrap leading-snug"
+            style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '20px', lineHeight: 'clamp(24px, 3.3vw, 33px)', color: 'rgb(255,255,255)' }}
+          >
+            {price}
+          </span>
+        </div>
+        
+        {/* Description */}
+        {description && (
+          <p className="text-gray-400 text-2.75 sm:text-xs md:text-sm mt-1 leading-relaxed">
+            {description}
+          </p>
+        )}
+        
+        {/* Highlighted Note */}
+        {note && (
+          <p 
+            className="uppercase mt-1 tracking-widest leading-relaxed"
+            style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
+          >
+            {note}
+          </p>
+        )}
+      </a>
       
       {/* Divider */}
       {!isLast && (
         <div
-          className="w-full mt-4 md:mt-5"
+          className="w-full mt-3 md:mt-3.5"
           style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}
         />
       )}

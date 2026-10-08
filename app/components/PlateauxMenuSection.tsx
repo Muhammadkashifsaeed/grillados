@@ -73,44 +73,61 @@ export const PlateauxMenuSection = () => {
             </motion.div>
 
             <div className="flex flex-col gap-5 md:gap-6 w-full">
-              {menuItemsLocal.map((item, index) => (
-                <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
-                  {/* Name + dotted leader + price */}
-                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
-                      {item.name}
-                    </span>
-                    <div
-                      className="grow mb-1"
-                      style={{
-                        borderBottom: '2px dotted rgba(255,255,255,0.5)',
-                        minWidth: '4px',
-                      }}
-                    ></div>
-                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
-                      {item.price}
-                    </span>
-                  </div>
+              {menuItemsLocal.map((item, index) => {
+                const isUnlinked = index === 1 || index === 2;
+                const ItemWrapper = isUnlinked ? 'div' : 'a';
+                const wrapperProps = isUnlinked 
+                  ? { className: 'flex flex-col w-full' } 
+                  : { 
+                      href: '/menu#', 
+                      onClick: (e: React.MouseEvent) => {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      },
+                      className: 'flex flex-col w-full cursor-pointer' 
+                    };
 
-                  {/* Note — bright red, uppercase */}
-                  {item.note && (
-                    <p
-                      className="uppercase mt-0.5 tracking-widest leading-relaxed"
-                      style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
-                    >
-                      {item.note}
-                    </p>
-                  )}
+                return (
+                  <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
+                    <ItemWrapper {...wrapperProps}>
+                      {/* Name + dotted leader + price */}
+                      <div className="flex items-end w-full gap-1.5 sm:gap-2">
+                        <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
+                          {item.name}
+                        </span>
+                        <div
+                          className="grow mb-1"
+                          style={{
+                            borderBottom: '2px dotted rgba(255,255,255,0.5)',
+                            minWidth: '4px',
+                          }}
+                        ></div>
+                        <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
+                          {item.price}
+                        </span>
+                      </div>
 
-                  {/* Divider between items */}
-                  {index < menuItems.length - 1 && (
-                    <div
-                      className="w-full mt-4 md:mt-5"
-                      style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}
-                    />
-                  )}
-                </motion.div>
-              ))}
+                      {/* Note — bright red, uppercase */}
+                      {item.note && (
+                        <p
+                          className="uppercase mt-0.5 tracking-widest leading-relaxed"
+                          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
+                        >
+                          {item.note}
+                        </p>
+                      )}
+                    </ItemWrapper>
+
+                    {/* Divider between items */}
+                    {index < menuItems.length - 1 && (
+                      <div
+                        className="w-full mt-3 md:mt-3.5"
+                        style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}
+                      />
+                    )}
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
 

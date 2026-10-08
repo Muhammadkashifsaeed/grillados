@@ -89,35 +89,53 @@ export const AccompagnementsMenuSection = () => {
               <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
             </motion.div>
 
-            <div className="flex flex-col gap-4 md:gap-5 w-full">
+            <div className="flex flex-col gap-5 md:gap-6 w-full">
               {menuItemsLocal.map((item, index) => (
                 <motion.div variants={fadeRightItem} key={index} className="flex flex-col w-full">
-                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
-                      {item.name}
-                    </span>
-                    <div
-                      className="grow mb-1"
-                      style={{
-                        borderBottom: '2px dotted rgba(255,255,255,0.5)',
-                        minWidth: '4px'
-                      }}
-                    ></div>
-                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
-                      {item.price}
-                    </span>
-                  </div>
+                  <a
+                    href="/menu#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="flex flex-col w-full cursor-pointer"
+                  >
+                    <div className="flex items-end w-full gap-1.5 sm:gap-2">
+                      <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
+                        {item.name}
+                      </span>
+                      <div
+                        className="grow mb-1"
+                        style={{
+                          borderBottom: '2px dotted rgba(255,255,255,0.5)',
+                          minWidth: '4px'
+                        }}
+                      ></div>
+                      <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
+                        {item.price}
+                      </span>
+                    </div>
+                  </a>
                 </motion.div>
               ))}
 
               {/* {t('seasonal')} */}
               <motion.div variants={fadeRightItem} className="mt-6 md:mt-8 flex flex-col w-full">
-                <h3 className="text-red-600 text-sm md:text-base font-bold capitalize tracking-widest mb-1.5 md:mb-2">
-                  {t('seasonal')}
-                </h3>
-                <p style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '26px', lineHeight: 'clamp(29px, 4.5vw, 45px)', color: 'rgb(250,174,64)' }}>
-                  {t('sidesSizes')}
-                </p>
+                <a
+                  href="/menu#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="flex flex-col w-full cursor-pointer"
+                >
+                  <h3 className="text-red-600 text-sm md:text-base font-bold capitalize tracking-widest mb-1.5 md:mb-2">
+                    {t('seasonal')}
+                  </h3>
+                  <p style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '26px', lineHeight: 'clamp(29px, 4.5vw, 45px)', color: 'rgb(250,174,64)' }}>
+                    {t('sidesSizes')}
+                  </p>
+                </a>
               </motion.div>
             </div>
           </motion.div>

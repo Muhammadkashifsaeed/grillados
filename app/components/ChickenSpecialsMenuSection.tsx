@@ -111,41 +111,61 @@ export const ChickenSpecialsMenuSection = () => {
             </motion.div>
 
             <div className="flex flex-col gap-5 md:gap-6 w-full">
-              {menuItemsLocal.map((item, index) => (
-                <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
-                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
-                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
-                      {item.name}
-                    </span>
-                    <div
-                      className="grow mb-1"
-                      style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}
-                    />
-                    <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
-                      {item.price}
-                    </span>
-                  </div>
-                  {item.description && (
-                    <p className="text-gray-400 text-xs md:text-sm mt-1 leading-relaxed">
-                      {item.description}
-                    </p>
-                  )}
-                  {item.note && (
-                    <p
-                      className="uppercase mt-0.5 tracking-widest"
-                      style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
-                    >
-                      {item.note}
-                    </p>
-                  )}
-                  {index < menuItems.length - 1 && (
-                    <div
-                      className="w-full mt-4 md:mt-5"
-                      style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}
-                    />
-                  )}
-                </motion.div>
-              ))}
+              {menuItemsLocal.map((item, index) => {
+                const isUnlinked = index === 3 || index === 4;
+                const ItemWrapper = isUnlinked ? 'div' : 'a';
+                const wrapperProps = isUnlinked 
+                  ? { className: 'flex flex-col w-full' } 
+                  : { 
+                      href: '/menu#', 
+                      onClick: (e: React.MouseEvent) => {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      },
+                      className: 'flex flex-col w-full cursor-pointer' 
+                    };
+
+                return (
+                  <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
+                    <ItemWrapper {...wrapperProps}>
+                      <div className="flex items-end w-full gap-1.5 sm:gap-2">
+                        <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
+                          {item.name}
+                        </span>
+                        <div
+                          className="grow mb-1"
+                          style={{ borderBottom: '2px dotted rgba(255,255,255,0.5)', minWidth: '4px' }}
+                        />
+                        <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
+                          {item.price}
+                        </span>
+                      </div>
+                      {item.description && (
+                        <p
+                          className="uppercase mt-0.5 tracking-widest leading-relaxed"
+                          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
+                        >
+                          {item.description}
+                        </p>
+                      )}
+                      {item.note && (
+                        <p
+                          className="uppercase mt-0.5 tracking-widest"
+                          style={{ fontFamily: '"Poppins", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: 'rgb(255,0,0)' }}
+                        >
+                          {item.note}
+                        </p>
+                      )}
+                    </ItemWrapper>
+                    {index < menuItems.length - 1 && (
+                      <div
+                        className="w-full mt-3 md:mt-3.5"
+                        style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}
+                      />
+                    )}
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
 

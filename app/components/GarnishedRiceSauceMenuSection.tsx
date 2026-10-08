@@ -65,7 +65,7 @@ export const GarnishedRiceSauceMenuSection = () => {
             <MenuHeading title={t('heading')} />
 
             <div className="flex flex-col w-full mb-12">
-              <div className="flex flex-col gap-4 md:gap-5 w-full">
+              <div className="flex flex-col gap-5 md:gap-6 w-full">
                 {loadedRiceItems.map((item, index) => (
                   <MenuItem
                     key={index}

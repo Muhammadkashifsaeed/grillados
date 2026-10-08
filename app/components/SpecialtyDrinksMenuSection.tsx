@@ -27,7 +27,7 @@ export const SpecialtyDrinksMenuSection = () => {
   const t = useTranslations('SpecialtyDrinks');
 
   return (
-    <section className="relative w-full py-4 lg:py-8 bg-transparent">
+    <section id="specialty-drinks" className="relative w-full py-4 lg:py-8 bg-transparent">
 
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
@@ -62,10 +62,17 @@ export const SpecialtyDrinksMenuSection = () => {
               <div className="w-full h-1.5 bg-[#FAAE40] mt-3"></div>
             </motion.div>
 
-            <div className="flex flex-col gap-3 md:gap-4 w-full">
+            <div className="flex flex-col gap-5 md:gap-6 lg:gap-7 w-full">
               {menuItems.map((item, index) => (
                 <motion.div variants={fadeLeftItem} key={index} className="flex flex-col w-full">
-                  <div className="flex items-end w-full gap-1.5 sm:gap-2">
+                  <a
+                    href="/menu#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="flex items-end w-full gap-1.5 sm:gap-2 cursor-pointer"
+                  >
                     <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-normal leading-snug">
                       {t(`items.${item.translationKey}`)}
                     </span>
@@ -79,7 +86,7 @@ export const SpecialtyDrinksMenuSection = () => {
                     <span className="text-white text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">
                       {item.price}
                     </span>
-                  </div>
+                  </a>
                 </motion.div>
               ))}
             </div>
