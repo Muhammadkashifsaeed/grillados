@@ -417,8 +417,8 @@ export const ExploreArticles = () => {
         {/* {t('loadMore')} Button */}
         {visibleCount < articles.length && (
           <div className="mt-16 flex justify-center w-full">
-            <button type="button" onClick={handleLoadMore} className="text-black hover:text-white hover: hover: bg-[#FAC716] hover:bg-[#EB5250] font-medium font-['Ribeat',sans-serif] text-4 leading-4 py-4 px-10 rounded-none transition-all duration-300 capitalize tracking-widest shadow-lg hover:shadow-xl transform hover:-translate-y-1" >
-              Load More
+            <button type="button" onClick={handleLoadMore} className="text-black hover:text-white bg-[#FAC716] hover:bg-[#EB5250] font-medium font-['Ribeat',sans-serif] text-4 leading-4 py-4 px-10 rounded-[4px] transition-all duration-300 capitalize tracking-widest shadow-lg hover:shadow-xl transform hover:-translate-y-1" >
+              {t('loadMore')}
             </button>
           </div>
         )}

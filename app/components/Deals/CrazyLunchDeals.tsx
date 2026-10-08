@@ -109,10 +109,18 @@ export default function CrazyLunchDeals() {
               {/* Right Content Section */}
               <div className="flex flex-col justify-center p-6 sm:p-8 flex-1">
                 <h3 
-                  className="mb-4 uppercase"
+                  className="mb-4 uppercase text-gray-900"
                   style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: 'clamp(22px, 2.8vw, 28px)', lineHeight: 'clamp(24px, 3.3vw, 33px)' }}
                 >
-                  {deal.heading}
+                  {deal.heading.split(/(LA Fitness)/i).map((part, i) => 
+                    part.toLowerCase() === 'la fitness' ? (
+                      <span key={i} className="text-[#FAC716]">
+                        {part}
+                      </span>
+                    ) : (
+                      part
+                    )
+                  )}
                 </h3>
                 
                 {deal.isSpecial ? (

@@ -47,7 +47,7 @@ export default function GiftCardsSection() {
               alt="Simply Gift"
               fill
               className="object-contain scale-[0.96]"
-              sizes="130px"
+              sizes="(max-width: 768px) 100px, 130px"
             />
           </motion.div>
 

@@ -31,7 +31,7 @@ export default function EventsCateringSection() {
               alt="Focus Icon"
               fill
               className="object-contain scale-[0.96]"
-              sizes="100px"
+              sizes="(max-width: 768px) 80px, 100px"
             />
           </div>
 

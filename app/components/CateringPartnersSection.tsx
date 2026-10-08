@@ -47,7 +47,7 @@ const CateringPartnersSection = ({ hideDescription = false }: { hideDescription?
               <Image
                 src={src}
                 alt={`Catering Partner ${idx + 1}`}
-                fill sizes="200px"
+                fill sizes="(max-width: 768px) 128px, 176px"
                 className="object-contain"
               />
             </div>

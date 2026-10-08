@@ -19,7 +19,7 @@ const AboutUsVoted = () => {
         <Image 
           src="/images/was.png" 
           alt="Was Decoration" 
-          fill sizes="100vw" 
+          fill sizes="(max-width: 640px) 64px, 96px" 
           className="object-contain object-left"
         />
       </motion.div>

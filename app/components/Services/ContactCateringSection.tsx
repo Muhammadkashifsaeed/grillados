@@ -231,7 +231,7 @@ export default function ContactCateringSection() {
                 </div>
 
                 {/* City & Postal Code */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div className="grid grid-cols-2 gap-4 md:gap-8">
                   <div>
                     <label className={labelClass}>{t('city')}</label>
                     <input type="text" placeholder={t('city').replace('*', '')} required className={inputClass} />

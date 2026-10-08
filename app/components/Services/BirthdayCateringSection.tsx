@@ -48,7 +48,7 @@ export default function BirthdayCateringSection() {
               alt="Culinary Delights"
               fill
               className="object-contain scale-[0.96]"
-              sizes="100px"
+              sizes="(max-width: 768px) 80px, 100px"
             />
           </motion.div>
 

@@ -50,20 +50,12 @@ export const MobileMenu = () => {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-[100dvh] w-[80vw] sm:w-87.5 bg-[#1F1813] border-l border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } flex flex-col`}
-        style={{ backgroundColor: '#1F1813' }}
+        className={`fixed top-0 left-0 h-[100dvh] w-[80vw] sm:w-87.5 bg-[#d72323] border-r border-white/20 z-50 transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } flex flex-col shadow-2xl`}
+        style={{ backgroundColor: '#d72323' }}
       >
-        <div className="flex justify-between items-center p-5 border-b border-white/10">
-          <Image
-            src="/images/saman.png"
-            alt="Grillado's Logo"
-            width={120}
-            height={40}
-            style={{ width: "auto", height: "auto" }}
-            className="h-10 scale-110 -ml-2"
-          />
+        <div className="flex justify-end items-center p-5 border-b border-white/20">
           <button
             onClick={toggleMenu}
             className="text-white hover:text-[#FAC716] transition-colors"
@@ -84,16 +76,16 @@ export const MobileMenu = () => {
           <div className="flex flex-col">
             <button 
               onClick={() => setIsPagesOpen(!isPagesOpen)}
-              className="flex items-center justify-between w-full text-white hover:text-[#E9A33C] transition-colors py-2"
+              className="flex items-center justify-between w-full text-white hover:text-[#E9A33C] transition-colors py-2 font-bold group"
             >
-              <div className="flex items-center gap-1.5 font-bold text-sm tracking-wide uppercase">
-                <FileText className="w-5 h-5 opacity-90" />
-                <span>{t('pages')}</span>
+              <div className="flex items-center gap-1.5 font-bold text-sm tracking-wide uppercase text-white group-hover:text-[#E9A33C] transition-colors">
+                <FileText className="w-5 h-5 text-current" />
+                <span className="text-current">{t('pages')}</span>
               </div>
-              <span className={`text-xs transition-transform ${isPagesOpen ? 'rotate-180' : ''}`}>▼</span>
+              <span className={`text-xs text-current transition-transform ${isPagesOpen ? 'rotate-180' : ''}`}>▼</span>
             </button>
             {isPagesOpen && (
-              <div className="flex flex-col pl-6 mt-2 gap-3 border-l border-white/10 ml-2">
+              <div className="flex flex-col pl-6 mt-2 gap-3 border-l border-white/30 ml-2">
                 {[
                   { href: '/franchising', label: t('franchising') },
                   { href: '/gallery', label: t('gallery') },
@@ -107,8 +99,8 @@ export const MobileMenu = () => {
                       key={item.href}
                       href={item.href} 
                       onClick={toggleMenu} 
-                      className={`py-2.5 text-sm font-bold uppercase transition-colors border-b border-white last:border-b-0 ${
-                        isSubActive ? 'text-[#E9A33C]' : 'text-white/80 hover:text-[#E9A33C]'
+                      className={`py-2.5 text-sm font-bold uppercase transition-colors border-b border-white/20 last:border-b-0 ${
+                        isSubActive ? 'text-[#E9A33C] font-extrabold' : 'text-white hover:text-[#E9A33C]'
                       }`}
                     >
                       {item.label}
@@ -120,10 +112,10 @@ export const MobileMenu = () => {
           </div>
           <div className="flex gap-4 items-center mt-2 pl-2">
             <button onClick={() => switchLanguage('en')} className={`flex items-center justify-center transition-all duration-300 w-8 h-[22px] rounded-[3px] overflow-hidden border border-white/20 relative ${locale === 'en' ? 'shadow-[0_0_8px_rgba(255,255,255,0.4)] ring-1 ring-white/50 z-10' : 'opacity-90 hover:opacity-100 z-0'}`}>
-              <Image src="/images/eng.png" alt="English" fill sizes="20vw" className="object-cover" />
+              <Image src="/images/eng.png" alt="English" fill sizes="32px" className="object-cover" />
             </button>
             <button onClick={() => switchLanguage('fr')} className={`flex items-center justify-center transition-all duration-300 w-8 h-[22px] rounded-[3px] overflow-hidden border border-white/20 relative ${locale === 'fr' ? 'shadow-[0_0_8px_rgba(255,255,255,0.4)] ring-1 ring-white/50 z-10' : 'opacity-90 hover:opacity-100 z-0'}`}>
-              <Image src="/images/fre.png" alt="Français" fill sizes="20vw" className="object-cover" />
+              <Image src="/images/fre.png" alt="Français" fill sizes="32px" className="object-cover" />
             </button>
           </div>
         </nav>

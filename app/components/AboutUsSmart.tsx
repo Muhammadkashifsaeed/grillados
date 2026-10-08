@@ -40,7 +40,7 @@ const AboutUsSmart = () => {
           <Image 
             src="/images/making.jpg" 
             alt="Making Grillados" 
-            fill sizes="100vw" 
+            fill sizes="(max-width: 1024px) 100vw, 50vw" 
             className="object-cover"
           />
         </div>

@@ -16,7 +16,7 @@ const AboutUsStory = () => {
             <Image
               src="/images/famous1.png"
               alt="Grillados Famous 1"
-              fill sizes="100vw"
+              fill sizes="(max-width: 1024px) 50vw, 25vw"
               className="object-cover"
             />
           </div>
@@ -26,7 +26,7 @@ const AboutUsStory = () => {
             <Image
               src="/images/famous2.png"
               alt="Grillados Famous 2"
-              fill sizes="100vw"
+              fill sizes="(max-width: 1024px) 50vw, 25vw"
               className="object-cover"
             />
           </div>
@@ -58,7 +58,7 @@ const AboutUsStory = () => {
                 <Image
                   src="/images/burger-shape-3.png"
                   alt="Burger Shape"
-                  fill sizes="80px"
+                  fill sizes="(max-width: 640px) 56px, 64px"
                   className="object-contain animate-float-burger"
                 />
               </div>
@@ -86,7 +86,7 @@ const AboutUsStory = () => {
               <Image
                 src="/images/keep1.jpg"
                 alt="Grillados Keep 1"
-                fill sizes="100vw"
+                fill sizes="(max-width: 640px) 160px, 224px"
                 className="object-cover"
               />
             </div>
@@ -94,7 +94,7 @@ const AboutUsStory = () => {
               <Image
                 src="/images/keep2.jpg"
                 alt="Grillados Keep 2"
-                fill sizes="100vw"
+                fill sizes="(max-width: 640px) 160px, 224px"
                 className="object-cover"
               />
             </div>

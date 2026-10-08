@@ -43,7 +43,7 @@ const AboutUsCertified = () => {
                 <Image 
                   src={card.image} 
                   alt={card.heading} 
-                  fill sizes="100vw" 
+                  fill sizes="(max-width: 640px) 64px, 80px" 
                   className="object-contain"
                 />
               </div>

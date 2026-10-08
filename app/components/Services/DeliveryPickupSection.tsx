@@ -14,6 +14,7 @@ export default function DeliveryPickupSection() {
         src="/images/Rectangle-1.png"
         alt="Background"
         fill
+        sizes="(max-width: 1280px) 95vw, 1280px"
         className="object-cover z-0"
         priority
       />
@@ -36,7 +37,7 @@ export default function DeliveryPickupSection() {
               alt="Delivery Icon"
               fill
               className="object-contain"
-              sizes="110px"
+              sizes="(max-width: 768px) 64px, 80px"
             />
           </motion.div>
 
@@ -46,9 +47,9 @@ export default function DeliveryPickupSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-['Outfit',sans-serif] leading-tight tracking-wide mb-2"
+            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-['Outfit',sans-serif] leading-tight tracking-wide mb-2 uppercase"
           >
-            At Grillado&apos;s, we offer <br className="hidden sm:block" /> 10 minutes of delivery <br className="hidden sm:block" /> and pickup.
+            AT GRILLADO&apos;S, WE OFFER <br className="hidden sm:block" /> 10 MINS DELIVERY <br className="hidden sm:block" /> &amp; PICK-UP
           </motion.h2>
 
           {/* Contact Banner */}
@@ -69,17 +70,17 @@ export default function DeliveryPickupSection() {
             {/* Top Row: Rectangle1 and Rectangle2 */}
             <div className="flex flex-row gap-8 md:gap-10">
               <div className="bg-transparent w-35 h-15 md:w-40 md:h-17.5 relative px-4">
-                <Image src="/images/Rectangle1.png" alt="Delivery Partner 1" fill className="object-contain scale-[1.15] mix-blend-multiply" sizes="160px" />
+                <Image src="/images/Rectangle1.png" alt="Delivery Partner 1" fill className="object-contain scale-[1.15] mix-blend-multiply" sizes="(max-width: 768px) 140px, 160px" />
               </div>
 
               <div className="bg-transparent w-35 h-15 md:w-40 md:h-17.5 relative px-4">
-                <Image src="/images/Rectangle2.png" alt="Delivery Partner 2" fill className="object-contain scale-[1.15] mix-blend-multiply" sizes="160px" />
+                <Image src="/images/Rectangle2.png" alt="Delivery Partner 2" fill className="object-contain scale-[1.15] mix-blend-multiply" sizes="(max-width: 768px) 140px, 160px" />
               </div>
             </div>
 
             {/* Bottom Row: Rectangle3 */}
             <div className="bg-transparent w-35 h-15 md:w-40 md:h-17.5 relative px-4 mt-1">
-              <Image src="/images/Rectangle3.png" alt="Delivery Partner 3" fill className="object-contain scale-[1.15] mix-blend-multiply" sizes="160px" />
+              <Image src="/images/Rectangle3.png" alt="Delivery Partner 3" fill className="object-contain scale-[1.15] mix-blend-multiply" sizes="(max-width: 768px) 140px, 160px" />
             </div>
           </div>
 

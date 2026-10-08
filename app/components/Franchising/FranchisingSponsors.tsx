@@ -39,7 +39,7 @@ export default function FranchisingSponsors() {
               <Image
                 src={src}
                 alt={`Franchising Partner ${idx + 1}`}
-                fill sizes="200px"
+                fill sizes="(max-width: 768px) 128px, 192px"
                 className="object-contain"
               />
             </div>

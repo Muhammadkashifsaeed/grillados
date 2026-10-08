@@ -38,7 +38,7 @@ export default function ComingSoonLocations() {
   ];
 
   return (
-    <section className="relative w-full py-10 md:py-16 z-10">
+    <section className="relative w-full pt-2 pb-10 md:py-16 z-10">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Main Heading */}
@@ -47,7 +47,7 @@ export default function ComingSoonLocations() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-center mb-16 md:mb-24"
+          className="flex flex-col items-center mb-6 md:mb-20"
         >
           <h2
             className="capitalize tracking-wide text-center"
@@ -55,7 +55,7 @@ export default function ComingSoonLocations() {
           >
             {t('comingSoonLocations')}
           </h2>
-          <div className="w-25 h-0.75 bg-orange-500 mt-5"></div>
+          <div className="w-25 h-0.75 bg-orange-500 mt-3 md:mt-5"></div>
         </motion.div>
 
         {/* Content Container */}

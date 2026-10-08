@@ -21,7 +21,7 @@ const ChickenSpecialsSection = () => {
           <Image
             src="/images/dishes.webp"
             alt="Grillado's Chicken Specials"
-            fill sizes="100vw"
+            fill sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
           />
         </motion.div>

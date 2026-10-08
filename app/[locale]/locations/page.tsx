@@ -68,7 +68,7 @@ export default function LocationsPage() {
         <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
       </div>
 
-      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full mb-24 pt-16">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full mb-8 md:mb-20 pt-16">
         
         {/* Header Section */}
         <div className="mb-12 md:mb-16 flex flex-col items-center">

@@ -89,7 +89,7 @@ export const Header = () => {
                 className={`transition-all duration-300 w-6 h-4 xl:w-7 xl:h-4.5 rounded-[3px] overflow-hidden border border-white/20 relative ${locale === 'en' ? 'shadow-[0_0_8px_rgba(255,255,255,0.4)] ring-1 ring-white/50 z-10' : 'opacity-90 hover:opacity-100 z-0'}`}
                 title="English"
               >
-                <Image src="/images/eng.png" alt="English" fill sizes="10vw" className="object-cover" />
+                <Image src="/images/eng.png" alt="English" fill sizes="(max-width: 1280px) 24px, 28px" className="object-cover" />
               </button>
               <button
                 type="button"
@@ -97,7 +97,7 @@ export const Header = () => {
                 className={`transition-all duration-300 w-6 h-4 xl:w-7 xl:h-4.5 rounded-[3px] overflow-hidden border border-white/20 relative ${locale === 'fr' ? 'shadow-[0_0_8px_rgba(255,255,255,0.4)] ring-1 ring-white/50 z-10' : 'opacity-90 hover:opacity-100 z-0'}`}
                 title="Français"
               >
-                <Image src="/images/fre.png" alt="French" fill sizes="10vw" className="object-cover" />
+                <Image src="/images/fre.png" alt="French" fill sizes="(max-width: 1280px) 24px, 28px" className="object-cover" />
               </button>
             </div>
           </nav>
@@ -106,11 +106,12 @@ export const Header = () => {
         {/* Right Side: Order Online Button & Mobile Menu */}
         <div className="flex items-center gap-3 md:gap-4 xl:gap-6 h-full py-2 shrink-0 relative z-20">
           
+          {/* Desktop Order Online Button (Original exact animation & design) */}
           <Link
             href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-            className="h-9 md:h-10 lg:h-11 inline-flex items-center justify-center gap-2 animate-bg-sweep px-3.5 sm:px-5 lg:px-6 rounded-lg shadow-[0_0_15px_rgba(239,113,64,0.3)] hover:shadow-[#EF7140]/50 border border-white/10 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase cursor-pointer"
+            className="hidden lg:inline-flex h-11 items-center justify-center gap-2 animate-bg-sweep px-5 lg:px-6 rounded-lg shadow-[0_0_15px_rgba(239,113,64,0.3)] hover:shadow-[#EF7140]/50 border border-white/10 transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase cursor-pointer"
           >
-            <ShoppingBag className="w-4 h-4 md:w-5 md:h-5 shrink-0 animate-header-btn-text" />
+            <ShoppingBag className="w-5 h-5 shrink-0 animate-header-btn-text" />
             <span 
               className="whitespace-nowrap animate-header-btn-text uppercase"
               style={{ 
@@ -118,6 +119,26 @@ export const Header = () => {
                 fontStyle: 'normal', 
                 fontWeight: 500, 
                 fontSize: '16px', 
+                lineHeight: '16px' 
+              }}
+            >
+              {t('orderOnline')}
+            </span>
+          </Link>
+
+          {/* Mobile Order Online Button (Matching Hero buttons & subtle 2% rounded) */}
+          <Link
+            href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
+            className="lg:hidden h-9 sm:h-10 inline-flex items-center justify-center gap-2 px-3.5 sm:px-5 rounded-[4px] bg-[#FAC716] text-black hover:bg-[#EB5250] hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md tracking-wider uppercase cursor-pointer group"
+          >
+            <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+            <span 
+              className="whitespace-nowrap uppercase"
+              style={{ 
+                fontFamily: "'Ribeat', sans-serif", 
+                fontStyle: 'normal', 
+                fontWeight: 500, 
+                fontSize: '15px', 
                 lineHeight: '16px' 
               }}
             >

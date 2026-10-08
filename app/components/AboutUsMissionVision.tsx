@@ -49,7 +49,7 @@ const AboutUsMissionVision = () => {
                 <Image 
                   src="/images/bullseye.png" 
                   alt="Bullseye" 
-                  fill sizes="100vw" 
+                  fill sizes="24px" 
                   className="object-contain"
                 />
               </div>
@@ -65,7 +65,7 @@ const AboutUsMissionVision = () => {
                 <Image 
                   src="/images/bullseye.png" 
                   alt="Bullseye" 
-                  fill sizes="100vw" 
+                  fill sizes="24px" 
                   className="object-contain"
                 />
               </div>
@@ -81,7 +81,7 @@ const AboutUsMissionVision = () => {
                 <Image 
                   src="/images/bullseye.png" 
                   alt="Bullseye" 
-                  fill sizes="100vw" 
+                  fill sizes="24px" 
                   className="object-contain"
                 />
               </div>
