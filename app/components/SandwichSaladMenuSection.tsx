@@ -58,9 +58,9 @@ export const SandwichSaladMenuSection = () => {
                   </div>
                   {/* Combo row */}
                   <div className="flex items-end w-full gap-2 sm:gap-3 mt-1 md:mt-1.5">
-                    <span className="text-[#EB5250] text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">{t('combo')}</span>
-                    <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(235,82,80,0.6)', minWidth: '4px' }}></div>
-                    <span className="text-[#EB5250] text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-[#EB5250] font-normal text-xs md:text-sm ml-1">{t('sideAndPop')}</span></span>
+                    <span className="text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap" style={{ color: 'rgb(255,0,0)' }}>{t('combo')}</span>
+                    <div className="grow-0 w-24 sm:w-36 md:w-44 mb-1" style={{ borderBottom: '2px dotted rgb(255,0,0)', minWidth: '4px' }}></div>
+                    <span className="text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug" style={{ color: 'rgb(255,0,0)' }}>6.00 <span className="font-normal text-xs md:text-sm ml-1" style={{ color: 'rgb(255,0,0)' }}>{t('sideAndPop')}</span></span>
                   </div>
                 </a>
               </motion.div>
@@ -82,9 +82,9 @@ export const SandwichSaladMenuSection = () => {
                   </div>
                   {/* Combo row */}
                   <div className="flex items-end w-full gap-2 sm:gap-3 mt-1 md:mt-1.5">
-                    <span className="text-[#EB5250] text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap">{t('combo')}</span>
-                    <div className="grow mb-1" style={{ borderBottom: '2px dotted rgba(235,82,80,0.6)', minWidth: '4px' }}></div>
-                    <span className="text-[#EB5250] text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug">6.00 <span className="text-[#EB5250] font-normal text-xs md:text-sm ml-1">{t('sideAndPop')}</span></span>
+                    <span className="text-xs md:text-sm font-bold uppercase tracking-widest whitespace-nowrap" style={{ color: 'rgb(255,0,0)' }}>{t('combo')}</span>
+                    <div className="grow-0 w-24 sm:w-36 md:w-44 mb-1" style={{ borderBottom: '2px dotted rgb(255,0,0)', minWidth: '4px' }}></div>
+                    <span className="text-2.75 sm:text-xs md:text-base font-bold whitespace-nowrap leading-snug" style={{ color: 'rgb(255,0,0)' }}>6.00 <span className="font-normal text-xs md:text-sm ml-1" style={{ color: 'rgb(255,0,0)' }}>{t('sideAndPop')}</span></span>
                   </div>
                 </a>
               </motion.div>
