@@ -112,7 +112,7 @@ export const ChickenSpecialsMenuSection = () => {
 
             <div className="flex flex-col gap-5 md:gap-6 w-full">
               {menuItemsLocal.map((item, index) => {
-                const isUnlinked = index === 3 || index === 4;
+                const isUnlinked = index === 3 || index === 4 || index === 6 || index === 8;
                 const ItemWrapper = isUnlinked ? 'div' : 'a';
                 const wrapperProps = isUnlinked 
                   ? { className: 'flex flex-col w-full' } 
