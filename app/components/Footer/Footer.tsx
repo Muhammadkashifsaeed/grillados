@@ -3,59 +3,8 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { UtensilsCrossed } from "lucide-react";
-// Since lucide doesn't have TikTok and Yelp directly, using generic placeholders or available equivalents.
-// For Yelp, we can use a Star, and for TikTok we can use a Music/Video icon, or we can use custom SVG if provided. 
-// I'll use generic Lucide icons that represent media well, or text if needed. Let's use custom SVGs for those if possible.
-
-const FacebookIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-);
-
-const InstagramIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-);
-
-const YoutubeIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
-);
-
-const LinktreeIcon = () => (
-  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
-    <path d="M13.736 5.853l4.005-4.117 2.325 2.38-4.2 4.005h5.908v3.305h-5.937l4.229 4.108-2.325 2.334-5.74-5.769v10.622h-3.32V11.905L2.94 17.674l-2.325-2.325 4.229-4.108H-.908V7.936h5.908l-4.2-4.005 2.325-2.38 4.005 4.117V.132h3.32v5.72z"/>
-  </svg>
-);
-
-const TikTokIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
-  </svg>
-);
-
-const YelpIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z" />
-  </svg>
-);
+import { FaFacebookF, FaTiktok, FaInstagram, FaYoutube } from "react-icons/fa6";
+import { SiLinktree } from "react-icons/si";
 
 export const Footer = () => {
   const t = useTranslations('Footer');
@@ -83,27 +32,27 @@ export const Footer = () => {
             {/* Column 1 */}
             <div className="flex flex-col items-start gap-4 lg:gap-6">
               <Image
-                src="/images/saman.png"
+                src="/images/Grillados_new_logo-Yellow-removebg-preview.png"
                 alt="Grillado's Logo"
-                width={200}
-                height={70}
-                className="w-44 sm:w-48 h-auto object-contain drop-shadow-md transition-transform duration-300 hover:scale-105 origin-left"
+                width={260}
+                height={90}
+                className="w-50 sm:w-58 lg:w-66 h-auto object-contain filter drop-shadow-[0_4px_15px_rgba(0,0,0,0.6)]"
               />
               <div className="flex items-center gap-3 mt-4">
                 <a href="https://www.facebook.com/Grillados?mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                  <FacebookIcon />
+                  <FaFacebookF className="w-5 h-5 text-white" />
                 </a>
                 <a href="https://www.tiktok.com/@grilladoscanada?_t=8fuUZP3nFIc&_r=1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                  <TikTokIcon />
+                  <FaTiktok className="w-5 h-5 text-white" />
                 </a>
                 <a href="https://www.instagram.com/grilladoscanada?igshid=NGVhN2U2NjQ0Yg%3D%3D" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                  <InstagramIcon />
+                  <FaInstagram className="w-5 h-5 text-white" />
                 </a>
                 <a href="https://www.youtube.com/channel/UCwa_w9BuVndNvHcZ9vUb5sA" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                  <YoutubeIcon />
+                  <FaYoutube className="w-5 h-5 text-white" />
                 </a>
                 <a href="https://lnk.bio/grillados" target="_blank" rel="noopener noreferrer" title="Bio Links" className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                  <LinktreeIcon />
+                  <SiLinktree className="w-5 h-5 text-white" />
                 </a>
               </div>
             </div>

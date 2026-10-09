@@ -45,7 +45,7 @@ export const PlateauxMenuSection = () => {
     { name: rawItems[4].name, price: '159.99', note: rawItems[4].note },
   ];
   return (
-    <section id="plateaux" className="relative w-full pt-4 pb-1 md:py-4 lg:py-8 bg-transparent">
+    <section id="plateaux" className="relative w-full pt-4 pb-1 md:py-4 lg:py-8 bg-transparent scroll-mt-24">
 
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col lg:flex-col gap-0 md:gap-10 lg:gap-14">

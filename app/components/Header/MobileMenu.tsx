@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu, X, Utensils, MapPin, Tag, Users, Truck, FileText, ShoppingBag } from "lucide-react";
+import { Menu, X, Utensils, MapPin, Tag, Users, Truck, FileText, ShoppingBag, Sparkles, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations, useLocale } from 'next-intl';
@@ -34,58 +34,70 @@ export const MobileMenu = () => {
     <div className="lg:hidden flex items-center">
       <button
         onClick={toggleMenu}
-        className="text-white flex items-center justify-center p-2"
+        className="text-white flex items-center justify-center p-2 rounded-xl bg-white/5 border border-white/10 hover:border-[#FAC716]/40 hover:text-[#FAC716] transition-all"
         aria-label="Open Menu"
       >
-        <Menu className="w-8 h-8" />
+        <Menu className="w-7 h-7" />
       </button>
 
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed top-0 left-0 w-screen h-[100dvh] bg-black/60 z-40 transition-opacity"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 transition-opacity"
           onClick={toggleMenu}
         />
       )}
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 left-0 h-[100dvh] w-[80vw] sm:w-87.5 bg-[#d72323] border-r border-white/20 z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-[100dvh] w-[82vw] sm:w-88 bg-[#1A1410] border-r border-[#FAC716]/30 z-50 transform transition-transform duration-300 ease-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } flex flex-col shadow-2xl`}
-        style={{ backgroundColor: '#d72323' }}
+        } flex flex-col shadow-[0_0_50px_rgba(0,0,0,0.9)]`}
+        style={{ backgroundColor: '#1A1410' }}
       >
-        <div className="flex justify-end items-center p-5 border-b border-white/20">
+        {/* Header inside drawer */}
+        <div className="flex justify-between items-center px-5 py-4 border-b border-white/10">
+          <div className="relative h-9 w-32">
+            <Image
+              src="/images/Grillados_new_logo-Yellow-removebg-preview.png"
+              alt="Grillado's Logo"
+              fill
+              sizes="140px"
+              className="object-contain object-left filter drop-shadow-[0_0_8px_rgba(250,199,22,0.4)]"
+            />
+          </div>
           <button
             onClick={toggleMenu}
-            className="text-white hover:text-[#FAC716] transition-colors"
+            className="text-white/80 hover:text-[#FAC716] p-1.5 rounded-lg bg-white/5 border border-white/10 transition-colors"
             aria-label="Close Menu"
           >
-            <X className="w-8 h-8" />
+            <X className="w-6 h-6" />
           </button>
         </div>
 
-        <nav className="flex-1 overflow-y-auto py-6 px-5 flex flex-col gap-6">
-          <NavItem href="/menu" icon={<Utensils className="w-5 h-5" />} label={t('menu')} />
-          <NavItem href="/locations" icon={<MapPin className="w-5 h-5" />} label={t('locations')} />
-          <NavItem href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" icon={<ShoppingBag className="w-5 h-5" />} label={t('orderOnline')} />
-          <NavItem href="/deals" icon={<Tag className="w-5 h-5" />} label={t('deals')} />
-          <NavItem href="/services" icon={<Users className="w-5 h-5" />} label={t('services')} />
-          <NavItem href="/catering" icon={<Truck className="w-5 h-5" />} label={t('cateringServices')} />
+        {/* Links Navigation */}
+        <nav className="flex-1 overflow-y-auto py-6 px-5 flex flex-col gap-4">
+          <NavItem href="/menu" icon={<Utensils className="w-4.5 h-4.5" />} label={t('menu')} onClick={toggleMenu} />
+          <NavItem href="/locations" icon={<MapPin className="w-4.5 h-4.5" />} label={t('locations')} onClick={toggleMenu} />
+          <NavItem href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" icon={<ShoppingBag className="w-4.5 h-4.5" />} label={t('orderOnline')} onClick={toggleMenu} />
+          <NavItem href="/deals" icon={<Tag className="w-4.5 h-4.5" />} label={t('deals')} onClick={toggleMenu} />
+          <NavItem href="/services" icon={<Users className="w-4.5 h-4.5" />} label={t('services')} onClick={toggleMenu} />
+          <NavItem href="/catering" icon={<Truck className="w-4.5 h-4.5" />} label={t('cateringServices')} onClick={toggleMenu} />
           
-          <div className="flex flex-col">
+          {/* Pages Collapsible */}
+          <div className="flex flex-col rounded-2xl bg-white/5 border border-white/10 p-2.5 mt-1">
             <button 
               onClick={() => setIsPagesOpen(!isPagesOpen)}
-              className="flex items-center justify-between w-full text-white hover:text-[#E9A33C] transition-colors py-2 font-bold group"
+              className="flex items-center justify-between w-full px-2 py-1.5 text-white hover:text-[#FAC716] transition-colors font-bold group"
             >
-              <div className="flex items-center gap-1.5 font-bold text-sm tracking-wide uppercase text-white group-hover:text-[#E9A33C] transition-colors">
-                <FileText className="w-5 h-5 text-current" />
-                <span className="text-current">{t('pages')}</span>
+              <div className="flex items-center gap-2 font-bold text-xs tracking-wider uppercase text-white group-hover:text-[#FAC716]">
+                <FileText className="w-4 h-4 text-[#FAC716]" />
+                <span>{t('pages')}</span>
               </div>
-              <span className={`text-xs text-current transition-transform ${isPagesOpen ? 'rotate-180' : ''}`}>▼</span>
+              <span className={`text-xs text-[#FAC716] transition-transform duration-300 ${isPagesOpen ? 'rotate-180' : ''}`}>▼</span>
             </button>
             {isPagesOpen && (
-              <div className="flex flex-col pl-6 mt-2 gap-3 border-l border-white/30 ml-2">
+              <div className="flex flex-col pl-4 mt-2 gap-2 border-l border-[#FAC716]/30 ml-3">
                 {[
                   { href: '/franchising', label: t('franchising') },
                   { href: '/gallery', label: t('gallery') },
@@ -99,29 +111,64 @@ export const MobileMenu = () => {
                       key={item.href}
                       href={item.href} 
                       onClick={toggleMenu} 
-                      className={`py-2.5 text-sm font-bold uppercase transition-colors border-b border-white/20 last:border-b-0 ${
-                        isSubActive ? 'text-[#E9A33C] font-extrabold' : 'text-white hover:text-[#E9A33C]'
+                      className={`flex items-center justify-between py-2 px-3 rounded-lg text-xs font-bold uppercase transition-all ${
+                        isSubActive 
+                          ? 'text-[#FAC716] bg-[#FAC716]/15 border border-[#FAC716]/30' 
+                          : 'text-white/80 hover:text-[#FAC716] hover:bg-white/5'
                       }`}
                     >
-                      {item.label}
+                      <span>{item.label}</span>
+                      <ChevronRight className="w-3 h-3 text-[#FAC716]" />
                     </Link>
                   );
                 })}
               </div>
             )}
           </div>
-          <div className="flex gap-4 items-center mt-2 pl-2">
-            <button onClick={() => switchLanguage('en')} className={`flex items-center justify-center transition-all duration-300 w-8 h-[22px] rounded-[3px] overflow-hidden border border-white/20 relative ${locale === 'en' ? 'shadow-[0_0_8px_rgba(255,255,255,0.4)] ring-1 ring-white/50 z-10' : 'opacity-90 hover:opacity-100 z-0'}`}>
-              <Image src="/images/eng.png" alt="English" fill sizes="32px" className="object-cover" />
-            </button>
-            <button onClick={() => switchLanguage('fr')} className={`flex items-center justify-center transition-all duration-300 w-8 h-[22px] rounded-[3px] overflow-hidden border border-white/20 relative ${locale === 'fr' ? 'shadow-[0_0_8px_rgba(255,255,255,0.4)] ring-1 ring-white/50 z-10' : 'opacity-90 hover:opacity-100 z-0'}`}>
-              <Image src="/images/fre.png" alt="Français" fill sizes="32px" className="object-cover" />
-            </button>
+
+          {/* Language Switcher */}
+          <div className="flex items-center justify-between mt-3 p-3 rounded-2xl bg-black/40 border border-white/10">
+            <span className="text-xs font-bold text-white/70 uppercase tracking-wider flex items-center gap-1">
+              <Sparkles className="w-3.5 h-3.5 text-[#FAC716]" /> Language
+            </span>
+            <div className="flex gap-2.5 items-center">
+              <button 
+                onClick={() => switchLanguage('en')} 
+                className={`flex items-center justify-center transition-all duration-300 w-6 h-4.5 rounded-[3px] overflow-hidden relative ${
+                  locale === 'en' 
+                    ? 'border border-white/90 ring-1 ring-white/40 shadow-[0_0_6px_rgba(255,255,255,0.35)] scale-105' 
+                    : 'border border-white/20 opacity-60 hover:opacity-100'
+                }`}
+              >
+                <Image src="/images/eng.svg" alt="English" fill unoptimized className="object-cover" />
+              </button>
+              <button 
+                onClick={() => switchLanguage('fr')} 
+                className={`flex items-center justify-center transition-all duration-300 w-6 h-4.5 rounded-[3px] overflow-hidden relative ${
+                  locale === 'fr' 
+                    ? 'border border-white/90 ring-1 ring-white/40 shadow-[0_0_6px_rgba(255,255,255,0.35)] scale-105' 
+                    : 'border border-white/20 opacity-60 hover:opacity-100'
+                }`}
+              >
+                <Image src="/images/fre.svg" alt="Français" fill unoptimized className="object-cover" />
+              </button>
+            </div>
           </div>
         </nav>
 
-
+        {/* Footer Order Button inside Drawer */}
+        <div className="p-5 border-t border-white/10">
+          <Link
+            href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
+            onClick={toggleMenu}
+            className="w-full h-12 flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-[#FAC716] via-[#FFA800] to-[#EB5250] text-black font-extrabold shadow-xl tracking-wider uppercase text-sm"
+          >
+            <ShoppingBag className="w-5 h-5 text-black" />
+            <span>{t('orderOnline')}</span>
+          </Link>
+        </div>
       </div>
     </div>
   );
 };
+

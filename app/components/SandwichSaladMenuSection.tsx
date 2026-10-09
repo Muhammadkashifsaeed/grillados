@@ -15,7 +15,7 @@ export const SandwichSaladMenuSection = () => {
     { name: rawSalads[2].name, price: '7.99' }
   ];
   return (
-    <section id="sandwich-salad" className="relative w-full py-4 lg:py-8 bg-transparent">
+    <section id="sandwich-salad" className="relative w-full py-4 lg:py-8 bg-transparent scroll-mt-24">
 
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">

@@ -71,7 +71,7 @@ export const ChickenSpecialsMenuSection = () => {
     { name: rawItems[8].name, price: '39.99', note: rawItems[8].note },
   ];
   return (
-    <section id="chicken-specials" className="relative w-full py-4 lg:py-8 bg-transparent">
+    <section className="relative w-full py-4 lg:py-8 bg-transparent">
 
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 flex flex-col gap-6 md:gap-14">
@@ -90,7 +90,7 @@ export const ChickenSpecialsMenuSection = () => {
 
 
         {/* ZONE 2: Bottom row — Left: menu content | Right: set.png */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center md:items-start md:pt-4">
+        <div id="chicken-specials" className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center md:items-start md:pt-4 scroll-mt-24 md:scroll-mt-28">
 
           {/* Left: Heading + Divider + Menu Items — fade LEFT */}
           <motion.div

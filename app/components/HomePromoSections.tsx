@@ -4,10 +4,12 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const HomePromoSections = () => {
   const t = useTranslations('HomePromo');
+  const locale = useLocale();
+  const targetMenuUrl = locale === 'fr' ? '/fr/menu/#chicken-specials' : '/menu/#chicken-specials';
   return (
     <section className="w-full bg-white overflow-hidden flex flex-col gap-0">
 
@@ -72,9 +74,9 @@ const HomePromoSections = () => {
               <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" className="text-black hover:text-white hover: hover: h-12 sm:h-13 px-4 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none inline-flex items-center justify-center text-center whitespace-nowrap" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }} >
                 {t('orderNow')}
               </Link>
-              <Link href="/menu#chicken-specials" className="text-black hover:text-white h-12 sm:h-13 px-4 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }} >
+              <a href={targetMenuUrl} className="text-black hover:text-white h-12 sm:h-13 px-4 sm:px-8 bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 hover:scale-[1.03] shadow-md rounded-lg flex-1 sm:flex-none whitespace-nowrap inline-flex items-center justify-center" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '15px', lineHeight: '16px' }} >
                 {t('learnMore')}
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

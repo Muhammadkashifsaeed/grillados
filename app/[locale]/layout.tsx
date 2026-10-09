@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Noto_Sans, Poppins, Albert_Sans } from "next/font/google";
+import { headers } from "next/headers";
 import "../globals.css";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
@@ -35,18 +36,24 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
+  // Dynamically derive current domain from request headers (e.g. grillados-2.vercel.app, grillados.ca, etc.)
+  const headersList = await headers();
+  const host = headersList.get('host') || 'grillados.ca';
+  const protocol = headersList.get('x-forwarded-proto') || (host.includes('localhost') ? 'http' : 'https');
+  const currentDomain = `${protocol}://${host}`;
+
   // Capitalize all metadata fields as requested
   const titleDefault = t('title').toUpperCase();
   const description = t('description').toUpperCase();
   const keywords = t('keywords').toUpperCase().split(', ');
 
   return {
-    metadataBase: new URL('https://grillados.ca'),
+    metadataBase: new URL(currentDomain),
     alternates: { 
-      canonical: `/${locale}`,
+      canonical: currentDomain,
       languages: {
-        'en': '/en',
-        'fr': '/fr',
+        'en': `${currentDomain}/en`,
+        'fr': `${currentDomain}/fr`,
       },
     },
     robots: { index: true, follow: true },
@@ -77,7 +84,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: titleDefault,
       description: description,
-      url: "https://grillados.ca",
+      url: currentDomain,
       siteName: "GRILLADO'S",
       images: [
         {
@@ -171,11 +178,11 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-white" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-[#1A1410]" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Header />
           <MobileOrderButton />
-          <main className="flex-1 pt-[84px] md:pt-20">{children}</main>
+          <main className="flex-1 pt-0 bg-[#1A1410]">{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>
