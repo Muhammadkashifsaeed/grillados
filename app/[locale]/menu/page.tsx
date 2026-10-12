@@ -12,11 +12,25 @@ import DessertMenuSection from '../../components/DessertMenuSection';
 
 import { Link } from "@/i18n/routing";
 import { ShoppingBag } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { constructPageMetadata } from '../../utils/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Header' });
+
+  return constructPageMetadata({
+    locale,
+    pathname: '/menu',
+    title: t('menu').toUpperCase(),
+    description: locale === 'fr'
+      ? "Découvrez notre menu complet: poulet grillé péri-péri, travers de bœuf, sandwichs et desserts chez Grillado's Canada."
+      : "Explore our full menu featuring grilled peri peri chicken, beef back ribs, sandwiches, and desserts at Grillado's Canada.",
+  });
+}
 
 export default function MenuPage() {
-  const t = useTranslations('Header');
-
   return (
     <main 
       className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-size-[250%_auto] md:bg-size-[100%_auto] bg-top bg-repeat-y pt-20 md:pt-22"

@@ -1,7 +1,22 @@
 import React from 'react';
 import PrivacyFr from '@/app/components/PrivacyFr';
+import { Metadata } from 'next';
+import { constructPageMetadata } from '../../utils/seo';
 
-export default function PrivacyPage({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return constructPageMetadata({
+    locale,
+    pathname: '/privacy',
+    title: locale === 'fr' ? 'POLITIQUE DE CONFIDENTIALITÉ | GRILLADOS' : 'PRIVACY POLICY | GRILLADOS',
+    description: locale === 'fr'
+      ? "Politique de confidentialité de Grillado's Canada concernant la collecte et l'utilisation de vos données personnelles."
+      : "Privacy policy of Grillado's Canada regarding the collection and use of personal information.",
+  });
+}
+
+export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   return (
     <main className="flex flex-col flex-1 min-h-screen bg-white relative overflow-hidden pb-24">
       {/* Hero Section */}

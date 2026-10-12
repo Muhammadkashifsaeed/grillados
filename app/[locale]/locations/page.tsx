@@ -3,6 +3,23 @@ import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import LocationCard from '../../components/LocationCard';
 import ComingSoonLocations from '../../components/ComingSoonLocations';
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { constructPageMetadata } from '../../utils/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Header' });
+
+  return constructPageMetadata({
+    locale,
+    pathname: '/locations',
+    title: t('locations').toUpperCase(),
+    description: locale === 'fr'
+      ? "Trouvez les restaurants Grillado's au Canada: Laval, Milton, Mississauga et Cambridge. Dégustez nos viandes grillées et saveurs authentiques."
+      : "Find Grillado's restaurant locations across Canada: Laval, Milton, Mississauga, and Cambridge. Enjoy flame-grilled chicken and steaks.",
+  });
+}
 
 const locations = [
   {

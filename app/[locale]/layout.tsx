@@ -50,10 +50,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     metadataBase: new URL(currentDomain),
     alternates: { 
-      canonical: currentDomain,
+      canonical: locale === 'fr' ? '/fr' : '/',
       languages: {
-        'en': `${currentDomain}/en`,
-        'fr': `${currentDomain}/fr`,
+        'en': '/',
+        'fr': '/fr',
+        'x-default': '/',
       },
     },
     robots: { index: true, follow: true },

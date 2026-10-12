@@ -1,6 +1,36 @@
 import React from 'react';
 import Image from 'next/image';
 import { Link } from "@/i18n/routing";
+import { Metadata } from 'next';
+import { constructPageMetadata } from '../../../utils/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+  const { locale, slug } = await params;
+  let title = slug.replace(/-/g, ' ').toUpperCase();
+  let description = locale === 'fr' 
+    ? "Lisez cet article sur le blog de Grillado's Canada." 
+    : "Read this article on Grillado's Canada blog.";
+
+  try {
+    const res = await fetch(`https://grillados.ca/wp-json/wp/v2/posts?slug=${slug}&_embed=1`, { next: { revalidate: 3600 } });
+    const data = await res.json();
+    if (data && data.length > 0 && data[0].title?.rendered) {
+      title = data[0].title.rendered.replace(/<[^>]+>/g, '').trim().toUpperCase();
+      if (data[0].excerpt?.rendered) {
+        description = data[0].excerpt.rendered.replace(/<[^>]+>/g, '').trim();
+      }
+    }
+  } catch {
+    // fallback
+  }
+
+  return constructPageMetadata({
+    locale,
+    pathname: `/blogs/${slug}`,
+    title: `${title} | GRILLADOS`,
+    description,
+  });
+}
 
 export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

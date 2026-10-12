@@ -3,6 +3,20 @@ import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { Globe } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
+import { constructPageMetadata } from '../../utils/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return constructPageMetadata({
+    locale,
+    pathname: '/social-tree',
+    title: 'SOCIAL LINKS | GRILLADOS',
+    description: locale === 'fr'
+      ? "Suivez Grillado's sur les réseaux sociaux: Instagram, Facebook, TikTok et WhatsApp."
+      : "Connect with Grillado's on social media: Instagram, Facebook, TikTok, and WhatsApp.",
+  });
+}
 
 const FacebookIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>

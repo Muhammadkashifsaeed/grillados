@@ -11,6 +11,22 @@ import CateringPartnersSection from '../components/CateringPartnersSection';
 import ReviewsSection from '../components/ReviewsSection';
 import BlogsSection from '../components/BlogsSection';
 import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { constructPageMetadata } from '../utils/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+  return constructPageMetadata({
+    locale,
+    pathname: '/',
+    title: t('title').toUpperCase(),
+    description: t('description'),
+    keywords: t('keywords').toUpperCase().split(', '),
+  });
+}
 
 export default function Home() {
   const t = useTranslations('Newsletter');

@@ -1,7 +1,22 @@
 import React from 'react';
 import TermsFr from '@/app/components/TermsFr';
+import { Metadata } from 'next';
+import { constructPageMetadata } from '../../utils/seo';
 
-export default function TermsPage({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return constructPageMetadata({
+    locale,
+    pathname: '/terms',
+    title: locale === 'fr' ? "CONDITIONS D'UTILISATION | GRILLADOS" : 'TERMS OF SERVICE | GRILLADOS',
+    description: locale === 'fr'
+      ? "Conditions d'utilisation du site web et des services de Grillado's Canada."
+      : "Terms of service governing access to and use of Grillado's Canada website and services.",
+  });
+}
+
+export default async function TermsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   return (
     <main className="flex flex-col flex-1 min-h-screen bg-white relative overflow-hidden pb-24">
       {/* Hero Section */}
