@@ -19,7 +19,7 @@ export default function MenuPage() {
 
   return (
     <main 
-      className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-size-[250%_auto] md:bg-size-[100%_auto] bg-top bg-repeat-y"
+      className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-size-[250%_auto] md:bg-size-[100%_auto] bg-top bg-repeat-y pt-20 md:pt-22"
       style={{
         backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.3)), url('/images/Blackksss.png')",
       }}

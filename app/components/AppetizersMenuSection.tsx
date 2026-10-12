@@ -34,18 +34,18 @@ export const AppetizersMenuSection = () => {
     { name: rawItems[8].name, price: '19.99', note: rawItems[8].note },
   ];
   return (
-    <section id="appetizers" className="relative w-full py-4 lg:py-8 bg-transparent scroll-mt-24">
+    <section id="appetizers" className="relative w-full pt-1 sm:pt-2 lg:pt-3 pb-4 lg:pb-8 bg-transparent scroll-mt-24">
 
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center md:items-start md:pt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-center md:items-start">
 
           {/* Left Column: Menu Items */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "0px" }}
             className="w-full flex flex-col justify-start pr-12 md:pr-14 lg:pr-0"
           >
             <motion.div variants={fadeLeftItem} className="mb-6 lg:mb-10">
