@@ -33,16 +33,16 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[88vh] md:h-[65vh] lg:h-[72vh] xl:h-[78vh] min-h-[720px] md:min-h-[580px] lg:min-h-[640px] flex items-center justify-center overflow-hidden bg-zinc-950 pt-24 sm:pt-28 md:pt-32 lg:pt-36 pb-10 md:pb-14 select-none">
+    <section className="relative w-full h-[88vh] md:h-[55vh] lg:h-[60vh] xl:h-[62vh] min-h-[680px] md:min-h-[480px] lg:min-h-[520px] xl:min-h-[560px] flex items-center justify-center overflow-hidden bg-zinc-950 pt-20 sm:pt-24 md:pt-24 lg:pt-28 pb-8 md:pb-10 select-none">
       
-      {/* 1. Silky Smooth GPU-Accelerated Ken-Burns Background */}
+      {/* 1. Silky Smooth GPU-Accelerated Background */}
       <motion.div 
         className="absolute inset-0 z-0"
-        style={{ willChange: 'transform' }}
-        initial={{ scale: 1 }}
-        animate={{ scale: [1, 1.12, 1] }}
+        style={{ willChange: 'opacity' }}
+        initial={{ opacity: 0.95 }}
+        animate={{ opacity: [0.95, 1, 0.95] }}
         transition={{ 
-          duration: 16, 
+          duration: 8, 
           ease: "easeInOut", 
           repeat: Infinity,
         }}
@@ -51,12 +51,22 @@ const HeroSection = () => {
         <div className="hidden md:block w-full h-full relative">
           <Image 
             src="/images/website-main-banner2.webp" 
+            alt="" 
+            fill 
+            priority
+            quality={50}
+            unoptimized={true}
+            className="object-cover object-center blur-2xl opacity-40 scale-105" 
+            aria-hidden="true"
+          />
+          <Image 
+            src="/images/website-main-banner2.webp" 
             alt="Grillado's Premium Grilled Chicken and Portuguese Food" 
             fill 
             priority
             quality={100}
             unoptimized={true}
-            className="object-cover object-center" 
+            className="object-contain object-center relative z-10" 
             sizes="100vw"
           />
         </div>
@@ -65,12 +75,22 @@ const HeroSection = () => {
         <div className="block md:hidden w-full h-full relative">
           <Image 
             src="/images/website-main-banner-Mobile-1.webp" 
+            alt="" 
+            fill 
+            priority
+            quality={50}
+            unoptimized={true}
+            className="object-cover object-center blur-2xl opacity-40 scale-105" 
+            aria-hidden="true"
+          />
+          <Image 
+            src="/images/website-main-banner-Mobile-1.webp" 
             alt="Grillado's Premium Grilled Chicken and Portuguese Food" 
             fill 
             priority
             quality={100}
             unoptimized={true}
-            className="object-cover object-center" 
+            className="object-contain object-center relative z-10" 
             sizes="100vw"
           />
         </div>
