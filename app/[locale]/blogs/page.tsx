@@ -13,10 +13,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return constructPageMetadata({
     locale,
     pathname: '/blogs',
-    title: t('blogs').toUpperCase(),
+    title: `${t('blogs').toUpperCase()} | GRILLADOS`,
     description: locale === 'fr'
-      ? "Lisez nos articles sur la cuisine portugaise, les secrets du poulet grillé et les actualités de Grillado's."
-      : "Read our latest articles on Portuguese cuisine, grilled chicken recipes, tips, and Grillado's news.",
+      ? "Lisez nos articles sur la cuisine portugaise, les secrets du poulet grillé et les actualités de Grillado's Canada."
+      : "Read our latest articles on Portuguese cuisine, grilled chicken recipes, tips, and Grillado's Canada news.",
+    keywords: [
+      "Grillados Blogs",
+      "Grillados Canada",
+      "Halal Restaurant Canada",
+      "Grilled Chicken Recipes",
+      "Peri Peri Chicken",
+      "Mississauga Food Blog",
+    ],
   });
 }
 

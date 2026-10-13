@@ -31,7 +31,7 @@ const articles = [
     date: '2025-07-21',
   },
   {
-    id: 4,
+    id: 'masala-fries-recipe-crispy-spicy-street-style-snack-youll-love',
     image: '/images/juicy4.jpeg',
     heading: 'Masala Fries Recipe: Crispy, Spicy Street-Style Snack You’ll Love',
     text: 'Feeling the need for something warm, crunchy, and bursting with tons of flavour? Masala Fries should be the ideal French […]',
@@ -39,7 +39,7 @@ const articles = [
     date: '2025-07-17',
   },
   {
-    id: 5,
+    id: 'grillados-bbq-mix-platter-organic-chicken-ribs-sides-for-159-99',
     image: '/images/juicy5.jpeg',
     heading: 'Grillado’s BBQ Mix Platter Organic Chicken, Ribs & Sides for $159.99',
     text: 'The Mix Platter gives you all the hearty food, strong flavours, and great times you’re searching for, and even a […]',
@@ -47,7 +47,7 @@ const articles = [
     date: '2025-07-14',
   },
   {
-    id: 6,
+    id: 'veggie-nachos-mississaugas-ultimate-vegetarian-appetisers-at-grillados',
     image: '/images/juicy6.jpeg',
     heading: 'Veggie Nachos Mississauga’s Ultimate Vegetarian Appetisers at Grillado’s',
     text: 'A strong-tasting vegetarian appetiser that consistently delivers satisfaction is available at Mississauga’s Grillado’s. Mississauga residents can find the mouthwatering Veggie […]',

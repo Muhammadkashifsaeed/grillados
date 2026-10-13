@@ -7,6 +7,8 @@ interface PageMetadataOptions {
   description?: string;
   keywords?: string[];
   images?: string[];
+  type?: 'website' | 'article';
+  publishedTime?: string;
 }
 
 export function constructPageMetadata({
@@ -16,6 +18,8 @@ export function constructPageMetadata({
   description,
   keywords,
   images = ['/images/13332603_transparent.png'],
+  type = 'website',
+  publishedTime,
 }: PageMetadataOptions): Metadata {
   const cleanPath = pathname === '/' ? '' : pathname.startsWith('/') ? pathname : `/${pathname}`;
   
@@ -49,7 +53,8 @@ export function constructPageMetadata({
         url: img,
         alt: title || "GRILLADO'S",
       })),
-      type: 'website',
+      type,
+      ...(publishedTime ? { publishedTime } : {}),
     },
     twitter: {
       card: 'summary_large_image',

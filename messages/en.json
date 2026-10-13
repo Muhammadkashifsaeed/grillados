@@ -161,34 +161,34 @@
   "Blogs": {
     "readMore": "Read More",
     "blog1": {
-      "date": "July 14, 2025",
-      "title": "Grillado's BBQ Mix Platter – Organic Chicken, Ribs & Sides for $159.99",
-      "description": "The Mix Platter gives you all the hearty food, strong flavours, and great times you’re"
-    },
-    "blog2": {
-      "date": "July 10, 2025",
-      "title": "Veggie Nachos – Mississauga's Ultimate Vegetarian Appetizer at Grillado's",
-      "description": "A strong-tasting vegetarian appetiser that consistently delivers satisfaction is available at Mississauga’s Grillado’s. Mississauga residents"
-    },
-    "blog3": {
       "date": "August 27, 2025",
       "title": "Grilled Corn – Sweet, Smoky & Juicy Perfection for Just $5.99",
-      "description": "Introduction: Sweet, Smoky & Simply Delicious The feeling of the bite of a perfectly grilled"
+      "description": "Introduction: Sweet, Smoky & Simply Delicious The feeling of the bite of a perfectly grilled corn is magical indeed."
     },
-    "blog4": {
+    "blog2": {
       "date": "August 11, 2025",
       "title": "Creamy Coleslaw – A Cool, Crunchy Classic for Just $5.99",
-      "description": "A Favourite Classic Side Dish Something about fresh cabbage and carrots in a creamy, sharp"
+      "description": "A Favourite Classic Side Dish Something about fresh cabbage and carrots in a creamy, sharp dressing feels so good."
+    },
+    "blog3": {
+      "date": "July 21, 2025",
+      "title": "Peri Fries Recipe: Crispy, Spicy Snack You'll Crave Every Time",
+      "description": "In the mood to spice up regular fries? Spice up your taste buds with Try Peri Fries, a perfect combination."
+    },
+    "blog4": {
+      "date": "July 17, 2025",
+      "title": "Masala Fries Recipe: Crispy, Spicy Street-Style Snack You'll Love",
+      "description": "Feeling the need for something warm, crunchy, and bursting with tons of flavour? Masala Fries are the ideal French fry snack."
     },
     "blog5": {
-      "date": "July 21, 2025",
-      "title": "Peri Fries Recipe – Crispy, Spicy Snack You'll Crave Every Time",
-      "description": "In the mood to spice up regular fries? Spice up your taste buds with Try"
+      "date": "July 14, 2025",
+      "title": "Grillado's BBQ Mix Platter – Organic Chicken, Ribs & Sides for $159.99",
+      "description": "The Mix Platter gives you all the hearty food, strong flavours, organic chicken, tender ribs, and sides you're searching for."
     },
     "blog6": {
-      "date": "July 17, 2025",
-      "title": "Masala Fries Recipe – Crispy, Spicy Street-Style Snack You'll Love",
-      "description": "Feeling the need for something warm, crunchy, and bursting with tons of flavour? Masala Fries"
+      "date": "July 10, 2025",
+      "title": "Veggie Nachos – Mississauga's Ultimate Vegetarian Appetizer at Grillado's",
+      "description": "A strong-tasting vegetarian appetiser that consistently delivers satisfaction is available at Mississauga’s Grillado’s."
     }
   },
   "Footer": {
