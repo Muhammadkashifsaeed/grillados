@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 export default function ServicesHero() {
   const t = useTranslations('ServicesHero');
   return (
-    <section className="relative w-full h-[50vh] md:h-[60vh] min-h-100 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8">
+    <section className="relative w-full h-[55vh] md:h-[65vh] min-h-[380px] md:min-h-[460px] flex items-center justify-center overflow-hidden bg-zinc-950 pt-20 sm:pt-24 md:pt-28 pb-8 md:pb-12">
 
       {/* Background Image with Cinematic Zoom and Float */}
       <motion.div

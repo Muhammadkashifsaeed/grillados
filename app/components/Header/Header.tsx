@@ -52,11 +52,11 @@ export const Header = () => {
       className={`fixed z-50 left-1/2 -translate-x-1/2 transform-gpu transition-[width,max-width,top,height,border-radius,border-color,box-shadow] duration-500 cubic-bezier(0.16,1,0.3,1) backdrop-blur-2xl ${
         isScrolled
           ? "top-2 sm:top-2.5 w-[94%] sm:w-[93%] lg:w-[94%] xl:w-[95%] max-w-[1440px] rounded-full border border-[#FAC716]/50 shadow-[0_16px_50px_rgba(0,0,0,0.95),0_0_35px_rgba(250,199,22,0.2)] h-[62px] md:h-16"
-          : "top-0 sm:top-2 w-full sm:w-[96%] max-w-[1440px] rounded-none sm:rounded-full border-b sm:border border-[#FAC716]/30 shadow-[0_8px_30px_rgba(0,0,0,0.85)] h-[70px] md:h-19"
+          : "top-0 w-full max-w-none rounded-none border-b border-[#FAC716]/30 shadow-[0_8px_30px_rgba(0,0,0,0.85)] h-[70px] md:h-19"
       }`}
       style={{ backgroundColor: '#1A1410', willChange: 'width, max-width, top, height, border-radius' }}
     >
-      <div className="max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-6 h-full flex items-center justify-between gap-1.5 sm:gap-2 lg:gap-3 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 h-full flex items-center justify-between gap-1.5 sm:gap-2 lg:gap-3 relative z-10">
         
         {/* Left Side: Logo with Dynamic Ambient Aura & Hover Lift */}
         <Link href="/" className="shrink-0 flex items-center h-full mr-2 sm:mr-3 lg:mr-5 xl:mr-8 group relative">

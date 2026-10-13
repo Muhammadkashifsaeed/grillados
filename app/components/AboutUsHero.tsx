@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const AboutUsHero = () => {
   return (
-    <section className="relative w-full flex items-center justify-center bg-black overflow-hidden">
+    <section className="relative w-full flex items-center justify-center bg-black overflow-hidden pt-18 sm:pt-20 md:pt-22">
 
       {/* Background Image - Aspect ratio matching the provided screenshot exactly */}
       <div className="w-full relative aspect-100/34 md:aspect-100/31 max-h-[55vh] md:max-h-[65vh]">

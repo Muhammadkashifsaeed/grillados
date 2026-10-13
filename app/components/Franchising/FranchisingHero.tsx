@@ -9,7 +9,7 @@ export default function FranchisingHero() {
   const t = useTranslations('FranchisingPage');
 
   return (
-    <section className="relative w-full h-[25vh] md:h-[40vh] min-h-[220px] md:min-h-[300px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[32vh] md:h-[45vh] min-h-[280px] md:min-h-[360px] flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28 pb-8 md:pb-12">
 
       {/* Background Image with Cinematic Zoom and Float */}
       <motion.div

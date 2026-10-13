@@ -33,7 +33,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[85vh] md:h-[50vh] lg:h-[55vh] xl:h-[60vh] min-h-[700px] md:min-h-100 flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:py-8 select-none">
+    <section className="relative w-full h-[88vh] md:h-[65vh] lg:h-[72vh] xl:h-[78vh] min-h-[720px] md:min-h-[580px] lg:min-h-[640px] flex items-center justify-center overflow-hidden bg-zinc-950 pt-24 sm:pt-28 md:pt-32 lg:pt-36 pb-10 md:pb-14 select-none">
       
       {/* 1. Silky Smooth GPU-Accelerated Ken-Burns Background */}
       <motion.div 

@@ -9,7 +9,7 @@ export default function GalleryHero() {
   const t = useTranslations('Gallery');
 
   return (
-    <section className="relative w-full h-[30vh] md:h-[40vh] min-h-[250px] z-10 overflow-hidden">
+    <section className="relative w-full h-[32vh] md:h-[42vh] min-h-[280px] md:min-h-[340px] z-10 overflow-hidden pt-18 sm:pt-20 md:pt-22">
       {/* Background Image */}
       <Image 
         src="/images/Picture-back-ground.png" 

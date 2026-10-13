@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 const BlogsHeroBanner = () => {
   const t = useTranslations('BlogsHero');
   return (
-    <section className="relative w-full h-62.5 md:h-75 lg:h-87.5 flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative w-full h-62.5 md:h-75 lg:h-87.5 min-h-[300px] md:min-h-[350px] flex items-center justify-center overflow-hidden bg-black pt-20 sm:pt-24 md:pt-28 pb-6 md:pb-8">
       
       {/* Background Image */}
       <div className="absolute inset-0 z-0">

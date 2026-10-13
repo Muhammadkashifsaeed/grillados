@@ -10,7 +10,7 @@ const CateringHeroBanner = () => {
   const t = useTranslations('CateringHero');
 
   return (
-    <section className="relative w-full h-100 lg:h-125 flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-100 lg:h-125 min-h-[420px] md:min-h-[480px] flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28 pb-8 md:pb-12">
       
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
