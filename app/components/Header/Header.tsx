@@ -51,23 +51,23 @@ export const Header = () => {
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed z-50 left-1/2 -translate-x-1/2 transform-gpu transition-[width,max-width,top,height,border-radius,border-color,box-shadow] duration-500 cubic-bezier(0.16,1,0.3,1) backdrop-blur-2xl ${
         isScrolled
-          ? "top-2 sm:top-2.5 w-[94%] sm:w-[93%] lg:w-[94%] xl:w-[95%] max-w-[1440px] rounded-full border border-[#FAC716]/50 shadow-[0_16px_50px_rgba(0,0,0,0.95),0_0_35px_rgba(250,199,22,0.2)] h-[62px] md:h-16"
-          : "top-0 w-full max-w-none rounded-none border-b border-[#FAC716]/30 shadow-[0_8px_30px_rgba(0,0,0,0.85)] h-[70px] md:h-19"
+          ? "top-2 sm:top-2.5 w-[94%] sm:w-[93%] lg:w-[94%] xl:w-[95%] max-w-[1440px] rounded-full border border-[#FAC716]/50 shadow-[0_16px_50px_rgba(0,0,0,0.95),0_0_35px_rgba(250,199,22,0.2)] h-[68px] sm:h-[70px] md:h-[72px] lg:h-[74px]"
+          : "top-0 w-full max-w-none rounded-none border-b border-[#FAC716]/30 shadow-[0_8px_30px_rgba(0,0,0,0.85)] h-[76px] md:h-[82px] lg:h-[86px]"
       }`}
       style={{ backgroundColor: '#1A1410', willChange: 'width, max-width, top, height, border-radius' }}
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 h-full flex items-center justify-between gap-1.5 sm:gap-2 lg:gap-3 relative z-10">
         
         {/* Left Side: Logo with Dynamic Ambient Aura & Hover Lift */}
-        <Link href="/" className="shrink-0 flex items-center h-full mr-2 sm:mr-3 lg:mr-5 xl:mr-8 group relative">
+        <Link href="/" className="shrink-0 flex items-center h-full mr-2 sm:mr-3 lg:mr-5 xl:mr-8 group relative py-1">
           <div className="absolute inset-0 bg-[#FAC716]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-          <div className="relative h-11 w-32 sm:h-12 sm:w-36 md:h-14 md:w-38 lg:h-15 lg:w-42 xl:h-16 xl:w-46 transition-all duration-300 group-hover:scale-105 group-hover:brightness-110">
+          <div className="relative h-12 w-36 sm:h-13 sm:w-40 md:h-15 md:w-46 lg:h-16 lg:w-50 xl:h-[68px] xl:w-54 transition-all duration-300 group-hover:scale-105 group-hover:brightness-110">
             <Image
               src="/images/Grillados_logo_trimmed.png"
               alt="Grillado's Logo"
               fill
-              sizes="(max-width: 640px) 180px, (max-width: 1024px) 220px, 300px"
-              className="object-contain object-left scale-100 filter drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] drop-shadow-[0_0_15px_rgba(250,199,22,0.5)] brightness-110 contrast-105 transition-all duration-300"
+              sizes="(max-width: 640px) 180px, (max-width: 1024px) 240px, 320px"
+              className="object-contain object-left scale-100 filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] drop-shadow-[0_0_10px_rgba(250,199,22,0.4)] brightness-110 contrast-105 transition-all duration-300"
               priority
             />
           </div>
