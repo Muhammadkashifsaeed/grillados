@@ -61,7 +61,7 @@ export default function LocationsPage() {
 
   return (
     <main 
-      className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-[#0a0a0a]"
+      className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-[#0a0a0a] pt-[72px] sm:pt-[78px] md:pt-[84px]"
       style={{
         backgroundImage: "url('/images/Blackksss.png')",
         backgroundSize: 'cover',

@@ -135,10 +135,9 @@ const BlogsSection = () => {
                 >
                   <div className="bg-white shadow-md overflow-hidden h-full flex flex-col border border-gray-100/90 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
 
-                    {/* Blog Image */}
-                    <Link 
-                      href={`/blogs/${blog.id}`} 
-                      className="relative w-full bg-gray-100 overflow-hidden border-b border-gray-100 shrink-0 block group/img"
+                    {/* Blog Image - Not a link */}
+                    <div 
+                      className="relative w-full bg-gray-100 overflow-hidden border-b border-gray-100 shrink-0"
                       style={{ aspectRatio: '2 / 1' }}
                     >
                       <Image
@@ -146,10 +145,10 @@ const BlogsSection = () => {
                         alt={t(`${blog.tKey}.title`)}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover group-hover/img:scale-105 transition-transform duration-500 ease-out"
+                        className="object-cover"
                         quality={95}
                       />
-                    </Link>
+                    </div>
 
                     {/* Content */}
                     <div className="px-6 pt-6 pb-6 flex flex-col grow justify-between">
@@ -163,15 +162,13 @@ const BlogsSection = () => {
                           <span>{t(`${blog.tKey}.date`)}</span>
                         </div>
 
-                        {/* Title */}
-                        <Link href={`/blogs/${blog.id}`} className="block group/title">
-                          <h3 
-                            className="mb-3 line-clamp-2 min-h-[52px] flex items-center text-black"
-                            style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px', color: 'rgb(0, 0, 0)' }}
-                          >
-                            {t(`${blog.tKey}.title`)}
-                          </h3>
-                        </Link>
+                        {/* Title - Not a link */}
+                        <h3 
+                          className="mb-3 line-clamp-2 min-h-[52px] flex items-center text-black"
+                          style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px', color: 'rgb(0, 0, 0)' }}
+                        >
+                          {t(`${blog.tKey}.title`)}
+                        </h3>
 
                         {/* Description */}
                         <p 

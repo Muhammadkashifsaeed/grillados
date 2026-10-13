@@ -22,9 +22,9 @@ export const Header = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          if (window.scrollY > 40) {
+          if (window.scrollY > 15) {
             setIsScrolled(true);
-          } else if (window.scrollY < 10) {
+          } else if (window.scrollY < 5) {
             setIsScrolled(false);
           }
           ticking = false;
@@ -51,23 +51,23 @@ export const Header = () => {
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed z-50 left-1/2 -translate-x-1/2 transform-gpu transition-[width,max-width,top,height,border-radius,border-color,box-shadow] duration-500 cubic-bezier(0.16,1,0.3,1) backdrop-blur-2xl ${
         isScrolled
-          ? "top-2 sm:top-2.5 w-[88%] sm:w-[91%] md:w-[93%] lg:w-[94%] xl:w-[95%] max-w-[1440px] rounded-2xl lg:rounded-full border border-[#FAC716]/40 shadow-[0_16px_50px_rgba(0,0,0,0.95),0_0_35px_rgba(250,199,22,0.12)] h-[64px] md:h-16"
-          : "top-0 w-full max-w-none rounded-none border-0 border-transparent shadow-none h-[76px] md:h-19"
+          ? "top-2 sm:top-2.5 w-[94%] sm:w-[93%] lg:w-[94%] xl:w-[95%] max-w-[1440px] rounded-full border border-[#FAC716]/50 shadow-[0_16px_50px_rgba(0,0,0,0.95),0_0_35px_rgba(250,199,22,0.2)] h-[62px] md:h-16"
+          : "top-0 sm:top-2 w-full sm:w-[96%] max-w-[1440px] rounded-none sm:rounded-full border-b sm:border border-[#FAC716]/30 shadow-[0_8px_30px_rgba(0,0,0,0.85)] h-[70px] md:h-19"
       }`}
       style={{ backgroundColor: '#1A1410', willChange: 'width, max-width, top, height, border-radius' }}
     >
-      <div className="max-w-[1440px] mx-auto px-3.5 sm:px-5 lg:px-6 h-full flex items-center justify-between gap-2 lg:gap-3 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-6 h-full flex items-center justify-between gap-1.5 sm:gap-2 lg:gap-3 relative z-10">
         
         {/* Left Side: Logo with Dynamic Ambient Aura & Hover Lift */}
-        <Link href="/" className="shrink-0 flex items-center h-full mr-3 lg:mr-5 xl:mr-8 group relative">
+        <Link href="/" className="shrink-0 flex items-center h-full mr-2 sm:mr-3 lg:mr-5 xl:mr-8 group relative">
           <div className="absolute inset-0 bg-[#FAC716]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-          <div className="relative h-10 w-28 md:h-14 md:w-36 lg:h-16 lg:w-44 xl:h-18 xl:w-48 transition-all duration-300 group-hover:scale-105 group-hover:brightness-110">
+          <div className="relative h-11 w-32 sm:h-12 sm:w-36 md:h-14 md:w-38 lg:h-15 lg:w-42 xl:h-16 xl:w-46 transition-all duration-300 group-hover:scale-105 group-hover:brightness-110">
             <Image
-              src="/images/Grillados_new_logo-Yellow-removebg-preview.png"
+              src="/images/Grillados_logo_trimmed.png"
               alt="Grillado's Logo"
               fill
-              sizes="(max-width: 768px) 200px, 280px"
-              className="object-contain object-left scale-110 filter drop-shadow-[0_2px_14px_rgba(0,0,0,0.9)] drop-shadow-[0_0_15px_rgba(250,199,22,0.45)] brightness-105 contrast-105 transition-all duration-300"
+              sizes="(max-width: 640px) 180px, (max-width: 1024px) 220px, 300px"
+              className="object-contain object-left scale-100 filter drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] drop-shadow-[0_0_15px_rgba(250,199,22,0.5)] brightness-110 contrast-105 transition-all duration-300"
               priority
             />
           </div>
@@ -122,9 +122,9 @@ export const Header = () => {
           </nav>
         </div>
 
-        {/* Right Side: Dedicated Language Switcher & Compact Sleek Order Online Button */}
-        <div className="flex items-center gap-2.5 sm:gap-3 xl:gap-4 shrink-0 relative z-20">
-          
+        {/* Right Side: Order Online Button, Desktop Language Switcher, & Mobile Menu */}
+        <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3 xl:gap-4 shrink-0 relative z-20">
+
           {/* Desktop Language Switcher Capsule (Vector Crisp Flags, Bareek Ring, Clear Gap) */}
           <div className="hidden lg:flex items-center gap-2 xl:gap-2.5 px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full border border-white/15 shrink-0 shadow-inner">
             <button
@@ -185,32 +185,23 @@ export const Header = () => {
             </Link>
           </motion.div>
 
-          {/* Mobile Order Online Button */}
-          <motion.div
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.96 }}
-            className="lg:hidden relative group shrink-0"
+          {/* Mobile Order Online Button - Styled matching Order Now button below */}
+          <Link
+            href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
+            className="lg:hidden relative h-9 sm:h-9.5 inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 rounded-lg bg-[#FAC716] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md tracking-wider uppercase cursor-pointer shrink-0"
+            style={{ 
+              fontFamily: "'Ribeat', sans-serif", 
+              fontStyle: 'normal', 
+              fontWeight: 700, 
+              fontSize: '13px', 
+              lineHeight: '14px' 
+            }}
           >
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FAC716] to-[#EB5250] rounded-lg blur-sm opacity-80" />
-            <Link
-              href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-              className="relative h-8.5 sm:h-9.5 inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 rounded-lg bg-gradient-to-r from-[#FAC716] to-[#EB5250] text-black font-bold hover:text-white transition-colors duration-300 shadow-lg tracking-wider uppercase cursor-pointer"
-            >
-              <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-              <span 
-                className="whitespace-nowrap uppercase"
-                style={{ 
-                  fontFamily: "'Ribeat', sans-serif", 
-                  fontStyle: 'normal', 
-                  fontWeight: 700, 
-                  fontSize: '13px', 
-                  lineHeight: '14px' 
-                }}
-              >
-                {t('orderOnline')}
-              </span>
-            </Link>
-          </motion.div>
+            <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 transition-transform duration-300" />
+            <span className="whitespace-nowrap uppercase tracking-wider">
+              {t('orderOnline')}
+            </span>
+          </Link>
 
           {/* Mobile hamburger */}
           <div className="lg:hidden flex items-center">
