@@ -183,18 +183,6 @@ export const MobileMenu = () => {
             </div>
           </div>
         </nav>
-
-        {/* Footer Order Button inside Drawer */}
-        <div className="p-4 border-t border-white/20 bg-black/20">
-          <Link
-            href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
-            onClick={toggleMenu}
-            className="w-full h-11.5 flex items-center justify-center gap-2 rounded-xl bg-[#FAC716] hover:bg-[#e0a218] text-black font-extrabold shadow-xl tracking-wider uppercase text-sm border border-white/30"
-          >
-            <ShoppingBag className="w-4.5 h-4.5 text-black" />
-            <span style={{ fontFamily: "'Ribeat', sans-serif" }}>{t('orderOnline')}</span>
-          </Link>
-        </div>
       </div>
     </div>
   );
