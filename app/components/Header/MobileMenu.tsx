@@ -39,30 +39,30 @@ export const MobileMenu = () => {
         onClick={toggleMenu}
         className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl transition-all duration-200 font-bold text-xs tracking-wider uppercase group ${
           isActive
-            ? 'text-black bg-white/95 border border-white shadow-md'
-            : 'text-white hover:text-black hover:bg-white/20 border border-transparent'
+            ? 'text-[#FAC716] bg-black/35 border border-[#FAC716]/40 shadow-md'
+            : 'text-white hover:text-[#FAC716] hover:bg-black/25 border border-transparent'
         }`}
       >
         <div className="flex items-center gap-2.5">
-          <span className={`transition-transform duration-200 group-hover:scale-110 ${isActive ? 'text-black' : 'text-[#FAC716]'}`}>
+          <span className={`transition-transform duration-200 group-hover:scale-110 ${isActive ? 'text-[#FAC716]' : 'text-[#FAC716]'}`}>
             {icon}
           </span>
-          <span className="text-current">{label}</span>
+          <span className="text-current transition-colors duration-200">{label}</span>
         </div>
-        <ChevronRight className={`w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 ${isActive ? 'text-black opacity-100' : 'text-white/60 opacity-0 group-hover:opacity-100'}`} />
+        <ChevronRight className={`w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 ${isActive ? 'text-[#FAC716] opacity-100' : 'text-white/60 opacity-0 group-hover:opacity-100 group-hover:text-[#FAC716]'}`} />
       </Link>
     );
   };
 
   return (
     <div className="lg:hidden flex items-center">
-      {/* 3 lines hamburger icon: pure white, no hover effects */}
+      {/* 3 lines hamburger icon: hover color matches desktop #FAC716 */}
       <button
         onClick={toggleMenu}
-        className="flex items-center justify-center p-1 text-white cursor-pointer select-none"
+        className="flex items-center justify-center p-1 text-white hover:text-[#FAC716] transition-colors duration-200 cursor-pointer select-none"
         aria-label="Open Menu"
       >
-        <Menu className="w-6.5 h-6.5 text-white stroke-[2.2]" />
+        <Menu className="w-6.5 h-6.5 text-current stroke-[2.2]" />
       </button>
 
       {/* Overlay */}
@@ -83,15 +83,15 @@ export const MobileMenu = () => {
         {/* Header inside drawer */}
         <div className="flex justify-between items-center px-5 py-4 border-b border-white/20 bg-black/15">
           <div className="flex items-center gap-2.5 text-white font-extrabold text-base tracking-wider uppercase">
-            <Menu className="w-5 h-5 text-white stroke-[2.2]" />
+            <Menu className="w-5 h-5 text-[#FAC716] stroke-[2.2]" />
             <span>{t('menu')}</span>
           </div>
           <button
             onClick={toggleMenu}
-            className="text-white hover:text-black p-2 rounded-xl bg-white/10 hover:bg-white/25 border border-white/20 transition-all active:scale-95"
+            className="text-white hover:text-[#FAC716] p-2 rounded-xl bg-white/10 hover:bg-black/25 border border-white/20 transition-all active:scale-95"
             aria-label="Close Menu"
           >
-            <X className="w-5 h-5 text-white" />
+            <X className="w-5 h-5 text-current" />
           </button>
         </div>
 
@@ -108,9 +108,9 @@ export const MobileMenu = () => {
           <div className="flex flex-col rounded-2xl bg-black/15 border border-white/20 p-2.5 mt-1">
             <button 
               onClick={() => setIsPagesOpen(!isPagesOpen)}
-              className="flex items-center justify-between w-full px-2 py-1.5 text-white hover:text-black transition-colors font-bold group"
+              className="flex items-center justify-between w-full px-2 py-1.5 text-white hover:text-[#FAC716] transition-colors font-bold group"
             >
-              <div className="flex items-center gap-2.5 font-bold text-xs tracking-wider uppercase text-white group-hover:text-black">
+              <div className="flex items-center gap-2.5 font-bold text-xs tracking-wider uppercase text-white group-hover:text-[#FAC716] transition-colors">
                 <FileText className="w-4 h-4 text-[#FAC716]" />
                 <span>{t('pages')}</span>
               </div>
@@ -133,8 +133,8 @@ export const MobileMenu = () => {
                       onClick={toggleMenu} 
                       className={`flex items-center justify-between py-2 px-3 rounded-lg text-[11px] font-bold uppercase tracking-wider transition-all ${
                         isSubActive 
-                          ? 'text-black bg-white/95 border border-white shadow-sm' 
-                          : 'text-white hover:text-black hover:bg-white/20'
+                          ? 'text-[#FAC716] bg-black/35 border border-[#FAC716]/40 shadow-sm' 
+                          : 'text-white hover:text-[#FAC716] hover:bg-black/25'
                       }`}
                     >
                       <span>{item.label}</span>
