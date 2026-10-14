@@ -45,6 +45,7 @@ export const Header = () => {
   };
 
   return (
+    <>
     <motion.header 
       initial={{ y: -70, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -210,6 +211,9 @@ export const Header = () => {
         </div>
       </div>
     </motion.header>
+    {/* Header placeholder spacer so header has its own space and does not overlap hero section */}
+    <div className="h-[76px] md:h-[82px] lg:h-[86px] w-full shrink-0 bg-[#1A1410]" aria-hidden="true" />
+    </>
   );
 };
 
