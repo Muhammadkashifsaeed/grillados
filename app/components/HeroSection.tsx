@@ -377,7 +377,7 @@ const HeroSection = () => {
                 priority
                 quality={100}
                 unoptimized={true}
-                className="object-contain object-center drop-shadow-[0_12px_30px_rgba(0,0,0,0.6)]"
+                className="object-cover object-center drop-shadow-[0_12px_30px_rgba(0,0,0,0.6)]"
                 sizes="100vw"
               />
             </div>
