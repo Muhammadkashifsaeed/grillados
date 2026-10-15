@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import {
   motion,
@@ -12,172 +12,121 @@ import {
 } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 
-/* ---------- Interactive stars + orbs (canvas, reacts to mouse) ---------- */
-const ParticleCanvas = ({ disabled }: { disabled: boolean }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+/* ─────────────────────────────────────────────────────────────────────────────
+   NEW ① — Golden Embers
+   Warm amber sparks that float upward like embers rising from a grill.
+   Pure framer-motion, no canvas, no random colors — restaurant-themed.
+───────────────────────────────────────────────────────────────────────────── */
+const EMBERS = [
+  { left: '6%',  sz: 3, dur: 7.2,  d: 0,    op: 0.70, sx: 12 },
+  { left: '18%', sz: 2, dur: 9.4,  d: 1.6,  op: 0.55, sx: -13 },
+  { left: '31%', sz: 4, dur: 6.9,  d: 2.9,  op: 0.65, sx: 10 },
+  { left: '46%', sz: 2, dur: 10.2, d: 0.7,  op: 0.50, sx: -17 },
+  { left: '59%', sz: 3, dur: 8.3,  d: 1.9,  op: 0.60, sx: 15 },
+  { left: '72%', sz: 2, dur: 7.7,  d: 3.7,  op: 0.50, sx: -11 },
+  { left: '13%', sz: 2, dur: 11.4, d: 4.5,  op: 0.45, sx: 8 },
+  { left: '84%', sz: 3, dur: 9.1,  d: 2.5,  op: 0.60, sx: -16 },
+  { left: '50%', sz: 2, dur: 8.6,  d: 5.1,  op: 0.40, sx: 10 },
+  { left: '92%', sz: 2, dur: 12.0, d: 1.2,  op: 0.45, sx: -9 },
+];
 
-  useEffect(() => {
-    if (disabled) return;
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const colors = ['#FAC716', '#FF3B30', '#FF9500', '#00F2FE', '#FF007F', '#9D00FF'];
-    let w = 0;
-    let h = 0;
-    let raf = 0;
-    let running = true;
-    const mouse = { x: -9999, y: -9999 };
-
-    type P = {
-      x: number; y: number; r: number; vy: number; sway: number; phase: number;
-      speed: number; rot: number; vr: number; color: string; isStar: boolean;
-      vx: number;
-    };
-
-    const spawn = (initial = false, i = 0): P => {
-      const isStar = i % 2 === 0;
-      return {
-        x: Math.random() * w,
-        y: initial ? Math.random() * (h + 60) : h + 40,
-        r: isStar ? 8 + Math.random() * 14 : 4 + Math.random() * 8,
-        vy: 0.65 + Math.random() * 1.1,
-        sway: 20 + Math.random() * 38,
-        phase: Math.random() * Math.PI * 2,
-        speed: 0.012 + Math.random() * 0.018,
-        rot: Math.random() * Math.PI,
-        vr: (Math.random() - 0.5) * 0.045,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        isStar,
-        vx: 0,
-      };
-    };
-
-    let ps: P[] = [];
-
-    const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = canvas.clientWidth;
-      h = canvas.clientHeight;
-      canvas.width = w * dpr;
-      canvas.height = h * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = w < 768 ? 26 : 46;
-      ps = Array.from({ length: count }, (_, i) => spawn(true, i));
-    };
-
-    const onMove = (e: PointerEvent) => {
-      const r = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - r.left;
-      mouse.y = e.clientY - r.top;
-    };
-    const onLeave = () => {
-      mouse.x = -9999;
-      mouse.y = -9999;
-    };
-
-    const drawStar = (r: number) => {
-      const k = r * 0.22;
-      ctx.beginPath();
-      ctx.moveTo(0, -r);
-      ctx.lineTo(k, -k);
-      ctx.lineTo(r, 0);
-      ctx.lineTo(k, k);
-      ctx.lineTo(0, r);
-      ctx.lineTo(-k, k);
-      ctx.lineTo(-r, 0);
-      ctx.lineTo(-k, -k);
-      ctx.closePath();
-      ctx.fill();
-    };
-
-    const draw = () => {
-      if (!running) return;
-      ctx.clearRect(0, 0, w, h);
-
-      for (let i = 0; i < ps.length; i++) {
-        const p = ps[i];
-        p.y -= p.vy;
-        p.phase += p.speed;
-        p.rot += p.vr;
-
-        // Fluid cursor interaction with gentle damping
-        const swayX = p.x + Math.sin(p.phase) * p.sway;
-        const dx = swayX - mouse.x;
-        const dy = p.y - mouse.y;
-        const d = Math.sqrt(dx * dx + dy * dy);
-        if (d < 160 && d > 0.01) {
-          const force = (1 - d / 160) * 2.5;
-          p.vx += (dx / d) * force;
-          p.y += (dy / d) * (force * 0.4);
-        }
-        p.vx *= 0.92;
-        p.x += p.vx;
-
-        if (p.y < -40) {
-          ps[i] = spawn(false, i);
-          continue;
-        }
-
-        const t = (h + 40 - p.y) / (h + 80);
-        const alpha = t < 0.1 ? t / 0.1 : t > 0.85 ? Math.max(0, (1 - t) / 0.15) : 1;
-        const drawX = p.x + Math.sin(p.phase) * p.sway;
-
-        ctx.save();
-        ctx.globalAlpha = alpha * 0.95;
-        ctx.fillStyle = p.color;
-        ctx.shadowColor = p.color;
-        ctx.shadowBlur = p.r * 3.2;
-        ctx.translate(drawX, p.y);
-        if (p.isStar) {
-          ctx.rotate(p.rot);
-          drawStar(p.r);
-        } else {
-          ctx.beginPath();
-          ctx.arc(0, 0, p.r, 0, Math.PI * 2);
-          ctx.fill();
-        }
-        ctx.restore();
-      }
-      raf = requestAnimationFrame(draw);
-    };
-
-    const onVisibility = () => {
-      if (document.hidden) {
-        running = false;
-        cancelAnimationFrame(raf);
-      } else if (!running) {
-        running = true;
-        raf = requestAnimationFrame(draw);
-      }
-    };
-
-    resize();
-    raf = requestAnimationFrame(draw);
-    window.addEventListener('resize', resize);
-    window.addEventListener('pointermove', onMove);
-    canvas.addEventListener('pointerleave', onLeave);
-    document.addEventListener('visibilitychange', onVisibility);
-
-    return () => {
-      running = false;
-      cancelAnimationFrame(raf);
-      window.removeEventListener('resize', resize);
-      window.removeEventListener('pointermove', onMove);
-      document.removeEventListener('visibilitychange', onVisibility);
-    };
-  }, [disabled]);
-
+const GoldenEmbers = ({ disabled }: { disabled: boolean }) => {
   if (disabled) return null;
-  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" aria-hidden="true" />;
+  return (
+    <div
+      className="absolute inset-0 z-[13] pointer-events-none overflow-hidden"
+      aria-hidden="true"
+    >
+      {EMBERS.map((e, i) => (
+        <motion.div
+          key={i}
+          style={{
+            position: 'absolute',
+            left: e.left,
+            bottom: 0,
+            width: `${e.sz}px`,
+            height: `${e.sz}px`,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, #FFD060 0%, #FF7A00 70%, transparent 100%)',
+            filter: `blur(${e.sz * 0.35}px)`,
+            boxShadow: `0 0 ${e.sz * 5}px rgba(255,170,0,${e.op * 0.8})`,
+          }}
+          initial={{ y: 0, x: 0, opacity: 0, scale: 0.4 }}
+          animate={{
+            y: [-8, -380, -600],
+            x: [0, e.sx, e.sx * -0.5],
+            opacity: [0, e.op, e.op * 0.6, 0],
+            scale: [0.4, 1.3, 0.8, 0.1],
+          }}
+          transition={{
+            duration: e.dur,
+            delay: e.d,
+            repeat: Infinity,
+            repeatDelay: 0.5,
+            ease: 'easeOut',
+          }}
+        />
+      ))}
+    </div>
+  );
 };
 
-/* ---------- Magnetic button wrapper with rotating glow border ---------- */
+/* ─────────────────────────────────────────────────────────────────────────────
+   NEW ② — Scrolling Ticker Tape
+   Marquee at the bottom of the hero with restaurant keywords.
+───────────────────────────────────────────────────────────────────────────── */
+const TICKER_ITEMS = [
+  'PREMIUM GRILLED CHICKEN',
+  'STEAK & RIBS',
+  'PORTUGUESE FLAVOURS',
+  'CAMBRIDGE · KITCHENER',
+  'HALAL CERTIFIED',
+  'ORDER ONLINE',
+  'FRESH DAILY',
+  'AWARD WINNING',
+];
+
+const HeroTicker = () => (
+  <div
+    className="absolute bottom-0 left-0 right-0 z-[22] overflow-hidden py-[7px]"
+    style={{
+      background:
+        'linear-gradient(90deg, rgba(0,0,0,0.80) 0%, rgba(18,8,0,0.68) 50%, rgba(0,0,0,0.80) 100%)',
+      borderTop: '1px solid rgba(255,255,255,0.08)',
+    }}
+    aria-hidden="true"
+  >
+    <motion.div
+      className="flex whitespace-nowrap"
+      animate={{ x: ['0%', '-50%'] }}
+      transition={{ duration: 30, ease: 'linear', repeat: Infinity }}
+    >
+      {[0, 1].map((rep) => (
+        <span key={rep} className="flex items-center shrink-0">
+          {TICKER_ITEMS.map((item, i) => (
+            <React.Fragment key={i}>
+              <span
+                className="text-[#FAC716] text-[9px] sm:text-[10px] font-bold tracking-[0.22em] uppercase px-3 sm:px-5"
+                style={{ fontFamily: "'Ribeat', sans-serif" }}
+              >
+                {item}
+              </span>
+              <span className="text-[#FAC716]/35 text-[8px] shrink-0">✦</span>
+            </React.Fragment>
+          ))}
+        </span>
+      ))}
+    </motion.div>
+  </div>
+);
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Magnetic button wrapper (Clean luxury feel, no border lines)
+───────────────────────────────────────────────────────────────────────────── */
 const Magnetic = ({
   children,
   className,
-  glowDelay = 0,
   disabled,
 }: {
   children: React.ReactNode;
@@ -211,47 +160,20 @@ const Magnetic = ({
       className={className}
     >
       <motion.div
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.97 }}
-        animate={
-          disabled
-            ? undefined
-            : {
-              boxShadow: [
-                '0 0 18px rgba(250,199,22,0.4)',
-                '0 0 45px rgba(250,199,22,0.85)',
-                '0 0 18px rgba(250,199,22,0.4)',
-              ],
-            }
-        }
-        transition={{
-          boxShadow: { duration: 2.6, repeat: Infinity, ease: 'easeInOut', delay: glowDelay },
-          type: 'spring',
-          stiffness: 380,
-          damping: 20,
-        }}
-        className="relative rounded-lg w-full"
+        transition={{ type: 'spring', stiffness: 380, damping: 20 }}
+        className="relative rounded-lg w-full transition-all duration-300 shadow-lg hover:shadow-[0_12px_32px_rgba(250,199,22,0.50)]"
       >
-        {!disabled && (
-          <span className="absolute -inset-[3px] rounded-xl overflow-hidden pointer-events-none">
-            <motion.span
-              className="absolute inset-[-100%]"
-              style={{
-                background:
-                  'conic-gradient(from 0deg, transparent 0 55%, #ffffff 78%, #FAC716 90%, transparent 100%)',
-              }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2.8, ease: 'linear', repeat: Infinity, delay: glowDelay }}
-            />
-          </span>
-        )}
         <div className="relative z-10 rounded-lg overflow-hidden">{children}</div>
       </motion.div>
     </motion.div>
   );
 };
 
-/* ---------- Hero ---------- */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Hero Section
+───────────────────────────────────────────────────────────────────────────── */
 const HeroSection = () => {
   const t = useTranslations('Hero');
   const reduce = !!useReducedMotion();
@@ -302,7 +224,7 @@ const HeroSection = () => {
       onMouseLeave={onMouseLeave}
       className="relative w-full h-[70vh] sm:h-[72vh] md:h-[65vh] lg:h-[68vh] xl:h-[70vh] min-h-[440px] sm:min-h-[460px] md:min-h-[440px] lg:min-h-[480px] flex items-center justify-center overflow-hidden bg-zinc-950 py-3 sm:py-5 md:py-6 select-none"
     >
-      {/* 1. Background: ambient warmth + full dishes banner with floating animation & 3D tilt */}
+      {/* ── 1. Background: ambient warmth + dishes with floating & 3D tilt ── */}
       <motion.div
         className="absolute inset-0 z-0 overflow-hidden"
         style={{ willChange: 'transform, opacity' }}
@@ -310,7 +232,7 @@ const HeroSection = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.4, ease: luxuryEase }}
       >
-        {/* Soft ambient backdrop to fill container background seamlessly */}
+        {/* Blurred ambient backdrop */}
         <div className="absolute inset-0 z-0">
           <div className="hidden md:block w-full h-full relative">
             <Image
@@ -338,7 +260,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Sharp dishes layer with floating motion and 3D parallax - fully visible as before */}
+        {/* Sharp dishes layer — floating + 3D parallax */}
         <motion.div
           className="absolute inset-0 z-10"
           style={{
@@ -391,57 +313,35 @@ const HeroSection = () => {
         </motion.div>
       </motion.div>
 
-      {/* 2. Overlay */}
+      {/* ── 2. Cinematic Culinary Backlight (Warm Ember Glow, no lines) ── */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
           background:
-            'radial-gradient(circle at center, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.3) 100%)',
+            'radial-gradient(circle at center, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.45) 100%)',
         }}
       />
-
-      {/* 3. Rotating sunburst rays */}
       {!reduce && (
         <motion.div
           className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center overflow-hidden"
-          style={{
-            WebkitMaskImage: 'radial-gradient(circle at center, black 0%, transparent 65%)',
-            maskImage: 'radial-gradient(circle at center, black 0%, transparent 65%)',
+          animate={{
+            scale: [1, 1.10, 1],
+            opacity: [0.35, 0.65, 0.35],
           }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.8, ease: luxuryEase }}
+          transition={{ duration: 7, ease: 'easeInOut', repeat: Infinity }}
         >
-          <motion.div
-            className="w-[1400px] h-[1400px] shrink-0"
+          <div
+            className="w-[750px] h-[750px] rounded-full"
             style={{
               background:
-                'repeating-conic-gradient(from 0deg, rgba(250,199,22,0.24) 0deg 6deg, transparent 6deg 24deg)',
-              willChange: 'transform',
+                'radial-gradient(circle, rgba(250,199,22,0.30) 0%, rgba(235,82,80,0.15) 45%, transparent 70%)',
+              filter: 'blur(50px)',
             }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 38, ease: 'linear', repeat: Infinity }}
           />
         </motion.div>
       )}
 
-      {/* 4. Pulse rings from the center */}
-      {!reduce && (
-        <div className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center overflow-hidden">
-          {[0, 1.1, 2.2, 3.3].map((d) => (
-            <motion.span
-              key={d}
-              className="absolute rounded-full border border-[#FAC716]/50 w-[420px] h-[420px]"
-              style={{ willChange: 'transform, opacity' }}
-              initial={{ scale: 0.3, opacity: 0 }}
-              animate={{ scale: [0.3, 2.3], opacity: [0.6, 0] }}
-              transition={{ duration: 4.4, ease: [0.22, 1, 0.36, 1], repeat: Infinity, delay: d }}
-            />
-          ))}
-        </div>
-      )}
-
-      {/* 5. Colored ambient glows (parallax) */}
+      {/* ── 5. Colored ambient glows (parallax) ── */}
       <motion.div
         className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center overflow-hidden"
         style={{ x: reduce ? 0 : glowX, y: reduce ? 0 : glowY }}
@@ -460,7 +360,7 @@ const HeroSection = () => {
         />
       </motion.div>
 
-      {/* 6. Cursor spotlight (desktop) */}
+      {/* ── 6. Cursor spotlight (desktop) ── */}
       {!reduce && (
         <motion.div
           className="hidden md:block absolute top-0 left-0 w-[500px] h-[500px] z-[12] pointer-events-none rounded-full"
@@ -475,17 +375,19 @@ const HeroSection = () => {
         />
       )}
 
-      {/* 7. Interactive stars + orbs */}
-      <div className="absolute inset-0 z-[15] overflow-hidden pointer-events-none">
-        <ParticleCanvas disabled={reduce} />
-      </div>
+      {/* ── NEW ① Golden Embers ── */}
+      <GoldenEmbers disabled={reduce} />
 
-      {/* 8. Center content */}
+      {/* ── NEW ② Ticker tape ── */}
+      <HeroTicker />
+
+      {/* ── 7. Center content ── */}
       <motion.div
         style={{ x: reduce ? 0 : contentX, y: reduce ? 0 : contentY }}
         className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto"
       >
-        {/* Title badge */}
+
+        {/* Title badge (unchanged) */}
         <motion.div
           style={{ willChange: 'transform, opacity' }}
           initial={{ opacity: 0, y: -28, scale: 0.94 }}
@@ -517,16 +419,6 @@ const HeroSection = () => {
             transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute inset-0 bg-[#FAC716] rounded-none z-[-1] transition-transform duration-300 group-hover:scale-105"
           />
-
-          {!reduce && (
-            <motion.span
-              aria-hidden="true"
-              initial={{ x: '-130%' }}
-              animate={{ x: ['-130%', '230%'] }}
-              transition={{ duration: 1.6, ease: [0.4, 0, 0.2, 1], repeat: Infinity, repeatDelay: 3.2, delay: 1.6 }}
-              className="absolute inset-y-0 left-0 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/70 to-transparent z-20 pointer-events-none"
-            />
-          )}
 
           <h1
             className="py-1 px-2 sm:px-3 relative z-10 text-center whitespace-normal sm:whitespace-nowrap tracking-tight break-words"
@@ -562,7 +454,7 @@ const HeroSection = () => {
           </h1>
         </motion.div>
 
-        {/* Subtitle */}
+        {/* Subtitle (unchanged) */}
         <motion.p
           initial={{ opacity: 0, y: 22, filter: 'blur(8px)' }}
           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
@@ -592,47 +484,21 @@ const HeroSection = () => {
               href="https://grillados.bycalibre.ca/location"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative overflow-hidden text-black hover:text-white group flex items-center justify-center gap-1.5 sm:gap-2 bg-[#FAC716] hover:bg-[#EB5250] transition-colors duration-300 shadow-xl rounded-lg px-4 py-3 sm:px-8 sm:py-4 w-full text-3.75 sm:text-5"
+              className="relative overflow-hidden text-black hover:text-white group flex items-center justify-center bg-[#FAC716] hover:bg-[#EB5250] transition-colors duration-300 rounded-lg px-5 py-3.5 sm:px-9 sm:py-4 w-full text-3.75 sm:text-5 tracking-wide"
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px' }}
             >
-              {!reduce && (
-                <motion.span
-                  aria-hidden="true"
-                  initial={{ x: '-150%' }}
-                  animate={{ x: ['-150%', '250%'] }}
-                  transition={{ duration: 1.4, ease: [0.4, 0, 0.2, 1], repeat: Infinity, repeatDelay: 2.8, delay: 1.8 }}
-                  className="absolute inset-y-0 left-0 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none"
-                />
-              )}
               <span className="whitespace-nowrap relative z-10">{t('orderNow')}</span>
-              <svg
-                className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1.5 relative z-10"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
             </Link>
           </Magnetic>
 
-          <Magnetic className="flex-1 sm:flex-none" glowDelay={0.4} disabled={reduce}>
+          <Magnetic className="flex-1 sm:flex-none" disabled={reduce}>
             <Link
               href="https://grillados.bycalibre.ca/location"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative overflow-hidden text-black hover:text-white group flex items-center justify-center gap-1.5 sm:gap-2 bg-[#FAC716] hover:bg-[#EB5250] transition-colors duration-300 shadow-xl rounded-lg px-4 py-3 sm:px-8 sm:py-4 w-full text-3.75 sm:text-5"
+              className="relative overflow-hidden text-black hover:text-white group flex items-center justify-center bg-[#FAC716] hover:bg-[#EB5250] transition-colors duration-300 rounded-lg px-5 py-3.5 sm:px-9 sm:py-4 w-full text-3.75 sm:text-5 tracking-wide"
               style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, lineHeight: '20px' }}
             >
-              {!reduce && (
-                <motion.span
-                  aria-hidden="true"
-                  initial={{ x: '-150%' }}
-                  animate={{ x: ['-150%', '250%'] }}
-                  transition={{ duration: 1.4, ease: [0.4, 0, 0.2, 1], repeat: Infinity, repeatDelay: 2.8, delay: 2.2 }}
-                  className="absolute inset-y-0 left-0 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none"
-                />
-              )}
               <span className="whitespace-nowrap relative z-10">{t('viewMenu')}</span>
             </Link>
           </Magnetic>
