@@ -186,9 +186,21 @@ const HeroSection = () => {
       >
         {/* Blurred ambient backdrop */}
         <div className="absolute inset-0 z-0">
-          <div className="w-full h-full relative">
+          <div className="hidden md:block w-full h-full relative">
             <Image
               src="/images/hero sections.png"
+              alt=""
+              fill
+              priority
+              quality={30}
+              unoptimized={true}
+              className="object-cover object-center blur-2xl opacity-40 scale-105"
+              aria-hidden="true"
+            />
+          </div>
+          <div className="block md:hidden w-full h-full relative">
+            <Image
+              src="/images/website-main-banner-Mobile-1.webp"
               alt=""
               fill
               priority
@@ -239,7 +251,7 @@ const HeroSection = () => {
             </div>
             <div className="block md:hidden w-full h-full relative">
               <Image
-                src="/images/hero sections.png"
+                src="/images/website-main-banner-Mobile-1.webp"
                 alt="Grillado's Premium Grilled Chicken and Portuguese Food"
                 fill
                 priority
