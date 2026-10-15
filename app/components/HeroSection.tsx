@@ -71,54 +71,6 @@ const GoldenEmbers = ({ disabled }: { disabled: boolean }) => {
   );
 };
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   NEW ② — Scrolling Ticker Tape
-   Marquee at the bottom of the hero with restaurant keywords.
-───────────────────────────────────────────────────────────────────────────── */
-const TICKER_ITEMS = [
-  'PREMIUM GRILLED CHICKEN',
-  'STEAK & RIBS',
-  'PORTUGUESE FLAVOURS',
-  'CAMBRIDGE · KITCHENER',
-  'HALAL CERTIFIED',
-  'ORDER ONLINE',
-  'FRESH DAILY',
-  'AWARD WINNING',
-];
-
-const HeroTicker = () => (
-  <div
-    className="absolute bottom-0 left-0 right-0 z-[22] overflow-hidden py-[7px]"
-    style={{
-      background:
-        'linear-gradient(90deg, rgba(0,0,0,0.80) 0%, rgba(18,8,0,0.68) 50%, rgba(0,0,0,0.80) 100%)',
-      borderTop: '1px solid rgba(255,255,255,0.08)',
-    }}
-    aria-hidden="true"
-  >
-    <motion.div
-      className="flex whitespace-nowrap"
-      animate={{ x: ['0%', '-50%'] }}
-      transition={{ duration: 30, ease: 'linear', repeat: Infinity }}
-    >
-      {[0, 1].map((rep) => (
-        <span key={rep} className="flex items-center shrink-0">
-          {TICKER_ITEMS.map((item, i) => (
-            <React.Fragment key={i}>
-              <span
-                className="text-[#FAC716] text-[9px] sm:text-[10px] font-bold tracking-[0.22em] uppercase px-3 sm:px-5"
-                style={{ fontFamily: "'Ribeat', sans-serif" }}
-              >
-                {item}
-              </span>
-              <span className="text-[#FAC716]/35 text-[8px] shrink-0">✦</span>
-            </React.Fragment>
-          ))}
-        </span>
-      ))}
-    </motion.div>
-  </div>
-);
 
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -321,24 +273,45 @@ const HeroSection = () => {
             'radial-gradient(circle at center, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.45) 100%)',
         }}
       />
+      {/* ── 3. Rotating sunburst rays (Cinematic background) ── */}
       {!reduce && (
         <motion.div
           className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center overflow-hidden"
-          animate={{
-            scale: [1, 1.10, 1],
-            opacity: [0.35, 0.65, 0.35],
+          style={{
+            WebkitMaskImage: 'radial-gradient(circle at center, black 0%, transparent 65%)',
+            maskImage: 'radial-gradient(circle at center, black 0%, transparent 65%)',
           }}
-          transition={{ duration: 7, ease: 'easeInOut', repeat: Infinity }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.8, ease: luxuryEase }}
         >
-          <div
-            className="w-[750px] h-[750px] rounded-full"
+          <motion.div
+            className="w-[1400px] h-[1400px] shrink-0"
             style={{
               background:
-                'radial-gradient(circle, rgba(250,199,22,0.30) 0%, rgba(235,82,80,0.15) 45%, transparent 70%)',
-              filter: 'blur(50px)',
+                'repeating-conic-gradient(from 0deg, rgba(250,199,22,0.24) 0deg 6deg, transparent 6deg 24deg)',
+              willChange: 'transform',
             }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 38, ease: 'linear', repeat: Infinity }}
           />
         </motion.div>
+      )}
+
+      {/* ── 4. Pulse rings from center ── */}
+      {!reduce && (
+        <div className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center overflow-hidden">
+          {[0, 1.1, 2.2, 3.3].map((d) => (
+            <motion.span
+              key={d}
+              className="absolute rounded-full border border-[#FAC716]/50 w-[420px] h-[420px]"
+              style={{ willChange: 'transform, opacity' }}
+              initial={{ scale: 0.3, opacity: 0 }}
+              animate={{ scale: [0.3, 2.3], opacity: [0.6, 0] }}
+              transition={{ duration: 4.4, ease: [0.22, 1, 0.36, 1], repeat: Infinity, delay: d }}
+            />
+          ))}
+        </div>
       )}
 
       {/* ── 5. Colored ambient glows (parallax) ── */}
@@ -375,11 +348,8 @@ const HeroSection = () => {
         />
       )}
 
-      {/* ── NEW ① Golden Embers ── */}
+      {/* ── Golden Embers ── */}
       <GoldenEmbers disabled={reduce} />
-
-      {/* ── NEW ② Ticker tape ── */}
-      <HeroTicker />
 
       {/* ── 7. Center content ── */}
       <motion.div
