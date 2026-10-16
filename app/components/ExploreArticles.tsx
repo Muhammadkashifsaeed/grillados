@@ -377,37 +377,46 @@ export const ExploreArticles = () => {
 
               {/* Content */}
               <div className="p-6 md:p-8 flex flex-col flex-1">
-                
-                <Link href="#" className="mb-4 text-white hover:text-[#FAC716] transition-colors duration-300 line-clamp-2 block" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px' }} >
-                  {article.heading}
-                </Link>
+                {(() => {
+                  const articleSlug = typeof article.id === 'string'
+                    ? article.id
+                    : article.heading.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                  const articleUrl = `/blogs/${articleSlug}`;
+                  return (
+                    <>
+                      <Link href={articleUrl} className="mb-4 text-white hover:text-[#FAC716] transition-colors duration-300 line-clamp-2 block" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 600, fontSize: '20px', lineHeight: '26px' }} >
+                        {article.heading}
+                      </Link>
 
-                <p 
-                  className="line-clamp-2"
-                  style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '15px', lineHeight: '25px', color: '#FFFFFF' }}
-                >
-                  {article.text}
-                </p>
+                      <p 
+                        className="line-clamp-2"
+                        style={{ fontFamily: '"Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, fontSize: '15px', lineHeight: '25px', color: '#FFFFFF' }}
+                      >
+                        {article.text}
+                      </p>
 
-                <div className="text-gray-400 font-bold tracking-widest my-2">
-                  .....
-                </div>
+                      <div className="text-gray-400 font-bold tracking-widest my-2">
+                        .....
+                      </div>
 
-                <div className="mb-6">
-                  <Link href="#" className="text-[#F2A93F] hover:text-[#F2A93F] text-[14px] leading-[23px] font-normal font-['Poppins',sans-serif] transition-colors duration-300" >
-                    {article.tags.join(', ')}
-                  </Link>
-                </div>
+                      <div className="mb-6">
+                        <span className="text-[#F2A93F] text-[14px] leading-[23px] font-normal font-['Poppins',sans-serif]">
+                          {article.tags.join(', ')}
+                        </span>
+                      </div>
 
-                <div className="mt-auto pt-6 border-t border-gray-600 flex items-center justify-between">
-                  <Link href="#" className="text-[#CBCBCB] hover:text-white font-bold tracking-wider uppercase text-sm transition-colors">
-                    {article.date}
-                  </Link>
-                  
-                  <Link href="#" className="text-[#F2A93F] hover:text-white hover:bg-[#EB5250] px-2 py-1 -ml-2 rounded text-[16px] leading-4 font-semibold font-['Poppins',sans-serif] uppercase tracking-wider transition-all duration-300 w-max cursor-pointer" >
-                    {t('readMore')}
-                  </Link>
-                </div>
+                      <div className="mt-auto pt-6 border-t border-gray-600 flex items-center justify-between">
+                        <span className="text-[#CBCBCB] font-bold tracking-wider uppercase text-sm">
+                          {article.date}
+                        </span>
+                        
+                        <Link href={articleUrl} className="text-[#F2A93F] hover:text-white hover:bg-[#EB5250] px-2 py-1 -ml-2 rounded text-[16px] leading-4 font-semibold font-['Poppins',sans-serif] uppercase tracking-wider transition-all duration-300 w-max cursor-pointer" >
+                          {t('readMore')}
+                        </Link>
+                      </div>
+                    </>
+                  );
+                })()}
               </div>
 
             </div>

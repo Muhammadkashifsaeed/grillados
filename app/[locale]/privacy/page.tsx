@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return constructPageMetadata({
     locale,
     pathname: '/privacy',
-    title: locale === 'fr' ? 'POLITIQUE DE CONFIDENTIALITÉ | GRILLADOS' : 'PRIVACY POLICY | GRILLADOS',
+    title: locale === 'fr' ? 'Politique de confidentialité' : 'Privacy Policy',
     description: locale === 'fr'
       ? "Politique de confidentialité de Grillado's Canada concernant la collecte et l'utilisation de vos données personnelles."
       : "Privacy policy of Grillado's Canada regarding the collection and use of personal information.",

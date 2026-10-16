@@ -17,7 +17,7 @@ export function constructPageMetadata({
   title,
   description,
   keywords,
-  images = ['/images/13332603_transparent.png'],
+  images = ['/images/hero-bg-new.png'],
   type = 'website',
   publishedTime,
 }: PageMetadataOptions): Metadata {

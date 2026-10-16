@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return constructPageMetadata({
     locale,
     pathname: '/social-tree',
-    title: 'SOCIAL LINKS | GRILLADOS',
+    title: locale === 'fr' ? 'Réseaux sociaux' : 'Social Links',
     description: locale === 'fr'
       ? "Suivez Grillado's sur les réseaux sociaux: Instagram, Facebook, TikTok et WhatsApp."
       : "Connect with Grillado's on social media: Instagram, Facebook, TikTok, and WhatsApp.",

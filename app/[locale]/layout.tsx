@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Noto_Sans, Poppins, Albert_Sans } from "next/font/google";
-import { headers } from "next/headers";
 import "../globals.css";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
@@ -36,19 +35,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
-  // Dynamically derive current domain from request headers (e.g. grillados-2.vercel.app, grillados.ca, etc.)
-  const headersList = await headers();
-  const host = headersList.get('host') || 'grillados.ca';
-  const protocol = headersList.get('x-forwarded-proto') || (host.includes('localhost') ? 'http' : 'https');
-  const currentDomain = `${protocol}://${host}`;
+  // Production domain for canonicals (with fallback if environment specifies otherwise)
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://grillados.ca';
 
-  // Capitalize all metadata fields as requested
-  const titleDefault = t('title').toUpperCase();
-  const description = t('description').toUpperCase();
-  const keywords = t('keywords').toUpperCase().split(', ');
+  const titleDefault = t('title');
+  const description = t('description');
+  const keywords = t('keywords').split(', ');
 
   return {
-    metadataBase: new URL(currentDomain),
+    metadataBase: new URL(siteUrl),
     alternates: { 
       canonical: locale === 'fr' ? '/fr' : '/',
       languages: {
@@ -62,7 +57,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: "%s | GRILLADOS | BEEF BACK RIBS & CHICKEN IN CANADA",
       default: "GRILLADOS | BEEF BACK RIBS & CHICKEN IN CANADA",
     },
-    description: "Enjoy juicy beef back ribs and grilled chicken at Grillados – your go-to spot in Canada for bold flavours and perfectly cooked meats.",
+    description: description,
     keywords: keywords,
     authors: [{ name: "GRILLADO'S" }],
     creator: "GRILLADO'S",
@@ -85,14 +80,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: titleDefault,
       description: description,
-      url: currentDomain,
+      url: locale === 'fr' ? '/fr' : '/',
       siteName: "GRILLADO'S",
       images: [
         {
-          url: "/images/13332603_transparent.png",
-          width: 800,
-          height: 800,
-          alt: "GRILLADO'S LOGO",
+          url: "/images/hero-bg-new.png",
+          width: 1200,
+          height: 630,
+          alt: "GRILLADO'S",
         },
       ],
       locale: locale === 'fr' ? 'fr_CA' : 'en_CA',
@@ -102,7 +97,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: titleDefault,
       description: description,
-      images: ["/images/13332603_transparent.png"],
+      images: ["/images/hero-bg-new.png"],
     },
   };
 }

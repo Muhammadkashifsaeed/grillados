@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return constructPageMetadata({
     locale,
     pathname: '/terms',
-    title: locale === 'fr' ? "CONDITIONS D'UTILISATION | GRILLADOS" : 'TERMS OF SERVICE | GRILLADOS',
+    title: locale === 'fr' ? "Conditions d'utilisation" : 'Terms of Service',
     description: locale === 'fr'
       ? "Conditions d'utilisation du site web et des services de Grillado's Canada."
       : "Terms of service governing access to and use of Grillado's Canada website and services.",

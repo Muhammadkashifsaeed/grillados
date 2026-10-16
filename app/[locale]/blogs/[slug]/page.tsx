@@ -22,7 +22,7 @@ function decodeHtmlEntities(str: string): string {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
-  let title = slug.replace(/-/g, ' ').toUpperCase();
+  let title = slug.replace(/-/g, ' ');
   let description = locale === 'fr' 
     ? "Lisez cet article sur le blog de Grillado's Canada." 
     : "Read this article on Grillado's Canada blog.";
@@ -30,12 +30,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   let publishedTime: string | undefined = undefined;
 
   try {
-    const res = await fetch(`https://grillados.ca/wp-json/wp/v2/posts?slug=${slug}&_embed=1`, { next: { revalidate: 3600 } });
+    const encodedSlug = encodeURIComponent(slug);
+    const res = await fetch(`https://grillados.ca/wp-json/wp/v2/posts?slug=${encodedSlug}&_embed=1`, { next: { revalidate: 3600 } });
     const data = await res.json();
     if (data && data.length > 0) {
       const post = data[0];
       if (post.title?.rendered) {
-        title = decodeHtmlEntities(post.title.rendered).toUpperCase();
+        title = decodeHtmlEntities(post.title.rendered);
       }
       if (post.excerpt?.rendered) {
         const rawDesc = decodeHtmlEntities(post.excerpt.rendered);
@@ -55,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return constructPageMetadata({
     locale,
     pathname: `/blogs/${slug}`,
-    title: `${title} | GRILLADOS`,
+    title,
     description,
     keywords: [
       title,
@@ -80,7 +81,8 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
   let post = null;
   let imageUrl = null;
   try {
-    const res = await fetch(`https://grillados.ca/wp-json/wp/v2/posts?slug=${slug}&_embed=1`, { next: { revalidate: 3600 } });
+    const encodedSlug = encodeURIComponent(slug);
+    const res = await fetch(`https://grillados.ca/wp-json/wp/v2/posts?slug=${encodedSlug}&_embed=1`, { next: { revalidate: 3600 } });
     const data = await res.json();
     if (data && data.length > 0) {
       post = data[0];
