@@ -18,16 +18,16 @@ import { Link } from '@/i18n/routing';
    Pure framer-motion, no canvas, no random colors — restaurant-themed.
 ───────────────────────────────────────────────────────────────────────────── */
 const EMBERS = [
-  { left: '6%',  sz: 3, dur: 7.2,  d: 0,    op: 0.70, sx: 12 },
-  { left: '18%', sz: 2, dur: 9.4,  d: 1.6,  op: 0.55, sx: -13 },
-  { left: '31%', sz: 4, dur: 6.9,  d: 2.9,  op: 0.65, sx: 10 },
-  { left: '46%', sz: 2, dur: 10.2, d: 0.7,  op: 0.50, sx: -17 },
-  { left: '59%', sz: 3, dur: 8.3,  d: 1.9,  op: 0.60, sx: 15 },
-  { left: '72%', sz: 2, dur: 7.7,  d: 3.7,  op: 0.50, sx: -11 },
-  { left: '13%', sz: 2, dur: 11.4, d: 4.5,  op: 0.45, sx: 8 },
-  { left: '84%', sz: 3, dur: 9.1,  d: 2.5,  op: 0.60, sx: -16 },
-  { left: '50%', sz: 2, dur: 8.6,  d: 5.1,  op: 0.40, sx: 10 },
-  { left: '92%', sz: 2, dur: 12.0, d: 1.2,  op: 0.45, sx: -9 },
+  { left: '6%',  sz: 3, dur: 5.6, d: 0,    op: 0.70, sx: 12 },
+  { left: '18%', sz: 2, dur: 7.2, d: 1.2,  op: 0.55, sx: -13 },
+  { left: '31%', sz: 4, dur: 5.4, d: 2.2,  op: 0.65, sx: 10 },
+  { left: '46%', sz: 2, dur: 7.8, d: 0.5,  op: 0.50, sx: -17 },
+  { left: '59%', sz: 3, dur: 6.4, d: 1.5,  op: 0.60, sx: 15 },
+  { left: '72%', sz: 2, dur: 6.0, d: 2.8,  op: 0.50, sx: -11 },
+  { left: '13%', sz: 2, dur: 8.5, d: 3.4,  op: 0.45, sx: 8 },
+  { left: '84%', sz: 3, dur: 7.0, d: 1.9,  op: 0.60, sx: -16 },
+  { left: '50%', sz: 2, dur: 6.6, d: 3.8,  op: 0.40, sx: 10 },
+  { left: '92%', sz: 2, dur: 9.0, d: 0.9,  op: 0.45, sx: -9 },
 ];
 
 const GoldenEmbers = ({ disabled }: { disabled: boolean }) => {
@@ -50,6 +50,7 @@ const GoldenEmbers = ({ disabled }: { disabled: boolean }) => {
             background: 'radial-gradient(circle, #FFD060 0%, #FF7A00 70%, transparent 100%)',
             filter: `blur(${e.sz * 0.35}px)`,
             boxShadow: `0 0 ${e.sz * 5}px rgba(255,170,0,${e.op * 0.8})`,
+            willChange: 'transform, opacity',
           }}
           initial={{ y: 0, x: 0, opacity: 0, scale: 0.4 }}
           animate={{
@@ -62,8 +63,8 @@ const GoldenEmbers = ({ disabled }: { disabled: boolean }) => {
             duration: e.dur,
             delay: e.d,
             repeat: Infinity,
-            repeatDelay: 0.5,
-            ease: 'easeOut',
+            repeatDelay: 0.4,
+            ease: [0.25, 0.46, 0.45, 0.94],
           }}
         />
       ))}
@@ -89,13 +90,13 @@ const Magnetic = ({
   const ref = useRef<HTMLDivElement>(null);
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
-  const x = useSpring(mx, { stiffness: 260, damping: 20, mass: 0.35 });
-  const y = useSpring(my, { stiffness: 260, damping: 20, mass: 0.35 });
+  const x = useSpring(mx, { stiffness: 280, damping: 22, mass: 0.3 });
+  const y = useSpring(my, { stiffness: 280, damping: 22, mass: 0.3 });
 
   const onMove = (e: React.PointerEvent<HTMLDivElement>) => {
     if (disabled || e.pointerType !== 'mouse' || !ref.current) return;
     const r = ref.current.getBoundingClientRect();
-    mx.set((e.clientX - (r.left + r.width / 2)) * 0.28);
+    mx.set((e.clientX - (r.left + r.width / 2)) * 0.3);
     my.set((e.clientY - (r.top + r.height / 2)) * 0.35);
   };
   const onLeave = () => {
@@ -114,7 +115,7 @@ const Magnetic = ({
       <motion.div
         whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.97 }}
-        transition={{ type: 'spring', stiffness: 380, damping: 20 }}
+        transition={{ type: 'spring', stiffness: 400, damping: 22 }}
         className="relative rounded-lg w-full transition-all duration-300 shadow-lg hover:shadow-[0_12px_32px_rgba(250,199,22,0.50)]"
       >
         <div className="relative z-10 rounded-lg overflow-hidden">{children}</div>
@@ -132,13 +133,13 @@ const HeroSection = () => {
 
   const px = useMotionValue(0);
   const py = useMotionValue(0);
-  const sx = useSpring(px, { stiffness: 75, damping: 24, mass: 0.5 });
-  const sy = useSpring(py, { stiffness: 75, damping: 24, mass: 0.5 });
+  const sx = useSpring(px, { stiffness: 85, damping: 22, mass: 0.45 });
+  const sy = useSpring(py, { stiffness: 85, damping: 22, mass: 0.45 });
 
   const spotX = useMotionValue(-500);
   const spotY = useMotionValue(-500);
-  const spX = useSpring(spotX, { stiffness: 95, damping: 22, mass: 0.4 });
-  const spY = useSpring(spotY, { stiffness: 95, damping: 22, mass: 0.4 });
+  const spX = useSpring(spotX, { stiffness: 105, damping: 20, mass: 0.35 });
+  const spY = useSpring(spotY, { stiffness: 105, damping: 20, mass: 0.35 });
 
   const bgX = useTransform(sx, (v) => v * -14);
   const bgY = useTransform(sy, (v) => v * -10);
@@ -230,12 +231,12 @@ const HeroSection = () => {
               reduce
                 ? undefined
                 : {
-                    y: [0, -7, -2, -8, 0],
+                    y: [0, -8, -2, -9, 0],
                     scale: [1, 1.018, 1.008, 1.02, 1],
                     rotate: [0, 0.35, -0.2, 0.25, 0],
                   }
             }
-            transition={{ duration: 8, ease: 'easeInOut', repeat: Infinity }}
+            transition={{ duration: 6.2, ease: 'easeInOut', repeat: Infinity }}
           >
             <div className="hidden md:block w-full h-full relative">
               <Image
@@ -283,7 +284,7 @@ const HeroSection = () => {
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.8, ease: luxuryEase }}
+          transition={{ duration: 1.6, ease: luxuryEase }}
         >
           <motion.div
             className="w-[1400px] h-[1400px] shrink-0"
@@ -293,7 +294,7 @@ const HeroSection = () => {
               willChange: 'transform',
             }}
             animate={{ rotate: 360 }}
-            transition={{ duration: 38, ease: 'linear', repeat: Infinity }}
+            transition={{ duration: 32, ease: 'linear', repeat: Infinity }}
           />
         </motion.div>
       )}
@@ -301,14 +302,14 @@ const HeroSection = () => {
       {/* ── 4. Pulse rings from center ── */}
       {!reduce && (
         <div className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center overflow-hidden">
-          {[0, 1.1, 2.2, 3.3].map((d) => (
+          {[0, 0.95, 1.9, 2.85].map((d) => (
             <motion.span
               key={d}
               className="absolute rounded-full border border-[#FAC716]/50 w-[420px] h-[420px]"
               style={{ willChange: 'transform, opacity' }}
               initial={{ scale: 0.3, opacity: 0 }}
               animate={{ scale: [0.3, 2.3], opacity: [0.6, 0] }}
-              transition={{ duration: 4.4, ease: [0.22, 1, 0.36, 1], repeat: Infinity, delay: d }}
+              transition={{ duration: 3.8, ease: [0.22, 1, 0.36, 1], repeat: Infinity, delay: d }}
             />
           ))}
         </div>
@@ -322,13 +323,13 @@ const HeroSection = () => {
         <motion.div
           style={{ willChange: 'transform, opacity' }}
           animate={reduce ? undefined : { scale: [0.95, 1.3, 0.95], opacity: [0.45, 0.8, 0.45] }}
-          transition={{ duration: 6, ease: 'easeInOut', repeat: Infinity }}
+          transition={{ duration: 5.2, ease: 'easeInOut', repeat: Infinity }}
           className="w-[600px] h-[600px] sm:w-[900px] sm:h-[900px] rounded-full bg-gradient-to-r from-[#FAC716]/55 via-[#00F2FE]/35 to-transparent blur-3xl absolute -left-28"
         />
         <motion.div
           style={{ willChange: 'transform, opacity' }}
           animate={reduce ? undefined : { scale: [1.3, 0.95, 1.3], opacity: [0.5, 0.85, 0.5] }}
-          transition={{ duration: 6.5, ease: 'easeInOut', repeat: Infinity }}
+          transition={{ duration: 5.8, ease: 'easeInOut', repeat: Infinity }}
           className="w-[550px] h-[550px] sm:w-[850px] sm:h-[850px] rounded-full bg-gradient-to-l from-[#FF007F]/50 via-[#FF5500]/40 to-transparent blur-3xl absolute -right-28"
         />
       </motion.div>
@@ -360,17 +361,17 @@ const HeroSection = () => {
         {/* Title badge (unchanged) */}
         <motion.div
           style={{ willChange: 'transform, opacity' }}
-          initial={{ opacity: 0, y: -28, scale: 0.94 }}
+          initial={{ opacity: 0, y: -24, scale: 0.95 }}
           animate={{
             opacity: 1,
-            y: reduce ? 0 : [0, -8, 0],
+            y: reduce ? 0 : [0, -7, 0],
             scale: 1,
           }}
           transition={{
-            duration: 0.9,
+            duration: 0.8,
             ease: luxuryEase,
-            delay: 0.25,
-            y: { duration: 4.2, ease: 'easeInOut', repeat: Infinity, delay: 1.15 },
+            delay: 0.2,
+            y: { duration: 3.6, ease: 'easeInOut', repeat: Infinity, delay: 1.0 },
           }}
           className="mb-5 sm:mb-6 relative inline-block mx-4 sm:mx-0 max-w-[90vw] sm:max-w-none group cursor-pointer overflow-hidden"
         >
@@ -381,12 +382,12 @@ const HeroSection = () => {
                 : {
                   boxShadow: [
                     '0 10px 30px rgba(0,0,0,0.85)',
-                    '0 25px 75px rgba(250,199,22,0.95)',
+                    '0 22px 65px rgba(250,199,22,0.92)',
                     '0 10px 30px rgba(0,0,0,0.85)',
                   ],
                 }
             }
-            transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
+            transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute inset-0 bg-[#FAC716] rounded-none z-[-1] transition-transform duration-300 group-hover:scale-105"
           />
 
@@ -410,9 +411,9 @@ const HeroSection = () => {
                       key={i}
                       className="inline-block"
                       style={{ willChange: 'transform, opacity' }}
-                      initial={{ y: 28, opacity: 0, filter: 'blur(6px)', rotateX: -40 }}
+                      initial={{ y: 24, opacity: 0, filter: 'blur(5px)', rotateX: -35 }}
                       animate={{ y: 0, opacity: 1, filter: 'blur(0px)', rotateX: 0 }}
-                      transition={{ duration: 0.65, ease: luxuryEase, delay: 0.35 + i * 0.03 }}
+                      transition={{ duration: 0.55, ease: luxuryEase, delay: 0.25 + i * 0.022 }}
                     >
                       {ch}
                     </motion.span>
@@ -426,9 +427,9 @@ const HeroSection = () => {
 
         {/* Subtitle (unchanged) */}
         <motion.p
-          initial={{ opacity: 0, y: 22, filter: 'blur(8px)' }}
+          initial={{ opacity: 0, y: 18, filter: 'blur(6px)' }}
           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          transition={{ duration: 0.85, ease: luxuryEase, delay: 0.75 }}
+          transition={{ duration: 0.75, ease: luxuryEase, delay: 0.65 }}
           className="mb-6 sm:mb-7 max-w-4xl drop-shadow-md w-full px-4 text-sm sm:text-base md:text-4.5 leading-relaxed md:leading-7.5"
           style={{
             willChange: 'transform, opacity',
@@ -444,9 +445,9 @@ const HeroSection = () => {
         {/* Buttons */}
         <motion.div
           style={{ willChange: 'transform, opacity' }}
-          initial={{ opacity: 0, y: 26, scale: 0.95 }}
+          initial={{ opacity: 0, y: 22, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.85, ease: luxuryEase, delay: 0.95 }}
+          transition={{ duration: 0.75, ease: luxuryEase, delay: 0.8 }}
           className="flex flex-row gap-3 sm:gap-5 w-full px-4 sm:px-0 sm:w-auto justify-center"
         >
           <Magnetic className="flex-1 sm:flex-none" disabled={reduce}>

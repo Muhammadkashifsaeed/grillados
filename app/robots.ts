@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
+import { getSiteUrlSync } from './utils/seo';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://grillados.ca';
+const BASE_URL = getSiteUrlSync();
 
 export default function robots(): MetadataRoute.Robots {
   return {

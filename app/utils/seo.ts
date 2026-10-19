@@ -1,4 +1,53 @@
 import { Metadata } from 'next';
+import { headers } from 'next/headers';
+
+export const PRODUCTION_SITE_URL = 'https://grillados.ca';
+
+/**
+ * Returns the effective site URL for metadata generation.
+ * - Respects NEXT_PUBLIC_SITE_URL if configured
+ * - Automatically detects local dev / audit requests on localhost:3000 so canonical tags match the URL
+ * - In production, defaults to https://grillados.ca
+ */
+export async function getSiteUrl(): Promise<string> {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
+  }
+
+  try {
+    const headersList = await headers();
+    const host = headersList.get('x-forwarded-host') || headersList.get('host');
+    if (host) {
+      if (host.includes('localhost') || host.includes('127.0.0.1')) {
+        const proto = headersList.get('x-forwarded-proto') || 'http';
+        return `${proto}://${host}`;
+      }
+    }
+  } catch {
+    // headers() is unavailable during build/static generation
+  }
+
+  if (process.env.NODE_ENV === 'development') {
+    const port = process.env.PORT || '3000';
+    return `http://localhost:${port}`;
+  }
+
+  return PRODUCTION_SITE_URL;
+}
+
+/**
+ * Synchronous version for static route files (robots.ts, sitemap.ts)
+ */
+export function getSiteUrlSync(): string {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
+  }
+  if (process.env.NODE_ENV === 'development') {
+    const port = process.env.PORT || '3000';
+    return `http://localhost:${port}`;
+  }
+  return PRODUCTION_SITE_URL;
+}
 
 interface PageMetadataOptions {
   locale: string;

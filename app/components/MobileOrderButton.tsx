@@ -9,7 +9,7 @@ export const MobileOrderButton = () => {
   const t = useTranslations('Header');
 
   return (
-    <Link 
+    <a 
       href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
       className="group fixed right-0 top-1/2 -translate-y-1/2 z-[9999] flex flex-col items-center justify-center bg-[#FAC716] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 uppercase py-4 px-1.5 md:py-5 md:px-2 rounded-l-xl shadow-[-4px_0_15px_rgba(251,188,4,0.3)] border-l-2 border-y-2 border-[#fff5cc]/30 w-[45px] md:w-[50px] h-[160px] md:h-[180px]"
     >
@@ -20,6 +20,6 @@ export const MobileOrderButton = () => {
       >
         {t('orderNow') || 'ORDER NOW'}
       </span>
-    </Link>
+    </a>
   );
 };

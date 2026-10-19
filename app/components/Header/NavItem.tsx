@@ -11,18 +11,11 @@ interface NavItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 
 export const NavItem: React.FC<NavItemProps> = ({ href, icon, label, dropdown, ...props }) => {
   const pathname = usePathname();
-  const isActive = pathname === href || (pathname.startsWith(href) && href !== '/');
+  const isExternal = href.startsWith('http://') || href.startsWith('https://');
+  const isActive = !isExternal && (pathname === href || (pathname.startsWith(href) && href !== '/'));
 
-  return (
-    <Link
-      href={href}
-      className={`group relative flex items-center gap-1.25 transition-all duration-300 font-bold text-[11px] lg:text-[11px] xl:text-[12px] 2xl:text-xs tracking-wide uppercase whitespace-nowrap px-2 lg:px-2 xl:px-2.5 py-1 rounded-full shrink-0 ${
-        isActive 
-          ? 'text-[#FAC716] bg-gradient-to-r from-[#FAC716]/25 via-[#FAC716]/15 to-transparent shadow-[0_0_20px_rgba(250,199,22,0.3)] border border-[#FAC716]/50' 
-          : 'text-white/90 hover:text-[#FAC716] hover:bg-white/10 border border-transparent hover:border-white/10'
-      }`}
-      {...props}
-    >
+  const content = (
+    <>
       {/* Active Top/Bottom Glow Accent */}
       {isActive && (
         <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-[#FAC716] rounded-full shadow-[0_0_8px_#FAC716]" />
@@ -37,8 +30,47 @@ export const NavItem: React.FC<NavItemProps> = ({ href, icon, label, dropdown, .
       {dropdown && (
         <span className="ml-0.5 text-[9px] transition-transform duration-300 group-hover:translate-y-0.5 text-[#FAC716]">▼</span>
       )}
+    </>
+  );
+
+  const className = `group relative flex items-center gap-1.25 transition-all duration-300 font-bold text-[11px] lg:text-[11px] xl:text-[12px] 2xl:text-xs tracking-wide uppercase whitespace-nowrap px-2 lg:px-2 xl:px-2.5 py-1 rounded-full shrink-0 ${
+    isActive 
+      ? 'text-[#FAC716] bg-gradient-to-r from-[#FAC716]/25 via-[#FAC716]/15 to-transparent shadow-[0_0_20px_rgba(250,199,22,0.3)] border border-[#FAC716]/50' 
+      : 'text-white/90 hover:text-[#FAC716] hover:bg-white/10 border border-transparent hover:border-white/10'
+  }`;
+
+  if (dropdown || href === '/pages' || href === '#') {
+    return (
+      <div className={className} role="button" tabIndex={0}>
+        {content}
+      </div>
+    );
+  }
+
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        className={className}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...props}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link
+      href={href}
+      className={className}
+      {...props}
+    >
+      {content}
     </Link>
   );
 };
+
 
 

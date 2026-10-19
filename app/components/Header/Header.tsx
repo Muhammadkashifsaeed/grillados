@@ -163,7 +163,7 @@ export const Header = () => {
             {/* Glowing Backdrop Aura */}
             <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FAC716] via-[#FF8C00] to-[#EB5250] rounded-xl blur-sm opacity-75 group-hover:opacity-100 transition duration-500 group-hover:duration-200 animate-pulse" />
 
-            <Link
+            <a
               href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
               className="relative h-9.5 lg:h-10 flex items-center justify-center gap-2 px-4.5 xl:px-5 rounded-xl bg-gradient-to-r from-[#FAC716] via-[#FFA800] to-[#EB5250] text-black font-extrabold hover:text-white transition-all duration-300 shadow-xl tracking-wider uppercase cursor-pointer overflow-hidden border border-white/30"
             >
@@ -183,11 +183,11 @@ export const Header = () => {
               >
                 {t('orderOnline')}
               </span>
-            </Link>
+            </a>
           </motion.div>
 
           {/* Mobile Order Online Button - Styled matching Order Now button below */}
-          <Link
+          <a
             href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer"
             className="lg:hidden relative h-9 sm:h-9.5 inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 rounded-lg bg-[#FAC716] hover:bg-[#EB5250] text-black hover:text-white transition-all duration-300 hover:scale-[1.03] shadow-md tracking-wider uppercase cursor-pointer shrink-0"
             style={{ 
@@ -202,7 +202,7 @@ export const Header = () => {
             <span className="whitespace-nowrap uppercase tracking-wider">
               {t('orderOnline')}
             </span>
-          </Link>
+          </a>
 
           {/* Mobile hamburger */}
           <div className="lg:hidden flex items-center">

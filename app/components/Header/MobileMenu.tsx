@@ -30,19 +30,16 @@ export const MobileMenu = () => {
   };
 
   const DrawerLink = ({ href, icon, label, isExternal = false }: { href: string; icon: React.ReactNode; label: string; isExternal?: boolean }) => {
-    const isActive = !isExternal && (pathname === href || (pathname.startsWith(href) && href !== '/'));
-    return (
-      <Link
-        href={href}
-        target={isExternal ? "_blank" : undefined}
-        rel={isExternal ? "noopener noreferrer" : undefined}
-        onClick={toggleMenu}
-        className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl transition-all duration-200 font-bold text-xs tracking-wider uppercase group ${
-          isActive
-            ? 'text-[#FAC716] bg-black/35 border border-[#FAC716]/40 shadow-md'
-            : 'text-white hover:text-[#FAC716] hover:bg-black/25 border border-transparent'
-        }`}
-      >
+    const isActuallyExternal = isExternal || href.startsWith('http://') || href.startsWith('https://');
+    const isActive = !isActuallyExternal && (pathname === href || (pathname.startsWith(href) && href !== '/'));
+    const className = `flex items-center justify-between px-3.5 py-2.5 rounded-xl transition-all duration-200 font-bold text-xs tracking-wider uppercase group ${
+      isActive
+        ? 'text-[#FAC716] bg-black/35 border border-[#FAC716]/40 shadow-md'
+        : 'text-white hover:text-[#FAC716] hover:bg-black/25 border border-transparent'
+    }`;
+
+    const inner = (
+      <>
         <div className="flex items-center gap-2.5">
           <span className={`transition-transform duration-200 group-hover:scale-110 ${isActive ? 'text-[#FAC716]' : 'text-[#FAC716]'}`}>
             {icon}
@@ -50,6 +47,30 @@ export const MobileMenu = () => {
           <span className="text-current transition-colors duration-200">{label}</span>
         </div>
         <ChevronRight className={`w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 ${isActive ? 'text-[#FAC716] opacity-100' : 'text-white/60 opacity-0 group-hover:opacity-100 group-hover:text-[#FAC716]'}`} />
+      </>
+    );
+
+    if (isActuallyExternal) {
+      return (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={toggleMenu}
+          className={className}
+        >
+          {inner}
+        </a>
+      );
+    }
+
+    return (
+      <Link
+        href={href}
+        onClick={toggleMenu}
+        className={className}
+      >
+        {inner}
       </Link>
     );
   };

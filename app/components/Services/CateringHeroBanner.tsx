@@ -65,9 +65,9 @@ const CateringHeroBanner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         >
-          <Link href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" aria-label={t('orderNow')} className="text-black hover:text-white bg-[#FAC716] hover:bg-[#EB5250] rounded-md h-13 px-8 flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer inline-flex" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px' }} >
+          <a href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" aria-label={t('orderNow')} className="text-black hover:text-white bg-[#FAC716] hover:bg-[#EB5250] rounded-md h-13 px-8 flex items-center justify-center hover:scale-[1.03] transition-all duration-300 shadow-md cursor-pointer inline-flex" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px' }} >
             {t('orderNow')}
-          </Link>
+          </a>
         </motion.div>
 
       </div>

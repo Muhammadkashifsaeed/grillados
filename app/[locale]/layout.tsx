@@ -7,6 +7,7 @@ import { MobileOrderButton } from "../components/MobileOrderButton";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { getSiteUrl } from '../utils/seo';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,8 +36,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
-  // Production domain for canonicals (with fallback if environment specifies otherwise)
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://grillados.ca';
+  // Dynamically resolve siteUrl: matches localhost in dev/audit and production domain in live deployment
+  const siteUrl = await getSiteUrl();
 
   const titleDefault = t('title');
   const description = t('description');
@@ -126,12 +127,14 @@ export default async function RootLayout({
     notFound();
   }
 
+  const siteUrl = await getSiteUrl();
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Grillado's",
-    "image": "https://grillados.ca/images/hero-bg-new.png",
-    "url": "https://grillados.ca",
+    "image": `${siteUrl}/images/hero-bg-new.png`,
+    "url": siteUrl,
     "priceRange": "$$",
     "servesCuisine": ["Portuguese", "Grilled Chicken", "Steak"],
     "address": [

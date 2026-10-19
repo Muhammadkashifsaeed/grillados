@@ -296,7 +296,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
                 <span>VIEW OUR MENU</span>
               </Link>
 
-              <Link
+              <a
                 href="https://grillados.bycalibre.ca/location"
                 id="cta-order-now-btn"
                 target="_blank"
@@ -308,7 +308,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
         </aside>
