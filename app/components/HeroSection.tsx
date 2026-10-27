@@ -12,33 +12,6 @@ import {
 } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import { Sparkles, Flame, ShoppingBag, Utensils } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
-
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
-
-const HERO_SLIDES = [
-  {
-    id: 1,
-    desktop: '/images/hero sections.png',
-    mobile: '/images/website-main-banner-Mobile-1.webp',
-    alt: "Grillado's Premium Grilled Chicken and Portuguese Food",
-  },
-  {
-    id: 2,
-    desktop: '/images/website-main-banner2.webp',
-    mobile: '/images/website-main-banner-Mobile-1.webp',
-    alt: "Grillado's Gourmet Sizzling Steaks & Peri-Peri Skewers",
-  },
-  {
-    id: 3,
-    desktop: '/images/Main1.webp',
-    mobile: '/images/website-main-banner-Mobile-1.webp',
-    alt: "Grillado's Signature Flame-Grilled Portuguese Feast",
-  },
-];
 
 /* ─────────────────────────────────────────────────────────────────────────────
    NEW ① — Golden Embers
@@ -541,55 +514,29 @@ const HeroSection = () => {
               transition={{ duration: 7.2, ease: 'easeInOut', repeat: Infinity }}
             />
 
-            {/* Swiper 3D Animated Showcase */}
-            <div className="w-full h-full relative pointer-events-auto">
-              <Swiper
-                modules={[Autoplay, EffectFade, Pagination]}
-                effect="fade"
-                fadeEffect={{ crossFade: true }}
-                speed={1200}
-                autoplay={{
-                  delay: 4500,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                pagination={{
-                  clickable: true,
-                  el: '.hero-swiper-pagination',
-                  bulletClass: 'hero-swiper-bullet',
-                  bulletActiveClass: 'hero-swiper-bullet-active',
-                }}
-                className="w-full h-full hero-swiper"
-              >
-                {HERO_SLIDES.map((slide) => (
-                  <SwiperSlide key={slide.id} className="w-full h-full relative">
-                    <div className="hidden md:block w-full h-full relative" style={{ transformStyle: 'preserve-3d' }}>
-                      <Image
-                        src={slide.desktop}
-                        alt={slide.alt}
-                        fill
-                        priority={slide.id === 1}
-                        quality={95}
-                        unoptimized={true}
-                        className="object-contain object-center drop-shadow-[0_24px_55px_rgba(0,0,0,0.8)]"
-                        sizes="100vw"
-                      />
-                    </div>
-                    <div className="block md:hidden w-full h-full relative" style={{ transformStyle: 'preserve-3d' }}>
-                      <Image
-                        src={slide.mobile}
-                        alt={slide.alt}
-                        fill
-                        priority={slide.id === 1}
-                        quality={95}
-                        unoptimized={true}
-                        className="object-cover object-center drop-shadow-[0_24px_55px_rgba(0,0,0,0.8)]"
-                        sizes="100vw"
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+            <div className="hidden md:block w-full h-full relative" style={{ transformStyle: 'preserve-3d' }}>
+              <Image
+                src="/images/hero sections.png"
+                alt="Grillado's Premium Grilled Chicken and Portuguese Food"
+                fill
+                priority
+                quality={95}
+                unoptimized={true}
+                className="object-contain object-center drop-shadow-[0_24px_55px_rgba(0,0,0,0.8)]"
+                sizes="100vw"
+              />
+            </div>
+            <div className="block md:hidden w-full h-full relative" style={{ transformStyle: 'preserve-3d' }}>
+              <Image
+                src="/images/website-main-banner-Mobile-1.webp"
+                alt="Grillado's Premium Grilled Chicken and Portuguese Food"
+                fill
+                priority
+                quality={95}
+                unoptimized={true}
+                className="object-cover object-center drop-shadow-[0_24px_55px_rgba(0,0,0,0.8)]"
+                sizes="100vw"
+              />
             </div>
           </motion.div>
         </motion.div>
@@ -928,9 +875,6 @@ const HeroSection = () => {
           </Magnetic>
         </motion.div>
       </motion.div>
-
-      {/* ── Swiper Luxury Pagination Dots ── */}
-      <div className="hero-swiper-pagination absolute bottom-2 sm:bottom-3 left-0 right-0 z-30 flex items-center justify-center gap-2 pointer-events-auto" />
     </section>
   );
 };
