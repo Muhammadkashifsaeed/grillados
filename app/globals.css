@@ -74,3 +74,27 @@ body {
 .animate-header-btn-text {
   animation: header-btn-text-anim 2s ease-in-out infinite;
 }
+
+/* Hide default browser arrow cursor completely on mouse/desktop devices so only the custom circular cursor is visible */
+@media (pointer: fine) {
+  *, *::before, *::after, html, body, a, button, input, select, textarea, [role="button"] {
+    cursor: none !important;
+  }
+}
+
+/* Modern angular cut corner button styling (slanted/chamfered edges with clean borders) */
+.btn-chamfer {
+  position: relative !important;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px) !important;
+  border-radius: 0 !important;
+  border: 1.5px solid rgba(0, 0, 0, 0.25) !important;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.4)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15)) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-chamfer:hover {
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5)) drop-shadow(0 6px 16px rgba(0, 0, 0, 0.25)) !important;
+}
+
+

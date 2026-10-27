@@ -66,7 +66,7 @@ const CateringOfferCard: React.FC<CateringOfferProps> = ({
           {t(descKey)}
         </p>
 
-        <a href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" aria-label={t('orderNow')} className="text-black hover:text-white bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 shadow-md rounded-lg px-8 py-3.5 flex items-center justify-center uppercase tracking-wider cursor-pointer inline-flex max-w-[fit-content]" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '20px' }} >
+        <a href="https://grillados.bycalibre.ca/location" target="_blank" rel="noopener noreferrer" aria-label={t('orderNow')} className="text-black hover:text-white bg-[#FAC716] hover:bg-[#EB5250] transition-all duration-300 shadow-md btn-chamfer px-8 py-3.5 flex items-center justify-center uppercase tracking-wider cursor-pointer inline-flex max-w-[fit-content]" style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '20px' }} >
           {t('orderNow')}
         </a>
       </div>

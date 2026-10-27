@@ -278,7 +278,7 @@ export default function ContactCateringSection() {
               </label>
 
               {/* Submit Button */}
-              <button type="submit" disabled={isSubmitting || isSuccess} className={`text-white w-full h-15 font-extrabold text-xl rounded-xl shadow-lg uppercase tracking-widest font-['Outfit',sans-serif] transition-all duration-300 flex items-center justify-center ${ isSuccess ? 'bg-[#FAC716] hover:bg-green-600 shadow-green-500/30' : isSubmitting ? 'bg-[#FAC716] cursor-not-allowed' : 'bg-[#FAC716] hover:bg-[#e0a217] hover:shadow-xl hover:-translate-y-1 active:scale-[0.98]' }`} >
+              <button type="submit" disabled={isSubmitting || isSuccess} className={`text-white w-full h-15 font-extrabold text-xl btn-chamfer cursor-pointer shadow-lg uppercase tracking-widest font-['Outfit',sans-serif] transition-all duration-300 flex items-center justify-center ${ isSuccess ? 'bg-[#FAC716] hover:bg-green-600 shadow-green-500/30' : isSubmitting ? 'bg-[#FAC716] cursor-not-allowed' : 'bg-[#FAC716] hover:bg-[#e0a217] hover:shadow-xl hover:-translate-y-1 active:scale-[0.98]' }`} >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center gap-3">
                     <svg className="animate-spin h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

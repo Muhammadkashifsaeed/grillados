@@ -58,7 +58,7 @@ export default function WeddingCateringSection() {
           {/* Button */}
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
-            className="text-black hover:text-white px-10 py-3 sm:py-4 bg-[#FAC716] hover:bg-[#EB5250] hover: hover: transition-all duration-300 hover:scale-[1.03] shadow-md uppercase tracking-wide rounded-none"
+            className="text-black hover:text-white px-10 py-3 sm:py-4 bg-[#FAC716] hover:bg-[#EB5250] hover: hover: transition-all duration-300 hover:scale-[1.03] shadow-md uppercase tracking-wide btn-chamfer cursor-pointer"
             style={{ fontFamily: "'Ribeat', sans-serif", fontStyle: 'normal', fontWeight: 500, fontSize: '16px', lineHeight: '16px' }}
           >
               {t('contactUs')}

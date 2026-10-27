@@ -22,21 +22,21 @@ export const NavItem: React.FC<NavItemProps> = ({ href, icon, label, dropdown, .
       )}
 
       {icon && (
-        <span className={`flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 ${isActive ? 'text-[#FAC716] drop-shadow-[0_0_8px_rgba(250,199,22,0.8)]' : 'text-[#FAC716]/80 group-hover:text-[#FAC716]'}`}>
+        <span className={`flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${isActive ? 'text-[#FAC716] drop-shadow-[0_0_8px_rgba(250,199,22,0.8)]' : 'text-white'}`}>
           {icon}
         </span>
       )}
       <span className="text-current transition-colors duration-300">{label}</span>
       {dropdown && (
-        <span className="ml-0.5 text-[9px] transition-transform duration-300 group-hover:translate-y-0.5 text-[#FAC716]">▼</span>
+        <span className="ml-0.5 text-[9px] transition-transform duration-300 group-hover:translate-y-0.5 text-white">▼</span>
       )}
     </>
   );
 
-  const className = `group relative flex items-center gap-1.25 transition-all duration-300 font-bold text-[11px] lg:text-[11px] xl:text-[12px] 2xl:text-xs tracking-wide uppercase whitespace-nowrap px-2 lg:px-2 xl:px-2.5 py-1 rounded-full shrink-0 ${
+  const className = `group relative flex items-center gap-1.25 transition-all duration-300 font-bold text-[11px] lg:text-[11px] xl:text-[12px] 2xl:text-xs tracking-wide uppercase whitespace-nowrap px-2.5 lg:px-2.5 xl:px-3 py-1 rounded-full shrink-0 ${
     isActive 
       ? 'text-[#FAC716] bg-gradient-to-r from-[#FAC716]/25 via-[#FAC716]/15 to-transparent shadow-[0_0_20px_rgba(250,199,22,0.3)] border border-[#FAC716]/50' 
-      : 'text-white/90 hover:text-[#FAC716] hover:bg-white/10 border border-transparent hover:border-white/10'
+      : 'text-white hover:text-white hover:bg-[#FAC716]/30 border border-transparent hover:border-[#FAC716]/70 hover:shadow-[0_0_16px_rgba(250,199,22,0.4)]'
   }`;
 
   if (dropdown || href === '/pages' || href === '#') {

@@ -4,6 +4,7 @@ import "../globals.css";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { MobileOrderButton } from "../components/MobileOrderButton";
+import { CustomCursor } from "../components/CustomCursor";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -178,6 +179,7 @@ export default async function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-[#1A1410]" suppressHydrationWarning>
+        <CustomCursor />
         <NextIntlClientProvider messages={messages}>
           <Header />
           <MobileOrderButton />
