@@ -97,4 +97,29 @@ body {
   filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5)) drop-shadow(0 6px 16px rgba(0, 0, 0, 0.25)) !important;
 }
 
+/* Swiper Hero Custom Luxury Pagination Bullets */
+.hero-swiper-bullet {
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(250, 199, 22, 0.5);
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+}
+
+.hero-swiper-bullet:hover {
+  background: rgba(250, 199, 22, 0.7);
+  transform: scale(1.2);
+}
+
+.hero-swiper-bullet-active {
+  width: 26px;
+  background: linear-gradient(90deg, #FAC716 0%, #FFD233 100%);
+  border-color: #FAC716;
+  box-shadow: 0 0 14px rgba(250, 199, 22, 0.9);
+  transform: scale(1.05);
+}
+
 
