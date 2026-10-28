@@ -24,9 +24,27 @@ export default function DealsPage() {
         { src: '/images/deals2.webp', alt: 'Deal 2' },
       ];
 
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
+
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 10000, stopOnInteraction: false })
+    Autoplay({ delay: 8000, stopOnInteraction: false })
   ]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  React.useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
+    return () => {
+      emblaApi.off('select', onSelect);
+      emblaApi.off('reInit', onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -38,7 +56,7 @@ export default function DealsPage() {
 
   return (
     <main 
-      className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-[#0a0a0a] pt-[78px] sm:pt-[84px] md:pt-[90px]"
+      className="flex flex-col flex-1 min-h-screen relative overflow-x-hidden bg-[#0a0a0a] pt-[68px] md:pt-[72px] lg:pt-[76px]"
       style={{
         backgroundImage: "url('/images/Blackksss.png')",
         backgroundSize: '120% auto',
@@ -60,7 +78,7 @@ export default function DealsPage() {
               {dealImages.map((image, index) => (
                 <div 
                   key={index} 
-                  className="flex-[0_0_100%] min-w-0 relative w-full aspect-[21/9] md:aspect-[21/9]"
+                  className="flex-[0_0_100%] min-w-0 relative w-full aspect-[21/9]"
                 >
                   <Image
                     src={image.src}
@@ -76,22 +94,36 @@ export default function DealsPage() {
           </div>
 
           {/* Left Arrow */}
-          <button type="button" onClick={scrollPrev} className="text-black hover:text-white hover: hover: absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#FAC716] /80 backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20" aria-label="Previous image" >
+          <button 
+            type="button" 
+            onClick={scrollPrev} 
+            className="text-white hover:text-black absolute left-2 md:left-5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 md:w-11 md:h-11 flex items-center justify-center rounded-full bg-black/60 hover:bg-[#FAC716] backdrop-blur-md transition-all duration-300 opacity-80 sm:opacity-0 group-hover:opacity-100 shadow-[0_4px_20px_rgba(0,0,0,0.7)] border border-white/20 hover:border-[#FAC716] hover:scale-105 active:scale-95" 
+            aria-label="Previous image"
+          >
             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 -ml-0.5" />
           </button>
 
           {/* Right Arrow */}
-          <button type="button" onClick={scrollNext} className="text-black hover:text-white hover: hover: absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-[#FAC716] /80 backdrop-blur-md transition-all opacity-0 group-hover:opacity-100 shadow-md border border-white/20" aria-label="Next image" >
+          <button 
+            type="button" 
+            onClick={scrollNext} 
+            className="text-white hover:text-black absolute right-2 md:right-5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 md:w-11 md:h-11 flex items-center justify-center rounded-full bg-black/60 hover:bg-[#FAC716] backdrop-blur-md transition-all duration-300 opacity-80 sm:opacity-0 group-hover:opacity-100 shadow-[0_4px_20px_rgba(0,0,0,0.7)] border border-white/20 hover:border-[#FAC716] hover:scale-105 active:scale-95" 
+            aria-label="Next image"
+          >
             <ChevronRight className="w-5 h-5 md:w-6 md:h-6 -mr-0.5" />
           </button>
 
           {/* Navigation Dots */}
-          <div className="absolute bottom-2 sm:bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2 sm:gap-3 z-20">
+          <div className="absolute bottom-2.5 sm:bottom-4 md:bottom-7 left-1/2 -translate-x-1/2 flex items-center gap-2 sm:gap-2.5 z-20 px-3 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
             {dealImages.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => emblaApi?.scrollTo(idx)}
-                className="text-black hover:text-white w-3 h-3 rounded-full bg-white/40 hover:bg-[#FAC716] transition-colors shadow-lg"
+                className={`transition-all duration-300 rounded-full h-2.5 ${
+                  selectedIndex === idx
+                    ? 'w-7 sm:w-8 bg-[#FAC716] shadow-[0_0_12px_rgba(250,199,22,0.9)]'
+                    : 'w-2.5 bg-white/45 hover:bg-white/80'
+                }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}
